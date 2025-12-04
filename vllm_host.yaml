@@ -1,0 +1,175 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zhongkas-dyk-qwen
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: zhongkas-dyk-qwen
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: zhongkas-dyk-qwen
+    spec:
+      containers:
+      - args:
+        - -c
+        - |
+          # First install the specific vLLM version
+          python3 -m vllm.entrypoints.openai.api_server \
+            --host 0.0.0.0 \
+            --port 8000 \
+            --tensor-parallel-size 8 \
+            --model /checkpoint/doyoungk-sandbox/Qwen3-235B-A22B-Thinking-2507 \
+        command:
+        - /bin/bash
+        env:
+        - name: HF_TOKEN
+          value: <your-token-here>
+        image: docker.io/vllm/vllm-openai:latest
+        imagePullPolicy: IfNotPresent
+        name: server
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        - containerPort: 8001
+          protocol: TCP
+        resources:
+          limits:
+            hugepages-2Mi: 2160Mi
+            nvidia.com/gpu: 8
+            vpc.amazonaws.com/efa: 16
+          requests:
+            memory: 15000Mi
+            vpc.amazonaws.com/efa: 16
+            ephemeral-storage: 170Gi
+        securityContext:
+          privileged: true
+        startupProbe:
+          failureThreshold: 720
+          httpGet:
+            path: /health
+            port: 8000
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - name: code-storage
+          mountPath: /code
+        - name: data-storage
+          mountPath: /data
+        - name: ckpts-storage
+          mountPath: /checkpoint
+        - mountPath: /dev/infiniband/uverbs0
+          name: infiniband-efa-0
+        - mountPath: /dev/infiniband/uverbs1
+          name: infiniband-efa-1
+        - mountPath: /dev/infiniband/uverbs2
+          name: infiniband-efa-2
+        - mountPath: /dev/infiniband/uverbs3
+          name: infiniband-efa-3
+        - mountPath: /dev/infiniband/uverbs4
+          name: infiniband-efa-4
+        - mountPath: /dev/infiniband/uverbs5
+          name: infiniband-efa-5
+        - mountPath: /dev/infiniband/uverbs6
+          name: infiniband-efa-6
+        - mountPath: /dev/infiniband/uverbs7
+          name: infiniband-efa-7
+        - mountPath: /dev/infiniband/uverbs8
+          name: infiniband-efa-8
+        - mountPath: /dev/infiniband/uverbs9
+          name: infiniband-efa-9
+        - mountPath: /dev/infiniband/uverbs10
+          name: infiniband-efa-10
+        - mountPath: /dev/infiniband/uverbs11
+          name: infiniband-efa-11
+        - mountPath: /dev/infiniband/uverbs12
+          name: infiniband-efa-12
+        - mountPath: /dev/infiniband/uverbs13
+          name: infiniband-efa-13
+        - mountPath: /dev/infiniband/uverbs14
+          name: infiniband-efa-14
+        - mountPath: /dev/infiniband/uverbs15
+          name: infiniband-efa-15
+        - name: dshm
+          mountPath: /dev/shm
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        node.kubernetes.io/instance-type: p5en.48xlarge
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: code-storage
+        persistentVolumeClaim:
+          claimName: fsx-claim-general-c1
+      - name: data-storage
+        persistentVolumeClaim:
+          claimName: fsx-claim-general-c2
+      - name: ckpts-storage
+        persistentVolumeClaim:
+          claimName: fsx-claim-general-c3
+      - hostPath:
+          path: /dev/infiniband/uverbs0
+        name: infiniband-efa-0
+      - hostPath:
+          path: /dev/infiniband/uverbs1
+        name: infiniband-efa-1
+      - hostPath:
+          path: /dev/infiniband/uverbs2
+        name: infiniband-efa-2
+      - hostPath:
+          path: /dev/infiniband/uverbs3
+        name: infiniband-efa-3
+      - hostPath:
+          path: /dev/infiniband/uverbs4
+        name: infiniband-efa-4
+      - hostPath:
+          path: /dev/infiniband/uverbs5
+        name: infiniband-efa-5
+      - hostPath:
+          path: /dev/infiniband/uverbs6
+        name: infiniband-efa-6
+      - hostPath:
+          path: /dev/infiniband/uverbs7
+        name: infiniband-efa-7
+      - hostPath:
+          path: /dev/infiniband/uverbs8
+        name: infiniband-efa-8
+      - hostPath:
+          path: /dev/infiniband/uverbs9
+        name: infiniband-efa-9
+      - hostPath:
+          path: /dev/infiniband/uverbs10
+        name: infiniband-efa-10
+      - hostPath:
+          path: /dev/infiniband/uverbs11
+        name: infiniband-efa-11
+      - hostPath:
+          path: /dev/infiniband/uverbs12
+        name: infiniband-efa-12
+      - hostPath:
+          path: /dev/infiniband/uverbs13
+        name: infiniband-efa-13
+      - hostPath:
+          path: /dev/infiniband/uverbs14
+        name: infiniband-efa-14
+      - hostPath:
+          path: /dev/infiniband/uverbs15
+        name: infiniband-efa-15
+      - name: dshm
+        emptyDir:
+          medium: Memory
