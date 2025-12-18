@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: zhongkas-dyk-qwen
+  name: your-name-qwen
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app: zhongkas-dyk-qwen
+      app: your-name-qwen
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        app: zhongkas-dyk-qwen
+        app: your-name-qwen
     spec:
       containers:
       - args:
@@ -28,7 +28,7 @@ spec:
             --host 0.0.0.0 \
             --port 8000 \
             --tensor-parallel-size 8 \
-            --model /checkpoint/doyoungk-sandbox/Qwen3-235B-A22B-Thinking-2507 \
+            --model /checkpoint/Qwen3-235B-A22B-Thinking-2507 \
         command:
         - /bin/bash
         env:

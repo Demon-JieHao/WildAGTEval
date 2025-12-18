@@ -1,0 +1,50 @@
+[
+  {
+    "source_id": "weather_api",
+    "name": "Weather API",
+    "type": "weather",
+    "description": "Provides weather forecasts and current conditions",
+    "supported_queries": [
+      "current_weather",
+      "weather_forecast",
+      "weather_alerts"
+    ],
+    "reliability": 0.95
+  },
+  {
+    "source_id": "news_aggregator",
+    "name": "News Aggregator",
+    "type": "news",
+    "description": "Aggregates news from multiple sources",
+    "supported_queries": [
+      "latest_news",
+      "news_by_category",
+      "trending_news"
+    ],
+    "reliability": 0.9
+  },
+  {
+    "source_id": "knowledge_base",
+    "name": "General Knowledge Base",
+    "type": "knowledge",
+    "description": "Provides general knowledge and facts",
+    "supported_queries": [
+      "fact_lookup",
+      "definition",
+      "quick_answer"
+    ],
+    "reliability": 0.85
+  },
+  {
+    "source_id": "stock_market",
+    "name": "Stock Market Data",
+    "type": "financial",
+    "description": "Provides real-time stock market data",
+    "supported_queries": [
+      "stock_price",
+      "market_summary",
+      "stock_history"
+    ],
+    "reliability": 0.92
+  }
+]

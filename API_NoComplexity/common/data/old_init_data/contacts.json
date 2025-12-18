@@ -1,0 +1,62 @@
+[
+  {
+    "contact_id": "contact1",
+    "user_id": "user1",
+    "name": "Alice Green",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "555-1234"
+      },
+      {
+        "type": "work",
+        "number": "555-5678"
+      }
+    ],
+    "email": "alice@example.com",
+    "is_favorite": true,
+    "devices": ["device1"]
+  },
+  {
+    "contact_id": "contact2",
+    "user_id": "user1",
+    "name": "Bob Brown",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "555-8765"
+      }
+    ],
+    "email": "bob@example.com",
+    "is_favorite": false,
+    "devices": ["device2"]
+  },
+  {
+    "contact_id": "contact3",
+    "user_id": "user2",
+    "name": "Charlie Wilson",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "555-9012"
+      }
+    ],
+    "email": "charlie@example.com",
+    "is_favorite": true,
+    "devices": ["device3"]
+  },
+  {
+    "contact_id": "contact4",
+    "user_id": "user2",
+    "name": "David Lee",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "555-3456"
+      }
+    ],
+    "email": "david@example.com",
+    "is_favorite": false,
+    "devices": []
+  }
+]

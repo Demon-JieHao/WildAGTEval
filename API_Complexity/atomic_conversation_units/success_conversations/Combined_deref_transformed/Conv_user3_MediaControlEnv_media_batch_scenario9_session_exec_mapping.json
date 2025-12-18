@@ -1,0 +1,127 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user3_MediaControlEnv_media_batch_scenario9_session_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user3_MediaControlEnv_media_batch_scenario9_session_exec.py",
+  "total_transforms": 17,
+  "successful_transforms": 17,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_media\", query='Fire Love', media_type='song', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Fire Love', media_type='song', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"results\": [{\"id\": \"song75\", \"title\": \"Fire Love\", \"type\": \"song\", \"year\": 1993, \"genre\": [\"hip-hop\"], \"services\": [\"pandora\", \"spotify\"], \"artist\": \"Guns N' Roses\", \"album\": \"Mystery Album\"}], \"message\": \"Found 1 media items matching 'Fire Love'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user3\", \"name\": \"Daniel Garcia\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='66')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='66')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"bedroom\", \"entertainment\"], \"home_id\": \"home5\", \"state\": {\"power\": \"off\", \"volume\": 72}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"power_on\", endpoints=['66'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Turned on Bedroom Speaker\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"play\", endpoints=['66'], media_id='song75')",
+      "after": "invoke_tool(\"play\", endpoints=['66'], media_id='song:song75')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Now playing 'Fire Love' on Bedroom Speaker\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_media_details\", media_id='song75')",
+      "after": "invoke_tool(\"get_media_details\", media_id='song75')",
+      "execution_result": "{\"success\": true, \"details\": {\"id\": \"song75\", \"title\": \"Fire Love\", \"type\": \"song\", \"year\": 1993, \"genre\": [\"hip-hop\"], \"services\": [\"pandora\", \"spotify\"], \"duration\": 320, \"duration_formatted\": \"5:20\", \"artist\": \"Guns N' Roses\", \"album\": \"Mystery Album\"}, \"message\": \"Found details for 'Fire Love'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user3\", \"name\": \"Daniel Garcia\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"get_playback_status\", endpoints=['66'])",
+      "after": "invoke_tool(\"get_playback_status\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"status\": \"playing\", \"media_id\": \"song:song75\", \"title\": \"Fire Love\", \"type\": \"song\", \"position\": 0, \"duration\": 320, \"position_formatted\": \"0:00\", \"duration_formatted\": \"5:20\", \"playback_speed\": 1.0, \"shuffle\": false, \"loop\": \"off\", \"artist\": \"Guns N' Roses\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"pause\", endpoints=['66'])",
+      "after": "invoke_tool(\"pause\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Paused playback on Bedroom Speaker\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_media\", query='Rain Mystery', media_type='song', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Rain Mystery', media_type='song', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"results\": [{\"id\": \"song21\", \"title\": \"Rain Mystery\", \"type\": \"song\", \"year\": 1991, \"genre\": [\"classical\"], \"services\": [\"apple_music\", \"youtube_music\", \"spotify\", \"deezer\", \"amazon_music\"], \"artist\": \"Johnny Cash\", \"album\": \"Love Collection\"}], \"message\": \"Found 1 media items matching 'Rain Mystery'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user3\", \"name\": \"Daniel Garcia\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"get_device_details\", endpoint='66')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='66')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"bedroom\", \"entertainment\"], \"home_id\": \"home5\", \"state\": {\"power\": \"on\", \"volume\": 72}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"power_on\", endpoints=['66'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Turned on Bedroom Speaker\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"play\", endpoints=['66'], media_id='song21')",
+      "after": "invoke_tool(\"play\", endpoints=['66'], media_id='song:song21')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Now playing 'Rain Mystery' on Bedroom Speaker\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user3\", \"name\": \"Daniel Garcia\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"get_playback_status\", endpoints=['66'])",
+      "after": "invoke_tool(\"get_playback_status\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"status\": \"playing\", \"media_id\": \"song:song21\", \"title\": \"Rain Mystery\", \"type\": \"song\", \"position\": 0, \"duration\": 313, \"position_formatted\": \"0:00\", \"duration_formatted\": \"5:13\", \"playback_speed\": 1.0, \"shuffle\": false, \"loop\": \"off\", \"artist\": \"Johnny Cash\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"stop\", endpoints=['66'])",
+      "after": "invoke_tool(\"stop\", endpoints=['66'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"success\": true, \"message\": \"Stopped playback on Bedroom Speaker\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

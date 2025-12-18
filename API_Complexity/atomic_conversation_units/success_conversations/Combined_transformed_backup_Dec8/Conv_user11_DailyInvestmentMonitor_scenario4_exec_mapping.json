@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user11_DailyInvestmentMonitor_scenario4_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user11_DailyInvestmentMonitor_scenario4_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"stock_watchlist\", )",
+      "after": "invoke_tool(\"stock_watchlist\", )",
+      "execution_result": "{\"success\": true, \"watchlist\": [\"AAPL\", \"GOOGL\", \"MSFT\", \"AMZN\"], \"stocks\": [{\"symbol\": \"AAPL\", \"data\": {\"symbol\": \"AAPL\", \"name\": \"Apple Inc.\", \"price\": 167.88, \"change\": -0.4, \"change_percent\": -0.24}, \"formatted\": \"AAPL: $167.88 (-0.4 / -0.24%)\"}, {\"symbol\": \"GOOGL\", \"data\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\"}, {\"symbol\": \"MSFT\", \"data\": {\"symbol\": \"MSFT\", \"name\": \"Microsoft Corp.\", \"price\": 858.1, \"change\": 36.75, \"change_percent\": 4.47}, \"formatted\": \"MSFT: $858.1 (36.75 / 4.47%)\"}, {\"symbol\": \"AMZN\", \"data\": {\"symbol\": \"AMZN\", \"name\": \"Amazon.com Inc.\", \"price\": 60.6, \"change\": -3.15, \"change_percent\": -4.94}, \"formatted\": \"AMZN: $60.6 (-3.15 / -4.94%)\"}], \"summary\": {\"total_symbols\": 4, \"total_value\": 2125.57, \"total_change\": 79.95}, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user11\", \"name\": \"David Wilson\", \"home_id\": \"home2\", \"current_space\": null, \"devices\": [{\"endpoint\": \"18\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"19\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"20\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"21\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"23\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"24\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"25\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"26\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"27\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"28\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"29\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}, {\"endpoint\": \"30\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='22')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='22')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home2\", \"state\": {\"power\": \"off\", \"brightness\": 59, \"color\": \"#FFFF00\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"power_on\", endpoints=['22'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['22'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"success\": true, \"message\": \"Turned on Bedroom Lamp\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"color_set\", endpoints=['22'], color='orange')",
+      "after": "invoke_tool(\"color_set\", endpoints=['22'], color='#FFA500')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"success\": true, \"message\": \"Set Bedroom Lamp color to #FFA500\", \"color\": \"#FFA500\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"weather_current\", location='helsinki')",
+      "after": "invoke_tool(\"weather_current\", location='helsinki')",
+      "execution_result": "{\"success\": true, \"location\": \"helsinki\", \"current_weather\": {\"temperature\": 13, \"condition\": \"Fog\", \"humidity\": 68, \"wind_speed\": 2, \"pressure\": 1026}, \"formatted\": \"Temperature: 13\\u00b0C, Condition: Fog, Humidity: 68%, Wind: 2 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

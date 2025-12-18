@@ -1,0 +1,292 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario4_RestaurantDelivery_only.jsonl",
+  "filename": "Conv_user1_scenario4_RestaurantDelivery_only.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "I'd like to see the menu from the resturant",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest8"
+          },
+          "description": "Get menu for Taj Mahal"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest8"
+              },
+              "description": "Get menu for Taj Mahal"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest8"
+            },
+            "description": "Get menu for Taj Mahal"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for Taj Mahal\", \"restaurant_id\": \"rest8\", \"restaurant_name\": \"Taj Mahal\", \"description\": \"Authentic indian cuisine with traditional flavors\", \"price_range\": \"$$\", \"rating\": 4.5, \"cuisine_types\": [\"Indian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 10.0, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 9.48, \"category\": \"Appetizers\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.56, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 18.99, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.43, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.13, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:45:43.768184",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found the menu for Taj Mahal, which is rated 4.5/5 stars with a price range of $$. Here's what they offer:\n\nAppetizers:\n- House Salad: Mixed greens with house dressing ($10.00)\n- Soup of the Day: Chef's daily soup selection ($9.48) - dairy-free\n- Bread Basket: Assorted breads with butter ($6.56)\n\nMain Course:\n- Grilled Chicken: Seasoned chicken breast with vegetables ($18.99)\n- Pan-Seared Salmon: Fresh salmon with lemon herb sauce ($24.43)\n- Ribeye Steak: Grilled steak with choice of sides ($34.13)\n\nWould you like to order something from this restaurant or see the menu for Delhi Garden instead?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found the menu for Taj Mahal, which is rated 4.5/5 stars with a price range of $$. Here's what they offer:\n\nAppetizers:\n- House Salad: Mixed greens with house dressing ($10.00)\n- Soup of the Day: Chef's daily soup selection ($9.48) - dairy-free\n- Bread Basket: Assorted breads with butter ($6.56)\n\nMain Course:\n- Grilled Chicken: Seasoned chicken breast with vegetables ($18.99)\n- Pan-Seared Salmon: Fresh salmon with lemon herb sauce ($24.43)\n- Ribeye Steak: Grilled steak with choice of sides ($34.13)\n\nWould you like to order something from this restaurant or see the menu for Delhi Garden instead?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:49:16.615674",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:13:44.281688",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 1, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'd like to get Pan-Seared Salmon delivered from Taj Mahal to 569 Oak Ave, Los Angeles, CA 90038",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest8",
+            "items": [
+              {
+                "item_id": "item5",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "569 Oak Ave",
+              "city": "Los Angeles",
+              "state": "CA",
+              "zip": "90038"
+            }
+          },
+          "description": "Place delivery order from Taj Mahal"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for Pan-Seared Salmon from Taj Mahal for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest8\",\n    \"items\": [\n      {\n        \"item_id\": \"item5\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"569 Oak Ave\",\n      \"city\": \"Los Angeles\",\n      \"state\": \"CA\",\n      \"zip\": \"90038\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for Pan-Seared Salmon from Taj Mahal for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest8\",\n    \"items\": [\n      {\n        \"item_id\": \"item5\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"569 Oak Ave\",\n      \"city\": \"Los Angeles\",\n      \"state\": \"CA\",\n      \"zip\": \"90038\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest8",
+                "items": [
+                  {
+                    "item_id": "item5",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "569 Oak Ave",
+                  "city": "Los Angeles",
+                  "state": "CA",
+                  "zip": "90038"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest8",
+              "items": [
+                {
+                  "item_id": "item5",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "569 Oak Ave",
+                "city": "Los Angeles",
+                "state": "CA",
+                "zip": "90038"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"order_time\": \"2025-08-21T19:05:56Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 24.43, \"tax\": 2.14, \"delivery_fee\": 5.99, \"tip\": 3.66, \"total\": 36.22, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 999.549943447113,
+          "timestamp": "2025-08-21T19:05:56.165665",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest8",
+              "items": [
+                {
+                  "item_id": "item5",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "569 Oak Ave",
+                "city": "Los Angeles",
+                "state": "CA",
+                "zip": "90038"
+              }
+            },
+            "description": "Place delivery order from Taj Mahal"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Great! I've placed your delivery order for Pan-Seared Salmon from Taj Mahal. Your order has been confirmed with order ID \"dorder1\". The total comes to $36.22, which includes:\n- Subtotal: $24.43\n- Tax: $2.14\n- Delivery fee: $5.99\n- Tip: $3.66\n\nYour food will be delivered to 569 Oak Ave, Los Angeles, CA 90038. The order status is currently \"placed\" and the restaurant will begin preparing your meal soon.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Great! I've placed your delivery order for Pan-Seared Salmon from Taj Mahal. Your order has been confirmed with order ID \"dorder1\". The total comes to $36.22, which includes:\n- Subtotal: $24.43\n- Tax: $2.14\n- Delivery fee: $5.99\n- Tip: $3.66\n\nYour food will be delivered to 569 Oak Ave, Los Angeles, CA 90038. The order status is currently \"placed\" and the restaurant will begin preparing your meal soon.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 468.1154465675354,
+          "timestamp": "2025-08-21T19:13:44.281323",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 2,
+      "related_to_target": "Turn 1, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:13:44.282841"
+}

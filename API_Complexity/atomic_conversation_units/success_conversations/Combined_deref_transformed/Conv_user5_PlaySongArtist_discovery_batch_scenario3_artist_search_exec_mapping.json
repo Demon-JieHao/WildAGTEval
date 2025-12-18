@@ -1,0 +1,57 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user5_PlaySongArtist_discovery_batch_scenario3_artist_search_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user5_PlaySongArtist_discovery_batch_scenario3_artist_search_exec.py",
+  "total_transforms": 7,
+  "successful_transforms": 7,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_media\", query='Sweet Love', media_type='song', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Sweet Love', media_type='song', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"results\": [{\"id\": \"song92\", \"title\": \"Sweet Love\", \"type\": \"song\", \"year\": 1982, \"genre\": [\"soul\"], \"services\": [\"deezer\", \"amazon_music\", \"tidal\", \"apple_music\"], \"artist\": \"Metallica\", \"album\": \"Mystery Sessions\"}, {\"id\": \"song202\", \"title\": \"Sweet Love (Power Collection)\", \"type\": \"song\", \"year\": 1994, \"genre\": [\"indie\"], \"services\": [\"tidal\", \"pandora\", \"youtube_music\", \"amazon_music\"], \"artist\": \"Taylor Swift\", \"album\": \"Power Collection\"}, {\"id\": \"song222\", \"title\": \"Sweet Love (Sky Album)\", \"type\": \"song\", \"year\": 1965, \"genre\": [\"pop\"], \"services\": [\"tidal\", \"youtube_music\", \"spotify\", \"pandora\", \"apple_music\", \"deezer\", \"amazon_music\"], \"artist\": \"Rolling Stones\", \"album\": \"Sky Album\"}], \"message\": \"Found 3 media items matching 'Sweet Love'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user5\", \"name\": \"Mark Moore\", \"home_id\": \"home1\", \"current_space\": null, \"devices\": [{\"endpoint\": \"1\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"2\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"3\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"4\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"5\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"]}, {\"endpoint\": \"6\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"7\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"8\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"9\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"]}, {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"13\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"14\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"15\", \"name\": \"Garage Light\", \"alternate_names\": [\"Garage Light\"]}, {\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='11')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='11')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"], \"endpoint_categories\": [\"TV\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"channel_change\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"fast_forward\", \"shuffle\", \"set_playback_speed\", \"rewind\"], \"groups\": [\"master_bedroom\", \"upstairs\", \"entertainment\"], \"home_id\": \"home1\", \"state\": {\"power\": \"on\", \"volume\": 42, \"channel\": 780}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"play\", endpoints=['11'], media_id='song92')",
+      "after": "invoke_tool(\"play\", endpoints=['11'], media_id='song:song92')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"success\": true, \"message\": \"Now playing 'Sweet Love' on Master Bedroom TV\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_by_artist\", artist='Metallica', media_type='song', limit=8)",
+      "after": "invoke_tool(\"search_by_artist\", artist='Metallica', media_type='song', limit=8)",
+      "execution_result": "Found 5 media items for artist 'Metallica':\n1. [SONG] Journey Soul\n   Artist: Metallica\n   Year: 1995 | Duration: 3:25 | Genre: alternative\n   ID: song37\n2. [SONG] Broken Freedom\n   Artist: Metallica\n   Year: 1998 | Duration: 5:13 | Genre: reggae\n   ID: song87\n3. [SONG] Sweet Love\n   Artist: Metallica\n   Year: 1982 | Duration: 4:23 | Genre: soul\n   ID: song92\n4. [SONG] Flying Joy (Single)\n   Artist: Metallica\n   Year: 1962 | Duration: 4:02 | Genre: metal\n   ID: song105\n5. [SONG] Golden Thunder (Single)\n   Artist: Metallica\n   Year: 1966 | Duration: 5:31 | Genre: indie\n   ID: song141\n",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_playback_status\", endpoints=['11'])",
+      "after": "invoke_tool(\"get_playback_status\", endpoints=['11'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"success\": true, \"status\": \"playing\", \"media_id\": \"song:song92\", \"title\": \"Sweet Love\", \"type\": \"song\", \"position\": 0, \"duration\": 263, \"position_formatted\": \"0:00\", \"duration_formatted\": \"4:23\", \"playback_speed\": 1.0, \"shuffle\": false, \"loop\": \"off\", \"artist\": \"Metallica\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"play\", endpoints=['11'], media_id='song87')",
+      "after": "invoke_tool(\"play\", endpoints=['11'], media_id='song:song87')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"success\": true, \"message\": \"Now playing 'Broken Freedom' on Master Bedroom TV\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

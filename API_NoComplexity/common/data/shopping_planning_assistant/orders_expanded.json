@@ -1,0 +1,6555 @@
+[
+  {
+    "order_id": "ORDER0001",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod41",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 2,
+        "price": 44.55,
+        "subtotal": 89.1
+      },
+      {
+        "product_id": "prod25",
+        "name": "Connect Flood Sensor",
+        "quantity": 1,
+        "price": 159.99,
+        "subtotal": 159.99
+      },
+      {
+        "product_id": "prod50",
+        "name": "Quick Blender Pro",
+        "quantity": 1,
+        "price": 499.99,
+        "subtotal": 499.99
+      },
+      {
+        "product_id": "prod15",
+        "name": "Smart Smart Switch Plus",
+        "quantity": 1,
+        "price": 65.71,
+        "subtotal": 65.71
+      }
+    ],
+    "totals": {
+      "subtotal": 814.79,
+      "tax": 83.49,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 898.28
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "apple_pay",
+      "last4": "2994",
+      "amount": 898.28,
+      "currency": "USD",
+      "transaction_id": "tx378698",
+      "status": "paid",
+      "paid_at": "2025-05-26T13:06:25.709729Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "569 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90038",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-26T13:00:25.709729Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-26T13:02:25.709729Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-26T13:06:25.709729Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-26T13:00:25.709729Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-27T06:06:25.709729Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0002",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod11",
+        "name": "Tech VR Headset",
+        "quantity": 1,
+        "price": 434.99,
+        "subtotal": 434.99
+      },
+      {
+        "product_id": "prod69",
+        "name": "Quick Air Purifier Elite",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      },
+      {
+        "product_id": "prod19",
+        "name": "Chef Air Purifier Elite",
+        "quantity": 1,
+        "price": 174.99,
+        "subtotal": 174.99
+      }
+    ],
+    "totals": {
+      "subtotal": 824.97,
+      "tax": 92.42,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 917.39
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 917.39,
+      "currency": "USD",
+      "transaction_id": "tx744766",
+      "status": "paid",
+      "paid_at": "2025-06-07T18:10:25.709805Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "9285185132433",
+      "carrier": "UPS",
+      "shipped_at": "2025-06-10T08:10:25.709805Z",
+      "estimated_delivery": "2025-06-16T08:10:25.709805Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-06-07T17:43:25.709805Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-07T17:56:25.709805Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-07T18:10:25.709805Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T17:43:25.709805Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-08T08:10:25.709805Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-10T08:10:25.709805Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0003",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod64",
+        "name": "Link Smart Thermostat",
+        "quantity": 3,
+        "price": 84.62,
+        "subtotal": 253.86
+      },
+      {
+        "product_id": "prod16",
+        "name": "Smart Security Camera",
+        "quantity": 1,
+        "price": 449.99,
+        "subtotal": 449.99
+      },
+      {
+        "product_id": "prod31",
+        "name": "Sync Wireless Earbuds",
+        "quantity": 2,
+        "price": 86.71,
+        "subtotal": 173.42
+      }
+    ],
+    "totals": {
+      "subtotal": 877.27,
+      "tax": 99.72,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 976.99
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "1038",
+      "amount": 976.99,
+      "currency": "USD",
+      "transaction_id": "tx793860",
+      "status": "paid",
+      "paid_at": "2025-05-20T10:48:25.709846Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2091 Broadway",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33124",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-01T04:48:25.709846Z",
+      "tracking_number": "3067475167672",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-05-20T10:21:25.709846Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-01T20:48:25.709846Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-20T10:42:25.709846Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-01T04:48:25.709846Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-25T04:48:25.709846Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-20T10:48:25.709846Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-20T10:21:25.709846Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-21T04:48:25.709846Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T04:48:25.709846Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0004",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod64",
+        "name": "Link Smart Thermostat",
+        "quantity": 1,
+        "price": 84.62,
+        "subtotal": 84.62
+      },
+      {
+        "product_id": "prod60",
+        "name": "Hub Smoke Detector 2024",
+        "quantity": 1,
+        "price": 199.99,
+        "subtotal": 199.99
+      },
+      {
+        "product_id": "prod11",
+        "name": "Tech VR Headset",
+        "quantity": 1,
+        "price": 434.99,
+        "subtotal": 434.99
+      },
+      {
+        "product_id": "prod58",
+        "name": "Home Smart Doorbell",
+        "quantity": 1,
+        "price": 40.25,
+        "subtotal": 40.25
+      }
+    ],
+    "totals": {
+      "subtotal": 759.85,
+      "tax": 81.81,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 841.66
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 841.66,
+      "currency": "USD",
+      "transaction_id": "tx349860",
+      "status": "paid",
+      "paid_at": "2025-05-18T20:38:25.709883Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "4288454203746",
+      "carrier": "Amazon Logistics",
+      "shipped_at": "2025-05-21T09:38:25.709883Z",
+      "estimated_delivery": "2025-05-28T09:38:25.709883Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-18T20:11:25.709883Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-18T20:37:25.709883Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-18T20:38:25.709883Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-18T20:11:25.709883Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-19T09:38:25.709883Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-21T09:38:25.709883Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0005",
+    "user_id": "user11",
+    "items": [
+      {
+        "product_id": "prod54",
+        "name": "Active Smart Watch Gen 2",
+        "quantity": 2,
+        "price": 404.99,
+        "subtotal": 809.98
+      }
+    ],
+    "totals": {
+      "subtotal": 809.98,
+      "tax": 87.37,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 897.35
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "5379",
+      "amount": 897.35,
+      "currency": "USD",
+      "transaction_id": "tx350611",
+      "status": "paid",
+      "paid_at": "2025-05-28T21:37:25.709915Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1157 Main St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75286",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-06T06:37:25.709915Z",
+      "tracking_number": "FX984397430",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-05-28T21:19:25.709915Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-06T17:37:25.709915Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-28T21:28:25.709915Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-06T06:37:25.709915Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-01T06:37:25.709915Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-28T21:37:25.709915Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-28T21:19:25.709915Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-29T17:37:25.709915Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-31T17:37:25.709915Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0006",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod31",
+        "name": "Sync Wireless Earbuds",
+        "quantity": 1,
+        "price": 86.71,
+        "subtotal": 86.71
+      },
+      {
+        "product_id": "prod52",
+        "name": "Nest Smart Outlet Plus",
+        "quantity": 2,
+        "price": 179.99,
+        "subtotal": 359.98
+      },
+      {
+        "product_id": "prod39",
+        "name": "Max Drone V2",
+        "quantity": 1,
+        "price": 464.99,
+        "subtotal": 464.99
+      }
+    ],
+    "totals": {
+      "subtotal": 911.6800000000001,
+      "tax": 95.91,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1007.59
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "4625",
+      "amount": 1007.59,
+      "currency": "USD",
+      "transaction_id": "tx671870",
+      "status": "paid",
+      "paid_at": "2025-06-02T21:25:25.709945Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "TRK629172",
+      "carrier": "FedEx",
+      "shipped_at": "2025-06-04T07:25:25.709945Z",
+      "estimated_delivery": "2025-06-09T07:25:25.709945Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-06-02T21:17:25.709945Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-02T21:21:25.709945Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-02T21:25:25.709945Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-02T21:17:25.709945Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-03T07:25:25.709945Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-04T07:25:25.709945Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0007",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod10",
+        "name": "Track Pulse Oximeter Max",
+        "quantity": 1,
+        "price": 619.99,
+        "subtotal": 619.99
+      }
+    ],
+    "totals": {
+      "subtotal": 619.99,
+      "tax": 52.74,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 672.73
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "7053",
+      "amount": 672.73,
+      "currency": "USD",
+      "transaction_id": "tx684144",
+      "status": "paid",
+      "paid_at": "2025-06-10T15:51:25.709974Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-17T16:51:25.709974Z",
+      "tracking_number": "9740779629250",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-06-10T15:46:25.709974Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-18T07:51:25.709974Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-10T15:49:25.709974Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-17T16:51:25.709974Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-14T16:51:25.709974Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-10T15:51:25.709974Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-10T15:46:25.709974Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-10T20:51:25.709974Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-13T20:51:25.709974Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0008",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod62",
+        "name": "Quick Slow Cooker Pro",
+        "quantity": 2,
+        "price": 774.99,
+        "subtotal": 1549.98
+      }
+    ],
+    "totals": {
+      "subtotal": 1549.98,
+      "tax": 128.26,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1678.24
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 1678.24,
+      "currency": "USD",
+      "transaction_id": "tx407718",
+      "status": "paid",
+      "paid_at": "2025-05-20T17:20:25.710002Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-26T06:20:25.710002Z",
+      "tracking_number": "1617717559441",
+      "carrier": "USPS"
+    },
+    "status": "completed",
+    "created_at": "2025-05-20T16:47:25.710002Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-26T17:20:25.710002Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-20T17:09:25.710002Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-26T06:20:25.710002Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-24T06:20:25.710002Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-20T17:20:25.710002Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-20T16:47:25.710002Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-21T01:20:25.710002Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T01:20:25.710002Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0009",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod24",
+        "name": "Digital Bluetooth Speaker 2024",
+        "quantity": 3,
+        "price": 279.99,
+        "subtotal": 839.97
+      },
+      {
+        "product_id": "prod45",
+        "name": "Advanced Gaming Mouse",
+        "quantity": 1,
+        "price": 274.99,
+        "subtotal": 274.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1114.96,
+      "tax": 122.88,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1237.84
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "7053",
+      "amount": 1237.84,
+      "currency": "USD",
+      "transaction_id": "tx515278",
+      "status": "paid",
+      "paid_at": "2025-06-08T09:39:25.710030Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "8320059188379",
+      "carrier": "USPS",
+      "estimated_delivery": "2025-06-14T20:39:25.710030Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-06-08T09:17:25.710030Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-08T09:31:25.710030Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T20:39:25.710030Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-08T09:39:25.710030Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-08T09:17:25.710030Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-09T03:39:25.710030Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-10T03:39:25.710030Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0010",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod29",
+        "name": "Power Humidifier V2",
+        "quantity": 1,
+        "price": 1129.99,
+        "subtotal": 1129.99
+      },
+      {
+        "product_id": "prod47",
+        "name": "Nest Security Camera",
+        "quantity": 1,
+        "price": 229.99,
+        "subtotal": 229.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1359.98,
+      "tax": 138.09,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1498.07
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "8895",
+      "amount": 1498.07,
+      "currency": "USD",
+      "transaction_id": "tx250059",
+      "status": "paid",
+      "paid_at": "2025-05-27T11:42:25.710058Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-04T10:42:25.710058Z",
+      "tracking_number": "6670425057439",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-05-27T11:29:25.710058Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-05T04:42:25.710058Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-27T11:35:25.710058Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-04T10:42:25.710058Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-29T10:42:25.710058Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-27T11:42:25.710058Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-27T11:29:25.710058Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-28T05:42:25.710058Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-29T05:42:25.710058Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0011",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod12",
+        "name": "Smart Wireless Headphones",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      },
+      {
+        "product_id": "prod37",
+        "name": "Connect Motion Sensor",
+        "quantity": 1,
+        "price": 33.56,
+        "subtotal": 33.56
+      },
+      {
+        "product_id": "prod42",
+        "name": "Health Step Counter",
+        "quantity": 1,
+        "price": 159.99,
+        "subtotal": 159.99
+      },
+      {
+        "product_id": "prod49",
+        "name": "Auto Smart Switch Max",
+        "quantity": 3,
+        "price": 60.6,
+        "subtotal": 181.8
+      },
+      {
+        "product_id": "prod55",
+        "name": "Instant Dishwasher",
+        "quantity": 1,
+        "price": 274.99,
+        "subtotal": 274.99
+      }
+    ],
+    "totals": {
+      "subtotal": 855.33,
+      "tax": 92.72,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 948.05
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 948.05,
+      "currency": "USD",
+      "transaction_id": "tx511767",
+      "status": "paid",
+      "paid_at": "2025-05-25T05:50:25.710087Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-02T14:50:25.710087Z",
+      "tracking_number": "TRK609281",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-05-25T05:34:25.710087Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-03T05:50:25.710087Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-25T05:39:25.710087Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-02T14:50:25.710087Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-29T14:50:25.710087Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-25T05:50:25.710087Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-25T05:34:25.710087Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-26T05:50:25.710087Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-29T05:50:25.710087Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0012",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod15",
+        "name": "Smart Smart Switch Plus",
+        "quantity": 1,
+        "price": 65.71,
+        "subtotal": 65.71
+      },
+      {
+        "product_id": "prod11",
+        "name": "Tech VR Headset",
+        "quantity": 1,
+        "price": 434.99,
+        "subtotal": 434.99
+      }
+    ],
+    "totals": {
+      "subtotal": 500.7,
+      "tax": 59.37,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 560.07
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "9741",
+      "amount": 560.07,
+      "currency": "USD",
+      "transaction_id": "tx659150",
+      "status": "paid",
+      "paid_at": "2025-06-05T18:38:25.710120Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-16T00:38:25.710120Z",
+      "tracking_number": "1Z9156794",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-06-05T18:05:25.710120Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-16T04:38:25.710120Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-05T18:32:25.710120Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-16T00:38:25.710120Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T00:38:25.710120Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-05T18:38:25.710120Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-05T18:05:25.710120Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-06T07:38:25.710120Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-09T07:38:25.710120Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0013",
+    "user_id": "user10",
+    "items": [
+      {
+        "product_id": "prod63",
+        "name": "Pro Smart Watch",
+        "quantity": 1,
+        "price": 38.05,
+        "subtotal": 38.05
+      }
+    ],
+    "totals": {
+      "subtotal": 38.05,
+      "tax": 3.12,
+      "shipping": 8.99,
+      "processing_fee": 0.0,
+      "total": 50.16
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "paypal",
+      "last4": "9814",
+      "amount": 50.16,
+      "currency": "USD",
+      "transaction_id": "tx765025",
+      "status": "failed",
+      "failed_at": "2025-06-16T12:45:25.710149Z",
+      "failure_reason": "Network error"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3497 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75246",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-15T05:45:25.710149Z",
+    "notes": "Call when arriving",
+    "cancellation": {
+      "reason": "Item out of stock",
+      "cancelled_at": "2025-06-16T12:45:25.710149Z",
+      "cancelled_by": "system",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-06-16T12:45:25.710149Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-15T05:45:25.710149Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0014",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod48",
+        "name": "Instant Space Heater",
+        "quantity": 1,
+        "price": 304.99,
+        "subtotal": 304.99
+      },
+      {
+        "product_id": "prod62",
+        "name": "Quick Slow Cooker Pro",
+        "quantity": 1,
+        "price": 774.99,
+        "subtotal": 774.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1079.98,
+      "tax": 89.4,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1169.38
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "apple_pay",
+      "last4": "9114",
+      "amount": 1169.38,
+      "currency": "USD",
+      "transaction_id": "tx705782",
+      "status": "paid",
+      "paid_at": "2025-05-18T21:47:25.710170Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "295 Market St",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33157",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-26T00:47:25.710170Z",
+      "tracking_number": "1Z9048987",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-05-18T21:24:25.710170Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-26T19:47:25.710170Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-18T21:36:25.710170Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-26T00:47:25.710170Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-21T00:47:25.710170Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-18T21:47:25.710170Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-18T21:24:25.710170Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-19T15:47:25.710170Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-20T15:47:25.710170Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0015",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod29",
+        "name": "Power Humidifier V2",
+        "quantity": 1,
+        "price": 1129.99,
+        "subtotal": 1129.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1129.99,
+      "tax": 108.13,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1238.12
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "4625",
+      "amount": 1238.12,
+      "currency": "USD",
+      "transaction_id": "tx404167",
+      "status": "paid",
+      "paid_at": "2025-05-30T01:07:25.710197Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "4998873174175",
+      "carrier": "Amazon Logistics",
+      "estimated_delivery": "2025-06-07T05:07:25.710197Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-05-30T00:33:25.710197Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-30T00:52:25.710197Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-02T05:07:25.710197Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-30T01:07:25.710197Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-30T00:33:25.710197Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-30T16:07:25.710197Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-01T16:07:25.710197Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0016",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod2",
+        "name": "Easy Air Purifier",
+        "quantity": 1,
+        "price": 1179.99,
+        "subtotal": 1179.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1179.99,
+      "tax": 131.7,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1311.69
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 1311.69,
+      "currency": "USD",
+      "transaction_id": "tx318786",
+      "status": "paid",
+      "paid_at": "2025-05-24T22:09:25.710222Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-30T17:09:25.710222Z",
+      "tracking_number": "FX269806066",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-05-24T21:57:25.710222Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-31T14:09:25.710222Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-24T22:02:25.710222Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-30T17:09:25.710222Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-28T17:09:25.710222Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-24T22:09:25.710222Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-24T21:57:25.710222Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-25T17:09:25.710222Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-27T17:09:25.710222Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0017",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod67",
+        "name": "Advanced Portable Charger Pro",
+        "quantity": 1,
+        "price": 379.99,
+        "subtotal": 379.99
+      }
+    ],
+    "totals": {
+      "subtotal": 379.99,
+      "tax": 44.25,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 424.24
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "apple_pay",
+      "last4": "2994",
+      "amount": 424.24,
+      "currency": "USD",
+      "transaction_id": "tx744210",
+      "status": "paid",
+      "paid_at": "2025-06-16T10:41:25.710248Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "9957 First Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90036",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-23T03:41:25.710248Z",
+      "tracking_number": "FX109507504",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-16T10:08:25.710248Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-23T23:41:25.710248Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-16T10:36:25.710248Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-23T03:41:25.710248Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-18T03:41:25.710248Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-16T10:41:25.710248Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-16T10:08:25.710248Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-16T18:41:25.710248Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-17T18:41:25.710248Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0018",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod4",
+        "name": "Tech Soundbar Max",
+        "quantity": 3,
+        "price": 82.13,
+        "subtotal": 246.39
+      },
+      {
+        "product_id": "prod3",
+        "name": "Eco Garage Door Opener Gen 2",
+        "quantity": 1,
+        "price": 99.99,
+        "subtotal": 99.99
+      }
+    ],
+    "totals": {
+      "subtotal": 346.38,
+      "tax": 31.75,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 378.13
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "debit_card",
+      "last4": "7894",
+      "amount": 378.13,
+      "currency": "USD",
+      "transaction_id": "tx296375",
+      "status": "paid",
+      "paid_at": "2025-05-22T19:27:25.710274Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "5319 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60677",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "FX539605362",
+      "carrier": "OnTrac",
+      "shipped_at": "2025-05-24T21:27:25.710274Z",
+      "estimated_delivery": "2025-05-27T21:27:25.710274Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-22T19:07:25.710274Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-22T19:23:25.710274Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-22T19:27:25.710274Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-22T19:07:25.710274Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-22T21:27:25.710274Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T21:27:25.710274Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0019",
+    "user_id": "user11",
+    "items": [
+      {
+        "product_id": "prod72",
+        "name": "Link Smart Switch V2",
+        "quantity": 3,
+        "price": 194.99,
+        "subtotal": 584.97
+      }
+    ],
+    "totals": {
+      "subtotal": 584.97,
+      "tax": 64.18,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 649.15
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "5379",
+      "amount": 649.15,
+      "currency": "USD",
+      "transaction_id": "tx247620",
+      "status": "paid",
+      "paid_at": "2025-06-10T08:00:25.710299Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1157 Main St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75286",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-10T07:31:25.710299Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-10T07:48:25.710299Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-10T08:00:25.710299Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-10T07:31:25.710299Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-10T13:00:25.710299Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0020",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod68",
+        "name": "Pro Tablet",
+        "quantity": 1,
+        "price": 109.99,
+        "subtotal": 109.99
+      },
+      {
+        "product_id": "prod11",
+        "name": "Tech VR Headset",
+        "quantity": 1,
+        "price": 434.99,
+        "subtotal": 434.99
+      },
+      {
+        "product_id": "prod31",
+        "name": "Sync Wireless Earbuds",
+        "quantity": 2,
+        "price": 86.71,
+        "subtotal": 173.42
+      },
+      {
+        "product_id": "prod24",
+        "name": "Digital Bluetooth Speaker 2024",
+        "quantity": 1,
+        "price": 279.99,
+        "subtotal": 279.99
+      }
+    ],
+    "totals": {
+      "subtotal": 998.39,
+      "tax": 102.41,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1100.8
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "8568",
+      "amount": 1100.8,
+      "currency": "USD",
+      "transaction_id": "tx420997",
+      "status": "paid",
+      "paid_at": "2025-06-01T07:40:25.710317Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "5319 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60677",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-01T07:13:25.710317Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-01T07:32:25.710317Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-01T07:40:25.710317Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-01T07:13:25.710317Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-01T15:40:25.710317Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0021",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod29",
+        "name": "Power Humidifier V2",
+        "quantity": 1,
+        "price": 1129.99,
+        "subtotal": 1129.99
+      },
+      {
+        "product_id": "prod2",
+        "name": "Easy Air Purifier",
+        "quantity": 3,
+        "price": 1179.99,
+        "subtotal": 3539.97
+      },
+      {
+        "product_id": "prod7",
+        "name": "Hub Smart Thermostat",
+        "quantity": 1,
+        "price": 104.99,
+        "subtotal": 104.99
+      },
+      {
+        "product_id": "prod13",
+        "name": "Max Smart TV",
+        "quantity": 1,
+        "price": 90.07,
+        "subtotal": 90.07
+      },
+      {
+        "product_id": "prod59",
+        "name": "Pulse Sleep Tracker",
+        "quantity": 1,
+        "price": 46.26,
+        "subtotal": 46.26
+      }
+    ],
+    "totals": {
+      "subtotal": 4911.28,
+      "tax": 479.23,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 5390.51
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "apple_pay",
+      "last4": "9114",
+      "amount": 5390.51,
+      "currency": "USD",
+      "transaction_id": "tx385297",
+      "status": "paid",
+      "paid_at": "2025-05-29T01:18:25.710343Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2091 Broadway",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33124",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-29T00:55:25.710343Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-29T01:04:25.710343Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-29T01:18:25.710343Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-29T00:55:25.710343Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-30T00:18:25.710343Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0022",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod73",
+        "name": "Eco Temperature Sensor",
+        "quantity": 1,
+        "price": 139.99,
+        "subtotal": 139.99
+      }
+    ],
+    "totals": {
+      "subtotal": 139.99,
+      "tax": 12.49,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 152.48
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "6630",
+      "amount": 152.48,
+      "currency": "USD",
+      "transaction_id": "tx849744",
+      "status": "paid",
+      "paid_at": "2025-05-26T20:10:25.710369Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "9957 First Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90036",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "TRK235308",
+      "carrier": "Amazon Logistics",
+      "shipped_at": "2025-05-28T16:10:25.710369Z",
+      "estimated_delivery": "2025-05-31T16:10:25.710369Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-26T20:03:25.710369Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-26T20:07:25.710369Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-26T20:10:25.710369Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-26T20:03:25.710369Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-27T16:10:25.710369Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-28T16:10:25.710369Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0023",
+    "user_id": "user10",
+    "items": [
+      {
+        "product_id": "prod26",
+        "name": "Chef Dehumidifier Max",
+        "quantity": 2,
+        "price": 109.99,
+        "subtotal": 219.98
+      },
+      {
+        "product_id": "prod69",
+        "name": "Quick Air Purifier Elite",
+        "quantity": 3,
+        "price": 214.99,
+        "subtotal": 644.97
+      },
+      {
+        "product_id": "prod64",
+        "name": "Link Smart Thermostat",
+        "quantity": 2,
+        "price": 84.62,
+        "subtotal": 169.24
+      }
+    ],
+    "totals": {
+      "subtotal": 1034.19,
+      "tax": 109.47,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1143.66
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "paypal",
+      "last4": "1472",
+      "amount": 1143.66,
+      "currency": "USD",
+      "transaction_id": "tx274226",
+      "status": "paid",
+      "paid_at": "2025-06-14T15:19:25.710394Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3497 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75246",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-19T19:19:25.710394Z",
+      "tracking_number": "FX504843229",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-14T14:50:25.710394Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-20T06:19:25.710394Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-14T15:14:25.710394Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-19T19:19:25.710394Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-18T19:19:25.710394Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-14T15:19:25.710394Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-14T14:50:25.710394Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-15T05:19:25.710394Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-18T05:19:25.710394Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0024",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod10",
+        "name": "Track Pulse Oximeter Max",
+        "quantity": 1,
+        "price": 619.99,
+        "subtotal": 619.99
+      }
+    ],
+    "totals": {
+      "subtotal": 619.99,
+      "tax": 69.14,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 689.13
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "debit_card",
+      "last4": "9571",
+      "amount": 689.13,
+      "currency": "USD",
+      "transaction_id": "tx871040",
+      "status": "paid",
+      "paid_at": "2025-05-25T15:50:25.710426Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-29T05:50:25.710426Z",
+      "tracking_number": "1Z8313021",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-05-25T15:26:25.710426Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-29T15:50:25.710426Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-25T15:38:25.710426Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-29T05:50:25.710426Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-28T05:50:25.710426Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-25T15:50:25.710426Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-25T15:26:25.710426Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-26T09:50:25.710426Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-27T09:50:25.710426Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0025",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod75",
+        "name": "Elite Tablet",
+        "quantity": 2,
+        "price": 109.99,
+        "subtotal": 219.98
+      },
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      },
+      {
+        "product_id": "prod61",
+        "name": "Master Humidifier",
+        "quantity": 4,
+        "price": 214.99,
+        "subtotal": 859.96
+      },
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 2,
+        "price": 379.99,
+        "subtotal": 759.98
+      }
+    ],
+    "totals": {
+      "subtotal": 2044.91,
+      "tax": 224.76,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2269.67
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "credit_card",
+      "last4": "3255",
+      "amount": 2269.67,
+      "currency": "USD",
+      "transaction_id": "tx698506",
+      "status": "paid",
+      "paid_at": "2025-06-08T08:15:25.710452Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-12T14:15:25.710452Z",
+      "tracking_number": "1Z1066247",
+      "carrier": "USPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-08T07:38:25.710452Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-13T00:15:25.710452Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-08T08:06:25.710452Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-12T14:15:25.710452Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T14:15:25.710452Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-08T08:15:25.710452Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-08T07:38:25.710452Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-08T21:15:25.710452Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-09T21:15:25.710452Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0026",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod15",
+        "name": "Smart Smart Switch Plus",
+        "quantity": 1,
+        "price": 65.71,
+        "subtotal": 65.71
+      },
+      {
+        "product_id": "prod71",
+        "name": "Digital Portable Charger",
+        "quantity": 1,
+        "price": 499.99,
+        "subtotal": 499.99
+      }
+    ],
+    "totals": {
+      "subtotal": 565.7,
+      "tax": 60.96,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 626.66
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "8895",
+      "amount": 626.66,
+      "currency": "USD",
+      "transaction_id": "tx691199",
+      "status": "paid",
+      "paid_at": "2025-05-26T09:19:25.710483Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "FX961938184",
+      "carrier": "FedEx",
+      "shipped_at": "2025-05-30T07:19:25.710483Z",
+      "estimated_delivery": "2025-06-06T07:19:25.710483Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-26T09:03:25.710483Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-26T09:08:25.710483Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-26T09:19:25.710483Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-26T09:03:25.710483Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-27T07:19:25.710483Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-30T07:19:25.710483Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0027",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod64",
+        "name": "Link Smart Thermostat",
+        "quantity": 2,
+        "price": 84.62,
+        "subtotal": 169.24
+      }
+    ],
+    "totals": {
+      "subtotal": 169.24,
+      "tax": 16.46,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 185.7
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2720",
+      "amount": 185.7,
+      "currency": "USD",
+      "transaction_id": "tx567313",
+      "status": "paid",
+      "paid_at": "2025-06-03T02:45:25.710508Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-08T09:45:25.710508Z",
+      "tracking_number": "FX845624671",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-06-03T02:15:25.710508Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-09T08:45:25.710508Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-03T02:36:25.710508Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-08T09:45:25.710508Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-07T09:45:25.710508Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-03T02:45:25.710508Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-03T02:15:25.710508Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-03T15:45:25.710508Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-06T15:45:25.710508Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0028",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod21",
+        "name": "Smart Smart Outlet",
+        "quantity": 2,
+        "price": 539.99,
+        "subtotal": 1079.98
+      }
+    ],
+    "totals": {
+      "subtotal": 1079.98,
+      "tax": 92.53,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1172.51
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "7033",
+      "amount": 1172.51,
+      "currency": "USD",
+      "transaction_id": "tx543879",
+      "status": "paid",
+      "paid_at": "2025-06-11T09:01:25.710535Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-17T02:01:25.710535Z",
+      "tracking_number": "1Z1495608",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-06-11T08:40:25.710535Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-18T00:01:25.710535Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-11T08:53:25.710535Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-17T02:01:25.710535Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-14T02:01:25.710535Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-11T09:01:25.710535Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-11T08:40:25.710535Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-12T06:01:25.710535Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-13T06:01:25.710535Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0029",
+    "user_id": "user6",
+    "items": [
+      {
+        "product_id": "prod68",
+        "name": "Pro Tablet",
+        "quantity": 1,
+        "price": 109.99,
+        "subtotal": 109.99
+      },
+      {
+        "product_id": "prod60",
+        "name": "Hub Smoke Detector 2024",
+        "quantity": 1,
+        "price": 199.99,
+        "subtotal": 199.99
+      }
+    ],
+    "totals": {
+      "subtotal": 309.98,
+      "tax": 27.12,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 337.1
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "apple_pay",
+      "last4": "6701",
+      "amount": 337.1,
+      "currency": "USD",
+      "transaction_id": "tx152938",
+      "status": "paid",
+      "paid_at": "2025-06-14T11:11:25.710562Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3903 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75254",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-25T12:11:25.710562Z",
+      "tracking_number": "6681492816274",
+      "carrier": "USPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-14T11:03:25.710562Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-26T10:11:25.710562Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-14T11:06:25.710562Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-25T12:11:25.710562Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-18T12:11:25.710562Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-14T11:11:25.710562Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-14T11:03:25.710562Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-15T01:11:25.710562Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-18T01:11:25.710562Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0030",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod43",
+        "name": "Prime Mechanical Keyboard V2",
+        "quantity": 3,
+        "price": 399.99,
+        "subtotal": 1199.97
+      },
+      {
+        "product_id": "prod73",
+        "name": "Eco Temperature Sensor",
+        "quantity": 2,
+        "price": 139.99,
+        "subtotal": 279.98
+      }
+    ],
+    "totals": {
+      "subtotal": 1479.95,
+      "tax": 153.21,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1633.16
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "credit_card",
+      "last4": "3255",
+      "amount": 1633.16,
+      "currency": "USD",
+      "transaction_id": "tx780151",
+      "status": "paid",
+      "paid_at": "2025-06-10T21:03:25.710621Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "8309393150928",
+      "carrier": "DHL",
+      "estimated_delivery": "2025-06-18T02:03:25.710621Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-06-10T20:29:25.710621Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-10T20:49:25.710621Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-15T02:03:25.710621Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-10T21:03:25.710621Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-10T20:29:25.710621Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-11T17:03:25.710621Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-14T17:03:25.710621Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0031",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod12",
+        "name": "Smart Wireless Headphones",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      },
+      {
+        "product_id": "prod2",
+        "name": "Easy Air Purifier",
+        "quantity": 2,
+        "price": 1179.99,
+        "subtotal": 2359.98
+      }
+    ],
+    "totals": {
+      "subtotal": 2564.9700000000003,
+      "tax": 294.21,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2859.18
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "6630",
+      "amount": 2859.18,
+      "currency": "USD",
+      "transaction_id": "tx591307",
+      "status": "cancelled"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "569 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90038",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-06T07:09:25.710648Z",
+    "notes": "Leave at front door",
+    "cancellation": {
+      "reason": "Product discontinued",
+      "cancelled_at": "2025-06-07T22:09:25.710648Z",
+      "cancelled_by": "merchant",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-06-07T22:09:25.710648Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-06T07:09:25.710648Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0032",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod19",
+        "name": "Chef Air Purifier Elite",
+        "quantity": 2,
+        "price": 174.99,
+        "subtotal": 349.98
+      },
+      {
+        "product_id": "prod44",
+        "name": "Hub Garage Door Opener Elite",
+        "quantity": 2,
+        "price": 134.99,
+        "subtotal": 269.98
+      },
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 4,
+        "price": 379.99,
+        "subtotal": 1519.96
+      },
+      {
+        "product_id": "prod17",
+        "name": "Smart Monitor",
+        "quantity": 2,
+        "price": 289.99,
+        "subtotal": 579.98
+      }
+    ],
+    "totals": {
+      "subtotal": 2719.9,
+      "tax": 267.66,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2987.56
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "8568",
+      "amount": 2987.56,
+      "currency": "USD",
+      "transaction_id": "tx252990",
+      "status": "paid",
+      "paid_at": "2025-05-25T12:40:25.710667Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "5319 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60677",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-25T12:21:25.710667Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-25T12:39:25.710667Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-25T12:40:25.710667Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-25T12:21:25.710667Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-26T09:40:25.710667Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0033",
+    "user_id": "user6",
+    "items": [
+      {
+        "product_id": "prod61",
+        "name": "Master Humidifier",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      },
+      {
+        "product_id": "prod45",
+        "name": "Advanced Gaming Mouse",
+        "quantity": 3,
+        "price": 274.99,
+        "subtotal": 824.97
+      }
+    ],
+    "totals": {
+      "subtotal": 1039.96,
+      "tax": 123.2,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1163.16
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "9824",
+      "amount": 1163.16,
+      "currency": "USD",
+      "transaction_id": "tx453400",
+      "status": "paid",
+      "paid_at": "2025-06-13T02:23:25.710690Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3903 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75254",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-19T12:23:25.710690Z",
+      "tracking_number": "TRK249493",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-06-13T02:06:25.710690Z",
+    "notes": "Customer pickup - hold at location",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-20T00:23:25.710690Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-13T02:17:25.710690Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-19T12:23:25.710690Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-15T12:23:25.710690Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-13T02:23:25.710690Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-13T02:06:25.710690Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-13T05:23:25.710690Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-15T05:23:25.710690Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0034",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod44",
+        "name": "Hub Garage Door Opener Elite",
+        "quantity": 2,
+        "price": 134.99,
+        "subtotal": 269.98
+      },
+      {
+        "product_id": "prod67",
+        "name": "Advanced Portable Charger Pro",
+        "quantity": 1,
+        "price": 379.99,
+        "subtotal": 379.99
+      },
+      {
+        "product_id": "prod50",
+        "name": "Quick Blender Pro",
+        "quantity": 2,
+        "price": 499.99,
+        "subtotal": 999.98
+      }
+    ],
+    "totals": {
+      "subtotal": 1649.95,
+      "tax": 173.89,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1823.84
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2720",
+      "amount": 1823.84,
+      "currency": "USD",
+      "transaction_id": "tx492814",
+      "status": "paid",
+      "paid_at": "2025-06-03T08:34:25.710719Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "TRK267370",
+      "carrier": "UPS",
+      "shipped_at": "2025-06-05T19:34:25.710719Z",
+      "estimated_delivery": "2025-06-08T19:34:25.710719Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-06-03T08:04:25.710719Z",
+    "notes": "Customer pickup - hold at location",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-03T08:32:25.710719Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-03T08:34:25.710719Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-03T08:04:25.710719Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-03T19:34:25.710719Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-05T19:34:25.710719Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0035",
+    "user_id": "user11",
+    "items": [
+      {
+        "product_id": "prod7",
+        "name": "Hub Smart Thermostat",
+        "quantity": 1,
+        "price": 104.99,
+        "subtotal": 104.99
+      }
+    ],
+    "totals": {
+      "subtotal": 104.99,
+      "tax": 11.92,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 116.91
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "5379",
+      "amount": 116.91,
+      "currency": "USD",
+      "transaction_id": "tx581170",
+      "status": "paid",
+      "paid_at": "2025-05-23T07:51:25.710746Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1157 Main St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75286",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-27T19:51:25.710746Z",
+      "tracking_number": "TRK406918",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-05-23T07:16:25.710746Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-28T06:51:25.710746Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-23T07:36:25.710746Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-27T19:51:25.710746Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-25T19:51:25.710746Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-23T07:51:25.710746Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-23T07:16:25.710746Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-24T03:51:25.710746Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-25T03:51:25.710746Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0036",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod19",
+        "name": "Chef Air Purifier Elite",
+        "quantity": 3,
+        "price": 174.99,
+        "subtotal": 524.97
+      },
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      },
+      {
+        "product_id": "prod6",
+        "name": "Quick Slow Cooker Max",
+        "quantity": 1,
+        "price": 1094.99,
+        "subtotal": 1094.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1824.95,
+      "tax": 162.55,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1987.5
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "7053",
+      "amount": 1987.5,
+      "currency": "USD",
+      "transaction_id": "tx294457",
+      "status": "paid",
+      "paid_at": "2025-06-06T19:52:25.710774Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-06T19:36:25.710774Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-06T19:44:25.710774Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-06T19:52:25.710774Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-06T19:36:25.710774Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T04:52:25.710774Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0037",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 3,
+        "price": 379.99,
+        "subtotal": 1139.97
+      },
+      {
+        "product_id": "prod41",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 1,
+        "price": 44.55,
+        "subtotal": 44.55
+      }
+    ],
+    "totals": {
+      "subtotal": 1184.52,
+      "tax": 133.34,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1317.86
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "paypal",
+      "last4": "8112",
+      "amount": 1317.86,
+      "currency": "USD",
+      "transaction_id": "tx207376",
+      "status": "paid",
+      "paid_at": "2025-06-03T16:56:25.710797Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "569 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90038",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "3486098710453",
+      "carrier": "USPS",
+      "shipped_at": "2025-06-06T00:56:25.710797Z",
+      "estimated_delivery": "2025-06-13T00:56:25.710797Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-06-03T16:44:25.710797Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-03T16:49:25.710797Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-03T16:56:25.710797Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-03T16:44:25.710797Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-04T00:56:25.710797Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-06T00:56:25.710797Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0038",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod34",
+        "name": "Pulse Heart Rate Monitor Pro",
+        "quantity": 1,
+        "price": 67.59,
+        "subtotal": 67.59
+      }
+    ],
+    "totals": {
+      "subtotal": 67.59,
+      "tax": 6.35,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 73.94
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "4625",
+      "amount": 73.94,
+      "currency": "USD",
+      "transaction_id": "tx519763",
+      "status": "paid",
+      "paid_at": "2025-06-02T05:29:25.710822Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-06T21:29:25.710822Z",
+      "tracking_number": "1Z3210321",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-06-02T04:48:25.710822Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-07T16:29:25.710822Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-02T05:15:25.710822Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-06T21:29:25.710822Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-05T21:29:25.710822Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-02T05:29:25.710822Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-02T04:48:25.710822Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-02T10:29:25.710822Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-05T10:29:25.710822Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0039",
+    "user_id": "user10",
+    "items": [
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 2,
+        "price": 204.99,
+        "subtotal": 409.98
+      },
+      {
+        "product_id": "prod13",
+        "name": "Max Smart TV",
+        "quantity": 2,
+        "price": 90.07,
+        "subtotal": 180.14
+      },
+      {
+        "product_id": "prod12",
+        "name": "Smart Wireless Headphones",
+        "quantity": 2,
+        "price": 204.99,
+        "subtotal": 409.98
+      }
+    ],
+    "totals": {
+      "subtotal": 1000.1,
+      "tax": 114.37,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1114.47
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "9814",
+      "amount": 1114.47,
+      "currency": "USD",
+      "transaction_id": "tx339549",
+      "status": "paid",
+      "paid_at": "2025-05-17T17:05:25.710850Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3497 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75246",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "8404062293790",
+      "carrier": "UPS",
+      "shipped_at": "2025-05-19T16:05:25.710850Z",
+      "estimated_delivery": "2025-05-23T16:05:25.710850Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-17T16:58:25.710850Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-17T17:02:25.710850Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-17T17:05:25.710850Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-17T16:58:25.710850Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-18T16:05:25.710850Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-19T16:05:25.710850Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0040",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod34",
+        "name": "Pulse Heart Rate Monitor Pro",
+        "quantity": 1,
+        "price": 67.59,
+        "subtotal": 67.59
+      },
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      },
+      {
+        "product_id": "prod46",
+        "name": "Elite Bluetooth Speaker",
+        "quantity": 2,
+        "price": 109.99,
+        "subtotal": 219.98
+      }
+    ],
+    "totals": {
+      "subtotal": 492.56,
+      "tax": 42.81,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 535.37
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "7033",
+      "amount": 535.37,
+      "currency": "USD",
+      "transaction_id": "tx840521",
+      "status": "paid",
+      "paid_at": "2025-06-07T15:46:25.710877Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-14T02:46:25.710877Z",
+      "tracking_number": "1Z8255299",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-06-07T15:26:25.710877Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-14T07:46:25.710877Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-07T15:42:25.710877Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-14T02:46:25.710877Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-11T02:46:25.710877Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-07T15:46:25.710877Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T15:26:25.710877Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T19:46:25.710877Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-10T19:46:25.710877Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0041",
+    "user_id": "user5",
+    "items": [
+      {
+        "product_id": "prod15",
+        "name": "Smart Smart Switch Plus",
+        "quantity": 1,
+        "price": 65.71,
+        "subtotal": 65.71
+      }
+    ],
+    "totals": {
+      "subtotal": 65.71,
+      "tax": 6.51,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 72.22
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "debit_card",
+      "last4": "1476",
+      "amount": 72.22,
+      "currency": "USD",
+      "transaction_id": "tx737095",
+      "status": "paid",
+      "paid_at": "2025-06-03T14:05:25.710911Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2152 First Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77052",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-03T13:43:25.710911Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-03T13:51:25.710911Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-03T14:05:25.710911Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-03T13:43:25.710911Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-04T00:05:25.710911Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0042",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod6",
+        "name": "Quick Slow Cooker Max",
+        "quantity": 3,
+        "price": 1094.99,
+        "subtotal": 3284.97
+      },
+      {
+        "product_id": "prod61",
+        "name": "Master Humidifier",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      }
+    ],
+    "totals": {
+      "subtotal": 3499.96,
+      "tax": 399.93,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 3899.89
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "1038",
+      "amount": 3899.89,
+      "currency": "USD",
+      "transaction_id": "tx163935",
+      "status": "paid",
+      "paid_at": "2025-05-21T04:28:25.710931Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2091 Broadway",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33124",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "1Z5761317",
+      "carrier": "OnTrac",
+      "shipped_at": "2025-05-22T14:28:25.710931Z",
+      "estimated_delivery": "2025-05-29T14:28:25.710931Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-21T04:02:25.710931Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-21T04:26:25.710931Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-21T04:28:25.710931Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-21T04:02:25.710931Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-21T14:28:25.710931Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-22T14:28:25.710931Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0043",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod50",
+        "name": "Quick Blender Pro",
+        "quantity": 1,
+        "price": 499.99,
+        "subtotal": 499.99
+      },
+      {
+        "product_id": "prod61",
+        "name": "Master Humidifier",
+        "quantity": 2,
+        "price": 214.99,
+        "subtotal": 429.98
+      }
+    ],
+    "totals": {
+      "subtotal": 929.97,
+      "tax": 103.79,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1033.76
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "3736",
+      "amount": 1033.76,
+      "currency": "USD",
+      "transaction_id": "tx302961",
+      "status": "cancelled"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "4094 Oak Ave",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60687",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-06T20:27:25.710956Z",
+    "notes": "",
+    "cancellation": {
+      "reason": "Product discontinued",
+      "cancelled_at": "2025-06-07T06:27:25.710956Z",
+      "cancelled_by": "system",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-06-07T06:27:25.710956Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-06T20:27:25.710956Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0044",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod25",
+        "name": "Connect Flood Sensor",
+        "quantity": 2,
+        "price": 159.99,
+        "subtotal": 319.98
+      }
+    ],
+    "totals": {
+      "subtotal": 319.98,
+      "tax": 37.39,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 357.37
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "9642",
+      "amount": 357.37,
+      "currency": "USD",
+      "transaction_id": "tx931233",
+      "status": "paid",
+      "paid_at": "2025-05-26T09:54:25.710975Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-26T09:35:25.710975Z",
+    "notes": "Customer pickup - hold at location",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-26T09:44:25.710975Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-26T09:54:25.710975Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-26T09:35:25.710975Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-27T03:54:25.710975Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0045",
+    "user_id": "user11",
+    "items": [
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 1,
+        "price": 379.99,
+        "subtotal": 379.99
+      }
+    ],
+    "totals": {
+      "subtotal": 379.99,
+      "tax": 40.16,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 420.15
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "5379",
+      "amount": 420.15,
+      "currency": "USD",
+      "transaction_id": "tx369183",
+      "status": "cancelled"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1157 Main St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75286",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-05-23T15:34:25.710993Z",
+    "notes": "",
+    "cancellation": {
+      "reason": "Shipping address issue",
+      "cancelled_at": "2025-05-24T13:34:25.710993Z",
+      "cancelled_by": "merchant",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-05-24T13:34:25.710993Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-23T15:34:25.710993Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0046",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod69",
+        "name": "Quick Air Purifier Elite",
+        "quantity": 2,
+        "price": 214.99,
+        "subtotal": 429.98
+      },
+      {
+        "product_id": "prod8",
+        "name": "Advanced Webcam Plus",
+        "quantity": 2,
+        "price": 1569.99,
+        "subtotal": 3139.98
+      },
+      {
+        "product_id": "prod21",
+        "name": "Smart Smart Outlet",
+        "quantity": 1,
+        "price": 539.99,
+        "subtotal": 539.99
+      }
+    ],
+    "totals": {
+      "subtotal": 4109.95,
+      "tax": 364.52,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 4474.47
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "paypal",
+      "last4": "8112",
+      "amount": 4474.47,
+      "currency": "USD",
+      "transaction_id": "tx188860",
+      "status": "paid",
+      "paid_at": "2025-05-24T16:14:25.711009Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "569 Oak Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90038",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-28T22:14:25.711009Z",
+      "tracking_number": "1Z5601642",
+      "carrier": "OnTrac"
+    },
+    "status": "completed",
+    "created_at": "2025-05-24T15:36:25.711009Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-29T19:14:25.711009Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-24T16:06:25.711009Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-28T22:14:25.711009Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-26T22:14:25.711009Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-24T16:14:25.711009Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-24T15:36:25.711009Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-25T13:14:25.711009Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-26T13:14:25.711009Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0047",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod60",
+        "name": "Hub Smoke Detector 2024",
+        "quantity": 2,
+        "price": 199.99,
+        "subtotal": 399.98
+      }
+    ],
+    "totals": {
+      "subtotal": 399.98,
+      "tax": 35.17,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 435.15
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "apple_pay",
+      "last4": "9114",
+      "amount": 435.15,
+      "currency": "USD",
+      "transaction_id": "tx290636",
+      "status": "paid",
+      "paid_at": "2025-06-05T22:37:25.711039Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "295 Market St",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33157",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-05T22:13:25.711039Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-05T22:30:25.711039Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-05T22:37:25.711039Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-05T22:13:25.711039Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-06T15:37:25.711039Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0048",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod66",
+        "name": "Master Fan Max",
+        "quantity": 1,
+        "price": 244.99,
+        "subtotal": 244.99
+      },
+      {
+        "product_id": "prod55",
+        "name": "Instant Dishwasher",
+        "quantity": 1,
+        "price": 274.99,
+        "subtotal": 274.99
+      }
+    ],
+    "totals": {
+      "subtotal": 519.98,
+      "tax": 50.31,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 570.29
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 570.29,
+      "currency": "USD",
+      "transaction_id": "tx216071",
+      "status": "paid",
+      "paid_at": "2025-06-07T08:37:25.711057Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "2044312540818",
+      "carrier": "DHL",
+      "estimated_delivery": "2025-06-13T21:37:25.711057Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-06-07T08:01:25.711057Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-07T08:26:25.711057Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-11T21:37:25.711057Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-07T08:37:25.711057Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T08:01:25.711057Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T21:37:25.711057Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-10T21:37:25.711057Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0049",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod13",
+        "name": "Max Smart TV",
+        "quantity": 2,
+        "price": 90.07,
+        "subtotal": 180.14
+      }
+    ],
+    "totals": {
+      "subtotal": 180.14,
+      "tax": 16.41,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 196.55
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "apple_pay",
+      "last4": "9114",
+      "amount": 196.55,
+      "currency": "USD",
+      "transaction_id": "tx323857",
+      "status": "paid",
+      "paid_at": "2025-05-23T18:31:25.711083Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2091 Broadway",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33124",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-02T01:31:25.711083Z",
+      "tracking_number": "FX630201030",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-05-23T17:53:25.711083Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-02T15:31:25.711083Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-23T18:20:25.711083Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-02T01:31:25.711083Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-28T01:31:25.711083Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-23T18:31:25.711083Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-23T17:53:25.711083Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-24T15:31:25.711083Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-27T15:31:25.711083Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0050",
+    "user_id": "user10",
+    "items": [
+      {
+        "product_id": "prod23",
+        "name": "Home Night Light",
+        "quantity": 2,
+        "price": 75.3,
+        "subtotal": 150.6
+      },
+      {
+        "product_id": "prod50",
+        "name": "Quick Blender Pro",
+        "quantity": 2,
+        "price": 499.99,
+        "subtotal": 999.98
+      },
+      {
+        "product_id": "prod6",
+        "name": "Quick Slow Cooker Max",
+        "quantity": 2,
+        "price": 1094.99,
+        "subtotal": 2189.98
+      }
+    ],
+    "totals": {
+      "subtotal": 3340.56,
+      "tax": 281.4,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 3621.96
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "9814",
+      "amount": 3621.96,
+      "currency": "USD",
+      "transaction_id": "tx192785",
+      "status": "paid",
+      "paid_at": "2025-05-30T17:00:25.711110Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3497 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75246",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-04T12:00:25.711110Z",
+      "tracking_number": "1Z3356958",
+      "carrier": "USPS"
+    },
+    "status": "completed",
+    "created_at": "2025-05-30T16:23:25.711110Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-05T07:00:25.711110Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-30T16:48:25.711110Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-04T12:00:25.711110Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-02T12:00:25.711110Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-30T17:00:25.711110Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-30T16:23:25.711110Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-31T14:00:25.711110Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-01T14:00:25.711110Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0051",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod21",
+        "name": "Smart Smart Outlet",
+        "quantity": 3,
+        "price": 539.99,
+        "subtotal": 1619.97
+      },
+      {
+        "product_id": "prod66",
+        "name": "Master Fan Max",
+        "quantity": 2,
+        "price": 244.99,
+        "subtotal": 489.98
+      }
+    ],
+    "totals": {
+      "subtotal": 2109.95,
+      "tax": 181.2,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2291.15
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 2291.15,
+      "currency": "USD",
+      "transaction_id": "tx605487",
+      "status": "paid",
+      "paid_at": "2025-05-19T21:32:25.711140Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-19T21:11:25.711140Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-19T21:29:25.711140Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-19T21:32:25.711140Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-19T21:11:25.711140Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-20T11:32:25.711140Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0052",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod5",
+        "name": "Instant Coffee Maker",
+        "quantity": 1,
+        "price": 789.99,
+        "subtotal": 789.99
+      },
+      {
+        "product_id": "prod70",
+        "name": "Home Smart Mirror Elite",
+        "quantity": 1,
+        "price": 189.99,
+        "subtotal": 189.99
+      },
+      {
+        "product_id": "prod42",
+        "name": "Health Step Counter",
+        "quantity": 1,
+        "price": 159.99,
+        "subtotal": 159.99
+      },
+      {
+        "product_id": "prod33",
+        "name": "Auto Motion Sensor",
+        "quantity": 2,
+        "price": 75.45,
+        "subtotal": 150.9
+      }
+    ],
+    "totals": {
+      "subtotal": 1290.8700000000001,
+      "tax": 145.44,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1436.31
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "7053",
+      "amount": 1436.31,
+      "currency": "USD",
+      "transaction_id": "tx999201",
+      "status": "paid",
+      "paid_at": "2025-05-28T04:15:25.711159Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-31T10:15:25.711159Z",
+      "tracking_number": "1Z5314057",
+      "carrier": "DHL"
+    },
+    "status": "completed",
+    "created_at": "2025-05-28T04:05:25.711159Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-31T18:15:25.711159Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-28T04:13:25.711159Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-31T10:15:25.711159Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-30T10:15:25.711159Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-28T04:15:25.711159Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-28T04:05:25.711159Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-28T15:15:25.711159Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-29T15:15:25.711159Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0053",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod30",
+        "name": "Connect Smoke Detector",
+        "quantity": 2,
+        "price": 244.99,
+        "subtotal": 489.98
+      }
+    ],
+    "totals": {
+      "subtotal": 489.98,
+      "tax": 43.07,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 533.05
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "credit_card",
+      "last4": "4818",
+      "amount": 533.05,
+      "currency": "USD",
+      "transaction_id": "tx167594",
+      "status": "failed",
+      "failed_at": "2025-06-06T09:02:25.711190Z",
+      "failure_reason": "Expired card"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-05T06:02:25.711190Z",
+    "notes": "Leave at front door",
+    "cancellation": {
+      "reason": "Product discontinued",
+      "cancelled_at": "2025-06-06T09:02:25.711190Z",
+      "cancelled_by": "merchant",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-06-06T09:02:25.711190Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-05T06:02:25.711190Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0054",
+    "user_id": "user5",
+    "items": [
+      {
+        "product_id": "prod24",
+        "name": "Digital Bluetooth Speaker 2024",
+        "quantity": 1,
+        "price": 279.99,
+        "subtotal": 279.99
+      },
+      {
+        "product_id": "prod53",
+        "name": "Eco Security Camera Elite",
+        "quantity": 2,
+        "price": 149.99,
+        "subtotal": 299.98
+      }
+    ],
+    "totals": {
+      "subtotal": 579.97,
+      "tax": 59.68,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 639.65
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "debit_card",
+      "last4": "1476",
+      "amount": 639.65,
+      "currency": "USD",
+      "transaction_id": "tx749009",
+      "status": "paid",
+      "paid_at": "2025-05-22T01:17:25.711208Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2152 First Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77052",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "5459760214388",
+      "carrier": "UPS",
+      "estimated_delivery": "2025-05-29T20:17:25.711208Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-05-22T00:58:25.711208Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-22T01:11:25.711208Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-24T20:17:25.711208Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-22T01:17:25.711208Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-22T00:58:25.711208Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-22T09:17:25.711208Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T09:17:25.711208Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0055",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod26",
+        "name": "Chef Dehumidifier Max",
+        "quantity": 2,
+        "price": 109.99,
+        "subtotal": 219.98
+      }
+    ],
+    "totals": {
+      "subtotal": 219.98,
+      "tax": 19.67,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 239.65
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "8568",
+      "amount": 239.65,
+      "currency": "USD",
+      "transaction_id": "tx461149",
+      "status": "failed",
+      "failed_at": "2025-06-09T03:15:25.711234Z",
+      "failure_reason": "Authentication failed"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "5319 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60677",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-07T13:15:25.711234Z",
+    "notes": "Signature required",
+    "cancellation": {
+      "reason": "Payment declined",
+      "cancelled_at": "2025-06-09T03:15:25.711234Z",
+      "cancelled_by": "system",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-06-09T03:15:25.711234Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T13:15:25.711234Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0056",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod3",
+        "name": "Eco Garage Door Opener Gen 2",
+        "quantity": 2,
+        "price": 99.99,
+        "subtotal": 199.98
+      }
+    ],
+    "totals": {
+      "subtotal": 199.98,
+      "tax": 23.3,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 223.28
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "4625",
+      "amount": 223.28,
+      "currency": "USD",
+      "transaction_id": "tx921370",
+      "status": "paid",
+      "paid_at": "2025-05-18T00:51:25.711250Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-22T09:51:25.711250Z",
+      "tracking_number": "1Z4271282",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-05-18T00:25:25.711250Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-23T05:51:25.711250Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-18T00:36:25.711250Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-22T09:51:25.711250Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-21T09:51:25.711250Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-18T00:51:25.711250Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-18T00:25:25.711250Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-18T16:51:25.711250Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-20T16:51:25.711250Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0057",
+    "user_id": "user5",
+    "items": [
+      {
+        "product_id": "prod65",
+        "name": "Prime E-Reader",
+        "quantity": 1,
+        "price": 309.99,
+        "subtotal": 309.99
+      },
+      {
+        "product_id": "prod61",
+        "name": "Master Humidifier",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      }
+    ],
+    "totals": {
+      "subtotal": 524.98,
+      "tax": 60.23,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 585.21
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "debit_card",
+      "last4": "1476",
+      "amount": 585.21,
+      "currency": "USD",
+      "transaction_id": "tx541651",
+      "status": "paid",
+      "paid_at": "2025-06-12T02:00:25.711277Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2152 First Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77052",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-06-12T01:50:25.711277Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-12T01:52:25.711277Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-12T02:00:25.711277Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-12T01:50:25.711277Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-12T04:00:25.711277Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0058",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod23",
+        "name": "Home Night Light",
+        "quantity": 1,
+        "price": 75.3,
+        "subtotal": 75.3
+      }
+    ],
+    "totals": {
+      "subtotal": 75.3,
+      "tax": 6.08,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 81.38
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "credit_card",
+      "last4": "3255",
+      "amount": 81.38,
+      "currency": "USD",
+      "transaction_id": "tx495462",
+      "status": "paid",
+      "paid_at": "2025-06-03T14:11:25.711296Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "TRK957322",
+      "carrier": "USPS",
+      "estimated_delivery": "2025-06-11T18:11:25.711296Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-06-03T13:46:25.711296Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-03T14:05:25.711296Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-07T18:11:25.711296Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-03T14:11:25.711296Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-03T13:46:25.711296Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-03T20:11:25.711296Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-06T20:11:25.711296Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0059",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod16",
+        "name": "Smart Security Camera",
+        "quantity": 4,
+        "price": 449.99,
+        "subtotal": 1799.96
+      },
+      {
+        "product_id": "prod73",
+        "name": "Eco Temperature Sensor",
+        "quantity": 2,
+        "price": 139.99,
+        "subtotal": 279.98
+      },
+      {
+        "product_id": "prod38",
+        "name": "Pro Router",
+        "quantity": 1,
+        "price": 1579.99,
+        "subtotal": 1579.99
+      },
+      {
+        "product_id": "prod28",
+        "name": "Nest Smart Outlet",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      }
+    ],
+    "totals": {
+      "subtotal": 3874.92,
+      "tax": 382.59,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 4257.51
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "6630",
+      "amount": 4257.51,
+      "currency": "USD",
+      "transaction_id": "tx500269",
+      "status": "paid",
+      "paid_at": "2025-05-30T03:50:25.711320Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "9957 First Ave",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90036",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "1201499031320",
+      "carrier": "OnTrac",
+      "shipped_at": "2025-06-02T16:50:25.711320Z",
+      "estimated_delivery": "2025-06-05T16:50:25.711320Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-30T03:24:25.711320Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-30T03:47:25.711320Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-30T03:50:25.711320Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-30T03:24:25.711320Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-30T16:50:25.711320Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-02T16:50:25.711320Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0060",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod28",
+        "name": "Nest Smart Outlet",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      },
+      {
+        "product_id": "prod42",
+        "name": "Health Step Counter",
+        "quantity": 1,
+        "price": 159.99,
+        "subtotal": 159.99
+      }
+    ],
+    "totals": {
+      "subtotal": 374.98,
+      "tax": 34.89,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 409.87
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "9741",
+      "amount": 409.87,
+      "currency": "USD",
+      "transaction_id": "tx650588",
+      "status": "paid",
+      "paid_at": "2025-05-21T20:04:25.711347Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-25T15:04:25.711347Z",
+      "tracking_number": "TRK283690",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-05-21T19:45:25.711347Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-26T03:04:25.711347Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-21T19:50:25.711347Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-25T15:04:25.711347Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-24T15:04:25.711347Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-21T20:04:25.711347Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-21T19:45:25.711347Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-22T08:04:25.711347Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T08:04:25.711347Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0061",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod24",
+        "name": "Digital Bluetooth Speaker 2024",
+        "quantity": 1,
+        "price": 279.99,
+        "subtotal": 279.99
+      },
+      {
+        "product_id": "prod70",
+        "name": "Home Smart Mirror Elite",
+        "quantity": 1,
+        "price": 189.99,
+        "subtotal": 189.99
+      },
+      {
+        "product_id": "prod6",
+        "name": "Quick Slow Cooker Max",
+        "quantity": 1,
+        "price": 1094.99,
+        "subtotal": 1094.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1564.97,
+      "tax": 184.16,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1749.13
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "7033",
+      "amount": 1749.13,
+      "currency": "USD",
+      "transaction_id": "tx805320",
+      "status": "paid",
+      "paid_at": "2025-05-21T13:55:25.711379Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-05-26T05:55:25.711379Z",
+      "tracking_number": "TRK217576",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-05-21T13:16:25.711379Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-05-26T15:55:25.711379Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-21T13:44:25.711379Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-05-26T05:55:25.711379Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-25T05:55:25.711379Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-21T13:55:25.711379Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-21T13:16:25.711379Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-22T09:55:25.711379Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-24T09:55:25.711379Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0062",
+    "user_id": "user8",
+    "items": [
+      {
+        "product_id": "prod69",
+        "name": "Quick Air Purifier Elite",
+        "quantity": 2,
+        "price": 214.99,
+        "subtotal": 429.98
+      }
+    ],
+    "totals": {
+      "subtotal": 429.98,
+      "tax": 43.16,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 473.14
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "debit_card",
+      "last4": "9571",
+      "amount": 473.14,
+      "currency": "USD",
+      "transaction_id": "tx475234",
+      "status": "paid",
+      "paid_at": "2025-06-07T08:57:25.711409Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9141 Park Blvd",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "98189",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-16T07:57:25.711409Z",
+      "tracking_number": "TRK560607",
+      "carrier": "Amazon Logistics"
+    },
+    "status": "completed",
+    "created_at": "2025-06-07T08:21:25.711409Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-16T12:57:25.711409Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-07T08:51:25.711409Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-16T07:57:25.711409Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T07:57:25.711409Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-07T08:57:25.711409Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T08:21:25.711409Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T23:57:25.711409Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-09T23:57:25.711409Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0063",
+    "user_id": "user6",
+    "items": [
+      {
+        "product_id": "prod8",
+        "name": "Advanced Webcam Plus",
+        "quantity": 1,
+        "price": 1569.99,
+        "subtotal": 1569.99
+      },
+      {
+        "product_id": "prod26",
+        "name": "Chef Dehumidifier Max",
+        "quantity": 1,
+        "price": 109.99,
+        "subtotal": 109.99
+      },
+      {
+        "product_id": "prod63",
+        "name": "Pro Smart Watch",
+        "quantity": 1,
+        "price": 38.05,
+        "subtotal": 38.05
+      }
+    ],
+    "totals": {
+      "subtotal": 1718.03,
+      "tax": 173.09,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1891.12
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "9824",
+      "amount": 1891.12,
+      "currency": "USD",
+      "transaction_id": "tx608304",
+      "status": "paid",
+      "paid_at": "2025-05-31T07:27:25.711435Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "3903 Broadway",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75254",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "TRK551388",
+      "carrier": "DHL",
+      "estimated_delivery": "2025-06-05T05:27:25.711435Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-05-31T07:03:25.711435Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-31T07:15:25.711435Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-02T05:27:25.711435Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-31T07:27:25.711435Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-31T07:03:25.711435Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-31T10:27:25.711435Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-01T10:27:25.711435Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0064",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod41",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 1,
+        "price": 44.55,
+        "subtotal": 44.55
+      }
+    ],
+    "totals": {
+      "subtotal": 44.55,
+      "tax": 4.6,
+      "shipping": 6.99,
+      "processing_fee": 0.0,
+      "total": 56.14
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "7053",
+      "amount": 56.14,
+      "currency": "USD",
+      "transaction_id": "tx223528",
+      "status": "paid",
+      "paid_at": "2025-06-06T14:44:25.711463Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-16T00:44:25.711463Z",
+      "tracking_number": "1Z8170848",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-06-06T14:16:25.711463Z",
+    "notes": "Signature required",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-16T14:44:25.711463Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-06T14:37:25.711463Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-16T00:44:25.711463Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T00:44:25.711463Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-06T14:44:25.711463Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-06T14:16:25.711463Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T12:44:25.711463Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-09T12:44:25.711463Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0065",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod64",
+        "name": "Link Smart Thermostat",
+        "quantity": 4,
+        "price": 84.62,
+        "subtotal": 338.48
+      },
+      {
+        "product_id": "prod47",
+        "name": "Nest Security Camera",
+        "quantity": 2,
+        "price": 229.99,
+        "subtotal": 459.98
+      }
+    ],
+    "totals": {
+      "subtotal": 798.46,
+      "tax": 67.54,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 866.0
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "9642",
+      "amount": 866.0,
+      "currency": "USD",
+      "transaction_id": "tx990360",
+      "status": "paid",
+      "paid_at": "2025-06-07T15:00:25.711491Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-13T16:00:25.711491Z",
+      "tracking_number": "FX275783827",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-07T14:56:25.711491Z",
+    "notes": "Handle with care - fragile items",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-14T06:00:25.711491Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-07T14:58:25.711491Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-13T16:00:25.711491Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-10T16:00:25.711491Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-07T15:00:25.711491Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-07T14:56:25.711491Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-07T22:00:25.711491Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-09T22:00:25.711491Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0066",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod55",
+        "name": "Instant Dishwasher",
+        "quantity": 2,
+        "price": 274.99,
+        "subtotal": 549.98
+      },
+      {
+        "product_id": "prod1",
+        "name": "Smart USB Microphone",
+        "quantity": 1,
+        "price": 244.99,
+        "subtotal": 244.99
+      }
+    ],
+    "totals": {
+      "subtotal": 794.97,
+      "tax": 93.53,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 888.5
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "8895",
+      "amount": 888.5,
+      "currency": "USD",
+      "transaction_id": "tx409660",
+      "status": "paid",
+      "paid_at": "2025-05-27T09:10:25.711520Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "FX836101547",
+      "carrier": "DHL",
+      "estimated_delivery": "2025-06-04T08:10:25.711520Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-05-27T08:33:25.711520Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-27T09:01:25.711520Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-05-30T08:10:25.711520Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-27T09:10:25.711520Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-27T08:33:25.711520Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-27T16:10:25.711520Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-29T16:10:25.711520Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0067",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod20",
+        "name": "Pro Slow Cooker",
+        "quantity": 1,
+        "price": 259.99,
+        "subtotal": 259.99
+      }
+    ],
+    "totals": {
+      "subtotal": 259.99,
+      "tax": 30.12,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 290.11
+    },
+    "payment": {
+      "method_id": "pm3",
+      "method_type": "debit_card",
+      "last4": "7894",
+      "amount": 290.11,
+      "currency": "USD",
+      "transaction_id": "tx413482",
+      "status": "paid",
+      "paid_at": "2025-06-05T07:31:25.711546Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "4094 Oak Ave",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60687",
+        "country": "USA"
+      },
+      "status": "in_transit",
+      "tracking_number": "FX723509788",
+      "carrier": "DHL",
+      "estimated_delivery": "2025-06-12T08:31:25.711546Z"
+    },
+    "status": "in_transit",
+    "created_at": "2025-06-05T07:21:25.711546Z",
+    "notes": "Ring doorbell",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-05T07:23:25.711546Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-08T08:31:25.711546Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-05T07:31:25.711546Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-05T07:21:25.711546Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-05T21:31:25.711546Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-07T21:31:25.711546Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0068",
+    "user_id": "user7",
+    "items": [
+      {
+        "product_id": "prod6",
+        "name": "Quick Slow Cooker Max",
+        "quantity": 1,
+        "price": 1094.99,
+        "subtotal": 1094.99
+      },
+      {
+        "product_id": "prod28",
+        "name": "Nest Smart Outlet",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      },
+      {
+        "product_id": "prod10",
+        "name": "Track Pulse Oximeter Max",
+        "quantity": 1,
+        "price": 619.99,
+        "subtotal": 619.99
+      },
+      {
+        "product_id": "prod65",
+        "name": "Prime E-Reader",
+        "quantity": 1,
+        "price": 309.99,
+        "subtotal": 309.99
+      }
+    ],
+    "totals": {
+      "subtotal": 2239.96,
+      "tax": 247.08,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2487.04
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "2595",
+      "amount": 2487.04,
+      "currency": "USD",
+      "transaction_id": "tx472161",
+      "status": "failed",
+      "failed_at": "2025-05-30T23:49:25.711570Z",
+      "failure_reason": "Card declined"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2745 Broadway",
+        "city": "Portland",
+        "state": "CA",
+        "zip": "90020",
+        "country": "USA"
+      },
+      "status": "cancelled"
+    },
+    "status": "cancelled",
+    "created_at": "2025-05-28T23:49:25.711570Z",
+    "notes": "Rush delivery requested",
+    "cancellation": {
+      "reason": "Duplicate order",
+      "cancelled_at": "2025-05-30T23:49:25.711570Z",
+      "cancelled_by": "customer",
+      "refunded": false
+    },
+    "status_history": [
+      {
+        "status": "cancelled",
+        "timestamp": "2025-05-30T23:49:25.711570Z",
+        "note": "Order cancelled"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-28T23:49:25.711570Z",
+        "note": "Order placed"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0069",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod29",
+        "name": "Power Humidifier V2",
+        "quantity": 3,
+        "price": 1129.99,
+        "subtotal": 3389.97
+      },
+      {
+        "product_id": "prod41",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 1,
+        "price": 44.55,
+        "subtotal": 44.55
+      }
+    ],
+    "totals": {
+      "subtotal": 3434.52,
+      "tax": 386.57,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 3821.09
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "7033",
+      "amount": 3821.09,
+      "currency": "USD",
+      "transaction_id": "tx882310",
+      "status": "paid",
+      "paid_at": "2025-06-13T05:13:25.711591Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-20T12:13:25.711591Z",
+      "tracking_number": "FX330402677",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-06-13T04:55:25.711591Z",
+    "notes": "Customer pickup - hold at location",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-21T11:13:25.711591Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-13T05:11:25.711591Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-20T12:13:25.711591Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-15T12:13:25.711591Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-13T05:13:25.711591Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-13T04:55:25.711591Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-13T23:13:25.711591Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-14T23:13:25.711591Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0070",
+    "user_id": "user4",
+    "items": [
+      {
+        "product_id": "prod54",
+        "name": "Active Smart Watch Gen 2",
+        "quantity": 1,
+        "price": 404.99,
+        "subtotal": 404.99
+      },
+      {
+        "product_id": "prod60",
+        "name": "Hub Smoke Detector 2024",
+        "quantity": 1,
+        "price": 199.99,
+        "subtotal": 199.99
+      },
+      {
+        "product_id": "prod5",
+        "name": "Instant Coffee Maker",
+        "quantity": 2,
+        "price": 789.99,
+        "subtotal": 1579.98
+      },
+      {
+        "product_id": "prod71",
+        "name": "Digital Portable Charger",
+        "quantity": 1,
+        "price": 499.99,
+        "subtotal": 499.99
+      }
+    ],
+    "totals": {
+      "subtotal": 2684.95,
+      "tax": 249.0,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2933.95
+    },
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "apple_pay",
+      "last4": "9642",
+      "amount": 2933.95,
+      "currency": "USD",
+      "transaction_id": "tx136153",
+      "status": "paid",
+      "paid_at": "2025-06-02T19:19:25.711619Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "9314 Oak Ave",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10055",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-11T05:19:25.711619Z",
+      "tracking_number": "1Z3783708",
+      "carrier": "UPS"
+    },
+    "status": "completed",
+    "created_at": "2025-06-02T19:13:25.711619Z",
+    "notes": "Gift order - include gift receipt",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-11T09:19:25.711619Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-02T19:18:25.711619Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-11T05:19:25.711619Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-06T05:19:25.711619Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-02T19:19:25.711619Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-02T19:13:25.711619Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-03T00:19:25.711619Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-06T00:19:25.711619Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ON0071",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod72",
+        "name": "Link Smart Switch V2",
+        "quantity": 1,
+        "price": 194.99,
+        "subtotal": 194.99
+      },
+      {
+        "product_id": "prod28",
+        "name": "Nest Smart Outlet",
+        "quantity": 1,
+        "price": 214.99,
+        "subtotal": 214.99
+      }
+    ],
+    "totals": {
+      "subtotal": 409.98,
+      "tax": 42.97,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 452.95
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "apple_pay",
+      "last4": "9114",
+      "amount": 452.95,
+      "currency": "USD",
+      "transaction_id": "tx756666",
+      "status": "paid",
+      "paid_at": "2025-05-22T17:37:25.711649Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "295 Market St",
+        "city": "Miami",
+        "state": "FL",
+        "zip": "33157",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-22T17:08:25.711649Z",
+    "notes": "Rush delivery requested",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-22T17:22:25.711649Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-22T17:37:25.711649Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-22T17:08:25.711649Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-23T02:37:25.711649Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "ORDER0072",
+    "user_id": "user12",
+    "items": [
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 1,
+        "price": 379.99,
+        "subtotal": 379.99
+      },
+      {
+        "product_id": "prod66",
+        "name": "Master Fan Max",
+        "quantity": 2,
+        "price": 244.99,
+        "subtotal": 489.98
+      },
+      {
+        "product_id": "prod7",
+        "name": "Hub Smart Thermostat",
+        "quantity": 1,
+        "price": 104.99,
+        "subtotal": 104.99
+      },
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1179.95,
+      "tax": 132.4,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 1312.35
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "8895",
+      "amount": 1312.35,
+      "currency": "USD",
+      "transaction_id": "tx312315",
+      "status": "paid",
+      "paid_at": "2025-05-23T09:46:25.711669Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2605 Oak Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77058",
+        "country": "USA"
+      },
+      "status": "preparing"
+    },
+    "status": "processing",
+    "created_at": "2025-05-23T09:06:25.711669Z",
+    "notes": "Leave at front door",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-23T09:31:25.711669Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-23T09:46:25.711669Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-23T09:06:25.711669Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-23T22:46:25.711669Z",
+        "note": "Order processing"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0073",
+    "user_id": "user3",
+    "items": [
+      {
+        "product_id": "prod48",
+        "name": "Instant Space Heater",
+        "quantity": 1,
+        "price": 304.99,
+        "subtotal": 304.99
+      }
+    ],
+    "totals": {
+      "subtotal": 304.99,
+      "tax": 29.03,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 334.02
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "4625",
+      "amount": 334.02,
+      "currency": "USD",
+      "transaction_id": "tx898111",
+      "status": "paid",
+      "paid_at": "2025-06-08T04:23:25.711691Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "1753 Market St",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "75263",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-14T08:23:25.711691Z",
+      "tracking_number": "2795002201847",
+      "carrier": "DHL"
+    },
+    "status": "completed",
+    "created_at": "2025-06-08T03:53:25.711691Z",
+    "notes": "Customer pickup - hold at location",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-15T07:23:25.711691Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-08T04:12:25.711691Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-14T08:23:25.711691Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-11T08:23:25.711691Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-08T04:23:25.711691Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-08T03:53:25.711691Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-09T03:23:25.711691Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-11T03:23:25.711691Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "ORD0074",
+    "user_id": "user9",
+    "items": [
+      {
+        "product_id": "prod18",
+        "name": "Smart USB Hub",
+        "quantity": 2,
+        "price": 879.99,
+        "subtotal": 1759.98
+      },
+      {
+        "product_id": "prod32",
+        "name": "Secure Air Quality Monitor",
+        "quantity": 1,
+        "price": 204.99,
+        "subtotal": 204.99
+      }
+    ],
+    "totals": {
+      "subtotal": 1964.97,
+      "tax": 200.47,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2165.44
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "3736",
+      "amount": 2165.44,
+      "currency": "USD",
+      "transaction_id": "tx836660",
+      "status": "paid",
+      "paid_at": "2025-06-12T23:34:25.711718Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr2",
+        "street": "5319 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "60677",
+        "country": "USA"
+      },
+      "status": "delivered",
+      "delivered_at": "2025-06-22T16:34:25.711718Z",
+      "tracking_number": "FX962437888",
+      "carrier": "FedEx"
+    },
+    "status": "completed",
+    "created_at": "2025-06-12T22:57:25.711718Z",
+    "notes": "",
+    "status_history": [
+      {
+        "status": "completed",
+        "timestamp": "2025-06-22T18:34:25.711718Z",
+        "note": "Order completed"
+      },
+      {
+        "status": "confirmed",
+        "timestamp": "2025-06-12T23:21:25.711718Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "delivered",
+        "timestamp": "2025-06-22T16:34:25.711718Z",
+        "note": "Order delivered"
+      },
+      {
+        "status": "in_transit",
+        "timestamp": "2025-06-17T16:34:25.711718Z",
+        "note": "Order in_transit"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-06-12T23:34:25.711718Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-06-12T22:57:25.711718Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-06-13T20:34:25.711718Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-06-16T20:34:25.711718Z",
+        "note": "Order shipped"
+      }
+    ]
+  },
+  {
+    "order_id": "PO0075",
+    "user_id": "user5",
+    "items": [
+      {
+        "product_id": "prod75",
+        "name": "Elite Tablet",
+        "quantity": 1,
+        "price": 109.99,
+        "subtotal": 109.99
+      },
+      {
+        "product_id": "prod19",
+        "name": "Chef Air Purifier Elite",
+        "quantity": 1,
+        "price": 174.99,
+        "subtotal": 174.99
+      },
+      {
+        "product_id": "prod18",
+        "name": "Smart USB Hub",
+        "quantity": 1,
+        "price": 879.99,
+        "subtotal": 879.99
+      },
+      {
+        "product_id": "prod23",
+        "name": "Home Night Light",
+        "quantity": 1,
+        "price": 75.3,
+        "subtotal": 75.3
+      },
+      {
+        "product_id": "prod14",
+        "name": "Vital Wireless Earbuds",
+        "quantity": 2,
+        "price": 379.99,
+        "subtotal": 759.98
+      }
+    ],
+    "totals": {
+      "subtotal": 2000.25,
+      "tax": 190.5,
+      "shipping": 0.0,
+      "processing_fee": 0.0,
+      "total": 2190.75
+    },
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "debit_card",
+      "last4": "2070",
+      "amount": 2190.75,
+      "currency": "USD",
+      "transaction_id": "tx521083",
+      "status": "paid",
+      "paid_at": "2025-05-25T20:09:25.711745Z"
+    },
+    "shipping": {
+      "address": {
+        "address_id": "addr1",
+        "street": "2152 First Ave",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "77052",
+        "country": "USA"
+      },
+      "status": "shipped",
+      "tracking_number": "FX511350092",
+      "carrier": "Amazon Logistics",
+      "shipped_at": "2025-05-29T18:09:25.711745Z",
+      "estimated_delivery": "2025-06-05T18:09:25.711745Z"
+    },
+    "status": "shipped",
+    "created_at": "2025-05-25T19:46:25.711745Z",
+    "notes": "Call when arriving",
+    "status_history": [
+      {
+        "status": "confirmed",
+        "timestamp": "2025-05-25T20:02:25.711745Z",
+        "note": "Order confirmed"
+      },
+      {
+        "status": "paid",
+        "timestamp": "2025-05-25T20:09:25.711745Z",
+        "note": "Order paid"
+      },
+      {
+        "status": "placed",
+        "timestamp": "2025-05-25T19:46:25.711745Z",
+        "note": "Order placed"
+      },
+      {
+        "status": "processing",
+        "timestamp": "2025-05-26T18:09:25.711745Z",
+        "note": "Order processing"
+      },
+      {
+        "status": "shipped",
+        "timestamp": "2025-05-29T18:09:25.711745Z",
+        "note": "Order shipped"
+      }
+    ]
+  }
+]

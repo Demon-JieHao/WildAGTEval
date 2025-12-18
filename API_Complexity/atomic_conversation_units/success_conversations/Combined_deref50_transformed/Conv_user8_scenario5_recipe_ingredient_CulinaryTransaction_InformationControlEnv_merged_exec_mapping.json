@@ -1,0 +1,190 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref50/Conv_user8_scenario5_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref50_transformed/Conv_user8_scenario5_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 26,
+  "successful_transforms": 26,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", cuisine='Asian', limit=5, sort_by='rating')",
+      "after": "invoke_tool(\"search_recipes\", cuisine='Asian', limit=5, sort_by='rating')",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Asian\"], \"results\": [{\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": []}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": []}, {\"recipe_id\": \"recipe9\", \"name\": \"Sushi Rolls\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 35, \"rating\": 4.2, \"dietary_info\": []}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe38')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe38')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"description\": \"A delicious asian dish that's perfect for medium cooks.\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"cooking_time\": 31, \"servings\": 8, \"ingredients\": [{\"name\": \"fish sauce\", \"quantity\": \"1/2 cup\"}, {\"name\": \"rice\", \"quantity\": \"2 cups\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\", \"notes\": \"minced\"}, {\"name\": \"chili sauce\", \"quantity\": \"1 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"1 cup\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"wine\", \"quantity\": \"3/4 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 large\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"herbs\", \"quantity\": \"2 tbsp\", \"notes\": \"chopped\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}], \"instructions\": [\"In a large bowl, combine dry ingredients.\", \"Cook until golden brown and cooked through.\", \"Cook until golden brown and cooked through.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 421, \"protein\": 24, \"carbs\": 46, \"fat\": 14}, \"dietary_info\": [], \"rating\": 4.9, \"reviews_count\": 188, \"image_url\": \"https://example.com/images/beef_ramen.jpg\", \"tags\": [\"asian\", \"mild\", \"dinner\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Beef Ramen - A delicious asian dish that's perfect for medium cooks.... (30 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='fish sauce', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='fish sauce', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod138\", \"name\": \"Fish Sauce\", \"price\": 5.92, \"category\": \"food_ingredients\", \"stock\": 143}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='rice', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='rice', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod151\", \"name\": \"Rice\", \"price\": 4.43, \"category\": \"food_ingredients\", \"stock\": 124}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='chili sauce', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='chili sauce', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod141\", \"name\": \"Chili Sauce\", \"price\": 7.82, \"category\": \"food_ingredients\", \"stock\": 120}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"price\": 8.87, \"category\": \"food_ingredients\", \"stock\": 180}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod132\", \"name\": \"Wine\", \"price\": 6.73, \"category\": \"food_ingredients\", \"stock\": 187}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"search_product\", query='herbs', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='herbs', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod128\", \"name\": \"Herbs\", \"price\": 7.43, \"category\": \"food_ingredients\", \"stock\": 194}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod129\", \"name\": \"Pepper\", \"price\": 3.87, \"category\": \"food_ingredients\", \"stock\": 160}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod138', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod138', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod138\", \"name\": \"Fish Sauce\", \"quantity\": 1, \"price\": 5.92}, \"cart_total\": 5.92, \"message\": \"Added 1 x 'Fish Sauce' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod151', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod151', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod151\", \"name\": \"Rice\", \"quantity\": 1, \"price\": 4.43}, \"cart_total\": 10.35, \"message\": \"Added 1 x 'Rice' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 13.49, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod141', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod141', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod141\", \"name\": \"Chili Sauce\", \"quantity\": 1, \"price\": 7.82}, \"cart_total\": 21.31, \"message\": \"Added 1 x 'Chili Sauce' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"quantity\": 1, \"price\": 8.87}, \"cart_total\": 30.18, \"message\": \"Added 1 x 'Vinegar' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 19,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 32.3, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 20,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod132\", \"name\": \"Wine\", \"quantity\": 1, \"price\": 6.73}, \"cart_total\": 39.03, \"message\": \"Added 1 x 'Wine' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 21,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 44.53, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 22,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 51.13, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 23,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod128', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod128', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod128\", \"name\": \"Herbs\", \"quantity\": 1, \"price\": 7.43}, \"cart_total\": 58.56, \"message\": \"Added 1 x 'Herbs' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 24,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod129\", \"name\": \"Pepper\", \"quantity\": 1, \"price\": 3.87}, \"cart_total\": 62.43, \"message\": \"Added 1 x 'Pepper' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 25,
+      "before": "invoke_tool(\"weather_forecast\", location='paris', days=7)",
+      "after": "invoke_tool(\"weather_forecast\", location='paris', days=7)",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"days\": 7, \"forecast\": [{\"day\": \"Monday\", \"high\": 33, \"low\": 24, \"condition\": \"Snow\"}, {\"day\": \"Tuesday\", \"high\": 35, \"low\": 23, \"condition\": \"Light Rain\"}, {\"day\": \"Wednesday\", \"high\": 33, \"low\": 24, \"condition\": \"Light Snow\"}, {\"day\": \"Thursday\", \"high\": 39, \"low\": 25, \"condition\": \"Heavy Rain\"}, {\"day\": \"Friday\", \"high\": 35, \"low\": 27, \"condition\": \"Mist\"}, {\"day\": \"Saturday\", \"high\": 35, \"low\": 23, \"condition\": \"Sunny\"}, {\"day\": \"Sunday\", \"high\": 38, \"low\": 29, \"condition\": \"Heavy Rain\"}], \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 26,
+      "before": "invoke_tool(\"weather_current\", location='paris')",
+      "after": "invoke_tool(\"weather_current\", location='paris')",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"current_weather\": {\"temperature\": 31, \"condition\": \"Light Snow\", \"humidity\": 47, \"wind_speed\": 15, \"pressure\": 1021}, \"formatted\": \"Temperature: 31\\u00b0C, Condition: Light Snow, Humidity: 47%, Wind: 15 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

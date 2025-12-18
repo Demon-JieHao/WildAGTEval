@@ -1,0 +1,64 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user1_TransactionEnv_shopping_batch_scenario7_cart_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_TransactionEnv_shopping_batch_scenario7_cart_exec.py",
+  "total_transforms": 8,
+  "successful_transforms": 8,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='security camera', category='smart_home', min_price=100, max_price=200, sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='security camera', category='smart_home', min_price=100, max_price=200, sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"categories\": [\"smart_home\"], \"results\": [{\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"price\": 114.99, \"category\": \"smart_home\", \"stock\": 174}, {\"product_id\": \"prod53\", \"name\": \"Eco Security Camera Elite\", \"price\": 149.99, \"category\": \"smart_home\", \"stock\": 40}], \"message\": \"Found 2 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod27')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod27')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"description\": \"Experience the latest in security camera technology with voice-controlled, smart\", \"price\": 114.99, \"category\": \"smart_home\", \"stock\": 174, \"rating\": 4.1, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\"]}, \"message\": \"Retrieved details for 'Home Security Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod53')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod53')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod53\", \"name\": \"Eco Security Camera Elite\", \"description\": \"Advanced security camera with smart, wireless for modern homes\", \"price\": 149.99, \"category\": \"smart_home\", \"stock\": 40, \"rating\": 3.7, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\"]}, \"message\": \"Retrieved details for 'Eco Security Camera Elite'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod27', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod27', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"quantity\": 1, \"price\": 114.99}, \"cart_total\": 114.99, \"message\": \"Added 1 x 'Home Security Camera' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"update_cart_quantity\", product_id='prod27', quantity=5)",
+      "after": "invoke_tool(\"update_cart_quantity\", product_id='prod27', quantity=5)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"quantity\": 5, \"old_quantity\": 1}, \"cart_total\": 574.95, \"message\": \"Updated quantity of 'Home Security Camera' from 1 to 5\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"quantity\": 5, \"price\": 114.99, \"added_at\": \"2025-08-20T00:11:25Z\"}], \"total\": 574.95}, \"item_count\": 5, \"message\": \"Cart has 5 items with a total of $574.95\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"remove_from_cart\", product_id='prod27')",
+      "after": "invoke_tool(\"remove_from_cart\", product_id='prod27')",
+      "execution_result": "{\"success\": true, \"removed\": {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"quantity\": 5, \"price\": 114.99, \"added_at\": \"2025-08-20T00:11:25Z\"}, \"cart_total\": 0.0, \"message\": \"Removed all 'Home Security Camera' from your cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"clear_cart\", )",
+      "after": "invoke_tool(\"clear_cart\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Cart is already empty.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

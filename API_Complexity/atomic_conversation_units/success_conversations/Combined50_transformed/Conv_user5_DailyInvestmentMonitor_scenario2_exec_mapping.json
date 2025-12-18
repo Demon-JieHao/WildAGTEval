@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user5_DailyInvestmentMonitor_scenario2_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user5_DailyInvestmentMonitor_scenario2_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"stock_watchlist\", )",
+      "after": "invoke_tool(\"stock_watchlist\", )",
+      "execution_result": "{\"success\": true, \"watchlist\": [\"TSLA\", \"META\", \"NVDA\"], \"stocks\": [{\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1825.07, \"total_change\": 4.99}, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user5\", \"name\": \"Mark Moore\", \"home_id\": \"home1\", \"current_space\": null, \"devices\": [{\"endpoint\": \"1\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"2\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"3\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"4\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"5\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"]}, {\"endpoint\": \"6\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"7\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"8\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"9\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"]}, {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"13\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"14\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"15\", \"name\": \"Garage Light\", \"alternate_names\": [\"Garage Light\"]}, {\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='12')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='12')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bathroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\", \"state\": {\"power\": \"off\", \"brightness\": 100, \"color\": \"#00FF00\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"power_on\", endpoints=['12'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['12'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"success\": true, \"message\": \"Turned on Bathroom Light\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"color_set\", endpoints=['12'], color='blue')",
+      "after": "invoke_tool(\"color_set\", endpoints=['12'], color='#0000FF')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"success\": true, \"message\": \"Set Bathroom Light color to #0000FF\", \"color\": \"#0000FF\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_device_details\", endpoint='5A')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='5A')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"], \"endpoint_categories\": [\"THERMOSTAT\"], \"supported_apis\": [\"temperature_set\", \"mode_set\"], \"groups\": [\"climate\", \"whole_home\"], \"home_id\": \"home1\", \"state\": {\"temperature\": 20, \"mode\": \"auto\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"make_call\", phone_number='214-457-5425', call_type='audio', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:2144575425', call_type='audio', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:2144575425 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"news_by_category\", category='business', limit=7)",
+      "after": "invoke_tool(\"news_by_category\", category='business', limit=7)",
+      "execution_result": "{\"success\": true, \"category\": \"business\", \"count\": 7, \"news\": [{\"title\": \"New Industry Faces New Challenges\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-17T08:16:23Z\", \"category\": \"business\"}, {\"title\": \"Economic Major Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T21:44:48Z\", \"category\": \"business\"}, {\"title\": \"Economic Digital Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T18:55:39Z\", \"category\": \"business\"}, {\"title\": \"Inflation Global Trends Continue\", \"source\": \"Financial Times\", \"timestamp\": \"2025-06-16T09:56:06Z\", \"category\": \"business\"}, {\"title\": \"Global Tech Trade Agreement Signed\", \"source\": \"Wall Street Journal\", \"timestamp\": \"2025-06-15T18:02:00Z\", \"category\": \"business\"}, {\"title\": \"Major Global Company Announces Merger\", \"source\": \"Bloomberg\", \"timestamp\": \"2025-06-15T03:13:26Z\", \"category\": \"business\"}, {\"title\": \"Inflation AI Trends Continue\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-15T01:45:57Z\", \"category\": \"business\"}], \"formatted\": \"\\u2022 New Industry Faces New Challenges (CNBC)\\n\\u2022 Economic Major Indicators Show Growth (Reuters)\\n\\u2022 Economic Digital Indicators Show Growth (Reuters)\\n\\u2022 Inflation Global Trends Continue (Financial Times)\\n\\u2022 Global Tech Trade Agreement Signed (Wall Street Journal)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

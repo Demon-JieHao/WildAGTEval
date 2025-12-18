@@ -1,0 +1,155 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user9_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user9_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 21,
+  "successful_transforms": 21,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", cuisine='Mexican', limit=5, sort_by='rating')",
+      "after": "invoke_tool(\"search_recipes\", cuisine='Mexican', limit=5, sort_by='rating')",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"Mexican\"], \"results\": [{\"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe16')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe16')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"description\": \"A delicious mexican dish that's perfect for easy cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"cooking_time\": 51, \"servings\": 8, \"ingredients\": [{\"name\": \"onions\", \"quantity\": \"3 large\"}, {\"name\": \"avocado\", \"quantity\": \"1 tbsp\"}, {\"name\": \"cilantro\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lime\", \"quantity\": \"2 tbsp\"}, {\"name\": \"butter\", \"quantity\": \"100g\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\", \"notes\": \"crushed\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 445, \"protein\": 22, \"carbs\": 55, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"reviews_count\": 392, \"image_url\": \"https://example.com/images/mexican_rice.jpg\", \"tags\": [\"vegetarian\", \"beginner-friendly\", \"snack\", \"quick\", \"mexican\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Mexican Rice - A delicious mexican dish that's perfect for easy cooks.... (32 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='avocado', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='avocado', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod153\", \"name\": \"Avocado\", \"price\": 5.29, \"category\": \"food_ingredients\", \"stock\": 131}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='cilantro', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='cilantro', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod142\", \"name\": \"Cilantro\", \"price\": 4.31, \"category\": \"food_ingredients\", \"stock\": 142}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='lime', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lime', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod137\", \"name\": \"Lime\", \"price\": 5.38, \"category\": \"food_ingredients\", \"stock\": 105}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod127\", \"name\": \"Butter\", \"price\": 5.08, \"category\": \"food_ingredients\", \"stock\": 167}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"price\": 8.87, \"category\": \"food_ingredients\", \"stock\": 180}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_product\", query='herbs', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='herbs', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod128\", \"name\": \"Herbs\", \"price\": 7.43, \"category\": \"food_ingredients\", \"stock\": 194}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 741.18, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod153', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod153', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod153\", \"name\": \"Avocado\", \"quantity\": 1, \"price\": 5.29}, \"cart_total\": 746.47, \"message\": \"Added 1 x 'Avocado' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod142', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod142', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod142\", \"name\": \"Cilantro\", \"quantity\": 1, \"price\": 4.31}, \"cart_total\": 750.78, \"message\": \"Added 1 x 'Cilantro' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod137', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod137', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod137\", \"name\": \"Lime\", \"quantity\": 1, \"price\": 5.38}, \"cart_total\": 756.16, \"message\": \"Added 1 x 'Lime' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod127\", \"name\": \"Butter\", \"quantity\": 1, \"price\": 5.08}, \"cart_total\": 761.24, \"message\": \"Added 1 x 'Butter' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 764.38, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"quantity\": 1, \"price\": 8.87}, \"cart_total\": 773.25, \"message\": \"Added 1 x 'Vinegar' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod128', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod128', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod128\", \"name\": \"Herbs\", \"quantity\": 1, \"price\": 7.43}, \"cart_total\": 780.68, \"message\": \"Added 1 x 'Herbs' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 19,
+      "before": "invoke_tool(\"news_by_category\", category='health', limit=5)",
+      "after": "invoke_tool(\"news_by_category\", category='health', limit=5)",
+      "execution_result": "{\"success\": true, \"category\": \"health\", \"count\": 5, \"news\": [{\"title\": \"Medical Study Confirms New Benefits\", \"source\": \"Health News\", \"timestamp\": \"2025-06-14T20:38:19Z\", \"category\": \"health\"}, {\"title\": \"Medical Study Confirms Digital Benefits\", \"source\": \"Medical Journal\", \"timestamp\": \"2025-06-14T20:00:12Z\", \"category\": \"health\"}, {\"title\": \"Vaccine Development for New Progresses\", \"source\": \"Mayo Clinic\", \"timestamp\": \"2025-06-14T19:30:28Z\", \"category\": \"health\"}, {\"title\": \"Public Health Tech Campaign Launched\", \"source\": \"WebMD\", \"timestamp\": \"2025-06-14T04:38:39Z\", \"category\": \"health\"}, {\"title\": \"Public Health Major Campaign Launched\", \"source\": \"CDC\", \"timestamp\": \"2025-06-13T16:13:38Z\", \"category\": \"health\"}], \"formatted\": \"\\u2022 Medical Study Confirms New Benefits (Health News)\\n\\u2022 Medical Study Confirms Digital Benefits (Medical Journal)\\n\\u2022 Vaccine Development for New Progresses (Mayo Clinic)\\n\\u2022 Public Health Tech Campaign Launched (WebMD)\\n\\u2022 Public Health Major Campaign Launched (CDC)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 20,
+      "before": "invoke_tool(\"news_personalized\", limit=8)",
+      "after": "invoke_tool(\"news_personalized\", limit=8)",
+      "execution_result": "{\"success\": true, \"preferred_categories\": [\"business\", \"world\", \"health\"], \"count\": 8, \"news\": [{\"title\": \"International Major Cooperation Strengthened\", \"source\": \"BBC News\", \"timestamp\": \"2025-06-17T11:27:41Z\", \"category\": \"world\"}, {\"title\": \"Major Negotiations Reach Agreement\", \"source\": \"Associated Press\", \"timestamp\": \"2025-06-17T10:37:02Z\", \"category\": \"world\"}, {\"title\": \"New Industry Faces New Challenges\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-17T08:16:23Z\", \"category\": \"business\"}, {\"title\": \"World Leaders Discuss Advanced Crisis\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-17T02:53:36Z\", \"category\": \"world\"}, {\"title\": \"Economic Major Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T21:44:48Z\", \"category\": \"business\"}, {\"title\": \"Economic Digital Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T18:55:39Z\", \"category\": \"business\"}, {\"title\": \"Inflation Global Trends Continue\", \"source\": \"Financial Times\", \"timestamp\": \"2025-06-16T09:56:06Z\", \"category\": \"business\"}, {\"title\": \"Worldwide Advanced Movement Gains Momentum\", \"source\": \"NPR\", \"timestamp\": \"2025-06-16T01:45:46Z\", \"category\": \"world\"}], \"formatted\": \"\\u2022 International Major Cooperation Strengthened (BBC News)\\n\\u2022 Major Negotiations Reach Agreement (Associated Press)\\n\\u2022 New Industry Faces New Challenges (CNBC)\\n\\u2022 World Leaders Discuss Advanced Crisis (Reuters)\\n\\u2022 Economic Major Indicators Show Growth (Reuters)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 21,
+      "before": "invoke_tool(\"news_latest\", limit=7)",
+      "after": "invoke_tool(\"news_latest\", limit=7)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"news\": [{\"title\": \"Cultural Global Event Celebrates Success\", \"source\": \"Variety\", \"timestamp\": \"2025-06-17T15:13:49Z\", \"category\": \"entertainment\"}, {\"title\": \"International Major Cooperation Strengthened\", \"source\": \"BBC News\", \"timestamp\": \"2025-06-17T11:27:41Z\", \"category\": \"world\"}, {\"title\": \"Major Negotiations Reach Agreement\", \"source\": \"Associated Press\", \"timestamp\": \"2025-06-17T10:37:02Z\", \"category\": \"world\"}, {\"title\": \"New Industry Faces New Challenges\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-17T08:16:23Z\", \"category\": \"business\"}, {\"title\": \"Industry Leaders Discuss Advanced Future\", \"source\": \"TechCrunch\", \"timestamp\": \"2025-06-17T07:44:41Z\", \"category\": \"technology\"}, {\"title\": \"Revolutionary Major Technology Announced\", \"source\": \"The Verge\", \"timestamp\": \"2025-06-17T05:24:37Z\", \"category\": \"technology\"}, {\"title\": \"World Leaders Discuss Advanced Crisis\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-17T02:53:36Z\", \"category\": \"world\"}], \"formatted\": \"\\u2022 Cultural Global Event Celebrates Success (Variety)\\n\\u2022 International Major Cooperation Strengthened (BBC News)\\n\\u2022 Major Negotiations Reach Agreement (Associated Press)\\n\\u2022 New Industry Faces New Challenges (CNBC)\\n\\u2022 Industry Leaders Discuss Advanced Future (TechCrunch)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

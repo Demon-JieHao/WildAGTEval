@@ -1,0 +1,85 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 11,
+  "successful_transforms": 11,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='American', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='American', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe33')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe33')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"cooking_time\": 55, \"servings\": 2, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"eggs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"potatoes\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"1 large\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 540, \"protein\": 24, \"carbs\": 54, \"fat\": 20}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"reviews_count\": 447, \"image_url\": \"https://example.com/images/meatloaf.jpg\", \"tags\": [\"vegetarian\", \"american\", \"dessert\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Meatloaf - A delicious american dish that's perfect for easy cooks.... (26 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe36')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe36')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"description\": \"A delicious american dish that's perfect for medium cooks.\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"cooking_time\": 19, \"servings\": 2, \"ingredients\": [{\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1 tbsp\"}, {\"name\": \"chicken\", \"quantity\": \"1.5 lbs\", \"notes\": \"thighs\"}, {\"name\": \"onions\", \"quantity\": \"2 large\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\", \"notes\": \"dried\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add seasonings and adjust to taste.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 496, \"protein\": 19, \"carbs\": 69, \"fat\": 14}, \"dietary_info\": [], \"rating\": 4.0, \"reviews_count\": 475, \"image_url\": \"https://example.com/images/chocolate_chip_cookies.jpg\", \"tags\": [\"party-food\", \"american\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chocolate Chip Cookies - A delicious american dish that's perfect for medium cooks.... (27 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Smoked Chicken' is already in favorites\", \"already_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe33')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe33')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Meatloaf' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe33\", \"recipe_name\": \"Meatloaf\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe36')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe36')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Chocolate Chip Cookies' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe36\", \"recipe_name\": \"Chocolate Chip Cookies\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"cuisines\": [\"Indian\"], \"results\": [{\"restaurant_id\": \"rest8\", \"name\": \"Taj Mahal\", \"location\": \"3765 Franklin St, Miami, FL 90741\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest7\", \"name\": \"Delhi Garden\", \"location\": \"6354 Market St, New York, NY 47345\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$$\", \"rating\": 4.0, \"delivery_available\": true, \"menu_item_count\": 6}], \"message\": \"Found 2 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Taj Mahal\", \"restaurant_id\": \"rest8\", \"restaurant_name\": \"Taj Mahal\", \"description\": \"Authentic indian cuisine with traditional flavors\", \"price_range\": \"$$\", \"rating\": 4.5, \"cuisine_types\": [\"Indian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 10.0, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 9.48, \"category\": \"Appetizers\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.56, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 18.99, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.43, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.13, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '569 Oak Ave', 'city': 'Los Angeles', 'state': 'CA', 'zip': '90038'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '569 Oak Ave', 'city': 'Los Angeles', 'state': 'CA', 'zip': '90038'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"order_time\": \"2025-07-30T18:26:11Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 34.13, \"tax\": 2.99, \"delivery_fee\": 5.99, \"tip\": 5.12, \"total\": 48.23, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-07-30T18:26:11Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

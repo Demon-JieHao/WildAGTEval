@@ -1,0 +1,296 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario3_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user2_scenario3_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user2",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 0.6666666666666666,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.9166666666666666
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Check my recent calling record in about 10 weeks",
+      "expected_api_sequence": [
+        {
+          "api": "get_call_history",
+          "params": {
+            "time_range": "P10W",
+            "limit": 2
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P10W",
+                "limit": 2
+              }
+            }
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 2
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 0 call records\", \"calls\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:45:44.873662",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I don't see any call records from the past 10 weeks. Let me try checking with a different time range.\n\n<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I don't see any call records from the past 10 weeks. Let me try checking with a different time range.\n\n<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P70D",
+                "limit": 10
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P70D",
+              "limit": 10
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 0 call records\", \"calls\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:47:07.580445",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've checked your call history for approximately the past 10 weeks (70 days), but I don't see any call records during this period. Your call history appears to be empty.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've checked your call history for approximately the past 10 weeks (70 days), but I don't see any call records during this period. Your call history appears to be empty.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:17:54.321032",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:25:10.464066",
+      "target_function": "get_call_history",
+      "target_location": "Turn 3, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Make a call to my recent calling contact",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "17"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:4122641818",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll need to check your contacts first since there are no recent call records.\n\n<API_CALL>\n{\n  \"api\": \"find_contact\",\n  \"params\": {\n    \"query\": \"\",\n    \"limit\": 5\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll need to check your contacts first since there are no recent call records.\n\n<API_CALL>\n{\n  \"api\": \"find_contact\",\n  \"params\": {\n    \"query\": \"\",\n    \"limit\": 5\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "find_contact",
+              "params": {
+                "query": "",
+                "limit": 5
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "find_contact",
+            "params": {
+              "query": "",
+              "limit": 5
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 5 contact(s)\", \"contacts\": [{\"contact_id\": \"contact3\", \"user_id\": \"user2\", \"name\": \"Frank Diaz\", \"phone_numbers\": [{\"type\": \"work\", \"number\": \"206-988-3504\"}], \"email\": \"frank.diaz@aol.com\", \"is_favorite\": false, \"devices\": []}, {\"contact_id\": \"contact4\", \"user_id\": \"user2\", \"name\": \"Steven Green\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"502-336-7784\"}], \"email\": \"sgreen@live.com\", \"is_favorite\": false, \"devices\": []}, {\"contact_id\": \"contact7\", \"user_id\": \"user2\", \"name\": \"Maria Hall\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"713-544-7105\"}], \"email\": \"maria_hall@hotmail.com\", \"is_favorite\": true, \"devices\": []}, {\"contact_id\": \"contact15\", \"user_id\": \"user2\", \"name\": \"Jeffrey Hall\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"414-601-4432\"}], \"email\": \"jeffrey36@outlook.com\", \"is_favorite\": true, \"devices\": [\"device8\"]}, {\"contact_id\": \"contact19\", \"user_id\": \"user2\", \"name\": \"Elizabeth Wright\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"412-264-1818\"}], \"email\": \"elizabeth13@protonmail.com\", \"is_favorite\": false, \"devices\": [\"device39\", \"device32\"]}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 366.6954929828644,
+          "timestamp": "2025-08-21T19:24:01.016568",
+          "ground_truth_api": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found several contacts in your address book. Since you don't have any recent call history, I'll need to know which contact you'd like to call. Would you like to call one of these contacts?\n\n- Frank Diaz (206-988-3504)\n- Steven Green (502-336-7784)\n- Maria Hall (713-544-7105)\n- Jeffrey Hall (414-601-4432)\n- Elizabeth Wright (412-264-1818)\n\nPlease let me know which contact you'd like to call.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I found several contacts in your address book. Since you don't have any recent call history, I'll need to know which contact you'd like to call. Would you like to call one of these contacts?\n\n- Frank Diaz (206-988-3504)\n- Steven Green (502-336-7784)\n- Maria Hall (713-544-7105)\n- Jeffrey Hall (414-601-4432)\n- Elizabeth Wright (412-264-1818)\n\nPlease let me know which contact you'd like to call.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 69.4469268321991,
+          "timestamp": "2025-08-21T19:25:10.463699",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 1.5,
+        "api_efficiency": 3.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 4,
+      "related_to_target": "Turn 3, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:06:08.311137"
+}

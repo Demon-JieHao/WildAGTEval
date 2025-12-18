@@ -1,0 +1,28 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user6_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user6_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+   User: user6
+   Domain: culinary
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Can you show me what the resturant serves?
+   Expected:
+     🔍 get_restaurant_menu({"restaurant_id":"rest19"})
+   Actual:
+     🔍 get_restaurant_menu({"restaurant_id":"rest19"})
+     🔄 schedule_meal({"plan_id":"plan24","recipe_id":"recipe1","day":"2025-07-19","meal_type":"dinner"})
+
+   Turn 2: ✅
+   Query: Please place an order for Beef Enchiladas from Casa Miguel and send it to 3903 Broadway, Dallas, TX 75254
+   Expected:
+     🔄 place_delivery_order({"restaurant_id":"rest19","items":[{"item_id":"item7","quantity":1}],"delivery_address":{"street":"3903 Broadway","city":"Dallas","state":"TX","zip":"75254"}})
+   Actual:
+     🔄 place_delivery_order({"restaurant_id":"rest19","items":[{"item_id":"item7","quantity":1}],"delivery_address":{"street":"3903 Broadway","city":"Dallas","state":"TX","zip":"75254"}})

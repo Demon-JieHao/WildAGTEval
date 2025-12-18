@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user8_msg_scenario9_msgcall_scenario78_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user8_msg_scenario9_msgcall_scenario78_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='Sarah Clark', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Sarah Clark', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact2\", \"user_id\": \"user8\", \"name\": \"Sarah Clark\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"404-685-5545\"}], \"email\": \"sclark@protonmail.com\", \"is_favorite\": false, \"devices\": [\"device10\", \"device24\", \"device29\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact2', content='Hello! Just saying hi!')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact2', content='Hello! Just saying hi!')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Sarah Clark\", \"message_id\": \"msg59\", \"contact_name\": \"Sarah Clark\", \"timestamp\": \"2025-08-20T00:11:43.770073Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['61'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['61'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"61\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='404-685-5545', device_endpoint='61')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:4046855545', device_endpoint='61')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:4046855545 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='Michelle Perez', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Michelle Perez', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact29\", \"user_id\": \"user8\", \"name\": \"Michelle Perez\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"212-789-6615\"}], \"email\": \"michelle23@aol.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact29', content=\"Hey! How's your day going?\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact29', content=\"Hey! How's your day going?\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Michelle Perez\", \"message_id\": \"msg60\", \"contact_name\": \"Michelle Perez\", \"timestamp\": \"2025-08-20T00:11:43.770786Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user5_MediaControlEnv_playlist_batch_scenario5_creation_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_MediaControlEnv_playlist_batch_scenario5_creation_exec.py",
+  "total_transforms": 15,
+  "successful_transforms": 15,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_media\", query='Ultimate Story', media_type='song', limit=5)",
+      "after": "invoke_tool(\"search_media\", query='Ultimate Story', media_type='song', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 0, \"results\": [], \"message\": \"No media found matching 'Ultimate Story'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"create_playlist\", title='Classical Music')",
+      "after": "invoke_tool(\"create_playlist\", title='Classical Music')",
+      "execution_result": "{\"success\": true, \"playlist_id\": \"playlist52\", \"title\": \"Classical Music\", \"message\": \"Created playlist 'Classical Music' with ID 'playlist52'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"add_to_playlist\", playlist_id='playlist52', media_ids=['album14'])",
+      "after": "invoke_tool(\"add_to_playlist\", playlist_id='playlist52', media_ids=['album14'])",
+      "execution_result": "{\"success\": true, \"added_count\": 1, \"playlist_id\": \"playlist52\", \"message\": \"Added 1 items to playlist 'Classical Music'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_media\", query='Journey Dreams', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Journey Dreams', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"results\": [{\"id\": \"song227\", \"title\": \"Journey Dreams\", \"type\": \"song\", \"year\": 2006, \"genre\": [\"electronic\"], \"services\": [\"youtube_music\", \"deezer\", \"spotify\", \"pandora\", \"apple_music\", \"tidal\"], \"artist\": \"Adele\", \"album\": \"Freedom Sessions\"}], \"message\": \"Found 1 media items matching 'Journey Dreams'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_playlists\", )",
+      "after": "invoke_tool(\"get_playlists\", )",
+      "execution_result": "{\"success\": true, \"count\": 4, \"playlists\": [{\"id\": \"playlist19\", \"title\": \"Classic Rock\", \"user_id\": \"user5\", \"item_count\": 15, \"items\": [{\"id\": \"song47\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song16\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song55\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song48\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song3\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song22\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album10\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song43\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album19\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song21\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist20\", \"title\": \"My Workout Mix\", \"user_id\": \"user5\", \"item_count\": 10, \"items\": [{\"id\": \"song70\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song27\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song75\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song33\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song72\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song11\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song58\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song44\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album15\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song68\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist21\", \"title\": \"Ultimate Feeling Good\", \"user_id\": \"user5\", \"item_count\": 8, \"items\": [{\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song76\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song45\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song9\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist52\", \"title\": \"Classical Music\", \"user_id\": \"user5\", \"item_count\": 1, \"items\": [{\"id\": \"album14\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}], \"message\": \"Found 4 playlists for user user5\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"add_to_playlist\", playlist_id='playlist21', media_ids=['song227'])",
+      "after": "invoke_tool(\"add_to_playlist\", playlist_id='playlist21', media_ids=['song227'])",
+      "execution_result": "{\"success\": true, \"added_count\": 1, \"playlist_id\": \"playlist21\", \"message\": \"Added 1 items to playlist 'Ultimate Feeling Good'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_media\", query='The Ocean Collection', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='The Ocean Collection', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"results\": [{\"id\": \"album20\", \"title\": \"The Ocean Collection\", \"type\": \"album\", \"year\": 1999, \"genre\": [\"metal\", \"soul\"], \"services\": [\"amazon_music\", \"deezer\", \"youtube_music\", \"spotify\", \"apple_music\", \"tidal\"], \"artist\": \"Led Zeppelin\", \"tracks\": 15}, {\"id\": \"album33\", \"title\": \"The Ocean Collection - U2\", \"type\": \"album\", \"year\": 1971, \"genre\": [\"r&b\", \"metal\"], \"services\": [\"deezer\", \"amazon_music\", \"tidal\", \"spotify\", \"youtube_music\", \"pandora\", \"apple_music\"], \"artist\": \"U2\", \"tracks\": 16}], \"message\": \"Found 2 media items matching 'The Ocean Collection'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"get_playlists\", )",
+      "after": "invoke_tool(\"get_playlists\", )",
+      "execution_result": "{\"success\": true, \"count\": 4, \"playlists\": [{\"id\": \"playlist19\", \"title\": \"Classic Rock\", \"user_id\": \"user5\", \"item_count\": 15, \"items\": [{\"id\": \"song47\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song16\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song55\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song48\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song3\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song22\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album10\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song43\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album19\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song21\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist20\", \"title\": \"My Workout Mix\", \"user_id\": \"user5\", \"item_count\": 10, \"items\": [{\"id\": \"song70\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song27\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song75\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song33\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song72\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song11\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song58\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song44\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album15\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song68\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist21\", \"title\": \"Ultimate Feeling Good\", \"user_id\": \"user5\", \"item_count\": 9, \"items\": [{\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song76\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song45\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song9\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song227\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist52\", \"title\": \"Classical Music\", \"user_id\": \"user5\", \"item_count\": 1, \"items\": [{\"id\": \"album14\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}], \"message\": \"Found 4 playlists for user user5\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"add_to_playlist\", playlist_id='playlist21', media_ids=['album20'])",
+      "after": "invoke_tool(\"add_to_playlist\", playlist_id='playlist21', media_ids=['album20'])",
+      "execution_result": "{\"success\": true, \"added_count\": 1, \"playlist_id\": \"playlist21\", \"message\": \"Added 1 items to playlist 'Ultimate Feeling Good'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_media\", query='Freedom Rain', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Freedom Rain', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"results\": [{\"id\": \"song91\", \"title\": \"Freedom Rain\", \"type\": \"song\", \"year\": 2000, \"genre\": [\"electronic\"], \"services\": [\"apple_music\", \"spotify\", \"youtube_music\", \"pandora\"], \"artist\": \"Rihanna\", \"album\": \"Fire Collection\"}], \"message\": \"Found 1 media items matching 'Freedom Rain'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"get_playlists\", )",
+      "after": "invoke_tool(\"get_playlists\", )",
+      "execution_result": "{\"success\": true, \"count\": 4, \"playlists\": [{\"id\": \"playlist19\", \"title\": \"Classic Rock\", \"user_id\": \"user5\", \"item_count\": 15, \"items\": [{\"id\": \"song47\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song16\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song55\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song48\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song3\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song22\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album10\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song43\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album19\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song21\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist20\", \"title\": \"My Workout Mix\", \"user_id\": \"user5\", \"item_count\": 10, \"items\": [{\"id\": \"song70\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song27\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song75\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song33\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song72\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song11\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song58\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song44\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album15\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song68\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist21\", \"title\": \"Ultimate Feeling Good\", \"user_id\": \"user5\", \"item_count\": 10, \"items\": [{\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song76\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song45\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song9\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song227\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist52\", \"title\": \"Classical Music\", \"user_id\": \"user5\", \"item_count\": 1, \"items\": [{\"id\": \"album14\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}], \"message\": \"Found 4 playlists for user user5\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"add_to_playlist\", playlist_id='playlist20', media_ids=['song91'])",
+      "after": "invoke_tool(\"add_to_playlist\", playlist_id='playlist20', media_ids=['song91'])",
+      "execution_result": "{\"success\": true, \"added_count\": 1, \"playlist_id\": \"playlist20\", \"message\": \"Added 1 items to playlist 'My Workout Mix'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"search_media\", query='Sweet Wind', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='Sweet Wind', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"results\": [{\"id\": \"song121\", \"title\": \"Sweet Wind\", \"type\": \"song\", \"year\": 1970, \"genre\": [\"classical\"], \"services\": [\"tidal\", \"pandora\", \"deezer\"], \"artist\": \"Kanye West\", \"album\": \"Power Sessions\"}], \"message\": \"Found 1 media items matching 'Sweet Wind'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"get_playlists\", )",
+      "after": "invoke_tool(\"get_playlists\", )",
+      "execution_result": "{\"success\": true, \"count\": 4, \"playlists\": [{\"id\": \"playlist19\", \"title\": \"Classic Rock\", \"user_id\": \"user5\", \"item_count\": 15, \"items\": [{\"id\": \"song47\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song16\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song55\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song48\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song3\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song22\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album10\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song43\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album19\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song21\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist20\", \"title\": \"My Workout Mix\", \"user_id\": \"user5\", \"item_count\": 11, \"items\": [{\"id\": \"song70\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song27\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song75\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song33\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song72\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song11\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song58\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song44\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album15\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song68\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song91\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist21\", \"title\": \"Ultimate Feeling Good\", \"user_id\": \"user5\", \"item_count\": 10, \"items\": [{\"id\": \"album17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album2\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song76\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song17\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song45\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song9\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song35\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song56\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"song227\", \"title\": \"Unknown\", \"type\": \"Unknown\"}, {\"id\": \"album20\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}, {\"id\": \"playlist52\", \"title\": \"Classical Music\", \"user_id\": \"user5\", \"item_count\": 1, \"items\": [{\"id\": \"album14\", \"title\": \"Unknown\", \"type\": \"Unknown\"}]}], \"message\": \"Found 4 playlists for user user5\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_playlist\", playlist_id='playlist20', media_ids=['song121'])",
+      "after": "invoke_tool(\"add_to_playlist\", playlist_id='playlist20', media_ids=['song121'])",
+      "execution_result": "{\"success\": true, \"added_count\": 1, \"playlist_id\": \"playlist20\", \"message\": \"Added 1 items to playlist 'My Workout Mix'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

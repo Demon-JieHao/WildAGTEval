@@ -1,0 +1,182 @@
+[
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest14",
+    "date_added": "2025-01-28T01:23:49Z"
+  },
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest5",
+    "date_added": "2025-03-05T06:20:35Z"
+  },
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest15",
+    "date_added": "2025-04-25T10:00:57Z"
+  },
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest3",
+    "date_added": "2025-06-08T01:29:24Z"
+  },
+  {
+    "user_id": "user2",
+    "restaurant_id": "rest6",
+    "date_added": "2025-02-03T11:07:24Z"
+  },
+  {
+    "user_id": "user2",
+    "restaurant_id": "rest15",
+    "date_added": "2025-03-02T12:36:17Z"
+  },
+  {
+    "user_id": "user3",
+    "restaurant_id": "rest24",
+    "date_added": "2025-01-27T15:21:23Z"
+  },
+  {
+    "user_id": "user3",
+    "restaurant_id": "rest5",
+    "date_added": "2025-02-22T18:48:37Z"
+  },
+  {
+    "user_id": "user3",
+    "restaurant_id": "rest19",
+    "date_added": "2025-02-27T07:02:08Z"
+  },
+  {
+    "user_id": "user3",
+    "restaurant_id": "rest22",
+    "date_added": "2025-03-01T09:09:21Z"
+  },
+  {
+    "user_id": "user3",
+    "restaurant_id": "rest4",
+    "date_added": "2025-04-02T23:58:35Z"
+  },
+  {
+    "user_id": "user4",
+    "restaurant_id": "rest9",
+    "date_added": "2025-02-24T03:06:35Z"
+  },
+  {
+    "user_id": "user4",
+    "restaurant_id": "rest16",
+    "date_added": "2025-03-28T12:27:04Z"
+  },
+  {
+    "user_id": "user5",
+    "restaurant_id": "rest17",
+    "date_added": "2024-12-28T04:35:11Z"
+  },
+  {
+    "user_id": "user5",
+    "restaurant_id": "rest7",
+    "date_added": "2025-03-16T10:21:37Z"
+  },
+  {
+    "user_id": "user6",
+    "restaurant_id": "rest1",
+    "date_added": "2024-12-31T16:13:21Z"
+  },
+  {
+    "user_id": "user6",
+    "restaurant_id": "rest23",
+    "date_added": "2025-02-21T07:34:50Z"
+  },
+  {
+    "user_id": "user6",
+    "restaurant_id": "rest2",
+    "date_added": "2025-04-21T16:42:24Z"
+  },
+  {
+    "user_id": "user7",
+    "restaurant_id": "rest14",
+    "date_added": "2025-01-15T22:52:33Z"
+  },
+  {
+    "user_id": "user7",
+    "restaurant_id": "rest20",
+    "date_added": "2025-01-17T17:14:42Z"
+  },
+  {
+    "user_id": "user7",
+    "restaurant_id": "rest21",
+    "date_added": "2025-01-27T23:21:57Z"
+  },
+  {
+    "user_id": "user7",
+    "restaurant_id": "rest4",
+    "date_added": "2025-04-17T13:49:29Z"
+  },
+  {
+    "user_id": "user8",
+    "restaurant_id": "rest25",
+    "date_added": "2025-01-25T00:27:17Z"
+  },
+  {
+    "user_id": "user8",
+    "restaurant_id": "rest23",
+    "date_added": "2025-01-26T03:17:56Z"
+  },
+  {
+    "user_id": "user8",
+    "restaurant_id": "rest16",
+    "date_added": "2025-03-04T02:25:18Z"
+  },
+  {
+    "user_id": "user8",
+    "restaurant_id": "rest14",
+    "date_added": "2025-05-06T23:15:54Z"
+  },
+  {
+    "user_id": "user8",
+    "restaurant_id": "rest24",
+    "date_added": "2025-06-12T03:16:48Z"
+  },
+  {
+    "user_id": "user9",
+    "restaurant_id": "rest22",
+    "date_added": "2025-01-04T12:42:57Z"
+  },
+  {
+    "user_id": "user9",
+    "restaurant_id": "rest23",
+    "date_added": "2025-02-09T13:47:07Z"
+  },
+  {
+    "user_id": "user9",
+    "restaurant_id": "rest10",
+    "date_added": "2025-06-10T00:50:23Z"
+  },
+  {
+    "user_id": "user10",
+    "restaurant_id": "rest7",
+    "date_added": "2025-04-05T12:25:59Z"
+  },
+  {
+    "user_id": "user10",
+    "restaurant_id": "rest20",
+    "date_added": "2025-06-04T02:07:01Z"
+  },
+  {
+    "user_id": "user11",
+    "restaurant_id": "rest1",
+    "date_added": "2025-01-24T03:52:44Z"
+  },
+  {
+    "user_id": "user11",
+    "restaurant_id": "rest19",
+    "date_added": "2025-02-06T12:40:26Z"
+  },
+  {
+    "user_id": "user11",
+    "restaurant_id": "rest15",
+    "date_added": "2025-02-25T10:15:17Z"
+  },
+  {
+    "user_id": "user12",
+    "restaurant_id": "rest2",
+    "date_added": "2025-06-01T09:49:14Z"
+  }
+]

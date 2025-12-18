@@ -1,0 +1,12 @@
+# Target Functions Configuration for Turn-Level Teacher Forcing
+# This file specifies which API functions to use as target points for evaluation
+
+target_functions:
+  - find_call_device
+  - get_call_history
+  - get_messages
+  - get_restaurant_menu
+  - knowledge_lookup
+  - search_recipes
+  - stock_watchlist
+  - weather_forecast

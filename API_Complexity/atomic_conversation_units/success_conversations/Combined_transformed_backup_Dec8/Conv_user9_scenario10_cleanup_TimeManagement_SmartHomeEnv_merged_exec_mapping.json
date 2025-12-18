@@ -1,0 +1,43 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user9_scenario10_cleanup_TimeManagement_SmartHomeEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user9_scenario10_cleanup_TimeManagement_SmartHomeEnv_merged_exec.py",
+  "total_transforms": 5,
+  "successful_transforms": 5,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_alarms\", )",
+      "after": "invoke_tool(\"get_alarms\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Found 4 alarm(s)\", \"alarms\": [{\"alarm_id\": \"alarm36\", \"user_id\": \"user9\", \"title\": \"Running Time\", \"time\": \"06:00:00\", \"days\": [\"saturday\", \"sunday\"], \"active\": true, \"sound\": \"energetic\", \"device_endpoint\": \"1\"}, {\"alarm_id\": \"alarm39\", \"user_id\": \"user9\", \"title\": \"Take Medication\", \"time\": \"08:00:00\", \"days\": [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"], \"active\": false, \"sound\": \"gentle\", \"device_endpoint\": \"7\"}, {\"alarm_id\": \"alarm38\", \"user_id\": \"user9\", \"title\": \"Break Time\", \"time\": \"17:00:00\", \"days\": [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\"], \"active\": true, \"sound\": \"default\", \"device_endpoint\": \"7\"}, {\"alarm_id\": \"alarm37\", \"user_id\": \"user9\", \"title\": \"Take Medication\", \"time\": \"21:00:00\", \"days\": [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\", \"saturday\", \"sunday\"], \"active\": true, \"sound\": \"gentle\", \"device_endpoint\": \"1\"}], \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"delete_alarm\", alarm_id='alarm36', deactivate_only=False)",
+      "after": "invoke_tool(\"delete_alarm\", alarm_id='alarm36', deactivate_only=False)",
+      "execution_result": "{\"success\": true, \"message\": \"Alarm 'Running Time' has been deleted\", \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user9\", \"name\": \"Ryan Taylor\", \"home_id\": \"home2\", \"current_space\": null, \"devices\": [{\"endpoint\": \"18\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"19\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"20\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"21\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"23\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"24\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"25\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"26\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"27\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"28\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"29\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}, {\"endpoint\": \"30\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_device_details\", endpoint='18')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='18')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"18\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"fast_forward\", \"set_playback_speed\", \"rewind\"], \"groups\": [\"living_room\", \"downstairs\", \"entertainment\"], \"home_id\": \"home2\", \"state\": {\"power\": \"off\", \"volume\": 32}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"volume_adjust\", endpoints=['18'], direction='decrease')",
+      "after": "invoke_tool(\"volume_adjust\", endpoints=['18'], direction='decrease')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"18\", \"name\": \"Living Room Speaker\", \"success\": true, \"message\": \"Decreased Living Room Speaker volume to 22%\", \"volume\": 22}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

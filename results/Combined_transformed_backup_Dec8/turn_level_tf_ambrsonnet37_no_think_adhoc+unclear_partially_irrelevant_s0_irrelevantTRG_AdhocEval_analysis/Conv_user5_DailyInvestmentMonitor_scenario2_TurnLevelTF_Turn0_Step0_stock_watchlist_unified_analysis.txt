@@ -1,0 +1,38 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user5_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user5_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+   User: user5
+   Domain: investment
+   Status: ❌ FAIL
+   Total Turns: 2
+   Successful Turns: 1
+   Turn Success Rate: 50.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 1
+   Query Warnings: 1
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Let me analyze What stocks are in my watchlist?
+   Expected:
+     🔍 stock_watchlist({})
+   Actual:
+     🔍 stock_watchlist({})
+
+   Turn 2: ❌
+   Query: I need to review Strategically speaking, Given today's significant changes, I should switch to my analytical lighting setup Change the Bathroom Light color to blue
+   Expected:
+     🔍 get_user_inventory({})
+     🔍 get_device_details({"endpoint":"12"})
+     🔄 power_on({"endpoints":["12"]})
+     🔄 color_set({"endpoints":["12"],"color":"#0000FF"})
+   Actual:
+     🔍 get_user_inventory({})
+     🔄 color_set({"endpoints":["12"],"color":"#0000FF"})
+   Failure: Missing side-effect APIs: power_on
+   Missing Side-Effects: power_on
+   Supporting Query Warnings: Missing supporting query: get_device_details

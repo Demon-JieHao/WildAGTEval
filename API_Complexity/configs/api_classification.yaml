@@ -1,0 +1,202 @@
+
+side_effect_apis:
+  transaction:
+    - add_to_cart
+    - remove_from_cart
+    - update_cart_quantity
+    - checkout
+    - clear_cart
+    - cancel_order
+    
+  smarthome:
+    - power_on
+    - power_off
+    - color_set
+    - brightness_adjust
+    - temperature_set
+    - lock_lock
+    - lock_unlock
+    - mode_set
+    - open_close
+    - open_open
+    - open_set_position
+    - channel_change
+    - volume_adjust
+    
+  communication:
+    - make_call
+    - end_call
+    - send_message
+    
+  media:
+    - play
+    - pause
+    - stop
+    - next
+    - previous
+    - volume_set
+    - add_to_playlist
+    - create_playlist
+    - fast_forward
+    - resume
+    - rewind
+    - set_playback_speed
+    - shuffle
+    
+  culinary:
+    - create_meal_plan
+    - schedule_meal
+    - save_favorite_recipe
+    - create_custom_recipe
+    - place_delivery_order
+    
+  time_notification:
+    - create_alarm
+    - create_notification
+    - create_reminder
+    - delete_alarm
+    - set_notification_preferences
+
+# Core queries: Missing these causes validation failure
+core_queries:
+  transaction:
+    - track_order
+    - get_order_details
+    - get_order_history
+    - view_cart
+    # - get_device_inventory
+    # - find_communication_device
+    # - initiate_call_session
+    # - send_chat_message
+    # - sync_messages
+    # - search_contact_directory
+    # - color_scene_set
+    # - color_temperature_set
+    # - device_deactivate
+    # - hvac_mode_set
+    # - temperature_schedule
+    # - get_content_details
+    # - broadcast_alert
+    # - create_calendar_event
+    # - create_timer
+    # - fetch_notification_status
+    # - get_calendar_events
+    # - schedule_action
+    # - place_pickup_order
+    # - place_restaurant_order
+
+    
+  smarthome:
+    - lock_status
+    # - get_device_inventory
+    # - find_communication_device
+    # - initiate_call_session
+    # - send_chat_message
+    # - sync_messages
+    # - search_contact_directory
+    # - color_scene_set
+    # - color_temperature_set
+    # - device_deactivate
+    # - hvac_mode_set
+    # - temperature_schedule
+    # - get_content_details
+    # - broadcast_alert
+    # - create_calendar_event
+    # - create_timer
+    # - fetch_notification_status
+    # - get_calendar_events
+    # - schedule_action
+    # - place_pickup_order
+    # - place_restaurant_order
+    
+  information:
+    - stock_price
+    - weather_current
+    - weather_forecast
+    - knowledge_lookup
+    # - get_device_inventory
+    # - find_communication_device
+    # - initiate_call_session
+    # - send_chat_message
+    # - sync_messages
+    # - search_contact_directory
+    # - color_scene_set
+    # - color_temperature_set
+    # - device_deactivate
+    # - hvac_mode_set
+    # - temperature_schedule
+    # - get_content_details
+    # - broadcast_alert
+    # - create_calendar_event
+    # - create_timer
+    # - fetch_notification_status
+    # - get_calendar_events
+    # - schedule_action
+    # - place_pickup_order
+    # - place_restaurant_order
+    
+  communication:
+    - get_call_history
+    - get_messages
+    
+  media:
+    - 
+    
+  culinary:
+    - get_recipe_details
+    - track_delivery_order
+    
+  time_notification:
+    - get_alarms
+    - get_notifications
+    - get_reminders
+
+# Supporting queries: Missing these causes warnings only
+supporting_queries:
+  transaction:
+    - search_product
+    - get_product_details
+    
+  smarthome:
+    - get_user_inventory
+    - get_device_details
+    - find_device_by_name
+    - get_group_devices
+    
+  information:
+    - stock_watchlist
+    - news_by_category
+    - news_latest
+    - news_personalized
+    - query_history
+    - source_list
+    - user_preferences
+    - weather_alerts
+    
+  communication:
+    - find_contact
+    - find_call_device
+    
+  media:
+    - search_media
+    - get_playlists
+    - get_media_details
+    - get_playback_status
+  
+  culinary:
+    - search_recipes
+    - get_meal_suggestions
+    - search_restaurants
+    - get_restaurant_menu
+    - view_delivery_order
+
+# Order-independent APIs: These APIs can be called in any order within the same turn
+order_independent_apis:
+  - add_to_cart
+  - remove_from_cart
+  - temperature_set
+  - lock_lock
+  - lock_unlock
+  - create_alarm
+  - create_reminder
+  - create_notification

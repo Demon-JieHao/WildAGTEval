@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user4_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user4_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"create_meal_plan\", name='Balanced Diet Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner', 'snack'])",
+      "after": "invoke_tool(\"create_meal_plan\", name='Balanced Diet Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner', 'snack'])",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"name\": \"Balanced Diet Plan\", \"start_date\": \"2025-07-17\", \"end_date\": \"2025-07-23\", \"meals_per_day\": [\"breakfast\", \"lunch\", \"dinner\", \"snack\"], \"days_count\": 7, \"message\": \"Meal plan 'Balanced Diet Plan' created successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=4)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=4)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": true}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.3, \"is_favorite\": false}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"rating\": 3.9, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for breakfast\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe10', day='2025-07-22', meal_type='breakfast')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe10', day='2025-07-22', meal_type='breakfast')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-22\", \"meal_type\": \"breakfast\", \"recipe_id\": \"recipe10\", \"recipe_name\": \"Chole\", \"message\": \"Added Chole to breakfast on 2025-07-22\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=3)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=3)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"is_favorite\": false}, {\"recipe_id\": \"recipe15\", \"name\": \"Spanakopita\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"easy\", \"preparation_time\": 33, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": false}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"dietary_info\": [], \"rating\": 4.9, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for dinner\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe38', day='2025-07-19', meal_type='dinner')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe38', day='2025-07-19', meal_type='dinner')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-19\", \"meal_type\": \"dinner\", \"recipe_id\": \"recipe38\", \"recipe_name\": \"Beef Ramen\", \"message\": \"Added Beef Ramen to dinner on 2025-07-19\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Mexican', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Mexican', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"cuisines\": [\"Mexican\"], \"results\": [{\"restaurant_id\": \"rest19\", \"name\": \"Casa Miguel\", \"location\": \"8038 Park Blvd, Los Angeles, CA 87822\", \"cuisine_types\": [\"Mexican\"], \"price_range\": \"$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest21\", \"name\": \"Cantina Rosa\", \"location\": \"2313 Second St, New York, NY 85289\", \"cuisine_types\": [\"Mexican\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}], \"message\": \"Found 2 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest19')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest19')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Casa Miguel\", \"restaurant_id\": \"rest19\", \"restaurant_name\": \"Casa Miguel\", \"description\": \"Family-friendly mexican restaurant with a welcoming atmosphere\", \"price_range\": \"$$\", \"rating\": 4.6, \"cuisine_types\": [\"Mexican\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Nachos Supreme\", \"description\": \"Loaded nachos with beans and sour cream\", \"price\": 13.23, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item2\", \"name\": \"Jalape\\u00f1o Poppers\", \"description\": \"Stuffed jalape\\u00f1os with cream cheese\", \"price\": 9.94, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item3\", \"name\": \"Guacamole & Chips\", \"description\": \"Fresh avocado dip with tortilla chips\", \"price\": 11.93, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Quesadillas\", \"description\": \"Grilled tortillas with cheese and peppers\", \"price\": 11.91, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Carnitas Burrito\", \"description\": \"Large burrito with pork and beans\", \"price\": 13.85, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Chicken Tacos\", \"description\": \"Three soft tacos with grilled chicken\", \"price\": 13.38, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item7\", \"name\": \"Beef Enchiladas\", \"description\": \"Rolled tortillas with beef and cheese\", \"price\": 16.03, \"category\": \"Main Course\"}, {\"item_id\": \"item8\", \"name\": \"Fajitas\", \"description\": \"Sizzling chicken or beef with peppers\", \"price\": 19.72, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Chiles Rellenos\", \"description\": \"Stuffed poblano peppers with cheese\", \"price\": 16.07, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest19', items=[{'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '9314 Oak Ave', 'city': 'New York', 'state': 'NY', 'zip': '10055'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest19', items=[{'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '9314 Oak Ave', 'city': 'New York', 'state': 'NY', 'zip': '10055'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Casa Miguel\", \"order_time\": \"2025-07-30T18:26:12Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 16.03, \"tax\": 1.4, \"delivery_fee\": 5.99, \"tip\": 2.4, \"total\": 25.82, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Casa Miguel\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-07-30T18:26:12Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "plan_id": "plan1",
+    "user_id": "user1",
+    "name": "Weekly Family Dinner Plan",
+    "description": "Nutritious and easy meals for a busy week",
+    "start_date": "2025-06-10",
+    "end_date": "2025-06-16",
+    "created_at": "2025-06-09T15:30:00Z",
+    "meals": [
+      {
+        "day": "2025-06-10",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe1",
+            "notes": "Add extra cheese"
+          }
+        }
+      },
+      {
+        "day": "2025-06-11",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe2",
+            "notes": "Make extra for leftovers"
+          }
+        }
+      },
+      {
+        "day": "2025-06-12",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe3",
+            "notes": ""
+          }
+        }
+      },
+      {
+        "day": "2025-06-13",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe4",
+            "notes": "Use multigrain bread"
+          }
+        }
+      },
+      {
+        "day": "2025-06-14",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      },
+      {
+        "day": "2025-06-15",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      },
+      {
+        "day": "2025-06-16",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      }
+    ],
+    "notes": "Shopping list: Pasta, eggs, vegetables, ground beef, avocados"
+  },
+  {
+    "plan_id": "plan2",
+    "user_id": "user2",
+    "name": "Vegetarian Week",
+    "description": "Plant-based meals for the whole week",
+    "start_date": "2025-06-07",
+    "end_date": "2025-06-13",
+    "created_at": "2025-06-06T09:45:00Z",
+    "meals": [
+      {
+        "day": "2025-06-07",
+        "meals": {
+          "breakfast": {
+            "recipe_id": "recipe4",
+            "notes": "Use sourdough bread"
+          },
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe2",
+            "notes": ""
+          }
+        }
+      },
+      {
+        "day": "2025-06-08",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      },
+      {
+        "day": "2025-06-09",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe4",
+            "notes": "Add sliced tomatoes"
+          }
+        }
+      },
+      {
+        "day": "2025-06-10",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": {
+            "recipe_id": "recipe2",
+            "notes": ""
+          }
+        }
+      },
+      {
+        "day": "2025-06-11",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      },
+      {
+        "day": "2025-06-12",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      },
+      {
+        "day": "2025-06-13",
+        "meals": {
+          "breakfast": null,
+          "lunch": null,
+          "dinner": null
+        }
+      }
+    ],
+    "notes": "Focus on plant proteins and whole grains"
+  }
+]

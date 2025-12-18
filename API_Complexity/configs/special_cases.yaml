@@ -1,0 +1,4 @@
+# Special Cases Configuration
+# Defines domain-specific validation rules and requirements
+
+special_cases: {}

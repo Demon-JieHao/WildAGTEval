@@ -1,0 +1,113 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged_exec.py",
+  "total_transforms": 15,
+  "successful_transforms": 15,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"stock_price\", symbol='AAPL')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:AAPL')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"AAPL\", \"name\": \"Apple Inc.\", \"price\": 167.88, \"change\": -0.4, \"change_percent\": -0.24}, \"formatted\": \"AAPL: $167.88 (-0.4 / -0.24%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user2\", \"name\": \"Jennifer Brown\", \"home_id\": \"home1\", \"current_space\": null, \"devices\": [{\"endpoint\": \"1\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"2\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"3\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"4\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"5\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"]}, {\"endpoint\": \"6\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"7\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"8\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"9\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"]}, {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"13\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"14\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"15\", \"name\": \"Garage Light\", \"alternate_names\": [\"Garage Light\"]}, {\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"lock_status\", endpoints=['16'])",
+      "after": "invoke_tool(\"lock_status\", endpoints=['16'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"success\": true, \"message\": \"Garage Door Opener is unlocked\", \"state\": {\"locked\": false}}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"lock_lock\", endpoints=['16'])",
+      "after": "invoke_tool(\"lock_lock\", endpoints=[\"GarageDoorOpener_16\"])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"GarageDoorOpener_16\", \"name\": \"Garage Door Opener\", \"success\": true, \"message\": \"Locked Garage Door Opener\", \"state\": \"locked\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"stock_price\", symbol='TSLA')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:TSLA')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_call_history\", time_range='10w', limit=2)",
+      "after": "invoke_tool(\"get_call_history\", time_range='P10W', limit=2)",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved 2 call records\", \"calls\": [{\"call_id\": \"call25\", \"user_id\": \"user2\", \"contact_id\": \"contact19\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-11T12:23:14Z\", \"duration\": 0, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Elizabeth Wright\", \"duration_formatted\": \"0 sec\"}, {\"call_id\": \"call21\", \"user_id\": \"user2\", \"contact_id\": \"contact19\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-11T08:10:19Z\", \"duration\": 0, \"status\": \"rejected\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Elizabeth Wright\", \"duration_formatted\": \"0 sec\"}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"find_call_device\", )",
+      "after": "invoke_tool(\"find_call_device\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\", \"state\": {\"power\": \"off\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"make_call\", phone_number='412-264-1818', call_type='audio', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:4122641818', call_type='audio', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:4122641818 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"lock_unlock\", endpoints=['16'])",
+      "after": "invoke_tool(\"lock_unlock\", endpoints=[\"GarageDoorOpener_16\"])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"GarageDoorOpener_16\", \"name\": \"Garage Door Opener\", \"success\": true, \"message\": \"Unlocked Garage Door Opener\", \"state\": \"unlocked\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"get_notifications\", limit=4, include_read=False)",
+      "after": "invoke_tool(\"get_notifications\", limit=4, include_read=False)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 notification(s) (unread only)\", \"notifications\": [{\"notification_id\": \"notif4776\", \"user_id\": \"user2\", \"title\": \"Task Reminder\", \"message\": \"Don't forget to call Jeffrey Hall\", \"timestamp\": \"2025-05-20T15:54:22Z\", \"type\": \"system\", \"source\": \"SystemManager\", \"read\": false, \"priority\": \"low\"}], \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"find_contact\", query='Jeffrey Hall', search_type='name', limit=1)",
+      "after": "invoke_tool(\"find_contact\", query='Jeffrey Hall', search_type='name', limit=1)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact15\", \"user_id\": \"user2\", \"name\": \"Jeffrey Hall\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"414-601-4432\"}], \"email\": \"jeffrey36@outlook.com\", \"is_favorite\": true, \"devices\": [\"device8\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"find_call_device\", )",
+      "after": "invoke_tool(\"find_call_device\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\", \"state\": {\"power\": \"on\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"make_call\", phone_number='414-601-4432', call_type='audio', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:4146014432', call_type='audio', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:4146014432 using Smart Phone\", \"call_id\": \"call139\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

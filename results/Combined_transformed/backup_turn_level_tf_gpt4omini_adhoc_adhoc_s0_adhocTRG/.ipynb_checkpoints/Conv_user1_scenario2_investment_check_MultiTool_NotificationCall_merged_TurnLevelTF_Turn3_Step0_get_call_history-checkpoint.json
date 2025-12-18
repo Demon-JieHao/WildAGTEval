@@ -1,0 +1,290 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user1",
+  "model": "gpt-4o-mini",
+  "uncertainty_config": {
+    "config_name": "Adhoc Only",
+    "config_description": "Enable ADHOC RULEs uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/adhoc.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0,
+        "ADHOC": 8
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": [],
+        "ADHOC": [
+          "track_order",
+          "lock_lock",
+          "lock_unlock",
+          "color_set",
+          "get_call_history",
+          "make_call",
+          "play",
+          "stock_price"
+        ]
+      }
+    },
+    "enabled_uncertainty_types": [
+      "ADHOC"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.8333333333333333,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 0.0,
+  "overall_score": 0.4444444444444444,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 1.0
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Check my recent calling record in about 10 weeks",
+      "expected_api_sequence": [
+        {
+          "api": "get_call_history",
+          "params": {
+            "time_range": "P10W",
+            "limit": 2
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P70D",
+                "limit": 10
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P70D",
+              "limit": 10
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 10 call records\", \"calls\": [{\"call_id\": \"call5\", \"user_id\": \"user1\", \"contact_id\": \"contact11\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-16T13:53:09Z\", \"duration\": 144, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Ashley Scott\", \"duration_formatted\": \"2 min 24 sec\"}, {\"call_id\": \"call14\", \"user_id\": \"user1\", \"contact_id\": \"contact11\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-15T12:44:04Z\", \"duration\": 141, \"status\": \"completed\", \"call_type\": \"video\", \"device_endpoint\": \"4\", \"contact_name\": \"Ashley Scott\", \"duration_formatted\": \"2 min 21 sec\"}, {\"call_id\": \"call8\", \"user_id\": \"user1\", \"contact_id\": \"contact28\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-13T11:26:51Z\", \"duration\": 347, \"status\": \"completed\", \"call_type\": \"video\", \"device_endpoint\": \"4\", \"contact_name\": \"Nancy Gonzalez\", \"duration_formatted\": \"5 min 47 sec\"}, {\"call_id\": \"call1\", \"user_id\": \"user1\", \"contact_id\": \"contact11\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-12T20:26:46Z\", \"duration\": 1769, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Ashley Scott\", \"duration_formatted\": \"29 min 29 sec\"}, {\"call_id\": \"call6\", \"user_id\": \"user1\", \"contact_id\": \"contact28\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-12T10:32:20Z\", \"duration\": 49, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"3\", \"contact_name\": \"Nancy Gonzalez\", \"duration_formatted\": \"49 sec\"}, {\"call_id\": \"call12\", \"user_id\": \"user1\", \"contact_id\": \"contact31\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-10T21:22:06Z\", \"duration\": 1461, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Ryan Reyes\", \"duration_formatted\": \"24 min 21 sec\"}, {\"call_id\": \"call2\", \"user_id\": \"user1\", \"contact_id\": \"contact28\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-08T16:12:15Z\", \"duration\": 281, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"4\", \"contact_name\": \"Nancy Gonzalez\", \"duration_formatted\": \"4 min 41 sec\"}, {\"call_id\": \"call13\", \"user_id\": \"user1\", \"contact_id\": \"contact28\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-05T08:19:22Z\", \"duration\": 51, \"status\": \"completed\", \"call_type\": \"video\", \"device_endpoint\": \"2\", \"contact_name\": \"Nancy Gonzalez\", \"duration_formatted\": \"51 sec\"}, {\"call_id\": \"call15\", \"user_id\": \"user1\", \"contact_id\": \"contact28\", \"direction\": \"incoming\", \"timestamp\": \"2025-05-27T11:27:20Z\", \"duration\": 93, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"2\", \"contact_name\": \"Nancy Gonzalez\", \"duration_formatted\": \"1 min 33 sec\"}, {\"call_id\": \"call11\", \"user_id\": \"user1\", \"contact_id\": \"contact11\", \"direction\": \"outgoing\", \"timestamp\": \"2025-05-23T15:22:37Z\", \"duration\": 0, \"status\": \"missed\", \"call_type\": \"video\", \"device_endpoint\": \"4\", \"contact_name\": \"Ashley Scott\", \"duration_formatted\": \"0 sec\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:03:49.479440",
+          "ground_truth_api": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 2
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "```json\n{\n  \"name\": \"Call History Retrieval\",\n  \"description\": \"User requests to check recent calling records.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Check my recent calling record in about 10 weeks\",\n      \"api_calls\": [\n        {\n          \"api\": \"get_call_history\",\n          \"params\": {\n            \"time_range\": \"P70D\",\n            \"limit\": 10\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Call History Retrieval\",\n  \"description\": \"User requests to check recent calling records.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Check my recent calling record in about 10 weeks\",\n      \"api_calls\": [\n        {\n          \"api\": \"get_call_history\",\n          \"params\": {\n            \"time_range\": \"P70D\",\n            \"limit\": 10\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:03:53.147187",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": false,
+        "inference_path": [
+          "api_call",
+          "unknown"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-12-13T13:03:56.691983",
+      "target_function": "get_call_history",
+      "target_location": "Turn 3, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Call the last person I talked to",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "17"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:8164618624",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"4\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"4\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "4"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "4"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Device Kitchen Blinds is not powered on\"}",
+          "api_success": false,
+          "execution_time": 2.056633472442627,
+          "timestamp": "2025-12-13T13:03:55.203980",
+          "ground_truth_api": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "<API_CALL>\n{\n  \"api\": \"find_call_device\",\n  \"params\": {}\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "<API_CALL>\n{\n  \"api\": \"find_call_device\",\n  \"params\": {}\n}\n</API_CALL>",
+            "api_call": {
+              "api": "find_call_device",
+              "params": {}
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\", \"state\": {\"power\": \"off\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 1.4263298511505127,
+          "timestamp": "2025-12-13T13:03:56.660085",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.6666666666666666,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 2,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 1.5,
+        "api_efficiency": 1.5,
+        "api_success_rate": 0.5,
+        "task_completed": false,
+        "inference_path": [
+          "api_call",
+          "api_call"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 4,
+      "related_to_target": "Turn 3, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-12-13T13:04:15.145741"
+}

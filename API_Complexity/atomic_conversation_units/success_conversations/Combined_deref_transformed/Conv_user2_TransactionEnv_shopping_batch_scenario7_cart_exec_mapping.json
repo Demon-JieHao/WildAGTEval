@@ -1,0 +1,78 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user2_TransactionEnv_shopping_batch_scenario7_cart_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user2_TransactionEnv_shopping_batch_scenario7_cart_exec.py",
+  "total_transforms": 10,
+  "successful_transforms": 10,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='air purifier', category='appliances', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='air purifier', category='appliances', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 4, \"categories\": [\"appliances\"], \"results\": [{\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"price\": 174.99, \"category\": \"appliances\", \"stock\": 57}, {\"product_id\": \"prod69\", \"name\": \"Quick Air Purifier Elite\", \"price\": 214.99, \"category\": \"appliances\", \"stock\": 19}, {\"product_id\": \"prod91\", \"name\": \"TechCorp Plasma Purifier\", \"price\": 599.99, \"category\": \"appliances\", \"stock\": 30}, {\"product_id\": \"prod2\", \"name\": \"Easy Air Purifier\", \"price\": 1179.99, \"category\": \"appliances\", \"stock\": 36}], \"message\": \"Found 4 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod19')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod19')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"description\": \"Experience the latest in air purifier technology with stainless steel, compact, energy-efficient\", \"price\": 174.99, \"category\": \"appliances\", \"stock\": 57, \"rating\": 4.8, \"images\": [\"air_purifier_1.jpg\", \"air_purifier_2.jpg\", \"air_purifier_3.jpg\", \"air_purifier_4.jpg\"]}, \"message\": \"Retrieved details for 'Chef Air Purifier Elite'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod69')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod69')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod69\", \"name\": \"Quick Air Purifier Elite\", \"description\": \"Advanced air purifier with dishwasher-safe, programmable, energy-efficient for modern homes\", \"price\": 214.99, \"category\": \"appliances\", \"stock\": 19, \"rating\": 4.7, \"images\": [\"air_purifier_1.jpg\", \"air_purifier_2.jpg\"]}, \"message\": \"Retrieved details for 'Quick Air Purifier Elite'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod91')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod91')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod91\", \"name\": \"TechCorp Plasma Purifier\", \"brand\": \"TechCorp\", \"description\": \"Made by TechCorp. Plasma air purifier with ion generation and molecular filtration system\", \"price\": 599.99, \"category\": \"appliances\", \"stock\": 30, \"rating\": 4.7, \"images\": [\"plasma_purifier_1.jpg\", \"plasma_purifier_2.jpg\"]}, \"message\": \"Retrieved details for 'TechCorp Plasma Purifier'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod2')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod2')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod2\", \"name\": \"Easy Air Purifier\", \"description\": \"Flagship air purifier with easy-clean, energy-efficient, dishwasher-safe, stainless steel\", \"price\": 1179.99, \"category\": \"appliances\", \"stock\": 36, \"rating\": 4.0, \"images\": [\"air_purifier_1.jpg\", \"air_purifier_2.jpg\", \"air_purifier_3.jpg\", \"air_purifier_4.jpg\"]}, \"message\": \"Retrieved details for 'Easy Air Purifier'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod19', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod19', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"quantity\": 1, \"price\": 174.99}, \"cart_total\": 1054.98, \"message\": \"Added 1 x 'Chef Air Purifier Elite' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"update_cart_quantity\", product_id='prod19', quantity=5)",
+      "after": "invoke_tool(\"update_cart_quantity\", product_id='prod19', quantity=5)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"quantity\": 5, \"old_quantity\": 1}, \"cart_total\": 1754.94, \"message\": \"Updated quantity of 'Chef Air Purifier Elite' from 1 to 5\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod18\", \"name\": \"Smart USB Hub\", \"quantity\": 1, \"price\": 879.99, \"added_at\": \"2025-06-13T17:55:42Z\"}, {\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"quantity\": 5, \"price\": 174.99, \"added_at\": \"2025-08-20T00:09:23Z\"}], \"total\": 1754.94}, \"item_count\": 6, \"message\": \"Cart has 6 items with a total of $1754.94\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"remove_from_cart\", product_id='prod19')",
+      "after": "invoke_tool(\"remove_from_cart\", product_id='prod19')",
+      "execution_result": "{\"success\": true, \"removed\": {\"product_id\": \"prod19\", \"name\": \"Chef Air Purifier Elite\", \"quantity\": 5, \"price\": 174.99, \"added_at\": \"2025-08-20T00:09:23Z\"}, \"cart_total\": 879.99, \"message\": \"Removed all 'Chef Air Purifier Elite' from your cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"clear_cart\", )",
+      "after": "invoke_tool(\"clear_cart\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Removed all items from your cart (1 product types, 1 total items).\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,1325 @@
+{
+  "InformationControlEnv": {
+    "knowledge_lookup": {
+      "function": {
+        "description": "Look up general knowledge about a keyword. Provides definitions and explanations for various topics including technology, science, and general concepts.",
+        "error_cases": [
+          "No keyword provided: The keyword parameter is empty or not provided.",
+          "Keyword not found: Returns error with list of available keywords.",
+          "Invalid keyword format: Spaces in keywords will be replaced with underscores."
+        ],
+        "name": "knowledge_lookup",
+        "parameters": {
+          "properties": {
+            "keyword": {
+              "description": "The keyword to look up (e.g., 'python', 'artificial_intelligence', 'quantum_computing')",
+              "type": "string"
+            }
+          },
+          "required": [
+            "keyword"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_by_category": {
+      "function": {
+        "description": "Get news from a specific category. Available categories include technology, business, world, science, health, and sports.",
+        "error_cases": [
+          "Invalid category: Returns error with list of available categories.",
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news in category: Returns empty list if no news items are available in the category."
+        ],
+        "name": "news_by_category",
+        "parameters": {
+          "properties": {
+            "category": {
+              "description": "News category to retrieve (technology, business, world, science, health, sports)",
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 5, max: 20)",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "category"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_latest": {
+      "function": {
+        "description": "Get the latest news from all categories. Returns the most recent news items sorted by timestamp.",
+        "error_cases": [
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news available: Returns empty list if no news items are available."
+        ],
+        "name": "news_latest",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 5, max: 20)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_personalized": {
+      "function": {
+        "description": "Get personalized news based on user preferences. Returns news from the user's preferred categories sorted by recency.",
+        "error_cases": [
+          "No user preferences: If no user is logged in, defaults to technology and business categories.",
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news available: Returns empty list if no news items are available in preferred categories."
+        ],
+        "name": "news_personalized",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 10, max: 20)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "query_history": {
+      "function": {
+        "description": "Get user's query history. Shows recent information queries made by the current user.",
+        "error_cases": [
+          "No user logged in: Returns error if no current user is set.",
+          "Invalid limit: Limit will be constrained to 1-50 range.",
+          "No history: Returns empty list if user has no query history."
+        ],
+        "name": "query_history",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of queries to return (default: 10, max: 50)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "source_list": {
+      "function": {
+        "description": "List available information sources. Shows all data sources that can be queried for information.",
+        "error_cases": [
+          "Invalid source type: Returns error with list of available types.",
+          "No sources: Returns empty list if no sources are configured."
+        ],
+        "name": "source_list",
+        "parameters": {
+          "properties": {
+            "source_type": {
+              "description": "(Optional) Filter by source type (weather, news, knowledge, financial)",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stock_price": {
+      "function": {
+        "description": "Get current stock price for a symbol. Provides real-time price, change, and percentage change information.",
+        "error_cases": [
+          "No symbol provided: The symbol parameter is empty or not provided.",
+          "Symbol not found: Returns error with list of available symbols.",
+          "Invalid symbol format: Symbol will be converted to uppercase."
+        ],
+        "name": "stock_price",
+        "parameters": {
+          "properties": {
+            "symbol": {
+              "description": "Stock symbol to look up (e.g., AAPL, GOOGL, MSFT, AMZN, TSLA, NVDA, META)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stock_watchlist": {
+      "function": {
+        "description": "Get stock prices for user's watchlist. Returns current prices and changes for all stocks in the user's personalized watchlist.",
+        "error_cases": [
+          "No user preferences: If no user is logged in, defaults to AAPL, GOOGL, and MSFT.",
+          "Empty watchlist: Returns empty list if user has no stocks in watchlist.",
+          "Invalid symbols: Symbols not found in the system are silently skipped."
+        ],
+        "name": "stock_watchlist",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "user_preferences": {
+      "function": {
+        "description": "Get current user's preferences. Shows location, language, preferred news categories, stock watchlist, and other personalization settings.",
+        "error_cases": [
+          "No user logged in: Returns error if no current user is set.",
+          "No preferences: Returns empty preferences object if user has no preferences configured."
+        ],
+        "name": "user_preferences",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_alerts": {
+      "function": {
+        "description": "Get weather alerts and warnings for a location. Includes severe weather warnings, advisories, and watches.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_alerts",
+        "parameters": {
+          "properties": {
+            "location": {
+              "description": "(Optional) Location to get weather alerts for. If not provided, uses the user's default location from preferences.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_current": {
+      "function": {
+        "description": "Get current weather conditions for a location. Provides temperature, conditions, humidity, wind speed, and atmospheric pressure.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_current",
+        "parameters": {
+          "properties": {
+            "location": {
+              "description": "(Required) Enter location in lowercase with underscores (e.g., new_york, los_angeles, chicago)",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_forecast": {
+      "function": {
+        "description": "Get weather forecast for a location. Provides daily high/low temperatures and conditions for up to 7 days.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "Invalid days: Days parameter will be constrained to 1-7 range.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_forecast",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "(Optional) Number of days to forecast (default: 3, max: 7)",
+              "type": "integer"
+            },
+            "location": {
+              "description": "(Optional) Location to get weather for. If not provided, uses the user's default location from preferences.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  },
+  "MediaControlEnv": {
+    "add_to_playlist": {
+      "function": {
+        "description": "Add one or more media items to an existing playlist. Only the playlist owner can add items.",
+        "error_cases": [
+          "No playlist ID: The playlist_id parameter is empty or not provided.",
+          "No media IDs: The media_ids parameter is empty or not provided.",
+          "No current user: No user is currently set in the system.",
+          "Playlist not found: The specified playlist ID does not exist.",
+          "Permission denied: Cannot modify playlist owned by another user.",
+          "Invalid media IDs: One or more media IDs do not exist in the database."
+        ],
+        "name": "add_to_playlist",
+        "parameters": {
+          "properties": {
+            "media_ids": {
+              "description": "List of media IDs to add to the playlist",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "playlist_id": {
+              "description": "ID of the playlist to add media to",
+              "type": "string"
+            }
+          },
+          "required": [
+            "playlist_id",
+            "media_ids"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_playlist": {
+      "function": {
+        "description": "Create a new playlist for the current user. The playlist will be empty initially and can be populated using the add_to_playlist tool.",
+        "error_cases": [
+          "No title provided: The title parameter is empty or not provided.",
+          "No current user: No user is currently set in the system."
+        ],
+        "name": "create_playlist",
+        "parameters": {
+          "properties": {
+            "title": {
+              "description": "Title for the new playlist",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "fast_forward": {
+      "function": {
+        "description": "Fast forward the current media by a specified number of seconds. Useful for skipping parts of content like intros or commercials.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the fast_forward API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid seconds: The seconds parameter is negative."
+        ],
+        "name": "fast_forward",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the fast_forward API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "seconds": {
+              "default": 30,
+              "description": "Number of seconds to skip forward (default: 30). Must be positive.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_media_details": {
+      "function": {
+        "description": "Get detailed information about a specific media item including duration, genre, streaming services, and type-specific metadata.",
+        "error_cases": [
+          "No media ID: The media_id parameter is empty or not provided.",
+          "Media not found: The specified media ID does not exist in the database."
+        ],
+        "name": "get_media_details",
+        "parameters": {
+          "properties": {
+            "media_id": {
+              "description": "ID of the media item to get details for",
+              "type": "string"
+            }
+          },
+          "required": [
+            "media_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_playback_status": {
+      "function": {
+        "description": "Get the current playback status for one or more devices, including what's playing, position, and playback settings.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home."
+        ],
+        "name": "get_playback_status",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to check status for",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_playlists": {
+      "function": {
+        "description": "Get all playlists for a user. If no user ID is provided, returns playlists for the current user.",
+        "error_cases": [
+          "No current user: No user is currently set when user_id is not provided."
+        ],
+        "name": "get_playlists",
+        "parameters": {
+          "properties": {
+            "user_id": {
+              "description": "Optional user ID to get playlists for (defaults to current user)",
+              "type": "string"
+            }
+          },
+          "required": [],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "next": {
+      "function": {
+        "description": "Skip to the next track or episode in the current playlist or queue. This moves forward to the next item in the playback sequence.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the next API.",
+          "No active playback: There is no active playback on one or more devices."
+        ],
+        "name": "next",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the next API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "pause": {
+      "function": {
+        "description": "Pause media playback on one or more devices. This temporarily stops the playback while maintaining the current position, allowing for resumption later.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the pause API.",
+          "No active playback: There is no active playback to pause on one or more devices.",
+          "Already paused: Playback is already paused on one or more devices."
+        ],
+        "name": "pause",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to pause. Each endpoint must correspond to a device that supports the pause API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "play": {
+      "function": {
+        "description": "Play specified media on one or more devices. This starts playback of a movie, TV show, song, or playlist on compatible devices. The system will automatically check device compatibility before attempting playback.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Media not found: The specified media ID does not exist in the database.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the play API.",
+          "Incompatible media type: The device cannot play the specified type of media (e.g., trying to play video on an audio-only device)."
+        ],
+        "name": "play",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to play media on. Each endpoint must correspond to a device that supports the play API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "media_id": {
+              "description": "ID of the media item to play (e.g., 'movie1', 'song1', 'playlist1')",
+              "type": "string"
+            }
+          },
+          "required": [
+            "endpoints",
+            "media_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "previous": {
+      "function": {
+        "description": "Go to the previous track or episode in the current playlist or queue. If more than 5 seconds into the current track, it will restart the current track instead.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the previous API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "No previous track: There is no previous track in the playback history."
+        ],
+        "name": "previous",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the previous API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "resume": {
+      "function": {
+        "description": "Resume paused media playback on one or more devices. This continues playback from the position where it was paused.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the resume API.",
+          "No paused playback: There is no paused playback to resume on one or more devices.",
+          "Already playing: Playback is already active on one or more devices."
+        ],
+        "name": "resume",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to resume. Each endpoint must correspond to a device that supports the resume API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "rewind": {
+      "function": {
+        "description": "Rewind the current media by a specified number of seconds. Useful for replaying content you missed.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the rewind API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid seconds: The seconds parameter is negative."
+        ],
+        "name": "rewind",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the rewind API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "seconds": {
+              "default": 10,
+              "description": "Number of seconds to skip backward (default: 10). Must be positive.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_media": {
+      "function": {
+        "description": "Search for media content by title. Supports partial matching and optional filtering by media type.",
+        "error_cases": [
+          "No search query: The query parameter is empty or not provided.",
+          "Invalid limit: The limit parameter is less than 1."
+        ],
+        "name": "search_media",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "default": 10,
+              "description": "Maximum number of results to return (default: 10)",
+              "type": "integer"
+            },
+            "media_type": {
+              "description": "Optional filter by media type",
+              "enum": [
+                "movie",
+                "tv_show",
+                "song",
+                "album",
+                "playlist"
+              ],
+              "type": "string"
+            },
+            "query": {
+              "description": "Search query for media title (partial match supported)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "set_playback_speed": {
+      "function": {
+        "description": "Set the playback speed for media. Useful for watching content faster or slower than normal speed.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the set_playback_speed API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid speed: The speed parameter is outside the valid range (0.5-2.0)."
+        ],
+        "name": "set_playback_speed",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the set_playback_speed API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "speed": {
+              "description": "Playback speed multiplier (0.5 = half speed, 1.0 = normal, 2.0 = double speed). Must be between 0.5 and 2.0.",
+              "type": "number"
+            }
+          },
+          "required": [
+            "endpoints",
+            "speed"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "shuffle": {
+      "function": {
+        "description": "Toggle or set shuffle mode for playback. When shuffle is enabled, tracks will play in random order.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the shuffle API.",
+          "No active playback: There is no active playback on one or more devices."
+        ],
+        "name": "shuffle",
+        "parameters": {
+          "properties": {
+            "enabled": {
+              "description": "Optional boolean to set shuffle state. If not provided, toggles current state.",
+              "type": "boolean"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the shuffle API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stop": {
+      "function": {
+        "description": "Stop media playback on one or more devices. This completely stops playback and clears the current media from the device.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the stop API.",
+          "No active playback: There is no active playback to stop on one or more devices."
+        ],
+        "name": "stop",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to stop. Each endpoint must correspond to a device that supports the stop API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  },
+  "SmartHomeEnv": {
+    "brightness_adjust": {
+      "function": {
+        "description": "Adjust the brightness of one or more light devices. This tool allows setting specific brightness levels or making relative adjustments (increase/decrease) to light devices. Brightness is measured on a scale from 0% (off) to 100% (maximum brightness).",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No valid brightness parameter: Neither brightness nor direction parameter is provided.",
+          "Invalid brightness value: The brightness value is outside the valid range (0-100%).",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the brightness_adjust API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "brightness_adjust",
+        "parameters": {
+          "properties": {
+            "brightness": {
+              "description": "(Optional) Specific brightness level (0-100%). If provided, sets the light to this exact brightness level.",
+              "type": "integer"
+            },
+            "direction": {
+              "description": "(Optional) Direction to adjust brightness. If 'increase', brightness will be increased by 20%. If 'decrease', brightness will be decreased by 20%.",
+              "enum": [
+                "increase",
+                "decrease"
+              ],
+              "type": "string"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a light device that supports the brightness_adjust API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "channel_change": {
+      "function": {
+        "description": "Change the channel on one or more TV devices. This tool switches the current channel on televisions and other media devices that support channel selection. The channel is specified as a positive integer representing the channel number.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No channel specified: The channel parameter is not provided.",
+          "Invalid channel: The channel must be a positive integer.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the channel_change API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Channel not available: The specified channel may not be available on the device (though this is not checked in the current implementation)."
+        ],
+        "name": "channel_change",
+        "parameters": {
+          "properties": {
+            "channel": {
+              "description": "Channel number to change to. Must be a positive integer.",
+              "type": "integer"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a TV device that supports the channel_change API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints",
+            "channel"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "color_set": {
+      "function": {
+        "description": "Set the color of one or more light devices. This tool changes the color of smart lights that support color adjustment. Colors can be specified using common color names (red, blue, green, etc.), temperature descriptions (warm, cool), or hex color values (#RRGGBB).",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No color specified: The color parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the color_set API (not all lights support color adjustment).",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "color_set",
+        "parameters": {
+          "properties": {
+            "color": {
+              "description": "Color name (e.g., 'red', 'blue', 'warm', 'cool') or hex value (e.g., '#FF0000'). Supported color names include: red, green, blue, yellow, orange, purple, pink, white, warm, and cool.",
+              "type": "string"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a light device that supports the color_set API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints",
+            "color"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "find_device_by_name": {
+      "function": {
+        "description": "Find a device by its name or alternate names. This tool searches for a device in the current user's home using the provided name. It matches against both the primary device name and any alternate names (aliases) that have been defined for the device.",
+        "error_cases": [
+          "No device name specified: The name parameter is empty or not provided.",
+          "Device not found: No device with the specified name exists in the current user's home.",
+          "No current user: No user is currently set in the system, so the home context cannot be determined."
+        ],
+        "name": "find_device_by_name",
+        "parameters": {
+          "properties": {
+            "name": {
+              "description": "The name of the device to search for. The search is case-insensitive and will match against both primary and alternate device names.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_device_details": {
+      "function": {
+        "description": "Get details about a specific device. This tool retrieves comprehensive information about a device using its endpoint ID, including its name, supported APIs, group memberships, and current state.",
+        "error_cases": [
+          "No device endpoint specified: The endpoint parameter is empty or not provided.",
+          "Device not found: The specified endpoint does not exist in the current user's home.",
+          "No current user: No user is currently set in the system, so the home context cannot be determined."
+        ],
+        "name": "get_device_details",
+        "parameters": {
+          "properties": {
+            "endpoint": {
+              "description": "The endpoint ID of the device to retrieve details for.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "endpoint"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_group_devices": {
+      "function": {
+        "description": "Get all devices in a group. This tool retrieves all devices that belong to a specific group, identified either by group ID or group name. Groups can be spaces (rooms) or functional collections of devices (e.g., all lights).",
+        "error_cases": [
+          "No group ID or name specified: Neither the group_id nor group_name parameter is provided.",
+          "Group not found: The specified group ID or name does not exist in the system.",
+          "No current user: No user is currently set in the system, so the home context cannot be determined.",
+          "Empty group: The group exists but contains no devices (not an error, but returns an empty list)."
+        ],
+        "name": "get_group_devices",
+        "parameters": {
+          "properties": {
+            "group_id": {
+              "description": "(Optional) The ID of the group. Either group_id or group_name must be provided.",
+              "type": "string"
+            },
+            "group_name": {
+              "description": "(Optional) The name of the group. Either group_id or group_name must be provided.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_user_inventory": {
+      "function": {
+        "description": "Get the inventory of devices and groups for a user. This tool retrieves comprehensive information about all devices and groups associated with a user's home, including device states, supported APIs, and group memberships. It's particularly useful for discovering available devices and their capabilities before sending commands.",
+        "error_cases": [
+          "No current user set: This error occurs when no user_id is provided and no current user is set in the system.",
+          "User not found: The specified user_id does not exist in the system.",
+          "Home not found: The user exists but does not have an associated home."
+        ],
+        "name": "get_user_inventory",
+        "parameters": {
+          "properties": {
+            "user_id": {
+              "description": "(Optional) The user ID to get inventory for. If not provided, uses the current user.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "lock_lock": {
+      "function": {
+        "description": "Lock one or more lock devices. This tool secures doors, windows, and other lockable devices by setting them to the locked state. This is a security-critical operation that should be used with appropriate confirmation from the user, especially when unlocking devices.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the lock_lock API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Security restrictions: Some lock operations may require additional authentication or authorization."
+        ],
+        "name": "lock_lock",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to lock. Each endpoint must correspond to a lock device that supports the lock_lock API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "lock_status": {
+      "function": {
+        "description": "Get the status of one or more lock devices. This tool checks the current state (locked or unlocked) of door locks, window locks, and other security devices. This is a read-only operation that does not change the state of any devices.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the lock_status API.",
+          "No current user: No user is currently set in the system, so the home context cannot be determined.",
+          "Security restrictions: Some lock status operations may require additional authentication or authorization."
+        ],
+        "name": "lock_status",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to check. Each endpoint must correspond to a lock device that supports the lock_status API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "lock_unlock": {
+      "function": {
+        "description": "Unlock one or more lock devices. This tool opens doors, windows, and other lockable devices by setting them to the unlocked state. This is a security-critical operation that should be used with explicit user confirmation, as it could potentially allow unauthorized access to the home.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the lock_unlock API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Security restrictions: Unlocking operations typically require additional authentication or authorization for security reasons."
+        ],
+        "name": "lock_unlock",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to unlock. Each endpoint must correspond to a lock device that supports the lock_unlock API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "mode_set": {
+      "function": {
+        "description": "Set the mode of one or more thermostat devices. This tool changes the operating mode of thermostats and climate control systems. Available modes include heat (heating only), cool (cooling only), auto (automatic heating and cooling), off (system disabled), and eco (energy-saving mode).",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No mode specified: The mode parameter is empty or not provided.",
+          "Invalid mode: The specified mode is not one of the valid options (heat, cool, auto, off, eco).",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the mode_set API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "mode_set",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a thermostat device that supports the mode_set API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "mode": {
+              "description": "Mode to set (e.g., 'heat', 'cool', 'auto', 'off', 'eco'). The mode determines how the thermostat operates.",
+              "enum": [
+                "heat",
+                "cool",
+                "auto",
+                "off",
+                "eco"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "endpoints",
+            "mode"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "open_close": {
+      "function": {
+        "description": "Close one or more blinds/shades devices. This tool fully closes window coverings like blinds, shades, or curtains by setting them to the 0% open position (fully closed). Closing blinds can enhance privacy, security, and energy efficiency by blocking light and visibility into the home.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the open_close API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Device obstruction: Some devices may fail to close if they detect an obstruction in the path."
+        ],
+        "name": "open_close",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to close. Each endpoint must correspond to a blinds/shades device that supports the open_close API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "open_open": {
+      "function": {
+        "description": "Open one or more blinds/shades devices. This tool fully opens window coverings like blinds, shades, or curtains by setting them to the 100% open position. Opening blinds can affect privacy, security, and energy efficiency by allowing more light and visibility into the home.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the open_open API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Device obstruction: Some devices may fail to open if they detect an obstruction."
+        ],
+        "name": "open_open",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to open. Each endpoint must correspond to a blinds/shades device that supports the open_open API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "open_set_position": {
+      "function": {
+        "description": "Set the position of one or more blinds/shades devices. This tool adjusts window coverings like blinds, shades, or curtains to a specific position between fully closed (0%) and fully open (100%). This allows for precise control over light levels, privacy, and energy efficiency in the home.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No position specified: The position parameter is not provided.",
+          "Position out of range: The position will be automatically constrained to the valid range (0-100%).",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the open_set_position API.",
+          "State update failure: The device state could not be updated due to a system error.",
+          "Device obstruction: Some devices may fail to move to the requested position if they detect an obstruction."
+        ],
+        "name": "open_set_position",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a blinds/shades device that supports the open_set_position API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "position": {
+              "description": "Position value to set (0-100, where 0 is fully closed and 100 is fully open). Values will be constrained to this range.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints",
+            "position"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "power_off": {
+      "function": {
+        "description": "Turn off one or more devices. This tool deactivates devices like lights, TVs, and other appliances that support power control. When a device is turned off, its state settings (brightness, color, volume, etc.) are preserved for the next time it's turned on.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the power_off API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "power_off",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to turn off. Each endpoint must correspond to a device that supports the power_off API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "power_on": {
+      "function": {
+        "description": "Turn on one or more devices. This tool activates devices like lights, TVs, and other appliances that support power control. When a device is turned on, it will maintain its previous state settings (brightness, color, volume, etc.).",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the power_on API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "power_on",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to turn on. Each endpoint must correspond to a device that supports the power_on API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "temperature_set": {
+      "function": {
+        "description": "Set the temperature of one or more thermostat devices. This tool adjusts the target temperature for thermostats and climate control systems. Temperature values are specified in degrees Celsius and will be automatically constrained to a reasonable range (10-32\u00b0C).",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No temperature specified: The temperature parameter is not provided.",
+          "Temperature out of range: The temperature will be automatically constrained to the valid range (10-32\u00b0C).",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the temperature_set API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "temperature_set",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a thermostat device that supports the temperature_set API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "temperature": {
+              "description": "Temperature value to set in degrees Celsius. Values will be constrained to the range 10-32\u00b0C.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints",
+            "temperature"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "think": {
+      "function": {
+        "description": "Internal reasoning tool that doesn't affect the state of any devices. This tool allows for complex decision-making processes, analyzing user requests, and determining the appropriate action sequence without making any changes to the smart home environment.",
+        "error_cases": [
+          "No thought provided: The thought parameter is empty or not provided."
+        ],
+        "name": "think",
+        "parameters": {
+          "properties": {
+            "thought": {
+              "description": "The thought or reasoning to process. This can include analysis of user requests, decision trees, or any internal reasoning needed to determine the best course of action.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "thought"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "volume_adjust": {
+      "function": {
+        "description": "Adjust the volume of one or more audio devices. This tool controls the volume level of TVs, speakers, and other audio devices. Volume can be set to a specific level or adjusted relatively (increase/decrease) from the current level.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "No valid volume parameter: Neither volume nor direction parameter is provided.",
+          "Invalid volume value: The volume value is outside the valid range (0-100%).",
+          "Invalid direction: The direction is not one of the valid options (increase, decrease).",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the volume_adjust API.",
+          "State update failure: The device state could not be updated due to a system error."
+        ],
+        "name": "volume_adjust",
+        "parameters": {
+          "properties": {
+            "direction": {
+              "description": "(Optional) Direction to adjust volume. If 'increase', volume will be increased by 10%. If 'decrease', volume will be decreased by 10%.",
+              "enum": [
+                "increase",
+                "decrease"
+              ],
+              "type": "string"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to an audio device that supports the volume_adjust API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "volume": {
+              "description": "(Optional) Specific volume level (0-100%). If provided, sets the device to this exact volume level.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

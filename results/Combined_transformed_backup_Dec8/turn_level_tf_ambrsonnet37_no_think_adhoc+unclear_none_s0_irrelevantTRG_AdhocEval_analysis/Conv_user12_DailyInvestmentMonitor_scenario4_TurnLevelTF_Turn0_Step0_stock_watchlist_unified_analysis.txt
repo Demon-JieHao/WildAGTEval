@@ -1,0 +1,36 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user12_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user12_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+   User: user12
+   Domain: investment
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 0
+   Query Warnings: 1
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I want to discover With complete focus Can you give me an update on my watchlist?
+   Expected:
+     🔍 stock_watchlist({})
+   Actual:
+     🔍 stock_watchlist({})
+
+   Turn 2: ✅
+   Query: Detailed analysis of create a peaceful environment with soft colors I want the Kitchen Light to be orange
+   Expected:
+     🔍 get_user_inventory({})
+     🔍 get_device_details({"endpoint":"64"})
+     🔄 power_on({"endpoints":["64"]})
+     🔄 color_set({"endpoints":["64"],"color":"#FFA500"})
+   Actual:
+     🔍 get_user_inventory({})
+     🔄 power_on({"endpoints":["64"]})
+     🔄 color_set({"endpoints":["64"],"color":"#FFA500"})

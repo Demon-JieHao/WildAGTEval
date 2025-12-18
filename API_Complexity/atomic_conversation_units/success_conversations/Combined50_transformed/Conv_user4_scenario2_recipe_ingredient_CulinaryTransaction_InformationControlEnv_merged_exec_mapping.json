@@ -1,0 +1,134 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user4_scenario2_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user4_scenario2_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 18,
+  "successful_transforms": 18,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", cuisine='Indian', limit=5, sort_by='rating')",
+      "after": "invoke_tool(\"search_recipes\", cuisine='Indian', limit=5, sort_by='rating')",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Indian\"], \"results\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"]}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe10')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe10')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"description\": \"A delicious indian dish that's perfect for easy cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 31, \"servings\": 4, \"ingredients\": [{\"name\": \"turmeric\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"yogurt\", \"quantity\": \"1 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\"}, {\"name\": \"canola oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 312, \"protein\": 11, \"carbs\": 32, \"fat\": 7}, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"reviews_count\": 270, \"image_url\": \"https://example.com/images/chole.jpg\", \"tags\": [\"vegetarian\", \"breakfast\", \"indian\", \"gluten-free\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Chole - A delicious indian dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='turmeric', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='turmeric', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"price\": 3.19, \"category\": \"food_ingredients\", \"stock\": 97}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='yogurt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='yogurt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"price\": 6.17, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod133\", \"name\": \"Salt\", \"price\": 4.03, \"category\": \"food_ingredients\", \"stock\": 150}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod158', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod158', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"quantity\": 1, \"price\": 3.19}, \"cart_total\": 1162.79, \"message\": \"Added 1 x 'Turmeric' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 1168.29, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod140', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod140', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"quantity\": 1, \"price\": 6.17}, \"cart_total\": 1174.46, \"message\": \"Added 1 x 'Yogurt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 1177.6, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 1184.2, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 1186.32, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod133\", \"name\": \"Salt\", \"quantity\": 1, \"price\": 4.03}, \"cart_total\": 1190.35, \"message\": \"Added 1 x 'Salt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"weather_forecast\", location='paris', days=5)",
+      "after": "invoke_tool(\"weather_forecast\", location='paris', days=5)",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"days\": 5, \"forecast\": [{\"day\": \"Monday\", \"high\": 33, \"low\": 24, \"condition\": \"Snow\"}, {\"day\": \"Tuesday\", \"high\": 35, \"low\": 23, \"condition\": \"Light Rain\"}, {\"day\": \"Wednesday\", \"high\": 33, \"low\": 24, \"condition\": \"Light Snow\"}, {\"day\": \"Thursday\", \"high\": 39, \"low\": 25, \"condition\": \"Heavy Rain\"}, {\"day\": \"Friday\", \"high\": 35, \"low\": 27, \"condition\": \"Mist\"}], \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"weather_current\", location='paris')",
+      "after": "invoke_tool(\"weather_current\", location='paris')",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"current_weather\": {\"temperature\": 31, \"condition\": \"Light Snow\", \"humidity\": 47, \"wind_speed\": 15, \"pressure\": 1021}, \"formatted\": \"Temperature: 31\\u00b0C, Condition: Light Snow, Humidity: 47%, Wind: 15 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

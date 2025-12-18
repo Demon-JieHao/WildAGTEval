@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user3_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", difficulty='easy', sort_by='rating', limit=10, cuisine='American')",
+      "after": "invoke_tool(\"search_recipes\", difficulty='easy', sort_by='rating', limit=10, cuisine='American')",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe20')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe20')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 22, \"servings\": 8, \"ingredients\": [{\"name\": \"chicken\", \"quantity\": \"1 kg\", \"notes\": \"bone-in\"}, {\"name\": \"cheddar cheese\", \"quantity\": \"100g\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"flour\", \"quantity\": \"1 1/2 cups\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tsp\", \"notes\": \"dried\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 629, \"protein\": 27, \"carbs\": 78, \"fat\": 17}, \"dietary_info\": [\"gluten-free\"], \"rating\": 4.5, \"reviews_count\": 341, \"image_url\": \"https://example.com/images/philly_cheesesteak.jpg\", \"tags\": [\"gluten-free\", \"snack\", \"american\", \"comfort-food\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Philly Cheesesteak - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Smoked Chicken' is already in favorites\", \"already_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe20')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe20')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Philly Cheesesteak' is already in favorites\", \"already_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Mediterranean', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Mediterranean', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 4, \"cuisines\": [\"Mediterranean\"], \"results\": [{\"restaurant_id\": \"rest1\", \"name\": \"Mykonos\", \"location\": \"8453 Maple Ave, Phoenix, AZ 95566\", \"cuisine_types\": [\"Mediterranean\"], \"price_range\": \"$\", \"rating\": 4.1, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest10\", \"name\": \"Aegean Kitchen\", \"location\": \"2797 Broadway, Phoenix, AZ 95289\", \"cuisine_types\": [\"Mediterranean\"], \"price_range\": \"$$\", \"rating\": 3.9, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest5\", \"name\": \"Falafel Palace\", \"location\": \"4789 Broadway, Phoenix, AZ 64042\", \"cuisine_types\": [\"Mediterranean\"], \"price_range\": \"$$\", \"rating\": 3.8, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest18\", \"name\": \"Mykonos\", \"location\": \"1805 Washington Ave, Houston, TX 26483\", \"cuisine_types\": [\"Mediterranean\"], \"price_range\": \"$\", \"rating\": 3.6, \"delivery_available\": true, \"menu_item_count\": 6}], \"message\": \"Found 4 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest1')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest1')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Mykonos\", \"restaurant_id\": \"rest1\", \"restaurant_name\": \"Mykonos\", \"description\": \"Quick and delicious mediterranean food with quality ingredients\", \"price_range\": \"$\", \"rating\": 4.1, \"cuisine_types\": [\"Mediterranean\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 7.88, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 7.27, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 9.36, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.02, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.98, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item6\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 17.64, \"category\": \"Main Course\", \"popular\": true}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest1', items=[{'item_id': 'item5', 'quantity': 1}], delivery_address={'street': '1753 Market St', 'city': 'Dallas', 'state': 'TX', 'zip': '75263'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest1', items=[{'item_id': 'item5', 'quantity': 1}], delivery_address={'street': '1753 Market St', 'city': 'Dallas', 'state': 'TX', 'zip': '75263'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Mykonos\", \"order_time\": \"2025-08-20T00:11:31Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 24.98, \"tax\": 2.19, \"delivery_fee\": 5.99, \"tip\": 3.75, \"total\": 36.91, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Mykonos\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:11:31Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "filename": "Conv_user1_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 0.625,
+  "avg_parameter_accuracy": 0.3125,
+  "overall_score": 0.6458333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 16,
+    "total_api_steps": 16,
+    "avg_steps_per_query": 16.0,
+    "avg_api_steps_per_query": 16.0,
+    "avg_step_efficiency": 1.0
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 16,
+    "correct_predictions": 2,
+    "avg_prediction_accuracy": 0.125
+  },
+  "query_results": [
+    {
+      "query": "Give me the Indian recipe with highest rating and buy what I need to cook it",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "cuisine": "Indian",
+            "limit": 5,
+            "sort_by": "rating"
+          },
+          "description": "Search for Indian recipes"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe10"
+          },
+          "description": "Get detailed information for recipe: Chole"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "turmeric",
+            "limit": 1
+          },
+          "description": "Search for turmeric products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "onions",
+            "limit": 1
+          },
+          "description": "Search for onions products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "yogurt",
+            "limit": 1
+          },
+          "description": "Search for yogurt products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "garlic",
+            "limit": 1
+          },
+          "description": "Search for garlic products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "canola oil",
+            "limit": 1
+          },
+          "description": "Search for canola oil products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "lemon",
+            "limit": 1
+          },
+          "description": "Search for lemon products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "salt",
+            "limit": 1
+          },
+          "description": "Search for salt products"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod158",
+            "quantity": 1
+          },
+          "description": "Add Turmeric to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod126",
+            "quantity": 1
+          },
+          "description": "Add Onions to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod140",
+            "quantity": 1
+          },
+          "description": "Add Yogurt to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod125",
+            "quantity": 1
+          },
+          "description": "Add Garlic to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod168",
+            "quantity": 1
+          },
+          "description": "Add canola oil to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod130",
+            "quantity": 1
+          },
+          "description": "Add Lemon to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod133",
+            "quantity": 1
+          },
+          "description": "Add Salt to cart"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "cuisine": "Indian",
+                "limit": 5,
+                "sort_by": "rating"
+              },
+              "description": "Search for Indian recipes"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "cuisine": "Indian",
+              "limit": 5,
+              "sort_by": "rating"
+            },
+            "description": "Search for Indian recipes"
+          },
+          "api_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Indian\"], \"results\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}], \"query_performance_metrics\": {\"response_time_ms\": 45, \"cache_hit_rate\": 0.77, \"query_complexity_score\": 2.5}, \"content_freshness_indicators\": {\"data_staleness_hours\": 9, \"next_refresh_scheduled\": \"2024-12-15T03:00:00Z\", \"content_accuracy_confidence\": 0.94}, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:39.959546",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found several Indian recipes, and the one with the highest rating is \"Chole\" with a rating of 4.7. Let me get the details of this recipe for you.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found several Indian recipes, and the one with the highest rating is \"Chole\" with a rating of 4.7. Let me get the details of this recipe for you.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe10"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe10"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"description\": \"A delicious indian dish that's perfect for easy cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 31, \"servings\": 4, \"ingredients\": [{\"name\": \"turmeric\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"yogurt\", \"quantity\": \"1 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\"}, {\"name\": \"canola oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 312, \"protein\": 11, \"carbs\": 32, \"fat\": 7}, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"reviews_count\": 270, \"image_url\": \"https://example.com/images/chole.jpg\", \"tags\": [\"vegetarian\", \"breakfast\", \"indian\", \"gluten-free\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Chole - A delicious indian dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:48.108048",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe10"
+            },
+            "description": "Get detailed information for recipe: Chole"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Now I'll search for these ingredients in the store so you can purchase them for cooking Chole.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"turmeric\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for these ingredients in the store so you can purchase them for cooking Chole.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"turmeric\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "turmeric"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "turmeric"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"price\": 3.19, \"category\": \"food_ingredients\", \"stock\": 97}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:47:47.140705",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "turmeric",
+              "limit": 1
+            },
+            "description": "Search for turmeric products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 4,
+          "llm_response": "I'll add turmeric to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod158\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add turmeric to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod158\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod158",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod158",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"quantity\": 1, \"price\": 3.19}, \"cart_total\": 3.19, \"message\": \"Added 1 x 'Turmeric' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:51:17.058828",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "onions",
+              "limit": 1
+            },
+            "description": "Search for onions products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 5,
+          "llm_response": "Now I'll search for onions.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"onions\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for onions.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"onions\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "onions"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "onions"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 2, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}, {\"product_id\": \"prod152\", \"name\": \"Scallions\", \"price\": 8.23, \"category\": \"food_ingredients\", \"stock\": 125}], \"message\": \"Found 2 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:51:38.712987",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "yogurt",
+              "limit": 1
+            },
+            "description": "Search for yogurt products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 6,
+          "llm_response": "I'll add onions to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod126\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add onions to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod126\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod126",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod126",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 8.69, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:52:49.492667",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "garlic",
+              "limit": 1
+            },
+            "description": "Search for garlic products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 7,
+          "llm_response": "Now I'll search for yogurt.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"yogurt\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for yogurt.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"yogurt\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "yogurt"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "yogurt"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"price\": 6.17, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:55:24.976021",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "canola oil",
+              "limit": 1
+            },
+            "description": "Search for canola oil products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 8,
+          "llm_response": "I'll add yogurt to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod140\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add yogurt to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod140\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod140",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod140",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"quantity\": 1, \"price\": 6.17}, \"cart_total\": 14.86, \"message\": \"Added 1 x 'Yogurt' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:13:05.004194",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "lemon",
+              "limit": 1
+            },
+            "description": "Search for lemon products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 9,
+          "llm_response": "Now I'll search for garlic.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"garlic\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for garlic.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"garlic\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "garlic"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "garlic"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:10:04.664478",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "salt",
+              "limit": 1
+            },
+            "description": "Search for salt products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 10,
+          "llm_response": "I'll add garlic to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod125\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add garlic to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod125\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod125",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod125",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 18.0, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:20:11.229543",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod158",
+              "quantity": 1
+            },
+            "description": "Add Turmeric to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 11,
+          "llm_response": "Now I'll search for canola oil.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"canola oil\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for canola oil.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"canola oil\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "canola oil"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "canola oil"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:23:06.312899",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod126",
+              "quantity": 1
+            },
+            "description": "Add Onions to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 12,
+          "llm_response": "I'll add canola oil to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod168\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add canola oil to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod168\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod168",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod168",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 24.6, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:25:55.069766",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod140",
+              "quantity": 1
+            },
+            "description": "Add Yogurt to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 13,
+          "llm_response": "Now I'll search for lemon.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"lemon\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for lemon.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"lemon\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "lemon"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "lemon"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:29:25.018113",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod125",
+              "quantity": 1
+            },
+            "description": "Add Garlic to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 14,
+          "llm_response": "I'll add lemon to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod130\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add lemon to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod130\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod130",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod130",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 26.72, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:35:13.695304",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod168",
+              "quantity": 1
+            },
+            "description": "Add canola oil to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 15,
+          "llm_response": "Now I'll search for salt.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"salt\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll search for salt.\n\n<API_CALL>\n{\n  \"api\": \"search_product\",\n  \"params\": {\n    \"query\": \"salt\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_product",
+              "params": {
+                "query": "salt"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "salt"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod133\", \"name\": \"Salt\", \"price\": 4.03, \"category\": \"food_ingredients\", \"stock\": 150}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:45:18.561918",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod130",
+              "quantity": 1
+            },
+            "description": "Add Lemon to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 16,
+          "llm_response": "I'll add salt to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod133\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add salt to your cart.\n\n<API_CALL>\n{\n  \"api\": \"add_to_cart\",\n  \"params\": {\n    \"product_id\": \"prod133\",\n    \"quantity\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "add_to_cart",
+              "params": {
+                "product_id": "prod133",
+                "quantity": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod133",
+              "quantity": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"product\": {\"product_id\": \"prod133\", \"name\": \"Salt\", \"quantity\": 1, \"price\": 4.03}, \"cart_total\": 30.75, \"message\": \"Added 1 x 'Salt' to cart\", \"_environment\": \"TransactionEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:56:41.402018",
+          "ground_truth_api": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "prod133",
+              "quantity": 1
+            },
+            "description": "Add Salt to cart"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.625,
+        "parameter_accuracy": 0.3125,
+        "order_accuracy": 0.0,
+        "total_steps": 16,
+        "api_steps": 16,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 1.0,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": false,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call"
+        ],
+        "total_prediction_steps": 16,
+        "correct_predictions": 2,
+        "per_step_accuracy_rate": 0.125,
+        "step_by_step_accuracy": [
+          null,
+          true,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:56:41.403342",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:16:54.865711"
+}

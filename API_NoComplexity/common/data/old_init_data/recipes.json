@@ -1,0 +1,415 @@
+[
+  {
+    "recipe_id": "recipe1",
+    "name": "Classic Spaghetti Carbonara",
+    "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and black pepper.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 15,
+    "cooking_time": 20,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "spaghetti",
+        "quantity": "400g"
+      },
+      {
+        "name": "pancetta or guanciale",
+        "quantity": "150g",
+        "notes": "diced"
+      },
+      {
+        "name": "eggs",
+        "quantity": "3 large"
+      },
+      {
+        "name": "egg yolks",
+        "quantity": "1"
+      },
+      {
+        "name": "pecorino romano cheese",
+        "quantity": "50g",
+        "notes": "grated"
+      },
+      {
+        "name": "parmesan cheese",
+        "quantity": "50g",
+        "notes": "grated"
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1 tsp",
+        "notes": "freshly ground"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil, and cook the spaghetti according to package instructions until al dente.",
+      "While the pasta cooks, heat a large skillet over medium heat, and cook the pancetta until crispy, about 5-7 minutes.",
+      "In a bowl, whisk together the eggs, egg yolk, both cheeses, and black pepper.",
+      "When the pasta is done, reserve about 1/2 cup of pasta water, then drain the pasta.",
+      "Working quickly, add the hot pasta to the skillet with the pancetta, and toss to coat in the rendered fat.",
+      "Remove the skillet from heat, and pour in the egg mixture, tossing continuously until the eggs thicken but don't scramble.",
+      "If needed, add a splash of the reserved pasta water to create a creamy sauce.",
+      "Serve immediately with extra grated cheese and freshly ground black pepper."
+    ],
+    "nutrition_info": {
+      "calories": 450,
+      "protein": 22,
+      "carbs": 56,
+      "fat": 18
+    },
+    "dietary_info": [],
+    "rating": 4.8,
+    "reviews_count": 246,
+    "image_url": "https://example.com/images/carbonara.jpg",
+    "tags": ["pasta", "dinner", "quick"]
+  },
+  {
+    "recipe_id": "recipe2",
+    "name": "Vegetable Stir Fry",
+    "description": "A quick and healthy vegetable stir fry that's perfect for weeknight dinners.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 15,
+    "cooking_time": 10,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": "2 cups",
+        "notes": "cooked"
+      },
+      {
+        "name": "broccoli",
+        "quantity": "1 head",
+        "notes": "cut into florets"
+      },
+      {
+        "name": "bell pepper",
+        "quantity": "2",
+        "notes": "sliced"
+      },
+      {
+        "name": "carrots",
+        "quantity": "2",
+        "notes": "julienned"
+      },
+      {
+        "name": "snap peas",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "ginger",
+        "quantity": "1 tbsp",
+        "notes": "grated"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "3 tbsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vegetable oil",
+        "quantity": "2 tbsp"
+      }
+    ],
+    "instructions": [
+      "Heat vegetable oil in a large wok or skillet over high heat.",
+      "Add garlic and ginger and stir fry for 30 seconds until fragrant.",
+      "Add the harder vegetables first (broccoli and carrots), and stir fry for 2 minutes.",
+      "Add the bell peppers and snap peas, and continue to stir fry for another 3 minutes.",
+      "Add the soy sauce and sesame oil, and toss to coat all vegetables.",
+      "Cook for another 1-2 minutes until vegetables are crisp-tender.",
+      "Serve hot over cooked rice."
+    ],
+    "nutrition_info": {
+      "calories": 280,
+      "protein": 6,
+      "carbs": 45,
+      "fat": 9
+    },
+    "dietary_info": ["vegetarian", "vegan"],
+    "rating": 4.5,
+    "reviews_count": 182,
+    "image_url": "https://example.com/images/stirfry.jpg",
+    "tags": ["vegetarian", "dinner", "quick", "healthy"]
+  },
+  {
+    "recipe_id": "recipe3",
+    "name": "Classic Beef Burger",
+    "description": "Juicy homemade beef burgers with all the fixings.",
+    "cuisine": "American",
+    "difficulty": "easy",
+    "preparation_time": 20,
+    "cooking_time": 10,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "ground beef",
+        "quantity": "500g",
+        "notes": "80% lean"
+      },
+      {
+        "name": "onion",
+        "quantity": "1/2",
+        "notes": "finely diced"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "worcestershire sauce",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp"
+      },
+      {
+        "name": "burger buns",
+        "quantity": "4"
+      },
+      {
+        "name": "lettuce leaves",
+        "quantity": "4"
+      },
+      {
+        "name": "tomato",
+        "quantity": "1",
+        "notes": "sliced"
+      },
+      {
+        "name": "cheese slices",
+        "quantity": "4",
+        "notes": "cheddar or american"
+      },
+      {
+        "name": "ketchup",
+        "quantity": "to serve"
+      },
+      {
+        "name": "mustard",
+        "quantity": "to serve"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, mix ground beef, diced onion, minced garlic, Worcestershire sauce, salt, and pepper.",
+      "Divide the mixture into 4 equal portions and form into patties slightly larger than your burger buns, as they will shrink when cooking.",
+      "Make a small indentation in the center of each patty with your thumb to prevent it from puffing up during cooking.",
+      "Heat a grill, grill pan, or skillet to medium-high heat.",
+      "Cook the patties for about 4 minutes on the first side.",
+      "Flip the patties and cook for another 3-5 minutes, depending on desired doneness.",
+      "If adding cheese, place a slice on each patty during the last minute of cooking.",
+      "Lightly toast the burger buns.",
+      "Assemble the burgers with lettuce, tomato, and condiments of your choice."
+    ],
+    "nutrition_info": {
+      "calories": 520,
+      "protein": 32,
+      "carbs": 30,
+      "fat": 28
+    },
+    "dietary_info": [],
+    "rating": 4.7,
+    "reviews_count": 327,
+    "image_url": "https://example.com/images/burger.jpg",
+    "tags": ["beef", "dinner", "lunch", "barbecue"]
+  },
+  {
+    "recipe_id": "recipe4",
+    "name": "Avocado Toast",
+    "description": "Simple but delicious avocado toast, perfect for breakfast or brunch.",
+    "cuisine": "Contemporary",
+    "difficulty": "easy",
+    "preparation_time": 10,
+    "cooking_time": 5,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "whole grain bread",
+        "quantity": "2 slices"
+      },
+      {
+        "name": "avocado",
+        "quantity": "1",
+        "notes": "ripe"
+      },
+      {
+        "name": "lemon juice",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "1/4 tsp"
+      },
+      {
+        "name": "red pepper flakes",
+        "quantity": "pinch",
+        "notes": "optional"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tsp"
+      }
+    ],
+    "instructions": [
+      "Toast the bread slices to your desired level of crispness.",
+      "Cut the avocado in half, remove the pit, and scoop the flesh into a bowl.",
+      "Add lemon juice and salt to the avocado, and mash with a fork to your preferred consistency.",
+      "Spread the avocado mixture onto the toast.",
+      "Drizzle with olive oil and sprinkle with red pepper flakes if using."
+    ],
+    "nutrition_info": {
+      "calories": 220,
+      "protein": 5,
+      "carbs": 22,
+      "fat": 14
+    },
+    "dietary_info": ["vegetarian", "vegan"],
+    "rating": 4.4,
+    "reviews_count": 156,
+    "image_url": "https://example.com/images/avocado_toast.jpg",
+    "tags": ["breakfast", "brunch", "quick", "healthy"]
+  },
+  {
+    "recipe_id": "recipe5",
+    "name": "Butter Chicken Curry",
+    "description": "A rich, creamy, and flavorful North Indian curry that's perfect for cold days.",
+    "cuisine": "Indian",
+    "difficulty": "medium",
+    "preparation_time": 30,
+    "cooking_time": 45,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "chicken thighs",
+        "quantity": "1 kg",
+        "notes": "boneless, skinless, cut into chunks"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1/2 cup",
+        "notes": "plain"
+      },
+      {
+        "name": "lemon juice",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "ginger paste",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "garlic paste",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "garam masala",
+        "quantity": "2 tsp"
+      },
+      {
+        "name": "turmeric",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "cumin",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "coriander powder",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "red chili powder",
+        "quantity": "1/2 tsp",
+        "notes": "adjust to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 tbsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 medium",
+        "notes": "finely chopped"
+      },
+      {
+        "name": "tomato puree",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "heavy cream",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "kasoori methi (dried fenugreek leaves)",
+        "quantity": "1 tbsp",
+        "notes": "crushed"
+      },
+      {
+        "name": "sugar",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "fresh cilantro",
+        "quantity": "2 tbsp",
+        "notes": "chopped, for garnish"
+      },
+      {
+        "name": "basmati rice",
+        "quantity": "3 cups",
+        "notes": "cooked, for serving"
+      },
+      {
+        "name": "naan bread",
+        "quantity": "6 pieces",
+        "notes": "for serving"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, mix yogurt, lemon juice, ginger paste, garlic paste, 1 tsp garam masala, turmeric, cumin, coriander powder, and chili powder.",
+      "Add chicken pieces to the marinade, mix well to coat, and refrigerate for at least 1 hour (preferably 4+ hours).",
+      "In a large pot or pan, melt 2 tbsp of butter over medium-high heat.",
+      "Add the marinated chicken (reserving excess marinade) and cook until browned on all sides, about 5-7 minutes. Remove and set aside.",
+      "In the same pot, add remaining butter. Once melted, add the chopped onions and sauté until golden brown, about 5-7 minutes.",
+      "Add the reserved marinade and cook for 2-3 minutes, stirring constantly.",
+      "Add tomato puree and cook for 10-15 minutes until the sauce thickens and oil begins to separate at the edges.",
+      "Return the chicken to the pot and simmer on low heat for 15-20 minutes, until chicken is thoroughly cooked.",
+      "Stir in the heavy cream, remaining garam masala, kasoori methi, sugar, and salt to taste. Simmer for another 5-10 minutes.",
+      "Garnish with fresh cilantro and serve hot with basmati rice and naan bread."
+    ],
+    "nutrition_info": {
+      "calories": 620,
+      "protein": 38,
+      "carbs": 42,
+      "fat": 32
+    },
+    "dietary_info": [],
+    "rating": 4.9,
+    "reviews_count": 258,
+    "image_url": "https://example.com/images/butter_chicken.jpg",
+    "tags": ["dinner", "spicy", "comfort food", "winter"]
+  }
+]

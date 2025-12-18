@@ -1,0 +1,120 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user6_SmartRoutines_scenario5_smart_security_night_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user6_SmartRoutines_scenario5_smart_security_night_exec.py",
+  "total_transforms": 16,
+  "successful_transforms": 16,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user6\", \"name\": \"James Lopez\", \"home_id\": \"home3\", \"current_space\": null, \"devices\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"alternate_names\": [\"Television\", \"Smart TV\"]}, {\"endpoint\": \"32\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"33\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"34\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"35\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"36\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"39\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"40\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"41\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"42\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}, {\"endpoint\": \"43\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}, {\"endpoint\": \"44\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"lock_status\", endpoints=['42'])",
+      "after": "invoke_tool(\"lock_status\", endpoints=['42'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"42\", \"name\": \"Front Door Lock\", \"success\": true, \"message\": \"Front Door Lock is locked\", \"state\": {\"locked\": true}}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"lock_lock\", endpoints=['42'])",
+      "after": "invoke_tool(\"lock_lock\", endpoints=[\"FrontDoorLock_42\"])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"FrontDoorLock_42\", \"name\": \"Front Door Lock\", \"success\": true, \"message\": \"Locked Front Door Lock\", \"state\": \"locked\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_device_details\", endpoint='38')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='38')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"], \"endpoint_categories\": [\"BLINDS\"], \"supported_apis\": [\"open_open\", \"open_close\", \"open_set_position\"], \"groups\": [\"dining_room\", \"downstairs\"], \"home_id\": \"home3\", \"state\": {\"position\": 96}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"open_close\", endpoints=['38'])",
+      "after": "invoke_tool(\"open_close\", endpoints=['38'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"success\": true, \"message\": \"Closed Dining Room Blinds\", \"position\": 0}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_device_details\", endpoint='43')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='43')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"43\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"], \"endpoint_categories\": [\"THERMOSTAT\"], \"supported_apis\": [\"temperature_set\", \"mode_set\"], \"groups\": [\"climate\", \"whole_home\"], \"home_id\": \"home3\", \"state\": {\"temperature\": 27, \"mode\": \"off\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"temperature_set\", endpoints=['43'], temperature=32)",
+      "after": "invoke_tool(\"temperature_set\", endpoints=['43'], temperature=32)",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"43\", \"name\": \"Thermostat\", \"success\": true, \"message\": \"Set Thermostat temperature to 32\\u00b0C\", \"temperature\": 32}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"get_device_details\", endpoint='37')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='37')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"dining_room\", \"downstairs\", \"all_lights\"], \"home_id\": \"home3\", \"state\": {\"power\": \"off\", \"brightness\": 59}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"power_on\", endpoints=['37'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['37'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"success\": true, \"message\": \"Turned on Dining Room Light\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"brightness_adjust\", endpoints=['37'], brightness=20)",
+      "after": "invoke_tool(\"brightness_adjust\", endpoints=['37'], brightness=20)",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"success\": true, \"message\": \"Set Dining Room Light brightness to 20%\", \"brightness\": 20}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"weather_current\", location='stockholm')",
+      "after": "invoke_tool(\"weather_current\", location='stockholm')",
+      "execution_result": "{\"success\": true, \"location\": \"stockholm\", \"current_weather\": {\"temperature\": 2, \"condition\": \"Hail\", \"humidity\": 46, \"wind_speed\": 8, \"pressure\": 995}, \"formatted\": \"Temperature: 2\\u00b0C, Condition: Hail, Humidity: 46%, Wind: 8 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"weather_alerts\", location='vancouver')",
+      "after": "invoke_tool(\"weather_alerts\", location='vancouver')",
+      "execution_result": "{\"success\": true, \"location\": \"vancouver\", \"alerts\": [], \"has_alerts\": false, \"alert_count\": 0, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"set_notification_preferences\", do_not_disturb=True, notification_sounds=False)",
+      "after": "invoke_tool(\"set_notification_preferences\", do_not_disturb=True, notification_sounds=False)",
+      "execution_result": "{\"success\": true, \"message\": \"Notification preferences updated: do_not_disturb: True, notification_sounds: False\", \"preferences\": {\"do_not_disturb\": true, \"notification_sounds\": false, \"preferred_device_endpoint\": null}, \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"create_notification\", title='Emergency Contacts Active', message='Emergency calls will bypass do-not-disturb mode', source='CulinaryControlEnv', type='security', priority='low')",
+      "after": "invoke_tool(\"create_notification\", title='Emergency Contacts Active', message='Emergency calls will bypass do-not-disturb mode', source='CulinaryControlEnv', type='security', priority='low')",
+      "execution_result": "{\"success\": true, \"message\": \"Notification created for user user6 (will be shown when do-not-disturb is disabled)\", \"notification_id\": \"notif9992\", \"notification\": {\"notification_id\": \"notif9992\", \"user_id\": \"user6\", \"title\": \"Emergency Contacts Active\", \"message\": \"Emergency calls will bypass do-not-disturb mode\", \"timestamp\": \"2025-08-20T00:11:40.353647\", \"type\": \"security\", \"source\": \"CulinaryControlEnv\", \"read\": false, \"priority\": \"low\"}, \"do_not_disturb\": true, \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"create_alarm\", title='Morning wake-up', time='07:30:00', days=['monday', 'tuesday', 'wednesday', 'thursday', 'friday'], sound='gentle')",
+      "after": "invoke_tool(\"create_alarm\", title='Morning wake-up', time='07:30:00', days=['monday', 'tuesday', 'wednesday', 'thursday', 'friday'], sound='gentle')",
+      "execution_result": "{\"success\": true, \"message\": \"Alarm 'Morning wake-up' created successfully\", \"alarm_id\": \"alarm54\", \"alarm\": {\"alarm_id\": \"alarm54\", \"user_id\": \"user6\", \"title\": \"Morning wake-up\", \"time\": \"07:30:00\", \"days\": [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\"], \"active\": true, \"sound\": \"gentle\", \"device_endpoint\": null}, \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"get_alarms\", active_only=True)",
+      "after": "invoke_tool(\"get_alarms\", active_only=True)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 alarm(s) (active only)\", \"alarms\": [{\"alarm_id\": \"alarm54\", \"user_id\": \"user6\", \"title\": \"Morning wake-up\", \"time\": \"07:30:00\", \"days\": [\"monday\", \"tuesday\", \"wednesday\", \"thursday\", \"friday\"], \"active\": true, \"sound\": \"gentle\", \"device_endpoint\": null}], \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

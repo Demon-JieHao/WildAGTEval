@@ -1,0 +1,64 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref50/Conv_user2_TransactionEnv_shopping_batch_scenario9_shopping_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref50_transformed/Conv_user2_TransactionEnv_shopping_batch_scenario9_shopping_exec.py",
+  "total_transforms": 8,
+  "successful_transforms": 8,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='slow cooker', category='appliances', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='slow cooker', category='appliances', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"categories\": [\"appliances\"], \"results\": [{\"product_id\": \"prod20\", \"name\": \"Pro Slow Cooker\", \"price\": 259.99, \"category\": \"appliances\", \"stock\": 61}, {\"product_id\": \"prod62\", \"name\": \"Quick Slow Cooker Pro\", \"price\": 774.99, \"category\": \"appliances\", \"stock\": 51}, {\"product_id\": \"prod6\", \"name\": \"Quick Slow Cooker Max\", \"price\": 1094.99, \"category\": \"appliances\", \"stock\": 25}], \"message\": \"Found 3 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod20')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod20')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod20\", \"name\": \"Pro Slow Cooker\", \"description\": \"Experience the latest in slow cooker technology with multi-function, easy-clean, compact\", \"price\": 259.99, \"category\": \"appliances\", \"stock\": 61, \"rating\": 4.6, \"images\": [\"slow_cooker_1.jpg\", \"slow_cooker_2.jpg\"]}, \"message\": \"Retrieved details for 'Pro Slow Cooker'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod62')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod62')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod62\", \"name\": \"Quick Slow Cooker Pro\", \"description\": \"Advanced slow cooker with programmable, energy-efficient, dishwasher-safe, easy-clean for modern homes\", \"price\": 774.99, \"category\": \"appliances\", \"stock\": 51, \"rating\": 4.4, \"images\": [\"slow_cooker_1.jpg\", \"slow_cooker_2.jpg\"]}, \"message\": \"Retrieved details for 'Quick Slow Cooker Pro'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod6')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod6')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod6\", \"name\": \"Quick Slow Cooker Max\", \"description\": \"Advanced slow cooker with programmable, compact, easy-clean for modern homes\", \"price\": 1094.99, \"category\": \"appliances\", \"stock\": 25, \"rating\": 4.3, \"images\": [\"slow_cooker_1.jpg\", \"slow_cooker_2.jpg\", \"slow_cooker_3.jpg\"]}, \"message\": \"Retrieved details for 'Quick Slow Cooker Max'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod20', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod20', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod20\", \"name\": \"Pro Slow Cooker\", \"quantity\": 1, \"price\": 259.99}, \"cart_total\": 1139.98, \"message\": \"Added 1 x 'Pro Slow Cooker' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod18\", \"name\": \"Smart USB Hub\", \"quantity\": 1, \"price\": 879.99, \"added_at\": \"2025-06-13T17:55:42Z\"}, {\"product_id\": \"prod20\", \"name\": \"Pro Slow Cooker\", \"quantity\": 1, \"price\": 259.99, \"added_at\": \"2025-08-02T04:11:25Z\"}], \"total\": 1139.98}, \"item_count\": 2, \"message\": \"Cart has 2 items with a total of $1139.98\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"checkout\", )",
+      "after": "invoke_tool(\"checkout\", )",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"total\": 1139.98, \"status\": \"processing\", \"items_count\": 2, \"message\": \"Order order1 created successfully. Your payment of $1139.98 has been processed. Your order will be shipped via STD.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"cancel_order\", order_id='order1', reason='User requested cancellation')",
+      "after": "invoke_tool(\"cancel_order\", order_id='order1', reason='User requested cancellation')",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"status\": \"cancelled\", \"refunded\": true, \"message\": \"Order order1 has been cancelled and payment has been refunded.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

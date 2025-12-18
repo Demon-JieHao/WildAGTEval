@@ -1,0 +1,2139 @@
+[
+  {
+    "product_id": "prod1",
+    "name": "Smart USB Microphone",
+    "description": "Experience the latest in usb microphone technology with gaming, HD, fast-charging",
+    "price": 244.99,
+    "category": "electronics",
+    "stock": 81,
+    "rating": 4.7,
+    "images": [
+      "usb_microphone_1.jpg",
+      "usb_microphone_2.jpg",
+      "usb_microphone_3.jpg",
+      "usb_microphone_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod2",
+    "name": "Easy Air Purifier",
+    "description": "Flagship air purifier with easy-clean, energy-efficient, dishwasher-safe, stainless steel",
+    "price": 1179.99,
+    "category": "appliances",
+    "stock": 36,
+    "rating": 4.0,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg",
+      "air_purifier_3.jpg",
+      "air_purifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod3",
+    "name": "Eco Garage Door Opener Gen 2",
+    "description": "Advanced garage door opener with remote-control, wireless, automated",
+    "price": 99.99,
+    "category": "smart_home",
+    "stock": 79,
+    "rating": 4.4,
+    "images": [
+      "garage_door_opener_1.jpg",
+      "garage_door_opener_2.jpg",
+      "garage_door_opener_3.jpg",
+      "garage_door_opener_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod4",
+    "name": "Tech Soundbar Max",
+    "description": "Advanced soundbar with gaming, HD, portable, wireless for modern homes",
+    "price": 82.13,
+    "category": "electronics",
+    "stock": 54,
+    "rating": 4.4,
+    "images": [
+      "soundbar_1.jpg",
+      "soundbar_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod5",
+    "name": "Instant Coffee Maker",
+    "description": "Premium coffee maker featuring energy-efficient, programmable, stainless steel",
+    "price": 789.99,
+    "category": "appliances",
+    "stock": 74,
+    "rating": 4.6,
+    "images": [
+      "coffee_maker_1.jpg",
+      "coffee_maker_2.jpg",
+      "coffee_maker_3.jpg",
+      "coffee_maker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod6",
+    "name": "Quick Slow Cooker Max",
+    "description": "Advanced slow cooker with programmable, compact, easy-clean for modern homes",
+    "price": 1094.99,
+    "category": "appliances",
+    "stock": 25,
+    "rating": 4.3,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg",
+      "slow_cooker_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod7",
+    "name": "Hub Smart Thermostat",
+    "description": "Professional smart thermostat featuring wireless, energy-efficient, smart, WiFi-enabled",
+    "price": 104.99,
+    "category": "smart_home",
+    "stock": 127,
+    "rating": 4.2,
+    "images": [
+      "smart_thermostat_1.jpg",
+      "smart_thermostat_2.jpg",
+      "smart_thermostat_3.jpg",
+      "smart_thermostat_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod8",
+    "name": "Advanced Webcam Plus",
+    "description": "Revolutionary webcam featuring 4K, HD",
+    "price": 1569.99,
+    "category": "electronics",
+    "stock": 17,
+    "rating": 4.4,
+    "images": [
+      "webcam_1.jpg",
+      "webcam_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod9",
+    "name": "Health Sport Watch",
+    "description": "Experience the latest in sport watch technology with waterproof, health-monitoring, fitness-tracking",
+    "price": 96.54,
+    "category": "wearables",
+    "stock": 118,
+    "rating": 4.7,
+    "images": [
+      "sport_watch_1.jpg",
+      "sport_watch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod10",
+    "name": "Track Pulse Oximeter Max",
+    "description": "Revolutionary pulse oximeter featuring heart-rate, health-monitoring, lightweight, long-battery",
+    "price": 619.99,
+    "category": "wearables",
+    "stock": 48,
+    "rating": 4.7,
+    "images": [
+      "pulse_oximeter_1.jpg",
+      "pulse_oximeter_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod11",
+    "name": "Tech VR Headset",
+    "description": "High-quality vr headset featuring bluetooth, portable",
+    "price": 434.99,
+    "category": "electronics",
+    "stock": 65,
+    "rating": 4.2,
+    "images": [
+      "vr_headset_1.jpg",
+      "vr_headset_2.jpg",
+      "vr_headset_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod12",
+    "name": "Smart Wireless Headphones",
+    "description": "Versatile wireless headphones with portable, noise-cancelling",
+    "price": 204.99,
+    "category": "electronics",
+    "stock": 70,
+    "rating": 4.8,
+    "images": [
+      "wireless_headphones_1.jpg",
+      "wireless_headphones_2.jpg",
+      "wireless_headphones_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod13",
+    "name": "Max Smart TV",
+    "description": "Reliable smart tv featuring portable, fast-charging, bluetooth",
+    "price": 90.07,
+    "category": "electronics",
+    "stock": 24,
+    "rating": 4.0,
+    "images": [
+      "smart_tv_1.jpg",
+      "smart_tv_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod14",
+    "name": "Vital Wireless Earbuds",
+    "description": "Advanced wireless earbuds with GPS-enabled, heart-rate for modern homes",
+    "price": 379.99,
+    "category": "wearables",
+    "stock": 72,
+    "rating": 4.4,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod15",
+    "name": "Smart Smart Switch Plus",
+    "description": "Advanced smart switch with wireless, secure, WiFi-enabled, smart for modern homes",
+    "price": 65.71,
+    "category": "smart_home",
+    "stock": 33,
+    "rating": 4.1,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg",
+      "smart_switch_3.jpg",
+      "smart_switch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod16",
+    "name": "Smart Security Camera",
+    "description": "Flagship security camera featuring secure, WiFi-enabled",
+    "price": 449.99,
+    "category": "smart_home",
+    "stock": 189,
+    "rating": 4.5,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod17",
+    "name": "Smart Monitor",
+    "description": "Versatile monitor featuring bluetooth, wireless, fast-charging",
+    "price": 289.99,
+    "category": "electronics",
+    "stock": 83,
+    "rating": 4.7,
+    "images": [
+      "monitor_1.jpg",
+      "monitor_2.jpg",
+      "monitor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod18",
+    "name": "Smart USB Hub",
+    "description": "Revolutionary usb hub with HD, bluetooth, noise-cancelling, fast-charging",
+    "price": 879.99,
+    "category": "electronics",
+    "stock": 126,
+    "rating": 4.3,
+    "images": [
+      "usb_hub_1.jpg",
+      "usb_hub_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod19",
+    "name": "Chef Air Purifier Elite",
+    "description": "Experience the latest in air purifier technology with stainless steel, compact, energy-efficient",
+    "price": 174.99,
+    "category": "appliances",
+    "stock": 57,
+    "rating": 4.8,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg",
+      "air_purifier_3.jpg",
+      "air_purifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod20",
+    "name": "Pro Slow Cooker",
+    "description": "Experience the latest in slow cooker technology with multi-function, easy-clean, compact",
+    "price": 259.99,
+    "category": "appliances",
+    "stock": 61,
+    "rating": 4.6,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod21",
+    "name": "Smart Smart Outlet",
+    "description": "Experience the latest in smart outlet technology with remote-control, secure, energy-efficient, WiFi-enabled",
+    "price": 539.99,
+    "category": "smart_home",
+    "stock": 137,
+    "rating": 4.7,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg",
+      "smart_outlet_3.jpg",
+      "smart_outlet_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod22",
+    "name": "Elite Smart Watch",
+    "description": "Affordable smart watch featuring wireless, bluetooth, HD",
+    "price": 39.35,
+    "category": "electronics",
+    "stock": 99,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod23",
+    "name": "Home Night Light",
+    "description": "Affordable night light featuring wireless, automated",
+    "price": 75.3,
+    "category": "smart_home",
+    "stock": 188,
+    "rating": 4.5,
+    "images": [
+      "night_light_1.jpg",
+      "night_light_2.jpg",
+      "night_light_3.jpg",
+      "night_light_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod24",
+    "name": "Digital Bluetooth Speaker 2024",
+    "description": "Advanced bluetooth speaker with bluetooth, HD for modern homes",
+    "price": 279.99,
+    "category": "electronics",
+    "stock": 26,
+    "rating": 4.7,
+    "images": [
+      "bluetooth_speaker_1.jpg",
+      "bluetooth_speaker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod25",
+    "name": "Connect Flood Sensor",
+    "description": "Experience the latest in flood sensor technology with wireless, WiFi-enabled, energy-efficient",
+    "price": 159.99,
+    "category": "smart_home",
+    "stock": 104,
+    "rating": 3.9,
+    "images": [
+      "flood_sensor_1.jpg",
+      "flood_sensor_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod26",
+    "name": "Chef Dehumidifier Max",
+    "description": "Affordable dehumidifier with compact, easy-clean, dishwasher-safe, energy-efficient",
+    "price": 109.99,
+    "category": "appliances",
+    "stock": 72,
+    "rating": 4.8,
+    "images": [
+      "dehumidifier_1.jpg",
+      "dehumidifier_2.jpg",
+      "dehumidifier_3.jpg",
+      "dehumidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod27",
+    "name": "Home Security Camera",
+    "description": "Experience the latest in security camera technology with voice-controlled, smart",
+    "price": 114.99,
+    "category": "smart_home",
+    "stock": 174,
+    "rating": 4.1,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod28",
+    "name": "Nest Smart Outlet",
+    "description": "Advanced smart outlet with wireless, WiFi-enabled, voice-controlled",
+    "price": 214.99,
+    "category": "smart_home",
+    "stock": 50,
+    "rating": 4.7,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg",
+      "smart_outlet_3.jpg",
+      "smart_outlet_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod29",
+    "name": "Power Humidifier V2",
+    "description": "Advanced humidifier with stainless steel, compact, easy-clean for modern homes",
+    "price": 1129.99,
+    "category": "appliances",
+    "stock": 75,
+    "rating": 4.9,
+    "images": [
+      "humidifier_1.jpg",
+      "humidifier_2.jpg",
+      "humidifier_3.jpg",
+      "humidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod30",
+    "name": "Connect Smoke Detector",
+    "description": "Advanced smoke detector with WiFi-enabled, smart for modern homes",
+    "price": 244.99,
+    "category": "smart_home",
+    "stock": 120,
+    "rating": 4.7,
+    "images": [
+      "smoke_detector_1.jpg",
+      "smoke_detector_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod31",
+    "name": "Sync Wireless Earbuds",
+    "description": "Reliable wireless earbuds featuring waterproof, GPS-enabled",
+    "price": 86.71,
+    "category": "wearables",
+    "stock": 88,
+    "rating": 4.1,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg",
+      "wireless_earbuds_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod32",
+    "name": "Secure Air Quality Monitor",
+    "description": "High-quality air quality monitor featuring secure, voice-controlled",
+    "price": 204.99,
+    "category": "smart_home",
+    "stock": 141,
+    "rating": 4.6,
+    "images": [
+      "air_quality_monitor_1.jpg",
+      "air_quality_monitor_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod33",
+    "name": "Auto Motion Sensor",
+    "description": "Essential motion sensor featuring wireless, automated, smart",
+    "price": 75.45,
+    "category": "smart_home",
+    "stock": 191,
+    "rating": 4.6,
+    "images": [
+      "motion_sensor_1.jpg",
+      "motion_sensor_2.jpg",
+      "motion_sensor_3.jpg",
+      "motion_sensor_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod34",
+    "name": "Pulse Heart Rate Monitor Pro",
+    "description": "Experience the latest in heart rate monitor technology with lightweight, fitness-tracking",
+    "price": 67.59,
+    "category": "wearables",
+    "stock": 97,
+    "rating": 4.7,
+    "images": [
+      "heart_rate_monitor_1.jpg",
+      "heart_rate_monitor_2.jpg",
+      "heart_rate_monitor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod35",
+    "name": "Nest Security Camera",
+    "description": "Professional security camera featuring secure, smart, energy-efficient, voice-controlled",
+    "price": 93.01,
+    "category": "smart_home",
+    "stock": 152,
+    "rating": 4.4,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod36",
+    "name": "Prime Webcam V2",
+    "description": "Cutting-edge webcam with bluetooth, portable",
+    "price": 1264.99,
+    "category": "electronics",
+    "stock": 148,
+    "rating": 4.5,
+    "images": [
+      "webcam_1.jpg",
+      "webcam_2.jpg",
+      "webcam_3.jpg",
+      "webcam_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod37",
+    "name": "Connect Motion Sensor",
+    "description": "Essential motion sensor featuring wireless, secure",
+    "price": 33.56,
+    "category": "smart_home",
+    "stock": 35,
+    "rating": 3.8,
+    "images": [
+      "motion_sensor_1.jpg",
+      "motion_sensor_2.jpg",
+      "motion_sensor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod38",
+    "name": "Pro Router",
+    "description": "Experience the latest in router technology with portable, wireless, HD",
+    "price": 1579.99,
+    "category": "electronics",
+    "stock": 27,
+    "rating": 4.4,
+    "images": [
+      "router_1.jpg",
+      "router_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod39",
+    "name": "Max Drone V2",
+    "description": "High-quality drone with fast-charging, professional, 4K, noise-cancelling",
+    "price": 464.99,
+    "category": "electronics",
+    "stock": 65,
+    "rating": 4.2,
+    "images": [
+      "drone_1.jpg",
+      "drone_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod40",
+    "name": "Max Soundbar",
+    "description": "Premium soundbar with fast-charging, HD",
+    "price": 1504.99,
+    "category": "electronics",
+    "stock": 90,
+    "rating": 3.7,
+    "images": [
+      "soundbar_1.jpg",
+      "soundbar_2.jpg",
+      "soundbar_3.jpg",
+      "soundbar_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod41",
+    "name": "Vital Wireless Earbuds",
+    "description": "Reliable wireless earbuds with waterproof, fitness-tracking, GPS-enabled",
+    "price": 44.55,
+    "category": "wearables",
+    "stock": 73,
+    "rating": 3.6,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod42",
+    "name": "Health Step Counter",
+    "description": "High-quality step counter featuring waterproof, health-monitoring",
+    "price": 159.99,
+    "category": "wearables",
+    "stock": 101,
+    "rating": 3.8,
+    "images": [
+      "step_counter_1.jpg",
+      "step_counter_2.jpg",
+      "step_counter_3.jpg",
+      "step_counter_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod43",
+    "name": "Prime Mechanical Keyboard V2",
+    "description": "Advanced mechanical keyboard with gaming, professional for modern homes",
+    "price": 399.99,
+    "category": "electronics",
+    "stock": 137,
+    "rating": 4.6,
+    "images": [
+      "mechanical_keyboard_1.jpg",
+      "mechanical_keyboard_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod44",
+    "name": "Hub Garage Door Opener Elite",
+    "description": "Advanced garage door opener with energy-efficient, smart, secure for modern homes",
+    "price": 134.99,
+    "category": "smart_home",
+    "stock": 27,
+    "rating": 4.5,
+    "images": [
+      "garage_door_opener_1.jpg",
+      "garage_door_opener_2.jpg",
+      "garage_door_opener_3.jpg",
+      "garage_door_opener_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod45",
+    "name": "Advanced Gaming Mouse",
+    "description": "Experience the latest in gaming mouse technology with gaming, portable, bluetooth, professional",
+    "price": 274.99,
+    "category": "electronics",
+    "stock": 55,
+    "rating": 4.4,
+    "images": [
+      "gaming_mouse_1.jpg",
+      "gaming_mouse_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod46",
+    "name": "Elite Bluetooth Speaker",
+    "description": "Versatile bluetooth speaker featuring wireless, gaming, HD, noise-cancelling",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 36,
+    "rating": 4.5,
+    "images": [
+      "bluetooth_speaker_1.jpg",
+      "bluetooth_speaker_2.jpg",
+      "bluetooth_speaker_3.jpg",
+      "bluetooth_speaker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod47",
+    "name": "Nest Security Camera",
+    "description": "Experience the latest in security camera technology with automated, energy-efficient, remote-control, voice-controlled",
+    "price": 229.99,
+    "category": "smart_home",
+    "stock": 187,
+    "rating": 4.2,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg",
+      "security_camera_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod48",
+    "name": "Instant Space Heater",
+    "description": "Professional space heater featuring easy-clean, energy-efficient",
+    "price": 304.99,
+    "category": "appliances",
+    "stock": 10,
+    "rating": 4.4,
+    "images": [
+      "space_heater_1.jpg",
+      "space_heater_2.jpg",
+      "space_heater_3.jpg",
+      "space_heater_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod49",
+    "name": "Auto Smart Switch Max",
+    "description": "Experience the latest in smart switch technology with WiFi-enabled, voice-controlled",
+    "price": 60.6,
+    "category": "smart_home",
+    "stock": 100,
+    "rating": 4.0,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod50",
+    "name": "Quick Blender Pro",
+    "description": "Advanced blender featuring programmable, stainless steel, compact, multi-function",
+    "price": 499.99,
+    "category": "appliances",
+    "stock": 55,
+    "rating": 4.5,
+    "images": [
+      "blender_1.jpg",
+      "blender_2.jpg",
+      "blender_3.jpg",
+      "blender_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod51",
+    "name": "Quick Stand Mixer",
+    "description": "Experience the latest in stand mixer technology with multi-function, dishwasher-safe, easy-clean, stainless steel",
+    "price": 109.99,
+    "category": "appliances",
+    "stock": 42,
+    "rating": 4.4,
+    "images": [
+      "stand_mixer_1.jpg",
+      "stand_mixer_2.jpg",
+      "stand_mixer_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod52",
+    "name": "Nest Smart Outlet Plus",
+    "description": "Advanced smart outlet with WiFi-enabled, energy-efficient, smart for modern homes",
+    "price": 179.99,
+    "category": "smart_home",
+    "stock": 47,
+    "rating": 3.9,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod53",
+    "name": "Eco Security Camera Elite",
+    "description": "Advanced security camera with smart, wireless for modern homes",
+    "price": 149.99,
+    "category": "smart_home",
+    "stock": 40,
+    "rating": 3.7,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod54",
+    "name": "Active Smart Watch Gen 2",
+    "description": "Experience the latest in smart watch technology with fitness-tracking, lightweight, heart-rate, waterproof",
+    "price": 404.99,
+    "category": "wearables",
+    "stock": 51,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg",
+      "smart_watch_3.jpg",
+      "smart_watch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod55",
+    "name": "Instant Dishwasher",
+    "description": "Professional dishwasher featuring easy-clean, energy-efficient, compact",
+    "price": 274.99,
+    "category": "appliances",
+    "stock": 42,
+    "rating": 4.1,
+    "images": [
+      "dishwasher_1.jpg",
+      "dishwasher_2.jpg",
+      "dishwasher_3.jpg",
+      "dishwasher_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod56",
+    "name": "Digital Portable Charger",
+    "description": "Affordable portable charger featuring 4K, gaming, bluetooth, portable",
+    "price": 31.5,
+    "category": "electronics",
+    "stock": 28,
+    "rating": 4.5,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg",
+      "portable_charger_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod57",
+    "name": "Health Wireless Earbuds",
+    "description": "Experience the latest in wireless earbuds technology with heart-rate, fitness-tracking, GPS-enabled",
+    "price": 76.6,
+    "category": "wearables",
+    "stock": 118,
+    "rating": 4.7,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg",
+      "wireless_earbuds_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod58",
+    "name": "Home Smart Doorbell",
+    "description": "Experience the latest in smart doorbell technology with voice-controlled, wireless, secure, remote-control",
+    "price": 40.25,
+    "category": "smart_home",
+    "stock": 187,
+    "rating": 4.2,
+    "images": [
+      "smart_doorbell_1.jpg",
+      "smart_doorbell_2.jpg",
+      "smart_doorbell_3.jpg",
+      "smart_doorbell_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod59",
+    "name": "Pulse Sleep Tracker",
+    "description": "Essential sleep tracker with GPS-enabled, waterproof, fitness-tracking",
+    "price": 46.26,
+    "category": "wearables",
+    "stock": 54,
+    "rating": 3.8,
+    "images": [
+      "sleep_tracker_1.jpg",
+      "sleep_tracker_2.jpg",
+      "sleep_tracker_3.jpg",
+      "sleep_tracker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod60",
+    "name": "Hub Smoke Detector 2024",
+    "description": "High-quality smoke detector featuring voice-controlled, wireless, secure, remote-control",
+    "price": 199.99,
+    "category": "smart_home",
+    "stock": 170,
+    "rating": 4.6,
+    "images": [
+      "smoke_detector_1.jpg",
+      "smoke_detector_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod61",
+    "name": "Master Humidifier",
+    "description": "Advanced humidifier with multi-function, easy-clean, programmable, stainless steel for modern homes",
+    "price": 214.99,
+    "category": "appliances",
+    "stock": 46,
+    "rating": 4.0,
+    "images": [
+      "humidifier_1.jpg",
+      "humidifier_2.jpg",
+      "humidifier_3.jpg",
+      "humidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod62",
+    "name": "Quick Slow Cooker Pro",
+    "description": "Advanced slow cooker with programmable, energy-efficient, dishwasher-safe, easy-clean for modern homes",
+    "price": 774.99,
+    "category": "appliances",
+    "stock": 51,
+    "rating": 4.4,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod63",
+    "name": "Pro Smart Watch",
+    "description": "Practical smart watch featuring wireless, gaming, portable, bluetooth",
+    "price": 38.05,
+    "category": "electronics",
+    "stock": 146,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg",
+      "smart_watch_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod64",
+    "name": "Link Smart Thermostat",
+    "description": "High-quality smart thermostat featuring smart, remote-control, secure",
+    "price": 84.62,
+    "category": "smart_home",
+    "stock": 54,
+    "rating": 4.3,
+    "images": [
+      "smart_thermostat_1.jpg",
+      "smart_thermostat_2.jpg",
+      "smart_thermostat_3.jpg",
+      "smart_thermostat_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod65",
+    "name": "Prime E-Reader",
+    "description": "Versatile e-reader featuring fast-charging, professional, 4K",
+    "price": 309.99,
+    "category": "electronics",
+    "stock": 105,
+    "rating": 4.8,
+    "images": [
+      "e-reader_1.jpg",
+      "e-reader_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod66",
+    "name": "Master Fan Max",
+    "description": "Experience the latest in fan technology with programmable, multi-function, compact",
+    "price": 244.99,
+    "category": "appliances",
+    "stock": 10,
+    "rating": 3.8,
+    "images": [
+      "fan_1.jpg",
+      "fan_2.jpg",
+      "fan_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod67",
+    "name": "Advanced Portable Charger Pro",
+    "description": "Professional portable charger with fast-charging, 4K, portable",
+    "price": 379.99,
+    "category": "electronics",
+    "stock": 33,
+    "rating": 4.2,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg",
+      "portable_charger_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod68",
+    "name": "Pro Tablet",
+    "description": "Professional tablet with gaming, professional, fast-charging, portable",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 71,
+    "rating": 3.9,
+    "images": [
+      "tablet_1.jpg",
+      "tablet_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod69",
+    "name": "Quick Air Purifier Elite",
+    "description": "Advanced air purifier with dishwasher-safe, programmable, energy-efficient for modern homes",
+    "price": 214.99,
+    "category": "appliances",
+    "stock": 19,
+    "rating": 4.7,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod70",
+    "name": "Home Smart Mirror Elite",
+    "description": "Experience the latest in smart mirror technology with automated, WiFi-enabled",
+    "price": 189.99,
+    "category": "smart_home",
+    "stock": 89,
+    "rating": 4.8,
+    "images": [
+      "smart_mirror_1.jpg",
+      "smart_mirror_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod71",
+    "name": "Digital Portable Charger",
+    "description": "Advanced portable charger with HD, gaming for modern homes",
+    "price": 499.99,
+    "category": "electronics",
+    "stock": 54,
+    "rating": 4.3,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod72",
+    "name": "Link Smart Switch V2",
+    "description": "Versatile smart switch with WiFi-enabled, automated",
+    "price": 194.99,
+    "category": "smart_home",
+    "stock": 156,
+    "rating": 4.6,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg",
+      "smart_switch_3.jpg",
+      "smart_switch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod73",
+    "name": "Eco Temperature Sensor",
+    "description": "High-quality temperature sensor with wireless, voice-controlled, energy-efficient, remote-control",
+    "price": 139.99,
+    "category": "smart_home",
+    "stock": 79,
+    "rating": 4.5,
+    "images": [
+      "temperature_sensor_1.jpg",
+      "temperature_sensor_2.jpg",
+      "temperature_sensor_3.jpg",
+      "temperature_sensor_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod74",
+    "name": "Advanced Action Camera",
+    "description": "High-quality action camera featuring HD, professional, 4K",
+    "price": 344.99,
+    "category": "electronics",
+    "stock": 21,
+    "rating": 4.6,
+    "images": [
+      "action_camera_1.jpg",
+      "action_camera_2.jpg",
+      "action_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod75",
+    "name": "Elite Tablet",
+    "description": "High-quality tablet with noise-cancelling, wireless",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 100,
+    "rating": 4.7,
+    "images": [
+      "tablet_1.jpg",
+      "tablet_2.jpg",
+      "tablet_3.jpg",
+      "tablet_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod77",
+    "name": "FireStorm Silicone Phone Case",
+    "description": "Premium silicone phone case in vibrant red color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 89,
+    "rating": 4.5,
+    "images": [
+      "phone_case_firestorm_1.jpg",
+      "phone_case_firestorm_2.jpg",
+      "phone_case_firestorm_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod78",
+    "name": "Ocean Wave Silicone Phone Case",
+    "description": "Premium silicone phone case in deep blue color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 92,
+    "rating": 4.6,
+    "images": [
+      "phone_case_ocean_1.jpg",
+      "phone_case_ocean_2.jpg",
+      "phone_case_ocean_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod79",
+    "name": "Forest Guardian Phone Case",
+    "description": "Premium silicone phone case in natural green color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 76,
+    "rating": 4.4,
+    "images": [
+      "phone_case_forest_1.jpg",
+      "phone_case_forest_2.jpg",
+      "phone_case_forest_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod80",
+    "name": "Royal Crown Silicone Phone Case",
+    "description": "Premium silicone phone case in elegant purple color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 68,
+    "rating": 4.7,
+    "images": [
+      "phone_case_royal_1.jpg",
+      "phone_case_royal_2.jpg",
+      "phone_case_royal_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod81",
+    "name": "Sunset Glow Phone Case",
+    "description": "Premium silicone phone case in warm orange color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 85,
+    "rating": 4.3,
+    "images": [
+      "phone_case_sunset_1.jpg",
+      "phone_case_sunset_2.jpg",
+      "phone_case_sunset_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod82",
+    "name": "Cherry Blossom Phone Case",
+    "description": "Premium silicone phone case in soft pink color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 94,
+    "rating": 4.8,
+    "images": [
+      "phone_case_cherry_1.jpg",
+      "phone_case_cherry_2.jpg",
+      "phone_case_cherry_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod83",
+    "name": "Arctic Snow Silicone Phone Case",
+    "description": "Premium silicone phone case in pure white color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 103,
+    "rating": 4.5,
+    "images": [
+      "phone_case_arctic_1.jpg",
+      "phone_case_arctic_2.jpg",
+      "phone_case_arctic_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod84",
+    "name": "Midnight Shadow Phone Case",
+    "description": "Premium silicone phone case in classic black color with shock-absorbing, drop-protection, wireless charging compatible",
+    "price": 24.99,
+    "category": "accessories",
+    "stock": 127,
+    "rating": 4.6,
+    "images": [
+      "phone_case_midnight_1.jpg",
+      "phone_case_midnight_2.jpg",
+      "phone_case_midnight_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod85",
+    "name": "TechCorp Holographic Display",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Revolutionary holographic display with 3D projection and gesture control interface",
+    "price": 1299.99,
+    "category": "electronics",
+    "stock": 25,
+    "rating": 4.8,
+    "images": ["holographic_display_1.jpg", "holographic_display_2.jpg"]
+  },
+  {
+    "product_id": "prod86", 
+    "name": "TechCorp Biometric Scanner",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Advanced biometric scanner with retina scanning and voice recognition technology",
+    "price": 899.99,
+    "category": "security",
+    "stock": 15,
+    "rating": 4.7,
+    "images": ["biometric_scanner_1.jpg", "biometric_scanner_2.jpg"]
+  },
+  {
+    "product_id": "prod87",
+    "name": "TechCorp Gesture Controller",
+    "brand": "TechCorp", 
+    "description": "Made by TechCorp. Innovative gesture controller with air gesture detection and haptic feedback system",
+    "price": 399.99,
+    "category": "accessories",
+    "stock": 45,
+    "rating": 4.6,
+    "images": ["gesture_controller_1.jpg", "gesture_controller_2.jpg"]
+  },
+  {
+    "product_id": "prod88",
+    "name": "TechCorp Smart Mirror",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Interactive smart mirror with facial recognition and augmented reality overlay features",
+    "price": 799.99,
+    "category": "smart_home",
+    "stock": 20,
+    "rating": 4.5,
+    "images": ["smart_mirror_1.jpg", "smart_mirror_2.jpg"]
+  },
+  {
+    "product_id": "prod89",
+    "name": "TechCorp Sonic Cleaner",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Ultrasonic cleaner with multi-frequency waves and precision cleaning algorithms",
+    "price": 299.99,
+    "category": "appliances", 
+    "stock": 35,
+    "rating": 4.4,
+    "images": ["sonic_cleaner_1.jpg", "sonic_cleaner_2.jpg"]
+  },
+  {
+    "product_id": "prod90",
+    "name": "TechCorp Gravity Stabilizer",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Anti-gravity stabilizer with magnetic levitation and motion compensation technology",
+    "price": 1599.99,
+    "category": "industrial",
+    "stock": 8,
+    "rating": 4.9,
+    "images": ["gravity_stabilizer_1.jpg", "gravity_stabilizer_2.jpg"]
+  },
+  {
+    "product_id": "prod91",
+    "name": "TechCorp Plasma Purifier",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Plasma air purifier with ion generation and molecular filtration system",
+    "price": 599.99,
+    "category": "appliances",
+    "stock": 30,
+    "rating": 4.7,
+    "images": ["plasma_purifier_1.jpg", "plasma_purifier_2.jpg"]
+  },
+  {
+    "product_id": "prod92",
+    "name": "TechCorp Neural Interface",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Brain-computer neural interface with thought pattern recognition and neural signal processing",
+    "price": 2999.99,
+    "category": "medical",
+    "stock": 5,
+    "rating": 4.8,
+    "images": ["neural_interface_1.jpg", "neural_interface_2.jpg"]
+  },
+  {
+    "product_id": "prod93",
+    "name": "TechCorp Quantum Processor",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Quantum computing processor with superposition algorithms and entanglement calculations",
+    "price": 4999.99,
+    "category": "electronics",
+    "stock": 3,
+    "rating": 4.9,
+    "images": ["quantum_processor_1.jpg", "quantum_processor_2.jpg"]
+  },
+  {
+    "product_id": "prod94",
+    "name": "TechCorp Electromagnetic Shield",
+    "brand": "TechCorp",
+    "description": "Made by TechCorp. Electromagnetic field shield with radiation blocking and signal interference protection",
+    "price": 699.99,
+    "category": "security",
+    "stock": 12,
+    "rating": 4.6,
+    "images": ["em_shield_1.jpg", "em_shield_2.jpg"]
+  },
+  {
+    "product_id": "prod95",
+    "name": "SmartLiving Holographic Display",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Interactive holographic display with voice command integration and multi-user collaboration",
+    "price": 1399.99,
+    "category": "electronics",
+    "stock": 22,
+    "rating": 4.7,
+    "images": ["holographic_display_1.jpg", "holographic_display_2.jpg"]
+  },
+  {
+    "product_id": "prod96",
+    "name": "SmartLiving Biometric Scanner",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Multi-modal biometric scanner with DNA analysis and behavioral pattern recognition",
+    "price": 999.99,
+    "category": "security",
+    "stock": 18,
+    "rating": 4.6,
+    "images": ["biometric_scanner_1.jpg", "biometric_scanner_2.jpg"]
+  },
+  {
+    "product_id": "prod97",
+    "name": "SmartLiving Gesture Controller",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Motion-sensing gesture controller with predictive movement analysis and adaptive learning",
+    "price": 449.99,
+    "category": "accessories",
+    "stock": 38,
+    "rating": 4.5,
+    "images": ["gesture_controller_1.jpg", "gesture_controller_2.jpg"]
+  },
+  {
+    "product_id": "prod98",
+    "name": "SmartLiving Smart Mirror",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Health-monitoring smart mirror with posture analysis and wellness coaching features",
+    "price": 849.99,
+    "category": "smart_home",
+    "stock": 25,
+    "rating": 4.4,
+    "images": ["smart_mirror_1.jpg", "smart_mirror_2.jpg"]
+  },
+  {
+    "product_id": "prod99",
+    "name": "SmartLiving Sonic Cleaner",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Adaptive sonic cleaner with material recognition and automated cleaning cycle optimization",
+    "price": 349.99,
+    "category": "appliances",
+    "stock": 42,
+    "rating": 4.3,
+    "images": ["sonic_cleaner_1.jpg", "sonic_cleaner_2.jpg"]
+  },
+  {
+    "product_id": "prod100",
+    "name": "SmartLiving Gravity Stabilizer",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Precision gravity stabilizer with vibration dampening and micro-adjustment capabilities",
+    "price": 1699.99,
+    "category": "industrial",
+    "stock": 6,
+    "rating": 4.8,
+    "images": ["gravity_stabilizer_1.jpg", "gravity_stabilizer_2.jpg"]
+  },
+  {
+    "product_id": "prod101",
+    "name": "SmartLiving Plasma Purifier",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Smart plasma purifier with allergen detection and personalized air quality optimization",
+    "price": 649.99,
+    "category": "appliances",
+    "stock": 35,
+    "rating": 4.6,
+    "images": ["plasma_purifier_1.jpg", "plasma_purifier_2.jpg"]
+  },
+  {
+    "product_id": "prod102",
+    "name": "SmartLiving Neural Interface",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Wellness neural interface with meditation guidance and stress level monitoring",
+    "price": 3299.99,
+    "category": "medical",
+    "stock": 7,
+    "rating": 4.7,
+    "images": ["neural_interface_1.jpg", "neural_interface_2.jpg"]
+  },
+  {
+    "product_id": "prod103",
+    "name": "SmartLiving Quantum Processor",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Home quantum processor with energy optimization and smart device coordination",
+    "price": 5299.99,
+    "category": "electronics",
+    "stock": 4,
+    "rating": 4.8,
+    "images": ["quantum_processor_1.jpg", "quantum_processor_2.jpg"]
+  },
+  {
+    "product_id": "prod104",
+    "name": "SmartLiving Electromagnetic Shield",
+    "brand": "SmartLiving",
+    "description": "Made by SmartLiving. Personal electromagnetic shield with health monitoring and exposure level tracking",
+    "price": 749.99,
+    "category": "security",
+    "stock": 15,
+    "rating": 4.5,
+    "images": ["em_shield_1.jpg", "em_shield_2.jpg"]
+  },
+  {
+    "product_id": "prod105",
+    "name": "EcoTech Holographic Display",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Eco-friendly holographic display with solar power integration and biodegradable components",
+    "price": 1199.99,
+    "category": "electronics",
+    "stock": 30,
+    "rating": 4.6,
+    "images": ["holographic_display_1.jpg", "holographic_display_2.jpg"]
+  },
+  {
+    "product_id": "prod106",
+    "name": "EcoTech Biometric Scanner",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Sustainable biometric scanner with renewable energy operation and carbon-neutral manufacturing",
+    "price": 799.99,
+    "category": "security",
+    "stock": 20,
+    "rating": 4.4,
+    "images": ["biometric_scanner_1.jpg", "biometric_scanner_2.jpg"]
+  },
+  {
+    "product_id": "prod107",
+    "name": "EcoTech Gesture Controller",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Bamboo-based gesture controller with kinetic energy harvesting and zero-waste design",
+    "price": 329.99,
+    "category": "accessories",
+    "stock": 50,
+    "rating": 4.3,
+    "images": ["gesture_controller_1.jpg", "gesture_controller_2.jpg"]
+  },
+  {
+    "product_id": "prod108",
+    "name": "EcoTech Smart Mirror",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Recycled-material smart mirror with water conservation monitoring and eco-lifestyle coaching",
+    "price": 699.99,
+    "category": "smart_home",
+    "stock": 28,
+    "rating": 4.2,
+    "images": ["smart_mirror_1.jpg", "smart_mirror_2.jpg"]
+  },
+  {
+    "product_id": "prod109",
+    "name": "EcoTech Sonic Cleaner",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Chemical-free sonic cleaner with plant-based cleaning solutions and compostable filters",
+    "price": 269.99,
+    "category": "appliances",
+    "stock": 45,
+    "rating": 4.1,
+    "images": ["sonic_cleaner_1.jpg", "sonic_cleaner_2.jpg"]
+  },
+  {
+    "product_id": "prod110",
+    "name": "EcoTech Gravity Stabilizer",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Wind-powered gravity stabilizer with natural materials and minimal environmental impact",
+    "price": 1499.99,
+    "category": "industrial",
+    "stock": 10,
+    "rating": 4.7,
+    "images": ["gravity_stabilizer_1.jpg", "gravity_stabilizer_2.jpg"]
+  },
+  {
+    "product_id": "prod111",
+    "name": "EcoTech Plasma Purifier",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Bio-plasma purifier with living plant integration and natural air filtration enhancement",
+    "price": 549.99,
+    "category": "appliances",
+    "stock": 38,
+    "rating": 4.5,
+    "images": ["plasma_purifier_1.jpg", "plasma_purifier_2.jpg"]
+  },
+  {
+    "product_id": "prod112",
+    "name": "EcoTech Neural Interface",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Nature-inspired neural interface with forest-sound therapy and natural stress reduction",
+    "price": 2799.99,
+    "category": "medical",
+    "stock": 8,
+    "rating": 4.6,
+    "images": ["neural_interface_1.jpg", "neural_interface_2.jpg"]
+  },
+  {
+    "product_id": "prod113",
+    "name": "EcoTech Quantum Processor",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Carbon-negative quantum processor with algae-based cooling and renewable energy optimization",
+    "price": 4799.99,
+    "category": "electronics",
+    "stock": 5,
+    "rating": 4.7,
+    "images": ["quantum_processor_1.jpg", "quantum_processor_2.jpg"]
+  },
+  {
+    "product_id": "prod114",
+    "name": "EcoTech Electromagnetic Shield",
+    "brand": "EcoTech",
+    "description": "Made by EcoTech. Organic electromagnetic shield with plant-fiber construction and natural EMF absorption",
+    "price": 649.99,
+    "category": "security",
+    "stock": 18,
+    "rating": 4.4,
+    "images": ["em_shield_1.jpg", "em_shield_2.jpg"]
+  },
+  {
+    "product_id": "prod115",
+    "name": "FutureDev Holographic Display",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Time-bending holographic display with temporal projection and reality distortion capabilities",
+    "price": 9999.99,
+    "category": "electronics",
+    "stock": 2,
+    "rating": 5.0,
+    "images": ["holographic_display_1.jpg", "holographic_display_2.jpg"]
+  },
+  {
+    "product_id": "prod116",
+    "name": "FutureDev Biometric Scanner",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Quantum biometric scanner with parallel universe identity verification and dimension-hopping authentication",
+    "price": 7999.99,
+    "category": "security",
+    "stock": 3,
+    "rating": 4.9,
+    "images": ["biometric_scanner_1.jpg", "biometric_scanner_2.jpg"]
+  },
+  {
+    "product_id": "prod117",
+    "name": "FutureDev Gesture Controller",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Telekinetic gesture controller with mind-reading capabilities and psychic energy amplification",
+    "price": 5999.99,
+    "category": "accessories",
+    "stock": 4,
+    "rating": 4.8,
+    "images": ["gesture_controller_1.jpg", "gesture_controller_2.jpg"]
+  },
+  {
+    "product_id": "prod118",
+    "name": "FutureDev Smart Mirror",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Interdimensional smart mirror with future-self consultation and timeline manipulation features",
+    "price": 6499.99,
+    "category": "smart_home",
+    "stock": 3,
+    "rating": 4.7,
+    "images": ["smart_mirror_1.jpg", "smart_mirror_2.jpg"]
+  },
+  {
+    "product_id": "prod119",
+    "name": "FutureDev Sonic Cleaner",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Molecular sonic cleaner with atom rearrangement and quantum-level purification technology",
+    "price": 4999.99,
+    "category": "appliances",
+    "stock": 5,
+    "rating": 4.6,
+    "images": ["sonic_cleaner_1.jpg", "sonic_cleaner_2.jpg"]
+  },
+  {
+    "product_id": "prod120",
+    "name": "FutureDev Gravity Stabilizer",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Multiverse gravity stabilizer with black hole simulation and spacetime curvature control",
+    "price": 19999.99,
+    "category": "industrial",
+    "stock": 1,
+    "rating": 5.0,
+    "images": ["gravity_stabilizer_1.jpg", "gravity_stabilizer_2.jpg"]
+  },
+  {
+    "product_id": "prod121",
+    "name": "FutureDev Plasma Purifier",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Stellar plasma purifier with miniature star creation and cosmic energy harnessing",
+    "price": 8999.99,
+    "category": "appliances",
+    "stock": 2,
+    "rating": 4.9,
+    "images": ["plasma_purifier_1.jpg", "plasma_purifier_2.jpg"]
+  },
+  {
+    "product_id": "prod122",
+    "name": "FutureDev Neural Interface",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Transcendent neural interface with consciousness uploading and digital immortality features",
+    "price": 99999.99,
+    "category": "medical",
+    "stock": 1,
+    "rating": 5.0,
+    "images": ["neural_interface_1.jpg", "neural_interface_2.jpg"]
+  },
+  {
+    "product_id": "prod123",
+    "name": "FutureDev Quantum Processor",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Omnipotent quantum processor with universe simulation and reality computation capabilities",
+    "price": 199999.99,
+    "category": "electronics",
+    "stock": 1,
+    "rating": 5.0,
+    "images": ["quantum_processor_1.jpg", "quantum_processor_2.jpg"]
+  },
+  {
+    "product_id": "prod124",
+    "name": "FutureDev Electromagnetic Shield",
+    "brand": "FutureDev",
+    "description": "Made by FutureDev. Omnidirectional electromagnetic shield with force field generation and energy weapon deflection",
+    "price": 12999.99,
+    "category": "security",
+    "stock": 2,
+    "rating": 4.8,
+    "images": ["em_shield_1.jpg", "em_shield_2.jpg"]
+  },
+
+  {
+    "product_id": "prod125",
+    "name": "Garlic",
+    "description": "Fresh garlic cloves perfect for cooking and seasoning",
+    "price": 3.14,
+    "category": "food_ingredients",
+    "stock": 242,
+    "rating": 4.5,
+    "images": [
+      "garlic_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod126",
+    "name": "Onions",
+    "description": "Fresh yellow onions essential for cooking",
+    "price": 5.5,
+    "category": "food_ingredients",
+    "stock": 184,
+    "rating": 4.7,
+    "images": [
+      "onions_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod127",
+    "name": "Butter",
+    "description": "Premium unsalted butter for cooking and baking",
+    "price": 5.08,
+    "category": "food_ingredients",
+    "stock": 167,
+    "rating": 4.6,
+    "images": [
+      "butter_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod128",
+    "name": "Herbs",
+    "description": "Mixed dried herbs blend for seasoning",
+    "price": 7.43,
+    "category": "food_ingredients",
+    "stock": 194,
+    "rating": 4.3,
+    "images": [
+      "herbs_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod129",
+    "name": "Pepper",
+    "description": "Freshly ground black pepper for seasoning",
+    "price": 3.87,
+    "category": "food_ingredients",
+    "stock": 160,
+    "rating": 4.5,
+    "images": [
+      "pepper_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod130",
+    "name": "Lemon",
+    "description": "Fresh lemons for cooking, baking, and beverages",
+    "price": 2.12,
+    "category": "food_ingredients",
+    "stock": 170,
+    "rating": 4.4,
+    "images": [
+      "lemon_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod131",
+    "name": "Vinegar",
+    "description": "White vinegar ideal for cooking and dressings",
+    "price": 8.87,
+    "category": "food_ingredients",
+    "stock": 180,
+    "rating": 4.7,
+    "images": [
+      "vinegar_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod132",
+    "name": "Wine",
+    "description": "Cooking wine perfect for marinades and sauces",
+    "price": 6.73,
+    "category": "food_ingredients",
+    "stock": 187,
+    "rating": 4.5,
+    "images": [
+      "wine_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod133",
+    "name": "Salt",
+    "description": "Sea salt for cooking and seasoning",
+    "price": 4.03,
+    "category": "food_ingredients",
+    "stock": 150,
+    "rating": 4.7,
+    "images": [
+      "salt_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod134",
+    "name": "Olive Oil",
+    "description": "Extra virgin olive oil for cooking and dressings",
+    "price": 7.71,
+    "category": "food_ingredients",
+    "stock": 133,
+    "rating": 4.8,
+    "images": [
+      "olive_oil_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod135",
+    "name": "Tomatoes",
+    "description": "Fresh ripe tomatoes perfect for cooking",
+    "price": 3.45,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.8,
+    "images": [
+      "tomatoes_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod136",
+    "name": "Ginger",
+    "description": "Fresh ginger root for cooking and seasoning",
+    "price": 5.45,
+    "category": "food_ingredients",
+    "stock": 125,
+    "rating": 4.7,
+    "images": [
+      "ginger_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod137",
+    "name": "Lime",
+    "description": "Fresh limes for cooking, drinks, and garnishing",
+    "price": 5.38,
+    "category": "food_ingredients",
+    "stock": 105,
+    "rating": 4.2,
+    "images": [
+      "lime_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod138",
+    "name": "Fish Sauce",
+    "description": "Traditional fish sauce for Asian cooking",
+    "price": 5.92,
+    "category": "food_ingredients",
+    "stock": 143,
+    "rating": 4.3,
+    "images": [
+      "fish_sauce_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod139",
+    "name": "Pasta",
+    "description": "High-quality dried pasta for Italian dishes",
+    "price": 3.28,
+    "category": "food_ingredients",
+    "stock": 109,
+    "rating": 4.5,
+    "images": [
+      "pasta_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod140",
+    "name": "Yogurt",
+    "description": "Plain Greek yogurt for cooking and eating",
+    "price": 6.17,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.4,
+    "images": [
+      "yogurt_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod141",
+    "name": "Chili Sauce",
+    "description": "Spicy chili sauce for adding heat to dishes",
+    "price": 7.82,
+    "category": "food_ingredients",
+    "stock": 120,
+    "rating": 4.9,
+    "images": [
+      "chili_sauce_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod142",
+    "name": "Cilantro",
+    "description": "Fresh cilantro leaves for cooking and garnishing",
+    "price": 4.31,
+    "category": "food_ingredients",
+    "stock": 142,
+    "rating": 4.6,
+    "images": [
+      "cilantro_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod143",
+    "name": "Milk",
+    "description": "Whole milk for cooking, baking, and drinking",
+    "price": 8.97,
+    "category": "food_ingredients",
+    "stock": 136,
+    "rating": 4.4,
+    "images": [
+      "milk_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod144",
+    "name": "Mozzarella",
+    "description": "Fresh mozzarella cheese for cooking",
+    "price": 7.49,
+    "category": "food_ingredients",
+    "stock": 103,
+    "rating": 4.9,
+    "images": [
+      "mozzarella_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod145",
+    "name": "Oregano",
+    "description": "Dried oregano herb for Mediterranean cooking",
+    "price": 6.25,
+    "category": "food_ingredients",
+    "stock": 120,
+    "rating": 4.6,
+    "images": [
+      "oregano_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod146",
+    "name": "Potatoes",
+    "description": "Fresh potatoes perfect for cooking",
+    "price": 2.57,
+    "category": "food_ingredients",
+    "stock": 121,
+    "rating": 4.7,
+    "images": [
+      "potatoes_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod147",
+    "name": "Bacon",
+    "description": "Premium sliced bacon for breakfast and cooking",
+    "price": 7.01,
+    "category": "food_ingredients",
+    "stock": 123,
+    "rating": 4.5,
+    "images": [
+      "bacon_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod148",
+    "name": "Basil",
+    "description": "Fresh basil leaves for Italian cooking",
+    "price": 3.6,
+    "category": "food_ingredients",
+    "stock": 101,
+    "rating": 4.7,
+    "images": [
+      "basil_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod149",
+    "name": "Chicken",
+    "description": "Fresh chicken breast for healthy cooking",
+    "price": 9.06,
+    "category": "food_ingredients",
+    "stock": 110,
+    "rating": 4.9,
+    "images": [
+      "chicken_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod150",
+    "name": "Cumin",
+    "description": "Ground cumin spice for seasoning",
+    "price": 7.56,
+    "category": "food_ingredients",
+    "stock": 132,
+    "rating": 4.5,
+    "images": [
+      "cumin_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod151",
+    "name": "Rice",
+    "description": "Long grain white rice for cooking",
+    "price": 4.43,
+    "category": "food_ingredients",
+    "stock": 124,
+    "rating": 4.8,
+    "images": [
+      "rice_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod152",
+    "name": "Scallions",
+    "description": "Fresh green onions for cooking and garnishing",
+    "price": 8.23,
+    "category": "food_ingredients",
+    "stock": 125,
+    "rating": 4.9,
+    "images": [
+      "scallions_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod153",
+    "name": "Avocado",
+    "description": "Fresh ripe avocados for healthy eating",
+    "price": 5.29,
+    "category": "food_ingredients",
+    "stock": 131,
+    "rating": 4.4,
+    "images": [
+      "avocado_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod154",
+    "name": "Beans",
+    "description": "Premium canned beans for cooking",
+    "price": 3.25,
+    "category": "food_ingredients",
+    "stock": 135,
+    "rating": 4.8,
+    "images": [
+      "beans_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod155",
+    "name": "Cucumber",
+    "description": "Fresh cucumbers for salads and cooking",
+    "price": 3.08,
+    "category": "food_ingredients",
+    "stock": 106,
+    "rating": 4.3,
+    "images": [
+      "cucumber_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod156",
+    "name": "Garam Masala",
+    "description": "Authentic Indian spice blend for curry dishes",
+    "price": 7.85,
+    "category": "food_ingredients",
+    "stock": 135,
+    "rating": 4.4,
+    "images": [
+      "garam_masala_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod157",
+    "name": "Sesame Oil",
+    "description": "Pure sesame oil for Asian cooking",
+    "price": 6.11,
+    "category": "food_ingredients",
+    "stock": 130,
+    "rating": 4.4,
+    "images": [
+      "sesame_oil_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod158",
+    "name": "Turmeric",
+    "description": "Ground turmeric spice for cooking and health",
+    "price": 3.19,
+    "category": "food_ingredients",
+    "stock": 97,
+    "rating": 4.9,
+    "images": [
+      "turmeric_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod159",
+    "name": "Beef",
+    "description": "Fresh ground beef for cooking",
+    "price": 12.43,
+    "category": "food_ingredients",
+    "stock": 121,
+    "rating": 4.4,
+    "images": [
+      "beef_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod160",
+    "name": "Chili Powder",
+    "description": "Ground chili powder for spicy dishes",
+    "price": 4.91,
+    "category": "food_ingredients",
+    "stock": 117,
+    "rating": 4.8,
+    "images": [
+      "chili_powder_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod161",
+    "name": "Eggs",
+    "description": "Fresh large eggs for cooking and baking",
+    "price": 4.19,
+    "category": "food_ingredients",
+    "stock": 89,
+    "rating": 4.9,
+    "images": [
+      "eggs_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod162",
+    "name": "Feta Cheese",
+    "description": "Authentic feta cheese for Greek dishes",
+    "price": 6.56,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.6,
+    "images": [
+      "feta_cheese_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod163",
+    "name": "Flour",
+    "description": "All-purpose flour for baking and cooking",
+    "price": 2.53,
+    "category": "food_ingredients",
+    "stock": 125,
+    "rating": 4.5,
+    "images": [
+      "flour_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod164",
+    "name": "Olives",
+    "description": "Mixed olives for Mediterranean cooking",
+    "price": 6.19,
+    "category": "food_ingredients",
+    "stock": 92,
+    "rating": 4.4,
+    "images": [
+      "olives_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod165",
+    "name": "Parmesan Cheese",
+    "description": "Aged Parmesan cheese for Italian dishes",
+    "price": 7.73,
+    "category": "food_ingredients",
+    "stock": 105,
+    "rating": 4.8,
+    "images": [
+      "parmesan_cheese_1.jpg"
+    ]
+  },
+  {
+    "product_id": "prod166",
+    "name": "Soy Sauce",
+    "description": "Traditional soy sauce for Asian cooking",
+    "price": 6.6,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.8,
+    "images": [
+      "soy_sauce_1.jpg"
+    ]
+  },
+    {
+    "product_id": "prod167",
+    "name": "cheddar cheese",
+    "description": "cheddar cheese",
+    "price": 6.6,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.8,
+    "images": [
+      "cheddar_cheese_1.jpg"
+    ]
+  },
+    {
+    "product_id": "prod168",
+    "name": "canola oil",
+    "description": "canola oil",
+    "price": 6.6,
+    "category": "food_ingredients",
+    "stock": 107,
+    "rating": 4.8,
+    "images": [
+      "canola_oil_1.jpg"
+    ]
+  }
+]

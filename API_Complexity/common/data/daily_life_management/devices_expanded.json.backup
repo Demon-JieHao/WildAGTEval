@@ -1,0 +1,2387 @@
+[
+  {
+    "endpoint": "1",
+    "name": "Living Room TV",
+    "alternate_names": [
+      "Television",
+      "Smart TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "shuffle"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "volume": 85,
+      "channel": 812
+    }
+  },
+  {
+    "endpoint": "2",
+    "name": "Living Room Speaker",
+    "alternate_names": [
+      "Sound System",
+      "Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "volume": 45
+    }
+  },
+  {
+    "endpoint": "3",
+    "name": "Kitchen Blinds",
+    "alternate_names": [
+      "Kitchen Shades",
+      "Window Blinds"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs"
+    ],
+    "home_id": "home1",
+    "state": {
+      "position": 52
+    }
+  },
+  {
+    "endpoint": "4",
+    "name": "Kitchen Speaker",
+    "alternate_names": [
+      "Kitchen Audio",
+      "Smart Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "shuffle"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "volume": 65
+    }
+  },
+  {
+    "endpoint": "5",
+    "name": "Kitchen Light",
+    "alternate_names": [
+      "Kitchen Ceiling Light",
+      "Main Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 46
+    }
+  },
+  {
+    "endpoint": "6",
+    "name": "Dining Room Light",
+    "alternate_names": [
+      "Dining Light",
+      "Chandelier"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 51,
+      "color": "#FFFFFF"
+    }
+  },
+  {
+    "endpoint": "7",
+    "name": "Dining Room Blinds",
+    "alternate_names": [
+      "Dining Room Shades"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs"
+    ],
+    "home_id": "home1",
+    "state": {
+      "position": 59
+    }
+  },
+  {
+    "endpoint": "8",
+    "name": "Bedroom Speaker",
+    "alternate_names": [
+      "Bedroom Audio",
+      "Bedside Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "volume": 10
+    }
+  },
+  {
+    "endpoint": "9",
+    "name": "Master Bedroom TV",
+    "alternate_names": [
+      "Bedroom TV",
+      "Master TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "volume": 41,
+      "channel": 454
+    }
+  },
+  {
+    "endpoint": "10",
+    "name": "Master Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp",
+      "Reading Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 27,
+      "color": "#00FF00"
+    }
+  },
+  {
+    "endpoint": "11",
+    "name": "Master Bedroom Light",
+    "alternate_names": [
+      "Master Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "brightness": 28
+    }
+  },
+  {
+    "endpoint": "12",
+    "name": "Guest Bedroom Light",
+    "alternate_names": [
+      "Guest Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "guest_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 89
+    }
+  },
+  {
+    "endpoint": "13",
+    "name": "Guest Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "guest_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "brightness": 37
+    }
+  },
+  {
+    "endpoint": "14",
+    "name": "Bathroom Light",
+    "alternate_names": [
+      "Bathroom Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 58
+    }
+  },
+  {
+    "endpoint": "15",
+    "name": "Master Bathroom Light",
+    "alternate_names": [
+      "Master Bath Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 89,
+      "color": "#0000FF"
+    }
+  },
+  {
+    "endpoint": "16",
+    "name": "Office Light",
+    "alternate_names": [
+      "Office Light",
+      "Desk Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "office",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "on",
+      "brightness": 73
+    }
+  },
+  {
+    "endpoint": "17",
+    "name": "Garage Light",
+    "alternate_names": [
+      "Garage Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 57
+    }
+  },
+  {
+    "endpoint": "18",
+    "name": "Garage Door Opener",
+    "alternate_names": [
+      "Garage Door"
+    ],
+    "endpoint_categories": [
+      "LOCK"
+    ],
+    "supported_apis": [
+      "lock_lock",
+      "lock_unlock",
+      "lock_status"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "security",
+      "whole_home"
+    ],
+    "home_id": "home1",
+    "state": {
+      "locked": false
+    }
+  },
+  {
+    "endpoint": "19",
+    "name": "Basement Light",
+    "alternate_names": [
+      "Basement Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "basement",
+      "basement",
+      "all_lights"
+    ],
+    "home_id": "home1",
+    "state": {
+      "power": "off",
+      "brightness": 64,
+      "color": "#FF0000"
+    }
+  },
+  {
+    "endpoint": "20",
+    "name": "Basement Climate Control",
+    "alternate_names": [
+      "Basement Thermostat"
+    ],
+    "endpoint_categories": [
+      "THERMOSTAT"
+    ],
+    "supported_apis": [
+      "temperature_set",
+      "mode_set"
+    ],
+    "groups": [
+      "basement",
+      "basement",
+      "climate",
+      "whole_home"
+    ],
+    "home_id": "home1",
+    "state": {
+      "temperature": 26,
+      "mode": "auto"
+    }
+  },
+  {
+    "endpoint": "21",
+    "name": "Thermostat",
+    "alternate_names": [
+      "Temperature Control",
+      "Climate Control"
+    ],
+    "endpoint_categories": [
+      "THERMOSTAT"
+    ],
+    "supported_apis": [
+      "temperature_set",
+      "mode_set"
+    ],
+    "groups": [
+      "climate",
+      "whole_home"
+    ],
+    "home_id": "home1",
+    "state": {
+      "temperature": 23,
+      "mode": "heat"
+    }
+  },
+  {
+    "endpoint": "1",
+    "name": "Living Room TV",
+    "alternate_names": [
+      "Television",
+      "Smart TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "volume": 35,
+      "channel": 922
+    }
+  },
+  {
+    "endpoint": "2",
+    "name": "Living Room Speaker",
+    "alternate_names": [
+      "Sound System",
+      "Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "shuffle",
+      "set_playback_speed",
+      "rewind"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "volume": 6
+    }
+  },
+  {
+    "endpoint": "3",
+    "name": "Kitchen Blinds",
+    "alternate_names": [
+      "Kitchen Shades",
+      "Window Blinds"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs"
+    ],
+    "home_id": "home2",
+    "state": {
+      "position": 35
+    }
+  },
+  {
+    "endpoint": "4",
+    "name": "Kitchen Speaker",
+    "alternate_names": [
+      "Kitchen Audio",
+      "Smart Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "fast_forward",
+      "set_playback_speed"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "volume": 90
+    }
+  },
+  {
+    "endpoint": "5",
+    "name": "Kitchen Light",
+    "alternate_names": [
+      "Kitchen Ceiling Light",
+      "Main Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "brightness": 65,
+      "color": "#0000FF"
+    }
+  },
+  {
+    "endpoint": "6",
+    "name": "Dining Room Light",
+    "alternate_names": [
+      "Dining Light",
+      "Chandelier"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "brightness": 91
+    }
+  },
+  {
+    "endpoint": "7",
+    "name": "Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp",
+      "Reading Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "brightness": 93
+    }
+  },
+  {
+    "endpoint": "8",
+    "name": "Master Bedroom Light",
+    "alternate_names": [
+      "Master Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "brightness": 57,
+      "color": "#0000FF"
+    }
+  },
+  {
+    "endpoint": "9",
+    "name": "Guest Bedroom Light",
+    "alternate_names": [
+      "Guest Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "guest_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "brightness": 10
+    }
+  },
+  {
+    "endpoint": "10",
+    "name": "Guest Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "guest_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "brightness": 67
+    }
+  },
+  {
+    "endpoint": "11",
+    "name": "Bathroom Light",
+    "alternate_names": [
+      "Bathroom Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bathroom",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "off",
+      "brightness": 16
+    }
+  },
+  {
+    "endpoint": "12",
+    "name": "Master Bathroom Light",
+    "alternate_names": [
+      "Master Bath Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "brightness": 47
+    }
+  },
+  {
+    "endpoint": "13",
+    "name": "Office Speaker",
+    "alternate_names": [
+      "Office Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "office",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "volume": 11
+    }
+  },
+  {
+    "endpoint": "14",
+    "name": "Garage Light",
+    "alternate_names": [
+      "Garage Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on",
+      "brightness": 76
+    }
+  },
+  {
+    "endpoint": "15",
+    "name": "Basement Climate Control",
+    "alternate_names": [
+      "Basement Thermostat"
+    ],
+    "endpoint_categories": [
+      "THERMOSTAT"
+    ],
+    "supported_apis": [
+      "temperature_set",
+      "mode_set"
+    ],
+    "groups": [
+      "basement",
+      "basement",
+      "climate",
+      "whole_home"
+    ],
+    "home_id": "home2",
+    "state": {
+      "temperature": 24,
+      "mode": "off"
+    }
+  },
+  {
+    "endpoint": "16",
+    "name": "Front Door Lock",
+    "alternate_names": [
+      "Door Lock",
+      "Front Lock"
+    ],
+    "endpoint_categories": [
+      "LOCK"
+    ],
+    "supported_apis": [
+      "lock_lock",
+      "lock_unlock",
+      "lock_status"
+    ],
+    "groups": [
+      "security",
+      "doors"
+    ],
+    "home_id": "home2",
+    "state": {
+      "locked": true
+    }
+  },
+  {
+    "endpoint": "17",
+    "name": "Smart Phone",
+    "alternate_names": [
+      "Mobile Phone",
+      "Phone"
+    ],
+    "endpoint_categories": [
+      "PHONE",
+      "COMMUNICATION_DEVICE"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "make_call",
+      "send_message"
+    ],
+    "groups": [
+      "mobile_devices",
+      "personal_devices"
+    ],
+    "home_id": "home2",
+    "state": {
+      "power": "on"
+    },
+    "capabilities": [
+      "microphone",
+      "speaker",
+      "video"
+    ]
+  },
+  {
+    "endpoint": "1",
+    "name": "Living Room Speaker",
+    "alternate_names": [
+      "Sound System",
+      "Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind",
+      "fast_forward",
+      "set_playback_speed",
+      "shuffle"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "volume": 9
+    }
+  },
+  {
+    "endpoint": "2",
+    "name": "Living Room TV",
+    "alternate_names": [
+      "Television",
+      "Smart TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "shuffle"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "volume": 5,
+      "channel": 574
+    }
+  },
+  {
+    "endpoint": "3",
+    "name": "Living Room Light",
+    "alternate_names": [
+      "Main Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "brightness": 31
+    }
+  },
+  {
+    "endpoint": "4",
+    "name": "Kitchen Speaker",
+    "alternate_names": [
+      "Kitchen Audio",
+      "Smart Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "volume": 35
+    }
+  },
+  {
+    "endpoint": "5",
+    "name": "Kitchen Blinds",
+    "alternate_names": [
+      "Kitchen Shades",
+      "Window Blinds"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs"
+    ],
+    "home_id": "home3",
+    "state": {
+      "position": 24
+    }
+  },
+  {
+    "endpoint": "6",
+    "name": "Dining Room Light",
+    "alternate_names": [
+      "Dining Light",
+      "Chandelier"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "brightness": 38,
+      "color": "#00FF00"
+    }
+  },
+  {
+    "endpoint": "7",
+    "name": "Bedroom Speaker",
+    "alternate_names": [
+      "Bedroom Audio",
+      "Bedside Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "volume": 27
+    }
+  },
+  {
+    "endpoint": "8",
+    "name": "Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp",
+      "Reading Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "brightness": 77
+    }
+  },
+  {
+    "endpoint": "9",
+    "name": "Master Bedroom Light",
+    "alternate_names": [
+      "Master Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "brightness": 52
+    }
+  },
+  {
+    "endpoint": "10",
+    "name": "Master Bedroom TV",
+    "alternate_names": [
+      "Bedroom TV",
+      "Master TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "shuffle"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "volume": 59,
+      "channel": 778
+    }
+  },
+  {
+    "endpoint": "11",
+    "name": "Bathroom Light",
+    "alternate_names": [
+      "Bathroom Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "brightness": 11,
+      "color": "#0000FF"
+    }
+  },
+  {
+    "endpoint": "12",
+    "name": "Office Speaker",
+    "alternate_names": [
+      "Office Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind",
+      "shuffle"
+    ],
+    "groups": [
+      "office",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "volume": 14
+    }
+  },
+  {
+    "endpoint": "13",
+    "name": "Office Light",
+    "alternate_names": [
+      "Office Light",
+      "Desk Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "office",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "on",
+      "brightness": 80
+    }
+  },
+  {
+    "endpoint": "14",
+    "name": "Garage Door Opener",
+    "alternate_names": [
+      "Garage Door"
+    ],
+    "endpoint_categories": [
+      "LOCK"
+    ],
+    "supported_apis": [
+      "lock_lock",
+      "lock_unlock",
+      "lock_status"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "security",
+      "whole_home"
+    ],
+    "home_id": "home3",
+    "state": {
+      "locked": false
+    }
+  },
+  {
+    "endpoint": "15",
+    "name": "Garage Light",
+    "alternate_names": [
+      "Garage Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off",
+      "brightness": 99
+    }
+  },
+  {
+    "endpoint": "16",
+    "name": "Thermostat",
+    "alternate_names": [
+      "Temperature Control",
+      "Climate Control"
+    ],
+    "endpoint_categories": [
+      "THERMOSTAT"
+    ],
+    "supported_apis": [
+      "temperature_set",
+      "mode_set"
+    ],
+    "groups": [
+      "climate",
+      "whole_home"
+    ],
+    "home_id": "home3",
+    "state": {
+      "temperature": 26,
+      "mode": "heat"
+    }
+  },
+  {
+    "endpoint": "17",
+    "name": "Smart Phone",
+    "alternate_names": [
+      "Mobile Phone",
+      "Phone"
+    ],
+    "endpoint_categories": [
+      "PHONE",
+      "COMMUNICATION_DEVICE"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "make_call",
+      "send_message"
+    ],
+    "groups": [
+      "mobile_devices",
+      "personal_devices"
+    ],
+    "home_id": "home3",
+    "state": {
+      "power": "off"
+    },
+    "capabilities": [
+      "microphone",
+      "speaker",
+      "video"
+    ]
+  },
+  {
+    "endpoint": "18",
+    "name": "Front Door Lock",
+    "alternate_names": [
+      "Door Lock",
+      "Front Lock"
+    ],
+    "endpoint_categories": [
+      "LOCK"
+    ],
+    "supported_apis": [
+      "lock_lock",
+      "lock_unlock",
+      "lock_status"
+    ],
+    "groups": [
+      "security",
+      "doors"
+    ],
+    "home_id": "home3",
+    "state": {
+      "locked": true
+    }
+  },
+  {
+    "endpoint": "1",
+    "name": "Living Room Speaker",
+    "alternate_names": [
+      "Sound System",
+      "Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind",
+      "set_playback_speed",
+      "fast_forward"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "off",
+      "volume": 74
+    }
+  },
+  {
+    "endpoint": "2",
+    "name": "Living Room TV",
+    "alternate_names": [
+      "Television",
+      "Smart TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "on",
+      "volume": 72,
+      "channel": 506
+    }
+  },
+  {
+    "endpoint": "3",
+    "name": "Kitchen Light",
+    "alternate_names": [
+      "Kitchen Ceiling Light",
+      "Main Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "off",
+      "brightness": 43,
+      "color": "#FFFF00"
+    }
+  },
+  {
+    "endpoint": "4",
+    "name": "Kitchen Speaker",
+    "alternate_names": [
+      "Kitchen Audio",
+      "Smart Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "off",
+      "volume": 59
+    }
+  },
+  {
+    "endpoint": "5",
+    "name": "Dining Room Blinds",
+    "alternate_names": [
+      "Dining Room Shades"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs"
+    ],
+    "home_id": "home4",
+    "state": {
+      "position": 21
+    }
+  },
+  {
+    "endpoint": "6",
+    "name": "Dining Room Light",
+    "alternate_names": [
+      "Dining Light",
+      "Chandelier"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "off",
+      "brightness": 56
+    }
+  },
+  {
+    "endpoint": "7",
+    "name": "Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp",
+      "Reading Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "on",
+      "brightness": 25
+    }
+  },
+  {
+    "endpoint": "8",
+    "name": "Bathroom Light",
+    "alternate_names": [
+      "Bathroom Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "off",
+      "brightness": 32
+    }
+  },
+  {
+    "endpoint": "9",
+    "name": "Office Light",
+    "alternate_names": [
+      "Office Light",
+      "Desk Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "office",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "on",
+      "brightness": 77
+    }
+  },
+  {
+    "endpoint": "10",
+    "name": "Office Speaker",
+    "alternate_names": [
+      "Office Audio"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "office",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "on",
+      "volume": 80
+    }
+  },
+  {
+    "endpoint": "11",
+    "name": "Security Camera",
+    "alternate_names": [
+      "Front Camera",
+      "Outdoor Camera"
+    ],
+    "endpoint_categories": [
+      "SECURITY_CAMERA"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "record_start",
+      "record_stop"
+    ],
+    "groups": [
+      "security"
+    ],
+    "home_id": "home4",
+    "state": {
+      "power": "on",
+      "recording": true
+    }
+  },
+  {
+    "endpoint": "1",
+    "name": "Living Room TV",
+    "alternate_names": [
+      "Television",
+      "Smart TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind",
+      "shuffle",
+      "fast_forward"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "volume": 78,
+      "channel": 44
+    }
+  },
+  {
+    "endpoint": "2",
+    "name": "Living Room Light",
+    "alternate_names": [
+      "Main Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "living_room",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "on",
+      "brightness": 44
+    }
+  },
+  {
+    "endpoint": "3",
+    "name": "Kitchen Speaker",
+    "alternate_names": [
+      "Kitchen Audio",
+      "Smart Speaker"
+    ],
+    "endpoint_categories": [
+      "SPEAKER",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous",
+      "rewind",
+      "fast_forward",
+      "shuffle"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "entertainment"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "volume": 54
+    }
+  },
+  {
+    "endpoint": "4",
+    "name": "Kitchen Blinds",
+    "alternate_names": [
+      "Kitchen Shades",
+      "Window Blinds"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs"
+    ],
+    "home_id": "home5",
+    "state": {
+      "position": 79
+    }
+  },
+  {
+    "endpoint": "5",
+    "name": "Kitchen Light",
+    "alternate_names": [
+      "Kitchen Ceiling Light",
+      "Main Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "kitchen",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "on",
+      "brightness": 96,
+      "color": "#FF0000"
+    }
+  },
+  {
+    "endpoint": "6",
+    "name": "Dining Room Blinds",
+    "alternate_names": [
+      "Dining Room Shades"
+    ],
+    "endpoint_categories": [
+      "BLINDS"
+    ],
+    "supported_apis": [
+      "open_open",
+      "open_close",
+      "open_set_position"
+    ],
+    "groups": [
+      "dining_room",
+      "downstairs"
+    ],
+    "home_id": "home5",
+    "state": {
+      "position": 79
+    }
+  },
+  {
+    "endpoint": "7",
+    "name": "Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp",
+      "Reading Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 99
+    }
+  },
+  {
+    "endpoint": "8",
+    "name": "Master Bedroom Light",
+    "alternate_names": [
+      "Master Light",
+      "Ceiling Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 57,
+      "color": "#00FF00"
+    }
+  },
+  {
+    "endpoint": "9",
+    "name": "Master Bedroom TV",
+    "alternate_names": [
+      "Bedroom TV",
+      "Master TV"
+    ],
+    "endpoint_categories": [
+      "TV",
+      "MEDIA_PLAYER"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "channel_change",
+      "volume_adjust",
+      "play",
+      "pause",
+      "resume",
+      "stop",
+      "next",
+      "previous"
+    ],
+    "groups": [
+      "master_bedroom",
+      "upstairs",
+      "entertainment"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "on",
+      "volume": 71,
+      "channel": 756
+    }
+  },
+  {
+    "endpoint": "10",
+    "name": "Guest Bedroom Lamp",
+    "alternate_names": [
+      "Bedside Lamp"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "guest_bedroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 82,
+      "color": "#FFFF00"
+    }
+  },
+  {
+    "endpoint": "11",
+    "name": "Bathroom Light",
+    "alternate_names": [
+      "Bathroom Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "bathroom",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 29
+    }
+  },
+  {
+    "endpoint": "12",
+    "name": "Master Bathroom Light",
+    "alternate_names": [
+      "Master Bath Light",
+      "Vanity Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "master_bathroom",
+      "upstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 84,
+      "color": "#FFFF00"
+    }
+  },
+  {
+    "endpoint": "13",
+    "name": "Office Light",
+    "alternate_names": [
+      "Office Light",
+      "Desk Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust",
+      "color_set"
+    ],
+    "groups": [
+      "office",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 51,
+      "color": "#FFFF00"
+    }
+  },
+  {
+    "endpoint": "14",
+    "name": "Garage Light",
+    "alternate_names": [
+      "Garage Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "garage",
+      "downstairs",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "on",
+      "brightness": 55
+    }
+  },
+  {
+    "endpoint": "15",
+    "name": "Basement Light",
+    "alternate_names": [
+      "Basement Light"
+    ],
+    "endpoint_categories": [
+      "LIGHT"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "brightness_adjust"
+    ],
+    "groups": [
+      "basement",
+      "basement",
+      "all_lights"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "off",
+      "brightness": 29
+    }
+  },
+  {
+    "endpoint": "16",
+    "name": "Smart Phone",
+    "alternate_names": [
+      "Mobile Phone",
+      "Phone"
+    ],
+    "endpoint_categories": [
+      "PHONE",
+      "COMMUNICATION_DEVICE"
+    ],
+    "supported_apis": [
+      "power_on",
+      "power_off",
+      "make_call",
+      "send_message"
+    ],
+    "groups": [
+      "mobile_devices",
+      "personal_devices"
+    ],
+    "home_id": "home5",
+    "state": {
+      "power": "on"
+    },
+    "capabilities": [
+      "microphone",
+      "speaker",
+      "video"
+    ]
+  },
+  {
+    "endpoint": "17",
+    "name": "Thermostat",
+    "alternate_names": [
+      "Temperature Control",
+      "Climate Control"
+    ],
+    "endpoint_categories": [
+      "THERMOSTAT"
+    ],
+    "supported_apis": [
+      "temperature_set",
+      "mode_set"
+    ],
+    "groups": [
+      "climate",
+      "whole_home"
+    ],
+    "home_id": "home5",
+    "state": {
+      "temperature": 24,
+      "mode": "auto"
+    }
+  }
+]

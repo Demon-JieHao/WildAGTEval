@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user3_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user3_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"orders\": [{\"order_id\": \"PO0073\", \"created_at\": \"2025-06-08T03:53:25.711691Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"DHL\"}, {\"order_id\": \"PO0012\", \"created_at\": \"2025-06-05T18:05:25.710120Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"Amazon Logistics\"}, {\"order_id\": \"ON0006\", \"created_at\": \"2025-06-02T21:17:25.709945Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"FedEx\"}, {\"order_id\": \"PO0038\", \"created_at\": \"2025-06-02T04:48:25.710822Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"FedEx\"}, {\"order_id\": \"ORD0015\", \"created_at\": \"2025-05-30T00:33:25.710197Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"Amazon Logistics\"}, {\"order_id\": \"PO0060\", \"created_at\": \"2025-05-21T19:45:25.711347Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0056\", \"created_at\": \"2025-05-18T00:25:25.711250Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"FedEx\"}], \"message\": \"Found 7 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='PO0012')",
+      "after": "invoke_tool(\"get_order_details\", order_id='PO0012')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"PO0012\", \"user_id\": \"user3\", \"items\": [{\"product_id\": \"prod15\", \"name\": \"Smart Smart Switch Plus\", \"quantity\": 1, \"price\": 65.71, \"subtotal\": 65.71}, {\"product_id\": \"prod11\", \"name\": \"Tech VR Headset\", \"quantity\": 1, \"price\": 434.99, \"subtotal\": 434.99}], \"totals\": {\"subtotal\": 500.7, \"tax\": 59.37, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 560.07}, \"payment\": {\"method_id\": \"pm1\", \"method_type\": \"credit_card\", \"last4\": \"9741\", \"amount\": 560.07, \"currency\": \"USD\", \"transaction_id\": \"tx659150\", \"status\": \"paid\", \"paid_at\": \"2025-06-05T18:38:25.710120Z\"}, \"created_at\": \"2025-06-05T18:05:25.710120Z\", \"notes\": \"Rush delivery requested\"}, \"message\": \"Retrieved details for order PO0012\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='PO0012')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-0012')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-0012\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod11', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod11', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod11\", \"name\": \"Tech VR Headset\", \"quantity\": 1, \"price\": 434.99}, \"cart_total\": 434.99, \"message\": \"Added 1 x 'Tech VR Headset' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

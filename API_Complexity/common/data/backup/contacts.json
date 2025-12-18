@@ -1,0 +1,616 @@
+[
+  {
+    "contact_id": "contact1",
+    "user_id": "user9",
+    "name": "David Parker",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "503-614-4574"
+      }
+    ],
+    "email": "david60@protonmail.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact2",
+    "user_id": "user8",
+    "name": "Sarah Clark",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "404-685-5545"
+      },
+      {
+        "type": "home",
+        "number": "213-327-5991"
+      }
+    ],
+    "email": "sclark@protonmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device10",
+      "device24",
+      "device29"
+    ]
+  },
+  {
+    "contact_id": "contact3",
+    "user_id": "user2",
+    "name": "Frank Diaz",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "206-988-3504"
+      }
+    ],
+    "email": "frank.diaz@aol.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact4",
+    "user_id": "user2",
+    "name": "Steven Green",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "502-336-7784"
+      },
+      {
+        "type": "mobile",
+        "number": "504-537-8469"
+      }
+    ],
+    "email": "sgreen@live.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact5",
+    "user_id": "user3",
+    "name": "Gregory Brown",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "904-211-4481"
+      }
+    ],
+    "email": "gregory.brown@aol.com",
+    "is_favorite": false,
+    "devices": [
+      "device49"
+    ]
+  },
+  {
+    "contact_id": "contact6",
+    "user_id": "user5",
+    "name": "Lisa Morales",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "615-238-1741"
+      },
+      {
+        "type": "home",
+        "number": "713-330-5304"
+      },
+      {
+        "type": "mobile",
+        "number": "312-770-5350"
+      }
+    ],
+    "email": "lisa_morales@protonmail.com",
+    "is_favorite": true,
+    "devices": []
+  },
+  {
+    "contact_id": "contact7",
+    "user_id": "user2",
+    "name": "Maria Hall",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "713-544-7105"
+      },
+      {
+        "type": "home",
+        "number": "502-675-8863"
+      }
+    ],
+    "email": "maria_hall@hotmail.com",
+    "is_favorite": true,
+    "devices": []
+  },
+  {
+    "contact_id": "contact8",
+    "user_id": "user6",
+    "name": "John Hill",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "601-805-8234"
+      },
+      {
+        "type": "home",
+        "number": "919-647-9323"
+      }
+    ],
+    "email": "john_hill@hotmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device9",
+      "device47"
+    ]
+  },
+  {
+    "contact_id": "contact9",
+    "user_id": "user10",
+    "name": "Sarah Evans",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "901-293-3282"
+      }
+    ],
+    "email": "sevans@outlook.com",
+    "is_favorite": false,
+    "devices": [
+      "device38"
+    ]
+  },
+  {
+    "contact_id": "contact10",
+    "user_id": "user9",
+    "name": "John Brown",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "919-408-1620"
+      }
+    ],
+    "email": "jbrown@email.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact11",
+    "user_id": "user1",
+    "name": "Ashley Scott",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "816-461-8624"
+      }
+    ],
+    "email": "ascott@aol.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact12",
+    "user_id": "user10",
+    "name": "Emma Harris",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "214-698-4652"
+      }
+    ],
+    "email": "eharris@aol.com",
+    "is_favorite": true,
+    "devices": []
+  },
+  {
+    "contact_id": "contact13",
+    "user_id": "user4",
+    "name": "Carol Ramirez",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "216-714-9168"
+      }
+    ],
+    "email": "carol54@aol.com",
+    "is_favorite": false,
+    "devices": [
+      "device23"
+    ]
+  },
+  {
+    "contact_id": "contact14",
+    "user_id": "user7",
+    "name": "Lisa Williams",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "904-928-7484"
+      },
+      {
+        "type": "mobile",
+        "number": "415-989-1785"
+      }
+    ],
+    "email": "lisa_williams@msn.com",
+    "is_favorite": false,
+    "devices": [
+      "device2",
+      "device43"
+    ]
+  },
+  {
+    "contact_id": "contact15",
+    "user_id": "user2",
+    "name": "Jeffrey Hall",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "414-601-4432"
+      }
+    ],
+    "email": "jeffrey36@outlook.com",
+    "is_favorite": true,
+    "devices": [
+      "device8"
+    ]
+  },
+  {
+    "contact_id": "contact16",
+    "user_id": "user10",
+    "name": "David Morris",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "312-314-4736"
+      }
+    ],
+    "email": "david19@live.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact17",
+    "user_id": "user6",
+    "name": "Steven Gomez",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "414-652-3213"
+      }
+    ],
+    "email": "steven57@protonmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device33"
+    ]
+  },
+  {
+    "contact_id": "contact18",
+    "user_id": "user10",
+    "name": "Jeffrey Johnson",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "414-271-4778"
+      },
+      {
+        "type": "work",
+        "number": "713-759-6516"
+      },
+      {
+        "type": "mobile",
+        "number": "216-650-2491"
+      }
+    ],
+    "email": "jeffreyjohnson@outlook.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact19",
+    "user_id": "user2",
+    "name": "Elizabeth Wright",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "412-264-1818"
+      }
+    ],
+    "email": "elizabeth13@protonmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device39",
+      "device32"
+    ]
+  },
+  {
+    "contact_id": "contact20",
+    "user_id": "user5",
+    "name": "Jessica Carter",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "415-786-3264"
+      },
+      {
+        "type": "work",
+        "number": "713-756-1183"
+      }
+    ],
+    "email": "jcarter@protonmail.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact21",
+    "user_id": "user5",
+    "name": "Sarah Jackson",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "215-217-2685"
+      }
+    ],
+    "email": "sarah61@aol.com",
+    "is_favorite": false,
+    "devices": [
+      "device17"
+    ]
+  },
+  {
+    "contact_id": "contact22",
+    "user_id": "user2",
+    "name": "Helen Gomez",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "907-256-9368"
+      },
+      {
+        "type": "mobile",
+        "number": "602-452-9562"
+      },
+      {
+        "type": "work",
+        "number": "904-469-2465"
+      }
+    ],
+    "email": "hgomez@icloud.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact23",
+    "user_id": "user5",
+    "name": "Ashley Hernandez",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "214-457-5425"
+      },
+      {
+        "type": "home",
+        "number": "713-717-6568"
+      }
+    ],
+    "email": "ashley_hernandez@icloud.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact24",
+    "user_id": "user2",
+    "name": "Amanda Wright",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "214-740-6210"
+      }
+    ],
+    "email": "amanda_wright@protonmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device4"
+    ]
+  },
+  {
+    "contact_id": "contact25",
+    "user_id": "user5",
+    "name": "Jeffrey Parker",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "704-748-4588"
+      },
+      {
+        "type": "mobile",
+        "number": "415-601-9536"
+      }
+    ],
+    "email": "jeffrey14@hotmail.com",
+    "is_favorite": false,
+    "devices": [
+      "device16",
+      "device9"
+    ]
+  },
+  {
+    "contact_id": "contact26",
+    "user_id": "user5",
+    "name": "Sarah Gomez",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "901-488-4963"
+      }
+    ],
+    "email": "sarah64@icloud.com",
+    "is_favorite": false,
+    "devices": [
+      "device22"
+    ]
+  },
+  {
+    "contact_id": "contact27",
+    "user_id": "user7",
+    "name": "Daniel Gonzalez",
+    "phone_numbers": [
+      {
+        "type": "work",
+        "number": "412-923-1555"
+      },
+      {
+        "type": "mobile",
+        "number": "305-717-2335"
+      }
+    ],
+    "email": "dgonzalez@protonmail.com",
+    "is_favorite": true,
+    "devices": [
+      "device18"
+    ]
+  },
+  {
+    "contact_id": "contact28",
+    "user_id": "user1",
+    "name": "Nancy Gonzalez",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "601-447-4467"
+      }
+    ],
+    "email": "nancy.gonzalez@live.com",
+    "is_favorite": false,
+    "devices": [
+      "device11"
+    ]
+  },
+  {
+    "contact_id": "contact29",
+    "user_id": "user8",
+    "name": "Michelle Perez",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "212-789-6615"
+      }
+    ],
+    "email": "michelle23@aol.com",
+    "is_favorite": false,
+    "devices": []
+  },
+  {
+    "contact_id": "contact30",
+    "user_id": "user2",
+    "name": "Stephen Morales",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "206-870-2752"
+      }
+    ],
+    "email": "stephen59@live.com",
+    "is_favorite": true,
+    "devices": [
+      "device13",
+      "device16",
+      "device45"
+    ]
+  },
+  {
+    "contact_id": "contact31",
+    "user_id": "user1",
+    "name": "Ryan Reyes",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "901-550-1173"
+      },
+      {
+        "type": "work",
+        "number": "412-448-9775"
+      }
+    ],
+    "email": "ryan.reyes@outlook.com",
+    "is_favorite": false,
+    "devices": [
+      "device29",
+      "device44"
+    ]
+  },
+  {
+    "contact_id": "contact32",
+    "user_id": "user7",
+    "name": "Deborah Ramirez",
+    "phone_numbers": [
+      {
+        "type": "home",
+        "number": "713-968-1737"
+      }
+    ],
+    "email": "deborah_ramirez@outlook.com",
+    "is_favorite": true,
+    "devices": [
+      "device13"
+    ]
+  },
+  {
+    "contact_id": "contact33",
+    "user_id": "user7",
+    "name": "Jason King",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "216-962-3483"
+      },
+      {
+        "type": "work",
+        "number": "414-527-1455"
+      }
+    ],
+    "email": "jking@yahoo.com",
+    "is_favorite": false,
+    "devices": [
+      "device16",
+      "device17",
+      "device28"
+    ]
+  },
+  {
+    "contact_id": "contact34",
+    "user_id": "user3",
+    "name": "Nancy Collins",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "314-863-1141"
+      }
+    ],
+    "email": "nancy.collins@outlook.com",
+    "is_favorite": false,
+    "devices": [
+      "device28",
+      "device15",
+      "device16"
+    ]
+  },
+  {
+    "contact_id": "contact35",
+    "user_id": "user8",
+    "name": "Lisa Baker",
+    "phone_numbers": [
+      {
+        "type": "mobile",
+        "number": "904-322-5267"
+      }
+    ],
+    "email": "lisa58@email.com",
+    "is_favorite": false,
+    "devices": [
+      "device45",
+      "device2"
+    ]
+  }
+]

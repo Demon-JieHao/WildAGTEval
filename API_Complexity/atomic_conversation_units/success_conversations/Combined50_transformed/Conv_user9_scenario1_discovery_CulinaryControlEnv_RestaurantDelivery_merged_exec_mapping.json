@@ -1,0 +1,99 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user9_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user9_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 13,
+  "successful_transforms": 13,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Italian', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Italian', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 6, \"cuisines\": [\"Italian\"], \"results\": [{\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"]}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"]}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 6 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe24')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe24')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"description\": \"A delicious italian dish that's perfect for medium cooks.\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"cooking_time\": 40, \"servings\": 7, \"ingredients\": [{\"name\": \"garlic\", \"quantity\": \"4 cloves\"}, {\"name\": \"pasta\", \"quantity\": \"1 cup\"}, {\"name\": \"basil\", \"quantity\": \"1 tbsp\"}, {\"name\": \"tomatoes\", \"quantity\": \"6\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"lemon\", \"quantity\": \"1 tsp\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"onions\", \"quantity\": \"3 small\"}, {\"name\": \"herbs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Cook until golden brown and cooked through.\", \"Add seasonings and adjust to taste.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 450, \"protein\": 20, \"carbs\": 55, \"fat\": 11}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"reviews_count\": 452, \"image_url\": \"https://example.com/images/fettuccine_bolognese.jpg\", \"tags\": [\"vegetarian\", \"italian\", \"dessert\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Fettuccine Bolognese - A delicious italian dish that's perfect for medium cooks.... (19 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe12')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe12')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"description\": \"A delicious italian dish that's perfect for easy cooks.\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"cooking_time\": 21, \"servings\": 6, \"ingredients\": [{\"name\": \"onions\", \"quantity\": \"1 medium\", \"notes\": \"chopped\"}, {\"name\": \"pasta\", \"quantity\": \"1 tbsp\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\"}, {\"name\": \"olive oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"herbs\", \"quantity\": \"2 tbsp\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Add seasonings and adjust to taste.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 437, \"protein\": 25, \"carbs\": 53, \"fat\": 13}, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.3, \"reviews_count\": 54, \"image_url\": \"https://example.com/images/chicken_parmigiana.jpg\", \"tags\": [\"vegetarian\", \"healthy\", \"vegan\", \"breakfast\", \"italian\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chicken Parmigiana - A delicious italian dish that's perfect for easy cooks.... (24 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe21')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe21')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"description\": \"A delicious italian dish that's perfect for medium cooks.\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"cooking_time\": 45, \"servings\": 4, \"ingredients\": [{\"name\": \"pasta\", \"quantity\": \"1 tsp\"}, {\"name\": \"mozzarella\", \"quantity\": \"2 tbsp\"}, {\"name\": \"oregano\", \"quantity\": \"2 tsp\"}, {\"name\": \"olive oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\"}, {\"name\": \"canola oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"onions\", \"quantity\": \"3 large\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cook until golden brown and cooked through.\", \"Add seasonings and adjust to taste.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 424, \"protein\": 20, \"carbs\": 48, \"fat\": 15}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.1, \"reviews_count\": 141, \"image_url\": \"https://example.com/images/rigatoni_aglio_e_olio.jpg\", \"tags\": [\"vegetarian\", \"family-friendly\", \"italian\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Rigatoni Aglio e Olio - A delicious italian dish that's perfect for medium cooks.... (25 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe13')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe13')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"description\": \"A delicious italian dish that's perfect for medium cooks.\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"cooking_time\": 18, \"servings\": 7, \"ingredients\": [{\"name\": \"oregano\", \"quantity\": \"1 tbsp\"}, {\"name\": \"mozzarella\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"3 large\"}, {\"name\": \"olive oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\", \"notes\": \"crushed\"}, {\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\", \"notes\": \"fresh\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Cook until golden brown and cooked through.\", \"Add seasonings and adjust to taste.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 444, \"protein\": 26, \"carbs\": 57, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.0, \"reviews_count\": 321, \"image_url\": \"https://example.com/images/prosciutto_pizza.jpg\", \"tags\": [\"vegetarian\", \"party-food\", \"italian\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Prosciutto Pizza - A delicious italian dish that's perfect for medium cooks.... (43 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe24')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe24')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Fettuccine Bolognese' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe24\", \"recipe_name\": \"Fettuccine Bolognese\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe12')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe12')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Chicken Parmigiana' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe12\", \"recipe_name\": \"Chicken Parmigiana\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe21')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe21')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Rigatoni Aglio e Olio' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe21\", \"recipe_name\": \"Rigatoni Aglio e Olio\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe13')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe13')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Prosciutto Pizza' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe13\", \"recipe_name\": \"Prosciutto Pizza\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Italian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Italian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Italian\"], \"results\": [{\"restaurant_id\": \"rest24\", \"name\": \"Roma Restaurant\", \"location\": \"4666 Maple Ave, Los Angeles, CA 79956\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest9\", \"name\": \"Casa Italiana\", \"location\": \"2756 Franklin St, Miami, FL 28539\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest15\", \"name\": \"Villa Romano\", \"location\": \"5998 Elm St, Houston, TX 11156\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest25\", \"name\": \"La Trattoria\", \"location\": \"5734 Elm St, Houston, TX 24211\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest6\", \"name\": \"Amore Cucina\", \"location\": \"8041 Broadway, Dallas, TX 42021\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$\", \"rating\": 4.3, \"delivery_available\": true, \"menu_item_count\": 9}], \"message\": \"Found 5 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest24')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest24')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Roma Restaurant\", \"restaurant_id\": \"rest24\", \"restaurant_name\": \"Roma Restaurant\", \"description\": \"Elegant italian cuisine in an upscale atmosphere\", \"price_range\": \"$$$$\", \"rating\": 4.6, \"cuisine_types\": [\"Italian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Calamari Fritti\", \"description\": \"Crispy fried squid with marinara sauce\", \"price\": 13.69, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Bruschetta\", \"description\": \"Toasted bread with tomatoes and basil\", \"price\": 9.58, \"category\": \"Appetizers\", \"dietary_info\": [\"vegan\"], \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Caprese Salad\", \"description\": \"Fresh mozzarella, tomatoes, and basil\", \"price\": 10.74, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"description\": \"Selection of cured meats and cheeses\", \"price\": 15.16, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Chicken Parmigiana\", \"description\": \"Breaded chicken breast with marinara\", \"price\": 20.52, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Spaghetti Carbonara\", \"description\": \"Classic pasta with pancetta and egg\", \"price\": 19.93, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Margherita Pizza\", \"description\": \"Classic pizza with tomato and mozzarella\", \"price\": 15.49, \"category\": \"Main Course\"}, {\"item_id\": \"item8\", \"name\": \"Osso Buco\", \"description\": \"Braised veal shanks with risotto\", \"price\": 30.82, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Lasagna\", \"description\": \"Layered pasta with meat sauce and cheese\", \"price\": 19.34, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest24', items=[{'item_id': 'item5', 'quantity': 1}], delivery_address={'street': '4094 Oak Ave', 'city': 'Chicago', 'state': 'IL', 'zip': '60687'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest24', items=[{'item_id': 'item5', 'quantity': 1}], delivery_address={'street': '4094 Oak Ave', 'city': 'Chicago', 'state': 'IL', 'zip': '60687'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"order_time\": \"2025-07-30T18:26:14Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 20.52, \"tax\": 1.8, \"delivery_fee\": 5.99, \"tip\": 3.08, \"total\": 31.39, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-07-30T18:26:14Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

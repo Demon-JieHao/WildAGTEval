@@ -1,0 +1,71 @@
+name: "All Available Uncertainties"
+description: "Enable all implemented uncertainties for comprehensive testing - maximum challenge mode"
+
+uncertainties:
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+    
+    
+  FEATURE_LIMITATION_ERROR:
+    enabled: true
+    apis:
+      - get_call_history
+      - get_messages
+      - get_notifications
+      - get_user_inventory
+      - news_personalized
+      - stock_watchlist
+      - track_order
+      - weather_forecast
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: true
+    apis:
+      - find_call_device
+      - get_call_history
+      - get_messages
+      - get_restaurant_menu
+      - knowledge_lookup
+      - search_recipes
+      - stock_watchlist
+      - weather_forecast
+    
+  INFORMATIONAL_NOTICE:
+    enabled: true
+    apis:
+      - color_set
+      - create_meal_plan
+      - get_media_details
+      - get_notifications
+      - make_call
+      - search_media
+      - temperature_set
+      - stock_watchlist
+  
+  SYSTEM_FAILURE_ERROR:
+    enabled: true
+    apis:
+      - color_set
+      - get_user_inventory
+      - make_call
+      - place_delivery_order
+      - play
+      - send_message
+      - stock_price
+      - track_delivery_order
+
+metadata:
+  total_uncertainties: 32
+  creation_date: "2025-07-09"
+  last_updated: "2025-07-10"
+  use_case: "Maximum difficulty evaluation with all uncertainty types active"
+  note: "Some APIs have multiple uncertainty types (e.g., get_call_history, get_messages, get_notifications, stock_watchlist, weather_forecast)"

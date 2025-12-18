@@ -1,0 +1,78 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user9_scenario3_CompanyResearch_BrandReferences_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user9_scenario3_CompanyResearch_BrandReferences_merged_exec.py",
+  "total_transforms": 10,
+  "successful_transforms": 10,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"knowledge_lookup\", keyword='oracle_corp')",
+      "after": "invoke_tool(\"knowledge_lookup\", keyword='oracle_corp')",
+      "execution_result": "{\"success\": true, \"keyword\": \"oracle_corp\", \"definition\": \"Oracle Corporation (symbol: ORCL) is a multinational computer technology company known for its database software and cloud computing solutions. It serves enterprises with database management systems, enterprise software, and cloud applications.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"stock_price\", symbol='ORCL')",
+      "after": "invoke_tool(\"stock_price\", symbol='NYSE:ORCL')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"ORCL\", \"name\": \"Oracle Corp.\", \"price\": 217.41, \"change\": -0.96, \"change_percent\": -0.44}, \"formatted\": \"ORCL: $217.41 (-0.96 / -0.44%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='gesture controller', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='gesture controller', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 4, \"categories\": [\"accessories\"], \"results\": [{\"product_id\": \"prod117\", \"name\": \"FutureDev Gesture Controller\", \"price\": 5999.99, \"category\": \"accessories\", \"stock\": 4}, {\"product_id\": \"prod87\", \"name\": \"TechCorp Gesture Controller\", \"price\": 399.99, \"category\": \"accessories\", \"stock\": 45}, {\"product_id\": \"prod97\", \"name\": \"SmartLiving Gesture Controller\", \"price\": 449.99, \"category\": \"accessories\", \"stock\": 38}, {\"product_id\": \"prod107\", \"name\": \"EcoTech Gesture Controller\", \"price\": 329.99, \"category\": \"accessories\", \"stock\": 50}], \"message\": \"Found 4 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod117')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod117')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod117\", \"name\": \"FutureDev Gesture Controller\", \"brand\": \"FutureDev\", \"description\": \"Made by FutureDev. Telekinetic gesture controller with mind-reading capabilities and psychic energy amplification\", \"price\": 5999.99, \"category\": \"accessories\", \"stock\": 4, \"rating\": 4.8, \"images\": [\"gesture_controller_1.jpg\", \"gesture_controller_2.jpg\"]}, \"message\": \"Retrieved details for 'FutureDev Gesture Controller'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod87')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod87')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod87\", \"name\": \"TechCorp Gesture Controller\", \"brand\": \"TechCorp\", \"description\": \"Made by TechCorp. Innovative gesture controller with air gesture detection and haptic feedback system\", \"price\": 399.99, \"category\": \"accessories\", \"stock\": 45, \"rating\": 4.6, \"images\": [\"gesture_controller_1.jpg\", \"gesture_controller_2.jpg\"]}, \"message\": \"Retrieved details for 'TechCorp Gesture Controller'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod97')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod97')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod97\", \"name\": \"SmartLiving Gesture Controller\", \"brand\": \"SmartLiving\", \"description\": \"Made by SmartLiving. Motion-sensing gesture controller with predictive movement analysis and adaptive learning\", \"price\": 449.99, \"category\": \"accessories\", \"stock\": 38, \"rating\": 4.5, \"images\": [\"gesture_controller_1.jpg\", \"gesture_controller_2.jpg\"]}, \"message\": \"Retrieved details for 'SmartLiving Gesture Controller'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod107')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod107')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod107\", \"name\": \"EcoTech Gesture Controller\", \"brand\": \"EcoTech\", \"description\": \"Made by EcoTech. Bamboo-based gesture controller with kinetic energy harvesting and zero-waste design\", \"price\": 329.99, \"category\": \"accessories\", \"stock\": 50, \"rating\": 4.3, \"images\": [\"gesture_controller_1.jpg\", \"gesture_controller_2.jpg\"]}, \"message\": \"Retrieved details for 'EcoTech Gesture Controller'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod107', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod107', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod107\", \"name\": \"EcoTech Gesture Controller\", \"quantity\": 1, \"price\": 329.99}, \"cart_total\": 1065.67, \"message\": \"Added 1 x 'EcoTech Gesture Controller' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='EcoTech smart mirror', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='EcoTech smart mirror', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"smart_home\"], \"results\": [{\"product_id\": \"prod108\", \"name\": \"EcoTech Smart Mirror\", \"price\": 699.99, \"category\": \"smart_home\", \"stock\": 28}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod108', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod108', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod108\", \"name\": \"EcoTech Smart Mirror\", \"quantity\": 1, \"price\": 699.99}, \"cart_total\": 1765.66, \"message\": \"Added 1 x 'EcoTech Smart Mirror' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+# Target Functions Configuration for Turn-Level Teacher Forcing
+# This file specifies which API functions to use as target points for evaluation
+
+# target_functions:
+#   - find_call_device
+#   - find_contact
+#   - get_messages
+#   - make_call
+#   - send_message
+#   - color_set
+#   - get_user_inventory
+#   - mode_set
+#   - power_off
+#   - temperature_set
+#   - get_media_details
+#   - create_alarm
+#   - create_notification
+#   - create_reminder
+#   - get_notifications
+#   - get_reminders
+#   - place_delivery_order
+#   - search_product
+#   - track_order
+
+target_functions:
+    - find_call_device
+    - find_contact
+    - make_call
+    - get_user_inventory
+    - color_set
+    - power_off
+    - mode_set
+    - temperature_set
+    - create_alarm
+    - create_reminder
+    - get_reminders
+    - place_delivery_order
+    - search_product
+
+# target_functions:
+#     # - find_call_device
+#     - send_message
+#     - get_messages
+#     # - find_contact
+#     # - make_call
+#     # - get_user_inventory
+#     # - color_set
+#     # - power_off
+#     - power_on
+#     # - mode_set
+#     # - temperature_set
+#     - get_media_details
+#     - get_notifications
+#     # - create_alarm
+#     # - create_reminder
+#     # - get_reminders
+#     - create_notification
+#     # - place_delivery_order
+#     - schedule_meal
+#     # - search_product
+#     - get_product_details
+#     - checkout
+
+
+# target_functions:
+#     - end_call
+#     - find_call_device
+#     - find_contact
+#     - get_call_history
+#     - get_messages
+#     - make_call
+#     - send_message
+#     - brightness_adjust
+#     - channel_change
+#     - color_set
+#     - find_device_by_name
+#     - get_device_details
+#     - get_group_devices
+#     - get_user_inventory
+#     - lock_lock
+#     - lock_status
+#     - lock_unlock
+#     - mode_set
+#     - open_close
+#     - open_open
+#     - open_set_position
+#     - power_off
+#     - power_on
+#     - temperature_set
+#     - volume_adjust
+#     - add_to_playlist
+#     - create_playlist
+#     - fast_forward
+#     - get_media_details
+#     - get_playback_status
+#     - get_playlists
+#     - next
+#     - pause
+#     - play
+#     - previous
+#     - resume
+#     - rewind
+#     - search_media
+#     - set_playback_speed
+#     - shuffle
+#     - stop
+#     - create_alarm
+#     - create_notification
+#     - create_reminder
+#     - delete_alarm
+#     - get_alarms
+#     - get_notifications
+#     - get_reminders
+#     - set_notification_preferences
+#     - create_custom_recipe
+#     - create_meal_plan
+#     - get_meal_suggestions
+#     - get_recipe_details
+#     - get_restaurant_menu
+#     - place_delivery_order
+#     - save_favorite_recipe
+#     - schedule_meal
+#     - search_recipes
+#     - search_restaurants
+#     - track_delivery_order
+#     - view_delivery_order
+#     - knowledge_lookup
+#     - news_by_category
+#     - news_latest
+#     - news_personalized
+#     - query_history
+#     - source_list
+#     - stock_price
+#     - stock_watchlist
+#     - user_preferences
+#     - weather_alerts
+#     - weather_current
+#     - weather_forecast
+#     - add_to_cart
+#     - cancel_order
+#     - checkout
+#     - clear_cart
+#     - get_order_details
+#     - get_order_history
+#     - get_product_details
+#     - remove_from_cart
+#     - search_product
+#     - track_order
+#     - update_cart_quantity
+#     - view_cart

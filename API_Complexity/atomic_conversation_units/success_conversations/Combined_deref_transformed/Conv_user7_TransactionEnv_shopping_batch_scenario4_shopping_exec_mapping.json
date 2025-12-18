@@ -1,0 +1,57 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user7_TransactionEnv_shopping_batch_scenario4_shopping_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user7_TransactionEnv_shopping_batch_scenario4_shopping_exec.py",
+  "total_transforms": 7,
+  "successful_transforms": 7,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='webcam', category='electronics', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='webcam', category='electronics', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"categories\": [\"electronics\"], \"results\": [{\"product_id\": \"prod36\", \"name\": \"Prime Webcam V2\", \"price\": 1264.99, \"category\": \"electronics\", \"stock\": 148}, {\"product_id\": \"prod8\", \"name\": \"Advanced Webcam Plus\", \"price\": 1569.99, \"category\": \"electronics\", \"stock\": 17}], \"message\": \"Found 2 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod36')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod36')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod36\", \"name\": \"Prime Webcam V2\", \"description\": \"Cutting-edge webcam with bluetooth, portable\", \"price\": 1264.99, \"category\": \"electronics\", \"stock\": 148, \"rating\": 4.5, \"images\": [\"webcam_1.jpg\", \"webcam_2.jpg\", \"webcam_3.jpg\", \"webcam_4.jpg\"]}, \"message\": \"Retrieved details for 'Prime Webcam V2'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod8')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod8')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod8\", \"name\": \"Advanced Webcam Plus\", \"description\": \"Revolutionary webcam featuring 4K, HD\", \"price\": 1569.99, \"category\": \"electronics\", \"stock\": 17, \"rating\": 4.4, \"images\": [\"webcam_1.jpg\", \"webcam_2.jpg\"]}, \"message\": \"Retrieved details for 'Advanced Webcam Plus'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod8', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod8', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod8\", \"name\": \"Advanced Webcam Plus\", \"quantity\": 1, \"price\": 1569.99}, \"cart_total\": 1569.99, \"message\": \"Added 1 x 'Advanced Webcam Plus' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod8\", \"name\": \"Advanced Webcam Plus\", \"quantity\": 1, \"price\": 1569.99, \"added_at\": \"2025-08-20T00:09:37Z\"}], \"total\": 1569.99}, \"item_count\": 1, \"message\": \"Cart has 1 items with a total of $1569.99\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"checkout\", )",
+      "after": "invoke_tool(\"checkout\", )",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"total\": 1569.99, \"status\": \"processing\", \"items_count\": 1, \"message\": \"Order order1 created successfully. Your payment of $1569.99 has been processed. Your order will be shipped via STD.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"cancel_order\", order_id='order1', reason='Found a better deal elsewhere')",
+      "after": "invoke_tool(\"cancel_order\", order_id='order1', reason='Found a better deal elsewhere')",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"status\": \"cancelled\", \"refunded\": true, \"message\": \"Order order1 has been cancelled and payment has been refunded.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

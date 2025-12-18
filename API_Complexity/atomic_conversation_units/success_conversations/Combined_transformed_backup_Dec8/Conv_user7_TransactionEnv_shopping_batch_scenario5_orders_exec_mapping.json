@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user7_TransactionEnv_shopping_batch_scenario5_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user7_TransactionEnv_shopping_batch_scenario5_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 8, \"orders\": [{\"order_id\": \"ORDER0002\", \"created_at\": \"2025-06-07T17:43:25.709805Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"UPS\"}, {\"order_id\": \"ON0048\", \"created_at\": \"2025-06-07T08:01:25.711057Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"DHL\"}, {\"order_id\": \"PO0068\", \"created_at\": \"2025-05-28T23:49:25.711570Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"PO0011\", \"created_at\": \"2025-05-25T05:34:25.710087Z\", \"total\": null, \"items_count\": 5, \"carrier\": \"OnTrac\"}, {\"order_id\": \"ORD0016\", \"created_at\": \"2025-05-24T21:57:25.710222Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"OnTrac\"}, {\"order_id\": \"PO0008\", \"created_at\": \"2025-05-20T16:47:25.710002Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"USPS\"}, {\"order_id\": \"ORDER0051\", \"created_at\": \"2025-05-19T21:11:25.711140Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0004\", \"created_at\": \"2025-05-18T20:11:25.709883Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"Amazon Logistics\"}], \"message\": \"Found 8 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='PO0011')",
+      "after": "invoke_tool(\"get_order_details\", order_id='PO0011')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"PO0011\", \"user_id\": \"user7\", \"items\": [{\"product_id\": \"prod12\", \"name\": \"Smart Wireless Headphones\", \"quantity\": 1, \"price\": 204.99, \"subtotal\": 204.99}, {\"product_id\": \"prod37\", \"name\": \"Connect Motion Sensor\", \"quantity\": 1, \"price\": 33.56, \"subtotal\": 33.56}, {\"product_id\": \"prod42\", \"name\": \"Health Step Counter\", \"quantity\": 1, \"price\": 159.99, \"subtotal\": 159.99}, {\"product_id\": \"prod49\", \"name\": \"Auto Smart Switch Max\", \"quantity\": 3, \"price\": 60.6, \"subtotal\": 181.8}, {\"product_id\": \"prod55\", \"name\": \"Instant Dishwasher\", \"quantity\": 1, \"price\": 274.99, \"subtotal\": 274.99}], \"totals\": {\"subtotal\": 855.33, \"tax\": 92.72, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 948.05}, \"payment\": {\"method_id\": \"pm1\", \"method_type\": \"apple_pay\", \"last4\": \"2595\", \"amount\": 948.05, \"currency\": \"USD\", \"transaction_id\": \"tx511767\", \"status\": \"paid\", \"paid_at\": \"2025-05-25T05:50:25.710087Z\"}, \"created_at\": \"2025-05-25T05:34:25.710087Z\", \"notes\": \"Signature required\"}, \"message\": \"Retrieved details for order PO0011\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='PO0011')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-0011')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-0011\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod55', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod55', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod55\", \"name\": \"Instant Dishwasher\", \"quantity\": 1, \"price\": 274.99}, \"cart_total\": 274.99, \"message\": \"Added 1 x 'Instant Dishwasher' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

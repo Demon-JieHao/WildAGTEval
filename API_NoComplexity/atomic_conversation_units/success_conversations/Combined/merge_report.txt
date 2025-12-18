@@ -1,0 +1,142 @@
+================================================================================
+TIMEMANAGEMENT + SMARTHOMEENV MERGE REPORT
+================================================================================
+
+📋 CONFIGURATION
+   Description: Combine TimeManagement and SmartHomeEnv conversations with task-type preservation
+   Source Folders: TimeManagement, SmartHomeEnv
+   User Range: 1-10
+   Scenario Range: 1-10
+   Special Logic: timemanagement_smarthome_task_type
+
+📊 MERGE STATISTICS
+   ✅ TimeManagement+SmartHomeEnv Merges: 100
+   📄 SmartHomeEnv-Only Files: 16
+   ❌ Failed Merges: 0
+   📄 Total Output Files: 116
+
+📊 TASK TYPE BREAKDOWN
+   🧹 Cleanup Tasks: 29 merges
+   ⏰ Reminder Tasks: 71 merges
+
+📁 DETAILED FILE STATISTICS
+--------------------------------------------------
+   user10_scenario10_reminder: 5 lines
+   user10_scenario1_reminder: 3 lines
+   user10_scenario2_reminder: 5 lines
+   user10_scenario3_cleanup: 3 lines
+   user10_scenario3_reminder: 3 lines
+   user10_scenario4_smarthome_only: 1 lines
+   user10_scenario5_reminder: 4 lines
+   user10_scenario6_reminder: 4 lines
+   user10_scenario7_reminder: 4 lines
+   user10_scenario8_reminder: 3 lines
+   user10_scenario9_cleanup: 4 lines
+   user1_scenario10_reminder: 5 lines
+   user1_scenario1_cleanup: 5 lines
+   user1_scenario1_reminder: 5 lines
+   user1_scenario2_reminder: 3 lines
+   user1_scenario3_reminder: 3 lines
+   user1_scenario4_reminder: 5 lines
+   user1_scenario5_cleanup: 5 lines
+   user1_scenario5_reminder: 5 lines
+   user1_scenario6_cleanup: 5 lines
+   user1_scenario6_reminder: 5 lines
+   user1_scenario7_reminder: 4 lines
+   user1_scenario8_reminder: 3 lines
+   user1_scenario9_smarthome_only: 2 lines
+   user2_scenario10_reminder: 3 lines
+   user2_scenario1_smarthome_only: 2 lines
+   user2_scenario2_reminder: 4 lines
+   user2_scenario3_reminder: 3 lines
+   user2_scenario4_cleanup: 4 lines
+   user2_scenario4_reminder: 4 lines
+   user2_scenario5_reminder: 3 lines
+   user2_scenario6_smarthome_only: 1 lines
+   user2_scenario7_reminder: 4 lines
+   user2_scenario8_cleanup: 4 lines
+   user2_scenario8_reminder: 4 lines
+   user2_scenario9_reminder: 3 lines
+   user3_scenario10_reminder: 4 lines
+   user3_scenario1_cleanup: 4 lines
+   user3_scenario2_cleanup: 3 lines
+   user3_scenario3_reminder: 5 lines
+   user3_scenario4_reminder: 4 lines
+   user3_scenario5_smarthome_only: 3 lines
+   user3_scenario6_reminder: 5 lines
+   user3_scenario7_reminder: 4 lines
+   user3_scenario8_cleanup: 4 lines
+   user3_scenario8_reminder: 4 lines
+   user3_scenario9_reminder: 5 lines
+   user4_scenario10_reminder: 3 lines
+   user4_scenario1_reminder: 4 lines
+   user4_scenario2_smarthome_only: 1 lines
+   user4_scenario3_cleanup: 5 lines
+   user4_scenario3_reminder: 5 lines
+   user4_scenario4_cleanup: 5 lines
+   user4_scenario5_cleanup: 4 lines
+   user4_scenario6_cleanup: 5 lines
+   user4_scenario6_reminder: 5 lines
+   user4_scenario7_cleanup: 5 lines
+   user4_scenario8_reminder: 5 lines
+   user4_scenario9_reminder: 4 lines
+   user5_scenario10_reminder: 4 lines
+   user5_scenario1_cleanup: 4 lines
+   user5_scenario1_reminder: 4 lines
+   user5_scenario2_smarthome_only: 2 lines
+   user5_scenario3_cleanup: 4 lines
+   user5_scenario3_reminder: 4 lines
+   user5_scenario4_cleanup: 4 lines
+   user5_scenario4_reminder: 4 lines
+   user5_scenario5_reminder: 5 lines
+   user5_scenario6_cleanup: 4 lines
+   user5_scenario6_reminder: 4 lines
+   user5_scenario7_cleanup: 5 lines
+   user5_scenario7_reminder: 5 lines
+   user5_scenario8_smarthome_only: 2 lines
+   user5_scenario9_reminder: 5 lines
+   user6_scenario10_reminder: 3 lines
+   user6_scenario1_smarthome_only: 2 lines
+   user6_scenario2_reminder: 4 lines
+   user6_scenario3_reminder: 5 lines
+   user6_scenario4_reminder: 4 lines
+   user6_scenario5_smarthome_only: 2 lines
+   user6_scenario6_reminder: 4 lines
+   user6_scenario7_smarthome_only: 1 lines
+   user6_scenario8_reminder: 5 lines
+   user6_scenario9_smarthome_only: 2 lines
+   user7_scenario10_reminder: 4 lines
+   user7_scenario1_reminder: 3 lines
+   user7_scenario2_reminder: 3 lines
+   user7_scenario3_reminder: 5 lines
+   user7_scenario4_cleanup: 4 lines
+   user7_scenario4_reminder: 4 lines
+   user7_scenario5_cleanup: 5 lines
+   user7_scenario6_cleanup: 4 lines
+   user7_scenario7_reminder: 3 lines
+   user7_scenario8_cleanup: 3 lines
+   user7_scenario8_reminder: 3 lines
+   user7_scenario9_reminder: 3 lines
+   user8_scenario10_cleanup: 4 lines
+   user8_scenario10_reminder: 4 lines
+   user8_scenario1_reminder: 5 lines
+   user8_scenario2_smarthome_only: 1 lines
+   user8_scenario3_reminder: 5 lines
+   user8_scenario4_reminder: 4 lines
+   user8_scenario5_reminder: 4 lines
+   user8_scenario6_reminder: 4 lines
+   user9_scenario10_cleanup: 3 lines
+   user9_scenario1_smarthome_only: 2 lines
+   user9_scenario2_smarthome_only: 1 lines
+   user9_scenario3_reminder: 5 lines
+   user9_scenario4_smarthome_only: 2 lines
+   user9_scenario5_cleanup: 5 lines
+   user9_scenario5_reminder: 5 lines
+   user9_scenario6_reminder: 5 lines
+   user9_scenario7_reminder: 5 lines
+   user9_scenario8_cleanup: 4 lines
+   user9_scenario9_cleanup: 4 lines
+   user9_scenario9_reminder: 4 lines
+
+================================================================================
+Report generated successfully!

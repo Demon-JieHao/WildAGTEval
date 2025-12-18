@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user6_msg_scenario10_msgcall_scenario54_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user6_msg_scenario10_msgcall_scenario54_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_messages\", limit=10)",
+      "after": "invoke_tool(\"get_messages\", limit=10)",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved 4 messages across all contacts\", \"messages\": [{\"message_id\": \"msg35\", \"user_id\": \"user6\", \"contact_id\": \"contact17\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-16T14:51:12Z\", \"content\": \"Great job!\", \"read\": true, \"contact_name\": \"Steven Gomez\"}, {\"message_id\": \"msg38\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-15T16:57:53Z\", \"content\": \"Thanks! You too.\", \"read\": true, \"contact_name\": \"John Hill\"}, {\"message_id\": \"msg37\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-15T16:49:53Z\", \"content\": \"Thank you!\", \"read\": false, \"contact_name\": \"John Hill\"}, {\"message_id\": \"msg36\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-15T16:23:53Z\", \"content\": \"Thank you!\", \"read\": true, \"contact_name\": \"John Hill\"}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact17', content='Hello! How are you doing?')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact17', content='Hello! How are you doing?')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Steven Gomez\", \"message_id\": \"msg59\", \"contact_name\": \"Steven Gomez\", \"timestamp\": \"2025-08-20T00:11:38.543468Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['30A'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['30A'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"30A\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='414-652-3213', device_endpoint='30A')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:4146523213', device_endpoint='30A')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:4146523213 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='John Hill', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='John Hill', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact8\", \"user_id\": \"user6\", \"name\": \"John Hill\", \"phone_numbers\": [{\"type\": \"work\", \"number\": \"601-805-8234\"}], \"email\": \"john_hill@hotmail.com\", \"is_favorite\": false, \"devices\": [\"device9\", \"device47\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact8', content='Hello! How are you doing?')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact8', content='Hello! How are you doing?')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to John Hill\", \"message_id\": \"msg60\", \"contact_name\": \"John Hill\", \"timestamp\": \"2025-08-20T00:11:38.544149Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user1_msg_scenario9_msgcall_scenario9_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user1_msg_scenario9_msgcall_scenario9_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='Ashley Scott', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Ashley Scott', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact11\", \"user_id\": \"user1\", \"name\": \"Ashley Scott\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"816-461-8624\"}], \"email\": \"ascott@aol.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact11', content='Hi! Hope everything is going well.')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact11', content='Hi! Hope everything is going well.')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Ashley Scott\", \"message_id\": \"msg59\", \"contact_name\": \"Ashley Scott\", \"timestamp\": \"2025-08-20T00:09:18.033779Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='816-461-8624', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:8164618624', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:8164618624 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='Ryan Reyes', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Ryan Reyes', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact31\", \"user_id\": \"user1\", \"name\": \"Ryan Reyes\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"901-550-1173\"}], \"email\": \"ryan.reyes@outlook.com\", \"is_favorite\": false, \"devices\": [\"device29\", \"device44\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact31', content=\"Hey! How's your day going?\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact31', content=\"Hey! How's your day going?\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Ryan Reyes\", \"message_id\": \"msg60\", \"contact_name\": \"Ryan Reyes\", \"timestamp\": \"2025-08-20T00:09:18.034454Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

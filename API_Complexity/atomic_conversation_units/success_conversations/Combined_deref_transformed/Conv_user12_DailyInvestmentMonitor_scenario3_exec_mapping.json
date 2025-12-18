@@ -1,0 +1,57 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user12_DailyInvestmentMonitor_scenario3_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user12_DailyInvestmentMonitor_scenario3_exec.py",
+  "total_transforms": 7,
+  "successful_transforms": 7,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"stock_watchlist\", )",
+      "after": "invoke_tool(\"stock_watchlist\", )",
+      "execution_result": "{\"success\": true, \"watchlist\": [\"GOOGL\", \"MSFT\", \"META\"], \"stocks\": [{\"symbol\": \"GOOGL\", \"data\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\"}, {\"symbol\": \"MSFT\", \"data\": {\"symbol\": \"MSFT\", \"name\": \"Microsoft Corp.\", \"price\": 858.1, \"change\": 36.75, \"change_percent\": 4.47}, \"formatted\": \"MSFT: $858.1 (36.75 / 4.47%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1943.65, \"total_change\": 82.62}, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user12\", \"name\": \"Mark Moore\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='67')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='67')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bathroom\", \"all_lights\"], \"home_id\": \"home5\", \"state\": {\"power\": \"on\", \"brightness\": 13, \"color\": \"#FF0000\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"color_set\", endpoints=['67'], color='purple')",
+      "after": "invoke_tool(\"color_set\", endpoints=['67'], color='#800080')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"success\": true, \"message\": \"Set Bathroom Light color to #800080\", \"color\": \"#800080\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_device_details\", endpoint='70')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='70')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"], \"endpoint_categories\": [\"THERMOSTAT\"], \"supported_apis\": [\"temperature_set\", \"mode_set\"], \"groups\": [\"climate\", \"whole_home\"], \"home_id\": \"home5\", \"state\": {\"temperature\": 20, \"mode\": \"cool\"}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"temperature_set\", endpoints=['70'], temperature=21)",
+      "after": "invoke_tool(\"temperature_set\", endpoints=['70'], temperature=21)",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"70\", \"name\": \"Thermostat\", \"success\": true, \"message\": \"Set Thermostat temperature to 21\\u00b0C\", \"temperature\": 21}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"weather_current\", location='houston')",
+      "after": "invoke_tool(\"weather_current\", location='houston')",
+      "execution_result": "{\"success\": true, \"location\": \"houston\", \"current_weather\": {\"temperature\": 25, \"condition\": \"Rainy\", \"humidity\": 84, \"wind_speed\": 18, \"pressure\": 1024}, \"formatted\": \"Temperature: 25\\u00b0C, Condition: Rainy, Humidity: 84%, Wind: 18 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

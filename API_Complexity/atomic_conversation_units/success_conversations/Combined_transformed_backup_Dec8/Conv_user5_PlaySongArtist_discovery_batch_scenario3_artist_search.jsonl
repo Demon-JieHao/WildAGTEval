@@ -1,0 +1,3 @@
+{"query": "Start playing Sweet Love on the Master Bedroom TV", "api_sequence": [{"api": "search_media", "params": {"query": "Sweet Love", "media_type": "song", "limit": 3}}, {"api": "get_user_inventory", "params": {}}, {"api": "get_device_details", "params": {"endpoint": "11"}}, {"api": "play", "params": {"endpoints": ["11"], "media_id": "song:song92"}}]}
+{"query": "I'd like to explore more music from Metallica", "api_sequence": [{"api": "search_by_artist", "params": {"artist": "Metallica", "media_type": "song", "limit": 8}}]}
+{"query": "Play that 2nd song please", "api_sequence": [{"api": "get_playback_status", "params": {"endpoints": ["11"]}}, {"api": "play", "params": {"endpoints": ["11"], "media_id": "song:song87"}}]}

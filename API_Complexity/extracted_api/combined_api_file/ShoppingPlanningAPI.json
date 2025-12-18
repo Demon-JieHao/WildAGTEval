@@ -1,0 +1,1207 @@
+{
+  "CulinaryControlEnv": {
+    "create_custom_recipe": {
+      "function": {
+        "description": "Create a new recipe with custom ingredients, instructions, and other details. The recipe will be added to the system and can be searched, viewed, and saved like any other recipe.",
+        "error_cases": [
+          "Recipe name is missing: The name parameter is required.",
+          "Ingredients list is empty: At least one ingredient is required.",
+          "Instructions list is empty: At least one instruction step is required.",
+          "Invalid difficulty level: Difficulty must be one of 'easy', 'medium', or 'hard'.",
+          "Invalid time values: Preparation and cooking times cannot be negative.",
+          "Invalid servings: Number of servings must be positive.",
+          "No user selected: A user must be selected to create a recipe."
+        ],
+        "name": "create_custom_recipe",
+        "parameters": {
+          "properties": {
+            "cooking_time": {
+              "description": "(Optional) Time in minutes for cooking.",
+              "type": "integer"
+            },
+            "cuisine": {
+              "description": "(Optional) Type of cuisine (e.g., Italian, Mexican, Thai).",
+              "type": "string"
+            },
+            "description": {
+              "description": "(Optional) Brief description of the recipe.",
+              "type": "string"
+            },
+            "dietary_info": {
+              "description": "(Optional) List of dietary specifications (e.g., 'vegetarian', 'vegan', 'gluten-free').",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "difficulty": {
+              "description": "(Optional) Difficulty level of the recipe. Default is 'medium'.",
+              "enum": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "type": "string"
+            },
+            "ingredients": {
+              "description": "List of ingredients with quantities.",
+              "items": {
+                "properties": {
+                  "name": {
+                    "description": "Name of the ingredient",
+                    "type": "string"
+                  },
+                  "notes": {
+                    "description": "Optional notes about the ingredient (e.g., 'finely chopped', 'at room temperature')",
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "description": "Amount of the ingredient with unit (e.g., '2 cups', '1/2 teaspoon')",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "quantity"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "instructions": {
+              "description": "List of step-by-step instructions.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "name": {
+              "description": "Name of the recipe.",
+              "type": "string"
+            },
+            "preparation_time": {
+              "description": "(Optional) Time in minutes for preparation.",
+              "type": "integer"
+            },
+            "servings": {
+              "description": "(Optional) Number of servings the recipe yields. Default is 4.",
+              "type": "integer"
+            },
+            "tags": {
+              "description": "(Optional) List of tags for the recipe (e.g., 'breakfast', 'quick', 'dessert').",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "name",
+            "ingredients",
+            "instructions"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_meal_plan": {
+      "function": {
+        "description": "Create a new meal plan for a specified date range. The meal plan will be a structured schedule for planning meals over multiple days.",
+        "error_cases": [
+          "Name is missing: The meal plan name is required.",
+          "Invalid dates: Start and end dates must be valid and in YYYY-MM-DD format.",
+          "Invalid date range: End date must be on or after start date.",
+          "Plan duration too long: Meal plan duration cannot exceed 28 days.",
+          "Invalid meal type: Meal types must be one of 'breakfast', 'lunch', 'dinner', or 'snack'.",
+          "No user selected: A user must be selected to create a meal plan."
+        ],
+        "name": "create_meal_plan",
+        "parameters": {
+          "properties": {
+            "description": {
+              "description": "(Optional) Description of the meal plan.",
+              "type": "string"
+            },
+            "end_date": {
+              "description": "End date of the meal plan in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "meals_per_day": {
+              "description": "(Optional) List of meal types to include each day. Defaults to ['breakfast', 'lunch', 'dinner'].",
+              "items": {
+                "enum": [
+                  "breakfast",
+                  "lunch",
+                  "dinner",
+                  "snack"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "name": {
+              "description": "Name of the meal plan (e.g., 'Weekly Family Dinner Plan', 'Vegetarian Week').",
+              "type": "string"
+            },
+            "start_date": {
+              "description": "Start date of the meal plan in YYYY-MM-DD format.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "start_date",
+            "end_date"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_meal_suggestions": {
+      "function": {
+        "description": "Get personalized meal suggestions based on the user's preferences, dietary restrictions, and other criteria. The suggestions are prioritized based on the user's past favorites and dietary needs.",
+        "error_cases": [
+          "Invalid meal type: meal_type must be one of 'breakfast', 'lunch', 'dinner', or 'snack'",
+          "Invalid count: count must be between 1 and 10",
+          "No user selected: A user must be selected to get personalized suggestions",
+          "No matching recipes: No recipes match the specified criteria"
+        ],
+        "name": "get_meal_suggestions",
+        "parameters": {
+          "properties": {
+            "count": {
+              "description": "(Optional) Number of suggestions to return. Default is 3, maximum is 10.",
+              "type": "integer"
+            },
+            "cuisine": {
+              "description": "(Optional) Preferred cuisine type (e.g., 'Italian', 'Mexican'). If not specified, the system may suggest recipes from the user's favorite cuisines.",
+              "type": "string"
+            },
+            "dietary": {
+              "description": "(Optional) List of dietary preferences to filter by (e.g., 'vegetarian', 'vegan', 'gluten-free'). This will be combined with the user's stored preferences.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "max_time": {
+              "description": "(Optional) Maximum preparation time in minutes. Only recipes that can be prepared within this time will be suggested.",
+              "type": "integer"
+            },
+            "meal_type": {
+              "description": "(Optional) Type of meal to get suggestions for.",
+              "enum": [
+                "breakfast",
+                "lunch",
+                "dinner",
+                "snack"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_recipe_details": {
+      "function": {
+        "description": "Get detailed information about a specific recipe including ingredients, instructions, nutritional information, and reviews.",
+        "error_cases": [
+          "Recipe ID is missing: The recipe_id parameter is required.",
+          "Recipe not found: No recipe exists with the provided ID."
+        ],
+        "name": "get_recipe_details",
+        "parameters": {
+          "properties": {
+            "recipe_id": {
+              "description": "The unique identifier of the recipe to retrieve details for.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "recipe_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_restaurant_menu": {
+      "function": {
+        "description": "Get the complete menu for a specific restaurant, including item details, prices, and categories.",
+        "error_cases": [
+          "Restaurant ID is missing: The restaurant_id parameter is required.",
+          "Restaurant not found: No restaurant exists with the provided ID."
+        ],
+        "name": "get_restaurant_menu",
+        "parameters": {
+          "properties": {
+            "restaurant_id": {
+              "description": "The unique identifier of the restaurant to retrieve menu for.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "restaurant_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "place_delivery_order": {
+      "function": {
+        "description": "Place a food delivery order from a restaurant. The order will be processed and delivered to the specified address.",
+        "error_cases": [
+          "Restaurant ID is missing: The restaurant_id parameter is required.",
+          "Restaurant not found: No restaurant exists with the provided ID.",
+          "Restaurant doesn't offer delivery: The selected restaurant does not provide delivery service.",
+          "No items specified: At least one item must be included in the order.",
+          "Invalid item: One or more items are not found in the restaurant's menu.",
+          "Invalid quantity: Item quantities must be positive numbers.",
+          "Delivery address missing: A valid delivery address is required.",
+          "Invalid tip percentage: Tip percentage must be between 0 and 30.",
+          "No user selected: A user must be selected to place an order."
+        ],
+        "name": "place_delivery_order",
+        "parameters": {
+          "properties": {
+            "delivery_address": {
+              "description": "Address where the order should be delivered.",
+              "properties": {
+                "city": {
+                  "description": "City for delivery.",
+                  "type": "string"
+                },
+                "special_instructions": {
+                  "description": "(Optional) Special instructions for delivery location.",
+                  "type": "string"
+                },
+                "state": {
+                  "description": "State for delivery.",
+                  "type": "string"
+                },
+                "street": {
+                  "description": "Street address for delivery.",
+                  "type": "string"
+                },
+                "zip": {
+                  "description": "ZIP or postal code for delivery.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "street",
+                "city",
+                "zip"
+              ],
+              "type": "object"
+            },
+            "items": {
+              "description": "List of items to order with their quantities and optional special instructions.",
+              "items": {
+                "properties": {
+                  "item_id": {
+                    "description": "The unique identifier of the menu item.",
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "description": "The quantity of this item to order.",
+                    "type": "integer"
+                  },
+                  "special_instructions": {
+                    "description": "(Optional) Special instructions for preparing this item.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "item_id",
+                  "quantity"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "restaurant_id": {
+              "description": "The unique identifier of the restaurant to order from.",
+              "type": "string"
+            },
+            "special_instructions": {
+              "description": "(Optional) General special instructions for the entire order.",
+              "type": "string"
+            },
+            "tip_percentage": {
+              "description": "(Optional) Percentage of subtotal to add as tip. Defaults to 15%.",
+              "type": "number"
+            }
+          },
+          "required": [
+            "restaurant_id",
+            "items",
+            "delivery_address"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "save_favorite_recipe": {
+      "function": {
+        "description": "Save a recipe to the current user's favorites list. The recipe will be accessible through the user's favorite recipes collection for easy access in the future.",
+        "error_cases": [
+          "Recipe ID is missing: The recipe_id parameter is required.",
+          "Recipe not found: No recipe exists with the provided ID.",
+          "No user selected: A user must be selected before saving favorites.",
+          "Already in favorites: The recipe is already in the user's favorites list."
+        ],
+        "name": "save_favorite_recipe",
+        "parameters": {
+          "properties": {
+            "recipe_id": {
+              "description": "The unique identifier of the recipe to save to favorites.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "recipe_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "schedule_meal": {
+      "function": {
+        "description": "Add a specific recipe to a meal plan for a particular day and meal type. This allows users to build a complete meal plan by assigning recipes to specific days and meal slots.",
+        "error_cases": [
+          "Meal plan ID is missing: The plan_id parameter is required.",
+          "Recipe ID is missing: The recipe_id parameter is required.",
+          "Day is missing: The day parameter is required.",
+          "Meal type is missing: The meal_type parameter is required.",
+          "Invalid meal type: Meal type must be one of 'breakfast', 'lunch', 'dinner', or 'snack'.",
+          "Recipe not found: No recipe exists with the provided ID.",
+          "Meal plan not found: No meal plan exists with the provided ID for the current user.",
+          "Day not found: The specified day is not included in the meal plan.",
+          "Meal type not found: The specified meal type is not included in the meal plan for the specified day.",
+          "No user selected: A user must be selected to schedule a meal."
+        ],
+        "name": "schedule_meal",
+        "parameters": {
+          "properties": {
+            "day": {
+              "description": "The day to schedule the meal for, in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "meal_type": {
+              "description": "The type of meal to schedule.",
+              "enum": [
+                "breakfast",
+                "lunch",
+                "dinner",
+                "snack"
+              ],
+              "type": "string"
+            },
+            "notes": {
+              "description": "(Optional) Additional notes about the meal, such as preparation instructions or variations.",
+              "type": "string"
+            },
+            "plan_id": {
+              "description": "The unique identifier of the meal plan to update.",
+              "type": "string"
+            },
+            "recipe_id": {
+              "description": "The unique identifier of the recipe to add to the plan.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "plan_id",
+            "recipe_id",
+            "day",
+            "meal_type"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_recipes": {
+      "function": {
+        "description": "Search for recipes based on various criteria like name, cuisine type, difficulty level, preparation time, and dietary preferences. Returns a list of recipes matching the search criteria.",
+        "error_cases": [
+          "Invalid difficulty level: difficulty must be one of 'easy', 'medium', or 'hard'",
+          "Invalid sort option: sort_by must be one of 'time', 'rating', or 'name'",
+          "Invalid limit: limit < 1",
+          "No recipes found: No recipes match the search criteria"
+        ],
+        "name": "search_recipes",
+        "parameters": {
+          "properties": {
+            "cuisine": {
+              "description": "(Optional) Filter recipes by cuisine type (e.g., 'Italian', 'Japanese', 'Mexican').",
+              "type": "string"
+            },
+            "dietary": {
+              "description": "(Optional) List of dietary preferences to filter by (e.g., 'vegetarian', 'vegan', 'gluten-free').",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "difficulty": {
+              "description": "(Optional) Filter recipes by difficulty level.",
+              "enum": [
+                "easy",
+                "medium",
+                "hard"
+              ],
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of results to return. Defaults to 10.",
+              "type": "integer"
+            },
+            "max_time": {
+              "description": "(Optional) Maximum preparation time in minutes. Recipes that take longer than this will be excluded.",
+              "type": "integer"
+            },
+            "query": {
+              "description": "(Optional) Search term to match against recipe names and descriptions.",
+              "type": "string"
+            },
+            "sort_by": {
+              "description": "(Optional) Sort results by: 'time' (fastest to prepare), 'rating' (highest rated first), or 'name' (alphabetical).",
+              "enum": [
+                "time",
+                "rating",
+                "name"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_restaurants": {
+      "function": {
+        "description": "Search for restaurants based on various criteria like name, location, cuisine type, price range, and rating. Returns a list of restaurants matching the search criteria.",
+        "error_cases": [
+          "Invalid price range: price_range must be one of '$', '$$', '$$$', or '$$$$'",
+          "Invalid rating minimum: rating_min must be between 0 and 5",
+          "Invalid sort option: sort_by must be one of 'rating', 'name', or 'price'",
+          "No restaurants found: No restaurants match the search criteria"
+        ],
+        "name": "search_restaurants",
+        "parameters": {
+          "properties": {
+            "cuisine_type": {
+              "description": "(Optional) Filter restaurants by cuisine type (e.g., 'Italian', 'Japanese', 'Indian').",
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of results to return. Defaults to 10.",
+              "type": "integer"
+            },
+            "location": {
+              "description": "(Optional) Filter restaurants by location.",
+              "type": "string"
+            },
+            "price_range": {
+              "description": "(Optional) Filter restaurants by price range from $ (least expensive) to $$$$ (most expensive).",
+              "enum": [
+                "$",
+                "$$",
+                "$$$",
+                "$$$$"
+              ],
+              "type": "string"
+            },
+            "query": {
+              "description": "(Optional) Search term to match against restaurant names.",
+              "type": "string"
+            },
+            "rating_min": {
+              "description": "(Optional) Minimum rating filter (0-5). Only restaurants with ratings greater than or equal to this value will be returned.",
+              "type": "number"
+            },
+            "sort_by": {
+              "description": "(Optional) Sort results by: 'rating' (highest rated first), 'name' (alphabetical), or 'price' (lowest to highest).",
+              "enum": [
+                "rating",
+                "name",
+                "price"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "track_delivery_order": {
+      "function": {
+        "description": "Track the status and estimated delivery time of an order. This tool provides real-time updates on the current status of a delivery order, including status history, driver information, and progress percentage.",
+        "error_cases": [
+          "Order ID is missing: The order_id parameter is required.",
+          "Order not found: No order exists with the provided ID for the current user.",
+          "No user selected: A user must be selected to track their orders."
+        ],
+        "name": "track_delivery_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique identifier of the order to track.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "view_delivery_order": {
+      "function": {
+        "description": "View detailed information about a specific delivery order, including items ordered, delivery status, and payment details.",
+        "error_cases": [
+          "Order ID is missing: The order_id parameter is required.",
+          "Order not found: No order exists with the provided ID for the current user.",
+          "No user selected: A user must be selected to view their orders."
+        ],
+        "name": "view_delivery_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique identifier of the order to view.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  },
+  "TimeNotificationEnv": {
+    "create_alarm": {
+      "function": {
+        "description": "Create a new alarm with specified time, days, and optional device. Alarms are recurring events that happen on specified days at the given time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to create an alarm.",
+          "Invalid time format: The time must be in HH:MM:SS format.",
+          "Invalid day: One or more specified days are invalid.",
+          "Device not found: The specified device endpoint does not exist."
+        ],
+        "name": "create_alarm",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "List of days when the alarm should be active (e.g., [\"monday\", \"tuesday\"]).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "device_endpoint": {
+              "description": "Optional device endpoint to associate with the alarm (e.g., for playing the alarm sound or triggering actions).",
+              "type": "string"
+            },
+            "sound": {
+              "description": "Optional sound to use for the alarm. Defaults to 'default'.",
+              "type": "string"
+            },
+            "time": {
+              "description": "The time when the alarm should trigger in HH:MM:SS format (24-hour).",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the alarm.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "time",
+            "days"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_notification": {
+      "function": {
+        "description": "Create a new notification for a user. This allows environments to send messages to users about events or updates.",
+        "error_cases": [
+          "No user target: No user is currently logged in and no user_id was specified.",
+          "User not found: The specified user ID does not exist.",
+          "Invalid priority: Priority must be one of: low, normal, high."
+        ],
+        "name": "create_notification",
+        "parameters": {
+          "properties": {
+            "message": {
+              "description": "The detailed notification message content.",
+              "type": "string"
+            },
+            "priority": {
+              "description": "Priority level of the notification. High priority notifications will show even during do-not-disturb periods.",
+              "enum": [
+                "low",
+                "normal",
+                "high"
+              ],
+              "type": "string"
+            },
+            "source": {
+              "description": "Source of the notification (typically environment name). Defaults to 'TimeNotificationEnv'.",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title of the notification.",
+              "type": "string"
+            },
+            "type": {
+              "description": "Type of notification (e.g., system, reminder, alert). Defaults to 'system'.",
+              "type": "string"
+            },
+            "user_id": {
+              "description": "Optional user ID to target with the notification. If not provided, uses current user.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "message"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_reminder": {
+      "function": {
+        "description": "Create a new reminder with specified date, time, and optional description. Reminders are one-time events that happen at a specific date and time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to create a reminder.",
+          "Invalid date format: The date must be in YYYY-MM-DD format.",
+          "Invalid time format: The time must be in HH:MM:SS format.",
+          "Past date/time: Cannot set a reminder in the past.",
+          "Invalid notify_before_minutes: Must be a non-negative number."
+        ],
+        "name": "create_reminder",
+        "parameters": {
+          "properties": {
+            "date": {
+              "description": "The date of the reminder in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "description": {
+              "description": "Optional detailed description or additional information about the reminder.",
+              "type": "string"
+            },
+            "notify_before_minutes": {
+              "description": "How many minutes before the reminder time to send a notification. Defaults to 30 minutes.",
+              "type": "integer"
+            },
+            "time": {
+              "description": "The time of the reminder in HH:MM:SS format (24-hour).",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the reminder.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "time"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "delete_alarm": {
+      "function": {
+        "description": "Delete or deactivate an existing alarm.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to delete an alarm.",
+          "Alarm not found: The specified alarm ID does not exist or does not belong to the current user."
+        ],
+        "name": "delete_alarm",
+        "parameters": {
+          "properties": {
+            "alarm_id": {
+              "description": "The ID of the alarm to delete.",
+              "type": "string"
+            },
+            "deactivate_only": {
+              "description": "If true, just deactivate the alarm rather than deleting it completely.",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "alarm_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_alarms": {
+      "function": {
+        "description": "Get all alarms for the current user. Returns a list of alarm objects sorted by time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve alarms."
+        ],
+        "name": "get_alarms",
+        "parameters": {
+          "properties": {
+            "active_only": {
+              "description": "If true, return only active alarms. If false, return all alarms.",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_notifications": {
+      "function": {
+        "description": "Get notifications for the current user with optional filters. Returns a list of notification objects sorted from newest to oldest.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve notifications."
+        ],
+        "name": "get_notifications",
+        "parameters": {
+          "properties": {
+            "include_read": {
+              "description": "Whether to include notifications that have already been read. Defaults to false.",
+              "type": "boolean"
+            },
+            "limit": {
+              "description": "Maximum number of notifications to return. Defaults to 20.",
+              "type": "integer"
+            },
+            "priority": {
+              "description": "Optional filter to show notifications of a specific priority level.",
+              "enum": [
+                "low",
+                "normal",
+                "high"
+              ],
+              "type": "string"
+            },
+            "source": {
+              "description": "Optional filter to show notifications only from a specific source/environment.",
+              "type": "string"
+            },
+            "type": {
+              "description": "Optional filter to show notifications of a specific type (e.g., system, reminder, alert).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_reminders": {
+      "function": {
+        "description": "Get reminders for the current user with optional filters. Returns a list of reminder objects sorted by date and time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve reminders."
+        ],
+        "name": "get_reminders",
+        "parameters": {
+          "properties": {
+            "date_from": {
+              "description": "Optional filter for earliest reminder date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "date_to": {
+              "description": "Optional filter for latest reminder date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "status": {
+              "description": "Optional filter for reminder status.",
+              "enum": [
+                "pending",
+                "completed",
+                "cancelled"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "set_notification_preferences": {
+      "function": {
+        "description": "Set notification preferences for the current user, including do-not-disturb mode and device preferences.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to update preferences.",
+          "User not found: The specified user ID does not exist.",
+          "Device not found: The specified device endpoint does not exist."
+        ],
+        "name": "set_notification_preferences",
+        "parameters": {
+          "properties": {
+            "do_not_disturb": {
+              "description": "Whether do-not-disturb mode should be enabled. When enabled, only high priority notifications will be shown immediately.",
+              "type": "boolean"
+            },
+            "notification_sounds": {
+              "description": "Whether notification sounds should be played.",
+              "type": "boolean"
+            },
+            "preferred_device_endpoint": {
+              "description": "Optional device endpoint ID to use as the preferred device for notifications. Use 'None' to clear the preferred device.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  },
+  "TransactionEnv": {
+    "add_to_cart": {
+      "function": {
+        "description": "Add a product to the user's shopping cart. If the product is already in the cart, increases the quantity. Checks for stock availability before adding.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found: No product exists with the specified ID",
+          "Insufficient stock: The requested quantity exceeds available stock"
+        ],
+        "name": "add_to_cart",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to add to the cart.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "Quantity of the product to add (minimum 1). Defaults to 1 if not specified.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "cancel_order": {
+      "function": {
+        "description": "Cancel an existing order if it's in a cancellable state (pending or processing). If payment was made, it will be refunded.",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user",
+          "Cannot cancel: Orders that have been shipped, delivered, or already cancelled cannot be cancelled"
+        ],
+        "name": "cancel_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to cancel.",
+              "type": "string"
+            },
+            "reason": {
+              "description": "(Optional) Reason for cancellation.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "checkout": {
+      "function": {
+        "description": "Process checkout for the user's cart, creating an order and processing payment. Verifies stock availability, creates an order record, processes payment, and clears the cart.",
+        "error_cases": [
+          "No current user: Checkout requires a logged-in user",
+          "Empty cart: Cannot checkout with an empty cart",
+          "Invalid payment method: The specified payment method ID doesn't exist for the user",
+          "Invalid shipping address: The specified address ID doesn't exist for the user",
+          "Stock issues: Some products are no longer available in the requested quantities"
+        ],
+        "name": "checkout",
+        "parameters": {
+          "properties": {
+            "address_id": {
+              "description": "ID of the shipping address to use for the order.",
+              "type": "string"
+            },
+            "payment_method_id": {
+              "description": "ID of the payment method to use for the order.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "payment_method_id",
+            "address_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "clear_cart": {
+      "function": {
+        "description": "Remove all items from the user's shopping cart, resetting it to an empty state with zero total.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user"
+        ],
+        "name": "clear_cart",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_order_details": {
+      "function": {
+        "description": "Get detailed information about a specific order by its ID. Returns comprehensive order details including items purchased, payment information, and shipping status.",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user"
+        ],
+        "name": "get_order_details",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to retrieve details for.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_order_history": {
+      "function": {
+        "description": "Get the order history for the current user. Returns a list of the user's past orders, sorted by creation date (newest first).",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Invalid limit: Limit must be at least 1"
+        ],
+        "name": "get_order_history",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of orders to return. If not provided, all orders will be returned.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_product_details": {
+      "function": {
+        "description": "Get detailed information about a specific product by its ID. Returns comprehensive product details including description, price, stock availability, and images.",
+        "error_cases": [
+          "Missing product ID: The product ID parameter is not provided",
+          "Product not found: No product exists with the specified ID"
+        ],
+        "name": "get_product_details",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to retrieve details for. This ID is usually obtained from search_product results.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "remove_from_cart": {
+      "function": {
+        "description": "Remove a product from the user's shopping cart. Can remove a specific quantity or all instances of the product.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found in cart: The specified product is not in the user's cart"
+        ],
+        "name": "remove_from_cart",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to remove from the cart.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "(Optional) Quantity to remove. If not provided or if greater than the quantity in the cart, all instances of the product will be removed.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_product": {
+      "function": {
+        "description": "Search for products based on various criteria like name, category, and price range. Returns a list of products matching the search criteria.",
+        "error_cases": [
+          "Invalid price range: min_price > max_price",
+          "Invalid limit: limit < 1",
+          "Invalid sort option: sort_by must be one of the allowed values",
+          "No products found: No products match the search criteria"
+        ],
+        "name": "search_product",
+        "parameters": {
+          "properties": {
+            "category": {
+              "description": "(Optional) Filter products by specific category (e.g., 'electronics', 'smart_home', 'wearables').",
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of results to return. Defaults to 10.",
+              "type": "integer"
+            },
+            "max_price": {
+              "description": "(Optional) Maximum price filter. Products with prices above this value will be excluded.",
+              "type": "number"
+            },
+            "min_price": {
+              "description": "(Optional) Minimum price filter. Products with prices below this value will be excluded.",
+              "type": "number"
+            },
+            "query": {
+              "description": "(Optional) Search term to match against product names and descriptions.",
+              "type": "string"
+            },
+            "sort_by": {
+              "description": "(Optional) Sort results by: 'price' (lowest to highest), 'price_desc' (highest to lowest), 'rating' (highest rated first), or 'name' (alphabetical).",
+              "enum": [
+                "price",
+                "price_desc",
+                "rating",
+                "name"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "track_order": {
+      "function": {
+        "description": "Track the shipping status of a specific order. Provides current status, tracking number, and estimated delivery date if available.",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user",
+          "Not shipped: The order has not been shipped yet, so tracking information is limited"
+        ],
+        "name": "track_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to track.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "update_cart_quantity": {
+      "function": {
+        "description": "Update the quantity of a product in the user's shopping cart. Checks for stock availability before updating.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found: The specified product does not exist in the database",
+          "Product not in cart: The specified product is not in the user's cart",
+          "Insufficient stock: The requested quantity exceeds available stock"
+        ],
+        "name": "update_cart_quantity",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product in the cart to update.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "The new quantity to set for the product (minimum 1).",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id",
+            "quantity"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "view_cart": {
+      "function": {
+        "description": "View the current contents of the user's shopping cart. Shows all items, quantities, prices, and the total cart value.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user"
+        ],
+        "name": "view_cart",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

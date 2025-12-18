@@ -1,0 +1,801 @@
+{
+  "RealEnv": {
+    "broadcast_alert": {
+      "function": {
+        "description": "Broadcast an urgent alert to multiple users across various communication channels simultaneously. Designed for time-sensitive announcements that require immediate attention and potentially user acknowledgment.",
+        "name": "broadcast_alert",
+        "parameters": {
+          "properties": {
+            "action_url": {
+              "description": "Optional URL that users can click to take action related to the alert.",
+              "type": "string"
+            },
+            "broadcast_channels": {
+              "description": "Communication channels to use for alert delivery. Default is all available channels.",
+              "items": {
+                "enum": [
+                  "app",
+                  "email",
+                  "sms",
+                  "push"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "expiration": {
+              "description": "Time in seconds until the alert expires and is no longer shown to users. Default is 3600 (1 hour).",
+              "type": "integer"
+            },
+            "message": {
+              "description": "The detailed alert message content.",
+              "type": "string"
+            },
+            "require_acknowledgment": {
+              "description": "Whether users must acknowledge the alert before it can be dismissed.",
+              "type": "boolean"
+            },
+            "severity": {
+              "description": "Severity level of the alert, affecting delivery urgency and visual presentation.",
+              "enum": [
+                "minor",
+                "standard",
+                "critical",
+                "emergency"
+              ],
+              "type": "string"
+            },
+            "target_groups": {
+              "description": "List of user group IDs to target with the alert. If not provided, broadcasts to all users.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "title": {
+              "description": "The title of the alert.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "message"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "color_scene_set": {
+      "function": {
+        "description": "Apply a predefined color scene to all compatible lights in a room. This tool changes multiple lights to create coordinated lighting effects based on predefined scenes like 'Movie', 'Relax', or 'Energize'.",
+        "name": "color_scene_set",
+        "parameters": {
+          "properties": {
+            "room_id": {
+              "description": "Room identifier where the scene should be applied.",
+              "type": "string"
+            },
+            "scene_name": {
+              "description": "Name of the predefined scene to apply. Supported scenes include: Movie, Relax, Energize, Reading, Nightlight, Party, and Focus.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "room_id",
+            "scene_name"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "color_temperature_set": {
+      "function": {
+        "description": "Set the color temperature of one or more light devices. This tool adjusts lights along the white light spectrum from warm (yellowish) to cool (bluish) white, specified either in Kelvin or using descriptive terms.",
+        "name": "color_temperature_set",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to adjust. Each endpoint must correspond to a light device that supports color temperature adjustment.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "temperature": {
+              "description": "Color temperature as a numeric Kelvin value (2000-6500) or descriptive string ('warm', 'neutral', 'cool', 'daylight').",
+              "type": "string"
+            }
+          },
+          "required": [
+            "endpoints",
+            "temperature"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_calendar_event": {
+      "function": {
+        "description": "Create a new calendar event with specified start date/time, end date/time, and optional parameters like location, attendees, and recurrence pattern. Calendar events represent blocks of time in a user's schedule.",
+        "name": "create_calendar_event",
+        "parameters": {
+          "properties": {
+            "attendees": {
+              "description": "Optional list of user IDs to invite to the event.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "description": {
+              "description": "Optional detailed description or additional information about the event.",
+              "type": "string"
+            },
+            "end_date": {
+              "description": "Optional end date of the event in YYYY-MM-DD format. Defaults to start_date if not provided.",
+              "type": "string"
+            },
+            "end_time": {
+              "description": "Optional end time of the event in HH:MM:SS format. Defaults to 1 hour after start_time if not provided.",
+              "type": "string"
+            },
+            "location": {
+              "description": "Optional physical or virtual location of the event.",
+              "type": "string"
+            },
+            "notify_before_minutes": {
+              "description": "How many minutes before the event to send a notification. Defaults to 15 minutes.",
+              "type": "integer"
+            },
+            "recurrence": {
+              "description": "Optional recurrence pattern (e.g., 'DAILY', 'WEEKLY', 'MONTHLY', 'YEARLY').",
+              "type": "string"
+            },
+            "start_date": {
+              "description": "The start date of the event in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "start_time": {
+              "description": "The start time of the event in HH:MM:SS format (24-hour).",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the calendar event.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "start_date",
+            "start_time"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_timer": {
+      "function": {
+        "description": "Create a countdown timer that triggers after a specified duration. Timers are one-time or repeating events that count down from a duration rather than triggering at specific times.",
+        "name": "create_timer",
+        "parameters": {
+          "properties": {
+            "device_endpoint": {
+              "description": "Optional device endpoint to associate with the timer.",
+              "type": "string"
+            },
+            "duration": {
+              "description": "The duration of the timer in HH:MM:SS format.",
+              "type": "string"
+            },
+            "repeat": {
+              "description": "Whether the timer should automatically restart after completion.",
+              "type": "boolean"
+            },
+            "sound": {
+              "description": "Optional sound to use for the timer. Defaults to 'default'.",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the timer.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "duration"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "device_deactivate": {
+      "function": {
+        "description": "Deactivate one or more devices, putting them in a low-power state and stopping all processes. This tool completely deactivates devices, canceling any scheduled operations, stopping background processes, and putting devices in a specified power-saving mode. When a device is deactivated, it may require a longer startup time when reactivated compared to simply turning it back on after using power_off.",
+        "name": "device_deactivate",
+        "parameters": {
+          "properties": {
+            "deactivation_mode": {
+              "default": "standard",
+              "description": "Mode of deactivation: 'standard' (default) balances power savings with restart time, 'deep' maximizes power savings but increases restart time, 'temporary' optimizes for quick reactivation.",
+              "enum": [
+                "standard",
+                "deep",
+                "temporary"
+              ],
+              "type": "string"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to deactivate. Each endpoint must correspond to a device that supports the device_deactivate API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "fetch_notification_status": {
+      "function": {
+        "description": "Fetch delivery status and interaction metrics for notifications sent to users. Returns aggregated metrics and detailed status information for each notification.",
+        "name": "fetch_notification_status",
+        "parameters": {
+          "properties": {
+            "end_date": {
+              "description": "Optional filter for notifications sent before this date (ISO format).",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Maximum number of notification statuses to return. Defaults to 20.",
+              "type": "integer"
+            },
+            "notification_ids": {
+              "description": "Optional list of specific notification IDs to check. If not provided, checks all notifications.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "source": {
+              "description": "Optional filter to show status only for notifications from a specific source/environment.",
+              "type": "string"
+            },
+            "start_date": {
+              "description": "Optional filter for notifications sent after this date (ISO format).",
+              "type": "string"
+            },
+            "type": {
+              "description": "Optional filter to show status only for notifications of a specific type (e.g., system, reminder, alert).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "find_communication_device": {
+      "function": {
+        "description": "Find devices that support any communication features including messaging, calls, video, intercom functionality, etc. This tool searches for devices that can be used for any type of communication.",
+        "name": "find_communication_device",
+        "parameters": {
+          "properties": {
+            "communication_type": {
+              "description": "Optional filter by communication type ('call', 'message', 'intercom', etc.)",
+              "type": "string"
+            },
+            "device_name": {
+              "description": "Optional name or partial name to search for. If not provided, returns all communication devices.",
+              "type": "string"
+            },
+            "endpoint": {
+              "description": "Optional specific endpoint ID to find a particular device.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_calendar_events": {
+      "function": {
+        "description": "Get calendar events for the current user with optional filters. Returns a list of calendar event objects sorted by start date and time.",
+        "name": "get_calendar_events",
+        "parameters": {
+          "properties": {
+            "calendar_id": {
+              "description": "Optional filter for specific calendar.",
+              "type": "string"
+            },
+            "date_from": {
+              "description": "Optional filter for earliest event date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "date_to": {
+              "description": "Optional filter for latest event date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "event_type": {
+              "description": "Optional filter for event type.",
+              "enum": [
+                "meeting",
+                "appointment",
+                "personal",
+                "other"
+              ],
+              "type": "string"
+            },
+            "include_recurring": {
+              "description": "Whether to include recurring events (default: True).",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_content_details": {
+      "function": {
+        "description": "Get detailed information about a specific content item including publication status, rights management information, distribution channels, and type-specific metadata for content management purposes.",
+        "name": "get_content_details",
+        "parameters": {
+          "properties": {
+            "content_id": {
+              "description": "ID of the content item to get details for",
+              "type": "string"
+            }
+          },
+          "required": [
+            "content_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_device_inventory": {
+      "function": {
+        "description": "Get current stock levels and inventory information for smart home devices. This tool retrieves stock quantities, reorder points, supplier information, and stock location details for device inventory management. It's particularly useful for tracking device availability, managing stock levels, and planning procurement.",
+        "name": "get_device_inventory",
+        "parameters": {
+          "properties": {
+            "device_id": {
+              "description": "(Optional) The specific device ID to get stock information for. If provided, returns stock details for just this device model.",
+              "type": "string"
+            },
+            "warehouse_id": {
+              "description": "(Optional) The warehouse ID to get all device stock levels for. If provided without device_id, returns stock information for all devices in the warehouse.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "hvac_mode_set": {
+      "function": {
+        "description": "Set the operating mode of a central HVAC system. This tool changes how the entire home climate system operates, controlling air handlers, compressors, and zone controllers. Available modes include standard (normal operation), zoned (different settings per zone), circulation (fan only), dehumidify (moisture removal without cooling), and off (system disabled).",
+        "name": "hvac_mode_set",
+        "parameters": {
+          "properties": {
+            "hvac_mode": {
+              "description": "Mode to set for the HVAC system operation.",
+              "enum": [
+                "standard",
+                "zoned",
+                "circulation",
+                "dehumidify",
+                "off"
+              ],
+              "type": "string"
+            },
+            "system_id": {
+              "description": "ID of the central HVAC system to control.",
+              "type": "string"
+            },
+            "zone_settings": {
+              "description": "Optional settings for specific zones when in 'zoned' mode.",
+              "type": "object"
+            }
+          },
+          "required": [
+            "system_id",
+            "hvac_mode"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "initiate_call_session": {
+      "function": {
+        "description": "Initiate a call session with one or multiple participants. This tool creates a communication session that can include multiple participants and advanced features like recording and screen sharing.",
+        "name": "initiate_call_session",
+        "parameters": {
+          "properties": {
+            "call_type": {
+              "description": "Type of call to make. Default is 'audio'.",
+              "enum": [
+                "audio",
+                "video",
+                "conference"
+              ],
+              "type": "string"
+            },
+            "contact_id": {
+              "description": "ID of the contact to call (for single-party calls).",
+              "type": "string"
+            },
+            "device_endpoint": {
+              "description": "Endpoint ID of the device to use for calling. If not specified, a suitable device will be selected automatically.",
+              "type": "string"
+            },
+            "participants": {
+              "description": "List of participant IDs or phone numbers for multi-party calls.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "phone_number": {
+              "description": "Phone number to call (alternative to contact_id).",
+              "type": "string"
+            },
+            "session_features": {
+              "description": "List of features to enable for this call session.",
+              "items": {
+                "enum": [
+                  "recording",
+                  "transcription",
+                  "screen_sharing"
+                ],
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "session_name": {
+              "description": "Optional name for the call session.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "place_pickup_order": {
+      "function": {
+        "description": "Place a food pickup order from a restaurant. The order will be processed and prepared for customer pickup at the specified time.",
+        "name": "place_pickup_order",
+        "parameters": {
+          "properties": {
+            "items": {
+              "description": "List of items to order with their quantities and optional special instructions.",
+              "items": {
+                "properties": {
+                  "item_id": {
+                    "description": "The unique identifier of the menu item.",
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "description": "The quantity of this item to order.",
+                    "type": "integer"
+                  },
+                  "special_instructions": {
+                    "description": "(Optional) Special instructions for preparing this item.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "item_id",
+                  "quantity"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "pickup_time": {
+              "description": "The time when the customer will pick up the order.",
+              "format": "date-time",
+              "type": "string"
+            },
+            "restaurant_id": {
+              "description": "The unique identifier of the restaurant to order from.",
+              "type": "string"
+            },
+            "special_instructions": {
+              "description": "(Optional) General special instructions for the entire order.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "restaurant_id",
+            "items",
+            "pickup_time"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "place_restaurant_order": {
+      "function": {
+        "description": "Place a pre-order for dine-in with reservation at a restaurant. The order will be processed and prepared for the customer's arrival.",
+        "name": "place_restaurant_order",
+        "parameters": {
+          "properties": {
+            "gratuity_percentage": {
+              "description": "(Optional) Percentage of subtotal to add as gratuity. Defaults to 18%.",
+              "type": "number"
+            },
+            "items": {
+              "description": "List of items to pre-order with their quantities and optional special instructions.",
+              "items": {
+                "properties": {
+                  "item_id": {
+                    "description": "The unique identifier of the menu item.",
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "description": "The quantity of this item to order.",
+                    "type": "integer"
+                  },
+                  "special_instructions": {
+                    "description": "(Optional) Special instructions for preparing this item.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "item_id",
+                  "quantity"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "reservation_details": {
+              "description": "Details about the reservation.",
+              "properties": {
+                "party_size": {
+                  "description": "Number of people in the party.",
+                  "type": "integer"
+                },
+                "reservation_time": {
+                  "description": "The time of the reservation.",
+                  "format": "date-time",
+                  "type": "string"
+                },
+                "seating_preferences": {
+                  "description": "(Optional) Preferences for seating location.",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "reservation_time",
+                "party_size"
+              ],
+              "type": "object"
+            },
+            "restaurant_id": {
+              "description": "The unique identifier of the restaurant to order from.",
+              "type": "string"
+            },
+            "special_instructions": {
+              "description": "(Optional) General special instructions for the entire order.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "restaurant_id",
+            "items",
+            "reservation_details"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "schedule_action": {
+      "function": {
+        "description": "Schedule a specific action to occur at a given date and time. Unlike alarms which only notify, scheduled actions can perform operations like controlling devices or triggering automations.",
+        "name": "schedule_action",
+        "parameters": {
+          "properties": {
+            "action": {
+              "description": "Dictionary containing action details (type, parameters).",
+              "type": "object"
+            },
+            "date": {
+              "description": "The date when the action should execute in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "device_endpoint": {
+              "description": "Optional device endpoint to execute the action.",
+              "type": "string"
+            },
+            "recurring": {
+              "description": "Optional recurrence pattern (\"daily\", \"weekly\", \"monthly\", \"yearly\").",
+              "type": "string"
+            },
+            "time": {
+              "description": "The time when the action should execute in HH:MM:SS format.",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the scheduled action.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "time",
+            "date",
+            "action"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_contact_directory": {
+      "function": {
+        "description": "Search the organization-wide contact directory. This tool allows searching across all employees and external contacts in the organization directory based on various criteria.",
+        "name": "search_contact_directory",
+        "parameters": {
+          "properties": {
+            "department": {
+              "description": "Optional filter to limit results to a specific department.",
+              "type": "string"
+            },
+            "include_external": {
+              "description": "Whether to include external partners in results. Default is true.",
+              "type": "boolean"
+            },
+            "limit": {
+              "description": "Maximum number of contacts to return. Default is 20.",
+              "type": "integer"
+            },
+            "query": {
+              "description": "The search term to look for in the directory.",
+              "type": "string"
+            },
+            "search_type": {
+              "description": "What field to search in. Default is 'name'.",
+              "enum": [
+                "name",
+                "phone",
+                "email",
+                "position",
+                "department"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "send_chat_message": {
+      "function": {
+        "description": "Send a message to a chat room with multiple participants. This tool allows sending text and attachments to group conversations where multiple users can interact.",
+        "name": "send_chat_message",
+        "parameters": {
+          "properties": {
+            "attachments": {
+              "description": "Optional list of attachment objects.",
+              "items": {
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "chat_room_id": {
+              "description": "ID of the chat room to send the message to.",
+              "type": "string"
+            },
+            "content": {
+              "description": "The message content to send.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "chat_room_id",
+            "content"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "sync_messages": {
+      "function": {
+        "description": "Synchronize messages with the server. This tool performs two-way synchronization between the local message store and the server, updating both as needed. It can sync all messages or only messages for a specific contact.",
+        "name": "sync_messages",
+        "parameters": {
+          "properties": {
+            "contact_id": {
+              "description": "Optional ID of the contact to sync messages for. If not provided, all contacts' messages will be synchronized.",
+              "type": "string"
+            },
+            "force_full_sync": {
+              "description": "Whether to force a full synchronization instead of incremental. Default is false (incremental sync).",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "temperature_schedule": {
+      "function": {
+        "description": "Schedule a temperature setting for one or more thermostat devices. This tool creates or modifies temperature schedules without changing the current temperature. Temperature values are specified in degrees Celsius and will be automatically constrained to a reasonable range (10-32\u00b0C).",
+        "name": "temperature_schedule",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "Optional list of days to apply the schedule (e.g., [\"Monday\", \"Wednesday\", \"Friday\"]).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "end_time": {
+              "description": "Optional time to end the temperature setting (format: \"HH:MM\").",
+              "type": "string"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to schedule. Each endpoint must correspond to a thermostat device that supports the temperature_schedule API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "start_time": {
+              "description": "Time to start the temperature setting (format: \"HH:MM\").",
+              "type": "string"
+            },
+            "temperature": {
+              "description": "Temperature value to set in degrees Celsius. Values will be constrained to the range 10-32\u00b0C.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints",
+            "temperature",
+            "start_time"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

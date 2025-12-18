@@ -1,0 +1,81 @@
+Namespace(jsonl_file='/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_TransactionEnv_shopping_batch_scenario10_cart.jsonl', model='arn:aws:bedrock:us-east-1:587473322671:provisioned-model/claude37', output='../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_none_s0_irrelevantTRG/Conv_user3_TransactionEnv_shopping_batch_scenario10_cart_test_result.json', max_steps=15, timeout=130.0, model_id='us.anthropic.claude-3-7-sonnet-20250219-v1:0', enable_thinking=False, prompt_path='extracted_api/centralized_prompt_unclear.md', uncertainty_config='uncertainty_configs/none.yaml', teacher_forcing=False, turn_level_tf=True, target_functions_config='uncertainty_configs/target_functions_partially_irrelevant.yaml', verbose=True, force=False)
+================================================================================
+===================== Step-by-Step LLM API Evaluation Tool =====================
+================================================================================
+
+Initializing step-by-step evaluator...
+📝 Loading custom prompt from: extracted_api/centralized_prompt_unclear.md
+  ✓ SmartHomeEnv loaded and registered
+  ✓ InformationControlEnv loaded and registered
+  ✓ MediaControlEnv loaded and registered
+  ✓ TransactionEnv loaded and registered
+  ✓ CulinaryControlEnv loaded and registered
+  ✓ CommunicationController loaded and registered
+  ✓ TimeNotificationEnv loaded and registered
+Successfully loaded and registered 7 API environments
+✅ Loaded uncertainty config: uncertainty_configs/none.yaml
+🎯 Uncertainty Configuration: No Uncertainties
+📝 Description: Clean evaluation without any uncertainties - baseline configuration
+📁 Config Path: uncertainty_configs/none.yaml
+
+📊 Statistics:
+   Total APIs with uncertainties: 0
+   Total active environment variables: 0
+
+🔧 Enabled Uncertainty Types:
+🤖 Using custom model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+📝 Custom prompt: extracted_api/centralized_prompt_unclear.md
+Model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+Max steps per query: 15
+Step timeout: 130.0s
+
+⚠️  WARNING: No target functions found in conversation!
+📋 Available functions in conversation: ['add_to_cart', 'clear_cart', 'get_product_details', 'remove_from_cart', 'search_product', 'update_cart_quantity', 'view_cart']
+🎯 Target functions in config: ['find_call_device', 'get_call_history', 'get_messages', 'get_restaurant_menu', 'knowledge_lookup', 'search_recipes', 'stock_watchlist', 'weather_forecast']
+💡 Suggestion: Update target_functions.yaml to include some of the available functions
+🎯 Using Turn-Level Teacher Forcing evaluation mode
+Target config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+
+Evaluating JSONL file with Turn-Level Teacher Forcing: /home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_TransactionEnv_shopping_batch_scenario10_cart.jsonl
+Target functions config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+Target functions: ['find_call_device', 'get_call_history', 'get_messages', 'get_restaurant_menu', 'knowledge_lookup', 'search_recipes', 'stock_watchlist', 'weather_forecast']
+Extracted user ID: user3
+  ✓ Set user user3 for SmartHomeEnv
+  ✓ Set user user3 for InformationControlEnv
+  ✓ Set user user3 for MediaControlEnv
+  ✓ Set user user3 for TransactionEnv
+  ✓ Set user user3 for CulinaryControlEnv
+  ✓ Set user user3 for CommunicationController
+  ✓ Set user user3 for TimeNotificationEnv
+
+⚠️  WARNING: No target functions found in conversation!
+📋 Available functions in conversation: ['add_to_cart', 'clear_cart', 'get_product_details', 'remove_from_cart', 'search_product', 'update_cart_quantity', 'view_cart']
+🎯 Target functions in config: ['find_call_device', 'get_call_history', 'get_messages', 'get_restaurant_menu', 'knowledge_lookup', 'search_recipes', 'stock_watchlist', 'weather_forecast']
+💡 Suggestion: Update target_functions.yaml to include some of the available functions
+Found 0 target points
+    📸 Full state snapshot created (27 keys)
+📸 Created initial state snapshot for independence
+
+💾 Turn-Level TF results saved to: ../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_none_s0_irrelevantTRG
+
+============================================================
+============= STEP-BY-STEP EVALUATION SUMMARY ==============
+============================================================
+File: Conv_user3_TransactionEnv_shopping_batch_scenario10_cart.jsonl
+User ID: user3
+Total Queries: 0
+Successful Queries: 0
+Success Rate: 0.00%
+Overall Score: 0.00%
+
+Uncertainty Configuration: None (Clean evaluation)
+
+Turn-Level Teacher Forcing Metrics:
+  Total Prediction Steps: 0
+  Correct Predictions: 0
+  Prediction Accuracy: 0.00%
+
+============================================================
+===================== DETAILED RESULTS =====================
+============================================================
+================================================================================

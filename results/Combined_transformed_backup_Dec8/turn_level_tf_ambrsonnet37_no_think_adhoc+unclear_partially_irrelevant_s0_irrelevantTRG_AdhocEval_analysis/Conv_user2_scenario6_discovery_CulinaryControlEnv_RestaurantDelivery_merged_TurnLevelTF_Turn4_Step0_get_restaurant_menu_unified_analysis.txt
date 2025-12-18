@@ -1,0 +1,28 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user2_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user2_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+   User: user2
+   Domain: culinary
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Show me the menu for the restaurant
+   Expected:
+     🔍 get_restaurant_menu({"restaurant_id":"rest8"})
+   Actual:
+     🔍 get_restaurant_menu({"restaurant_id":"rest8"})
+     🔍 get_restaurant_menu({"restaurant_id":"rest8"})
+
+   Turn 2: ✅
+   Query: I'd like to order Pan-Seared Salmon from Taj Mahal and deliver it to 2091 Broadway, Miami, FL 33124
+   Expected:
+     🔄 place_delivery_order({"restaurant_id":"rest8","items":[{"item_id":"item5","quantity":1}],"delivery_address":{"street":"2091 Broadway","city":"Miami","state":"FL","zip":"33124"}})
+   Actual:
+     🔄 place_delivery_order({"restaurant_id":"rest8","items":[{"item_id":"item5","quantity":1}],"delivery_address":{"street":"2091 Broadway","city":"Miami","state":"FL","zip":"33124"},"tip_percentage":15})

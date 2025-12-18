@@ -1,0 +1,54 @@
+name: "System Failure Error Only"
+description: "Enable only system failure error uncertainties for focused technical terminology translation testing"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: false
+    apis: []
+    
+  INFORMATIONAL_NOTICE:
+    enabled: false
+    apis: []
+  
+  SYSTEM_FAILURE_ERROR:
+    enabled: true
+    apis:
+      - color_set
+      - get_user_inventory
+      - make_call
+      - place_delivery_order
+      - play
+      - send_message
+      - stock_price
+      - track_delivery_order
+      
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+
+metadata:
+  total_uncertainties: 8
+  creation_date: "2025-07-10"
+  use_case: "Focused evaluation of LLM technical terminology translation and infrastructure error communication skills"
+  domains_tested:
+    - "Telecommunications (make_call)"
+    - "Payment Processing (place_delivery_order)"
+    - "Message Queue Infrastructure (send_message)"
+    - "Smart Home Hub Systems (color_set)"
+    - "GPS/Mapping Services (track_delivery_order)"
+    - "Database Cluster Management (get_user_inventory)"
+    - "CDN Infrastructure (play)"
+    - "Financial Data Providers (stock_price)"
+  note: "Tests LLM ability to parse complex technical error messages and translate domain-specific infrastructure terminology into user-friendly explanations"

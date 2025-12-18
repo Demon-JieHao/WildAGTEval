@@ -1,0 +1,323 @@
+{
+  "TransactionEnv": {
+    "add_to_cart": {
+      "function": {
+        "description": "Add a product to the user's shopping cart. If the product is already in the cart, increases the quantity. Checks for stock availability before adding.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found: No product exists with the specified ID",
+          "Insufficient stock: The requested quantity exceeds available stock"
+        ],
+        "name": "add_to_cart",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to add to the cart.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "Quantity of the product to add (minimum 1). Defaults to 1 if not specified.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "cancel_order": {
+      "function": {
+        "description": "Cancel an existing order if it's in a cancellable state (pending or processing). If payment was made, it will be refunded.",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user",
+          "Cannot cancel: Orders that have been shipped, delivered, or already cancelled cannot be cancelled"
+        ],
+        "name": "cancel_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to cancel.",
+              "type": "string"
+            },
+            "reason": {
+              "description": "(Optional) Reason for cancellation.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "checkout": {
+      "function": {
+        "description": "Process checkout for the user's cart, creating an order and processing payment. Verifies stock availability, creates an order record, processes payment, and clears the cart.",
+        "error_cases": [
+          "No current user: Checkout requires a logged-in user",
+          "Empty cart: Cannot checkout with an empty cart",
+          "Invalid payment method: The specified payment method ID doesn't exist for the user",
+          "Invalid shipping address: The specified address ID doesn't exist for the user",
+          "Stock issues: Some products are no longer available in the requested quantities"
+        ],
+        "name": "checkout",
+        "parameters": {
+          "properties": {
+            "address_id": {
+              "description": "ID of the shipping address to use for the order.",
+              "type": "string"
+            },
+            "payment_method_id": {
+              "description": "ID of the payment method to use for the order.",
+              "type": "string"
+            },
+            "shipping_carrier": {
+              "description": "Shipping carrier to use for the order. Examples: UPS, DHL. Defaults to STD.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "clear_cart": {
+      "function": {
+        "description": "Remove all items from the user's shopping cart, resetting it to an empty state with zero total.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user"
+        ],
+        "name": "clear_cart",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_order_details": {
+      "function": {
+        "description": "Get detailed information about a specific order by its ID. Returns comprehensive order details including items purchased, and payment information",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user"
+        ],
+        "name": "get_order_details",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to retrieve details for.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_order_history": {
+      "function": {
+        "description": "Get the order history for the current user. Returns a list of the user's past orders, sorted by creation date (newest first).",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Invalid limit: Limit must be at least 1"
+        ],
+        "name": "get_order_history",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of orders to return. If not provided, all orders will be returned.",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_product_details": {
+      "function": {
+        "description": "Get detailed information about a specific product by its ID. Returns comprehensive product details including description, price, stock availability, and images.",
+        "error_cases": [
+          "Missing product ID: The product ID parameter is not provided",
+          "Product not found: No product exists with the specified ID"
+        ],
+        "name": "get_product_details",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to retrieve details for. This ID is usually obtained from search_product results.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "remove_from_cart": {
+      "function": {
+        "description": "Remove a product from the user's shopping cart. Can remove a specific quantity or all instances of the product.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found in cart: The specified product is not in the user's cart"
+        ],
+        "name": "remove_from_cart",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product to remove from the cart.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "(Optional) Quantity to remove. If not provided or if greater than the quantity in the cart, all instances of the product will be removed.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_product": {
+      "function": {
+        "description": "Search for products based on various criteria like name, category, and price range. Returns a list of products matching the search criteria.",
+        "error_cases": [
+          "Invalid price range: min_price > max_price",
+          "Invalid limit: limit < 1",
+          "Invalid sort option: sort_by must be one of the allowed values",
+          "No products found: No products match the search criteria"
+        ],
+        "name": "search_product",
+        "parameters": {
+          "properties": {
+            "category": {
+              "description": "(Optional) Filter products by specific category (e.g., 'electronics', 'smart_home', 'wearables').",
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of results to return. Defaults to 10.",
+              "type": "integer"
+            },
+            "max_price": {
+              "description": "(Optional) Maximum price filter. Products with prices above this value will be excluded.",
+              "type": "number"
+            },
+            "min_price": {
+              "description": "(Optional) Minimum price filter. Products with prices below this value will be excluded.",
+              "type": "number"
+            },
+            "query": {
+              "description": "(Optional) Search term to match against product names and descriptions.",
+              "type": "string"
+            },
+            "sort_by": {
+              "description": "(Optional) Sort results by: 'price' (lowest to highest), 'price_desc' (highest to lowest), 'rating' (highest rated first), or 'name' (alphabetical).",
+              "enum": [
+                "price",
+                "price_desc",
+                "rating",
+                "name"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "track_order": {
+      "function": {
+        "description": "Track the shipping status of a specific order. Provides current status, tracking number, and estimated delivery date if available.",
+        "error_cases": [
+          "No current user: Order operations require a logged-in user",
+          "Missing order ID: The order ID parameter is not provided",
+          "Order not found: No order exists with the specified ID for the current user",
+          "Not shipped: The order has not been shipped yet, so tracking information is limited"
+        ],
+        "name": "track_order",
+        "parameters": {
+          "properties": {
+            "order_id": {
+              "description": "The unique ID of the order to track.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "order_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "update_cart_quantity": {
+      "function": {
+        "description": "Update the quantity of a product in the user's shopping cart. Checks for stock availability before updating.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user",
+          "Missing product ID: The product ID parameter is not provided",
+          "Invalid quantity: Quantity must be at least 1",
+          "Product not found: The specified product does not exist in the database",
+          "Product not in cart: The specified product is not in the user's cart",
+          "Insufficient stock: The requested quantity exceeds available stock"
+        ],
+        "name": "update_cart_quantity",
+        "parameters": {
+          "properties": {
+            "product_id": {
+              "description": "The unique ID of the product in the cart to update.",
+              "type": "string"
+            },
+            "quantity": {
+              "description": "The new quantity to set for the product (minimum 1).",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "product_id",
+            "quantity"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "view_cart": {
+      "function": {
+        "description": "View the current contents of the user's shopping cart. Shows all items, quantities, prices, and the total cart value.",
+        "error_cases": [
+          "No current user: Cart operations require a logged-in user"
+        ],
+        "name": "view_cart",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user3_scenario8_NotificationCall_only_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario8_NotificationCall_only_exec.py",
+  "total_transforms": 5,
+  "successful_transforms": 5,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_notifications\", limit=4, include_read=False)",
+      "after": "invoke_tool(\"get_notifications\", limit=4, include_read=False)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 notification(s) (unread only)\", \"notifications\": [{\"notification_id\": \"notif1458\", \"user_id\": \"user3\", \"title\": \"Task Reminder\", \"message\": \"Don't forget to call Nancy Collins\", \"timestamp\": \"2025-06-10T19:54:26Z\", \"type\": \"reminder\", \"source\": \"CalendarApp\", \"read\": false, \"priority\": \"low\"}], \"_environment\": \"TimeNotificationEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"find_contact\", query='Nancy Collins', search_type='name', limit=1)",
+      "after": "invoke_tool(\"find_contact\", query='Nancy Collins', search_type='name', limit=1)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact34\", \"user_id\": \"user3\", \"name\": \"Nancy Collins\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"314-863-1141\"}], \"email\": \"nancy.collins@outlook.com\", \"is_favorite\": false, \"devices\": [\"device28\", \"device15\", \"device16\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"find_call_device\", )",
+      "after": "invoke_tool(\"find_call_device\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"61A\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home5\", \"state\": {\"power\": \"off\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"power_on\", endpoints=['61A'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['61A'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"61A\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"make_call\", phone_number='314-863-1141', call_type='audio', device_endpoint='61A')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:3148631141', call_type='audio', device_endpoint='61A')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:3148631141 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

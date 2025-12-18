@@ -1,0 +1,182 @@
+{
+  "movies": [
+    {
+      "id": "movie1",
+      "title": "The Matrix",
+      "type": "movie",
+      "year": 1999,
+      "duration": 8160,
+      "genre": [
+        "sci-fi",
+        "action"
+      ],
+      "services": [
+        "netflix",
+        "amazon"
+      ]
+    },
+    {
+      "id": "movie2",
+      "title": "Inception",
+      "type": "movie",
+      "year": 2010,
+      "duration": 8880,
+      "genre": [
+        "sci-fi",
+        "thriller"
+      ],
+      "services": [
+        "netflix",
+        "hbo"
+      ]
+    },
+    {
+      "id": "movie3",
+      "title": "The Shawshank Redemption",
+      "type": "movie",
+      "year": 1994,
+      "duration": 8520,
+      "genre": [
+        "drama"
+      ],
+      "services": [
+        "amazon",
+        "hbo"
+      ]
+    }
+  ],
+  "tv_shows": [
+    {
+      "id": "show1",
+      "title": "Stranger Things",
+      "type": "tv_show",
+      "seasons": 4,
+      "episodes": 42,
+      "episode_duration": 3000,
+      "genre": [
+        "sci-fi",
+        "horror"
+      ],
+      "services": [
+        "netflix"
+      ]
+    },
+    {
+      "id": "show2",
+      "title": "Game of Thrones",
+      "type": "tv_show",
+      "seasons": 8,
+      "episodes": 73,
+      "episode_duration": 3600,
+      "genre": [
+        "fantasy",
+        "drama"
+      ],
+      "services": [
+        "hbo"
+      ]
+    }
+  ],
+  "music": [
+    {
+      "id": "album1",
+      "title": "Thriller",
+      "type": "album",
+      "artist": "Michael Jackson",
+      "year": 1982,
+      "duration": 2538,
+      "tracks": 9,
+      "genre": [
+        "pop",
+        "funk"
+      ],
+      "services": [
+        "spotify",
+        "apple_music"
+      ]
+    },
+    {
+      "id": "song1",
+      "title": "Bohemian Rhapsody",
+      "type": "song",
+      "artist": "Queen",
+      "album": "A Night at the Opera",
+      "year": 1975,
+      "duration": 355,
+      "genre": [
+        "rock"
+      ],
+      "services": [
+        "spotify",
+        "amazon_music",
+        "apple_music"
+      ]
+    },
+    {
+      "id": "song2",
+      "title": "Hotel California",
+      "type": "song",
+      "artist": "Eagles",
+      "album": "Hotel California",
+      "year": 1976,
+      "duration": 391,
+      "genre": [
+        "rock"
+      ],
+      "services": [
+        "spotify",
+        "amazon_music",
+        "apple_music"
+      ]
+    },
+    {
+      "id": "song3",
+      "title": "Happy Birthday",
+      "type": "song",
+      "artist": "anon",
+      "album": "anon",
+      "year": 1976,
+      "duration": 391,
+      "genre": [
+        "kid"
+      ],
+      "services": [
+        "spotify",
+        "amazon_music",
+        "apple_music"
+      ]
+    }
+  ],
+  "streaming_services": [
+    {
+      "id": "netflix",
+      "name": "Netflix",
+      "type": "video"
+    },
+    {
+      "id": "hbo",
+      "name": "HBO Max",
+      "type": "video"
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon Prime Video",
+      "type": "video"
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "type": "audio"
+    },
+    {
+      "id": "apple_music",
+      "name": "Apple Music",
+      "type": "audio"
+    },
+    {
+      "id": "amazon_music",
+      "name": "Amazon Music",
+      "type": "audio"
+    }
+  ]
+}

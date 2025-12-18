@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user1_TransactionEnv_shopping_batch_scenario8_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user1_TransactionEnv_shopping_batch_scenario8_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"orders\": [{\"order_id\": \"ORDER0017\", \"created_at\": \"2025-06-16T10:08:25.710248Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"UPS\"}, {\"order_id\": \"PO0031\", \"created_at\": \"2025-06-06T07:09:25.710648Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0037\", \"created_at\": \"2025-06-03T16:44:25.710797Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"USPS\"}, {\"order_id\": \"PO0059\", \"created_at\": \"2025-05-30T03:24:25.711320Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"OnTrac\"}, {\"order_id\": \"PO0022\", \"created_at\": \"2025-05-26T20:03:25.710369Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"Amazon Logistics\"}, {\"order_id\": \"ORDER0001\", \"created_at\": \"2025-05-26T13:00:25.709729Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"ORDER0046\", \"created_at\": \"2025-05-24T15:36:25.711009Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"OnTrac\"}], \"message\": \"Found 7 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='PO0031')",
+      "after": "invoke_tool(\"get_order_details\", order_id='PO0031')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"PO0031\", \"user_id\": \"user1\", \"items\": [{\"product_id\": \"prod12\", \"name\": \"Smart Wireless Headphones\", \"quantity\": 1, \"price\": 204.99, \"subtotal\": 204.99}, {\"product_id\": \"prod2\", \"name\": \"Easy Air Purifier\", \"quantity\": 2, \"price\": 1179.99, \"subtotal\": 2359.98}], \"totals\": {\"subtotal\": 2564.9700000000003, \"tax\": 294.21, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 2859.18}, \"payment\": {\"method_id\": \"pm1\", \"method_type\": \"apple_pay\", \"last4\": \"6630\", \"amount\": 2859.18, \"currency\": \"USD\", \"transaction_id\": \"tx591307\", \"status\": \"cancelled\"}, \"created_at\": \"2025-06-06T07:09:25.710648Z\", \"notes\": \"Leave at front door\"}, \"message\": \"Retrieved details for order PO0031\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='PO0031')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-0031')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-0031\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod12', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod12', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod12\", \"name\": \"Smart Wireless Headphones\", \"quantity\": 1, \"price\": 204.99}, \"cart_total\": 204.99, \"message\": \"Added 1 x 'Smart Wireless Headphones' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

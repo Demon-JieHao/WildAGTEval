@@ -1,0 +1,239 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario7_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user1_scenario7_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What's Adobe known for?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "adobe_inc"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "adobe_inc"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "adobe_inc"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"adobe_inc\", \"definition\": \"Adobe Inc. (symbol: ADBE) is a multinational computer software company known for creative and multimedia software products including Photoshop, Illustrator, Premiere Pro, and Acrobat PDF. It has transitioned to a subscription-based model with Creative Cloud.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:45:44.098737",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Adobe Inc. is a multinational computer software company best known for its creative and multimedia software products. Their flagship products include:\n\n1. Photoshop - for image editing and manipulation\n2. Illustrator - for vector graphics and illustration\n3. Premiere Pro - for video editing\n4. Acrobat PDF - for document management\n\nAdobe has transitioned from selling individual software licenses to a subscription-based model called Creative Cloud, which provides access to their suite of creative applications and services.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Adobe Inc. is a multinational computer software company best known for its creative and multimedia software products. Their flagship products include:\n\n1. Photoshop - for image editing and manipulation\n2. Illustrator - for vector graphics and illustration\n3. Premiere Pro - for video editing\n4. Acrobat PDF - for document management\n\nAdobe has transitioned from selling individual software licenses to a subscription-based model called Creative Cloud, which provides access to their suite of creative applications and services.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:15:04.700310",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:26:31.103034",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:ADBE"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll check the current stock price for Adobe Inc. for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:ADBE\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll check the current stock price for Adobe Inc. for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:ADBE\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:ADBE"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:ADBE"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"ADBE\", \"name\": \"Adobe Inc.\", \"price\": 466.04, \"change\": 5.87, \"change_percent\": 1.28}, \"formatted\": \"ADBE: $466.04 (5.87 / 1.28%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 314.6986997127533,
+          "timestamp": "2025-08-21T19:20:19.399053",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:ADBE"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Adobe's current stock price is $466.04, up $5.87 (1.28%) today.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Adobe's current stock price is $466.04, up $5.87 (1.28%) today.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 371.70351338386536,
+          "timestamp": "2025-08-21T19:26:31.102746",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:26:31.104246"
+}

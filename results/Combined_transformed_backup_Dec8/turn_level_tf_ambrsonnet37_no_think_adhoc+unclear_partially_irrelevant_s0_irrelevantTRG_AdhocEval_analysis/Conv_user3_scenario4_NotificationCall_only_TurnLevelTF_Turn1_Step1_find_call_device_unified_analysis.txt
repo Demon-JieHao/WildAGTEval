@@ -1,0 +1,31 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user3_scenario4_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user3_scenario4_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+   User: user3
+   Domain: smarthome
+   Status: ❌ FAIL
+   Total Turns: 1
+   Successful Turns: 0
+   Turn Success Rate: 0.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 1
+   Query Warnings: 0
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ❌
+   Query: Oh I nearly forgot about it. Call the person.
+   Expected:
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["61A"]})
+     🔄 make_call({"phone_number":"D:3148631141","call_type":"audio","device_endpoint":"61A"})
+   Actual:
+     🔍 find_contact({"query":"Nancy Collins","search_type":"name","limit":1})
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["61A"]})
+     🔄 make_call({"phone_number":"D:3148631141","device_endpoint":"61A"})
+   Failure: Incorrect side-effect APIs: make_call (ad-hoc: 3 consecutive failures)
+   Incorrect Side-Effects: make_call (ad-hoc: 3 consecutive failures)

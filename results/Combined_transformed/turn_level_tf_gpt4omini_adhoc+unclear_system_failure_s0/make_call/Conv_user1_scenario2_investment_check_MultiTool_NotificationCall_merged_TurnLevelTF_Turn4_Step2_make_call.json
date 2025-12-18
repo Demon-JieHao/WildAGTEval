@@ -1,0 +1,699 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user1",
+  "model": "gpt-4o-mini",
+  "uncertainty_config": {
+    "config_name": "System Failure Error Only",
+    "config_description": "Enable only system failure error uncertainties for focused technical terminology translation testing",
+    "config_path": "uncertainty_configs/system_failure_make_call.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 9,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0,
+        "SYSTEM_FAILURE_ERROR": 1,
+        "ADHOC": 8
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": [],
+        "SYSTEM_FAILURE_ERROR": [
+          "make_call"
+        ],
+        "ADHOC": [
+          "make_call",
+          "track_order",
+          "lock_lock",
+          "lock_unlock",
+          "color_set",
+          "get_call_history",
+          "play",
+          "stock_price"
+        ]
+      }
+    },
+    "enabled_uncertainty_types": [
+      "SYSTEM_FAILURE_ERROR",
+      "ADHOC"
+    ]
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 0.0,
+  "avg_parameter_accuracy": 0.0,
+  "overall_score": 0.3333333333333333,
+  "step_by_step_metrics": {
+    "total_steps": 18,
+    "total_api_steps": 18,
+    "avg_steps_per_query": 18.0,
+    "avg_api_steps_per_query": 18.0,
+    "avg_step_efficiency": 0.05555555555555555
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 18,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Call the last person I talked to",
+      "expected_api_sequence": [
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:8164618624",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_call_device",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\", \"state\": {\"power\": \"off\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:50.836112",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "power_on",
+              "params": {
+                "endpoints": [
+                  "17"
+                ]
+              }
+            }
+          },
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:50.847440",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:8164618624",
+                "call_type": "audio",
+                "device_endpoint": "17"
+              }
+            }
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:8164618624",
+              "call_type": "audio",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:50.858856",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:53.446019",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 5,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:55.315338",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:57.449181",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 7,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:39:59.353903",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 8,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:01.248913",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 9,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:03.102370",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 10,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:04.971255",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 11,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:06.772274",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 12,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:08.619154",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 13,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:10.413491",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 14,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:12.308824",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 15,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:14.381339",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 16,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:16.339679",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 17,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:19.079579",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 18,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550123\",\n    \"device_endpoint\": \"17\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550123",
+                "device_endpoint": "17"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550123",
+              "device_endpoint": "17"
+            }
+          },
+          "api_result": "{\"success\": false, \"error\": \"CARRIER_INTERCONNECT_CONGESTION\", \"message\": \"Carrier interconnect congestion detected: AT&T peering point at IX-EAST showing 487 'Request Terminated' responses, SIP OPTIONS keepalive failing on 8/10 trunks, ENUM lookup timeout for E.164 resolution via e164.arpa nameservers, estimated queue depth >5000 calls pending LCR routing decision\", \"trace_id\": \"7654321-5678-9012\", \"interconnect_status\": {\"carrier\": \"AT&T\", \"peering_point\": \"IX-EAST\", \"trunk_utilization\": \"97%\", \"rejected_calls_5min\": 1247, \"enum_servers\": [\"ns1.e164.arpa\", \"ns2.e164.arpa\"], \"lcr_queue_depth\": 5432}}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T17:40:20.887464",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.9444444444444444,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 18,
+        "api_steps": 18,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 0.05555555555555555,
+        "api_efficiency": 0.05555555555555555,
+        "api_success_rate": 0.1111111111111111,
+        "task_completed": false,
+        "inference_path": [
+          "gt_execution",
+          "gt_execution",
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call"
+        ],
+        "total_prediction_steps": 18,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-12-13T17:40:20.919894",
+      "target_function": "make_call",
+      "target_location": "Turn 4, Step 2",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-12-13T17:40:49.401658"
+}

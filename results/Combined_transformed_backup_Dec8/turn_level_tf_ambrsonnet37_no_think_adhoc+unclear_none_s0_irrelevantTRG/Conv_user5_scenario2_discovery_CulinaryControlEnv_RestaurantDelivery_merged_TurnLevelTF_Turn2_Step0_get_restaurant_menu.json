@@ -1,0 +1,292 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user5_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user5",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What food options does it have?",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest8"
+          },
+          "description": "Get menu for Taj Mahal"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest8"
+              },
+              "description": "Get menu for Taj Mahal"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest8"
+            },
+            "description": "Get menu for Taj Mahal"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for Taj Mahal\", \"restaurant_id\": \"rest8\", \"restaurant_name\": \"Taj Mahal\", \"description\": \"Authentic indian cuisine with traditional flavors\", \"price_range\": \"$$\", \"rating\": 4.5, \"cuisine_types\": [\"Indian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 10.0, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 9.48, \"category\": \"Appetizers\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.56, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 18.99, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.43, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.13, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:21:04.026676",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I can see that Taj Mahal is an Indian restaurant with a 4.5 rating and offers the following menu items:\n\nAppetizers:\n- House Salad ($10.00): Mixed greens with house dressing\n- Soup of the Day ($9.48): Chef's daily soup selection (dairy-free)\n- Bread Basket ($6.56): Assorted breads with butter\n\nMain Course:\n- Grilled Chicken ($18.99): Seasoned chicken breast with vegetables\n- Pan-Seared Salmon ($24.43): Fresh salmon with lemon herb sauce\n- Ribeye Steak ($34.13): Grilled steak with choice of sides\n\nWould you like me to find more authentic Indian restaurants with different menu options? The current menu seems to have more international dishes rather than traditional Indian cuisine.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I can see that Taj Mahal is an Indian restaurant with a 4.5 rating and offers the following menu items:\n\nAppetizers:\n- House Salad ($10.00): Mixed greens with house dressing\n- Soup of the Day ($9.48): Chef's daily soup selection (dairy-free)\n- Bread Basket ($6.56): Assorted breads with butter\n\nMain Course:\n- Grilled Chicken ($18.99): Seasoned chicken breast with vegetables\n- Pan-Seared Salmon ($24.43): Fresh salmon with lemon herb sauce\n- Ribeye Steak ($34.13): Grilled steak with choice of sides\n\nWould you like me to find more authentic Indian restaurants with different menu options? The current menu seems to have more international dishes rather than traditional Indian cuisine.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:21:43.005855",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:38:42.356031",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 2, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'd like to order Ribeye Steak from Taj Mahal and deliver it to 2152 First Ave, Houston, TX 77052",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest8",
+            "items": [
+              {
+                "item_id": "item6",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "2152 First Ave",
+              "city": "Houston",
+              "state": "TX",
+              "zip": "77052"
+            }
+          },
+          "description": "Place delivery order from Taj Mahal"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for you from Taj Mahal. Let me set that up right away.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest8\",\n    \"items\": [\n      {\n        \"item_id\": \"item6\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2152 First Ave\",\n      \"city\": \"Houston\",\n      \"state\": \"TX\",\n      \"zip\": \"77052\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for you from Taj Mahal. Let me set that up right away.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest8\",\n    \"items\": [\n      {\n        \"item_id\": \"item6\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2152 First Ave\",\n      \"city\": \"Houston\",\n      \"state\": \"TX\",\n      \"zip\": \"77052\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest8",
+                "items": [
+                  {
+                    "item_id": "item6",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "2152 First Ave",
+                  "city": "Houston",
+                  "state": "TX",
+                  "zip": "77052"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest8",
+              "items": [
+                {
+                  "item_id": "item6",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2152 First Ave",
+                "city": "Houston",
+                "state": "TX",
+                "zip": "77052"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"order_time\": \"2025-08-21T20:31:53Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 34.13, \"tax\": 2.99, \"delivery_fee\": 5.99, \"tip\": 5.12, \"total\": 48.23, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 610.4700794219971,
+          "timestamp": "2025-08-21T20:31:53.475980",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest8",
+              "items": [
+                {
+                  "item_id": "item6",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2152 First Ave",
+                "city": "Houston",
+                "state": "TX",
+                "zip": "77052"
+              }
+            },
+            "description": "Place delivery order from Taj Mahal"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Great! I've placed your delivery order for Ribeye Steak from Taj Mahal. \n\nYour order details:\n- Order ID: dorder1\n- Restaurant: Taj Mahal\n- Status: Order placed\n- Subtotal: $34.13\n- Tax: $2.99\n- Delivery Fee: $5.99\n- Tip: $5.12\n- Total: $48.23\n\nYour food will be delivered to 2152 First Ave, Houston, TX 77052. You can track the status of your delivery using the order ID if needed.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Great! I've placed your delivery order for Ribeye Steak from Taj Mahal. \n\nYour order details:\n- Order ID: dorder1\n- Restaurant: Taj Mahal\n- Status: Order placed\n- Subtotal: $34.13\n- Tax: $2.99\n- Delivery Fee: $5.99\n- Tip: $5.12\n- Total: $48.23\n\nYour food will be delivered to 2152 First Ave, Houston, TX 77052. You can track the status of your delivery using the order ID if needed.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 408.8793888092041,
+          "timestamp": "2025-08-21T20:38:42.355621",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 3,
+      "related_to_target": "Turn 2, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:38:42.358014"
+}

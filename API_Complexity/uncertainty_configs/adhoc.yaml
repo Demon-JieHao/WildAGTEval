@@ -1,0 +1,32 @@
+name: "Adhoc Only"
+description: "Enable ADHOC RULEs uncertainties - tests LLM information filtering"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: false
+    apis: []
+    
+  INFORMATIONAL_NOTICE:
+    enabled: false
+    apis: []
+  
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+
+metadata:
+  total_uncertainties: 8
+  creation_date: "2025-07-09"
+  use_case: "Test LLM ability to filter relevant information from cluttered responses"

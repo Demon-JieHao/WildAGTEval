@@ -1,0 +1,52 @@
+[
+  {
+    "reminder_id": "reminder1",
+    "user_id": "user1",
+    "title": "Doctor Appointment",
+    "description": "Annual checkup with Dr. Johnson",
+    "date": "2025-06-15",
+    "time": "14:30:00",
+    "notify_before_minutes": 30,
+    "status": "pending"
+  },
+  {
+    "reminder_id": "reminder2", 
+    "user_id": "user2",
+    "title": "Pay Bills",
+    "description": "Electricity and water bills",
+    "date": "2025-06-20",
+    "time": "10:00:00",
+    "notify_before_minutes": 1440,
+    "status": "pending"
+  },
+  {
+    "reminder_id": "reminder3",
+    "user_id": "user1",
+    "title": "Team Meeting",
+    "description": "Weekly sprint planning",
+    "date": "2025-06-16",
+    "time": "09:00:00",
+    "notify_before_minutes": 15,
+    "status": "pending"
+  },
+  {
+    "reminder_id": "reminder4",
+    "user_id": "user1",
+    "title": "Pick up groceries",
+    "description": "Get items for Saturday dinner",
+    "date": "2025-06-14",
+    "time": "17:00:00",
+    "notify_before_minutes": 60,
+    "status": "pending"
+  },
+  {
+    "reminder_id": "reminder5",
+    "user_id": "user2",
+    "title": "Call mom",
+    "description": "Birthday wishes",
+    "date": "2025-06-18",
+    "time": "18:00:00",
+    "notify_before_minutes": 120,
+    "status": "pending"
+  }
+]

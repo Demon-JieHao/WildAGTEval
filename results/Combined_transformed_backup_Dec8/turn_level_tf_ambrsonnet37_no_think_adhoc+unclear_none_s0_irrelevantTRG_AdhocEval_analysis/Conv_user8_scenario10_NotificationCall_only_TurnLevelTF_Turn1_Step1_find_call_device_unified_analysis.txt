@@ -1,0 +1,25 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user8_scenario10_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user8_scenario10_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+   User: user8
+   Domain: smarthome
+   Status: ✅ PASS
+   Total Turns: 1
+   Successful Turns: 1
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Oh I nearly forgot about it. Call the person.
+   Expected:
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["61"]})
+     🔄 make_call({"phone_number":"D:9043225267","call_type":"audio","device_endpoint":"61"})
+   Actual:
+     🔍 find_contact({"query":"Lisa Baker","search_type":"name","limit":1})
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["61"]})
+     🔄 make_call({"phone_number":"D:9043225267","device_endpoint":"61"})

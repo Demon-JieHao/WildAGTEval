@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref50/Conv_user10_scenario7_RestaurantDelivery_only_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref50_transformed/Conv_user10_scenario7_RestaurantDelivery_only_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='American', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='American', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"American\"], \"results\": [{\"restaurant_id\": \"rest4\", \"name\": \"The Burger Joint\", \"location\": \"2603 Madison St, Chicago, IL 21597\", \"cuisine_types\": [\"American\"], \"price_range\": \"$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest17\", \"name\": \"Stars & Stripes\", \"location\": \"2431 Lincoln Blvd, Chicago, IL 87438\", \"cuisine_types\": [\"American\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest20\", \"name\": \"Route 66 Diner\", \"location\": \"2731 Cedar Ave, Miami, FL 58545\", \"cuisine_types\": [\"American\"], \"price_range\": \"$\", \"rating\": 4.0, \"delivery_available\": true, \"menu_item_count\": 8}], \"message\": \"Found 3 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest4')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest4')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for The Burger Joint\", \"restaurant_id\": \"rest4\", \"restaurant_name\": \"The Burger Joint\", \"description\": \"Family-friendly american restaurant with a welcoming atmosphere\", \"price_range\": \"$$$\", \"rating\": 4.6, \"cuisine_types\": [\"American\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"description\": \"Tortilla chips with cheese and jalape\\u00f1os\", \"price\": 12.3, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Onion Rings\", \"description\": \"Beer-battered onion rings with ranch\", \"price\": 11.1, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Buffalo Wings\", \"description\": \"Spicy chicken wings with blue cheese\", \"price\": 11.82, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item4\", \"name\": \"Mozzarella Sticks\", \"description\": \"Fried cheese sticks with marinara\", \"price\": 11.73, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Fried Chicken\", \"description\": \"Crispy fried chicken with mashed potatoes\", \"price\": 18.77, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"BBQ Ribs\", \"description\": \"Slow-cooked ribs with BBQ sauce\", \"price\": 23.89, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Classic Burger\", \"description\": \"Beef patty with lettuce, tomato, onion\", \"price\": 15.21, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item8\", \"name\": \"Fish and Chips\", \"description\": \"Beer-battered fish with french fries\", \"price\": 18.44, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Philly Cheesesteak\", \"description\": \"Sliced steak with peppers and cheese\", \"price\": 14.88, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest4', items=[{'item_id': 'item1', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '3497 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75246'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest4', items=[{'item_id': 'item1', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '3497 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75246'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"order_time\": \"2025-08-02T04:11:23Z\", \"status\": \"placed\", \"items_count\": 2, \"subtotal\": 36.19, \"tax\": 3.17, \"delivery_fee\": 5.99, \"tip\": 5.43, \"total\": 50.78, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-02T04:11:23Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

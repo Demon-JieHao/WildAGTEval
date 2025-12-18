@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user1_TransactionEnv_shopping_batch_scenario5_shopping_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user1_TransactionEnv_shopping_batch_scenario5_shopping_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='wireless earbuds', category='wearables', sort_by='price', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='wireless earbuds', category='wearables', sort_by='price', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 4, \"categories\": [\"wearables\"], \"results\": [{\"product_id\": \"prod41\", \"name\": \"Vital Wireless Earbuds\", \"price\": 44.55, \"category\": \"wearables\", \"stock\": 73}, {\"product_id\": \"prod57\", \"name\": \"Health Wireless Earbuds\", \"price\": 76.6, \"category\": \"wearables\", \"stock\": 118}, {\"product_id\": \"prod31\", \"name\": \"Sync Wireless Earbuds\", \"price\": 86.71, \"category\": \"wearables\", \"stock\": 88}, {\"product_id\": \"prod14\", \"name\": \"Vital Wireless Earbuds\", \"price\": 379.99, \"category\": \"wearables\", \"stock\": 72}], \"message\": \"Found 4 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod41')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod41')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod41\", \"name\": \"Vital Wireless Earbuds\", \"description\": \"Reliable wireless earbuds with waterproof, fitness-tracking, GPS-enabled\", \"price\": 44.55, \"category\": \"wearables\", \"stock\": 73, \"rating\": 3.6, \"images\": [\"wireless_earbuds_1.jpg\", \"wireless_earbuds_2.jpg\"]}, \"message\": \"Retrieved details for 'Vital Wireless Earbuds'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod57')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod57')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod57\", \"name\": \"Health Wireless Earbuds\", \"description\": \"Experience the latest in wireless earbuds technology with heart-rate, fitness-tracking, GPS-enabled\", \"price\": 76.6, \"category\": \"wearables\", \"stock\": 118, \"rating\": 4.7, \"images\": [\"wireless_earbuds_1.jpg\", \"wireless_earbuds_2.jpg\", \"wireless_earbuds_3.jpg\", \"wireless_earbuds_4.jpg\"]}, \"message\": \"Retrieved details for 'Health Wireless Earbuds'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod31')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod31')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod31\", \"name\": \"Sync Wireless Earbuds\", \"description\": \"Reliable wireless earbuds featuring waterproof, GPS-enabled\", \"price\": 86.71, \"category\": \"wearables\", \"stock\": 88, \"rating\": 4.1, \"images\": [\"wireless_earbuds_1.jpg\", \"wireless_earbuds_2.jpg\", \"wireless_earbuds_3.jpg\", \"wireless_earbuds_4.jpg\"]}, \"message\": \"Retrieved details for 'Sync Wireless Earbuds'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod14')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod14')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod14\", \"name\": \"Vital Wireless Earbuds\", \"description\": \"Advanced wireless earbuds with GPS-enabled, heart-rate for modern homes\", \"price\": 379.99, \"category\": \"wearables\", \"stock\": 72, \"rating\": 4.4, \"images\": [\"wireless_earbuds_1.jpg\", \"wireless_earbuds_2.jpg\", \"wireless_earbuds_3.jpg\"]}, \"message\": \"Retrieved details for 'Vital Wireless Earbuds'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod41', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod41', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod41\", \"name\": \"Vital Wireless Earbuds\", \"quantity\": 1, \"price\": 44.55}, \"cart_total\": 44.55, \"message\": \"Added 1 x 'Vital Wireless Earbuds' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod41\", \"name\": \"Vital Wireless Earbuds\", \"quantity\": 1, \"price\": 44.55, \"added_at\": \"2025-07-30T18:26:11Z\"}], \"total\": 44.55}, \"item_count\": 1, \"message\": \"Cart has 1 items with a total of $44.55\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"checkout\", )",
+      "after": "invoke_tool(\"checkout\", )",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"total\": 44.55, \"status\": \"processing\", \"items_count\": 1, \"message\": \"Order order1 created successfully. Your payment of $44.55 has been processed. Your order will be shipped via STD.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"cancel_order\", order_id='order1', reason='Changed my mind')",
+      "after": "invoke_tool(\"cancel_order\", order_id='order1', reason='Changed my mind')",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"status\": \"cancelled\", \"refunded\": true, \"message\": \"Order order1 has been cancelled and payment has been refunded.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

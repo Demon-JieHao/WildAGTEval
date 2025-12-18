@@ -1,0 +1,853 @@
+[
+  {
+    "alarm_id": "alarm1",
+    "user_id": "user1",
+    "title": "Pills Reminder",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "soft",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm2",
+    "user_id": "user1",
+    "title": "Get Up",
+    "time": "08:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "birds",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm3",
+    "user_id": "user1",
+    "title": "Get Up",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday"
+    ],
+    "active": false,
+    "sound": "gentle",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm4",
+    "user_id": "user1",
+    "title": "Morning Call",
+    "time": "07:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": false,
+    "sound": "chimes",
+    "device_endpoint": "12"
+  },
+  {
+    "alarm_id": "alarm5",
+    "user_id": "user2",
+    "title": "Hobby Time",
+    "time": "21:00:00",
+    "days": [
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "calm",
+    "device_endpoint": "8"
+  },
+  {
+    "alarm_id": "alarm6",
+    "user_id": "user2",
+    "title": "Wake Up",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": false,
+    "sound": "chimes",
+    "device_endpoint": "10"
+  },
+  {
+    "alarm_id": "alarm7",
+    "user_id": "user2",
+    "title": "Get Up",
+    "time": "06:30:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "birds",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm8",
+    "user_id": "user2",
+    "title": "Fitness",
+    "time": "06:00:00",
+    "days": [
+      "tuesday",
+      "thursday"
+    ],
+    "active": false,
+    "sound": "motivational",
+    "device_endpoint": "12"
+  },
+  {
+    "alarm_id": "alarm9",
+    "user_id": "user2",
+    "title": "Exercise Time",
+    "time": "18:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "energetic",
+    "device_endpoint": "8"
+  },
+  {
+    "alarm_id": "alarm10",
+    "user_id": "user3",
+    "title": "Work Start",
+    "time": "17:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "bell",
+    "device_endpoint": "17"
+  },
+  {
+    "alarm_id": "alarm11",
+    "user_id": "user3",
+    "title": "Wake Up",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm12",
+    "user_id": "user3",
+    "title": "Personal Time",
+    "time": "21:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": false,
+    "sound": "peaceful",
+    "device_endpoint": "12"
+  },
+  {
+    "alarm_id": "alarm13",
+    "user_id": "user4",
+    "title": "Call Family",
+    "time": "20:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "calm",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm14",
+    "user_id": "user4",
+    "title": "End of Day",
+    "time": "13:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm15",
+    "user_id": "user4",
+    "title": "Health Reminder",
+    "time": "12:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "13"
+  },
+  {
+    "alarm_id": "alarm16",
+    "user_id": "user4",
+    "title": "Meeting Reminder",
+    "time": "09:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "default",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm17",
+    "user_id": "user4",
+    "title": "Morning Call",
+    "time": "06:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm18",
+    "user_id": "user4",
+    "title": "Lunch Break",
+    "time": "08:45:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "7"
+  },
+  {
+    "alarm_id": "alarm19",
+    "user_id": "user5",
+    "title": "Take Medication",
+    "time": "21:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "17"
+  },
+  {
+    "alarm_id": "alarm20",
+    "user_id": "user5",
+    "title": "Morning Call",
+    "time": "08:30:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "7"
+  },
+  {
+    "alarm_id": "alarm21",
+    "user_id": "user5",
+    "title": "Fitness",
+    "time": "19:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "motivational",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm22",
+    "user_id": "user5",
+    "title": "Medicine Time",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm23",
+    "user_id": "user5",
+    "title": "Running Time",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "wednesday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "energetic",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm24",
+    "user_id": "user5",
+    "title": "Fitness",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "energetic",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm25",
+    "user_id": "user6",
+    "title": "Rise and Shine",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday"
+    ],
+    "active": false,
+    "sound": "gentle",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm26",
+    "user_id": "user6",
+    "title": "Workout",
+    "time": "17:30:00",
+    "days": [
+      "tuesday",
+      "thursday"
+    ],
+    "active": false,
+    "sound": "energetic",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm27",
+    "user_id": "user7",
+    "title": "Morning Call",
+    "time": "08:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "16"
+  },
+  {
+    "alarm_id": "alarm28",
+    "user_id": "user7",
+    "title": "Morning Call",
+    "time": "07:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "birds",
+    "device_endpoint": "16"
+  },
+  {
+    "alarm_id": "alarm29",
+    "user_id": "user7",
+    "title": "Lunch Break",
+    "time": "18:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "default",
+    "device_endpoint": "17"
+  },
+  {
+    "alarm_id": "alarm30",
+    "user_id": "user7",
+    "title": "Wake Up",
+    "time": "07:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "7"
+  },
+  {
+    "alarm_id": "alarm31",
+    "user_id": "user8",
+    "title": "Take Medication",
+    "time": "21:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "8"
+  },
+  {
+    "alarm_id": "alarm32",
+    "user_id": "user8",
+    "title": "Wake Up",
+    "time": "08:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "chimes",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm33",
+    "user_id": "user8",
+    "title": "Pills Reminder",
+    "time": "21:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm34",
+    "user_id": "user8",
+    "title": "Morning Alarm",
+    "time": "07:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "3"
+  },
+  {
+    "alarm_id": "alarm35",
+    "user_id": "user8",
+    "title": "Take Medication",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "8"
+  },
+  {
+    "alarm_id": "alarm36",
+    "user_id": "user9",
+    "title": "Running Time",
+    "time": "06:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "energetic",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm37",
+    "user_id": "user9",
+    "title": "Take Medication",
+    "time": "21:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm38",
+    "user_id": "user9",
+    "title": "Break Time",
+    "time": "17:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "default",
+    "device_endpoint": "7"
+  },
+  {
+    "alarm_id": "alarm39",
+    "user_id": "user9",
+    "title": "Take Medication",
+    "time": "08:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": false,
+    "sound": "gentle",
+    "device_endpoint": "7"
+  },
+  {
+    "alarm_id": "alarm40",
+    "user_id": "user10",
+    "title": "Personal Time",
+    "time": "19:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "peaceful",
+    "device_endpoint": "17"
+  },
+  {
+    "alarm_id": "alarm41",
+    "user_id": "user10",
+    "title": "Work Start",
+    "time": "15:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "bell",
+    "device_endpoint": "16"
+  },
+  {
+    "alarm_id": "alarm42",
+    "user_id": "user11",
+    "title": "Gym Time",
+    "time": "18:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "energetic",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm43",
+    "user_id": "user11",
+    "title": "Wake Up",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "13"
+  },
+  {
+    "alarm_id": "alarm44",
+    "user_id": "user11",
+    "title": "Relax Time",
+    "time": "21:00:00",
+    "days": [
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "peaceful",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm45",
+    "user_id": "user11",
+    "title": "Health Reminder",
+    "time": "12:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "17"
+  },
+  {
+    "alarm_id": "alarm46",
+    "user_id": "user11",
+    "title": "Personal Time",
+    "time": "20:00:00",
+    "days": [
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "calm",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm47",
+    "user_id": "user11",
+    "title": "Get Up",
+    "time": "08:30:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm48",
+    "user_id": "user12",
+    "title": "Pills Reminder",
+    "time": "18:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "10"
+  },
+  {
+    "alarm_id": "alarm49",
+    "user_id": "user12",
+    "title": "Meeting Reminder",
+    "time": "08:45:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "bell",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm50",
+    "user_id": "user12",
+    "title": "Wake Up",
+    "time": "06:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "birds",
+    "device_endpoint": "2"
+  },
+  {
+    "alarm_id": "alarm51",
+    "user_id": "user12",
+    "title": "Lunch Break",
+    "time": "17:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": false,
+    "sound": "bell",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm52",
+    "user_id": "user12",
+    "title": "Lunch Break",
+    "time": "12:00:00",
+    "days": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday"
+    ],
+    "active": true,
+    "sound": "default",
+    "device_endpoint": "1"
+  },
+  {
+    "alarm_id": "alarm53",
+    "user_id": "user12",
+    "title": "Hobby Time",
+    "time": "19:00:00",
+    "days": [
+      "saturday",
+      "sunday"
+    ],
+    "active": true,
+    "sound": "calm",
+    "device_endpoint": "1"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user9_msg_scenario7_msgcall_scenario85_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user9_msg_scenario7_msgcall_scenario85_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='David Parker', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='David Parker', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact1\", \"user_id\": \"user9\", \"name\": \"David Parker\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"503-614-4574\"}], \"email\": \"david60@protonmail.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact1', content='Hello! How are you doing?')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact1', content='Hello! How are you doing?')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to David Parker\", \"message_id\": \"msg59\", \"contact_name\": \"David Parker\", \"timestamp\": \"2025-08-20T00:09:41.019466Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['18A'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['18A'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"18A\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='503-614-4574', device_endpoint='18A')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:5036144574', device_endpoint='18A')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:5036144574 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='John Brown', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='John Brown', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact10\", \"user_id\": \"user9\", \"name\": \"John Brown\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"919-408-1620\"}], \"email\": \"jbrown@email.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact10', content=\"Hi there! Hope you're having a great day!\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact10', content=\"Hi there! Hope you're having a great day!\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to John Brown\", \"message_id\": \"msg60\", \"contact_name\": \"John Brown\", \"timestamp\": \"2025-08-20T00:09:41.020141Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

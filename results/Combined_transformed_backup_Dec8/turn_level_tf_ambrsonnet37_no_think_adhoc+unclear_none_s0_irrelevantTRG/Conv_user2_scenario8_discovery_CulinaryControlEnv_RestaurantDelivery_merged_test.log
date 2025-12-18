@@ -1,0 +1,155 @@
+Namespace(jsonl_file='/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl', model='arn:aws:bedrock:us-east-1:587473322671:provisioned-model/claude37', output='../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_none_s0_irrelevantTRG/Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_test_result.json', max_steps=15, timeout=130.0, model_id='us.anthropic.claude-3-7-sonnet-20250219-v1:0', enable_thinking=False, prompt_path='extracted_api/centralized_prompt_unclear.md', uncertainty_config='uncertainty_configs/none.yaml', teacher_forcing=False, turn_level_tf=True, target_functions_config='uncertainty_configs/target_functions_partially_irrelevant.yaml', verbose=True, force=False)
+================================================================================
+===================== Step-by-Step LLM API Evaluation Tool =====================
+================================================================================
+
+Initializing step-by-step evaluator...
+📝 Loading custom prompt from: extracted_api/centralized_prompt_unclear.md
+  ✓ SmartHomeEnv loaded and registered
+  ✓ InformationControlEnv loaded and registered
+  ✓ MediaControlEnv loaded and registered
+  ✓ TransactionEnv loaded and registered
+  ✓ CulinaryControlEnv loaded and registered
+  ✓ CommunicationController loaded and registered
+  ✓ TimeNotificationEnv loaded and registered
+Successfully loaded and registered 7 API environments
+✅ Loaded uncertainty config: uncertainty_configs/none.yaml
+🎯 Uncertainty Configuration: No Uncertainties
+📝 Description: Clean evaluation without any uncertainties - baseline configuration
+📁 Config Path: uncertainty_configs/none.yaml
+
+📊 Statistics:
+   Total APIs with uncertainties: 0
+   Total active environment variables: 0
+
+🔧 Enabled Uncertainty Types:
+🤖 Using custom model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+📝 Custom prompt: extracted_api/centralized_prompt_unclear.md
+Model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+Max steps per query: 15
+Step timeout: 130.0s
+✅ Found 2 target points:
+   1. Turn 0, Step 0: search_recipes (cross_turn)
+   2. Turn 4, Step 0: get_restaurant_menu (cross_turn)
+🎯 Using Turn-Level Teacher Forcing evaluation mode
+Target config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+
+Evaluating JSONL file with Turn-Level Teacher Forcing: /home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl
+Target functions config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+Target functions: ['find_call_device', 'get_call_history', 'get_messages', 'get_restaurant_menu', 'knowledge_lookup', 'search_recipes', 'stock_watchlist', 'weather_forecast']
+Extracted user ID: user2
+  ✓ Set user user2 for SmartHomeEnv
+  ✓ Set user user2 for InformationControlEnv
+  ✓ Set user user2 for MediaControlEnv
+  ✓ Set user user2 for TransactionEnv
+  ✓ Set user user2 for CulinaryControlEnv
+  ✓ Set user user2 for CommunicationController
+  ✓ Set user user2 for TimeNotificationEnv
+✅ Found 2 target points:
+   1. Turn 0, Step 0: search_recipes (cross_turn)
+   2. Turn 4, Step 0: get_restaurant_menu (cross_turn)
+Found 2 target points
+    📸 Full state snapshot created (27 keys)
+📸 Created initial state snapshot for independence
+
+🎯 Evaluating Target Point 1/2
+   Function: search_recipes
+   Turn 0, Step 0
+   Scope: cross_turn
+    🔄 Full state restored (27 keys)
+   🔄 State restored to initial snapshot for independence
+🎯 Phase 1: GT execution until Turn 0, Step 0
+    🎯 Target function search_recipes found in partially_irrelevant context
+    🎲 Uncertainty mode: GT execution includes target step (until step 0) - Reason: target context
+🤖 Phase 2: Complete auto-regressive inference from Step 1 until LLM completion
+    Step 2: LLM inference...
+    ✅ LLM completed naturally: End of Turn detected
+🔄 Phase 3: Cross-turn evaluation for Turn 1
+    Step 1: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    🔄 Executing API: get_recipe_details
+    ✅ API result: {"success": true, "recipe_id": "recipe1", "name": "Schnitzel", "description": "A delicious other dis...
+    Step 2: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.2s... (attempt 2/50)
+⚠️  Rate limit hit. Retrying in 2.5s... (attempt 3/50)
+    🔄 Executing API: get_recipe_details
+    ✅ API result: {"success": true, "recipe_id": "recipe4", "name": "Sweet and Sour Pork", "description": "A delicious...
+    Step 3: Reasoning...
+    🔄 Executing API: get_recipe_details
+    ✅ API result: {"success": true, "recipe_id": "recipe37", "name": "Salsa Verde", "description": "A delicious mexica...
+    Step 4: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    ✅ Task completed: End of Turn detected
+   🔄 Including cross-turn evaluation as additional field
+   ✅ Completed - Accuracy: 0.00%
+
+🎯 Evaluating Target Point 2/2
+   Function: get_restaurant_menu
+   Turn 4, Step 0
+   Scope: cross_turn
+    🔄 Full state restored (27 keys)
+   🔄 State restored to initial snapshot for independence
+🎯 Phase 1: GT execution until Turn 4, Step 0
+    🎯 Target function get_restaurant_menu found in partially_irrelevant context
+    🎲 Uncertainty mode: GT execution includes target step (until step 0) - Reason: target context
+🤖 Phase 2: Complete auto-regressive inference from Step 1 until LLM completion
+    Step 2: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    🔄 LLM predicted API: get_restaurant_menu
+    ➖ GT comparison: None
+    Step 3: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    ✅ LLM completed naturally: End of Turn detected
+🔄 Phase 3: Cross-turn evaluation for Turn 5
+    Step 1: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.2s... (attempt 2/50)
+    🔄 Executing API: place_delivery_order
+    ✅ API result: {"success": true, "order_id": "dorder1", "restaurant_name": "Taj Mahal", "order_time": "2025-08-21T1...
+    Step 2: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.3s... (attempt 2/50)
+    ✅ Task completed: End of Turn detected
+   🔄 Including cross-turn evaluation as additional field
+   ✅ Completed - Accuracy: 0.00%
+   🔄 Expanding cross-turn to independent query_results level
+✅ Saved: Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json (queries: 2)
+   🔄 Expanding cross-turn to independent query_results level
+✅ Saved: Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json (queries: 2)
+
+💾 Turn-Level TF results saved to: ../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_none_s0_irrelevantTRG
+
+============================================================
+============= STEP-BY-STEP EVALUATION SUMMARY ==============
+============================================================
+File: Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl
+User ID: user2
+Total Queries: 2
+Successful Queries: 0
+Success Rate: 0.00%
+Overall Score: 100.00%
+
+Uncertainty Configuration: None (Clean evaluation)
+
+Turn-Level Teacher Forcing Metrics:
+  Total Prediction Steps: 0
+  Correct Predictions: 0
+  Prediction Accuracy: 0.00%
+
+============================================================
+===================== DETAILED RESULTS =====================
+============================================================
+
+Query ?: What can I cook quickly in 30 minutes? Give me 10 recipes...
+  ✗ Failed
+  Steps: 2
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query ?: I want to see what's available at the resturant...
+  ✗ Failed
+  Steps: 3
+  API Coverage: 100.00%
+  Task Completed: True
+================================================================================

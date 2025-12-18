@@ -1,0 +1,1058 @@
+[
+  {
+    "product_id": "prod1",
+    "name": "Smart USB Microphone",
+    "description": "Experience the latest in usb microphone technology with gaming, HD, fast-charging",
+    "price": 244.99,
+    "category": "electronics",
+    "stock": 81,
+    "rating": 4.7,
+    "images": [
+      "usb_microphone_1.jpg",
+      "usb_microphone_2.jpg",
+      "usb_microphone_3.jpg",
+      "usb_microphone_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod2",
+    "name": "Easy Air Purifier",
+    "description": "Flagship air purifier with easy-clean, energy-efficient, dishwasher-safe, stainless steel",
+    "price": 1179.99,
+    "category": "appliances",
+    "stock": 36,
+    "rating": 4.0,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg",
+      "air_purifier_3.jpg",
+      "air_purifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod3",
+    "name": "Eco Garage Door Opener Gen 2",
+    "description": "Advanced garage door opener with remote-control, wireless, automated",
+    "price": 99.99,
+    "category": "smart_home",
+    "stock": 79,
+    "rating": 4.4,
+    "images": [
+      "garage_door_opener_1.jpg",
+      "garage_door_opener_2.jpg",
+      "garage_door_opener_3.jpg",
+      "garage_door_opener_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod4",
+    "name": "Tech Soundbar Max",
+    "description": "Advanced soundbar with gaming, HD, portable, wireless for modern homes",
+    "price": 82.13,
+    "category": "electronics",
+    "stock": 54,
+    "rating": 4.4,
+    "images": [
+      "soundbar_1.jpg",
+      "soundbar_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod5",
+    "name": "Instant Coffee Maker",
+    "description": "Premium coffee maker featuring energy-efficient, programmable, stainless steel",
+    "price": 789.99,
+    "category": "appliances",
+    "stock": 74,
+    "rating": 4.6,
+    "images": [
+      "coffee_maker_1.jpg",
+      "coffee_maker_2.jpg",
+      "coffee_maker_3.jpg",
+      "coffee_maker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod6",
+    "name": "Quick Slow Cooker Max",
+    "description": "Advanced slow cooker with programmable, compact, easy-clean for modern homes",
+    "price": 1094.99,
+    "category": "appliances",
+    "stock": 25,
+    "rating": 4.3,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg",
+      "slow_cooker_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod7",
+    "name": "Hub Smart Thermostat",
+    "description": "Professional smart thermostat featuring wireless, energy-efficient, smart, WiFi-enabled",
+    "price": 104.99,
+    "category": "smart_home",
+    "stock": 127,
+    "rating": 4.2,
+    "images": [
+      "smart_thermostat_1.jpg",
+      "smart_thermostat_2.jpg",
+      "smart_thermostat_3.jpg",
+      "smart_thermostat_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod8",
+    "name": "Advanced Webcam Plus",
+    "description": "Revolutionary webcam featuring 4K, HD",
+    "price": 1569.99,
+    "category": "electronics",
+    "stock": 17,
+    "rating": 4.4,
+    "images": [
+      "webcam_1.jpg",
+      "webcam_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod9",
+    "name": "Health Sport Watch",
+    "description": "Experience the latest in sport watch technology with waterproof, health-monitoring, fitness-tracking",
+    "price": 96.54,
+    "category": "wearables",
+    "stock": 118,
+    "rating": 4.7,
+    "images": [
+      "sport_watch_1.jpg",
+      "sport_watch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod10",
+    "name": "Track Pulse Oximeter Max",
+    "description": "Revolutionary pulse oximeter featuring heart-rate, health-monitoring, lightweight, long-battery",
+    "price": 619.99,
+    "category": "wearables",
+    "stock": 48,
+    "rating": 4.7,
+    "images": [
+      "pulse_oximeter_1.jpg",
+      "pulse_oximeter_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod11",
+    "name": "Tech VR Headset",
+    "description": "High-quality vr headset featuring bluetooth, portable",
+    "price": 434.99,
+    "category": "electronics",
+    "stock": 65,
+    "rating": 4.2,
+    "images": [
+      "vr_headset_1.jpg",
+      "vr_headset_2.jpg",
+      "vr_headset_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod12",
+    "name": "Smart Wireless Headphones",
+    "description": "Versatile wireless headphones with portable, noise-cancelling",
+    "price": 204.99,
+    "category": "electronics",
+    "stock": 70,
+    "rating": 4.8,
+    "images": [
+      "wireless_headphones_1.jpg",
+      "wireless_headphones_2.jpg",
+      "wireless_headphones_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod13",
+    "name": "Max Smart TV",
+    "description": "Reliable smart tv featuring portable, fast-charging, bluetooth",
+    "price": 90.07,
+    "category": "electronics",
+    "stock": 24,
+    "rating": 4.0,
+    "images": [
+      "smart_tv_1.jpg",
+      "smart_tv_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod14",
+    "name": "Vital Wireless Earbuds",
+    "description": "Advanced wireless earbuds with GPS-enabled, heart-rate for modern homes",
+    "price": 379.99,
+    "category": "wearables",
+    "stock": 72,
+    "rating": 4.4,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod15",
+    "name": "Smart Smart Switch Plus",
+    "description": "Advanced smart switch with wireless, secure, WiFi-enabled, smart for modern homes",
+    "price": 65.71,
+    "category": "smart_home",
+    "stock": 33,
+    "rating": 4.1,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg",
+      "smart_switch_3.jpg",
+      "smart_switch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod16",
+    "name": "Smart Security Camera",
+    "description": "Flagship security camera featuring secure, WiFi-enabled",
+    "price": 449.99,
+    "category": "smart_home",
+    "stock": 189,
+    "rating": 4.5,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod17",
+    "name": "Smart Monitor",
+    "description": "Versatile monitor featuring bluetooth, wireless, fast-charging",
+    "price": 289.99,
+    "category": "electronics",
+    "stock": 83,
+    "rating": 4.7,
+    "images": [
+      "monitor_1.jpg",
+      "monitor_2.jpg",
+      "monitor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod18",
+    "name": "Smart USB Hub",
+    "description": "Revolutionary usb hub with HD, bluetooth, noise-cancelling, fast-charging",
+    "price": 879.99,
+    "category": "electronics",
+    "stock": 126,
+    "rating": 4.3,
+    "images": [
+      "usb_hub_1.jpg",
+      "usb_hub_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod19",
+    "name": "Chef Air Purifier Elite",
+    "description": "Experience the latest in air purifier technology with stainless steel, compact, energy-efficient",
+    "price": 174.99,
+    "category": "appliances",
+    "stock": 57,
+    "rating": 4.8,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg",
+      "air_purifier_3.jpg",
+      "air_purifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod20",
+    "name": "Pro Slow Cooker",
+    "description": "Experience the latest in slow cooker technology with multi-function, easy-clean, compact",
+    "price": 259.99,
+    "category": "appliances",
+    "stock": 61,
+    "rating": 4.6,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod21",
+    "name": "Smart Smart Outlet",
+    "description": "Experience the latest in smart outlet technology with remote-control, secure, energy-efficient, WiFi-enabled",
+    "price": 539.99,
+    "category": "smart_home",
+    "stock": 137,
+    "rating": 4.7,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg",
+      "smart_outlet_3.jpg",
+      "smart_outlet_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod22",
+    "name": "Elite Smart Watch",
+    "description": "Affordable smart watch featuring wireless, bluetooth, HD",
+    "price": 39.35,
+    "category": "electronics",
+    "stock": 99,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod23",
+    "name": "Home Night Light",
+    "description": "Affordable night light featuring wireless, automated",
+    "price": 75.3,
+    "category": "smart_home",
+    "stock": 188,
+    "rating": 4.5,
+    "images": [
+      "night_light_1.jpg",
+      "night_light_2.jpg",
+      "night_light_3.jpg",
+      "night_light_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod24",
+    "name": "Digital Bluetooth Speaker 2024",
+    "description": "Advanced bluetooth speaker with bluetooth, HD for modern homes",
+    "price": 279.99,
+    "category": "electronics",
+    "stock": 26,
+    "rating": 4.7,
+    "images": [
+      "bluetooth_speaker_1.jpg",
+      "bluetooth_speaker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod25",
+    "name": "Connect Flood Sensor",
+    "description": "Experience the latest in flood sensor technology with wireless, WiFi-enabled, energy-efficient",
+    "price": 159.99,
+    "category": "smart_home",
+    "stock": 104,
+    "rating": 3.9,
+    "images": [
+      "flood_sensor_1.jpg",
+      "flood_sensor_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod26",
+    "name": "Chef Dehumidifier Max",
+    "description": "Affordable dehumidifier with compact, easy-clean, dishwasher-safe, energy-efficient",
+    "price": 109.99,
+    "category": "appliances",
+    "stock": 72,
+    "rating": 4.8,
+    "images": [
+      "dehumidifier_1.jpg",
+      "dehumidifier_2.jpg",
+      "dehumidifier_3.jpg",
+      "dehumidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod27",
+    "name": "Home Security Camera",
+    "description": "Experience the latest in security camera technology with voice-controlled, smart",
+    "price": 114.99,
+    "category": "smart_home",
+    "stock": 174,
+    "rating": 4.1,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod28",
+    "name": "Nest Smart Outlet",
+    "description": "Advanced smart outlet with wireless, WiFi-enabled, voice-controlled",
+    "price": 214.99,
+    "category": "smart_home",
+    "stock": 50,
+    "rating": 4.7,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg",
+      "smart_outlet_3.jpg",
+      "smart_outlet_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod29",
+    "name": "Power Humidifier V2",
+    "description": "Advanced humidifier with stainless steel, compact, easy-clean for modern homes",
+    "price": 1129.99,
+    "category": "appliances",
+    "stock": 75,
+    "rating": 4.9,
+    "images": [
+      "humidifier_1.jpg",
+      "humidifier_2.jpg",
+      "humidifier_3.jpg",
+      "humidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod30",
+    "name": "Connect Smoke Detector",
+    "description": "Advanced smoke detector with WiFi-enabled, smart for modern homes",
+    "price": 244.99,
+    "category": "smart_home",
+    "stock": 120,
+    "rating": 4.7,
+    "images": [
+      "smoke_detector_1.jpg",
+      "smoke_detector_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod31",
+    "name": "Sync Wireless Earbuds",
+    "description": "Reliable wireless earbuds featuring waterproof, GPS-enabled",
+    "price": 86.71,
+    "category": "wearables",
+    "stock": 88,
+    "rating": 4.1,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg",
+      "wireless_earbuds_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod32",
+    "name": "Secure Air Quality Monitor",
+    "description": "High-quality air quality monitor featuring secure, voice-controlled",
+    "price": 204.99,
+    "category": "smart_home",
+    "stock": 141,
+    "rating": 4.6,
+    "images": [
+      "air_quality_monitor_1.jpg",
+      "air_quality_monitor_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod33",
+    "name": "Auto Motion Sensor",
+    "description": "Essential motion sensor featuring wireless, automated, smart",
+    "price": 75.45,
+    "category": "smart_home",
+    "stock": 191,
+    "rating": 4.6,
+    "images": [
+      "motion_sensor_1.jpg",
+      "motion_sensor_2.jpg",
+      "motion_sensor_3.jpg",
+      "motion_sensor_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod34",
+    "name": "Pulse Heart Rate Monitor Pro",
+    "description": "Experience the latest in heart rate monitor technology with lightweight, fitness-tracking",
+    "price": 67.59,
+    "category": "wearables",
+    "stock": 97,
+    "rating": 4.7,
+    "images": [
+      "heart_rate_monitor_1.jpg",
+      "heart_rate_monitor_2.jpg",
+      "heart_rate_monitor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod35",
+    "name": "Nest Security Camera",
+    "description": "Professional security camera featuring secure, smart, energy-efficient, voice-controlled",
+    "price": 93.01,
+    "category": "smart_home",
+    "stock": 152,
+    "rating": 4.4,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod36",
+    "name": "Prime Webcam V2",
+    "description": "Cutting-edge webcam with bluetooth, portable",
+    "price": 1264.99,
+    "category": "electronics",
+    "stock": 148,
+    "rating": 4.5,
+    "images": [
+      "webcam_1.jpg",
+      "webcam_2.jpg",
+      "webcam_3.jpg",
+      "webcam_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod37",
+    "name": "Connect Motion Sensor",
+    "description": "Essential motion sensor featuring wireless, secure",
+    "price": 33.56,
+    "category": "smart_home",
+    "stock": 35,
+    "rating": 3.8,
+    "images": [
+      "motion_sensor_1.jpg",
+      "motion_sensor_2.jpg",
+      "motion_sensor_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod38",
+    "name": "Pro Router",
+    "description": "Experience the latest in router technology with portable, wireless, HD",
+    "price": 1579.99,
+    "category": "electronics",
+    "stock": 27,
+    "rating": 4.4,
+    "images": [
+      "router_1.jpg",
+      "router_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod39",
+    "name": "Max Drone V2",
+    "description": "High-quality drone with fast-charging, professional, 4K, noise-cancelling",
+    "price": 464.99,
+    "category": "electronics",
+    "stock": 65,
+    "rating": 4.2,
+    "images": [
+      "drone_1.jpg",
+      "drone_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod40",
+    "name": "Max Soundbar",
+    "description": "Premium soundbar with fast-charging, HD",
+    "price": 1504.99,
+    "category": "electronics",
+    "stock": 90,
+    "rating": 3.7,
+    "images": [
+      "soundbar_1.jpg",
+      "soundbar_2.jpg",
+      "soundbar_3.jpg",
+      "soundbar_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod41",
+    "name": "Vital Wireless Earbuds",
+    "description": "Reliable wireless earbuds with waterproof, fitness-tracking, GPS-enabled",
+    "price": 44.55,
+    "category": "wearables",
+    "stock": 73,
+    "rating": 3.6,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod42",
+    "name": "Health Step Counter",
+    "description": "High-quality step counter featuring waterproof, health-monitoring",
+    "price": 159.99,
+    "category": "wearables",
+    "stock": 101,
+    "rating": 3.8,
+    "images": [
+      "step_counter_1.jpg",
+      "step_counter_2.jpg",
+      "step_counter_3.jpg",
+      "step_counter_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod43",
+    "name": "Prime Mechanical Keyboard V2",
+    "description": "Advanced mechanical keyboard with gaming, professional for modern homes",
+    "price": 399.99,
+    "category": "electronics",
+    "stock": 137,
+    "rating": 4.6,
+    "images": [
+      "mechanical_keyboard_1.jpg",
+      "mechanical_keyboard_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod44",
+    "name": "Hub Garage Door Opener Elite",
+    "description": "Advanced garage door opener with energy-efficient, smart, secure for modern homes",
+    "price": 134.99,
+    "category": "smart_home",
+    "stock": 27,
+    "rating": 4.5,
+    "images": [
+      "garage_door_opener_1.jpg",
+      "garage_door_opener_2.jpg",
+      "garage_door_opener_3.jpg",
+      "garage_door_opener_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod45",
+    "name": "Advanced Gaming Mouse",
+    "description": "Experience the latest in gaming mouse technology with gaming, portable, bluetooth, professional",
+    "price": 274.99,
+    "category": "electronics",
+    "stock": 55,
+    "rating": 4.4,
+    "images": [
+      "gaming_mouse_1.jpg",
+      "gaming_mouse_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod46",
+    "name": "Elite Bluetooth Speaker",
+    "description": "Versatile bluetooth speaker featuring wireless, gaming, HD, noise-cancelling",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 36,
+    "rating": 4.5,
+    "images": [
+      "bluetooth_speaker_1.jpg",
+      "bluetooth_speaker_2.jpg",
+      "bluetooth_speaker_3.jpg",
+      "bluetooth_speaker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod47",
+    "name": "Nest Security Camera",
+    "description": "Experience the latest in security camera technology with automated, energy-efficient, remote-control, voice-controlled",
+    "price": 229.99,
+    "category": "smart_home",
+    "stock": 187,
+    "rating": 4.2,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg",
+      "security_camera_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod48",
+    "name": "Instant Space Heater",
+    "description": "Professional space heater featuring easy-clean, energy-efficient",
+    "price": 304.99,
+    "category": "appliances",
+    "stock": 10,
+    "rating": 4.4,
+    "images": [
+      "space_heater_1.jpg",
+      "space_heater_2.jpg",
+      "space_heater_3.jpg",
+      "space_heater_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod49",
+    "name": "Auto Smart Switch Max",
+    "description": "Experience the latest in smart switch technology with WiFi-enabled, voice-controlled",
+    "price": 60.6,
+    "category": "smart_home",
+    "stock": 100,
+    "rating": 4.0,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod50",
+    "name": "Quick Blender Pro",
+    "description": "Advanced blender featuring programmable, stainless steel, compact, multi-function",
+    "price": 499.99,
+    "category": "appliances",
+    "stock": 55,
+    "rating": 4.5,
+    "images": [
+      "blender_1.jpg",
+      "blender_2.jpg",
+      "blender_3.jpg",
+      "blender_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod51",
+    "name": "Quick Stand Mixer",
+    "description": "Experience the latest in stand mixer technology with multi-function, dishwasher-safe, easy-clean, stainless steel",
+    "price": 109.99,
+    "category": "appliances",
+    "stock": 42,
+    "rating": 4.4,
+    "images": [
+      "stand_mixer_1.jpg",
+      "stand_mixer_2.jpg",
+      "stand_mixer_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod52",
+    "name": "Nest Smart Outlet Plus",
+    "description": "Advanced smart outlet with WiFi-enabled, energy-efficient, smart for modern homes",
+    "price": 179.99,
+    "category": "smart_home",
+    "stock": 47,
+    "rating": 3.9,
+    "images": [
+      "smart_outlet_1.jpg",
+      "smart_outlet_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod53",
+    "name": "Eco Security Camera Elite",
+    "description": "Advanced security camera with smart, wireless for modern homes",
+    "price": 149.99,
+    "category": "smart_home",
+    "stock": 40,
+    "rating": 3.7,
+    "images": [
+      "security_camera_1.jpg",
+      "security_camera_2.jpg",
+      "security_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod54",
+    "name": "Active Smart Watch Gen 2",
+    "description": "Experience the latest in smart watch technology with fitness-tracking, lightweight, heart-rate, waterproof",
+    "price": 404.99,
+    "category": "wearables",
+    "stock": 51,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg",
+      "smart_watch_3.jpg",
+      "smart_watch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod55",
+    "name": "Instant Dishwasher",
+    "description": "Professional dishwasher featuring easy-clean, energy-efficient, compact",
+    "price": 274.99,
+    "category": "appliances",
+    "stock": 42,
+    "rating": 4.1,
+    "images": [
+      "dishwasher_1.jpg",
+      "dishwasher_2.jpg",
+      "dishwasher_3.jpg",
+      "dishwasher_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod56",
+    "name": "Digital Portable Charger",
+    "description": "Affordable portable charger featuring 4K, gaming, bluetooth, portable",
+    "price": 31.5,
+    "category": "electronics",
+    "stock": 28,
+    "rating": 4.5,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg",
+      "portable_charger_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod57",
+    "name": "Health Wireless Earbuds",
+    "description": "Experience the latest in wireless earbuds technology with heart-rate, fitness-tracking, GPS-enabled",
+    "price": 76.6,
+    "category": "wearables",
+    "stock": 118,
+    "rating": 4.7,
+    "images": [
+      "wireless_earbuds_1.jpg",
+      "wireless_earbuds_2.jpg",
+      "wireless_earbuds_3.jpg",
+      "wireless_earbuds_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod58",
+    "name": "Home Smart Doorbell",
+    "description": "Experience the latest in smart doorbell technology with voice-controlled, wireless, secure, remote-control",
+    "price": 40.25,
+    "category": "smart_home",
+    "stock": 187,
+    "rating": 4.2,
+    "images": [
+      "smart_doorbell_1.jpg",
+      "smart_doorbell_2.jpg",
+      "smart_doorbell_3.jpg",
+      "smart_doorbell_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod59",
+    "name": "Pulse Sleep Tracker",
+    "description": "Essential sleep tracker with GPS-enabled, waterproof, fitness-tracking",
+    "price": 46.26,
+    "category": "wearables",
+    "stock": 54,
+    "rating": 3.8,
+    "images": [
+      "sleep_tracker_1.jpg",
+      "sleep_tracker_2.jpg",
+      "sleep_tracker_3.jpg",
+      "sleep_tracker_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod60",
+    "name": "Hub Smoke Detector 2024",
+    "description": "High-quality smoke detector featuring voice-controlled, wireless, secure, remote-control",
+    "price": 199.99,
+    "category": "smart_home",
+    "stock": 170,
+    "rating": 4.6,
+    "images": [
+      "smoke_detector_1.jpg",
+      "smoke_detector_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod61",
+    "name": "Master Humidifier",
+    "description": "Advanced humidifier with multi-function, easy-clean, programmable, stainless steel for modern homes",
+    "price": 214.99,
+    "category": "appliances",
+    "stock": 46,
+    "rating": 4.0,
+    "images": [
+      "humidifier_1.jpg",
+      "humidifier_2.jpg",
+      "humidifier_3.jpg",
+      "humidifier_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod62",
+    "name": "Quick Slow Cooker Pro",
+    "description": "Advanced slow cooker with programmable, energy-efficient, dishwasher-safe, easy-clean for modern homes",
+    "price": 774.99,
+    "category": "appliances",
+    "stock": 51,
+    "rating": 4.4,
+    "images": [
+      "slow_cooker_1.jpg",
+      "slow_cooker_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod63",
+    "name": "Pro Smart Watch",
+    "description": "Practical smart watch featuring wireless, gaming, portable, bluetooth",
+    "price": 38.05,
+    "category": "electronics",
+    "stock": 146,
+    "rating": 4.4,
+    "images": [
+      "smart_watch_1.jpg",
+      "smart_watch_2.jpg",
+      "smart_watch_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod64",
+    "name": "Link Smart Thermostat",
+    "description": "High-quality smart thermostat featuring smart, remote-control, secure",
+    "price": 84.62,
+    "category": "smart_home",
+    "stock": 54,
+    "rating": 4.3,
+    "images": [
+      "smart_thermostat_1.jpg",
+      "smart_thermostat_2.jpg",
+      "smart_thermostat_3.jpg",
+      "smart_thermostat_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod65",
+    "name": "Prime E-Reader",
+    "description": "Versatile e-reader featuring fast-charging, professional, 4K",
+    "price": 309.99,
+    "category": "electronics",
+    "stock": 105,
+    "rating": 4.8,
+    "images": [
+      "e-reader_1.jpg",
+      "e-reader_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod66",
+    "name": "Master Fan Max",
+    "description": "Experience the latest in fan technology with programmable, multi-function, compact",
+    "price": 244.99,
+    "category": "appliances",
+    "stock": 10,
+    "rating": 3.8,
+    "images": [
+      "fan_1.jpg",
+      "fan_2.jpg",
+      "fan_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod67",
+    "name": "Advanced Portable Charger Pro",
+    "description": "Professional portable charger with fast-charging, 4K, portable",
+    "price": 379.99,
+    "category": "electronics",
+    "stock": 33,
+    "rating": 4.2,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg",
+      "portable_charger_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod68",
+    "name": "Pro Tablet",
+    "description": "Professional tablet with gaming, professional, fast-charging, portable",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 71,
+    "rating": 3.9,
+    "images": [
+      "tablet_1.jpg",
+      "tablet_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod69",
+    "name": "Quick Air Purifier Elite",
+    "description": "Advanced air purifier with dishwasher-safe, programmable, energy-efficient for modern homes",
+    "price": 214.99,
+    "category": "appliances",
+    "stock": 19,
+    "rating": 4.7,
+    "images": [
+      "air_purifier_1.jpg",
+      "air_purifier_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod70",
+    "name": "Home Smart Mirror Elite",
+    "description": "Experience the latest in smart mirror technology with automated, WiFi-enabled",
+    "price": 189.99,
+    "category": "smart_home",
+    "stock": 89,
+    "rating": 4.8,
+    "images": [
+      "smart_mirror_1.jpg",
+      "smart_mirror_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod71",
+    "name": "Digital Portable Charger",
+    "description": "Advanced portable charger with HD, gaming for modern homes",
+    "price": 499.99,
+    "category": "electronics",
+    "stock": 54,
+    "rating": 4.3,
+    "images": [
+      "portable_charger_1.jpg",
+      "portable_charger_2.jpg"
+    ]
+  },
+  {
+    "product_id": "prod72",
+    "name": "Link Smart Switch V2",
+    "description": "Versatile smart switch with WiFi-enabled, automated",
+    "price": 194.99,
+    "category": "smart_home",
+    "stock": 156,
+    "rating": 4.6,
+    "images": [
+      "smart_switch_1.jpg",
+      "smart_switch_2.jpg",
+      "smart_switch_3.jpg",
+      "smart_switch_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod73",
+    "name": "Eco Temperature Sensor",
+    "description": "High-quality temperature sensor with wireless, voice-controlled, energy-efficient, remote-control",
+    "price": 139.99,
+    "category": "smart_home",
+    "stock": 79,
+    "rating": 4.5,
+    "images": [
+      "temperature_sensor_1.jpg",
+      "temperature_sensor_2.jpg",
+      "temperature_sensor_3.jpg",
+      "temperature_sensor_4.jpg"
+    ]
+  },
+  {
+    "product_id": "prod74",
+    "name": "Advanced Action Camera",
+    "description": "High-quality action camera featuring HD, professional, 4K",
+    "price": 344.99,
+    "category": "electronics",
+    "stock": 21,
+    "rating": 4.6,
+    "images": [
+      "action_camera_1.jpg",
+      "action_camera_2.jpg",
+      "action_camera_3.jpg"
+    ]
+  },
+  {
+    "product_id": "prod75",
+    "name": "Elite Tablet",
+    "description": "High-quality tablet with noise-cancelling, wireless",
+    "price": 109.99,
+    "category": "electronics",
+    "stock": 100,
+    "rating": 4.7,
+    "images": [
+      "tablet_1.jpg",
+      "tablet_2.jpg",
+      "tablet_3.jpg",
+      "tablet_4.jpg"
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user3_TransactionEnv_shopping_batch_scenario5_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_TransactionEnv_shopping_batch_scenario5_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"orders\": [{\"order_id\": \"PO0073\", \"created_at\": \"2025-06-08T03:53:25.711691Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"DHL\"}, {\"order_id\": \"PO0012\", \"created_at\": \"2025-06-05T18:05:25.710120Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"Amazon Logistics\"}, {\"order_id\": \"ON0006\", \"created_at\": \"2025-06-02T21:17:25.709945Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"FedEx\"}, {\"order_id\": \"PO0038\", \"created_at\": \"2025-06-02T04:48:25.710822Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"FedEx\"}, {\"order_id\": \"ORD0015\", \"created_at\": \"2025-05-30T00:33:25.710197Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"Amazon Logistics\"}, {\"order_id\": \"PO0060\", \"created_at\": \"2025-05-21T19:45:25.711347Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0056\", \"created_at\": \"2025-05-18T00:25:25.711250Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"FedEx\"}], \"message\": \"Found 7 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='PO0038')",
+      "after": "invoke_tool(\"get_order_details\", order_id='PO0038')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"PO0038\", \"user_id\": \"user3\", \"items\": [{\"product_id\": \"prod34\", \"name\": \"Pulse Heart Rate Monitor Pro\", \"quantity\": 1, \"price\": 67.59, \"subtotal\": 67.59}], \"totals\": {\"subtotal\": 67.59, \"tax\": 6.35, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 73.94}, \"payment\": {\"method_id\": \"pm2\", \"method_type\": \"debit_card\", \"last4\": \"4625\", \"amount\": 73.94, \"currency\": \"USD\", \"transaction_id\": \"tx519763\", \"status\": \"paid\", \"paid_at\": \"2025-06-02T05:29:25.710822Z\"}, \"created_at\": \"2025-06-02T04:48:25.710822Z\", \"notes\": \"Leave at front door\"}, \"message\": \"Retrieved details for order PO0038\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='PO0038')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-0038')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-0038\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod34', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod34', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod34\", \"name\": \"Pulse Heart Rate Monitor Pro\", \"quantity\": 1, \"price\": 67.59}, \"cart_total\": 67.59, \"message\": \"Added 1 x 'Pulse Heart Rate Monitor Pro' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,2968 @@
+[
+  {
+    "recipe_id": "recipe1",
+    "name": "Schnitzel",
+    "description": "A delicious other dish that's perfect for medium cooks.",
+    "cuisine": "Other",
+    "difficulty": "medium",
+    "preparation_time": 13,
+    "cooking_time": 26,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 301,
+      "protein": 17,
+      "carbs": 42,
+      "fat": 9
+    },
+    "dietary_info": [
+      "vegetarian",
+      "vegan"
+    ],
+    "rating": 4.5,
+    "reviews_count": 421,
+    "image_url": "https://example.com/images/schnitzel.jpg",
+    "tags": [
+      "other",
+      "vegetarian",
+      "vegan",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe2",
+    "name": "Tandoori Chicken",
+    "description": "A delicious indian dish that's perfect for medium cooks.",
+    "cuisine": "Indian",
+    "difficulty": "medium",
+    "preparation_time": 15,
+    "cooking_time": 48,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "rice",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garam masala",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "ginger",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 small"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 453,
+      "protein": 21,
+      "carbs": 67,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.4,
+    "reviews_count": 407,
+    "image_url": "https://example.com/images/tandoori_chicken.jpg",
+    "tags": [
+      "vegetarian",
+      "snack",
+      "indian"
+    ]
+  },
+  {
+    "recipe_id": "recipe3",
+    "name": "Bouillabaisse",
+    "description": "A delicious other dish that's perfect for medium cooks.",
+    "cuisine": "Other",
+    "difficulty": "medium",
+    "preparation_time": 34,
+    "cooking_time": 52,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "wine",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "5 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 344,
+      "protein": 12,
+      "carbs": 50,
+      "fat": 10
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.4,
+    "reviews_count": 326,
+    "image_url": "https://example.com/images/bouillabaisse.jpg",
+    "tags": [
+      "other",
+      "vegetarian",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe4",
+    "name": "Sweet and Sour Pork",
+    "description": "A delicious asian dish that's perfect for medium cooks.",
+    "cuisine": "Asian",
+    "difficulty": "medium",
+    "preparation_time": 18,
+    "cooking_time": 23,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "fish sauce",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "lime",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "ginger",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "3/4 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 446,
+      "protein": 17,
+      "carbs": 51,
+      "fat": 11
+    },
+    "dietary_info": [],
+    "rating": 4.6,
+    "reviews_count": 125,
+    "image_url": "https://example.com/images/sweet_and_sour_pork.jpg",
+    "tags": [
+      "asian",
+      "family-friendly",
+      "snack"
+    ]
+  },
+  {
+    "recipe_id": "recipe5",
+    "name": "Spaghetti Carbonara",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 14,
+    "cooking_time": 51,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "olive oil",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "3"
+      },
+      {
+        "name": "pasta",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 small"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tsp"
+      }
+    ],
+    "instructions": [
+      "Heat olive oil in a large pan over medium heat.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add seasonings and adjust to taste.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 457,
+      "protein": 23,
+      "carbs": 54,
+      "fat": 16
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.3,
+    "reviews_count": 285,
+    "image_url": "https://example.com/images/spaghetti_carbonara.jpg",
+    "tags": [
+      "vegetarian",
+      "italian",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe6",
+    "name": "Smoked Chicken",
+    "description": "A delicious american dish that's perfect for easy cooks.",
+    "cuisine": "American",
+    "difficulty": "easy",
+    "preparation_time": 43,
+    "cooking_time": 39,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "butter",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "bacon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium"
+      },
+      {
+        "name": "potatoes",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "6 cloves"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 477,
+      "protein": 18,
+      "carbs": 63,
+      "fat": 11
+    },
+    "dietary_info": [],
+    "rating": 4.8,
+    "reviews_count": 322,
+    "image_url": "https://example.com/images/smoked_chicken.jpg",
+    "tags": [
+      "quick",
+      "american",
+      "beginner-friendly",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe7",
+    "name": "Mango Sticky Rice",
+    "description": "A delicious asian dish that's perfect for easy cooks.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 45,
+    "cooking_time": 45,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "lime",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "ginger",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 307,
+      "protein": 12,
+      "carbs": 35,
+      "fat": 10
+    },
+    "dietary_info": [
+      "vegetarian",
+      "vegan",
+      "gluten-free"
+    ],
+    "rating": 3.9,
+    "reviews_count": 288,
+    "image_url": "https://example.com/images/mango_sticky_rice.jpg",
+    "tags": [
+      "vegetarian",
+      "vegan",
+      "breakfast",
+      "asian",
+      "gluten-free",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe8",
+    "name": "Tom Yum Soup",
+    "description": "A delicious asian dish that's perfect for medium cooks.",
+    "cuisine": "Asian",
+    "difficulty": "medium",
+    "preparation_time": 30,
+    "cooking_time": 43,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "ginger",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "garlic",
+        "quantity": "6 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "fish sauce",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "scallions",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 376,
+      "protein": 15,
+      "carbs": 55,
+      "fat": 9
+    },
+    "dietary_info": [],
+    "rating": 4.0,
+    "reviews_count": 269,
+    "image_url": "https://example.com/images/tom_yum_soup.jpg",
+    "tags": [
+      "asian",
+      "spicy",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe9",
+    "name": "Sushi Rolls",
+    "description": "A delicious asian dish that's perfect for easy cooks.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 35,
+    "cooking_time": 20,
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "garlic",
+        "quantity": "4 cloves"
+      },
+      {
+        "name": "fish sauce",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "scallions",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 361,
+      "protein": 15,
+      "carbs": 43,
+      "fat": 13
+    },
+    "dietary_info": [],
+    "rating": 4.2,
+    "reviews_count": 292,
+    "image_url": "https://example.com/images/sushi_rolls.jpg",
+    "tags": [
+      "asian",
+      "quick",
+      "beginner-friendly",
+      "dessert"
+    ]
+  },
+  {
+    "recipe_id": "recipe10",
+    "name": "Chole",
+    "description": "A delicious indian dish that's perfect for easy cooks.",
+    "cuisine": "Indian",
+    "difficulty": "easy",
+    "preparation_time": 21,
+    "cooking_time": 31,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "turmeric",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 small"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "Prepare all ingredients by washing, chopping, and measuring them.",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 312,
+      "protein": 11,
+      "carbs": 32,
+      "fat": 7
+    },
+    "dietary_info": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "rating": 4.7,
+    "reviews_count": 270,
+    "image_url": "https://example.com/images/chole.jpg",
+    "tags": [
+      "vegetarian",
+      "breakfast",
+      "indian",
+      "gluten-free",
+      "healthy",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe11",
+    "name": "Falafel",
+    "description": "A delicious mediterranean dish that's perfect for easy cooks.",
+    "cuisine": "Mediterranean",
+    "difficulty": "easy",
+    "preparation_time": 29,
+    "cooking_time": 42,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "lemon",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "garlic",
+        "quantity": "4 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "5"
+      },
+      {
+        "name": "onions",
+        "quantity": "3 medium"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp",
+        "notes": "dried"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Add seasonings and adjust to taste.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 284,
+      "protein": 15,
+      "carbs": 31,
+      "fat": 7
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.6,
+    "reviews_count": 322,
+    "image_url": "https://example.com/images/falafel.jpg",
+    "tags": [
+      "vegetarian",
+      "mediterranean",
+      "lunch",
+      "comfort-food",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe12",
+    "name": "Chicken Parmigiana",
+    "description": "A delicious italian dish that's perfect for easy cooks.",
+    "cuisine": "Italian",
+    "difficulty": "easy",
+    "preparation_time": 24,
+    "cooking_time": 21,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "onions",
+        "quantity": "1 medium",
+        "notes": "chopped"
+      },
+      {
+        "name": "pasta",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "garlic",
+        "quantity": "5 cloves"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Add seasonings and adjust to taste.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 437,
+      "protein": 25,
+      "carbs": 53,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian",
+      "vegan"
+    ],
+    "rating": 4.3,
+    "reviews_count": 54,
+    "image_url": "https://example.com/images/chicken_parmigiana.jpg",
+    "tags": [
+      "vegetarian",
+      "healthy",
+      "vegan",
+      "breakfast",
+      "italian",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe13",
+    "name": "Prosciutto Pizza",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 43,
+    "cooking_time": 18,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "oregano",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "mozzarella",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "3 large"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "5 cloves",
+        "notes": "crushed"
+      },
+      {
+        "name": "butter",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp",
+        "notes": "fresh"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 444,
+      "protein": 26,
+      "carbs": 57,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.0,
+    "reviews_count": 321,
+    "image_url": "https://example.com/images/prosciutto_pizza.jpg",
+    "tags": [
+      "vegetarian",
+      "party-food",
+      "italian",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe14",
+    "name": "Tikka Masala Pizza",
+    "description": "A delicious other dish that's perfect for medium cooks.",
+    "cuisine": "Other",
+    "difficulty": "medium",
+    "preparation_time": 11,
+    "cooking_time": 36,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "canola oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp",
+        "notes": "dried"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 350,
+      "protein": 15,
+      "carbs": 41,
+      "fat": 11
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.5,
+    "reviews_count": 371,
+    "image_url": "https://example.com/images/tikka_masala_pizza.jpg",
+    "tags": [
+      "other",
+      "spicy",
+      "vegetarian",
+      "snack"
+    ]
+  },
+  {
+    "recipe_id": "recipe15",
+    "name": "Spanakopita",
+    "description": "A delicious mediterranean dish that's perfect for easy cooks.",
+    "cuisine": "Mediterranean",
+    "difficulty": "easy",
+    "preparation_time": 33,
+    "cooking_time": 39,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp",
+        "notes": "chopped"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "3"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Add seasonings and adjust to taste.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 425,
+      "protein": 23,
+      "carbs": 50,
+      "fat": 12
+    },
+    "dietary_info": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "rating": 4.7,
+    "reviews_count": 285,
+    "image_url": "https://example.com/images/spanakopita.jpg",
+    "tags": [
+      "vegetarian",
+      "mediterranean",
+      "family-friendly",
+      "gluten-free",
+      "quick",
+      "beginner-friendly",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe16",
+    "name": "Mexican Rice",
+    "description": "A delicious mexican dish that's perfect for easy cooks.",
+    "cuisine": "Mexican",
+    "difficulty": "easy",
+    "preparation_time": 32,
+    "cooking_time": 51,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "onions",
+        "quantity": "3 large"
+      },
+      {
+        "name": "avocado",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "lime",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "100g"
+      },
+      {
+        "name": "garlic",
+        "quantity": "5 cloves",
+        "notes": "crushed"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 445,
+      "protein": 22,
+      "carbs": 55,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.6,
+    "reviews_count": 392,
+    "image_url": "https://example.com/images/mexican_rice.jpg",
+    "tags": [
+      "vegetarian",
+      "beginner-friendly",
+      "snack",
+      "quick",
+      "mexican"
+    ]
+  },
+  {
+    "recipe_id": "recipe17",
+    "name": "Smoked Chicken",
+    "description": "A delicious american dish that's perfect for medium cooks.",
+    "cuisine": "American",
+    "difficulty": "medium",
+    "preparation_time": 37,
+    "cooking_time": 25,
+    "servings": 3,
+    "ingredients": [
+      {
+        "name": "chicken",
+        "quantity": "1 lb"
+      },
+      {
+        "name": "beef",
+        "quantity": "1.5 lbs"
+      },
+      {
+        "name": "milk",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "s",
+        "quantity": "to taste"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "garlic",
+        "quantity": "6 cloves"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 small"
+      }
+    ],
+    "instructions": [
+      "Prepare all ingredients by washing, chopping, and measuring them.",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 592,
+      "protein": 27,
+      "carbs": 81,
+      "fat": 14
+    },
+    "dietary_info": [],
+    "rating": 4.4,
+    "reviews_count": 324,
+    "image_url": "https://example.com/images/smoked_chicken.jpg",
+    "tags": [
+      "american",
+      "snack"
+    ]
+  },
+  {
+    "recipe_id": "recipe18",
+    "name": "Samosas",
+    "description": "A delicious indian dish that's perfect for medium cooks.",
+    "cuisine": "Indian",
+    "difficulty": "medium",
+    "preparation_time": 35,
+    "cooking_time": 59,
+    "servings": 3,
+    "ingredients": [
+      {
+        "name": "ginger",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium"
+      },
+      {
+        "name": "garlic",
+        "quantity": "6 cloves",
+        "notes": "crushed"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "wine",
+        "quantity": "3/4 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 458,
+      "protein": 17,
+      "carbs": 65,
+      "fat": 16
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 3.9,
+    "reviews_count": 305,
+    "image_url": "https://example.com/images/samosas.jpg",
+    "tags": [
+      "vegetarian",
+      "lunch",
+      "indian"
+    ]
+  },
+  {
+    "recipe_id": "recipe19",
+    "name": "Mexican Rice",
+    "description": "A delicious mexican dish that's perfect for medium cooks.",
+    "cuisine": "Mexican",
+    "difficulty": "medium",
+    "preparation_time": 25,
+    "cooking_time": 24,
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "cheddar cheese",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "avocado",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "cilantro",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "beans",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "3/4 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tbsp"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 424,
+      "protein": 21,
+      "carbs": 51,
+      "fat": 12
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.2,
+    "reviews_count": 352,
+    "image_url": "https://example.com/images/mexican_rice.jpg",
+    "tags": [
+      "vegetarian",
+      "breakfast",
+      "family-friendly",
+      "mexican"
+    ]
+  },
+  {
+    "recipe_id": "recipe20",
+    "name": "Philly Cheesesteak",
+    "description": "A delicious american dish that's perfect for easy cooks.",
+    "cuisine": "American",
+    "difficulty": "easy",
+    "preparation_time": 43,
+    "cooking_time": 22,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "chicken",
+        "quantity": "1 kg",
+        "notes": "bone-in"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": "100g"
+      },
+      {
+        "name": "potatoes",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "flour",
+        "quantity": "1 1/2 cups"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/3 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tsp",
+        "notes": "dried"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 629,
+      "protein": 27,
+      "carbs": 78,
+      "fat": 17
+    },
+    "dietary_info": [
+      "gluten-free"
+    ],
+    "rating": 4.5,
+    "reviews_count": 341,
+    "image_url": "https://example.com/images/philly_cheesesteak.jpg",
+    "tags": [
+      "gluten-free",
+      "snack",
+      "american",
+      "comfort-food",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe21",
+    "name": "Rigatoni Aglio e Olio",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 25,
+    "cooking_time": 45,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "pasta",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "mozzarella",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "oregano",
+        "quantity": "2 tsp"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "3 large"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 424,
+      "protein": 20,
+      "carbs": 48,
+      "fat": 15
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.1,
+    "reviews_count": 141,
+    "image_url": "https://example.com/images/rigatoni_aglio_e_olio.jpg",
+    "tags": [
+      "vegetarian",
+      "family-friendly",
+      "italian",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe22",
+    "name": "Chicken Parmigiana",
+    "description": "A delicious italian dish that's perfect for easy cooks.",
+    "cuisine": "Italian",
+    "difficulty": "easy",
+    "preparation_time": 29,
+    "cooking_time": 50,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      },
+      {
+        "name": "mozzarella",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "parmesan cheese",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 medium",
+        "notes": "sliced"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cook until golden brown and cooked through.",
+      "Cook until golden brown and cooked through.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 483,
+      "protein": 27,
+      "carbs": 62,
+      "fat": 17
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.8,
+    "reviews_count": 332,
+    "image_url": "https://example.com/images/chicken_parmigiana.jpg",
+    "tags": [
+      "vegetarian",
+      "dessert",
+      "italian",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe23",
+    "name": "Pulled Pork",
+    "description": "A delicious american dish that's perfect for medium cooks.",
+    "cuisine": "American",
+    "difficulty": "medium",
+    "preparation_time": 44,
+    "cooking_time": 16,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "milk",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium"
+      },
+      {
+        "name": "bacon",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "potatoes",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "6 cloves"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 614,
+      "protein": 23,
+      "carbs": 89,
+      "fat": 19
+    },
+    "dietary_info": [],
+    "rating": 3.9,
+    "reviews_count": 245,
+    "image_url": "https://example.com/images/pulled_pork.jpg",
+    "tags": [
+      "family-friendly",
+      "american",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe24",
+    "name": "Fettuccine Bolognese",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 19,
+    "cooking_time": 40,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "garlic",
+        "quantity": "4 cloves"
+      },
+      {
+        "name": "pasta",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "basil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "6"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "onions",
+        "quantity": "3 small"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "Prepare all ingredients by washing, chopping, and measuring them.",
+      "Cook until golden brown and cooked through.",
+      "Add seasonings and adjust to taste.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Add seasonings and adjust to taste.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 450,
+      "protein": 20,
+      "carbs": 55,
+      "fat": 11
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.6,
+    "reviews_count": 452,
+    "image_url": "https://example.com/images/fettuccine_bolognese.jpg",
+    "tags": [
+      "vegetarian",
+      "italian",
+      "dessert"
+    ]
+  },
+  {
+    "recipe_id": "recipe25",
+    "name": "Kung Pao Chicken",
+    "description": "A delicious asian dish that's perfect for easy cooks.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 13,
+    "cooking_time": 52,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "fish sauce",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "scallions",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "ginger",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 small",
+        "notes": "sliced"
+      }
+    ],
+    "instructions": [
+      "Prepare all ingredients by washing, chopping, and measuring them.",
+      "Add seasonings and adjust to taste.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add seasonings and adjust to taste.",
+      "Cook until golden brown and cooked through.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add seasonings and adjust to taste.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 293,
+      "protein": 12,
+      "carbs": 39,
+      "fat": 10
+    },
+    "dietary_info": [],
+    "rating": 4.0,
+    "reviews_count": 93,
+    "image_url": "https://example.com/images/kung_pao_chicken.jpg",
+    "tags": [
+      "asian",
+      "quick",
+      "beginner-friendly",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe26",
+    "name": "Vegetable Biryani",
+    "description": "A delicious indian dish that's perfect for hard cooks.",
+    "cuisine": "Indian",
+    "difficulty": "hard",
+    "preparation_time": 47,
+    "cooking_time": 69,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "garlic",
+        "quantity": "5 cloves"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "2"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 large"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1/2 cup",
+        "notes": "fresh"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cook until golden brown and cooked through.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 465,
+      "protein": 22,
+      "carbs": 59,
+      "fat": 14
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.1,
+    "reviews_count": 415,
+    "image_url": "https://example.com/images/vegetable_biryani.jpg",
+    "tags": [
+      "vegetarian",
+      "family-friendly",
+      "gourmet",
+      "indian",
+      "dessert",
+      "advanced"
+    ]
+  },
+  {
+    "recipe_id": "recipe27",
+    "name": "Sushi Burrito",
+    "description": "A delicious other dish that's perfect for medium cooks.",
+    "cuisine": "Other",
+    "difficulty": "medium",
+    "preparation_time": 45,
+    "cooking_time": 21,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium",
+        "notes": "chopped"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cook until golden brown and cooked through.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 400,
+      "protein": 22,
+      "carbs": 56,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "rating": 4.7,
+    "reviews_count": 474,
+    "image_url": "https://example.com/images/sushi_burrito.jpg",
+    "tags": [
+      "other",
+      "gluten-free",
+      "vegetarian",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe28",
+    "name": "Chicken Parmigiana",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 41,
+    "cooking_time": 60,
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "basil",
+        "quantity": "2 tsp"
+      },
+      {
+        "name": "pasta",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "oregano",
+        "quantity": "2 tsp"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 small"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Cook until golden brown and cooked through.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 367,
+      "protein": 21,
+      "carbs": 45,
+      "fat": 13
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.8,
+    "reviews_count": 237,
+    "image_url": "https://example.com/images/chicken_parmigiana.jpg",
+    "tags": [
+      "vegetarian",
+      "italian",
+      "mild",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe29",
+    "name": "Tandoori Chicken",
+    "description": "A delicious indian dish that's perfect for medium cooks.",
+    "cuisine": "Indian",
+    "difficulty": "medium",
+    "preparation_time": 16,
+    "cooking_time": 51,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "cumin",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "garam masala",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 small"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "wine",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Cook until golden brown and cooked through.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Cook until golden brown and cooked through.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 387,
+      "protein": 23,
+      "carbs": 51,
+      "fat": 10
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 3.8,
+    "reviews_count": 253,
+    "image_url": "https://example.com/images/tandoori_chicken.jpg",
+    "tags": [
+      "vegetarian",
+      "breakfast",
+      "indian"
+    ]
+  },
+  {
+    "recipe_id": "recipe30",
+    "name": "Spanakopita",
+    "description": "A delicious mediterranean dish that's perfect for easy cooks.",
+    "cuisine": "Mediterranean",
+    "difficulty": "easy",
+    "preparation_time": 26,
+    "cooking_time": 58,
+    "servings": 7,
+    "ingredients": [
+      {
+        "name": "garlic",
+        "quantity": "4 cloves",
+        "notes": "crushed"
+      },
+      {
+        "name": "olive oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "feta cheese",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cook until golden brown and cooked through.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 349,
+      "protein": 18,
+      "carbs": 38,
+      "fat": 11
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.9,
+    "reviews_count": 152,
+    "image_url": "https://example.com/images/spanakopita.jpg",
+    "tags": [
+      "vegetarian",
+      "mediterranean",
+      "breakfast",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe31",
+    "name": "Chicken Tacos",
+    "description": "A delicious mexican dish that's perfect for medium cooks.",
+    "cuisine": "Mexican",
+    "difficulty": "medium",
+    "preparation_time": 35,
+    "cooking_time": 45,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "chili powder",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "lime",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "cumin",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 medium"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "butter",
+        "quantity": "1/2 cup"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 402,
+      "protein": 16,
+      "carbs": 48,
+      "fat": 9
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.3,
+    "reviews_count": 353,
+    "image_url": "https://example.com/images/chicken_tacos.jpg",
+    "tags": [
+      "vegetarian",
+      "mexican",
+      "dessert"
+    ]
+  },
+  {
+    "recipe_id": "recipe32",
+    "name": "Greek Salad",
+    "description": "A delicious mediterranean dish that's perfect for hard cooks.",
+    "cuisine": "Mediterranean",
+    "difficulty": "hard",
+    "preparation_time": 46,
+    "cooking_time": 72,
+    "servings": 5,
+    "ingredients": [
+      {
+        "name": "olives",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "yogurt",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "cucumber",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add seasonings and adjust to taste.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 271,
+      "protein": 13,
+      "carbs": 31,
+      "fat": 10
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.6,
+    "reviews_count": 328,
+    "image_url": "https://example.com/images/greek_salad.jpg",
+    "tags": [
+      "vegetarian",
+      "mediterranean",
+      "gourmet",
+      "advanced",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe33",
+    "name": "Meatloaf",
+    "description": "A delicious american dish that's perfect for easy cooks.",
+    "cuisine": "American",
+    "difficulty": "easy",
+    "preparation_time": 26,
+    "cooking_time": 55,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "milk",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "eggs",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "potatoes",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 large"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1 tbsp"
+      }
+    ],
+    "instructions": [
+      "Prepare all ingredients by washing, chopping, and measuring them.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Let cool slightly before serving."
+    ],
+    "nutrition_info": {
+      "calories": 540,
+      "protein": 24,
+      "carbs": 54,
+      "fat": 20
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.2,
+    "reviews_count": 447,
+    "image_url": "https://example.com/images/meatloaf.jpg",
+    "tags": [
+      "vegetarian",
+      "american",
+      "dessert",
+      "healthy",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe34",
+    "name": "Lamb Biryani",
+    "description": "A delicious indian dish that's perfect for medium cooks.",
+    "cuisine": "Indian",
+    "difficulty": "medium",
+    "preparation_time": 14,
+    "cooking_time": 55,
+    "servings": 6,
+    "ingredients": [
+      {
+        "name": "cumin",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "4"
+      },
+      {
+        "name": "turmeric",
+        "quantity": "2 tsp"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 small"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "garlic",
+        "quantity": "4 cloves"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Add seasonings and adjust to taste.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cook until golden brown and cooked through.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 397,
+      "protein": 21,
+      "carbs": 53,
+      "fat": 10
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.2,
+    "reviews_count": 286,
+    "image_url": "https://example.com/images/lamb_biryani.jpg",
+    "tags": [
+      "vegetarian",
+      "snack",
+      "indian"
+    ]
+  },
+  {
+    "recipe_id": "recipe35",
+    "name": "Sweet and Sour Pork",
+    "description": "A delicious asian dish that's perfect for easy cooks.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 45,
+    "cooking_time": 39,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "sesame oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "rice",
+        "quantity": "1 1/2 cups"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "3 cloves"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Cook until golden brown and cooked through.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 431,
+      "protein": 19,
+      "carbs": 45,
+      "fat": 12
+    },
+    "dietary_info": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "rating": 4.1,
+    "reviews_count": 62,
+    "image_url": "https://example.com/images/sweet_and_sour_pork.jpg",
+    "tags": [
+      "vegetarian",
+      "asian",
+      "spicy",
+      "gluten-free",
+      "lunch",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe36",
+    "name": "Chocolate Chip Cookies",
+    "description": "A delicious american dish that's perfect for medium cooks.",
+    "cuisine": "American",
+    "difficulty": "medium",
+    "preparation_time": 27,
+    "cooking_time": 19,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "milk",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "bacon",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "chicken",
+        "quantity": "1.5 lbs",
+        "notes": "thighs"
+      },
+      {
+        "name": "onions",
+        "quantity": "2 large"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "herbs",
+        "quantity": "1 tbsp",
+        "notes": "dried"
+      }
+    ],
+    "instructions": [
+      "Season meat with salt and pepper.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Add seasonings and adjust to taste.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Garnish with fresh herbs before serving."
+    ],
+    "nutrition_info": {
+      "calories": 496,
+      "protein": 19,
+      "carbs": 69,
+      "fat": 14
+    },
+    "dietary_info": [],
+    "rating": 4.0,
+    "reviews_count": 475,
+    "image_url": "https://example.com/images/chocolate_chip_cookies.jpg",
+    "tags": [
+      "party-food",
+      "american",
+      "lunch"
+    ]
+  },
+  {
+    "recipe_id": "recipe37",
+    "name": "Salsa Verde",
+    "description": "A delicious mexican dish that's perfect for easy cooks.",
+    "cuisine": "Mexican",
+    "difficulty": "easy",
+    "preparation_time": 21,
+    "cooking_time": 58,
+    "servings": 3,
+    "ingredients": [
+      {
+        "name": "lime",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "beans",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 small"
+      },
+      {
+        "name": "tomatoes",
+        "quantity": "4"
+      },
+      {
+        "name": "butter",
+        "quantity": "8 oz"
+      },
+      {
+        "name": "wine",
+        "quantity": "3/4 cup"
+      }
+    ],
+    "instructions": [
+      "Heat oil in a large pan over medium heat.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Serve hot with your favorite sides."
+    ],
+    "nutrition_info": {
+      "calories": 474,
+      "protein": 19,
+      "carbs": 55,
+      "fat": 14
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 3.8,
+    "reviews_count": 447,
+    "image_url": "https://example.com/images/salsa_verde.jpg",
+    "tags": [
+      "vegetarian",
+      "beginner-friendly",
+      "snack",
+      "quick",
+      "mexican"
+    ]
+  },
+  {
+    "recipe_id": "recipe38",
+    "name": "Beef Ramen",
+    "description": "A delicious asian dish that's perfect for medium cooks.",
+    "cuisine": "Asian",
+    "difficulty": "medium",
+    "preparation_time": 30,
+    "cooking_time": 31,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "fish sauce",
+        "quantity": "1/2 cup"
+      },
+      {
+        "name": "rice",
+        "quantity": "2 cups"
+      },
+      {
+        "name": "garlic",
+        "quantity": "5 cloves",
+        "notes": "minced"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "lemon",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "wine",
+        "quantity": "3/4 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 large"
+      },
+      {
+        "name": "canola oil",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "herbs",
+        "quantity": "2 tbsp",
+        "notes": "chopped"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Cook until golden brown and cooked through.",
+      "Cook until golden brown and cooked through.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 421,
+      "protein": 24,
+      "carbs": 46,
+      "fat": 14
+    },
+    "dietary_info": [],
+    "rating": 4.9,
+    "reviews_count": 188,
+    "image_url": "https://example.com/images/beef_ramen.jpg",
+    "tags": [
+      "asian",
+      "mild",
+      "dinner"
+    ]
+  },
+  {
+    "recipe_id": "recipe39",
+    "name": "Sweet and Sour Pork",
+    "description": "A delicious asian dish that's perfect for easy cooks.",
+    "cuisine": "Asian",
+    "difficulty": "easy",
+    "preparation_time": 23,
+    "cooking_time": 46,
+    "servings": 8,
+    "ingredients": [
+      {
+        "name": "lime",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "chili sauce",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "ginger",
+        "quantity": "2 tbsp"
+      },
+      {
+        "name": "pepper",
+        "quantity": "to taste"
+      },
+      {
+        "name": "wine",
+        "quantity": "1/4 cup"
+      },
+      {
+        "name": "onions",
+        "quantity": "3 small"
+      },
+      {
+        "name": "garlic",
+        "quantity": "4 cloves"
+      },
+      {
+        "name": "salt",
+        "quantity": "to taste"
+      },
+      {
+        "name": "butter",
+        "quantity": "4 oz"
+      }
+    ],
+    "instructions": [
+      "In a large bowl, combine dry ingredients.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Remove from heat and let rest for 5 minutes."
+    ],
+    "nutrition_info": {
+      "calories": 346,
+      "protein": 17,
+      "carbs": 37,
+      "fat": 12
+    },
+    "dietary_info": [
+      "vegetarian"
+    ],
+    "rating": 4.4,
+    "reviews_count": 427,
+    "image_url": "https://example.com/images/sweet_and_sour_pork.jpg",
+    "tags": [
+      "vegetarian",
+      "asian",
+      "snack",
+      "healthy",
+      "quick",
+      "beginner-friendly"
+    ]
+  },
+  {
+    "recipe_id": "recipe40",
+    "name": "Margherita Pizza",
+    "description": "A delicious italian dish that's perfect for medium cooks.",
+    "cuisine": "Italian",
+    "difficulty": "medium",
+    "preparation_time": 44,
+    "cooking_time": 28,
+    "servings": 3,
+    "ingredients": [
+      {
+        "name": "tomatoes",
+        "quantity": "4"
+      },
+      {
+        "name": "basil",
+        "quantity": "1/2 tsp"
+      },
+      {
+        "name": "oregano",
+        "quantity": "1 tsp"
+      },
+      {
+        "name": "mozzarella",
+        "quantity": "1 tbsp"
+      },
+      {
+        "name": "vinegar",
+        "quantity": "1 cup"
+      },
+      {
+        "name": "garlic",
+        "quantity": "2 cloves"
+      },
+      {
+        "name": "onions",
+        "quantity": "1 medium",
+        "notes": "sliced"
+      }
+    ],
+    "instructions": [
+      "Preheat oven to 375\u00b0F (190\u00b0C).",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Stir in remaining ingredients and bring to a simmer.",
+      "Add ingredients to the pan and cook for 5-10 minutes until fragrant.",
+      "Cover and cook for 20-30 minutes until tender.",
+      "Add seasonings and adjust to taste.",
+      "Adjust seasoning if needed and serve immediately."
+    ],
+    "nutrition_info": {
+      "calories": 416,
+      "protein": 25,
+      "carbs": 50,
+      "fat": 11
+    },
+    "dietary_info": [
+      "vegetarian",
+      "vegan"
+    ],
+    "rating": 4.7,
+    "reviews_count": 381,
+    "image_url": "https://example.com/images/margherita_pizza.jpg",
+    "tags": [
+      "vegetarian",
+      "italian",
+      "vegan",
+      "snack"
+    ]
+  }
+]

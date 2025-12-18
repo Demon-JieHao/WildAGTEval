@@ -1,0 +1,522 @@
+{
+  "MediaControlEnv": {
+    "add_to_playlist": {
+      "function": {
+        "description": "Add one or more media items to an existing playlist. Only the playlist owner can add items.",
+        "error_cases": [
+          "No playlist ID: The playlist_id parameter is empty or not provided.",
+          "No media IDs: The media_ids parameter is empty or not provided.",
+          "No current user: No user is currently set in the system.",
+          "Playlist not found: The specified playlist ID does not exist.",
+          "Permission denied: Cannot modify playlist owned by another user.",
+          "Invalid media IDs: One or more media IDs do not exist in the database."
+        ],
+        "name": "add_to_playlist",
+        "parameters": {
+          "properties": {
+            "media_ids": {
+              "description": "List of media IDs to add to the playlist",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "playlist_id": {
+              "description": "ID of the playlist to add media to",
+              "type": "string"
+            }
+          },
+          "required": [
+            "playlist_id",
+            "media_ids"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_playlist": {
+      "function": {
+        "description": "Create a new playlist for the current user. The playlist will be empty initially and can be populated using the add_to_playlist tool.",
+        "error_cases": [
+          "No title provided: The title parameter is empty or not provided.",
+          "No current user: No user is currently set in the system."
+        ],
+        "name": "create_playlist",
+        "parameters": {
+          "properties": {
+            "title": {
+              "description": "Title for the new playlist",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "fast_forward": {
+      "function": {
+        "description": "Fast forward the current media by a specified number of seconds. Useful for skipping parts of content like intros or commercials.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the fast_forward API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid seconds: The seconds parameter is negative."
+        ],
+        "name": "fast_forward",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the fast_forward API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "seconds": {
+              "default": 30,
+              "description": "Number of seconds to skip forward (default: 30). Must be positive.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_media_details": {
+      "function": {
+        "description": "Get detailed information about a specific media item including duration, genre, streaming services, and type-specific metadata.",
+        "error_cases": [
+          "No media ID: The media_id parameter is empty or not provided.",
+          "Media not found: The specified media ID does not exist in the database."
+        ],
+        "name": "get_media_details",
+        "parameters": {
+          "properties": {
+            "media_id": {
+              "description": "ID of the media item to get details for",
+              "type": "string"
+            }
+          },
+          "required": [
+            "media_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_playback_status": {
+      "function": {
+        "description": "Get the current playback status for one or more devices, including what's playing, position, and playback settings.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home."
+        ],
+        "name": "get_playback_status",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to check status for",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_playlists": {
+      "function": {
+        "description": "Get all playlists for a user. If no user ID is provided, returns playlists for the current user.",
+        "error_cases": [
+          "No current user: No user is currently set when user_id is not provided."
+        ],
+        "name": "get_playlists",
+        "parameters": {
+          "properties": {
+            "user_id": {
+              "description": "Optional user ID to get playlists for (defaults to current user)",
+              "type": "string"
+            }
+          },
+          "required": [],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "next": {
+      "function": {
+        "description": "Skip to the next track or episode in the current playlist or queue. This moves forward to the next item in the playback sequence.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the next API.",
+          "No active playback: There is no active playback on one or more devices."
+        ],
+        "name": "next",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the next API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "pause": {
+      "function": {
+        "description": "Pause media playback on one or more devices. This temporarily stops the playback while maintaining the current position, allowing for resumption later.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the pause API.",
+          "No active playback: There is no active playback to pause on one or more devices.",
+          "Already paused: Playback is already paused on one or more devices."
+        ],
+        "name": "pause",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to pause. Each endpoint must correspond to a device that supports the pause API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "play": {
+      "function": {
+        "description": "Play specified media on one or more devices. This starts playback of a movie, TV show, song, or playlist on compatible devices. The system will automatically check device compatibility before attempting playback.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Media not found: The specified media ID does not exist in the database.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the play API.",
+          "Incompatible media type: The device cannot play the specified type of media (e.g., trying to play video on an audio-only device).",
+          "Invalid media ID format: The media ID must include type prefix (e.g., 'movie:', 'song:', 'playlist:', 'show:').",
+          "Media type mismatch: The media type in the ID doesn't match the actual media type (e.g., using 'song:inception' for a movie)."
+        ],
+        "name": "play",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to play media on. Each endpoint must correspond to a device that supports the play API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "media_id": {
+              "description": "ID of the media item to play. ID should be formatted as {type}:{id} where type is one of 'movie', 'song', 'playlist', or 'show' (e.g., 'movie:inception', NOT just 'inception').",
+              "type": "string"
+            }
+          },
+          "required": [
+            "endpoints",
+            "media_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "previous": {
+      "function": {
+        "description": "Go to the previous track or episode in the current playlist or queue. If more than 5 seconds into the current track, it will restart the current track instead.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the previous API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "No previous track: There is no previous track in the playback history."
+        ],
+        "name": "previous",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the previous API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "resume": {
+      "function": {
+        "description": "Resume paused media playback on one or more devices. This continues playback from the position where it was paused.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the resume API.",
+          "No paused playback: There is no paused playback to resume on one or more devices.",
+          "Already playing: Playback is already active on one or more devices."
+        ],
+        "name": "resume",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to resume. Each endpoint must correspond to a device that supports the resume API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "rewind": {
+      "function": {
+        "description": "Rewind the current media by a specified number of seconds. Useful for replaying content you missed.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the rewind API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid seconds: The seconds parameter is negative."
+        ],
+        "name": "rewind",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the rewind API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "seconds": {
+              "default": 10,
+              "description": "Number of seconds to skip backward (default: 10). Must be positive.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "search_by_artist": {
+      "function": {
+        "description": "Search for media content (songs and albums) by artist name. Supports optional filtering by media type. Returns detailed information including title, artist, year, genre, duration, and media ID for each result.",
+        "error_cases": [
+          "Empty artist name: The artist parameter is empty or not provided.",
+          "Media database unavailable: The media database is not loaded or accessible.",
+          "No music data: The music section of the media database is empty or missing.",
+          "Invalid media type: The media_type parameter contains a value other than 'song' or 'album'.",
+          "Invalid limit: The limit parameter is less than 1 or greater than 50."
+        ],
+        "name": "search_by_artist",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "artist": {
+              "description": "Artist name to search for. Supports partial matching (case-insensitive). Examples: 'Rihanna', 'Beatles', 'Bob' (matches 'Bob Dylan'), 'JOHNNY' (matches 'Johnny Cash')",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Maximum number of results to return. Default is 50. Use smaller values (1-5) for quick searches, or larger values (20-50) for comprehensive results. Results are returned in database order",
+              "type": "integer"
+            },
+            "media_type": {
+              "description": "Optional filter to restrict results to a specific media type. Use 'song' for individual tracks or 'album' for full albums. If not specified, returns both songs and albums matching the artist",
+              "type": "string"
+            }
+          },
+          "required": [
+            "artist"
+          ],
+          "type": "object"
+        },
+        "returns": {
+          "description": "Formatted string containing search results with detailed information for each media item, including: item number, media type (SONG/ALBUM), title, artist name, release year, duration (formatted as MM:SS or H:MM:SS), genre(s), and unique media ID. Returns error message if no results found or if database issues occur.",
+          "type": "string"
+        }
+      },
+      "type": "function"
+    },
+    "search_media": {
+      "function": {
+        "description": "Search for media content by title. Supports partial matching and optional filtering by media type.",
+        "error_cases": [
+          "No search query: The query parameter is empty or not provided.",
+          "Invalid limit: The limit parameter is less than 1."
+        ],
+        "name": "search_media",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "default": 10,
+              "description": "Maximum number of results to return (default: 10)",
+              "type": "integer"
+            },
+            "media_type": {
+              "description": "Optional filter by media type",
+              "enum": [
+                "movie",
+                "tv_show",
+                "song",
+                "album",
+                "playlist"
+              ],
+              "type": "string"
+            },
+            "query": {
+              "description": "Search query for media title (partial match supported)",
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "set_playback_speed": {
+      "function": {
+        "description": "Set the playback speed for media. Useful for watching content faster or slower than normal speed.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the set_playback_speed API.",
+          "No active playback: There is no active playback on one or more devices.",
+          "Invalid speed: The speed parameter is outside the valid range (0.5-2.0)."
+        ],
+        "name": "set_playback_speed",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the set_playback_speed API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "speed": {
+              "description": "Playback speed multiplier (0.5 = half speed, 1.0 = normal, 2.0 = double speed). Must be between 0.5 and 2.0.",
+              "type": "number"
+            }
+          },
+          "required": [
+            "endpoints",
+            "speed"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "shuffle": {
+      "function": {
+        "description": "Toggle or set shuffle mode for playback. When shuffle is enabled, tracks will play in random order.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the shuffle API.",
+          "No active playback: There is no active playback on one or more devices."
+        ],
+        "name": "shuffle",
+        "parameters": {
+          "properties": {
+            "enabled": {
+              "description": "Optional boolean to set shuffle state. If not provided, toggles current state.",
+              "type": "boolean"
+            },
+            "endpoints": {
+              "description": "List of device endpoint IDs to control. Each endpoint must correspond to a device that supports the shuffle API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stop": {
+      "function": {
+        "description": "Stop media playback on one or more devices. This completely stops playback and clears the current media from the device.",
+        "error_cases": [
+          "No devices specified: The endpoints parameter is empty or not provided.",
+          "Device not found: One or more specified endpoints do not exist in the current user's home.",
+          "API not supported: One or more devices do not support the stop API.",
+          "No active playback: There is no active playback to stop on one or more devices."
+        ],
+        "name": "stop",
+        "parameters": {
+          "properties": {
+            "endpoints": {
+              "description": "List of device endpoint IDs to stop. Each endpoint must correspond to a device that supports the stop API.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "endpoints"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

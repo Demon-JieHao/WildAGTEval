@@ -1,0 +1,12 @@
+# Target Functions Configuration for Turn-Level Teacher Forcing
+# This file specifies which API functions to use as target points for evaluation
+
+target_functions:
+  - color_set
+  - create_meal_plan
+  - get_media_details
+  - get_notifications
+  - make_call
+  - search_media
+  - temperature_set
+  - stock_watchlist

@@ -1,0 +1,432 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user3_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user3",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 8,
+    "total_api_steps": 6,
+    "avg_steps_per_query": 4.0,
+    "avg_api_steps_per_query": 3.0,
+    "avg_step_efficiency": 0.3333333333333333
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 8,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.125
+  },
+  "query_results": [
+    {
+      "query": "What does the restaurant have on their menu?",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest24"
+          },
+          "description": "Get menu for Roma Restaurant"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest24"
+              },
+              "description": "Get menu for Roma Restaurant"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest24"
+            },
+            "description": "Get menu for Roma Restaurant"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for Roma Restaurant\", \"restaurant_id\": \"rest24\", \"restaurant_name\": \"Roma Restaurant\", \"description\": \"Elegant italian cuisine in an upscale atmosphere\", \"price_range\": \"$$$$\", \"rating\": 4.6, \"cuisine_types\": [\"Italian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Calamari Fritti\", \"description\": \"Crispy fried squid with marinara sauce\", \"price\": 13.69, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Bruschetta\", \"description\": \"Toasted bread with tomatoes and basil\", \"price\": 9.58, \"category\": \"Appetizers\", \"dietary_info\": [\"vegan\"], \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Caprese Salad\", \"description\": \"Fresh mozzarella, tomatoes, and basil\", \"price\": 10.74, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"description\": \"Selection of cured meats and cheeses\", \"price\": 15.16, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Chicken Parmigiana\", \"description\": \"Breaded chicken breast with marinara\", \"price\": 20.52, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Spaghetti Carbonara\", \"description\": \"Classic pasta with pancetta and egg\", \"price\": 19.93, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Margherita Pizza\", \"description\": \"Classic pizza with tomato and mozzarella\", \"price\": 15.49, \"category\": \"Main Course\"}, {\"item_id\": \"item8\", \"name\": \"Osso Buco\", \"description\": \"Braised veal shanks with risotto\", \"price\": 30.82, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Lasagna\", \"description\": \"Layered pasta with meat sauce and cheese\", \"price\": 19.34, \"category\": \"Main Course\"}]}, \"is_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:58:44.623849",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'll help you add more recipes to your meal plan. Let me get some lunch suggestions for you.\n\n<API_CALL>\n{\n  \"api\": \"get_meal_suggestions\",\n  \"params\": {\n    \"meal_type\": \"lunch\",\n    \"count\": 4\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you add more recipes to your meal plan. Let me get some lunch suggestions for you.\n\n<API_CALL>\n{\n  \"api\": \"get_meal_suggestions\",\n  \"params\": {\n    \"meal_type\": \"lunch\",\n    \"count\": 4\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_meal_suggestions",
+              "params": {
+                "meal_type": "lunch",
+                "count": 4
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_meal_suggestions",
+            "params": {
+              "meal_type": "lunch",
+              "count": 4
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 4, \"suggestions\": [{\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"dietary_info\": [], \"rating\": 4.0, \"is_favorite\": false}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.5, \"is_favorite\": false}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"dietary_info\": [], \"rating\": 4.0, \"is_favorite\": false}, {\"recipe_id\": \"recipe27\", \"name\": \"Sushi Burrito\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for lunch\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:02:28.106031",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've found some lunch options for your meal plan. Let me add the Sushi Burrito to your meal plan for Monday's lunch.\n\n<API_CALL>\n{\n  \"api\": \"schedule_meal\",\n  \"params\": {\n    \"plan_id\": \"plan24\",\n    \"recipe_id\": \"recipe27\",\n    \"day\": \"2025-07-21\",\n    \"meal_type\": \"lunch\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I've found some lunch options for your meal plan. Let me add the Sushi Burrito to your meal plan for Monday's lunch.\n\n<API_CALL>\n{\n  \"api\": \"schedule_meal\",\n  \"params\": {\n    \"plan_id\": \"plan24\",\n    \"recipe_id\": \"recipe27\",\n    \"day\": \"2025-07-21\",\n    \"meal_type\": \"lunch\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "schedule_meal",
+              "params": {
+                "plan_id": "plan24",
+                "recipe_id": "recipe27",
+                "day": "2025-07-21",
+                "meal_type": "lunch"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "schedule_meal",
+            "params": {
+              "plan_id": "plan24",
+              "recipe_id": "recipe27",
+              "day": "2025-07-21",
+              "meal_type": "lunch"
+            }
+          },
+          "api_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-21\", \"meal_type\": \"lunch\", \"recipe_id\": \"recipe27\", \"recipe_name\": \"Sushi Burrito\", \"message\": \"Added Sushi Burrito to lunch on 2025-07-21\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:09:19.872615",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Now let me get some snack suggestions for your meal plan.\n\n<API_CALL>\n{\n  \"api\": \"get_meal_suggestions\",\n  \"params\": {\n    \"meal_type\": \"snack\",\n    \"count\": 4\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now let me get some snack suggestions for your meal plan.\n\n<API_CALL>\n{\n  \"api\": \"get_meal_suggestions\",\n  \"params\": {\n    \"meal_type\": \"snack\",\n    \"count\": 4\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_meal_suggestions",
+              "params": {
+                "meal_type": "snack",
+                "count": 4
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_meal_suggestions",
+            "params": {
+              "meal_type": "snack",
+              "count": 4
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 4, \"suggestions\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"dietary_info\": [\"vegetarian\"], \"rating\": 3.8, \"is_favorite\": false}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"is_favorite\": false}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.7, \"is_favorite\": false}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.4, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for snack\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:10:55.552911",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 5,
+          "llm_response": "I'll add Salsa Verde as a snack to your meal plan for Saturday.\n\n<API_CALL>\n{\n  \"api\": \"schedule_meal\",\n  \"params\": {\n    \"plan_id\": \"plan24\",\n    \"recipe_id\": \"recipe37\",\n    \"day\": \"2025-07-19\",\n    \"meal_type\": \"snack\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll add Salsa Verde as a snack to your meal plan for Saturday.\n\n<API_CALL>\n{\n  \"api\": \"schedule_meal\",\n  \"params\": {\n    \"plan_id\": \"plan24\",\n    \"recipe_id\": \"recipe37\",\n    \"day\": \"2025-07-19\",\n    \"meal_type\": \"snack\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "schedule_meal",
+              "params": {
+                "plan_id": "plan24",
+                "recipe_id": "recipe37",
+                "day": "2025-07-19",
+                "meal_type": "snack"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "schedule_meal",
+            "params": {
+              "plan_id": "plan24",
+              "recipe_id": "recipe37",
+              "day": "2025-07-19",
+              "meal_type": "snack"
+            }
+          },
+          "api_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-19\", \"meal_type\": \"snack\", \"recipe_id\": \"recipe37\", \"recipe_name\": \"Salsa Verde\", \"message\": \"Added Salsa Verde to snack on 2025-07-19\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:17:38.180747",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "I've added several recipes to your \"Nutritious Meal Plan\" for the week of July 17-23, 2025:\n\n1. Thursday (July 17): Chole for breakfast\n2. Friday (July 18): Greek Salad for dinner\n3. Saturday (July 19): Salsa Verde for snack\n4. Monday (July 21): Sushi Burrito for lunch\n\nWould you like me to add more recipes to complete your meal plan for the week? I can suggest and add more options for the remaining meals.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've added several recipes to your \"Nutritious Meal Plan\" for the week of July 17-23, 2025:\n\n1. Thursday (July 17): Chole for breakfast\n2. Friday (July 18): Greek Salad for dinner\n3. Saturday (July 19): Salsa Verde for snack\n4. Monday (July 21): Sushi Burrito for lunch\n\nWould you like me to add more recipes to complete your meal plan for the week? I can suggest and add more options for the remaining meals.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:20:41.999023",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.8,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 6,
+        "api_steps": 5,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.16666666666666666,
+        "api_efficiency": 0.2,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 6,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:39:03.351779",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 6, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'd like to order Spaghetti Carbonara from Roma Restaurant and deliver it to 1753 Market St, Dallas, TX 75263",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest24",
+            "items": [
+              {
+                "item_id": "item6",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "1753 Market St",
+              "city": "Dallas",
+              "state": "TX",
+              "zip": "75263"
+            }
+          },
+          "description": "Place delivery order from Roma Restaurant"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for Spaghetti Carbonara from Roma Restaurant for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest24\",\n    \"items\": [\n      {\n        \"item_id\": \"item6\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"1753 Market St\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75263\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for Spaghetti Carbonara from Roma Restaurant for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest24\",\n    \"items\": [\n      {\n        \"item_id\": \"item6\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"1753 Market St\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75263\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest24",
+                "items": [
+                  {
+                    "item_id": "item6",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "1753 Market St",
+                  "city": "Dallas",
+                  "state": "TX",
+                  "zip": "75263"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest24",
+              "items": [
+                {
+                  "item_id": "item6",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "1753 Market St",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75263"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"order_time\": \"2025-08-21T19:30:13Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 19.93, \"tax\": 1.74, \"delivery_fee\": 5.99, \"tip\": 2.99, \"total\": 30.65, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 571.7112605571747,
+          "timestamp": "2025-08-21T19:30:13.710332",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest24",
+              "items": [
+                {
+                  "item_id": "item6",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "1753 Market St",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75263"
+              }
+            },
+            "description": "Place delivery order from Roma Restaurant"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Your order for Spaghetti Carbonara from Roma Restaurant has been placed successfully! \n\nOrder details:\n- Order ID: dorder1\n- Restaurant: Roma Restaurant\n- Status: Placed\n- Subtotal: $19.93\n- Tax: $1.74\n- Delivery fee: $5.99\n- Tip: $2.99\n- Total: $30.65\n\nYour food will be delivered to 1753 Market St, Dallas, TX 75263. You can track your order status at any time.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Your order for Spaghetti Carbonara from Roma Restaurant has been placed successfully! \n\nOrder details:\n- Order ID: dorder1\n- Restaurant: Roma Restaurant\n- Status: Placed\n- Subtotal: $19.93\n- Tax: $1.74\n- Delivery fee: $5.99\n- Tip: $2.99\n- Total: $30.65\n\nYour food will be delivered to 1753 Market St, Dallas, TX 75263. You can track your order status at any time.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 529.6405909061432,
+          "timestamp": "2025-08-21T19:39:03.351174",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 7,
+      "related_to_target": "Turn 6, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:39:03.352929"
+}

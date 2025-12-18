@@ -1,0 +1,203 @@
+{
+  "CommunicationController": {
+    "end_call": {
+      "function": {
+        "description": "End the current active call for the user. This tool terminates any ongoing call session and updates the call history with the relevant details.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to end a call.",
+          "No active call: The user does not have any active call to end."
+        ],
+        "name": "end_call",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "find_call_device": {
+      "function": {
+        "description": "Find devices that support call features. This tool searches for devices that can be used for making calls.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to search for devices.",
+          "Device not found: The specified device endpoint does not exist or is not accessible.",
+          "No call features: The device does not support any call features."
+        ],
+        "name": "find_call_device",
+        "parameters": {
+          "properties": {
+            "device_name": {
+              "description": "Optional name or partial name to search for. If not provided, returns all call devices.",
+              "type": "string"
+            },
+            "endpoint": {
+              "description": "Optional specific endpoint ID to find a particular device.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "find_contact": {
+      "function": {
+        "description": "Find contacts by name, phone number, or email. This tool searches through the user's contacts and returns matching entries based on the specified search criteria.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to access contacts.",
+          "Invalid search_type: The specified search type is not 'name', 'phone', or 'email'.",
+          "No contacts found: No contacts match the provided search query."
+        ],
+        "name": "find_contact",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "Maximum number of contacts to return. Default is 5.",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "query": {
+              "description": "The search term to find contacts (name, phone number, or email).",
+              "type": "string"
+            },
+            "search_type": {
+              "description": "Type of search to perform. Default is 'name'.",
+              "enum": [
+                "name",
+                "phone",
+                "email"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_call_history": {
+      "function": {
+        "description": "Get call history for the current user. This tool retrieves the user's call records, including incoming and outgoing calls, with details such as duration and status.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to view call history.",
+          "Invalid time range format: The time_range must be in ISO 8601 duration format prefixed with 'P' (e.g., 'P7D', 'P1DT12H30M')."
+        ],
+        "name": "get_call_history",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "Maximum number of call records to return. Default is 10.",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "time_range": {
+              "description": "Time range in ISO 8601 format (e.g., 'P1DT12H30M').",
+              "type": "string"
+            }
+          },
+          "required": [
+            "time_range"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_messages": {
+      "function": {
+        "description": "Get message history for the current user, optionally filtered by contact. This tool retrieves message history and allows viewing conversations with specific contacts.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to view messages.",
+          "Contact not found: The specified contact ID does not exist in the user's contacts."
+        ],
+        "name": "get_messages",
+        "parameters": {
+          "properties": {
+            "contact_id": {
+              "description": "Optional ID of the contact to filter messages. If not provided, returns messages across all contacts.",
+              "type": "string"
+            },
+            "limit": {
+              "description": "Maximum number of messages to return. Default is 10.",
+              "minimum": 1,
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "make_call": {
+      "function": {
+        "description": "Make a call to a phone number using a specified device. This tool initiates a communication session with the specified phone number.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to make calls.",
+          "User has active call: The user already has an active call that must be ended first.",
+          "No suitable device: No device is available for making calls.",
+          "Device not powered on: The specified device is not on.",
+          "Video not supported: The device does not support video calls.",
+          "Invalid phone number format: The phone number must be in E.164 format with '+' prefix for international calls or prefixed with 'D:' for domestic calls."
+        ],
+        "name": "make_call",
+        "parameters": {
+          "properties": {
+            "call_type": {
+              "description": "Type of call to make. Default is 'audio'.",
+              "enum": [
+                "audio",
+                "video"
+              ],
+              "type": "string"
+            },
+            "device_endpoint": {
+              "description": "Endpoint ID of the device to use for calling. If not specified, a suitable device will be selected automatically.",
+              "type": "string"
+            },
+            "phone_number": {
+              "description": "Phone number to call. Must be in E.164 format with '+' prefix for international calls (e.g., +12025550123) or prefixed with 'D:' for domestic calls (e.g., D:2025550123).",
+              "type": "string"
+            }
+          },
+          "required": [
+            "phone_number"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "send_message": {
+      "function": {
+        "description": "Send a text message to a specific contact. This tool allows sending messages to contacts in the user's contact list.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to send messages.",
+          "Empty content: Message content cannot be empty.",
+          "Contact not found: The specified contact ID does not exist in the user's contacts."
+        ],
+        "name": "send_message",
+        "parameters": {
+          "properties": {
+            "contact_id": {
+              "description": "ID of the contact to send the message to.",
+              "type": "string"
+            },
+            "content": {
+              "description": "The message content to send.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "contact_id",
+            "content"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

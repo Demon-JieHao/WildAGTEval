@@ -1,60 +1,82 @@
-name: bfcl
+name: wild_agt
 channels:
-  - conda-forge
   - defaults
+  - conda-forge
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
-  - _libgcc_mutex=0.1=main
-  - _openmp_mutex=5.1=1_gnu
-  - blas=1.0=mkl
-  - bottleneck=1.4.2=py310ha9d4c09_0
-  - bzip2=1.0.8=h5eee18b_6
-  - ca-certificates=2025.6.15=hbd8a1cb_0
-  - expat=2.7.1=h6a678d5_0
-  - intel-openmp=2023.1.0=hdb19cb5_46306
-  - ld_impl_linux-64=2.40=h12ee557_0
-  - libffi=3.4.4=h6a678d5_1
-  - libgcc=15.1.0=h767d61c_3
-  - libgcc-ng=15.1.0=h69a702a_3
-  - libgomp=15.1.0=h767d61c_3
-  - libnsl=2.0.0=h5eee18b_0
-  - libstdcxx-ng=11.2.0=h1234567_1
-  - libuuid=2.38.1=h0b41bf4_0
-  - libxcb=1.17.0=h9b100fa_0
-  - libxcrypt=4.4.36=hd590300_1
-  - libzlib=1.2.13=h4ab18f5_6
-  - mkl=2023.1.0=h213fc3f_46344
-  - mkl-service=2.4.0=py310h5eee18b_2
-  - mkl_fft=1.3.11=py310h5eee18b_0
-  - mkl_random=1.2.8=py310h1128e8f_0
-  - ncurses=6.2=he6710b0_1
-  - numexpr=2.10.1=py310h3c60e43_0
-  - numpy-base=2.0.1=py310hb5e798b_1
-  - openssl=3.5.0=h7b32b05_1
-  - parallel=20250622=ha770c72_0
-  - perl=5.32.1=7_hd590300_perl5
-  - pip=25.1=pyhc872135_2
-  - pthread-stubs=0.3=h0ce48e5_1
-  - python=3.10.2=h543edf9_0_cpython
-  - python-dateutil=2.9.0post0=py310h06a4308_2
-  - python-tzdata=2025.2=pyhd3eb1b0_0
-  - readline=8.1=h27cfd23_0
-  - screen=4.8.0=h46c0cb4_1
-  - setuptools=78.1.1=py310h06a4308_0
-  - six=1.17.0=py310h06a4308_0
-  - sqlite=3.40.1=h5082296_0
-  - tbb=2021.8.0=hdb19cb5_0
-  - tk=8.6.14=h993c535_1
-  - tzdata=2025b=h04d1e81_0
-  - wheel=0.45.1=py310h06a4308_0
-  - xorg-libx11=1.8.12=h9b100fa_1
-  - xorg-libxau=1.0.12=h9b100fa_0
-  - xorg-libxdmcp=1.1.5=h9b100fa_0
-  - xorg-xorgproto=2024.1=h5eee18b_1
-  - xz=5.6.4=h5eee18b_1
-  - zlib=1.2.13=h4ab18f5_6
+  - _libgcc_mutex=0.1
+  - _openmp_mutex=5.1
+  - asttokens=3.0.0
+  - blas=1.0
+  - bottleneck=1.4.2
+  - bzip2=1.0.8
+  - ca-certificates=2025.12.2
+  - decorator=5.2.1
+  - exceptiongroup=1.3.0
+  - expat=2.7.1
+  - intel-openmp=2023.1.0
+  - jedi=0.19.2
+  - jupyter_client=8.6.3
+  - jupyter_core=5.9.1
+  - ld_impl_linux-64=2.40
+  - libffi=3.4.4
+  - libgcc=15.1.0
+  - libgcc-ng=15.1.0
+  - libgomp=15.1.0
+  - libnsl=2.0.0
+  - libsodium=1.0.20
+  - libstdcxx-ng=11.2.0
+  - libuuid=2.38.1
+  - libxcb=1.17.0
+  - libxcrypt=4.4.36
+  - libzlib=1.2.13
+  - mkl=2023.1.0
+  - mkl-service=2.4.0
+  - mkl_fft=1.3.11
+  - mkl_random=1.2.8
+  - ncurses=6.2
+  - nest-asyncio=1.6.0
+  - numexpr=2.10.1
+  - openssl=3.5.0
+  - packaging=25.0
+  - parallel=20250622
+  - perl=5.32.1
+  - pexpect=4.9.0
+  - pip=25.1
+  - prompt_toolkit=3.0.52
+  - psutil=7.0.0
+  - pthread-stubs=0.3
+  - ptyprocess=0.7.0
+  - pure_eval=0.2.3
+  - python=3.10.2
+  - python-dateutil=2.9.0post0
+  - python-tzdata=2025.2
+  - readline=8.1
+  - screen=4.8.0
+  - setuptools=78.1.1
+  - six=1.17.0
+  - sqlite=3.40.1
+  - stack_data=0.6.3
+  - tbb=2021.8.0
+  - tk=8.6.14
+  - tornado=6.5.1
+  - traitlets=5.14.3
+  - typing_extensions=4.15.0
+  - tzdata=2025b
+  - wcwidth=0.2.13
+  - wheel=0.45.1
+  - xorg-libx11=1.8.12
+  - xorg-libxau=1.0.12
+  - xorg-libxdmcp=1.1.5
+  - xorg-xorgproto=2024.1
+  - xz=5.6.4
+  - zeromq=4.3.5
+  - zlib=1.2.13
   - pip:
+      - aiohappyeyeballs==2.6.1
+      - aiohttp==3.13.2
+      - aiosignal==1.4.0
       - annotated-types==0.7.0
       - anthropic==0.49.0
       - anyio==4.9.0
@@ -62,12 +84,11 @@ dependencies:
       - argon2-cffi==25.1.0
       - argon2-cffi-bindings==21.2.0
       - arrow==1.3.0
-      - asttokens==3.0.0
       - async-lru==2.0.5
+      - async-timeout==5.0.1
       - attrs==25.3.0
       - babel==2.17.0
       - beautifulsoup4==4.13.4
-      - bfcl==1.0.0
       - black==25.1.0
       - bleach==6.2.0
       - boto3==1.38.32
@@ -84,20 +105,21 @@ dependencies:
       - dacite==1.9.2
       - datamodel-code-generator==0.25.7
       - debugpy==1.8.14
-      - decorator==5.2.1
       - defusedxml==0.7.1
       - distro==1.9.0
       - dnspython==2.7.0
       - docstring-parser==0.16
       - email-validator==2.2.0
       - eval-type-backport==0.2.2
-      - exceptiongroup==1.3.0
       - executing==2.2.0
       - fastavro==1.11.1
       - fastjsonschema==2.21.1
+      - fastuuid==0.14.0
       - filelock==3.18.0
       - fonttools==4.58.4
       - fqdn==1.5.1
+      - freezegun==1.5.5
+      - frozenlist==1.8.0
       - fsspec==2025.5.1
       - genson==1.3.0
       - google-api-core==2.25.0
@@ -112,7 +134,7 @@ dependencies:
       - google-resumable-media==2.7.2
       - googleapis-common-protos==1.70.0
       - grpc-google-iam-v1==0.14.2
-      - grpcio==1.72.1
+      - grpcio==1.67.1
       - grpcio-status==1.72.1
       - h11==0.16.0
       - hf-xet==1.1.3
@@ -123,13 +145,13 @@ dependencies:
       - huggingface-hub==0.32.4
       - idna==3.10
       - imagehash==4.3.1
+      - importlib-metadata==8.7.0
       - inflect==5.6.2
       - ipykernel==6.29.5
       - ipython==8.37.0
       - ipywidgets==8.1.7
       - isoduration==20.11.0
       - isort==5.13.2
-      - jedi==0.19.2
       - jinja2==3.1.6
       - jiter==0.10.0
       - jmespath==1.0.1
@@ -139,7 +161,6 @@ dependencies:
       - jsonschema==4.24.0
       - jsonschema-specifications==2025.4.1
       - jupyter==1.1.1
-      - jupyter-client==8.6.3
       - jupyter-console==6.6.3
       - jupyter-core==5.8.1
       - jupyter-events==0.12.0
@@ -151,6 +172,7 @@ dependencies:
       - jupyterlab-server==2.27.3
       - jupyterlab-widgets==3.0.15
       - kiwisolver==1.4.8
+      - litellm==1.80.9
       - llvmlite==0.44.0
       - markdown-it-py==3.0.0
       - markupsafe==3.0.2
@@ -160,12 +182,12 @@ dependencies:
       - mistralai==1.7.0
       - mistune==3.1.3
       - mpmath==1.3.0
+      - multidict==6.7.0
       - multimethod==1.12
       - mypy-extensions==1.1.0
       - nbclient==0.10.2
       - nbconvert==7.16.6
       - nbformat==5.10.4
-      - nest-asyncio==1.6.0
       - networkx==3.4.2
       - notebook==7.4.3
       - notebook-shim==0.2.4
@@ -184,9 +206,8 @@ dependencies:
       - nvidia-nccl-cu12==2.21.5
       - nvidia-nvjitlink-cu12==12.4.127
       - nvidia-nvtx-cu12==12.4.127
-      - openai==1.84.0
+      - openai==2.9.0
       - overrides==7.7.0
-      - packaging==25.0
       - pandas==2.3.0
       - pandas-profiling==3.6.6
       - pandocfilters==1.5.1
@@ -195,17 +216,14 @@ dependencies:
       - pathlib==1.0.1
       - pathspec==0.12.1
       - patsy==1.0.1
-      - pexpect==4.9.0
       - phik==0.12.4
       - pillow==11.2.1
       - platformdirs==4.3.8
       - prometheus-client==0.22.1
       - prompt-toolkit==3.0.51
+      - propcache==0.4.1
       - proto-plus==1.26.1
       - protobuf==6.31.1
-      - psutil==7.0.0
-      - ptyprocess==0.7.0
-      - pure-eval==0.2.3
       - puremagic==1.29
       - pyasn1==0.6.1
       - pyasn1-modules==0.4.2
@@ -221,6 +239,7 @@ dependencies:
       - pyyaml==6.0.2
       - pyzmq==26.4.0
       - referencing==0.36.2
+      - regex==2025.11.3
       - requests==2.32.3
       - rfc3339-validator==0.1.4
       - rfc3986-validator==0.1.1
@@ -235,12 +254,12 @@ dependencies:
       - shellingham==1.5.4
       - sniffio==1.3.1
       - soupsieve==2.7
-      - stack-data==0.6.3
       - statsmodels==0.14.4
       - sympy==1.13.1
       - tabulate==0.9.0
       - tenacity==9.0.0
       - terminado==0.18.1
+      - tiktoken==0.12.0
       - tinycss2==1.4.0
       - tokenizers==0.21.1
       - toml==0.10.2
@@ -248,9 +267,7 @@ dependencies:
       - torch==2.6.0
       - torchaudio==2.6.0
       - torchvision==0.21.0
-      - tornado==6.5.1
       - tqdm==4.67.1
-      - traitlets==5.14.3
       - tree-sitter==0.21.3
       - tree-sitter-java==0.21.0
       - tree-sitter-javascript==0.21.4
@@ -264,7 +281,6 @@ dependencies:
       - uri-template==1.3.0
       - urllib3==2.4.0
       - visions==0.8.1
-      - wcwidth==0.2.13
       - webcolors==24.11.1
       - webencodings==0.5.1
       - websocket-client==1.8.0
@@ -272,5 +288,6 @@ dependencies:
       - widgetsnbextension==4.0.14
       - wordcloud==1.9.4
       - writer-sdk==2.2.0
+      - yarl==1.22.0
       - ydata-profiling==4.16.1
-prefix: /home/doyoungk/anaconda3/envs/bfcl
+      - zipp==3.23.0

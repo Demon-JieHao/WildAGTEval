@@ -1,0 +1,74 @@
+[
+  {
+    "message_id": "msg1",
+    "user_id": "user1",
+    "contact_id": "contact1",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T14:15:00Z",
+    "content": "회의 자료 준비됐니?",
+    "read": true
+  },
+  {
+    "message_id": "msg2",
+    "user_id": "user1",
+    "contact_id": "contact1",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T14:16:30Z",
+    "content": "네, 방금 메일로 보냈어요.",
+    "read": true
+  },
+  {
+    "message_id": "msg3",
+    "user_id": "user1",
+    "contact_id": "contact2",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T15:20:00Z",
+    "content": "오늘 저녁 미팅 시간에 늦을 것 같아요.",
+    "read": true
+  },
+  {
+    "message_id": "msg4",
+    "user_id": "user1",
+    "contact_id": "contact2",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T15:21:45Z",
+    "content": "괜찮아요. 저희가 기다릴게요.",
+    "read": true
+  },
+  {
+    "message_id": "msg5",
+    "user_id": "user2",
+    "contact_id": "contact3",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T17:25:00Z",
+    "content": "저녁 식사 계획은 어때요?",
+    "read": true
+  },
+  {
+    "message_id": "msg6",
+    "user_id": "user2",
+    "contact_id": "contact3",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T17:26:15Z",
+    "content": "좋아요. 7시에 만날까요?",
+    "read": true
+  },
+  {
+    "message_id": "msg7",
+    "user_id": "user2",
+    "contact_id": "contact4",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T18:30:00Z",
+    "content": "프로젝트 파일 확인해주세요.",
+    "read": false
+  },
+  {
+    "message_id": "msg8",
+    "user_id": "user1",
+    "contact_id": "contact1",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T20:10:00Z",
+    "content": "내일 아침 화상 회의 확정되었나요?",
+    "read": false
+  }
+]

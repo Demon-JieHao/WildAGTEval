@@ -1,0 +1,548 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user1",
+  "model": "gpt-4o-mini",
+  "uncertainty_config": {
+    "config_name": "Adhoc Only",
+    "config_description": "Enable ADHOC RULEs uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/adhoc.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0,
+        "ADHOC": 8
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": [],
+        "ADHOC": [
+          "track_order",
+          "lock_lock",
+          "lock_unlock",
+          "color_set",
+          "get_call_history",
+          "make_call",
+          "play",
+          "stock_price"
+        ]
+      }
+    },
+    "enabled_uncertainty_types": [
+      "ADHOC"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 18,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 9.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.28125
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 18,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Can you check the stock price for Tesla?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:TSLA"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:TSLA"
+              }
+            }
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:TSLA"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:32.161314",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:35.000815",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:37.655367",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:40.081134",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 5,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:43.301270",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:46.167199",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 7,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:49.036991",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 8,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:51.768021",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 9,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:54.537279",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 10,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:24:57.488778",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 11,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:00.280805",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 12,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:02.969448",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 13,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:05.629511",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 14,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:08.447437",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 15,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:11.769420",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 16,
+          "llm_response": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+          "parsed_action": {
+            "type": "unknown",
+            "content": "```json\n{\n  \"name\": \"Stock Price Inquiry\",\n  \"description\": \"User requests the stock price for Tesla.\",\n  \"user\": \"user1\",\n  \"conversation_turns\": [\n    {\n      \"turn\": 1,\n      \"user_query\": \"Can you check the stock price for Tesla?\",\n      \"api_calls\": [\n        {\n          \"api\": \"stock_price\",\n          \"params\": {\n            \"symbol\": \"TSLA\"\n          }\n        }\n      ]\n    }\n  ]\n}\n```",
+            "api_call": null,
+            "completion_message": null
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-12T10:25:15.261766",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 16,
+        "api_steps": 1,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 0.0625,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": false,
+        "inference_path": [
+          "gt_execution",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown",
+          "unknown"
+        ],
+        "total_prediction_steps": 16,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-12-12T10:25:18.432814",
+      "target_function": "stock_price",
+      "target_location": "Turn 2, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Check my recent calling record in about 10 weeks",
+      "expected_api_sequence": [
+        {
+          "api": "get_call_history",
+          "params": {
+            "time_range": "P10W",
+            "limit": 2
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P70D\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P70D"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P70D"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 0 call records\", \"calls\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 1.769545316696167,
+          "timestamp": "2025-12-12T10:25:17.031364",
+          "ground_truth_api": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 2
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "```\n<End of Turn>\n```",
+          "parsed_action": {
+            "type": "completion",
+            "content": "```\n<End of Turn>\n```",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 1.3982157707214355,
+          "timestamp": "2025-12-12T10:25:18.431092",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 3,
+      "related_to_target": "Turn 2, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-12-12T10:29:58.377654"
+}

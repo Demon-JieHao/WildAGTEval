@@ -1,0 +1,281 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario4_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user3_scenario4_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user3",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.41666666666666663
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "What is Amazon's main focus?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "amazon_inc"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "amazon_inc"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "amazon_inc"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"amazon_inc\", \"definition\": \"Amazon.com Inc. (symbol: AMZN) started as an online bookstore and has grown into the world's largest e-commerce platform and cloud computing provider through AWS (Amazon Web Services). It also operates in logistics, streaming, and smart devices.\\nCOMPREHENSIVE STOCK PERFORMANCE ANALYSIS (Historical Data): MULTI-YEAR TRAJECTORY & VOLATILITY ANALYSIS: 2024: $155.89 (+23.4% YoY, Vol: 38.7%), 2023: $126.34 (-49.9% YoY, Vol: 52.3%), 2022: $252.11 (-49.9% YoY, Vol: 67.8%), 2021: $503.78 (+2.4% YoY, Vol: 45.9%), 2020: $492.12 (+76.3% YoY, Vol: 58.4%). Significant volatility reflecting post-pandemic normalization and interest rate impacts. Five-year CAGR: -20.4%, Max drawdown: -76.1% (2022), Beta vs S&P 500: 1.15, Sharpe Ratio: 0.31, Information Ratio: 0.45. MONTHLY MOMENTUM ANALYSIS: Jan: $142.80 (-8.4% MoM, Vol: 134.6M), Feb: $147.90 (+3.6% MoM, Vol: 128.7M), Mar: $153.40 (+3.7% MoM, Vol: 142.3M), Apr: $159.75 (+4.1% MoM, Vol: 156.8M), May: $165.20 (+3.4% MoM, Vol: 148.9M). Steady recovery momentum building throughout 2025. WEEKLY GRANULAR ANALYSIS: June Week 1 (June 2-6): Open $165.50, High $169.80, Low $163.90, Close $168.45 (+2.0% WoW, Vol: 798M), June Week 2 (June 9-11): Open $168.60, High $172.30, Low $167.20, Close $170.85 (+1.4% WoW, Vol: 723M). Weekly ATR: $5.67, moderate volatility for large-cap growth. COMPREHENSIVE DAILY PRICE ANALYSIS (May 19-Recent): Daily Closes: 165.20, 166.78, 168.34, 169.91, 168.45, 170.12, 171.78, 173.34, 171.89, 174.45, 176.12, 175.67, 178.23, 179.89, 178.56, 181.12, 182.78, 181.45, 184.12, 185.67, 184.34, 187.23, 188.89, 187.56.\\n New York Stock Exchange hosts major tech companies including UBER, ORCL.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:55:32.010480",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Based on the information I found, Amazon.com Inc. (AMZN) started as an online bookstore but has grown into the world's largest e-commerce platform. It has also expanded significantly into cloud computing through AWS (Amazon Web Services). Additionally, Amazon operates in logistics, streaming services, and smart devices.\n\nThe company has seen significant growth and volatility over recent years, with its stock performance showing various trends since 2020.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on the information I found, Amazon.com Inc. (AMZN) started as an online bookstore but has grown into the world's largest e-commerce platform. It has also expanded significantly into cloud computing through AWS (Amazon Web Services). Additionally, Amazon operates in logistics, streaming services, and smart devices.\n\nThe company has seen significant growth and volatility over recent years, with its stock performance showing various trends since 2020.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:56:30.640190",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:20:05.970323",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:AMZN"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "Based on the information I provided earlier, Amazon's stock (AMZN) has shown various price points over time. The most recent value mentioned was $188.89, though it later adjusted to $187.56 according to the daily price analysis.\n\nWould you like me to get the current stock price for Amazon? I can look that up for you with real-time data.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:AMZN\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Based on the information I provided earlier, Amazon's stock (AMZN) has shown various price points over time. The most recent value mentioned was $188.89, though it later adjusted to $187.56 according to the daily price analysis.\n\nWould you like me to get the current stock price for Amazon? I can look that up for you with real-time data.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:AMZN\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NYSE:AMZN"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NYSE:AMZN"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Invalid symbol.\"}",
+          "api_success": false,
+          "execution_time": 211.78956961631775,
+          "timestamp": "2025-08-21T19:00:02.429810",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:AMZN"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I apologize for the error. Let me try again with the correct stock exchange symbol for Amazon.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:AMZN\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I apologize for the error. Let me try again with the correct stock exchange symbol for Amazon.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:AMZN\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:AMZN"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:AMZN"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"AMZN\", \"name\": \"Amazon.com Inc.\", \"price\": 60.6, \"change\": -3.15, \"change_percent\": -4.94}, \"formatted\": \"AMZN: $60.6 (-3.15 / -4.94%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 531.8213925361633,
+          "timestamp": "2025-08-21T19:08:54.251313",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "According to the latest data, Amazon's current stock price is $60.60, which is down $3.15 (or -4.94%) from the previous close.\n\nThis is the real-time value from NASDAQ where Amazon (AMZN) is listed. The price appears lower than the historical values I mentioned earlier, which could be due to a stock split that occurred since those historical prices were recorded.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "According to the latest data, Amazon's current stock price is $60.60, which is down $3.15 (or -4.94%) from the previous close.\n\nThis is the real-time value from NASDAQ where Amazon (AMZN) is listed. The price appears lower than the historical values I mentioned earlier, which could be due to a stock split that occurred since those historical prices were recorded.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 671.7184977531433,
+          "timestamp": "2025-08-21T19:20:05.969980",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 0.5,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:20:05.971519"
+}

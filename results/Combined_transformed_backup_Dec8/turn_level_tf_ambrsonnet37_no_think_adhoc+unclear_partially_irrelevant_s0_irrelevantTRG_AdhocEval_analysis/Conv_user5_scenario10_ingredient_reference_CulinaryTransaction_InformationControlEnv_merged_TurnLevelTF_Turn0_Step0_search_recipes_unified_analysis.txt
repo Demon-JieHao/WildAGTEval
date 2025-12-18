@@ -1,0 +1,48 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+   User: user5
+   Domain: transaction
+   Status: ❌ FAIL
+   Total Turns: 2
+   Successful Turns: 1
+   Turn Success Rate: 50.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 7
+   Query Warnings: 0
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Show me top 10 Italian dishes
+   Expected:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"Italian","limit":10})
+   Actual:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"Italian","limit":10})
+
+   Turn 2: ❌
+   Query: I want to buy these cooking ingredients from the highest-rated recipe
+   Expected:
+     🔍 search_product({"query":"tomatoes","limit":1})
+     🔍 search_product({"query":"basil","limit":1})
+     🔍 search_product({"query":"oregano","limit":1})
+     🔍 search_product({"query":"mozzarella","limit":1})
+     🔍 search_product({"query":"vinegar","limit":1})
+     🔍 search_product({"query":"garlic","limit":1})
+     🔍 search_product({"query":"onions","limit":1})
+     🔄 add_to_cart({"product_id":"prod135","quantity":1})
+     🔄 add_to_cart({"product_id":"prod148","quantity":1})
+     🔄 add_to_cart({"product_id":"prod145","quantity":1})
+     🔄 add_to_cart({"product_id":"prod144","quantity":1})
+     🔄 add_to_cart({"product_id":"prod131","quantity":1})
+     🔄 add_to_cart({"product_id":"prod125","quantity":1})
+     🔄 add_to_cart({"product_id":"prod126","quantity":1})
+   Actual:
+     🔍 get_recipe_details({"recipe_id":"recipe40"})
+     🔍 search_product({"query":"tomatoes basil oregano mozzarella vinegar garlic onions","category":"groceries","limit":10})
+     🔍 search_product({"query":"tomatoes","category":"groceries","limit":3})
+   Failure: Missing side-effect APIs: add_to_cart(product_id:prod135), add_to_cart(product_id:prod148), add_to_cart(product_id:prod145), add_to_cart(product_id:prod144), add_to_cart(product_id:prod131), add_to_cart(product_id:prod125), add_to_cart(product_id:prod126)
+   Missing Side-Effects: add_to_cart(product_id:prod135), add_to_cart(product_id:prod148), add_to_cart(product_id:prod145), add_to_cart(product_id:prod144), add_to_cart(product_id:prod131), add_to_cart(product_id:prod125), add_to_cart(product_id:prod126)

@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user7_scenario8_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user7_scenario8_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"create_meal_plan\", name='Balanced Diet Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner', 'snack'])",
+      "after": "invoke_tool(\"create_meal_plan\", name='Balanced Diet Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner', 'snack'])",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"name\": \"Balanced Diet Plan\", \"start_date\": \"2025-07-17\", \"end_date\": \"2025-07-23\", \"meals_per_day\": [\"breakfast\", \"lunch\", \"dinner\", \"snack\"], \"days_count\": 7, \"message\": \"Meal plan 'Balanced Diet Plan' created successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=6)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=6)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": false}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.3, \"is_favorite\": false}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"rating\": 3.9, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for breakfast\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe12', day='2025-07-22', meal_type='breakfast')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe12', day='2025-07-22', meal_type='breakfast')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-22\", \"meal_type\": \"breakfast\", \"recipe_id\": \"recipe12\", \"recipe_name\": \"Chicken Parmigiana\", \"message\": \"Added Chicken Parmigiana to breakfast on 2025-07-22\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=5)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=5)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"suggestions\": [{\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"dietary_info\": [], \"rating\": 4.9, \"is_favorite\": false}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.3, \"is_favorite\": false}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"dietary_info\": [], \"rating\": 3.9, \"is_favorite\": false}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"is_favorite\": false}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.4, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for dinner\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe5', day='2025-07-22', meal_type='dinner')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe5', day='2025-07-22', meal_type='dinner')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-22\", \"meal_type\": \"dinner\", \"recipe_id\": \"recipe5\", \"recipe_name\": \"Spaghetti Carbonara\", \"message\": \"Added Spaghetti Carbonara to dinner on 2025-07-22\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Asian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Asian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Asian\"], \"results\": [{\"restaurant_id\": \"rest2\", \"name\": \"Bamboo Grove\", \"location\": \"1729 Cedar Ave, Houston, TX 26559\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest13\", \"name\": \"Blue Water\", \"location\": \"643 Elm St, Miami, FL 72972\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest22\", \"name\": \"Lotus Blossom\", \"location\": \"2502 Franklin St, Miami, FL 35831\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$$\", \"rating\": 4.1, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest23\", \"name\": \"Spice Garden\", \"location\": \"9236 Park Blvd, New York, NY 10560\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$\", \"rating\": 3.7, \"delivery_available\": true, \"menu_item_count\": 8}, {\"restaurant_id\": \"rest12\", \"name\": \"Seoul Kitchen\", \"location\": \"9539 Oak Ave, Los Angeles, CA 57688\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$\", \"rating\": 3.6, \"delivery_available\": true, \"menu_item_count\": 8}], \"message\": \"Found 5 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest2')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest2')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Bamboo Grove\", \"restaurant_id\": \"rest2\", \"restaurant_name\": \"Bamboo Grove\", \"description\": \"Family-friendly asian restaurant with a welcoming atmosphere\", \"price_range\": \"$$\", \"rating\": 4.6, \"cuisine_types\": [\"Asian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Pot Stickers\", \"description\": \"Pan-fried pork dumplings\", \"price\": 9.86, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Tempura\", \"description\": \"Lightly battered and fried vegetables\", \"price\": 11.23, \"category\": \"Appetizers\"}, {\"item_id\": \"item3\", \"name\": \"Satay Skewers\", \"description\": \"Grilled chicken with peanut sauce\", \"price\": 11.44, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Spring Rolls\", \"description\": \"Fresh vegetables wrapped in rice paper\", \"price\": 9.05, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Green Curry\", \"description\": \"Thai curry with coconut milk and vegetables\", \"price\": 17.77, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item6\", \"name\": \"General Tso's Chicken\", \"description\": \"Sweet and spicy fried chicken\", \"price\": 16.23, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Pad Thai\", \"description\": \"Thai stir-fried noodles with shrimp\", \"price\": 14.69, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item8\", \"name\": \"Beef Teriyaki\", \"description\": \"Grilled beef with teriyaki glaze\", \"price\": 18.06, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Sushi Combo\", \"description\": \"Assorted nigiri and maki rolls\", \"price\": 24.97, \"category\": \"Main Course\", \"popular\": true}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest2', items=[{'item_id': 'item3', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '2745 Broadway', 'city': 'Portland', 'state': 'CA', 'zip': '90020'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest2', items=[{'item_id': 'item3', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '2745 Broadway', 'city': 'Portland', 'state': 'CA', 'zip': '90020'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Bamboo Grove\", \"order_time\": \"2025-08-20T00:09:37Z\", \"status\": \"placed\", \"items_count\": 2, \"subtotal\": 27.67, \"tax\": 2.42, \"delivery_fee\": 5.99, \"tip\": 4.15, \"total\": 40.23, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Bamboo Grove\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:09:37Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

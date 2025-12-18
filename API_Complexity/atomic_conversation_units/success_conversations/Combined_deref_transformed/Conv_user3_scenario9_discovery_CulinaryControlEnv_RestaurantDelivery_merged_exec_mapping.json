@@ -1,0 +1,85 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 11,
+  "successful_transforms": 11,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Mexican', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Mexican', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"Mexican\"], \"results\": [{\"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe16')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe16')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"description\": \"A delicious mexican dish that's perfect for easy cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"cooking_time\": 51, \"servings\": 8, \"ingredients\": [{\"name\": \"onions\", \"quantity\": \"3 large\"}, {\"name\": \"avocado\", \"quantity\": \"1 tbsp\"}, {\"name\": \"cilantro\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lime\", \"quantity\": \"2 tbsp\"}, {\"name\": \"butter\", \"quantity\": \"100g\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\", \"notes\": \"crushed\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 445, \"protein\": 22, \"carbs\": 55, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"reviews_count\": 392, \"image_url\": \"https://example.com/images/mexican_rice.jpg\", \"tags\": [\"vegetarian\", \"beginner-friendly\", \"snack\", \"quick\", \"mexican\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Mexican Rice - A delicious mexican dish that's perfect for easy cooks.... (32 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe31')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe31')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"description\": \"A delicious mexican dish that's perfect for medium cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"cooking_time\": 45, \"servings\": 8, \"ingredients\": [{\"name\": \"chili powder\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lime\", \"quantity\": \"1/2 cup\"}, {\"name\": \"cumin\", \"quantity\": \"1 tbsp\"}, {\"name\": \"cheddar cheese\", \"quantity\": \"1/2 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"onions\", \"quantity\": \"2 medium\"}, {\"name\": \"wine\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}, {\"name\": \"butter\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Remove from heat and let rest for 5 minutes.\"], \"nutrition_info\": {\"calories\": 402, \"protein\": 16, \"carbs\": 48, \"fat\": 9}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.3, \"reviews_count\": 353, \"image_url\": \"https://example.com/images/chicken_tacos.jpg\", \"tags\": [\"vegetarian\", \"mexican\", \"dessert\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chicken Tacos - A delicious mexican dish that's perfect for medium cooks.... (35 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe37')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe37')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"description\": \"A delicious mexican dish that's perfect for easy cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 58, \"servings\": 3, \"ingredients\": [{\"name\": \"lime\", \"quantity\": \"2 tbsp\"}, {\"name\": \"beans\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 small\"}, {\"name\": \"tomatoes\", \"quantity\": \"4\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"wine\", \"quantity\": \"3/4 cup\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 474, \"protein\": 19, \"carbs\": 55, \"fat\": 14}, \"dietary_info\": [\"vegetarian\"], \"rating\": 3.8, \"reviews_count\": 447, \"image_url\": \"https://example.com/images/salsa_verde.jpg\", \"tags\": [\"vegetarian\", \"beginner-friendly\", \"snack\", \"quick\", \"mexican\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Salsa Verde - A delicious mexican dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe16')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe16')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Mexican Rice' is already in favorites\", \"already_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe31')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe31')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Chicken Tacos' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe31\", \"recipe_name\": \"Chicken Tacos\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe37')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe37')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Salsa Verde' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe37\", \"recipe_name\": \"Salsa Verde\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Asian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Asian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Asian\"], \"results\": [{\"restaurant_id\": \"rest2\", \"name\": \"Bamboo Grove\", \"location\": \"1729 Cedar Ave, Houston, TX 26559\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest13\", \"name\": \"Blue Water\", \"location\": \"643 Elm St, Miami, FL 72972\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest22\", \"name\": \"Lotus Blossom\", \"location\": \"2502 Franklin St, Miami, FL 35831\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$$\", \"rating\": 4.1, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest23\", \"name\": \"Spice Garden\", \"location\": \"9236 Park Blvd, New York, NY 10560\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$\", \"rating\": 3.7, \"delivery_available\": true, \"menu_item_count\": 8}, {\"restaurant_id\": \"rest12\", \"name\": \"Seoul Kitchen\", \"location\": \"9539 Oak Ave, Los Angeles, CA 57688\", \"cuisine_types\": [\"Asian\"], \"price_range\": \"$$\", \"rating\": 3.6, \"delivery_available\": true, \"menu_item_count\": 8}], \"message\": \"Found 5 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest2')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest2')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Bamboo Grove\", \"restaurant_id\": \"rest2\", \"restaurant_name\": \"Bamboo Grove\", \"description\": \"Family-friendly asian restaurant with a welcoming atmosphere\", \"price_range\": \"$$\", \"rating\": 4.6, \"cuisine_types\": [\"Asian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Pot Stickers\", \"description\": \"Pan-fried pork dumplings\", \"price\": 9.86, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Tempura\", \"description\": \"Lightly battered and fried vegetables\", \"price\": 11.23, \"category\": \"Appetizers\"}, {\"item_id\": \"item3\", \"name\": \"Satay Skewers\", \"description\": \"Grilled chicken with peanut sauce\", \"price\": 11.44, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Spring Rolls\", \"description\": \"Fresh vegetables wrapped in rice paper\", \"price\": 9.05, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Green Curry\", \"description\": \"Thai curry with coconut milk and vegetables\", \"price\": 17.77, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item6\", \"name\": \"General Tso's Chicken\", \"description\": \"Sweet and spicy fried chicken\", \"price\": 16.23, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Pad Thai\", \"description\": \"Thai stir-fried noodles with shrimp\", \"price\": 14.69, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item8\", \"name\": \"Beef Teriyaki\", \"description\": \"Grilled beef with teriyaki glaze\", \"price\": 18.06, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Sushi Combo\", \"description\": \"Assorted nigiri and maki rolls\", \"price\": 24.97, \"category\": \"Main Course\", \"popular\": true}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest2', items=[{'item_id': 'item3', 'quantity': 1}, {'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '1753 Market St', 'city': 'Dallas', 'state': 'TX', 'zip': '75263'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest2', items=[{'item_id': 'item3', 'quantity': 1}, {'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '1753 Market St', 'city': 'Dallas', 'state': 'TX', 'zip': '75263'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Bamboo Grove\", \"order_time\": \"2025-08-20T00:09:26Z\", \"status\": \"placed\", \"items_count\": 2, \"subtotal\": 26.13, \"tax\": 2.29, \"delivery_fee\": 5.99, \"tip\": 3.92, \"total\": 38.33, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Bamboo Grove\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:09:26Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

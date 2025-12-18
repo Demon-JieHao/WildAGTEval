@@ -1,0 +1,85 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref50/Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref50_transformed/Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 11,
+  "successful_transforms": 11,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Indian', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Indian', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Indian\"], \"results\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"]}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe2')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe2')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"cooking_time\": 48, \"servings\": 8, \"ingredients\": [{\"name\": \"rice\", \"quantity\": \"1 cup\"}, {\"name\": \"garam masala\", \"quantity\": \"1 tsp\"}, {\"name\": \"ginger\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\", \"notes\": \"minced\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 small\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"butter\", \"quantity\": \"4 oz\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 453, \"protein\": 21, \"carbs\": 67, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.4, \"reviews_count\": 407, \"image_url\": \"https://example.com/images/tandoori_chicken.jpg\", \"tags\": [\"vegetarian\", \"snack\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Tandoori Chicken - A delicious indian dish that's perfect for medium cooks.... (15 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe34')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe34')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"cooking_time\": 55, \"servings\": 6, \"ingredients\": [{\"name\": \"cumin\", \"quantity\": \"1 tbsp\"}, {\"name\": \"tomatoes\", \"quantity\": \"4\"}, {\"name\": \"turmeric\", \"quantity\": \"2 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"4 cloves\"}, {\"name\": \"wine\", \"quantity\": \"1/2 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"butter\", \"quantity\": \"4 oz\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Add seasonings and adjust to taste.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Cook until golden brown and cooked through.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 397, \"protein\": 21, \"carbs\": 53, \"fat\": 10}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"reviews_count\": 286, \"image_url\": \"https://example.com/images/lamb_biryani.jpg\", \"tags\": [\"vegetarian\", \"snack\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Lamb Biryani - A delicious indian dish that's perfect for medium cooks.... (14 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe18')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe18')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"cooking_time\": 59, \"servings\": 3, \"ingredients\": [{\"name\": \"ginger\", \"quantity\": \"1 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\", \"notes\": \"crushed\"}, {\"name\": \"yogurt\", \"quantity\": \"1/4 cup\"}, {\"name\": \"butter\", \"quantity\": \"1 cup\"}, {\"name\": \"herbs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"3/4 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 458, \"protein\": 17, \"carbs\": 65, \"fat\": 16}, \"dietary_info\": [\"vegetarian\"], \"rating\": 3.9, \"reviews_count\": 305, \"image_url\": \"https://example.com/images/samosas.jpg\", \"tags\": [\"vegetarian\", \"lunch\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Samosas - A delicious indian dish that's perfect for medium cooks.... (35 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe2')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe2')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Tandoori Chicken' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe2\", \"recipe_name\": \"Tandoori Chicken\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe34')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe34')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Lamb Biryani' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe34\", \"recipe_name\": \"Lamb Biryani\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe18')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe18')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Samosas' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe18\", \"recipe_name\": \"Samosas\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='American', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='American', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"American\"], \"results\": [{\"restaurant_id\": \"rest4\", \"name\": \"The Burger Joint\", \"location\": \"2603 Madison St, Chicago, IL 21597\", \"cuisine_types\": [\"American\"], \"price_range\": \"$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest17\", \"name\": \"Stars & Stripes\", \"location\": \"2431 Lincoln Blvd, Chicago, IL 87438\", \"cuisine_types\": [\"American\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest20\", \"name\": \"Route 66 Diner\", \"location\": \"2731 Cedar Ave, Miami, FL 58545\", \"cuisine_types\": [\"American\"], \"price_range\": \"$\", \"rating\": 4.0, \"delivery_available\": true, \"menu_item_count\": 8}], \"message\": \"Found 3 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest4')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest4')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for The Burger Joint\", \"restaurant_id\": \"rest4\", \"restaurant_name\": \"The Burger Joint\", \"description\": \"Family-friendly american restaurant with a welcoming atmosphere\", \"price_range\": \"$$$\", \"rating\": 4.6, \"cuisine_types\": [\"American\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"description\": \"Tortilla chips with cheese and jalape\\u00f1os\", \"price\": 12.3, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Onion Rings\", \"description\": \"Beer-battered onion rings with ranch\", \"price\": 11.1, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Buffalo Wings\", \"description\": \"Spicy chicken wings with blue cheese\", \"price\": 11.82, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item4\", \"name\": \"Mozzarella Sticks\", \"description\": \"Fried cheese sticks with marinara\", \"price\": 11.73, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Fried Chicken\", \"description\": \"Crispy fried chicken with mashed potatoes\", \"price\": 18.77, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"BBQ Ribs\", \"description\": \"Slow-cooked ribs with BBQ sauce\", \"price\": 23.89, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Classic Burger\", \"description\": \"Beef patty with lettuce, tomato, onion\", \"price\": 15.21, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item8\", \"name\": \"Fish and Chips\", \"description\": \"Beer-battered fish with french fries\", \"price\": 18.44, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Philly Cheesesteak\", \"description\": \"Sliced steak with peppers and cheese\", \"price\": 14.88, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest4', items=[{'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '3497 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75246'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest4', items=[{'item_id': 'item7', 'quantity': 1}], delivery_address={'street': '3497 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75246'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"order_time\": \"2025-08-02T04:11:23Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 15.21, \"tax\": 1.33, \"delivery_fee\": 5.99, \"tip\": 2.28, \"total\": 24.81, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-02T04:11:23Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

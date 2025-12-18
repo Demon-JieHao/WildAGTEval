@@ -1,0 +1,106 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user4_TransactionEnv_shopping_batch_scenario2_shopping_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user4_TransactionEnv_shopping_batch_scenario2_shopping_exec.py",
+  "total_transforms": 14,
+  "successful_transforms": 14,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='voice-controlled', category='smart_home', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='voice-controlled', category='smart_home', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 9, \"categories\": [\"smart_home\"], \"results\": [{\"product_id\": \"prod28\", \"name\": \"Nest Smart Outlet\", \"price\": 214.99, \"category\": \"smart_home\", \"stock\": 50}, {\"product_id\": \"prod32\", \"name\": \"Secure Air Quality Monitor\", \"price\": 204.99, \"category\": \"smart_home\", \"stock\": 141}, {\"product_id\": \"prod60\", \"name\": \"Hub Smoke Detector 2024\", \"price\": 199.99, \"category\": \"smart_home\", \"stock\": 170}, {\"product_id\": \"prod73\", \"name\": \"Eco Temperature Sensor\", \"price\": 139.99, \"category\": \"smart_home\", \"stock\": 79}, {\"product_id\": \"prod35\", \"name\": \"Nest Security Camera\", \"price\": 93.01, \"category\": \"smart_home\", \"stock\": 152}, {\"product_id\": \"prod47\", \"name\": \"Nest Security Camera\", \"price\": 229.99, \"category\": \"smart_home\", \"stock\": 187}, {\"product_id\": \"prod58\", \"name\": \"Home Smart Doorbell\", \"price\": 40.25, \"category\": \"smart_home\", \"stock\": 187}, {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"price\": 114.99, \"category\": \"smart_home\", \"stock\": 174}, {\"product_id\": \"prod49\", \"name\": \"Auto Smart Switch Max\", \"price\": 60.6, \"category\": \"smart_home\", \"stock\": 100}], \"message\": \"Found 9 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod28')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod28')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod28\", \"name\": \"Nest Smart Outlet\", \"description\": \"Advanced smart outlet with wireless, WiFi-enabled, voice-controlled\", \"price\": 214.99, \"category\": \"smart_home\", \"stock\": 50, \"rating\": 4.7, \"images\": [\"smart_outlet_1.jpg\", \"smart_outlet_2.jpg\", \"smart_outlet_3.jpg\", \"smart_outlet_4.jpg\"]}, \"message\": \"Retrieved details for 'Nest Smart Outlet'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod32')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod32')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod32\", \"name\": \"Secure Air Quality Monitor\", \"description\": \"High-quality air quality monitor featuring secure, voice-controlled\", \"price\": 204.99, \"category\": \"smart_home\", \"stock\": 141, \"rating\": 4.6, \"images\": [\"air_quality_monitor_1.jpg\", \"air_quality_monitor_2.jpg\"]}, \"message\": \"Retrieved details for 'Secure Air Quality Monitor'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod60')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod60')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod60\", \"name\": \"Hub Smoke Detector 2024\", \"description\": \"High-quality smoke detector featuring voice-controlled, wireless, secure, remote-control\", \"price\": 199.99, \"category\": \"smart_home\", \"stock\": 170, \"rating\": 4.6, \"images\": [\"smoke_detector_1.jpg\", \"smoke_detector_2.jpg\"]}, \"message\": \"Retrieved details for 'Hub Smoke Detector 2024'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod73')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod73')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod73\", \"name\": \"Eco Temperature Sensor\", \"description\": \"High-quality temperature sensor with wireless, voice-controlled, energy-efficient, remote-control\", \"price\": 139.99, \"category\": \"smart_home\", \"stock\": 79, \"rating\": 4.5, \"images\": [\"temperature_sensor_1.jpg\", \"temperature_sensor_2.jpg\", \"temperature_sensor_3.jpg\", \"temperature_sensor_4.jpg\"]}, \"message\": \"Retrieved details for 'Eco Temperature Sensor'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod35')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod35')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod35\", \"name\": \"Nest Security Camera\", \"description\": \"Professional security camera featuring secure, smart, energy-efficient, voice-controlled\", \"price\": 93.01, \"category\": \"smart_home\", \"stock\": 152, \"rating\": 4.4, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\"]}, \"message\": \"Retrieved details for 'Nest Security Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod47')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod47')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod47\", \"name\": \"Nest Security Camera\", \"description\": \"Experience the latest in security camera technology with automated, energy-efficient, remote-control, voice-controlled\", \"price\": 229.99, \"category\": \"smart_home\", \"stock\": 187, \"rating\": 4.2, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\", \"security_camera_4.jpg\"]}, \"message\": \"Retrieved details for 'Nest Security Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod58')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod58')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod58\", \"name\": \"Home Smart Doorbell\", \"description\": \"Experience the latest in smart doorbell technology with voice-controlled, wireless, secure, remote-control\", \"price\": 40.25, \"category\": \"smart_home\", \"stock\": 187, \"rating\": 4.2, \"images\": [\"smart_doorbell_1.jpg\", \"smart_doorbell_2.jpg\", \"smart_doorbell_3.jpg\", \"smart_doorbell_4.jpg\"]}, \"message\": \"Retrieved details for 'Home Smart Doorbell'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod27')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod27')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod27\", \"name\": \"Home Security Camera\", \"description\": \"Experience the latest in security camera technology with voice-controlled, smart\", \"price\": 114.99, \"category\": \"smart_home\", \"stock\": 174, \"rating\": 4.1, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\"]}, \"message\": \"Retrieved details for 'Home Security Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod49')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod49')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod49\", \"name\": \"Auto Smart Switch Max\", \"description\": \"Experience the latest in smart switch technology with WiFi-enabled, voice-controlled\", \"price\": 60.6, \"category\": \"smart_home\", \"stock\": 100, \"rating\": 4.0, \"images\": [\"smart_switch_1.jpg\", \"smart_switch_2.jpg\"]}, \"message\": \"Retrieved details for 'Auto Smart Switch Max'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod73', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod73', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod73\", \"name\": \"Eco Temperature Sensor\", \"quantity\": 1, \"price\": 139.99}, \"cart_total\": 1299.59, \"message\": \"Added 1 x 'Eco Temperature Sensor' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod64\", \"name\": \"Link Smart Thermostat\", \"quantity\": 1, \"price\": 84.62, \"added_at\": \"2025-06-14T10:29:00Z\"}, {\"product_id\": \"prod18\", \"name\": \"Smart USB Hub\", \"quantity\": 1, \"price\": 879.99, \"added_at\": \"2025-06-13T11:53:58Z\"}, {\"product_id\": \"prod72\", \"name\": \"Link Smart Switch V2\", \"quantity\": 1, \"price\": 194.99, \"added_at\": \"2025-06-11T01:05:40Z\"}, {\"product_id\": \"prod73\", \"name\": \"Eco Temperature Sensor\", \"quantity\": 1, \"price\": 139.99, \"added_at\": \"2025-08-20T00:09:30Z\"}], \"total\": 1299.59}, \"item_count\": 4, \"message\": \"Cart has 4 items with a total of $1299.59\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"checkout\", )",
+      "after": "invoke_tool(\"checkout\", )",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"total\": 1299.59, \"status\": \"processing\", \"items_count\": 4, \"message\": \"Order order1 created successfully. Your payment of $1299.59 has been processed. Your order will be shipped via STD.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"cancel_order\", order_id='order1', reason='No longer needed')",
+      "after": "invoke_tool(\"cancel_order\", order_id='order1', reason='No longer needed')",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"status\": \"cancelled\", \"refunded\": true, \"message\": \"Order order1 has been cancelled and payment has been refunded.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

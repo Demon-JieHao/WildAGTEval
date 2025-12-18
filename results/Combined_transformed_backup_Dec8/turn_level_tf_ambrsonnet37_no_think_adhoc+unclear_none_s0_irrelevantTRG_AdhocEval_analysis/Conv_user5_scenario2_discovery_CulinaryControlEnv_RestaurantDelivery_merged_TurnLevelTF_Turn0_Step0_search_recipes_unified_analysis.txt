@@ -1,0 +1,30 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user5_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user5_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+   User: user5
+   Domain: culinary
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Top 10 Beginner Italian cooking ideas
+   Expected:
+     🔍 search_recipes({"difficulty":"easy","sort_by":"rating","limit":10,"cuisine":"Italian"})
+   Actual:
+     🔍 search_recipes({"difficulty":"easy","sort_by":"rating","limit":10,"cuisine":"Italian"})
+     🔍 search_recipes({"cuisine":"Italian","difficulty":"easy","limit":10,"sort_by":"rating"})
+     🔍 search_recipes({"query":"pasta","cuisine":"Italian","difficulty":"easy","limit":10,"sort_by":"rating"})
+     🔍 search_recipes({"cuisine":"Italian","limit":10,"sort_by":"rating"})
+
+   Turn 2: ✅
+   Query: Can you find me the best Indian restaurant?
+   Expected:
+     🔍 search_restaurants({"cuisine_type":"Indian","sort_by":"rating","limit":5})
+   Actual:
+     🔍 search_restaurants({"cuisine_type":"Indian","sort_by":"rating","limit":5})

@@ -1,0 +1,57 @@
+[
+  {
+    "call_id": "call1",
+    "user_id": "user1",
+    "contact_id": "contact1",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T14:30:00Z",
+    "duration": 145,
+    "status": "completed",
+    "call_type": "audio",
+    "device_endpoint": "4"
+  },
+  {
+    "call_id": "call2",
+    "user_id": "user1",
+    "contact_id": "contact2",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T16:45:00Z",
+    "duration": 0,
+    "status": "missed",
+    "call_type": "video",
+    "device_endpoint": "1"
+  },
+  {
+    "call_id": "call3",
+    "user_id": "user2",
+    "contact_id": "contact3",
+    "direction": "outgoing",
+    "timestamp": "2025-06-12T17:30:00Z",
+    "duration": 312,
+    "status": "completed",
+    "call_type": "audio",
+    "device_endpoint": "8"
+  },
+  {
+    "call_id": "call4",
+    "user_id": "user1",
+    "contact_id": "contact1",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T20:15:00Z",
+    "duration": 78,
+    "status": "completed",
+    "call_type": "video",
+    "device_endpoint": "1"
+  },
+  {
+    "call_id": "call5",
+    "user_id": "user2",
+    "contact_id": "contact4",
+    "direction": "incoming",
+    "timestamp": "2025-06-12T21:05:00Z",
+    "duration": 0,
+    "status": "rejected",
+    "call_type": "audio",
+    "device_endpoint": "9"
+  }
+]

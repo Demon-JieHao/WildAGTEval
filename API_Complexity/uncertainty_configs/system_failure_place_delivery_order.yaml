@@ -1,0 +1,37 @@
+name: "System Failure Error Only"
+description: "Enable only system failure error uncertainties for focused technical terminology translation testing"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: false
+    apis: []
+    
+  INFORMATIONAL_NOTICE:
+    enabled: false
+    apis: []
+  
+  SYSTEM_FAILURE_ERROR:
+    enabled: true
+    apis:
+      - place_delivery_order
+
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+
+metadata:
+  total_uncertainties: 1
+  creation_date: "2025-07-15"
+  use_case: "Focused evaluation of LLM technical terminology translation and infrastructure error communication skills"

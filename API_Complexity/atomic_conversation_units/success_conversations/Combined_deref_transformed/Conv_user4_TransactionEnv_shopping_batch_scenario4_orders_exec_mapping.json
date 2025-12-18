@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user4_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user4_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 8, \"orders\": [{\"order_id\": \"ORDER0007\", \"created_at\": \"2025-06-10T15:46:25.709974Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"OnTrac\"}, {\"order_id\": \"ORDER0009\", \"created_at\": \"2025-06-08T09:17:25.710030Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"USPS\"}, {\"order_id\": \"ORD0065\", \"created_at\": \"2025-06-07T14:56:25.711491Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"PO0036\", \"created_at\": \"2025-06-06T19:36:25.710774Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"UPS\"}, {\"order_id\": \"ON0064\", \"created_at\": \"2025-06-06T14:16:25.711463Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"FedEx\"}, {\"order_id\": \"ORDER0070\", \"created_at\": \"2025-06-02T19:13:25.711619Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0052\", \"created_at\": \"2025-05-28T04:05:25.711159Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"DHL\"}, {\"order_id\": \"ON0044\", \"created_at\": \"2025-05-26T09:35:25.710975Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"UPS\"}], \"message\": \"Found 8 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='ON0044')",
+      "after": "invoke_tool(\"get_order_details\", order_id='ON0044')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"ON0044\", \"user_id\": \"user4\", \"items\": [{\"product_id\": \"prod25\", \"name\": \"Connect Flood Sensor\", \"quantity\": 2, \"price\": 159.99, \"subtotal\": 319.98}], \"totals\": {\"subtotal\": 319.98, \"tax\": 37.39, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 357.37}, \"payment\": {\"method_id\": \"pm1\", \"method_type\": \"apple_pay\", \"last4\": \"9642\", \"amount\": 357.37, \"currency\": \"USD\", \"transaction_id\": \"tx931233\", \"status\": \"paid\", \"paid_at\": \"2025-05-26T09:54:25.710975Z\"}, \"created_at\": \"2025-05-26T09:35:25.710975Z\", \"notes\": \"Customer pickup - hold at location\"}, \"message\": \"Retrieved details for order ON0044\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='ON0044')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-0044')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-0044\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod25', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod25', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod25\", \"name\": \"Connect Flood Sensor\", \"quantity\": 1, \"price\": 159.99}, \"cart_total\": 1319.59, \"message\": \"Added 1 x 'Connect Flood Sensor' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

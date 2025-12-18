@@ -1,0 +1,65 @@
+{
+  "user_id": "user123",
+  "query_results": [
+    {
+      "query": "Search for a blue smartphone and add it to my cart",
+      "expected_api_sequence": [
+        {
+          "api": "search_product",
+          "params": {
+            "query": "blue smartphone"
+          }
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "sp_12345"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "api_call": {
+            "api": "search_product",
+            "params": {
+              "query": "blue smartphone"
+            }
+          },
+          "api_success": true,
+          "api_result": "{\"results\": [{\"id\": \"sp_12345\", \"name\": \"Blue Smartphone\", \"price\": 599.99}]}"
+        },
+        {
+          "api_call": {
+            "api": "add_to_cart",
+            "params": {
+              "product_id": "sp_12345"
+            }
+          },
+          "api_success": true,
+          "api_result": "{\"success\": true, \"cart_total\": 599.99}"
+        }
+      ],
+      "success": true
+    },
+    {
+      "query": "I want to checkout my order",
+      "expected_api_sequence": [
+        {
+          "api": "checkout",
+          "params": {}
+        }
+      ],
+      "steps": [
+        {
+          "api_call": {
+            "api": "checkout",
+            "params": {}
+          },
+          "api_success": true,
+          "api_result": "{\"order_id\": \"ord_78901\", \"status\": \"completed\"}"
+        }
+      ],
+      "success": true
+    }
+  ]
+}

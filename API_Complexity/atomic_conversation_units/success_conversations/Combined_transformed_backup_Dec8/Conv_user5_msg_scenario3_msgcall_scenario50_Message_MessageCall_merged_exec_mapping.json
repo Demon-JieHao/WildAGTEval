@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user5_msg_scenario3_msgcall_scenario50_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_msg_scenario3_msgcall_scenario50_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='Jeffrey Parker', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Jeffrey Parker', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact25\", \"user_id\": \"user5\", \"name\": \"Jeffrey Parker\", \"phone_numbers\": [{\"type\": \"work\", \"number\": \"704-748-4588\"}], \"email\": \"jeffrey14@hotmail.com\", \"is_favorite\": false, \"devices\": [\"device16\", \"device9\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact25', content='Hello! Just saying hi!')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact25', content='Hello! Just saying hi!')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Jeffrey Parker\", \"message_id\": \"msg59\", \"contact_name\": \"Jeffrey Parker\", \"timestamp\": \"2025-08-20T00:11:36.332588Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='415-786-3264', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:4157863264', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:4157863264 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='Sarah Gomez', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Sarah Gomez', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact26\", \"user_id\": \"user5\", \"name\": \"Sarah Gomez\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"901-488-4963\"}], \"email\": \"sarah64@icloud.com\", \"is_favorite\": false, \"devices\": [\"device22\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact26', content=\"Hi! Hope you're doing well today.\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact26', content=\"Hi! Hope you're doing well today.\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Sarah Gomez\", \"message_id\": \"msg60\", \"contact_name\": \"Sarah Gomez\", \"timestamp\": \"2025-08-20T00:11:36.333261Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

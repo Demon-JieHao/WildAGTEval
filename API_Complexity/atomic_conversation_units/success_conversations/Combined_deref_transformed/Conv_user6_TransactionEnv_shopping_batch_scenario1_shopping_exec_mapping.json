@@ -1,0 +1,92 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user6_TransactionEnv_shopping_batch_scenario1_shopping_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user6_TransactionEnv_shopping_batch_scenario1_shopping_exec.py",
+  "total_transforms": 12,
+  "successful_transforms": 12,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='professional', category='electronics', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='professional', category='electronics', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"categories\": [\"electronics\"], \"results\": [{\"product_id\": \"prod65\", \"name\": \"Prime E-Reader\", \"price\": 309.99, \"category\": \"electronics\", \"stock\": 105}, {\"product_id\": \"prod43\", \"name\": \"Prime Mechanical Keyboard V2\", \"price\": 399.99, \"category\": \"electronics\", \"stock\": 137}, {\"product_id\": \"prod74\", \"name\": \"Advanced Action Camera\", \"price\": 344.99, \"category\": \"electronics\", \"stock\": 21}, {\"product_id\": \"prod45\", \"name\": \"Advanced Gaming Mouse\", \"price\": 274.99, \"category\": \"electronics\", \"stock\": 55}, {\"product_id\": \"prod39\", \"name\": \"Max Drone V2\", \"price\": 464.99, \"category\": \"electronics\", \"stock\": 65}, {\"product_id\": \"prod67\", \"name\": \"Advanced Portable Charger Pro\", \"price\": 379.99, \"category\": \"electronics\", \"stock\": 33}, {\"product_id\": \"prod68\", \"name\": \"Pro Tablet\", \"price\": 109.99, \"category\": \"electronics\", \"stock\": 71}], \"message\": \"Found 7 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod65')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod65')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod65\", \"name\": \"Prime E-Reader\", \"description\": \"Versatile e-reader featuring fast-charging, professional, 4K\", \"price\": 309.99, \"category\": \"electronics\", \"stock\": 105, \"rating\": 4.8, \"images\": [\"e-reader_1.jpg\", \"e-reader_2.jpg\"]}, \"message\": \"Retrieved details for 'Prime E-Reader'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod43')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod43')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod43\", \"name\": \"Prime Mechanical Keyboard V2\", \"description\": \"Advanced mechanical keyboard with gaming, professional for modern homes\", \"price\": 399.99, \"category\": \"electronics\", \"stock\": 137, \"rating\": 4.6, \"images\": [\"mechanical_keyboard_1.jpg\", \"mechanical_keyboard_2.jpg\"]}, \"message\": \"Retrieved details for 'Prime Mechanical Keyboard V2'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod74')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod74')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod74\", \"name\": \"Advanced Action Camera\", \"description\": \"High-quality action camera featuring HD, professional, 4K\", \"price\": 344.99, \"category\": \"electronics\", \"stock\": 21, \"rating\": 4.6, \"images\": [\"action_camera_1.jpg\", \"action_camera_2.jpg\", \"action_camera_3.jpg\"]}, \"message\": \"Retrieved details for 'Advanced Action Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod45')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod45')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod45\", \"name\": \"Advanced Gaming Mouse\", \"description\": \"Experience the latest in gaming mouse technology with gaming, portable, bluetooth, professional\", \"price\": 274.99, \"category\": \"electronics\", \"stock\": 55, \"rating\": 4.4, \"images\": [\"gaming_mouse_1.jpg\", \"gaming_mouse_2.jpg\"]}, \"message\": \"Retrieved details for 'Advanced Gaming Mouse'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod39')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod39')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod39\", \"name\": \"Max Drone V2\", \"description\": \"High-quality drone with fast-charging, professional, 4K, noise-cancelling\", \"price\": 464.99, \"category\": \"electronics\", \"stock\": 65, \"rating\": 4.2, \"images\": [\"drone_1.jpg\", \"drone_2.jpg\"]}, \"message\": \"Retrieved details for 'Max Drone V2'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod67')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod67')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod67\", \"name\": \"Advanced Portable Charger Pro\", \"description\": \"Professional portable charger with fast-charging, 4K, portable\", \"price\": 379.99, \"category\": \"electronics\", \"stock\": 33, \"rating\": 4.2, \"images\": [\"portable_charger_1.jpg\", \"portable_charger_2.jpg\", \"portable_charger_3.jpg\"]}, \"message\": \"Retrieved details for 'Advanced Portable Charger Pro'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod68')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod68')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod68\", \"name\": \"Pro Tablet\", \"description\": \"Professional tablet with gaming, professional, fast-charging, portable\", \"price\": 109.99, \"category\": \"electronics\", \"stock\": 71, \"rating\": 3.9, \"images\": [\"tablet_1.jpg\", \"tablet_2.jpg\"]}, \"message\": \"Retrieved details for 'Pro Tablet'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod39', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod39', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod39\", \"name\": \"Max Drone V2\", \"quantity\": 1, \"price\": 464.99}, \"cart_total\": 1445.08, \"message\": \"Added 1 x 'Max Drone V2' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod20\", \"name\": \"Pro Slow Cooker\", \"quantity\": 2, \"price\": 259.99, \"added_at\": \"2025-06-15T08:37:44Z\"}, {\"product_id\": \"prod31\", \"name\": \"Sync Wireless Earbuds\", \"quantity\": 3, \"price\": 86.71, \"added_at\": \"2025-06-11T19:49:46Z\"}, {\"product_id\": \"prod3\", \"name\": \"Eco Garage Door Opener Gen 2\", \"quantity\": 2, \"price\": 99.99, \"added_at\": \"2025-06-11T07:03:00Z\"}, {\"product_id\": \"prod39\", \"name\": \"Max Drone V2\", \"quantity\": 1, \"price\": 464.99, \"added_at\": \"2025-08-20T00:09:35Z\"}], \"total\": 1445.08}, \"item_count\": 8, \"message\": \"Cart has 8 items with a total of $1445.08\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"checkout\", )",
+      "after": "invoke_tool(\"checkout\", )",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"total\": 1445.08, \"status\": \"processing\", \"items_count\": 4, \"message\": \"Order order1 created successfully. Your payment of $1445.08 has been processed. Your order will be shipped via STD.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"cancel_order\", order_id='order1', reason='User requested cancellation')",
+      "after": "invoke_tool(\"cancel_order\", order_id='order1', reason='User requested cancellation')",
+      "execution_result": "{\"success\": true, \"order_id\": \"order1\", \"status\": \"cancelled\", \"refunded\": true, \"message\": \"Order order1 has been cancelled and payment has been refunded.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

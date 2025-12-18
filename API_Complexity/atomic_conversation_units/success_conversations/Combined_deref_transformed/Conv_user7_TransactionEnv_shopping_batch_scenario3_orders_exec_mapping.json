@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user7_TransactionEnv_shopping_batch_scenario3_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user7_TransactionEnv_shopping_batch_scenario3_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 8, \"orders\": [{\"order_id\": \"ORDER0002\", \"created_at\": \"2025-06-07T17:43:25.709805Z\", \"total\": null, \"items_count\": 3, \"carrier\": \"UPS\"}, {\"order_id\": \"ON0048\", \"created_at\": \"2025-06-07T08:01:25.711057Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"DHL\"}, {\"order_id\": \"PO0068\", \"created_at\": \"2025-05-28T23:49:25.711570Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"PO0011\", \"created_at\": \"2025-05-25T05:34:25.710087Z\", \"total\": null, \"items_count\": 5, \"carrier\": \"OnTrac\"}, {\"order_id\": \"ORD0016\", \"created_at\": \"2025-05-24T21:57:25.710222Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"OnTrac\"}, {\"order_id\": \"PO0008\", \"created_at\": \"2025-05-20T16:47:25.710002Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"USPS\"}, {\"order_id\": \"ORDER0051\", \"created_at\": \"2025-05-19T21:11:25.711140Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0004\", \"created_at\": \"2025-05-18T20:11:25.709883Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"Amazon Logistics\"}], \"message\": \"Found 8 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='ORDER0051')",
+      "after": "invoke_tool(\"get_order_details\", order_id='ORDER0051')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"ORDER0051\", \"user_id\": \"user7\", \"items\": [{\"product_id\": \"prod21\", \"name\": \"Smart Smart Outlet\", \"quantity\": 3, \"price\": 539.99, \"subtotal\": 1619.97}, {\"product_id\": \"prod66\", \"name\": \"Master Fan Max\", \"quantity\": 2, \"price\": 244.99, \"subtotal\": 489.98}], \"totals\": {\"subtotal\": 2109.95, \"tax\": 181.2, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 2291.15}, \"payment\": {\"method_id\": \"pm1\", \"method_type\": \"apple_pay\", \"last4\": \"2595\", \"amount\": 2291.15, \"currency\": \"USD\", \"transaction_id\": \"tx605487\", \"status\": \"paid\", \"paid_at\": \"2025-05-19T21:32:25.711140Z\"}, \"created_at\": \"2025-05-19T21:11:25.711140Z\", \"notes\": \"Gift order - include gift receipt\"}, \"message\": \"Retrieved details for order ORDER0051\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='ORDER0051')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-DER0051')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-DER0051\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod21', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod21', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod21\", \"name\": \"Smart Smart Outlet\", \"quantity\": 1, \"price\": 539.99}, \"cart_total\": 539.99, \"message\": \"Added 1 x 'Smart Smart Outlet' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

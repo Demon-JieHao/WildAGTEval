@@ -1,0 +1,275 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user4_scenario4_business_day_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user4_scenario4_business_day_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user4",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.3333333333333333,
+  "avg_api_name_accuracy": 0.0,
+  "avg_parameter_accuracy": 0.0,
+  "overall_score": 0.1111111111111111,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 4,
+    "avg_steps_per_query": 5.0,
+    "avg_api_steps_per_query": 4.0,
+    "avg_step_efficiency": 0.6
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I should call that person now",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "30A"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:5550123",
+            "call_type": "audio",
+            "device_endpoint": "30A"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_contact",
+              "params": {
+                "query": "Amanda Dean",
+                "search_type": "name",
+                "limit": 1
+              }
+            }
+          },
+          "api_call": {
+            "api": "find_contact",
+            "params": {
+              "query": "Amanda Dean",
+              "search_type": "name",
+              "limit": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"No contacts found for query: 'Amanda Dean'\", \"contacts\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:25:53.286311",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_call_device",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"43\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"], \"endpoint_categories\": [\"THERMOSTAT\"], \"supported_apis\": [\"temperature_set\", \"mode_set\"], \"groups\": [\"climate\", \"whole_home\"], \"home_id\": \"home3\"}, {\"endpoint\": \"42\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"], \"endpoint_categories\": [\"LOCK\"], \"supported_apis\": [\"lock_lock\", \"lock_unlock\", \"lock_status\"], \"groups\": [\"security\", \"doors\"], \"home_id\": \"home3\"}, {\"endpoint\": \"33\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"living_room\", \"downstairs\", \"all_lights\"], \"home_id\": \"home3\"}, {\"endpoint\": \"36\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"], \"endpoint_categories\": [\"BLINDS\"], \"supported_apis\": [\"open_open\", \"open_close\", \"open_set_position\"], \"groups\": [\"kitchen\", \"downstairs\"], \"home_id\": \"home3\"}, {\"endpoint\": \"34\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"kitchen\", \"downstairs\", \"entertainment\"], \"home_id\": \"home3\"}, {\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"], \"endpoint_categories\": [\"BLINDS\"], \"supported_apis\": [\"open_open\", \"open_close\", \"open_set_position\"], \"groups\": [\"dining_room\", \"downstairs\"], \"home_id\": \"home3\"}, {\"endpoint\": \"30A\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home3\"}, {\"endpoint\": \"44\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"], \"endpoint_categories\": [\"MOTION_SENSOR\"], \"supported_apis\": [\"sensor_status\", \"sensitivity_set\"], \"groups\": [\"security\"], \"home_id\": \"home3\"}, {\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"dining_room\", \"downstairs\", \"all_lights\"], \"home_id\": \"home3\"}, {\"endpoint\": \"41\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"office\", \"upstairs\", \"all_lights\"], \"home_id\": \"home3\"}, {\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"alternate_names\": [\"Television\", \"Smart TV\"], \"endpoint_categories\": [\"TV\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"channel_change\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"living_room\", \"downstairs\", \"entertainment\"], \"home_id\": \"home3\"}, {\"endpoint\": \"32\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"fast_forward\", \"shuffle\", \"set_playback_speed\", \"rewind\"], \"groups\": [\"living_room\", \"downstairs\", \"entertainment\"], \"home_id\": \"home3\"}, {\"endpoint\": \"39\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\"], \"groups\": [\"bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home3\"}, {\"endpoint\": \"40\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bathroom\", \"downstairs\", \"all_lights\"], \"home_id\": \"home3\"}, {\"endpoint\": \"30A\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home3\"}, {\"endpoint\": \"35\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"kitchen\", \"downstairs\", \"all_lights\"], \"home_id\": \"home3\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:25:53.286796",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I'll need to search for Amanda Dean in your contact directory since she wasn't found in your regular contacts.\n\n<API_CALL>\n{\n  \"api\": \"search_contact_directory\",\n  \"params\": {\n    \"query\": \"Amanda Dean\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll need to search for Amanda Dean in your contact directory since she wasn't found in your regular contacts.\n\n<API_CALL>\n{\n  \"api\": \"search_contact_directory\",\n  \"params\": {\n    \"query\": \"Amanda Dean\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_contact_directory",
+              "params": {
+                "query": "Amanda Dean"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_contact_directory",
+            "params": {
+              "query": "Amanda Dean"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Tool 'search_contact_directory' not found in any environment\", \"available_tools\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\", \"temperature_set\", \"mode_set\", \"volume_adjust\", \"channel_change\", \"lock_lock\", \"lock_unlock\", \"lock_status\", \"open_open\", \"open_close\", \"open_set_position\", \"get_device_details\", \"get_group_devices\", \"get_user_inventory\", \"news_personalized\", \"stock_watchlist\", \"knowledge_lookup\", \"user_preferences\", \"query_history\", \"weather_current\", \"news_by_category\", \"news_latest\", \"weather_forecast\", \"source_list\", \"stock_price\", \"weather_alerts\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"fast_forward\", \"rewind\", \"set_playback_speed\", \"search_media\", \"get_media_details\", \"create_playlist\", \"add_to_playlist\", \"get_playlists\", \"get_playback_status\", \"shuffle\", \"search_by_artist\", \"search_product\", \"get_product_details\", \"add_to_cart\", \"remove_from_cart\", \"view_cart\", \"update_cart_quantity\", \"clear_cart\", \"checkout\", \"get_order_history\", \"get_order_details\", \"track_order\", \"cancel_order\", \"search_recipes\", \"get_recipe_details\", \"save_favorite_recipe\", \"create_custom_recipe\", \"create_meal_plan\", \"get_meal_suggestions\", \"schedule_meal\", \"search_restaurants\", \"get_restaurant_menu\", \"place_delivery_order\", \"track_delivery_order\", \"find_contact\", \"make_call\", \"end_call\", \"send_message\", \"get_messages\", \"get_call_history\", \"find_call_device\", \"create_alarm\", \"get_alarms\", \"delete_alarm\", \"create_reminder\", \"get_reminders\", \"create_notification\", \"get_notifications\", \"set_notification_preferences\"]}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:28:01.091005",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "30A"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 4,
+          "llm_response": "I'll try to find Amanda Dean in your contacts using a different approach.\n\n<API_CALL>\n{\n  \"api\": \"find_contact\",\n  \"params\": {\n    \"query\": \"Amanda Dean\",\n    \"search_type\": \"name\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll try to find Amanda Dean in your contacts using a different approach.\n\n<API_CALL>\n{\n  \"api\": \"find_contact\",\n  \"params\": {\n    \"query\": \"Amanda Dean\",\n    \"search_type\": \"name\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "find_contact",
+              "params": {
+                "query": "Amanda Dean",
+                "search_type": "name"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "find_contact",
+            "params": {
+              "query": "Amanda Dean",
+              "search_type": "name"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"No contacts found for query: 'Amanda Dean'\", \"contacts\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:54:02.556908",
+          "ground_truth_api": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:5550123",
+              "call_type": "audio",
+              "device_endpoint": "30A"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 5,
+          "llm_response": "I'm sorry, but I couldn't find Amanda Dean in your contacts. The notification mentioned calling Mrs. Amanda Dean, but she doesn't appear to be in your contact list. Would you like me to help you add her as a new contact first, or would you prefer to dial her number directly if you know it?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I'm sorry, but I couldn't find Amanda Dean in your contacts. The notification mentioned calling Mrs. Amanda Dean, but she doesn't appear to be in your contact list. Would you like me to help you add her as a new contact first, or would you prefer to dial her number directly if you know it?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:12:45.610111",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.3333333333333333,
+        "redundancy_rate": 0.25,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 5,
+        "api_steps": 4,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.6,
+        "api_efficiency": 0.75,
+        "api_success_rate": 0.75,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 5,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          false,
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T21:12:45.610476",
+      "target_function": "find_call_device",
+      "target_location": "Turn 6, Step 1",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:12:45.613383"
+}

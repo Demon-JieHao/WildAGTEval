@@ -1,0 +1,127 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 17,
+  "successful_transforms": 17,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Italian', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Italian', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 6, \"cuisines\": [\"Italian\"], \"results\": [{\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"]}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"]}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 6 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"search_product\", query='tomatoes', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='tomatoes', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod135\", \"name\": \"Tomatoes\", \"price\": 3.45, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='basil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='basil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod148\", \"name\": \"Basil\", \"price\": 3.6, \"category\": \"food_ingredients\", \"stock\": 101}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='oregano', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='oregano', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod145\", \"name\": \"Oregano\", \"price\": 6.25, \"category\": \"food_ingredients\", \"stock\": 120}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='mozzarella', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='mozzarella', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod144\", \"name\": \"Mozzarella\", \"price\": 7.49, \"category\": \"food_ingredients\", \"stock\": 103}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"price\": 8.87, \"category\": \"food_ingredients\", \"stock\": 180}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod135', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod135', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod135\", \"name\": \"Tomatoes\", \"quantity\": 1, \"price\": 3.45}, \"cart_total\": 3.45, \"message\": \"Added 1 x 'Tomatoes' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod148', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod148', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod148\", \"name\": \"Basil\", \"quantity\": 1, \"price\": 3.6}, \"cart_total\": 7.05, \"message\": \"Added 1 x 'Basil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod145', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod145', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod145\", \"name\": \"Oregano\", \"quantity\": 1, \"price\": 6.25}, \"cart_total\": 13.3, \"message\": \"Added 1 x 'Oregano' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod144', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod144', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod144\", \"name\": \"Mozzarella\", \"quantity\": 1, \"price\": 7.49}, \"cart_total\": 20.79, \"message\": \"Added 1 x 'Mozzarella' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"quantity\": 1, \"price\": 8.87}, \"cart_total\": 29.66, \"message\": \"Added 1 x 'Vinegar' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 32.8, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 38.3, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"weather_forecast\", location='paris', days=7)",
+      "after": "invoke_tool(\"weather_forecast\", location='paris', days=7)",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"days\": 7, \"forecast\": [{\"day\": \"Monday\", \"high\": 33, \"low\": 24, \"condition\": \"Snow\"}, {\"day\": \"Tuesday\", \"high\": 35, \"low\": 23, \"condition\": \"Light Rain\"}, {\"day\": \"Wednesday\", \"high\": 33, \"low\": 24, \"condition\": \"Light Snow\"}, {\"day\": \"Thursday\", \"high\": 39, \"low\": 25, \"condition\": \"Heavy Rain\"}, {\"day\": \"Friday\", \"high\": 35, \"low\": 27, \"condition\": \"Mist\"}, {\"day\": \"Saturday\", \"high\": 35, \"low\": 23, \"condition\": \"Sunny\"}, {\"day\": \"Sunday\", \"high\": 38, \"low\": 29, \"condition\": \"Heavy Rain\"}], \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"weather_current\", location='paris')",
+      "after": "invoke_tool(\"weather_current\", location='paris')",
+      "execution_result": "{\"success\": true, \"location\": \"paris\", \"current_weather\": {\"temperature\": 31, \"condition\": \"Light Snow\", \"humidity\": 47, \"wind_speed\": 15, \"pressure\": 1021}, \"formatted\": \"Temperature: 31\\u00b0C, Condition: Light Snow, Humidity: 47%, Wind: 15 km/h\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

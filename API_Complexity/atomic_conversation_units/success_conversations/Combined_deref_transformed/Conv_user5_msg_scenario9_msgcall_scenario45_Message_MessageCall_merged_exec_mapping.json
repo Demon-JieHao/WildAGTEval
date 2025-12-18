@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user5_msg_scenario9_msgcall_scenario45_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user5_msg_scenario9_msgcall_scenario45_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='Jeffrey Parker', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Jeffrey Parker', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact25\", \"user_id\": \"user5\", \"name\": \"Jeffrey Parker\", \"phone_numbers\": [{\"type\": \"work\", \"number\": \"704-748-4588\"}], \"email\": \"jeffrey14@hotmail.com\", \"is_favorite\": false, \"devices\": [\"device16\", \"device9\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact25', content=\"Hey! How's your day going?\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact25', content=\"Hey! How's your day going?\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Jeffrey Parker\", \"message_id\": \"msg59\", \"contact_name\": \"Jeffrey Parker\", \"timestamp\": \"2025-08-20T00:09:31.442440Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='901-488-4963', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:9014884963', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:9014884963 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='Ashley Hernandez', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Ashley Hernandez', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact23\", \"user_id\": \"user5\", \"name\": \"Ashley Hernandez\", \"phone_numbers\": [{\"type\": \"work\", \"number\": \"214-457-5425\"}], \"email\": \"ashley_hernandez@icloud.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact23', content=\"Hi! Hope you're doing well today.\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact23', content=\"Hi! Hope you're doing well today.\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Ashley Hernandez\", \"message_id\": \"msg60\", \"contact_name\": \"Ashley Hernandez\", \"timestamp\": \"2025-08-20T00:09:31.443132Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

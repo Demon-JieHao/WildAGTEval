@@ -1,0 +1,92 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user8_TransactionEnv_shopping_batch_scenario1_cart_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user8_TransactionEnv_shopping_batch_scenario1_cart_exec.py",
+  "total_transforms": 12,
+  "successful_transforms": 12,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='automated', category='smart_home', sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='automated', category='smart_home', sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 6, \"categories\": [\"smart_home\"], \"results\": [{\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"price\": 189.99, \"category\": \"smart_home\", \"stock\": 89}, {\"product_id\": \"prod33\", \"name\": \"Auto Motion Sensor\", \"price\": 75.45, \"category\": \"smart_home\", \"stock\": 191}, {\"product_id\": \"prod72\", \"name\": \"Link Smart Switch V2\", \"price\": 194.99, \"category\": \"smart_home\", \"stock\": 156}, {\"product_id\": \"prod23\", \"name\": \"Home Night Light\", \"price\": 75.3, \"category\": \"smart_home\", \"stock\": 188}, {\"product_id\": \"prod3\", \"name\": \"Eco Garage Door Opener Gen 2\", \"price\": 99.99, \"category\": \"smart_home\", \"stock\": 79}, {\"product_id\": \"prod47\", \"name\": \"Nest Security Camera\", \"price\": 229.99, \"category\": \"smart_home\", \"stock\": 187}], \"message\": \"Found 6 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod70')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod70')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"description\": \"Experience the latest in smart mirror technology with automated, WiFi-enabled\", \"price\": 189.99, \"category\": \"smart_home\", \"stock\": 89, \"rating\": 4.8, \"images\": [\"smart_mirror_1.jpg\", \"smart_mirror_2.jpg\"]}, \"message\": \"Retrieved details for 'Home Smart Mirror Elite'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod33')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod33')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod33\", \"name\": \"Auto Motion Sensor\", \"description\": \"Essential motion sensor featuring wireless, automated, smart\", \"price\": 75.45, \"category\": \"smart_home\", \"stock\": 191, \"rating\": 4.6, \"images\": [\"motion_sensor_1.jpg\", \"motion_sensor_2.jpg\", \"motion_sensor_3.jpg\", \"motion_sensor_4.jpg\"]}, \"message\": \"Retrieved details for 'Auto Motion Sensor'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod72')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod72')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod72\", \"name\": \"Link Smart Switch V2\", \"description\": \"Versatile smart switch with WiFi-enabled, automated\", \"price\": 194.99, \"category\": \"smart_home\", \"stock\": 156, \"rating\": 4.6, \"images\": [\"smart_switch_1.jpg\", \"smart_switch_2.jpg\", \"smart_switch_3.jpg\", \"smart_switch_4.jpg\"]}, \"message\": \"Retrieved details for 'Link Smart Switch V2'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod23')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod23')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod23\", \"name\": \"Home Night Light\", \"description\": \"Affordable night light featuring wireless, automated\", \"price\": 75.3, \"category\": \"smart_home\", \"stock\": 188, \"rating\": 4.5, \"images\": [\"night_light_1.jpg\", \"night_light_2.jpg\", \"night_light_3.jpg\", \"night_light_4.jpg\"]}, \"message\": \"Retrieved details for 'Home Night Light'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod3')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod3')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod3\", \"name\": \"Eco Garage Door Opener Gen 2\", \"description\": \"Advanced garage door opener with remote-control, wireless, automated\", \"price\": 99.99, \"category\": \"smart_home\", \"stock\": 79, \"rating\": 4.4, \"images\": [\"garage_door_opener_1.jpg\", \"garage_door_opener_2.jpg\", \"garage_door_opener_3.jpg\", \"garage_door_opener_4.jpg\"]}, \"message\": \"Retrieved details for 'Eco Garage Door Opener Gen 2'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod47')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod47')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod47\", \"name\": \"Nest Security Camera\", \"description\": \"Experience the latest in security camera technology with automated, energy-efficient, remote-control, voice-controlled\", \"price\": 229.99, \"category\": \"smart_home\", \"stock\": 187, \"rating\": 4.2, \"images\": [\"security_camera_1.jpg\", \"security_camera_2.jpg\", \"security_camera_3.jpg\", \"security_camera_4.jpg\"]}, \"message\": \"Retrieved details for 'Nest Security Camera'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod70', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod70', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"quantity\": 1, \"price\": 189.99}, \"cart_total\": 189.99, \"message\": \"Added 1 x 'Home Smart Mirror Elite' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"update_cart_quantity\", product_id='prod70', quantity=5)",
+      "after": "invoke_tool(\"update_cart_quantity\", product_id='prod70', quantity=5)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"quantity\": 5, \"old_quantity\": 1}, \"cart_total\": 949.95, \"message\": \"Updated quantity of 'Home Smart Mirror Elite' from 1 to 5\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"quantity\": 5, \"price\": 189.99, \"added_at\": \"2025-08-20T00:09:40Z\"}], \"total\": 949.95}, \"item_count\": 5, \"message\": \"Cart has 5 items with a total of $949.95\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"remove_from_cart\", product_id='prod70')",
+      "after": "invoke_tool(\"remove_from_cart\", product_id='prod70')",
+      "execution_result": "{\"success\": true, \"removed\": {\"product_id\": \"prod70\", \"name\": \"Home Smart Mirror Elite\", \"quantity\": 5, \"price\": 189.99, \"added_at\": \"2025-08-20T00:09:40Z\"}, \"cart_total\": 0.0, \"message\": \"Removed all 'Home Smart Mirror Elite' from your cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"clear_cart\", )",
+      "after": "invoke_tool(\"clear_cart\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Cart is already empty.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

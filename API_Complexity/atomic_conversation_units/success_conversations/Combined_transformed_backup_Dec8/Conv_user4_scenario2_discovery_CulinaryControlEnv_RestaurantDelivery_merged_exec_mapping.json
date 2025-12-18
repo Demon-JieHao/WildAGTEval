@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user4_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user4_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", difficulty='easy', sort_by='rating', limit=10, cuisine='Asian')",
+      "after": "invoke_tool(\"search_recipes\", difficulty='easy', sort_by='rating', limit=10, cuisine='Asian')",
+      "execution_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"Asian\"], \"results\": [{\"recipe_id\": \"recipe9\", \"name\": \"Sushi Rolls\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 35, \"rating\": 4.2, \"dietary_info\": []}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe25')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe25')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"description\": \"A delicious asian dish that's perfect for easy cooks.\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"cooking_time\": 52, \"servings\": 6, \"ingredients\": [{\"name\": \"fish sauce\", \"quantity\": \"1 tsp\"}, {\"name\": \"scallions\", \"quantity\": \"2 tbsp\"}, {\"name\": \"ginger\", \"quantity\": \"1/2 cup\"}, {\"name\": \"chili sauce\", \"quantity\": \"1 tsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"onions\", \"quantity\": \"2 small\", \"notes\": \"sliced\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Add seasonings and adjust to taste.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 293, \"protein\": 12, \"carbs\": 39, \"fat\": 10}, \"dietary_info\": [], \"rating\": 4.0, \"reviews_count\": 93, \"image_url\": \"https://example.com/images/kung_pao_chicken.jpg\", \"tags\": [\"asian\", \"quick\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Kung Pao Chicken - A delicious asian dish that's perfect for easy cooks.... (13 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe7')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe7')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"description\": \"A delicious asian dish that's perfect for easy cooks.\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"cooking_time\": 45, \"servings\": 8, \"ingredients\": [{\"name\": \"lime\", \"quantity\": \"1/2 cup\"}, {\"name\": \"ginger\", \"quantity\": \"1 tbsp\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}, {\"name\": \"cilantro\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 307, \"protein\": 12, \"carbs\": 35, \"fat\": 10}, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"rating\": 3.9, \"reviews_count\": 288, \"image_url\": \"https://example.com/images/mango_sticky_rice.jpg\", \"tags\": [\"vegetarian\", \"vegan\", \"breakfast\", \"asian\", \"gluten-free\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Mango Sticky Rice - A delicious asian dish that's perfect for easy cooks.... (45 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe25')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe25')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Kung Pao Chicken' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe25\", \"recipe_name\": \"Kung Pao Chicken\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe7')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe7')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Mango Sticky Rice' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe7\", \"recipe_name\": \"Mango Sticky Rice\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"cuisines\": [\"Indian\"], \"results\": [{\"restaurant_id\": \"rest8\", \"name\": \"Taj Mahal\", \"location\": \"3765 Franklin St, Miami, FL 90741\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest7\", \"name\": \"Delhi Garden\", \"location\": \"6354 Market St, New York, NY 47345\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$$\", \"rating\": 4.0, \"delivery_available\": true, \"menu_item_count\": 6}], \"message\": \"Found 2 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Taj Mahal\", \"restaurant_id\": \"rest8\", \"restaurant_name\": \"Taj Mahal\", \"description\": \"Authentic indian cuisine with traditional flavors\", \"price_range\": \"$$\", \"rating\": 4.5, \"cuisine_types\": [\"Indian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 10.0, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 9.48, \"category\": \"Appetizers\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.56, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 18.99, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.43, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.13, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item4', 'quantity': 1}], delivery_address={'street': '9314 Oak Ave', 'city': 'New York', 'state': 'NY', 'zip': '10055'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item4', 'quantity': 1}], delivery_address={'street': '9314 Oak Ave', 'city': 'New York', 'state': 'NY', 'zip': '10055'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"order_time\": \"2025-08-20T00:11:33Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 18.99, \"tax\": 1.66, \"delivery_fee\": 5.99, \"tip\": 2.85, \"total\": 29.49, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:11:33Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+# Realistic Uncertainty Scenario: Ad Hoc Rules in CommunicationController.find_contact
+
+## Task
+
+Specify a concrete, realistic scenario where the uncertainty type 'Ad Hoc Rules' 
+would manifest in the API function 'CommunicationController.find_contact' 
+in production environments. Focus on converting the abstract uncertainty type into specific, 
+practical manifestations that API users might encounter.
+
+For each manifestation, modify the API Description and Implementation to realistically demonstrate
+this uncertainty, making only the minimum necessary changes and clearly marking your modifications.
+
+## API Function Information
+
+### Description
+{'name': 'find_contact', 'description': "Find contacts by name, phone number, or email. This tool searches through the user's contacts and returns matching entries based on the specified search criteria.", 'parameters': {'type': 'object', 'properties': {'query': {'type': 'string', 'description': 'The search term to find contacts (name, phone number, or email).'}, 'search_type': {'type': 'string', 'enum': ['name', 'phone', 'email'], 'description': "Type of search to perform. Default is 'name'."}, 'limit': {'type': 'integer', 'description': 'Maximum number of contacts to return. Default is 5.', 'minimum': 1}}, 'required': ['query']}, 'error_cases': ['No user logged in: No user is currently logged in to access contacts.', "Invalid search_type: The specified search type is not 'name', 'phone', or 'email'.", 'No contacts found: No contacts match the provided search query.']}
+
+### Implementation
+```python
+    @staticmethod
+    def invoke(data: Dict[str, Any], query: str, search_type: str = "name", limit: int = 5) -> str:
+        """
+        Find contacts based on search criteria.
+        
+        Args:
+            data: The data dictionary containing contacts
+            query: The search term
+            search_type: Type of search ('name', 'phone', 'email')
+            limit: Maximum number of contacts to return
+            
+        Returns:
+            A JSON string with the result of the operation
+        """
+        # Get the current user's ID
+        user_id = data.get("current_user")
+        if not user_id:
+            return json.dumps({
+                "success": False,
+                "message": "No user is currently logged in"
+            })
+        
+        # Perform search based on search_type
+        if search_type == "name":
+            contacts = find_contact_by_name(data, query, user_id)
+        elif search_type == "phone":
+            contacts = find_contact_by_phone(data, query, user_id)
+        elif search_type == "email":
+            contacts = find_contact_by_email(data, query, user_id)
+        else:
+            return json.dumps({
+                "success": False,
+                "message": f"Invalid search_type: {search_type}. Must be 'name', 'phone', or 'email'."
+            })
+        
+        # Apply limit
+        if limit > 0:
+            contacts = contacts[:limit]
+        
+        # Return results
+        if contacts:
+            return json.dumps({
+                "success": True,
+                "message": f"Found {len(contacts)} contact(s)",
+                "contacts": contacts
+            })
+        else:
+            return json.dumps({
+                "success": True,
+                "message": f"No contacts found for query: '{query}'",
+                "contacts": []
+            })
+
+```
+
+## Uncertainty Type Information
+
+### Type: Ad Hoc Rules
+Special requirements or constraints that, while technically documented, deviate from intuitive expectations.
+
+### Criteria
+1. Special Value Semantics Likelihood: The likelihood that the function uses specific numeric or string values that carry special meanings beyond their literal value
+2. Non-Standard Format Requirements Likelihood: The likelihood that the function requires data in specific formats that deviate from common industry standards
+3. Counter-Intuitive Parameter Behavior Likelihood: The likelihood that parameters behave in ways that contradict what most developers would reasonably expect
+4. Hidden Constraints Likelihood: The likelihood that the function has undocumented or obscurely documented restrictions on how it can be used
+5. Legacy Compatibility Issues Likelihood: The likelihood that the function contains unusual behaviors primarily to maintain compatibility with older systems
+
+## Plausibility Assessment
+
+### Summary
+[From api_assessment_results_0]: The find_contact function operates in a domain with inherent complexity around data formats, search behaviors, and system constraints. Contact search functionality naturally develops ad hoc rules due to the need to handle diverse data formats (especially phone numbers), accommodate fuzzy matching requirements, and manage the constraints of underlying contact databases. These complexities make it moderately likely that developers would encounter non-obvious rules and behaviors when using this function in production environments.
+
+[From api_assessment_results_1]: Contact search functions naturally develop ad hoc rules due to the varied nature of contact data formats and the need to handle different search patterns across different identifier types. The function must balance flexibility (allowing users to find contacts with partial or imprecise information) with precision, leading to special cases and hidden constraints that aren't immediately obvious from its simple interface. Legacy contact system compatibility further increases the likelihood of non-obvious behaviors.
+
+[From api_assessment_results_2]: Contact search functionality inherently deals with varied data formats, privacy constraints, and the need to support multiple search patterns across different contact fields. These characteristics naturally lead to ad hoc rules developing over time as the function evolves to handle edge cases in contact formatting, regional variations, and special search behaviors. The moderate score reflects that while the core concept is straightforward, real-world contact search implementations inevitably develop special cases and non-obvious behaviors.
+
+### Score
+Normalized Score: 0.600 (Moderate)
+
+## Instructions
+
+1. Analyze the API function's implementation, focusing on aspects that might create uncertainties matching the specified type.
+
+2. Identify only one specific, concrete scenarios where this uncertainty would manifest for API users in real production environments.
+   - Focus on common usage patterns where developers would naturally encounter this uncertainty
+   - Consider the perspectives of developers who use this API function
+
+3. For each scenario:
+   - Provide a descriptive title that captures the essence of the uncertainty
+   - Explain how this uncertainty would manifest in practical terms
+   - Explain the root cause in the API design
+   - Describe the impact on API users and their applications
+
+4. IMPORTANT: Focus ONLY on uncertainties intrinsic to the function's conceptual functionalities. 
+   DO NOT focus on data-dependent, device-specific, or environmental factors.
+   Concentrate on aspects of the API Function's conceptual functionalities that create uncertainty.
+
+5. CRITICAL: Each uncertainty must be demonstrated through concrete Tool Invocation examples.
+   Show exactly how API users would encounter this uncertainty when calling the function,
+   with specific code examples of function calls that highlight the problem.
+
+6. ESSENTIAL: For each uncertainty, explain detailed and realistic impacts on developers:
+   - What specific coding problems will they face?
+   - What unexpected behaviors will they need to work around?
+   - What additional error handling will they need to implement?
+   - How will this affect their development time or code quality?
+
+7. Suggest concrete mitigation approaches:
+   - Documentation improvements that would make the uncertainty more manageable
+
+## Special Instructions for Ad Hoc Rules Scenarios
+
+For this uncertainty type, you should focus on special requirements that deviate from intuitive expectations. You may:
+
+1. ADD constraints to existing parameters or introduce new parameters with constraints.
+2. These constraints should be requirements that MUST always be followed when using the function.
+3. Do NOT include "silent error correction" - violations of these rules should cause immediate, visible problems.
+4. Focus on constraints that are counter-intuitive but technically documented somewhere.
+5. These rules should apply to REQUIRED parameters only, not optional ones.
+6. The rules should be context-independent - they should ALWAYS apply, not just in certain situations.
+
+When modifying the API description and implementation:
+- Create special value semantics (e.g., -1 means "last item" and "PT15M" format represents 15 minutes)
+- Introduce non-standard format requirements
+- Implement counter-intuitive parameter behaviors
+- Focus on rules that are always enforced, not situational
+
+## Output Format for Ad Hoc Rules Scenarios
+
+### Uncertainty Manifestation 1: [Title - Focus on counter-intuitive special rules]
+
+**Description**:
+[Detailed description of how ad hoc rules manifest in practice]
+
+**Modified API Description**:
+```
+[Your modified version of the API function description that mentions special rules]
+```
+
+**Modified Implementation**:
+```python
+# Your modified version of the API implementation that enforces ad hoc rules
+```
+
+**Example Tool Invocation**:
+```python
+# Example code showing API calls that violate ad hoc rules
+api_function(param1, param2)  # Specific example that breaks special rules
+# Error or unexpected behavior due to rule violation
+```
+
+**Root Cause in API Design**:
+[Explain which specific aspects of your modified function's rules create counter-intuitive behavior]
+
+**Concrete Developer Impact**:
+[Describe specific, practical problems developers will face when encountering ad hoc rules,
+including debugging difficulties, learning curve, and code maintenance issues]
+
+### Mitigation Recommendations
+
+#### Documentation Improvements
+1. [First documentation recommendation - clearly highlight special rules]
+2. [Second documentation recommendation]
+3. [Third documentation recommendation]

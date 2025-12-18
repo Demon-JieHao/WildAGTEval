@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user1_scenario7_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario7_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"create_meal_plan\", name='Easy Week Menu', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner'])",
+      "after": "invoke_tool(\"create_meal_plan\", name='Easy Week Menu', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner'])",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"name\": \"Easy Week Menu\", \"start_date\": \"2025-07-17\", \"end_date\": \"2025-07-23\", \"meals_per_day\": [\"breakfast\", \"lunch\", \"dinner\"], \"days_count\": 7, \"message\": \"Meal plan 'Easy Week Menu' created successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='lunch', count=3)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='lunch', count=3)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"dietary_info\": [], \"rating\": 4.0, \"is_favorite\": false}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"dietary_info\": [], \"rating\": 4.0, \"is_favorite\": false}, {\"recipe_id\": \"recipe27\", \"name\": \"Sushi Burrito\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for lunch\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe21', day='2025-07-19', meal_type='lunch')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe21', day='2025-07-19', meal_type='lunch')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-19\", \"meal_type\": \"lunch\", \"recipe_id\": \"recipe21\", \"recipe_name\": \"Rigatoni Aglio e Olio\", \"message\": \"Added Rigatoni Aglio e Olio to lunch on 2025-07-19\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=3)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='breakfast', count=3)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": true}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.3, \"is_favorite\": false}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"rating\": 3.9, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for breakfast\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe7', day='2025-07-23', meal_type='breakfast')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe7', day='2025-07-23', meal_type='breakfast')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-23\", \"meal_type\": \"breakfast\", \"recipe_id\": \"recipe7\", \"recipe_name\": \"Mango Sticky Rice\", \"message\": \"Added Mango Sticky Rice to breakfast on 2025-07-23\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='French', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='French', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"cuisines\": [\"French\"], \"results\": [{\"restaurant_id\": \"rest3\", \"name\": \"Petit France\", \"location\": \"4797 Elm St, San Antonio, TX 94057\", \"cuisine_types\": [\"French\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest14\", \"name\": \"Brasserie\", \"location\": \"4932 Park Blvd, Chicago, IL 22260\", \"cuisine_types\": [\"French\"], \"price_range\": \"$$$$\", \"rating\": 4.3, \"delivery_available\": true, \"menu_item_count\": 6}], \"message\": \"Found 2 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest3')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest3')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Petit France\", \"restaurant_id\": \"rest3\", \"restaurant_name\": \"Petit France\", \"description\": \"Elegant french cuisine in an upscale atmosphere\", \"price_range\": \"$$$$\", \"rating\": 4.6, \"cuisine_types\": [\"French\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 8.97, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.53, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 11.2, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 23.83, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 17.07, \"category\": \"Main Course\", \"popular\": true}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 33.91, \"category\": \"Main Course\"}]}, \"is_favorite\": true, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest3', items=[{'item_id': 'item1', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '569 Oak Ave', 'city': 'Los Angeles', 'state': 'CA', 'zip': '90038'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest3', items=[{'item_id': 'item1', 'quantity': 1}, {'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '569 Oak Ave', 'city': 'Los Angeles', 'state': 'CA', 'zip': '90038'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Petit France\", \"order_time\": \"2025-08-20T00:11:25Z\", \"status\": \"placed\", \"items_count\": 2, \"subtotal\": 42.88, \"tax\": 3.75, \"delivery_fee\": 5.99, \"tip\": 6.43, \"total\": 59.05, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Petit France\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:11:25Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

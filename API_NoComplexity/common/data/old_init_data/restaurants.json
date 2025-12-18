@@ -1,0 +1,225 @@
+[
+  {
+    "restaurant_id": "rest1",
+    "name": "La Trattoria",
+    "description": "Authentic Italian cuisine in a cozy atmosphere",
+    "location": "123 Main St, New York, NY 10001",
+    "coordinates": {
+      "latitude": 40.7128,
+      "longitude": -74.0060
+    },
+    "rating": 4.7,
+    "reviews_count": 342,
+    "price_range": "$$",
+    "cuisine_types": ["Italian", "Mediterranean"],
+    "hours": {
+      "monday": "11:00-22:00",
+      "tuesday": "11:00-22:00",
+      "wednesday": "11:00-22:00",
+      "thursday": "11:00-22:00",
+      "friday": "11:00-23:00",
+      "saturday": "11:00-23:00",
+      "sunday": "12:00-21:00"
+    },
+    "contact": {
+      "phone": "212-555-1234",
+      "email": "info@latrattoria.com",
+      "website": "https://www.latrattoria.com"
+    },
+    "delivery_available": true,
+    "delivery_radius_km": 5,
+    "menu": [
+      {
+        "item_id": "item1",
+        "name": "Margherita Pizza",
+        "description": "Classic pizza with tomato sauce, mozzarella, and basil",
+        "price": 14.95,
+        "category": "Pizza",
+        "dietary_info": ["vegetarian"],
+        "popular": true
+      },
+      {
+        "item_id": "item2",
+        "name": "Spaghetti Carbonara",
+        "description": "Spaghetti with pancetta, eggs, pecorino cheese, and black pepper",
+        "price": 16.95,
+        "category": "Pasta"
+      },
+      {
+        "item_id": "item3",
+        "name": "Caprese Salad",
+        "description": "Fresh tomatoes, mozzarella, basil, and balsamic glaze",
+        "price": 10.95,
+        "category": "Appetizers",
+        "dietary_info": ["vegetarian", "gluten-free"]
+      }
+    ]
+  },
+  {
+    "restaurant_id": "rest2",
+    "name": "Sushi Delight",
+    "description": "Fresh and creative Japanese cuisine",
+    "location": "456 Oak Ave, New York, NY 10002",
+    "coordinates": {
+      "latitude": 40.7150,
+      "longitude": -74.0080
+    },
+    "rating": 4.8,
+    "reviews_count": 256,
+    "price_range": "$$$",
+    "cuisine_types": ["Japanese", "Sushi", "Asian"],
+    "hours": {
+      "monday": "17:00-22:30",
+      "tuesday": "17:00-22:30",
+      "wednesday": "17:00-22:30",
+      "thursday": "17:00-22:30",
+      "friday": "17:00-23:30",
+      "saturday": "12:00-23:30",
+      "sunday": "12:00-22:00"
+    },
+    "contact": {
+      "phone": "212-555-5678",
+      "email": "info@sushidelight.com",
+      "website": "https://www.sushidelight.com"
+    },
+    "delivery_available": true,
+    "delivery_radius_km": 3,
+    "menu": [
+      {
+        "item_id": "item1",
+        "name": "California Roll",
+        "description": "Crab, avocado, and cucumber roll",
+        "price": 8.95,
+        "category": "Rolls",
+        "popular": true
+      },
+      {
+        "item_id": "item2",
+        "name": "Salmon Nigiri (2 pcs)",
+        "description": "Fresh salmon over seasoned rice",
+        "price": 6.95,
+        "category": "Nigiri"
+      },
+      {
+        "item_id": "item3",
+        "name": "Miso Soup",
+        "description": "Traditional Japanese soup with tofu and seaweed",
+        "price": 3.50,
+        "category": "Soups",
+        "dietary_info": ["vegetarian"]
+      }
+    ]
+  },
+  {
+    "restaurant_id": "rest3",
+    "name": "Burger Joint",
+    "description": "Gourmet burgers and craft beer",
+    "location": "789 Maple St, New York, NY 10003",
+    "coordinates": {
+      "latitude": 40.7200,
+      "longitude": -74.0100
+    },
+    "rating": 4.5,
+    "reviews_count": 421,
+    "price_range": "$$",
+    "cuisine_types": ["American", "Burgers", "Beer"],
+    "hours": {
+      "monday": "11:30-22:00",
+      "tuesday": "11:30-22:00",
+      "wednesday": "11:30-22:00",
+      "thursday": "11:30-23:00",
+      "friday": "11:30-00:00",
+      "saturday": "11:30-00:00",
+      "sunday": "12:00-21:00"
+    },
+    "contact": {
+      "phone": "212-555-9012",
+      "email": "info@burgerjoint.com",
+      "website": "https://www.burgerjoint.com"
+    },
+    "delivery_available": true,
+    "delivery_radius_km": 4,
+    "menu": [
+      {
+        "item_id": "item1",
+        "name": "Classic Burger",
+        "description": "Beef patty with lettuce, tomato, onion, and special sauce",
+        "price": 12.95,
+        "category": "Burgers",
+        "popular": true
+      },
+      {
+        "item_id": "item2",
+        "name": "Veggie Burger",
+        "description": "Plant-based patty with avocado, sprouts, and vegan aioli",
+        "price": 13.95,
+        "category": "Burgers",
+        "dietary_info": ["vegetarian", "vegan-option"]
+      },
+      {
+        "item_id": "item3",
+        "name": "Sweet Potato Fries",
+        "description": "Crispy sweet potato fries with spicy dipping sauce",
+        "price": 5.95,
+        "category": "Sides",
+        "dietary_info": ["vegetarian", "vegan"]
+      }
+    ]
+  },
+  {
+    "restaurant_id": "rest4",
+    "name": "Taj Palace",
+    "description": "Authentic Indian cuisine with traditional flavors",
+    "location": "321 Pine Blvd, New York, NY 10004",
+    "coordinates": {
+      "latitude": 40.7180,
+      "longitude": -74.0120
+    },
+    "rating": 4.6,
+    "reviews_count": 298,
+    "price_range": "$$",
+    "cuisine_types": ["Indian", "Vegetarian", "Curry"],
+    "hours": {
+      "monday": "16:00-22:30",
+      "tuesday": "16:00-22:30",
+      "wednesday": "16:00-22:30",
+      "thursday": "16:00-22:30",
+      "friday": "12:00-23:30",
+      "saturday": "12:00-23:30",
+      "sunday": "12:00-22:00"
+    },
+    "contact": {
+      "phone": "212-555-3456",
+      "email": "info@tajpalace.com",
+      "website": "https://www.tajpalace.com"
+    },
+    "delivery_available": true,
+    "delivery_radius_km": 5,
+    "menu": [
+      {
+        "item_id": "item1",
+        "name": "Butter Chicken",
+        "description": "Tender chicken in a rich tomato and butter sauce",
+        "price": 16.95,
+        "category": "Main Course",
+        "popular": true
+      },
+      {
+        "item_id": "item2",
+        "name": "Vegetable Biryani",
+        "description": "Fragrant rice dish with mixed vegetables and aromatic spices",
+        "price": 14.95,
+        "category": "Rice Dishes",
+        "dietary_info": ["vegetarian"]
+      },
+      {
+        "item_id": "item3",
+        "name": "Garlic Naan",
+        "description": "Freshly baked flatbread with garlic and herbs",
+        "price": 3.95,
+        "category": "Breads",
+        "dietary_info": ["vegetarian"]
+      }
+    ]
+  }
+]

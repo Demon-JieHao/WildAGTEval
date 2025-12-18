@@ -1,0 +1,64 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user9_TransactionEnv_shopping_batch_scenario1_cart_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user9_TransactionEnv_shopping_batch_scenario1_cart_exec.py",
+  "total_transforms": 8,
+  "successful_transforms": 8,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_product\", query='smart watch', category='electronics', max_price=100, sort_by='rating', limit=10)",
+      "after": "invoke_tool(\"search_product\", query='smart watch', category='electronics', max_price=100, sort_by='rating', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"categories\": [\"electronics\"], \"results\": [{\"product_id\": \"prod22\", \"name\": \"Elite Smart Watch\", \"price\": 39.35, \"category\": \"electronics\", \"stock\": 99}, {\"product_id\": \"prod63\", \"name\": \"Pro Smart Watch\", \"price\": 38.05, \"category\": \"electronics\", \"stock\": 146}], \"message\": \"Found 2 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod22')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod22')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod22\", \"name\": \"Elite Smart Watch\", \"description\": \"Affordable smart watch featuring wireless, bluetooth, HD\", \"price\": 39.35, \"category\": \"electronics\", \"stock\": 99, \"rating\": 4.4, \"images\": [\"smart_watch_1.jpg\", \"smart_watch_2.jpg\"]}, \"message\": \"Retrieved details for 'Elite Smart Watch'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_product_details\", product_id='prod63')",
+      "after": "invoke_tool(\"get_product_details\", product_id='prod63')",
+      "execution_result": "{\"success\": true, \"details\": {\"product_id\": \"prod63\", \"name\": \"Pro Smart Watch\", \"description\": \"Practical smart watch featuring wireless, gaming, portable, bluetooth\", \"price\": 38.05, \"category\": \"electronics\", \"stock\": 146, \"rating\": 4.4, \"images\": [\"smart_watch_1.jpg\", \"smart_watch_2.jpg\", \"smart_watch_3.jpg\"]}, \"message\": \"Retrieved details for 'Pro Smart Watch'\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod9', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod9', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod9\", \"name\": \"Health Sport Watch\", \"quantity\": 1, \"price\": 96.54}, \"cart_total\": 832.22, \"message\": \"Added 1 x 'Health Sport Watch' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"update_cart_quantity\", product_id='prod9', quantity=2)",
+      "after": "invoke_tool(\"update_cart_quantity\", product_id='prod9', quantity=2)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod9\", \"name\": \"Health Sport Watch\", \"quantity\": 2, \"old_quantity\": 1}, \"cart_total\": 928.76, \"message\": \"Updated quantity of 'Health Sport Watch' from 1 to 2\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"view_cart\", )",
+      "after": "invoke_tool(\"view_cart\", )",
+      "execution_result": "{\"success\": true, \"cart\": {\"items\": [{\"product_id\": \"prod24\", \"name\": \"Digital Bluetooth Speaker 2024\", \"quantity\": 2, \"price\": 279.99, \"added_at\": \"2025-06-17T11:21:01Z\"}, {\"product_id\": \"prod15\", \"name\": \"Smart Smart Switch Plus\", \"quantity\": 1, \"price\": 65.71, \"added_at\": \"2025-06-12T19:40:31Z\"}, {\"product_id\": \"prod75\", \"name\": \"Elite Tablet\", \"quantity\": 1, \"price\": 109.99, \"added_at\": \"2025-06-11T01:01:38Z\"}, {\"product_id\": \"prod9\", \"name\": \"Health Sport Watch\", \"quantity\": 2, \"price\": 96.54, \"added_at\": \"2025-08-20T00:09:43Z\"}], \"total\": 928.76}, \"item_count\": 6, \"message\": \"Cart has 6 items with a total of $928.76\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"remove_from_cart\", product_id='prod9')",
+      "after": "invoke_tool(\"remove_from_cart\", product_id='prod9')",
+      "execution_result": "{\"success\": true, \"removed\": {\"product_id\": \"prod9\", \"name\": \"Health Sport Watch\", \"quantity\": 2, \"price\": 96.54, \"added_at\": \"2025-08-20T00:09:43Z\"}, \"cart_total\": 735.68, \"message\": \"Removed all 'Health Sport Watch' from your cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"clear_cart\", )",
+      "after": "invoke_tool(\"clear_cart\", )",
+      "execution_result": "{\"success\": true, \"message\": \"Removed all items from your cart (3 product types, 4 total items).\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

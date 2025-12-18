@@ -1,0 +1,31 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+   User: user5
+   Domain: culinary
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I'm looking for top 10 American cuisine
+   Expected:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"American","limit":10})
+   Actual:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"American","limit":10})
+
+   Turn 2: ✅
+   Query: I'd like to see the ingredients and instructions for the 2nd, 3rd, and 5th ones
+   Expected:
+     🔍 get_recipe_details({"recipe_id":"recipe20"})
+     🔍 get_recipe_details({"recipe_id":"recipe33"})
+     🔍 get_recipe_details({"recipe_id":"recipe23"})
+   Actual:
+     🔍 get_recipe_details({"recipe_id":"recipe20"})
+     🔍 get_recipe_details({"recipe_id":"recipe33"})
+     🔍 get_recipe_details({"recipe_id":"recipe23"})

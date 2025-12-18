@@ -1,0 +1,40 @@
+name: "Partially Irrelevant Information"
+description: "Enable PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: true
+    apis:
+      - find_call_device
+      - get_call_history
+      - get_messages
+      - get_restaurant_menu
+      - knowledge_lookup
+      - search_recipes
+      - stock_watchlist
+      - weather_forecast
+    
+  INFORMATIONAL_NOTICE:
+    enabled: false
+    apis: []
+  
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+
+metadata:
+  total_uncertainties: 8
+  creation_date: "2025-07-09"
+  use_case: "Test LLM ability to filter relevant information from cluttered responses"

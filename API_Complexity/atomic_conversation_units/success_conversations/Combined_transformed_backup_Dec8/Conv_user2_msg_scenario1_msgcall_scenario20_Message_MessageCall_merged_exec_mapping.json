@@ -1,0 +1,50 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user2_msg_scenario1_msgcall_scenario20_Message_MessageCall_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_msg_scenario1_msgcall_scenario20_Message_MessageCall_merged_exec.py",
+  "total_transforms": 6,
+  "successful_transforms": 6,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"find_contact\", query='Elizabeth Wright', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Elizabeth Wright', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact19\", \"user_id\": \"user2\", \"name\": \"Elizabeth Wright\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"412-264-1818\"}], \"email\": \"elizabeth13@protonmail.com\", \"is_favorite\": false, \"devices\": [\"device39\", \"device32\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"send_message\", contact_id='contact19', content='Hello! Just saying hi!')",
+      "after": "invoke_tool(\"send_message\", contact_id='contact19', content='Hello! Just saying hi!')",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Elizabeth Wright\", \"message_id\": \"msg59\", \"contact_name\": \"Elizabeth Wright\", \"timestamp\": \"2025-08-20T00:11:26.767165Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "after": "invoke_tool(\"power_on\", endpoints=['17'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"make_call\", phone_number='206-870-2752', device_endpoint='17')",
+      "after": "invoke_tool(\"make_call\", phone_number='D:2068702752', device_endpoint='17')",
+      "execution_result": "{\"success\": true, \"message\": \"Call initiated to D:2068702752 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"find_contact\", query='Elizabeth Wright', search_type='name', limit=5)",
+      "after": "invoke_tool(\"find_contact\", query='Elizabeth Wright', search_type='name', limit=5)",
+      "execution_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact19\", \"user_id\": \"user2\", \"name\": \"Elizabeth Wright\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"412-264-1818\"}], \"email\": \"elizabeth13@protonmail.com\", \"is_favorite\": false, \"devices\": [\"device39\", \"device32\"]}], \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"send_message\", contact_id='contact19', content=\"Hi! Hope you're doing well today.\")",
+      "after": "invoke_tool(\"send_message\", contact_id='contact19', content=\"Hi! Hope you're doing well today.\")",
+      "execution_result": "{\"success\": true, \"message\": \"Message sent to Elizabeth Wright\", \"message_id\": \"msg60\", \"contact_name\": \"Elizabeth Wright\", \"timestamp\": \"2025-08-20T00:11:26.767840Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+      "execution_success": true
+    }
+  ]
+}

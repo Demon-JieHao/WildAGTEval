@@ -1,0 +1,176 @@
+[
+  {
+    "order_id": "order_cancelled_example",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod3",
+        "name": "Smart Thermostat",
+        "quantity": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "prod2",
+        "name": "Smart Light Bulb",
+        "quantity": 2,
+        "price": 24.99
+      }
+    ],
+    "total": 179.97,
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "1234",
+      "status": "refunded",
+      "transaction_id": "tx654321",
+      "paid_at": "2025-06-10T09:15:00Z",
+      "refunded_at": "2025-06-10T14:30:00Z"
+    },
+    "shipping": {
+      "address_id": "addr1",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "USA"
+      },
+      "carrier": "FedEx",
+      "status": "cancelled",
+      "tracking_number": "TRK654321",
+      "estimated_delivery": "2025-06-15T00:00:00Z"
+    },
+    "status": "cancelled",
+    "created_at": "2025-06-10T09:10:00Z",
+    "cancellation": {
+      "reason": "Customer changed mind",
+      "cancelled_at": "2025-06-10T14:30:00Z",
+      "refunded": true
+    }
+  },
+  {
+    "order_id": "order1",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod1",
+        "name": "Smart Speaker",
+        "quantity": 2,
+        "price": 99.99
+      },
+      {
+        "product_id": "prod8",
+        "name": "Smart Lock",
+        "quantity": 1,
+        "price": 189.99
+      }
+    ],
+    "total": 389.97,
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "1234",
+      "status": "paid",
+      "transaction_id": "tx123456",
+      "paid_at": "2025-06-01T14:30:00Z"
+    },
+    "shipping": {
+      "address_id": "addr1",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "USA"
+      },
+      "carrier": "UPS",
+      "status": "delivered",
+      "tracking_number": "TRK123456",
+      "estimated_delivery": "2025-06-05T00:00:00Z",
+      "delivered_at": "2025-06-04T14:25:00Z"
+    },
+    "status": "completed",
+    "created_at": "2025-06-01T14:25:00Z"
+  },
+  {
+    "order_id": "order2",
+    "user_id": "user1",
+    "items": [
+      {
+        "product_id": "prod7",
+        "name": "Fitness Tracker",
+        "quantity": 1,
+        "price": 79.99
+      }
+    ],
+    "total": 79.99,
+    "payment": {
+      "method_id": "pm1",
+      "method_type": "credit_card",
+      "last4": "1234",
+      "status": "paid",
+      "transaction_id": "tx234567",
+      "paid_at": "2025-06-08T10:15:00Z"
+    },
+    "shipping": {
+      "address_id": "addr1",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001",
+        "country": "USA"
+      },
+      "carrier": "DHL",
+      "status": "in_transit",
+      "tracking_number": "TRK234567",
+      "estimated_delivery": "2025-06-14T00:00:00Z"
+    },
+    "status": "processing",
+    "created_at": "2025-06-08T10:12:00Z"
+  },
+  {
+    "order_id": "order3",
+    "user_id": "user2",
+    "items": [
+      {
+        "product_id": "prod6",
+        "name": "Smart TV",
+        "quantity": 1,
+        "price": 799.99
+      },
+      {
+        "product_id": "prod9",
+        "name": "Wireless Earbuds",
+        "quantity": 2,
+        "price": 89.99
+      }
+    ],
+    "total": 979.97,
+    "payment": {
+      "method_id": "pm2",
+      "method_type": "credit_card",
+      "last4": "5678",
+      "status": "paid",
+      "transaction_id": "tx345678",
+      "paid_at": "2025-06-05T16:40:00Z"
+    },
+    "shipping": {
+      "address_id": "addr2",
+      "address": {
+        "street": "456 Park Ave",
+        "city": "London",
+        "state": "",
+        "zip": "SW1A 1AA",
+        "country": "UK"
+      },
+      "carrier": "USPS",
+      "status": "delivered",
+      "tracking_number": "TRK345678",
+      "estimated_delivery": "2025-06-10T00:00:00Z",
+      "delivered_at": "2025-06-09T11:30:00Z"
+    },
+    "status": "completed",
+    "created_at": "2025-06-05T16:35:00Z"
+  }
+]

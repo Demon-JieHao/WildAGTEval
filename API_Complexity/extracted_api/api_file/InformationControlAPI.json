@@ -1,0 +1,258 @@
+{
+  "InformationControlEnv": {
+    "knowledge_lookup": {
+      "function": {
+        "description": "Look up general knowledge about a keyword. Provides definitions and explanations for various topics including technology, science, and general concepts.",
+        "error_cases": [
+          "No keyword provided: The keyword parameter is empty or not provided.",
+          "Keyword not found: Returns error with list of available keywords.",
+          "Invalid keyword format: Spaces in keywords will be replaced with underscores."
+        ],
+        "name": "knowledge_lookup",
+        "parameters": {
+          "properties": {
+            "keyword": {
+              "description": "The keyword to look up (e.g., 'python', 'artificial_intelligence', 'quantum_computing')",
+              "type": "string"
+            }
+          },
+          "required": [
+            "keyword"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_by_category": {
+      "function": {
+        "description": "Get news from a specific category. Available categories include technology, business, world, science, health, and sports.",
+        "error_cases": [
+          "Invalid category: Returns error with list of available categories.",
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news in category: Returns empty list if no news items are available in the category."
+        ],
+        "name": "news_by_category",
+        "parameters": {
+          "properties": {
+            "category": {
+              "description": "News category to retrieve (technology, business, world, science, health, sports)",
+              "type": "string"
+            },
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 5, max: 20)",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "category"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_latest": {
+      "function": {
+        "description": "Get the latest news from all categories. Returns the most recent news items sorted by timestamp.",
+        "error_cases": [
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news available: Returns empty list if no news items are available."
+        ],
+        "name": "news_latest",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 5, max: 20)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "news_personalized": {
+      "function": {
+        "description": "Get personalized news based on user preferences. Returns news from the user's preferred categories sorted by recency.",
+        "error_cases": [
+          "No user preferences: If no user is logged in, defaults to technology and business categories.",
+          "Invalid limit: Limit will be constrained to 1-20 range.",
+          "No news available: Returns empty list if no news items are available in preferred categories."
+        ],
+        "name": "news_personalized",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of news items to return (default: 10, max: 20)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "query_history": {
+      "function": {
+        "description": "Get user's query history. Shows recent information queries made by the current user.",
+        "error_cases": [
+          "No user logged in: Returns error if no current user is set.",
+          "Invalid limit: Limit will be constrained to 1-50 range.",
+          "No history: Returns empty list if user has no query history."
+        ],
+        "name": "query_history",
+        "parameters": {
+          "properties": {
+            "limit": {
+              "description": "(Optional) Maximum number of queries to return (default: 10, max: 50)",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "source_list": {
+      "function": {
+        "description": "List available information sources. Shows all data sources that can be queried for information.",
+        "error_cases": [
+          "Invalid source type: Returns error with list of available types.",
+          "No sources: Returns empty list if no sources are configured."
+        ],
+        "name": "source_list",
+        "parameters": {
+          "properties": {
+            "source_type": {
+              "description": "(Optional) Filter by source type (weather, news, knowledge, financial)",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stock_price": {
+      "function": {
+        "description": "Get current stock price for a symbol. Provides real-time price information.",
+        "error_cases": [
+          "No symbol provided: The symbol parameter is empty or not provided.",
+          "Invalid symbol format: Symbol must include correct exchange prefix.",
+          "Symbol not found: Returns error with list of available symbols."
+        ],
+        "name": "stock_price",
+        "parameters": {
+          "properties": {
+            "symbol": {
+              "description": "Stock symbol prefixed with exchange identifier separated by colon with no spaces. The exchange prefix matches the stock's actual listing exchange.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "stock_watchlist": {
+      "function": {
+        "description": "Get stock prices for user's watchlist. Returns current prices and changes for all stocks in the user's personalized watchlist.",
+        "error_cases": [
+          "No user preferences: If no user is logged in, defaults to AAPL, GOOGL, and MSFT.",
+          "Empty watchlist: Returns empty list if user has no stocks in watchlist.",
+          "Invalid symbols: Symbols not found in the system are silently skipped."
+        ],
+        "name": "stock_watchlist",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "user_preferences": {
+      "function": {
+        "description": "Get current user's preferences. Shows location, language, preferred news categories, stock watchlist, and other personalization settings, e.g., user_id.",
+        "error_cases": [
+          "No user logged in: Returns error if no current user is set.",
+          "No preferences: Returns empty preferences object if user has no preferences configured."
+        ],
+        "name": "user_preferences",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_alerts": {
+      "function": {
+        "description": "Get weather alerts and warnings for a location. Includes severe weather warnings, advisories, and watches.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_alerts",
+        "parameters": {
+          "properties": {
+            "location": {
+              "description": "(Optional) Location to get weather alerts for. If not provided, uses the user's default location from preferences.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_current": {
+      "function": {
+        "description": "Get current weather conditions for a location. Provides temperature, conditions, humidity, wind speed, and atmospheric pressure.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_current",
+        "parameters": {
+          "properties": {
+            "location": {
+              "description": "(Optional) Location to get weather for. If not provided, uses the user's default location from preferences.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "weather_forecast": {
+      "function": {
+        "description": "Get weather forecast for a location. Provides daily high/low temperatures and conditions for up to 7 days.",
+        "error_cases": [
+          "Location not found: Weather data is not available for the specified location.",
+          "Invalid days: Days parameter will be constrained to 1-7 range.",
+          "No user preferences: If no location is provided and no user is logged in, defaults to New York."
+        ],
+        "name": "weather_forecast",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "(Optional) Number of days to forecast (default: 3, max: 7)",
+              "type": "integer"
+            },
+            "location": {
+              "description": "(Optional) Location to get weather for. If not provided, uses the user's default location from preferences.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

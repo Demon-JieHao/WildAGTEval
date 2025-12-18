@@ -1,0 +1,368 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home/dykim2/Rag/camel_synthetic_api/API_NoComplexity/atomic_conversation_units/success_conversations/Combined/Conv_user1_DailyInvestmentMonitor_scenario4.jsonl",
+  "filename": "Conv_user1_DailyInvestmentMonitor_scenario4.jsonl",
+  "user_id": "user1",
+  "model": "gpt-4o-mini",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.75,
+  "avg_api_name_accuracy": 0.0,
+  "avg_parameter_accuracy": 0.0,
+  "overall_score": 0.25,
+  "step_by_step_metrics": {
+    "total_steps": 7,
+    "total_api_steps": 5,
+    "avg_steps_per_query": 3.5,
+    "avg_api_steps_per_query": 2.5,
+    "avg_step_efficiency": 0.6
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 7,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.14285714285714285
+  },
+  "query_results": [
+    {
+      "query": "I should assess Just a regular check since things are stable create a peaceful environment with soft colors Turn the Master Bedroom Light orange",
+      "expected_api_sequence": [
+        {
+          "api": "color_set",
+          "params": {
+            "endpoints": [
+              "10"
+            ],
+            "color": "orange"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_user_inventory",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"user_id\": \"user1\", \"name\": \"Sarah Rodriguez\", \"home_id\": \"home1\", \"current_space\": null, \"devices\": [{\"endpoint\": \"1\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"2\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"3\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"4\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"5\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"]}, {\"endpoint\": \"6\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"7\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"8\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"9\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"]}, {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"13\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"14\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"15\", \"name\": \"Garage Light\", \"alternate_names\": [\"Garage Light\"]}, {\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:28:16.491151",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_device_details",
+              "params": {
+                "endpoint": "10"
+              }
+            }
+          },
+          "api_call": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "10"
+            }
+          },
+          "api_result": "{\"success\": true, \"device\": {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"master_bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\", \"state\": {\"power\": \"off\", \"brightness\": 27}}, \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:28:16.504029",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "power_on",
+              "params": {
+                "endpoints": [
+                  "10"
+                ]
+              }
+            }
+          },
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "10"
+              ]
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"success\": true, \"message\": \"Turned on Master Bedroom Light\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:28:16.516412",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\n      \"10\"\n    ],\n    \"color\": \"orange\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\n      \"10\"\n    ],\n    \"color\": \"orange\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "color_set",
+              "params": {
+                "endpoints": [
+                  "10"
+                ],
+                "color": "orange"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "10"
+              ],
+              "color": "orange"
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"success\": true, \"message\": \"Set Master Bedroom Light color to orange\", \"color\": \"#FFA500\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:28:20.127614",
+          "ground_truth_api": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "10"
+              ],
+              "color": "orange"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 5,
+          "llm_response": "```json\n<End of Turn>\n```",
+          "parsed_action": {
+            "type": "completion",
+            "content": "```json\n<End of Turn>\n```",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:28:21.412117",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.75,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 5,
+        "api_steps": 4,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.2,
+        "api_efficiency": 0.25,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "gt_execution",
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 5,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.2,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-12-13T13:28:24.235989",
+      "target_function": "color_set",
+      "target_location": "Turn 1, Step 3",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "With complete focus set comfortable temperature to 21\u00b0C Please change the Thermostat to 21",
+      "expected_api_sequence": [
+        {
+          "api": "get_device_details",
+          "params": {
+            "endpoint": "5A"
+          }
+        },
+        {
+          "api": "temperature_set",
+          "params": {
+            "endpoints": [
+              "5A"
+            ],
+            "temperature": 21
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"temperature_set\",\n  \"params\": {\n    \"endpoints\": [\n      \"5A\"\n    ],\n    \"temperature\": 21\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"temperature_set\",\n  \"params\": {\n    \"endpoints\": [\n      \"5A\"\n    ],\n    \"temperature\": 21\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "temperature_set",
+              "params": {
+                "endpoints": [
+                  "5A"
+                ],
+                "temperature": 21
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "temperature_set",
+            "params": {
+              "endpoints": [
+                "5A"
+              ],
+              "temperature": 21
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"success\": true, \"message\": \"Set Thermostat temperature to 21\\u00b0C\", \"temperature\": 21}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 1.8472518920898438,
+          "timestamp": "2025-12-13T13:28:23.259438",
+          "ground_truth_api": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "5A"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "```json\n<End of Turn>\n```",
+          "parsed_action": {
+            "type": "completion",
+            "content": "```json\n<End of Turn>\n```",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.9459152221679688,
+          "timestamp": "2025-12-13T13:28:24.234853",
+          "ground_truth_api": {
+            "api": "temperature_set",
+            "params": {
+              "endpoints": [
+                "5A"
+              ],
+              "temperature": 21
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.5,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 1.0,
+        "api_efficiency": 2.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 2,
+      "related_to_target": "Turn 1, Step 3"
+    }
+  ],
+  "evaluated_at": "2025-12-13T13:28:36.081847"
+}

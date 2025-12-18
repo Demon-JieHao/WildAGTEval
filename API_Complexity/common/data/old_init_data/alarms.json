@@ -1,0 +1,42 @@
+[
+  {
+    "alarm_id": "alarm1",
+    "user_id": "user1",
+    "title": "Wake Up",
+    "time": "07:00:00",
+    "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "active": true,
+    "sound": "default",
+    "device_endpoint": "10"
+  },
+  {
+    "alarm_id": "alarm2",
+    "user_id": "user1",
+    "title": "Gym Time",
+    "time": "18:00:00",
+    "days": ["monday", "wednesday", "friday"],
+    "active": true,
+    "sound": "energetic",
+    "device_endpoint": "4"
+  },
+  {
+    "alarm_id": "alarm3",
+    "user_id": "user2",
+    "title": "Medication",
+    "time": "12:30:00",
+    "days": ["monday", "wednesday", "friday"],
+    "active": true,
+    "sound": "gentle",
+    "device_endpoint": null
+  },
+  {
+    "alarm_id": "alarm4",
+    "user_id": "user2",
+    "title": "Meeting Prep",
+    "time": "08:45:00",
+    "days": ["monday", "tuesday", "wednesday", "thursday", "friday"],
+    "active": true,
+    "sound": "chimes",
+    "device_endpoint": "9"
+  }
+]

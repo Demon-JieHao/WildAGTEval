@@ -1,0 +1,27 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user10_scenario7_RestaurantDelivery_only_TurnLevelTF_Turn1_Step0_get_restaurant_menu.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user10_scenario7_RestaurantDelivery_only_TurnLevelTF_Turn1_Step0_get_restaurant_menu.json
+   User: user10
+   Domain: unknown
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I want to see what's available at the resturant
+   Expected:
+     🔍 get_restaurant_menu({"restaurant_id":"rest4"})
+   Actual:
+     🔍 get_restaurant_menu({"restaurant_id":"rest4"})
+
+   Turn 2: ✅
+   Query: Can you order Loaded Nachos and BBQ Ribs from The Burger Joint and deliver to 3497 Broadway, Dallas, TX 75246?
+   Expected:
+     🔄 place_delivery_order({"restaurant_id":"rest4","items":[{"item_id":"item1","quantity":1},{"item_id":"item6","quantity":1}],"delivery_address":{"street":"3497 Broadway","city":"Dallas","state":"TX","zip":"75246"}})
+   Actual:
+     🔄 place_delivery_order({"restaurant_id":"rest4","items":[{"item_id":"item1","quantity":1},{"item_id":"item6","quantity":1}],"delivery_address":{"street":"3497 Broadway","city":"Dallas","state":"TX","zip":"75246"}})

@@ -1,0 +1,40 @@
+name: "Informational Notice"
+description: "Enable INFORMATIONAL_NOTICE uncertainties - tests LLM handling of additional context"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: false
+    apis: []
+    
+  INFORMATIONAL_NOTICE:
+    enabled: true
+    apis:
+      - color_set
+      - create_meal_plan
+      - get_media_details
+      - get_notifications
+      - make_call
+      - search_media
+      - temperature_set
+      - stock_watchlist
+
+  ADHOC:
+    enabled: true
+    apis:
+      - track_order
+      - lock_lock
+      - lock_unlock
+      - color_set
+      - get_call_history
+      - make_call
+      - play
+      - stock_price
+      
+metadata:
+  total_uncertainties: 8
+  creation_date: "2025-07-09"
+  use_case: "Test LLM ability to handle extra informational context gracefully"

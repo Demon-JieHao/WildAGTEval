@@ -1,0 +1,33 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user1_scenario8_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user1_scenario8_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+   User: user1
+   Domain: smarthome
+   Status: ❌ FAIL
+   Total Turns: 1
+   Successful Turns: 0
+   Turn Success Rate: 0.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 3
+   Query Warnings: 0
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ❌
+   Query: Call the person I last spoke with
+   Expected:
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["17"]})
+     🔄 make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+   Actual:
+     🔍 find_call_device({})
+     🔍 find_contact({"query":"Ashley Scott","search_type":"name"})
+     🔄 power_on({"endpoints":["17"]})
+     🔄 make_call({"phone_number":"+18164618624","call_type":"audio","device_endpoint":"17"})
+   Failure: Missing side-effect APIs: make_call; Incorrect side-effect APIs: make_call (ad-hoc: 2 consecutive failures); Extra side-effect APIs: make_call
+   Missing Side-Effects: make_call
+   Incorrect Side-Effects: make_call (ad-hoc: 2 consecutive failures)
+   Extra Side-Effects: make_call

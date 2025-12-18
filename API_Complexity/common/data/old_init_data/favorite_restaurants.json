@@ -1,0 +1,22 @@
+[
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest1",
+    "date_added": "2025-05-28T18:45:00Z"
+  },
+  {
+    "user_id": "user1",
+    "restaurant_id": "rest4",
+    "date_added": "2025-06-03T20:15:00Z"
+  },
+  {
+    "user_id": "user2",
+    "restaurant_id": "rest2",
+    "date_added": "2025-05-30T19:20:00Z"
+  },
+  {
+    "user_id": "user2",
+    "restaurant_id": "rest3",
+    "date_added": "2025-06-09T12:50:00Z"
+  }
+]

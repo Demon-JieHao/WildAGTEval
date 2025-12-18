@@ -1,0 +1,20 @@
+name: "No Uncertainties"
+description: "Clean evaluation without any uncertainties - baseline configuration"
+
+uncertainties:
+  FEATURE_LIMITATION_ERROR:
+    enabled: false
+    apis: []
+    
+  PARTIALLY_IRRELEVANT_INFORMATION:
+    enabled: false
+    apis: []
+    
+  INFORMATIONAL_NOTICE:
+    enabled: false
+    apis: []
+
+metadata:
+  total_uncertainties: 0
+  creation_date: "2025-07-09"
+  use_case: "Baseline evaluation without uncertainty complications"

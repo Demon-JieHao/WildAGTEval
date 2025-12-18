@@ -1,0 +1,63 @@
+[
+  {
+    "id": "playlist1",
+    "title": "Workout Mix",
+    "user_id": "user1",
+    "type": "playlist",
+    "items": [
+      "song1",
+      "song2"
+    ]
+  },
+  {
+    "id": "playlist2",
+    "title": "Relaxing Evening",
+    "user_id": "user2",
+    "type": "playlist",
+    "items": [
+      "song2",
+      "song1"
+    ]
+  },
+  {
+    "id": "playlist3",
+    "title": "My Rock Collection", 
+    "user_id": "user1",
+    "type": "playlist",
+    "items": [
+      "song1",
+      "song2"
+    ]
+  },
+  {
+    "id": "playlist4",
+    "title": "My Rock Collection",
+    "user_id": "user1",
+    "type": "playlist",
+    "items": [
+      "song1",
+      "song2"
+    ]
+  },
+  {
+    "id": "playlist5",
+    "title": "My Rock Collection",
+    "user_id": "user1",
+    "type": "playlist",
+    "items": [
+      "song1",
+      "song2"
+    ]
+  },
+  {
+    "id": "playlist6",
+    "title": "Test Playlist V2",
+    "user_id": "user1",
+    "type": "playlist",
+    "items": [
+      "song1",
+      "song2",
+      "song3"
+    ]
+  }
+]

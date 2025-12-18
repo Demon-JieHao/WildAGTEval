@@ -1,0 +1,150 @@
+Namespace(jsonl_file='/home/dykim2/Rag/camel_synthetic_api/API_NoComplexity/atomic_conversation_units/success_conversations/Combined/Conv_user1_DailyInvestmentMonitor_scenario4.jsonl', model_type='claude', model='None', base_url=None, api_key=None, output='/home/dykim2/Rag/camel_synthetic_api/results/Combined/claude37_no_think_none_none_s0/Conv_user1_DailyInvestmentMonitor_scenario4_test_result.json', max_steps=15, timeout=130.0, model_id='anthropic.claude-3-7-sonnet-20250219-v1:0', enable_thinking=False, prompt_path='extracted_api/centralized_prompt.md', uncertainty_config='uncertainty_configs/none.yaml', teacher_forcing=False, turn_level_tf=False, target_functions_config=None, use_litellm=False, verbose=True)
+================================================================================
+===================== Step-by-Step LLM API Evaluation Tool =====================
+================================================================================
+
+Initializing step-by-step evaluator...
+Model Type: claude
+Warning: BEDROCK_ACCESS_KEY or BEDROCK_SECRET_ACCESS_KEY environment variables not set.
+Using default AWS credential providers.
+✅ Using Claude Bedrock client (AWS Anthropic)
+📝 Loading custom prompt from: extracted_api/centralized_prompt.md
+  ✓ SmartHomeEnv loaded and registered
+  ✓ InformationControlEnv loaded and registered
+  ✓ MediaControlEnv loaded and registered
+  ✓ TransactionEnv loaded and registered
+  ✓ CulinaryControlEnv loaded and registered
+  ✓ CommunicationController loaded and registered
+  ✓ TimeNotificationEnv loaded and registered
+Successfully loaded and registered 7 API environments
+✅ Loaded uncertainty config: uncertainty_configs/none.yaml
+🎯 Uncertainty Configuration: No Uncertainties
+📝 Description: Clean evaluation without any uncertainties - baseline configuration
+📁 Config Path: uncertainty_configs/none.yaml
+
+📊 Statistics:
+   Total APIs with uncertainties: 0
+   Total active environment variables: 0
+
+🔧 Enabled Uncertainty Types:
+🤖 Using custom model: anthropic.claude-3-7-sonnet-20250219-v1:0
+📝 Custom prompt: extracted_api/centralized_prompt.md
+Model: anthropic.claude-3-7-sonnet-20250219-v1:0
+Max steps per query: 15
+Step timeout: 130.0s
+🔄 Using Auto-regressive evaluation mode
+
+Evaluating JSONL file with step-by-step inference: /home/dykim2/Rag/camel_synthetic_api/API_NoComplexity/atomic_conversation_units/success_conversations/Combined/Conv_user1_DailyInvestmentMonitor_scenario4.jsonl
+Extracted user ID: user1
+  ✓ Set user user1 for SmartHomeEnv
+  ✓ Set user user1 for InformationControlEnv
+  ✓ Set user user1 for MediaControlEnv
+  ✓ Set user user1 for TransactionEnv
+  ✓ Set user user1 for CulinaryControlEnv
+  ✓ Set user user1 for CommunicationController
+  ✓ Set user user1 for TimeNotificationEnv
+📚 Using cumulative conversation history across queries
+
+  Query 1: I'm wondering about Following my routine What's the status o...
+  🔄 Step-by-step inference for: I'm wondering about Following my routine What's th...
+    Step 1: Reasoning...
+    🔄 Executing API: stock_watchlist
+    ✅ API result: {"success": true, "watchlist": ["AAPL", "GOOGL"], "stocks": [{"symbol": "AAPL", "data": {"symbol": "...
+    Step 2: Reasoning...
+    ✅ Task completed: End of Turn detected
+
+  Query 2: I should assess Just a regular check since things are stable...
+  🔄 Step-by-step inference for: I should assess Just a regular check since things ...
+    Step 1: Reasoning...
+    🔄 Executing API: get_user_inventory
+    ✅ API result: {"success": true, "user_id": "user1", "name": "Sarah Rodriguez", "home_id": "home1", "current_space"...
+    Step 2: Reasoning...
+    🔄 Executing API: get_device_details
+    ✅ API result: {"success": true, "device": {"endpoint": "10", "name": "Master Bedroom Light", "alternate_names": ["...
+    Step 3: Reasoning...
+    🔄 Executing API: power_on
+    ✅ API result: {"success": true, "results": [{"endpoint": "10", "name": "Master Bedroom Light", "success": true, "m...
+    Step 4: Reasoning...
+    🔄 Executing API: color_set
+    ✅ API result: {"success": true, "results": [{"endpoint": "10", "name": "Master Bedroom Light", "success": true, "m...
+    Step 5: Reasoning...
+    ✅ Task completed: End of Turn detected
+
+  Query 3: With complete focus set comfortable temperature to 21°C Plea...
+  🔄 Step-by-step inference for: With complete focus set comfortable temperature to...
+    Step 1: Reasoning...
+    🔄 Executing API: get_device_details
+    ✅ API result: {"success": true, "device": {"endpoint": "5A", "name": "Thermostat", "alternate_names": ["Temperatur...
+    Step 2: Reasoning...
+    🔄 Executing API: temperature_set
+    ✅ API result: {"success": true, "results": [{"endpoint": "5A", "name": "Thermostat", "success": true, "message": "...
+    Step 3: Reasoning...
+    ✅ Task completed: End of Turn detected
+
+  Query 4: Thinking long-term play some relaxing music Please play Moun...
+  🔄 Step-by-step inference for: Thinking long-term play some relaxing music Please...
+    Step 1: Reasoning...
+    🔄 Executing API: search_media
+    ✅ API result: {"success": true, "count": 1, "results": [{"id": "song173", "title": "Mountain River", "type": "song...
+    Step 2: Reasoning...
+    🔄 Executing API: power_on
+    ✅ API result: {"success": true, "results": [{"endpoint": "7", "name": "Bedroom Speaker", "success": true, "message...
+    Step 3: Reasoning...
+    🔄 Executing API: play
+    ✅ API result: {"success": true, "results": [{"endpoint": "7", "name": "Bedroom Speaker", "success": true, "message...
+    Step 4: Reasoning...
+    ✅ Task completed: End of Turn detected
+
+============================================================
+============= STEP-BY-STEP EVALUATION SUMMARY ==============
+============================================================
+File: Conv_user1_DailyInvestmentMonitor_scenario4.jsonl
+User ID: user1
+Total Queries: 4
+Successful Queries: 3
+Success Rate: 75.00%
+Overall Score: 85.83%
+
+Uncertainty Configuration:
+  Config: No Uncertainties
+  Description: Clean evaluation without any uncertainties - baseline configuration
+  APIs with Uncertainties: 0
+  Total Environment Variables: 0
+
+Step-by-Step Metrics:
+  Total Steps: 14
+  Total API Steps: 10
+  Avg Steps per Query: 3.5
+  Avg API Steps per Query: 2.5
+  Step Efficiency: 80.42%
+
+============================================================
+===================== DETAILED RESULTS =====================
+============================================================
+
+Query 1: I'm wondering about Following my routine What's the status o...
+  ✓ Success
+  Steps: 2
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query 2: I should assess Just a regular check since things are stable...
+  ✓ Success
+  Steps: 5
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query 3: With complete focus set comfortable temperature to 21°C Plea...
+  ✓ Success
+  Steps: 3
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query 4: Thinking long-term play some relaxing music Please play Moun...
+  ✗ Failed
+  Steps: 4
+  API Coverage: 60.00%
+  Task Completed: True
+
+Results saved to: /home/dykim2/Rag/camel_synthetic_api/results/Combined/claude37_no_think_none_none_s0/Conv_user1_DailyInvestmentMonitor_scenario4_test_result.json
+================================================================================

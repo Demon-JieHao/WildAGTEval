@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user6_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user6_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='American', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='American', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe33')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe33')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"cooking_time\": 55, \"servings\": 2, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"eggs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"potatoes\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"1 large\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 540, \"protein\": 24, \"carbs\": 54, \"fat\": 20}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"reviews_count\": 447, \"image_url\": \"https://example.com/images/meatloaf.jpg\", \"tags\": [\"vegetarian\", \"american\", \"dessert\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Meatloaf - A delicious american dish that's perfect for easy cooks.... (26 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe36')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe36')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"description\": \"A delicious american dish that's perfect for medium cooks.\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"cooking_time\": 19, \"servings\": 2, \"ingredients\": [{\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1 tbsp\"}, {\"name\": \"chicken\", \"quantity\": \"1.5 lbs\", \"notes\": \"thighs\"}, {\"name\": \"onions\", \"quantity\": \"2 large\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\", \"notes\": \"dried\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add seasonings and adjust to taste.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 496, \"protein\": 19, \"carbs\": 69, \"fat\": 14}, \"dietary_info\": [], \"rating\": 4.0, \"reviews_count\": 475, \"image_url\": \"https://example.com/images/chocolate_chip_cookies.jpg\", \"tags\": [\"party-food\", \"american\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chocolate Chip Cookies - A delicious american dish that's perfect for medium cooks.... (27 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe33')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe33')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Meatloaf' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe33\", \"recipe_name\": \"Meatloaf\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe36')",
+      "after": "invoke_tool(\"save_favorite_recipe\", recipe_id='recipe36')",
+      "execution_result": "{\"success\": true, \"message\": \"Recipe 'Chocolate Chip Cookies' has been added to favorites\", \"already_favorite\": false, \"recipe_id\": \"recipe36\", \"recipe_name\": \"Chocolate Chip Cookies\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Italian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Italian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Italian\"], \"results\": [{\"restaurant_id\": \"rest24\", \"name\": \"Roma Restaurant\", \"location\": \"4666 Maple Ave, Los Angeles, CA 79956\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$$$\", \"rating\": 4.6, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest9\", \"name\": \"Casa Italiana\", \"location\": \"2756 Franklin St, Miami, FL 28539\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest15\", \"name\": \"Villa Romano\", \"location\": \"5998 Elm St, Houston, TX 11156\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest25\", \"name\": \"La Trattoria\", \"location\": \"5734 Elm St, Houston, TX 24211\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 9}, {\"restaurant_id\": \"rest6\", \"name\": \"Amore Cucina\", \"location\": \"8041 Broadway, Dallas, TX 42021\", \"cuisine_types\": [\"Italian\"], \"price_range\": \"$\", \"rating\": 4.3, \"delivery_available\": true, \"menu_item_count\": 9}], \"message\": \"Found 5 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest24')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest24')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Roma Restaurant\", \"restaurant_id\": \"rest24\", \"restaurant_name\": \"Roma Restaurant\", \"description\": \"Elegant italian cuisine in an upscale atmosphere\", \"price_range\": \"$$$$\", \"rating\": 4.6, \"cuisine_types\": [\"Italian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Calamari Fritti\", \"description\": \"Crispy fried squid with marinara sauce\", \"price\": 13.69, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Bruschetta\", \"description\": \"Toasted bread with tomatoes and basil\", \"price\": 9.58, \"category\": \"Appetizers\", \"dietary_info\": [\"vegan\"], \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Caprese Salad\", \"description\": \"Fresh mozzarella, tomatoes, and basil\", \"price\": 10.74, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"description\": \"Selection of cured meats and cheeses\", \"price\": 15.16, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Chicken Parmigiana\", \"description\": \"Breaded chicken breast with marinara\", \"price\": 20.52, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Spaghetti Carbonara\", \"description\": \"Classic pasta with pancetta and egg\", \"price\": 19.93, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Margherita Pizza\", \"description\": \"Classic pizza with tomato and mozzarella\", \"price\": 15.49, \"category\": \"Main Course\"}, {\"item_id\": \"item8\", \"name\": \"Osso Buco\", \"description\": \"Braised veal shanks with risotto\", \"price\": 30.82, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Lasagna\", \"description\": \"Layered pasta with meat sauce and cheese\", \"price\": 19.34, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest24', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '3903 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75254'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest24', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '3903 Broadway', 'city': 'Dallas', 'state': 'TX', 'zip': '75254'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"order_time\": \"2025-08-20T00:09:34Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 19.93, \"tax\": 1.74, \"delivery_fee\": 5.99, \"tip\": 2.99, \"total\": 30.65, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:09:34Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

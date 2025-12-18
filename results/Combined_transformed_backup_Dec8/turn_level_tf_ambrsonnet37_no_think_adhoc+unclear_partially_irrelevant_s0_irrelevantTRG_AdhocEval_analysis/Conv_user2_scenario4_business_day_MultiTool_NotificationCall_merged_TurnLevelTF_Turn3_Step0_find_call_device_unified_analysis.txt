@@ -1,0 +1,29 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user2_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user2_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+   User: user2
+   Domain: smarthome
+   Status: ❌ FAIL
+   Total Turns: 1
+   Successful Turns: 0
+   Turn Success Rate: 0.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 3
+   Query Warnings: 0
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ❌
+   Query: Call the last person I talked to
+   Expected:
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["17"]})
+     🔄 make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+   Actual:
+     🔍 find_call_device({})
+     🔍 get_call_history({"time_range":"P10W","limit":1})
+   Failure: Missing side-effect APIs: power_on, make_call, make_call
+   Missing Side-Effects: power_on, make_call, make_call

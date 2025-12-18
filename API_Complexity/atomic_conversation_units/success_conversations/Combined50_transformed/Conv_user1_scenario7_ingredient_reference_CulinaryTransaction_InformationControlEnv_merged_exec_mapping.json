@@ -1,0 +1,134 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined50/Conv_user1_scenario7_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined50_transformed/Conv_user1_scenario7_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 18,
+  "successful_transforms": 18,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Indian', limit=10)",
+      "after": "invoke_tool(\"search_recipes\", sort_by='rating', cuisine='Indian', limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Indian\"], \"results\": [{\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"]}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"search_product\", query='turmeric', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='turmeric', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"price\": 3.19, \"category\": \"food_ingredients\", \"stock\": 97}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='yogurt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='yogurt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"price\": 6.17, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod133\", \"name\": \"Salt\", \"price\": 4.03, \"category\": \"food_ingredients\", \"stock\": 150}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod158', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod158', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod158\", \"name\": \"Turmeric\", \"quantity\": 1, \"price\": 3.19}, \"cart_total\": 3.19, \"message\": \"Added 1 x 'Turmeric' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 8.69, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod140', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod140', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod140\", \"name\": \"Yogurt\", \"quantity\": 1, \"price\": 6.17}, \"cart_total\": 14.86, \"message\": \"Added 1 x 'Yogurt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 18.0, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 24.6, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 26.72, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod133\", \"name\": \"Salt\", \"quantity\": 1, \"price\": 4.03}, \"cart_total\": 30.75, \"message\": \"Added 1 x 'Salt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"stock_watchlist\", )",
+      "after": "invoke_tool(\"stock_watchlist\", )",
+      "execution_result": "{\"success\": true, \"watchlist\": [\"AAPL\", \"GOOGL\"], \"stocks\": [{\"symbol\": \"AAPL\", \"data\": {\"symbol\": \"AAPL\", \"name\": \"Apple Inc.\", \"price\": 167.88, \"change\": -0.4, \"change_percent\": -0.24}, \"formatted\": \"AAPL: $167.88 (-0.4 / -0.24%)\"}, {\"symbol\": \"GOOGL\", \"data\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\"}], \"summary\": {\"total_symbols\": 2, \"total_value\": 1206.87, \"total_change\": 46.35}, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"stock_price\", symbol='GOOGL')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:GOOGL')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"stock_price\", symbol='AAPL')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:AAPL')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"AAPL\", \"name\": \"Apple Inc.\", \"price\": 167.88, \"change\": -0.4, \"change_percent\": -0.24}, \"formatted\": \"AAPL: $167.88 (-0.4 / -0.24%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

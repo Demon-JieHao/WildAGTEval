@@ -1,0 +1,71 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user9_scenario7_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user9_scenario7_planning_CulinaryControlEnv_RestaurantDelivery_merged_exec.py",
+  "total_transforms": 9,
+  "successful_transforms": 9,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"create_meal_plan\", name='Nutritious Meal Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner'])",
+      "after": "invoke_tool(\"create_meal_plan\", name='Nutritious Meal Plan', start_date='2025-07-17', end_date='2025-07-23', meals_per_day=['breakfast', 'lunch', 'dinner'])",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"name\": \"Nutritious Meal Plan\", \"start_date\": \"2025-07-17\", \"end_date\": \"2025-07-23\", \"meals_per_day\": [\"breakfast\", \"lunch\", \"dinner\"], \"days_count\": 7, \"message\": \"Meal plan 'Nutritious Meal Plan' created successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=3)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='dinner', count=3)",
+      "execution_result": "{\"success\": true, \"count\": 3, \"suggestions\": [{\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"dietary_info\": [], \"rating\": 3.9, \"is_favorite\": false}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.3, \"is_favorite\": false}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for dinner\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe3', day='2025-07-21', meal_type='dinner')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe3', day='2025-07-21', meal_type='dinner')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-21\", \"meal_type\": \"dinner\", \"recipe_id\": \"recipe3\", \"recipe_name\": \"Bouillabaisse\", \"message\": \"Added Bouillabaisse to dinner on 2025-07-21\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"get_meal_suggestions\", meal_type='lunch', count=2)",
+      "after": "invoke_tool(\"get_meal_suggestions\", meal_type='lunch', count=2)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"suggestions\": [{\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"dietary_info\": [], \"rating\": 4.0, \"is_favorite\": false}, {\"recipe_id\": \"recipe27\", \"name\": \"Sushi Burrito\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 45, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"is_favorite\": false}], \"dietary_info\": [], \"user_preferences_applied\": true, \"message\": \"Suggested recipes for lunch\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe8', day='2025-07-22', meal_type='lunch')",
+      "after": "invoke_tool(\"schedule_meal\", plan_id='plan24', recipe_id='recipe8', day='2025-07-22', meal_type='lunch')",
+      "execution_result": "{\"success\": true, \"plan_id\": \"plan24\", \"day\": \"2025-07-22\", \"meal_type\": \"lunch\", \"recipe_id\": \"recipe8\", \"recipe_name\": \"Tom Yum Soup\", \"message\": \"Added Tom Yum Soup to lunch on 2025-07-22\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "after": "invoke_tool(\"search_restaurants\", cuisine_type='Indian', sort_by='rating', limit=5)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"cuisines\": [\"Indian\"], \"results\": [{\"restaurant_id\": \"rest8\", \"name\": \"Taj Mahal\", \"location\": \"3765 Franklin St, Miami, FL 90741\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$\", \"rating\": 4.5, \"delivery_available\": true, \"menu_item_count\": 6}, {\"restaurant_id\": \"rest7\", \"name\": \"Delhi Garden\", \"location\": \"6354 Market St, New York, NY 47345\", \"cuisine_types\": [\"Indian\"], \"price_range\": \"$$$\", \"rating\": 4.0, \"delivery_available\": true, \"menu_item_count\": 6}], \"message\": \"Found 2 restaurant(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "after": "invoke_tool(\"get_restaurant_menu\", restaurant_id='rest8')",
+      "execution_result": "{\"success\": true, \"message\": \"Retrieved menu for Taj Mahal\", \"restaurant_id\": \"rest8\", \"restaurant_name\": \"Taj Mahal\", \"description\": \"Authentic indian cuisine with traditional flavors\", \"price_range\": \"$$\", \"rating\": 4.5, \"cuisine_types\": [\"Indian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"description\": \"Mixed greens with house dressing\", \"price\": 10.0, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Soup of the Day\", \"description\": \"Chef's daily soup selection\", \"price\": 9.48, \"category\": \"Appetizers\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Bread Basket\", \"description\": \"Assorted breads with butter\", \"price\": 6.56, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"description\": \"Seasoned chicken breast with vegetables\", \"price\": 18.99, \"category\": \"Main Course\"}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"description\": \"Fresh salmon with lemon herb sauce\", \"price\": 24.43, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"description\": \"Grilled steak with choice of sides\", \"price\": 34.13, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '4094 Oak Ave', 'city': 'Chicago', 'state': 'IL', 'zip': '60687'})",
+      "after": "invoke_tool(\"place_delivery_order\", restaurant_id='rest8', items=[{'item_id': 'item6', 'quantity': 1}], delivery_address={'street': '4094 Oak Ave', 'city': 'Chicago', 'state': 'IL', 'zip': '60687'})",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"order_time\": \"2025-08-20T00:11:48Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 34.13, \"tax\": 2.99, \"delivery_fee\": 5.99, \"tip\": 5.12, \"total\": 48.23, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "after": "invoke_tool(\"track_delivery_order\", order_id='dorder1')",
+      "execution_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Taj Mahal\", \"status\": \"placed\", \"status_message\": \"Order has been placed and is pending restaurant confirmation.\", \"progress_percentage\": 10, \"status_history\": [{\"status\": \"placed\", \"timestamp\": \"2025-08-20T00:11:48Z\"}], \"estimated_delivery_time\": \"\", \"driver_info\": null, \"message\": \"Tracked order dorder1: Order has been placed and is pending restaurant confirmation.\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

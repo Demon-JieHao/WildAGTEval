@@ -1,0 +1,36 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user9_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user9_TransactionEnv_shopping_batch_scenario4_orders_exec.py",
+  "total_transforms": 4,
+  "successful_transforms": 4,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"get_order_history\", limit=10)",
+      "after": "invoke_tool(\"get_order_history\", limit=10)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"orders\": [{\"order_id\": \"ORD0074\", \"created_at\": \"2025-06-12T22:57:25.711718Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"FedEx\"}, {\"order_id\": \"ON0055\", \"created_at\": \"2025-06-07T13:15:25.711234Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"UPS\"}, {\"order_id\": \"ORDER0043\", \"created_at\": \"2025-06-06T20:27:25.710956Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"UPS\"}, {\"order_id\": \"ORDER0067\", \"created_at\": \"2025-06-05T07:21:25.711546Z\", \"total\": null, \"items_count\": 1, \"carrier\": \"DHL\"}, {\"order_id\": \"ORD0020\", \"created_at\": \"2025-06-01T07:13:25.710317Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0032\", \"created_at\": \"2025-05-25T12:21:25.710667Z\", \"total\": null, \"items_count\": 4, \"carrier\": \"UPS\"}, {\"order_id\": \"ORD0018\", \"created_at\": \"2025-05-22T19:07:25.710274Z\", \"total\": null, \"items_count\": 2, \"carrier\": \"OnTrac\"}], \"message\": \"Found 7 order(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_order_details\", order_id='ORDER0043')",
+      "after": "invoke_tool(\"get_order_details\", order_id='ORDER0043')",
+      "execution_result": "{\"success\": true, \"order\": {\"order_id\": \"ORDER0043\", \"user_id\": \"user9\", \"items\": [{\"product_id\": \"prod50\", \"name\": \"Quick Blender Pro\", \"quantity\": 1, \"price\": 499.99, \"subtotal\": 499.99}, {\"product_id\": \"prod61\", \"name\": \"Master Humidifier\", \"quantity\": 2, \"price\": 214.99, \"subtotal\": 429.98}], \"totals\": {\"subtotal\": 929.97, \"tax\": 103.79, \"shipping\": 0.0, \"processing_fee\": 0.0, \"total\": 1033.76}, \"payment\": {\"method_id\": \"pm2\", \"method_type\": \"debit_card\", \"last4\": \"3736\", \"amount\": 1033.76, \"currency\": \"USD\", \"transaction_id\": \"tx302961\", \"status\": \"cancelled\"}, \"created_at\": \"2025-06-06T20:27:25.710956Z\", \"notes\": \"\"}, \"message\": \"Retrieved details for order ORDER0043\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"track_order\", order_id='ORDER0043')",
+      "after": "invoke_tool(\"track_order\", order_id='UPS-DER0043')",
+      "execution_result": "{\"success\": true, \"tracking\": {\"order_id\": \"UPS-DER0043\", \"status\": \"unknown\", \"message\": \"Tracking information is not available for this order.\"}, \"message\": \"Unable to retrieve detailed tracking information.\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod61', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod61', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod61\", \"name\": \"Master Humidifier\", \"quantity\": 1, \"price\": 214.99}, \"cart_total\": 950.67, \"message\": \"Added 1 x 'Master Humidifier' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

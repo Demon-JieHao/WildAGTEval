@@ -1,0 +1,197 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user2_scenario4_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario4_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 27,
+  "successful_transforms": 27,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", cuisine='American', limit=5, sort_by='rating')",
+      "after": "invoke_tool(\"search_recipes\", cuisine='American', limit=5, sort_by='rating')",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod127\", \"name\": \"Butter\", \"price\": 5.08, \"category\": \"food_ingredients\", \"stock\": 167}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='bacon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='bacon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod147\", \"name\": \"Bacon\", \"price\": 7.01, \"category\": \"food_ingredients\", \"stock\": 123}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='potatoes', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='potatoes', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod146\", \"name\": \"Potatoes\", \"price\": 2.57, \"category\": \"food_ingredients\", \"stock\": 121}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"price\": 8.87, \"category\": \"food_ingredients\", \"stock\": 180}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod129\", \"name\": \"Pepper\", \"price\": 3.87, \"category\": \"food_ingredients\", \"stock\": 160}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod133\", \"name\": \"Salt\", \"price\": 4.03, \"category\": \"food_ingredients\", \"stock\": 150}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod132\", \"name\": \"Wine\", \"price\": 6.73, \"category\": \"food_ingredients\", \"stock\": 187}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod127\", \"name\": \"Butter\", \"quantity\": 1, \"price\": 5.08}, \"cart_total\": 885.07, \"message\": \"Added 1 x 'Butter' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod147', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod147', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod147\", \"name\": \"Bacon\", \"quantity\": 1, \"price\": 7.01}, \"cart_total\": 892.08, \"message\": \"Added 1 x 'Bacon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 897.58, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod146', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod146', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod146\", \"name\": \"Potatoes\", \"quantity\": 1, \"price\": 2.57}, \"cart_total\": 900.15, \"message\": \"Added 1 x 'Potatoes' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 903.29, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 19,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 905.41, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 20,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"quantity\": 1, \"price\": 8.87}, \"cart_total\": 914.28, \"message\": \"Added 1 x 'Vinegar' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 21,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod129\", \"name\": \"Pepper\", \"quantity\": 1, \"price\": 3.87}, \"cart_total\": 918.15, \"message\": \"Added 1 x 'Pepper' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 22,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 924.75, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 23,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod133\", \"name\": \"Salt\", \"quantity\": 1, \"price\": 4.03}, \"cart_total\": 928.78, \"message\": \"Added 1 x 'Salt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 24,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod132\", \"name\": \"Wine\", \"quantity\": 1, \"price\": 6.73}, \"cart_total\": 935.51, \"message\": \"Added 1 x 'Wine' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 25,
+      "before": "invoke_tool(\"news_by_category\", category='science', limit=5)",
+      "after": "invoke_tool(\"news_by_category\", category='science', limit=5)",
+      "execution_result": "{\"success\": true, \"category\": \"science\", \"count\": 5, \"news\": [{\"title\": \"Clinical Trial Shows Global Promise\", \"source\": \"Nature\", \"timestamp\": \"2025-06-16T15:01:54Z\", \"category\": \"science\"}, {\"title\": \"Nobel Prize Awarded for Major Research\", \"source\": \"Scientific American\", \"timestamp\": \"2025-06-15T10:11:51Z\", \"category\": \"science\"}, {\"title\": \"Scientists Discover New Digital Phenomenon\", \"source\": \"Nature\", \"timestamp\": \"2025-06-14T11:46:43Z\", \"category\": \"science\"}, {\"title\": \"Nobel Prize Awarded for New Research\", \"source\": \"NASA News\", \"timestamp\": \"2025-06-14T09:07:11Z\", \"category\": \"science\"}, {\"title\": \"Study Reveals New Benefits\", \"source\": \"New Scientist\", \"timestamp\": \"2025-06-13T16:11:54Z\", \"category\": \"science\"}], \"formatted\": \"\\u2022 Clinical Trial Shows Global Promise (Nature)\\n\\u2022 Nobel Prize Awarded for Major Research (Scientific American)\\n\\u2022 Scientists Discover New Digital Phenomenon (Nature)\\n\\u2022 Nobel Prize Awarded for New Research (NASA News)\\n\\u2022 Study Reveals New Benefits (New Scientist)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 26,
+      "before": "invoke_tool(\"news_personalized\", limit=8)",
+      "after": "invoke_tool(\"news_personalized\", limit=8)",
+      "execution_result": "{\"success\": true, \"preferred_categories\": [\"technology\", \"business\"], \"count\": 8, \"news\": [{\"title\": \"New Industry Faces New Challenges\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-17T08:16:23Z\", \"category\": \"business\"}, {\"title\": \"Industry Leaders Discuss Advanced Future\", \"source\": \"TechCrunch\", \"timestamp\": \"2025-06-17T07:44:41Z\", \"category\": \"technology\"}, {\"title\": \"Revolutionary Major Technology Announced\", \"source\": \"The Verge\", \"timestamp\": \"2025-06-17T05:24:37Z\", \"category\": \"technology\"}, {\"title\": \"Revolutionary AI Technology Announced\", \"source\": \"TechCrunch\", \"timestamp\": \"2025-06-17T00:30:32Z\", \"category\": \"technology\"}, {\"title\": \"Economic Major Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T21:44:48Z\", \"category\": \"business\"}, {\"title\": \"Economic Digital Indicators Show Growth\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-16T18:55:39Z\", \"category\": \"business\"}, {\"title\": \"Inflation Global Trends Continue\", \"source\": \"Financial Times\", \"timestamp\": \"2025-06-16T09:56:06Z\", \"category\": \"business\"}, {\"title\": \"Security Concerns Raised Over Digital\", \"source\": \"The Verge\", \"timestamp\": \"2025-06-16T06:01:01Z\", \"category\": \"technology\"}], \"formatted\": \"\\u2022 New Industry Faces New Challenges (CNBC)\\n\\u2022 Industry Leaders Discuss Advanced Future (TechCrunch)\\n\\u2022 Revolutionary Major Technology Announced (The Verge)\\n\\u2022 Revolutionary AI Technology Announced (TechCrunch)\\n\\u2022 Economic Major Indicators Show Growth (Reuters)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 27,
+      "before": "invoke_tool(\"news_latest\", limit=7)",
+      "after": "invoke_tool(\"news_latest\", limit=7)",
+      "execution_result": "{\"success\": true, \"count\": 7, \"news\": [{\"title\": \"Cultural Global Event Celebrates Success\", \"source\": \"Variety\", \"timestamp\": \"2025-06-17T15:13:49Z\", \"category\": \"entertainment\"}, {\"title\": \"International Major Cooperation Strengthened\", \"source\": \"BBC News\", \"timestamp\": \"2025-06-17T11:27:41Z\", \"category\": \"world\"}, {\"title\": \"Major Negotiations Reach Agreement\", \"source\": \"Associated Press\", \"timestamp\": \"2025-06-17T10:37:02Z\", \"category\": \"world\"}, {\"title\": \"New Industry Faces New Challenges\", \"source\": \"CNBC\", \"timestamp\": \"2025-06-17T08:16:23Z\", \"category\": \"business\"}, {\"title\": \"Industry Leaders Discuss Advanced Future\", \"source\": \"TechCrunch\", \"timestamp\": \"2025-06-17T07:44:41Z\", \"category\": \"technology\"}, {\"title\": \"Revolutionary Major Technology Announced\", \"source\": \"The Verge\", \"timestamp\": \"2025-06-17T05:24:37Z\", \"category\": \"technology\"}, {\"title\": \"World Leaders Discuss Advanced Crisis\", \"source\": \"Reuters\", \"timestamp\": \"2025-06-17T02:53:36Z\", \"category\": \"world\"}], \"formatted\": \"\\u2022 Cultural Global Event Celebrates Success (Variety)\\n\\u2022 International Major Cooperation Strengthened (BBC News)\\n\\u2022 Major Negotiations Reach Agreement (Associated Press)\\n\\u2022 New Industry Faces New Challenges (CNBC)\\n\\u2022 Industry Leaders Discuss Advanced Future (TechCrunch)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

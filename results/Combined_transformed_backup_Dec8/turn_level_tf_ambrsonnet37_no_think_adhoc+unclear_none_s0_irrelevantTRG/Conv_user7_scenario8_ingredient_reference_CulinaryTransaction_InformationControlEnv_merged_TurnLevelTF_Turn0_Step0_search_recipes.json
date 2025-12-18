@@ -1,0 +1,462 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user7_scenario8_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "filename": "Conv_user7_scenario8_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "user_id": "user7",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.5,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 5.666666666666667
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Can you suggest top 10 American dishes?",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "rating",
+            "cuisine": "American",
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "rating",
+                "cuisine": "American",
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "rating",
+              "cuisine": "American",
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:42:50.571523",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found some popular American dishes, but I need to search for more to give you a complete top 10 list. Let me continue searching.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"American\",\n    \"limit\": 10,\n    \"sort_by\": \"rating\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found some popular American dishes, but I need to search for more to give you a complete top 10 list. Let me continue searching.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"American\",\n    \"limit\": 10,\n    \"sort_by\": \"rating\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "cuisine": "American",
+                "limit": 10,
+                "sort_by": "rating"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "cuisine": "American",
+              "limit": 10,
+              "sort_by": "rating"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:47:15.968482",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Based on my search, here are the top American dishes I found, ranked by rating:\n\n1. Smoked Chicken (Rating: 4.8)\n2. Philly Cheesesteak (Rating: 4.5)\n3. Meatloaf (Rating: 4.2)\n4. Chocolate Chip Cookies (Rating: 4.0)\n5. Pulled Pork (Rating: 3.9)\n\nI could only find these 5 American dishes in our recipe database. Would you like me to search for more dishes with different criteria or would you like details about any of these specific recipes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on my search, here are the top American dishes I found, ranked by rating:\n\n1. Smoked Chicken (Rating: 4.8)\n2. Philly Cheesesteak (Rating: 4.5)\n3. Meatloaf (Rating: 4.2)\n4. Chocolate Chip Cookies (Rating: 4.0)\n5. Pulled Pork (Rating: 3.9)\n\nI could only find these 5 American dishes in our recipe database. Would you like me to search for more dishes with different criteria or would you like details about any of these specific recipes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:47:38.006456",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T21:05:30.731290",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I need to shop for all the ingredients from this highest-rated recipe",
+      "expected_api_sequence": [
+        {
+          "api": "search_product",
+          "params": {
+            "query": "butter",
+            "limit": 1
+          },
+          "description": "Search for butter products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "bacon",
+            "limit": 1
+          },
+          "description": "Search for bacon products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "onions",
+            "limit": 1
+          },
+          "description": "Search for onions products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "potatoes",
+            "limit": 1
+          },
+          "description": "Search for potatoes products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "garlic",
+            "limit": 1
+          },
+          "description": "Search for garlic products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "lemon",
+            "limit": 1
+          },
+          "description": "Search for lemon products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "vinegar",
+            "limit": 1
+          },
+          "description": "Search for vinegar products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "pepper",
+            "limit": 1
+          },
+          "description": "Search for pepper products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "canola oil",
+            "limit": 1
+          },
+          "description": "Search for canola oil products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "salt",
+            "limit": 1
+          },
+          "description": "Search for salt products"
+        },
+        {
+          "api": "search_product",
+          "params": {
+            "query": "wine",
+            "limit": 1
+          },
+          "description": "Search for wine products"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod127",
+            "quantity": 1
+          },
+          "description": "Add Butter to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod147",
+            "quantity": 1
+          },
+          "description": "Add Bacon to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod126",
+            "quantity": 1
+          },
+          "description": "Add Onions to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod146",
+            "quantity": 1
+          },
+          "description": "Add Potatoes to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod125",
+            "quantity": 1
+          },
+          "description": "Add Garlic to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod130",
+            "quantity": 1
+          },
+          "description": "Add Lemon to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod131",
+            "quantity": 1
+          },
+          "description": "Add Vinegar to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod129",
+            "quantity": 1
+          },
+          "description": "Add Pepper to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod168",
+            "quantity": 1
+          },
+          "description": "Add canola oil to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod133",
+            "quantity": 1
+          },
+          "description": "Add Salt to cart"
+        },
+        {
+          "api": "add_to_cart",
+          "params": {
+            "product_id": "prod132",
+            "quantity": 1
+          },
+          "description": "Add Wine to cart"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll help you get the ingredients for the highest-rated American dish, which is Smoked Chicken. Let me first get the detailed recipe information so I can see what ingredients you'll need.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you get the ingredients for the highest-rated American dish, which is Smoked Chicken. Let me first get the detailed recipe information so I can see what ingredients you'll need.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe6"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 961.94389295578,
+          "timestamp": "2025-08-21T21:03:39.950394",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "butter",
+              "limit": 1
+            },
+            "description": "Search for butter products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Now I have the ingredients list for Smoked Chicken, the highest-rated American dish. Here's what you'll need to shop for:\n\n1. Butter (1/2 cup)\n2. Bacon (1/2 cup)\n3. Onions (1 medium)\n4. Potatoes (1/2 cup)\n5. Garlic (6 cloves)\n6. Lemon (1/2 cup)\n7. Vinegar (2 tbsp)\n8. Pepper (to taste)\n9. Canola oil (1/4 cup)\n10. Salt (to taste)\n11. Wine (1 cup)\n\nWould you like me to help you add these ingredients to your shopping cart?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Now I have the ingredients list for Smoked Chicken, the highest-rated American dish. Here's what you'll need to shop for:\n\n1. Butter (1/2 cup)\n2. Bacon (1/2 cup)\n3. Onions (1 medium)\n4. Potatoes (1/2 cup)\n5. Garlic (6 cloves)\n6. Lemon (1/2 cup)\n7. Vinegar (2 tbsp)\n8. Pepper (to taste)\n9. Canola oil (1/4 cup)\n10. Salt (to taste)\n11. Wine (1 cup)\n\nWould you like me to help you add these ingredients to your shopping cart?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 110.78027987480164,
+          "timestamp": "2025-08-21T21:05:30.730899",
+          "ground_truth_api": {
+            "api": "search_product",
+            "params": {
+              "query": "bacon",
+              "limit": 1
+            },
+            "description": "Search for bacon products"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 11.0,
+        "api_efficiency": 22.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:05:30.732474"
+}

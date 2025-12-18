@@ -1,0 +1,102 @@
+[
+  {
+    "product_id": "prod1",
+    "name": "Smart Speaker",
+    "description": "High-quality smart speaker with voice assistant integration",
+    "price": 99.99,
+    "category": "electronics",
+    "stock": 50,
+    "rating": 4.5,
+    "images": ["smart_speaker_1.jpg", "smart_speaker_2.jpg"]
+  },
+  {
+    "product_id": "prod2",
+    "name": "Smart Light Bulb",
+    "description": "Color changing smart light bulb compatible with all major ecosystems",
+    "price": 24.99,
+    "category": "smart_home",
+    "stock": 120,
+    "rating": 4.2,
+    "images": ["bulb_1.jpg", "bulb_2.jpg"]
+  },
+  {
+    "product_id": "prod3",
+    "name": "Smart Thermostat",
+    "description": "Energy-saving smart thermostat with learning capabilities",
+    "price": 129.99,
+    "category": "smart_home",
+    "stock": 35,
+    "rating": 4.7,
+    "images": ["thermostat_1.jpg", "thermostat_2.jpg"]
+  },
+  {
+    "product_id": "prod4",
+    "name": "Robot Vacuum",
+    "description": "Self-emptying robot vacuum with mapping technology",
+    "price": 349.99,
+    "category": "appliances",
+    "stock": 20,
+    "rating": 4.6,
+    "images": ["vacuum_1.jpg", "vacuum_2.jpg"]
+  },
+  {
+    "product_id": "prod5",
+    "name": "Wireless Headphones",
+    "description": "Noise-cancelling wireless headphones with long battery life",
+    "price": 149.99,
+    "category": "electronics",
+    "stock": 75,
+    "rating": 4.8,
+    "images": ["headphones_1.jpg", "headphones_2.jpg"]
+  },
+  {
+    "product_id": "prod6",
+    "name": "Smart TV",
+    "description": "65-inch 4K smart TV with built-in streaming services",
+    "price": 799.99,
+    "category": "electronics",
+    "stock": 15,
+    "rating": 4.4,
+    "images": ["tv_1.jpg", "tv_2.jpg"]
+  },
+  {
+    "product_id": "prod7",
+    "name": "Fitness Tracker",
+    "description": "Waterproof fitness tracker with heart rate monitoring",
+    "price": 79.99,
+    "category": "wearables",
+    "stock": 100,
+    "rating": 4.1,
+    "images": ["tracker_1.jpg", "tracker_2.jpg"]
+  },
+  {
+    "product_id": "prod8",
+    "name": "Smart Lock",
+    "description": "Keyless smart lock with smartphone control",
+    "price": 189.99,
+    "category": "smart_home",
+    "stock": 40,
+    "rating": 4.3,
+    "images": ["lock_1.jpg", "lock_2.jpg"]
+  },
+  {
+    "product_id": "prod9",
+    "name": "Wireless Earbuds",
+    "description": "True wireless earbuds with charging case",
+    "price": 89.99,
+    "category": "electronics",
+    "stock": 60,
+    "rating": 4.0,
+    "images": ["earbuds_1.jpg", "earbuds_2.jpg"]
+  },
+  {
+    "product_id": "prod10",
+    "name": "Smart Security Camera",
+    "description": "Indoor/outdoor security camera with night vision",
+    "price": 129.99,
+    "category": "smart_home",
+    "stock": 30,
+    "rating": 4.5,
+    "images": ["camera_1.jpg", "camera_2.jpg"]
+  }
+]

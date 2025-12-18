@@ -1,0 +1,444 @@
+[
+  {
+    "source_id": "news_source_1",
+    "name": "International News Wire",
+    "type": "news",
+    "description": "Global news service covering international affairs",
+    "supported_queries": [
+      "world_news",
+      "international_news",
+      "politics_news",
+      "diplomatic_news"
+    ],
+    "reliability": 0.9,
+    "languages": [
+      "en",
+      "es"
+    ],
+    "article_count_daily": 2610,
+    "rate_limit": {
+      "requests_per_minute": 929,
+      "requests_per_hour": 6903
+    },
+    "avg_response_time_ms": 450
+  },
+  {
+    "source_id": "knowledge_source_1",
+    "name": "General Knowledge Database",
+    "type": "knowledge",
+    "description": "Comprehensive knowledge base covering general topics and facts",
+    "supported_queries": [
+      "fact_lookup",
+      "definition",
+      "quick_answer",
+      "encyclopedia_search"
+    ],
+    "reliability": 0.83,
+    "topics_covered": 330709,
+    "last_updated": "2025-06-01",
+    "rate_limit": {
+      "requests_per_minute": 561,
+      "requests_per_hour": 9657
+    },
+    "avg_response_time_ms": 261
+  },
+  {
+    "source_id": "social_source_1",
+    "name": "Social Media Analytics",
+    "type": "social",
+    "description": "Social media trends and sentiment analysis across platforms",
+    "supported_queries": [
+      "social_trends",
+      "sentiment_analysis",
+      "viral_content",
+      "hashtag_tracking"
+    ],
+    "reliability": 0.87,
+    "platforms": [
+      "instagram",
+      "twitter",
+      "reddit",
+      "facebook"
+    ],
+    "data_retention_days": 362,
+    "rate_limit": {
+      "requests_per_minute": 319,
+      "requests_per_hour": 2621
+    },
+    "avg_response_time_ms": 491
+  },
+  {
+    "source_id": "news_source_2",
+    "name": "Science News Portal",
+    "type": "news",
+    "description": "Scientific research and discovery news aggregator",
+    "supported_queries": [
+      "science_news",
+      "research_news",
+      "health_news",
+      "medical_news"
+    ],
+    "reliability": 0.84,
+    "languages": [
+      "pt",
+      "es",
+      "it"
+    ],
+    "article_count_daily": 1267,
+    "rate_limit": {
+      "requests_per_minute": 228,
+      "requests_per_hour": 5896
+    },
+    "avg_response_time_ms": 314
+  },
+  {
+    "source_id": "finance_source_1",
+    "name": "Economic Indicators Service",
+    "type": "financial",
+    "description": "Economic data including GDP, employment, and inflation metrics",
+    "supported_queries": [
+      "economic_indicators",
+      "inflation_data",
+      "employment_stats",
+      "gdp_data"
+    ],
+    "reliability": 0.95,
+    "markets_covered": [
+      "LSE",
+      "TSE",
+      "NASDAQ"
+    ],
+    "data_delay_ms": 559,
+    "rate_limit": {
+      "requests_per_minute": 408,
+      "requests_per_hour": 3836
+    },
+    "avg_response_time_ms": 136
+  },
+  {
+    "source_id": "social_source_2",
+    "name": "Public Opinion Monitor",
+    "type": "social",
+    "description": "Public opinion polling and survey data aggregation",
+    "supported_queries": [
+      "opinion_polls",
+      "survey_data",
+      "public_sentiment",
+      "demographic_data"
+    ],
+    "reliability": 0.84,
+    "platforms": [
+      "reddit",
+      "twitter",
+      "facebook",
+      "tiktok"
+    ],
+    "data_retention_days": 332,
+    "rate_limit": {
+      "requests_per_minute": 235,
+      "requests_per_hour": 8264
+    },
+    "avg_response_time_ms": 303
+  },
+  {
+    "source_id": "finance_source_2",
+    "name": "Financial Analytics Service",
+    "type": "financial",
+    "description": "Market analysis, trends, and financial insights",
+    "supported_queries": [
+      "market_analysis",
+      "financial_trends",
+      "sector_performance",
+      "earnings_analysis"
+    ],
+    "reliability": 0.89,
+    "markets_covered": [
+      "LSE",
+      "HKEX",
+      "NASDAQ",
+      "TSE"
+    ],
+    "data_delay_ms": 760,
+    "rate_limit": {
+      "requests_per_minute": 623,
+      "requests_per_hour": 7857
+    },
+    "avg_response_time_ms": 334
+  },
+  {
+    "source_id": "weather_source_1",
+    "name": "Aviation Weather Service",
+    "type": "weather",
+    "description": "Specialized weather data for aviation and marine conditions",
+    "supported_queries": [
+      "aviation_weather",
+      "marine_weather",
+      "weather_radar"
+    ],
+    "reliability": 0.88,
+    "coverage": "regional",
+    "update_frequency": "every_6_hours",
+    "rate_limit": {
+      "requests_per_minute": 966,
+      "requests_per_hour": 1222
+    },
+    "avg_response_time_ms": 172
+  },
+  {
+    "source_id": "weather_source_2",
+    "name": "Primary Weather API",
+    "type": "weather",
+    "description": "Main weather service providing current conditions and forecasts",
+    "supported_queries": [
+      "current_weather",
+      "weather_forecast",
+      "weather_alerts",
+      "weather_history"
+    ],
+    "reliability": 0.95,
+    "coverage": "regional",
+    "update_frequency": "hourly",
+    "rate_limit": {
+      "requests_per_minute": 233,
+      "requests_per_hour": 5718
+    },
+    "avg_response_time_ms": 303
+  },
+  {
+    "source_id": "finance_source_3",
+    "name": "Real-time Stock Market Data",
+    "type": "financial",
+    "description": "Live stock prices and market data from major exchanges",
+    "supported_queries": [
+      "stock_price",
+      "market_data",
+      "real_time_quotes",
+      "trading_volume"
+    ],
+    "reliability": 0.96,
+    "markets_covered": [
+      "HKEX",
+      "NYSE"
+    ],
+    "data_delay_ms": 457,
+    "rate_limit": {
+      "requests_per_minute": 330,
+      "requests_per_hour": 2472
+    },
+    "avg_response_time_ms": 213
+  },
+  {
+    "source_id": "news_source_3",
+    "name": "Global News Aggregator",
+    "type": "news",
+    "description": "Primary news aggregation service from multiple sources worldwide",
+    "supported_queries": [
+      "latest_news",
+      "news_by_category",
+      "trending_news",
+      "breaking_news"
+    ],
+    "reliability": 0.92,
+    "languages": [
+      "de"
+    ],
+    "article_count_daily": 3559,
+    "rate_limit": {
+      "requests_per_minute": 907,
+      "requests_per_hour": 6176
+    },
+    "avg_response_time_ms": 113
+  },
+  {
+    "source_id": "gov_source_1",
+    "name": "Government Data Portal",
+    "type": "government",
+    "description": "Official government statistics and public records",
+    "supported_queries": [
+      "government_data",
+      "public_records",
+      "census_data",
+      "regulatory_info"
+    ],
+    "reliability": 0.94,
+    "jurisdictions": [
+      "local"
+    ],
+    "data_classification": "restricted",
+    "rate_limit": {
+      "requests_per_minute": 222,
+      "requests_per_hour": 3767
+    },
+    "avg_response_time_ms": 337
+  },
+  {
+    "source_id": "knowledge_source_2",
+    "name": "Technical Documentation Hub",
+    "type": "knowledge",
+    "description": "Technical documentation and programming resources",
+    "supported_queries": [
+      "tech_docs",
+      "programming_reference",
+      "api_documentation",
+      "code_examples"
+    ],
+    "reliability": 0.86,
+    "topics_covered": 442990,
+    "last_updated": "2025-06-01",
+    "rate_limit": {
+      "requests_per_minute": 571,
+      "requests_per_hour": 7620
+    },
+    "avg_response_time_ms": 410
+  },
+  {
+    "source_id": "weather_source_3",
+    "name": "Secondary Weather Service",
+    "type": "weather",
+    "description": "Backup weather data source with global coverage",
+    "supported_queries": [
+      "current_weather",
+      "weather_forecast",
+      "severe_weather"
+    ],
+    "reliability": 0.89,
+    "coverage": "national",
+    "update_frequency": "every_3_hours",
+    "rate_limit": {
+      "requests_per_minute": 924,
+      "requests_per_hour": 1768
+    },
+    "avg_response_time_ms": 209
+  },
+  {
+    "source_id": "news_source_4",
+    "name": "Local News Network",
+    "type": "news",
+    "description": "Regional and local news sources across major metropolitan areas",
+    "supported_queries": [
+      "local_news",
+      "regional_news",
+      "community_news",
+      "city_news"
+    ],
+    "reliability": 0.8,
+    "languages": [
+      "pt",
+      "fr"
+    ],
+    "article_count_daily": 2518,
+    "rate_limit": {
+      "requests_per_minute": 943,
+      "requests_per_hour": 1849
+    },
+    "avg_response_time_ms": 493
+  },
+  {
+    "source_id": "knowledge_source_3",
+    "name": "Scientific Research Database",
+    "type": "knowledge",
+    "description": "Academic and scientific research papers and publications",
+    "supported_queries": [
+      "research_papers",
+      "scientific_data",
+      "academic_search",
+      "peer_reviewed"
+    ],
+    "reliability": 0.92,
+    "topics_covered": 426890,
+    "last_updated": "2025-06-01",
+    "rate_limit": {
+      "requests_per_minute": 470,
+      "requests_per_hour": 7094
+    },
+    "avg_response_time_ms": 334
+  },
+  {
+    "source_id": "news_source_5",
+    "name": "Technology News Service",
+    "type": "news",
+    "description": "Technology and innovation news from tech publications",
+    "supported_queries": [
+      "tech_news",
+      "startup_news",
+      "innovation_news",
+      "product_launches"
+    ],
+    "reliability": 0.82,
+    "languages": [
+      "en"
+    ],
+    "article_count_daily": 3995,
+    "rate_limit": {
+      "requests_per_minute": 770,
+      "requests_per_hour": 4584
+    },
+    "avg_response_time_ms": 486
+  },
+  {
+    "source_id": "news_source_6",
+    "name": "Business News Feed",
+    "type": "news",
+    "description": "Specialized business and financial news aggregator",
+    "supported_queries": [
+      "business_news",
+      "market_news",
+      "economic_news",
+      "earnings_news"
+    ],
+    "reliability": 0.88,
+    "languages": [
+      "es",
+      "de",
+      "pt"
+    ],
+    "article_count_daily": 578,
+    "rate_limit": {
+      "requests_per_minute": 363,
+      "requests_per_hour": 9035
+    },
+    "avg_response_time_ms": 112
+  },
+  {
+    "source_id": "finance_source_4",
+    "name": "Cryptocurrency Exchange Data",
+    "type": "financial",
+    "description": "Cryptocurrency prices and trading data from major exchanges",
+    "supported_queries": [
+      "crypto_prices",
+      "crypto_market_cap",
+      "trading_pairs",
+      "defi_data"
+    ],
+    "reliability": 0.9,
+    "markets_covered": [
+      "LSE",
+      "HKEX"
+    ],
+    "data_delay_ms": 987,
+    "rate_limit": {
+      "requests_per_minute": 522,
+      "requests_per_hour": 3280
+    },
+    "avg_response_time_ms": 282
+  },
+  {
+    "source_id": "weather_source_4",
+    "name": "Climate Data Service",
+    "type": "weather",
+    "description": "Historical weather data and climate analysis",
+    "supported_queries": [
+      "climate_data",
+      "weather_history",
+      "temperature_trends"
+    ],
+    "reliability": 0.94,
+    "coverage": "regional",
+    "update_frequency": "every_6_hours",
+    "rate_limit": {
+      "requests_per_minute": 461,
+      "requests_per_hour": 1950
+    },
+    "avg_response_time_ms": 473
+  }
+]

@@ -1,0 +1,27 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn1_Step0_weather_forecast.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn1_Step0_weather_forecast.json
+   User: user5
+   Domain: transaction
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I will travel to berlin. What will the weather be like in Berlin for the next 5 days?
+   Expected:
+     🔍 weather_forecast({"location":"berlin","days":5})
+   Actual:
+     🔍 weather_forecast({"location":"berlin","days":5})
+
+   Turn 2: ✅
+   Query: Ah I just found out I have to my travel today. Tell me the current weather there.
+   Expected:
+     🔍 weather_current({"location":"berlin"})
+   Actual:
+     🔍 weather_current({"location":"berlin"})

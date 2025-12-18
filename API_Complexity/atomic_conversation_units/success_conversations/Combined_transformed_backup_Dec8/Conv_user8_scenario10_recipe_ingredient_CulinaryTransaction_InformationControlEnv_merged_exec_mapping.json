@@ -1,0 +1,197 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined/Conv_user8_scenario10_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_transformed/Conv_user8_scenario10_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_exec.py",
+  "total_transforms": 27,
+  "successful_transforms": 27,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_recipes\", cuisine='American', limit=5, sort_by='rating')",
+      "after": "invoke_tool(\"search_recipes\", cuisine='American', limit=5, sort_by='rating')",
+      "execution_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": []}], \"message\": \"Found 5 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "after": "invoke_tool(\"get_recipe_details\", recipe_id='recipe6')",
+      "execution_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='butter', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod127\", \"name\": \"Butter\", \"price\": 5.08, \"category\": \"food_ingredients\", \"stock\": 167}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"search_product\", query='bacon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='bacon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod147\", \"name\": \"Bacon\", \"price\": 7.01, \"category\": \"food_ingredients\", \"stock\": 123}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='onions', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod126\", \"name\": \"Onions\", \"price\": 5.5, \"category\": \"food_ingredients\", \"stock\": 184}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"search_product\", query='potatoes', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='potatoes', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod146\", \"name\": \"Potatoes\", \"price\": 2.57, \"category\": \"food_ingredients\", \"stock\": 121}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='garlic', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod125\", \"name\": \"Garlic\", \"price\": 3.14, \"category\": \"food_ingredients\", \"stock\": 242}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 8,
+      "before": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='lemon', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod130\", \"name\": \"Lemon\", \"price\": 2.12, \"category\": \"food_ingredients\", \"stock\": 170}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 9,
+      "before": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='vinegar', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"price\": 8.87, \"category\": \"food_ingredients\", \"stock\": 180}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 10,
+      "before": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='pepper', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod129\", \"name\": \"Pepper\", \"price\": 3.87, \"category\": \"food_ingredients\", \"stock\": 160}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 11,
+      "before": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='canola oil', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod168\", \"name\": \"canola oil\", \"price\": 6.6, \"category\": \"food_ingredients\", \"stock\": 107}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 12,
+      "before": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='salt', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod133\", \"name\": \"Salt\", \"price\": 4.03, \"category\": \"food_ingredients\", \"stock\": 150}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 13,
+      "before": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "after": "invoke_tool(\"search_product\", query='wine', limit=1)",
+      "execution_result": "{\"success\": true, \"count\": 1, \"categories\": [\"food_ingredients\"], \"results\": [{\"product_id\": \"prod132\", \"name\": \"Wine\", \"price\": 6.73, \"category\": \"food_ingredients\", \"stock\": 187}], \"message\": \"Found 1 product(s)\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 14,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod127', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod127\", \"name\": \"Butter\", \"quantity\": 1, \"price\": 5.08}, \"cart_total\": 5.08, \"message\": \"Added 1 x 'Butter' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 15,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod147', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod147', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod147\", \"name\": \"Bacon\", \"quantity\": 1, \"price\": 7.01}, \"cart_total\": 12.09, \"message\": \"Added 1 x 'Bacon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 16,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod126', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod126\", \"name\": \"Onions\", \"quantity\": 1, \"price\": 5.5}, \"cart_total\": 17.59, \"message\": \"Added 1 x 'Onions' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 17,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod146', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod146', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod146\", \"name\": \"Potatoes\", \"quantity\": 1, \"price\": 2.57}, \"cart_total\": 20.16, \"message\": \"Added 1 x 'Potatoes' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 18,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod125', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod125\", \"name\": \"Garlic\", \"quantity\": 1, \"price\": 3.14}, \"cart_total\": 23.3, \"message\": \"Added 1 x 'Garlic' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 19,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod130', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod130\", \"name\": \"Lemon\", \"quantity\": 1, \"price\": 2.12}, \"cart_total\": 25.42, \"message\": \"Added 1 x 'Lemon' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 20,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod131', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod131\", \"name\": \"Vinegar\", \"quantity\": 1, \"price\": 8.87}, \"cart_total\": 34.29, \"message\": \"Added 1 x 'Vinegar' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 21,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod129', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod129\", \"name\": \"Pepper\", \"quantity\": 1, \"price\": 3.87}, \"cart_total\": 38.16, \"message\": \"Added 1 x 'Pepper' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 22,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod168', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod168\", \"name\": \"canola oil\", \"quantity\": 1, \"price\": 6.6}, \"cart_total\": 44.76, \"message\": \"Added 1 x 'canola oil' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 23,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod133', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod133\", \"name\": \"Salt\", \"quantity\": 1, \"price\": 4.03}, \"cart_total\": 48.79, \"message\": \"Added 1 x 'Salt' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 24,
+      "before": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "after": "invoke_tool(\"add_to_cart\", product_id='prod132', quantity=1)",
+      "execution_result": "{\"success\": true, \"product\": {\"product_id\": \"prod132\", \"name\": \"Wine\", \"quantity\": 1, \"price\": 6.73}, \"cart_total\": 55.52, \"message\": \"Added 1 x 'Wine' to cart\", \"_environment\": \"TransactionEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 25,
+      "before": "invoke_tool(\"stock_watchlist\", )",
+      "after": "invoke_tool(\"stock_watchlist\", )",
+      "execution_result": "{\"success\": true, \"watchlist\": [\"TSLA\", \"META\", \"NVDA\"], \"stocks\": [{\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1825.07, \"total_change\": 4.99}, \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 26,
+      "before": "invoke_tool(\"stock_price\", symbol='TSLA')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:TSLA')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 27,
+      "before": "invoke_tool(\"stock_price\", symbol='NVDA')",
+      "after": "invoke_tool(\"stock_price\", symbol='NASDAQ:NVDA')",
+      "execution_result": "{\"success\": true, \"stock\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\", \"_environment\": \"InformationControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

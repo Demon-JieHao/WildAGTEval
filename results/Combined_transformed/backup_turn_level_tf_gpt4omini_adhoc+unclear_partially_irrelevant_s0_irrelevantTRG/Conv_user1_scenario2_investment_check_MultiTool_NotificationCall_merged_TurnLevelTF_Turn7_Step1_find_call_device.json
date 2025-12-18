@@ -1,0 +1,264 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user1",
+  "model": "gpt-4o-mini",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information",
+    "config_description": "Enable PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 15,
+      "total_active_env_vars": 16,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0,
+        "ADHOC": 8
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": [],
+        "ADHOC": [
+          "get_call_history",
+          "track_order",
+          "lock_lock",
+          "lock_unlock",
+          "color_set",
+          "make_call",
+          "play",
+          "stock_price"
+        ]
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION",
+      "ADHOC"
+    ]
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.6666666666666666,
+  "avg_api_name_accuracy": 0.3333333333333333,
+  "avg_parameter_accuracy": 0.25,
+  "overall_score": 0.4166666666666667,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 4,
+    "avg_steps_per_query": 4.0,
+    "avg_api_steps_per_query": 4.0,
+    "avg_step_efficiency": 0.75
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I should call that person now",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "17"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:8164618624",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_contact",
+              "params": {
+                "query": "Ashley Scott",
+                "search_type": "name",
+                "limit": 1
+              }
+            }
+          },
+          "api_call": {
+            "api": "find_contact",
+            "params": {
+              "query": "Ashley Scott",
+              "search_type": "name",
+              "limit": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact11\", \"user_id\": \"user1\", \"name\": \"Ashley Scott\", \"phone_numbers\": [{\"type\": \"home\", \"number\": \"816-461-8624\"}], \"email\": \"ascott@aol.com\", \"is_favorite\": false, \"devices\": []}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:10:19.450522",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_call_device",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"1\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"living_room\", \"downstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"3\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"kitchen\", \"downstairs\", \"entertainment\"], \"home_id\": \"home1\"}, {\"endpoint\": \"9\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\"], \"groups\": [\"master_bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"11\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"], \"endpoint_categories\": [\"TV\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"channel_change\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"fast_forward\", \"shuffle\", \"set_playback_speed\", \"rewind\"], \"groups\": [\"master_bedroom\", \"upstairs\", \"entertainment\"], \"home_id\": \"home1\"}, {\"endpoint\": \"7\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"set_playback_speed\", \"rewind\", \"shuffle\", \"fast_forward\"], \"groups\": [\"bedroom\", \"upstairs\", \"entertainment\"], \"home_id\": \"home1\"}, {\"endpoint\": \"8\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"16\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"], \"endpoint_categories\": [\"LOCK\"], \"supported_apis\": [\"lock_lock\", \"lock_unlock\", \"lock_status\"], \"groups\": [\"garage\", \"downstairs\", \"security\", \"whole_home\"], \"home_id\": \"home1\"}, {\"endpoint\": \"4\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"], \"endpoint_categories\": [\"BLINDS\"], \"supported_apis\": [\"open_open\", \"open_close\", \"open_set_position\"], \"groups\": [\"kitchen\", \"downstairs\"], \"home_id\": \"home1\"}, {\"endpoint\": \"6\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"dining_room\", \"downstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"10\", \"name\": \"Master Bedroom Light\", \"alternate_names\": [\"Master Light\", \"Ceiling Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"master_bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"5\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"], \"endpoint_categories\": [\"BLINDS\"], \"supported_apis\": [\"open_open\", \"open_close\", \"open_set_position\"], \"groups\": [\"dining_room\", \"downstairs\"], \"home_id\": \"home1\"}, {\"endpoint\": \"14\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"office\", \"downstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"2\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\"], \"groups\": [\"kitchen\", \"downstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"15\", \"name\": \"Garage Light\", \"alternate_names\": [\"Garage Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\"], \"groups\": [\"garage\", \"downstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"13\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"], \"endpoint_categories\": [\"SPEAKER\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"fast_forward\", \"set_playback_speed\", \"rewind\"], \"groups\": [\"office\", \"downstairs\", \"entertainment\"], \"home_id\": \"home1\"}, {\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\"}, {\"endpoint\": \"17\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home1\"}, {\"endpoint\": \"12\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bathroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home1\"}, {\"endpoint\": \"5A\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\"], \"endpoint_categories\": [\"THERMOSTAT\"], \"supported_apis\": [\"temperature_set\", \"mode_set\"], \"groups\": [\"climate\", \"whole_home\"], \"home_id\": \"home1\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:10:19.464251",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:8164618624\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:8164618624\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:8164618624"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:8164618624"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Call initiated to D:8164618624 using Smart Phone\", \"call_id\": \"call139\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:10:21.461272",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 4,
+          "llm_response": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:816-461-8624\"\n  }\n}\n</API_CALL>\n```",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "```json\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:816-461-8624\"\n  }\n}\n</API_CALL>\n```",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:816-461-8624"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:816-461-8624"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Invalid phone number format.\"}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-12-13T13:10:23.697632",
+          "ground_truth_api": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:8164618624",
+              "call_type": "audio",
+              "device_endpoint": "17"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.6666666666666666,
+        "redundancy_rate": 0.25,
+        "api_name_accuracy": 0.3333333333333333,
+        "parameter_accuracy": 0.25,
+        "order_accuracy": 0.0,
+        "total_steps": 4,
+        "api_steps": 4,
+        "completion_steps": 0,
+        "error_steps": 0,
+        "step_efficiency": 0.75,
+        "api_efficiency": 0.75,
+        "api_success_rate": 0.75,
+        "task_completed": false,
+        "inference_path": [
+          "gt_execution",
+          "gt_execution",
+          "api_call",
+          "api_call"
+        ],
+        "total_prediction_steps": 4,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-12-13T13:10:23.725824",
+      "target_function": "find_call_device",
+      "target_location": "Turn 7, Step 1",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-12-13T13:10:23.727988"
+}

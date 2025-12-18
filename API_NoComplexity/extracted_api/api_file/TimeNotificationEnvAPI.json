@@ -1,0 +1,291 @@
+{
+  "TimeNotificationEnv": {
+    "create_alarm": {
+      "function": {
+        "description": "Create a new alarm with specified time, days, and optional device. Alarms are recurring events that happen on specified days at the given time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to create an alarm.",
+          "Invalid time format: The time must be in HH:MM:SS format.",
+          "Invalid day: One or more specified days are invalid.",
+          "Device not found: The specified device endpoint does not exist."
+        ],
+        "name": "create_alarm",
+        "parameters": {
+          "properties": {
+            "days": {
+              "description": "List of days when the alarm should be active (e.g., [\"monday\", \"tuesday\"]).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "device_endpoint": {
+              "description": "Optional device endpoint to associate with the alarm (e.g., for playing the alarm sound or triggering actions).",
+              "type": "string"
+            },
+            "sound": {
+              "description": "Optional sound to use for the alarm. Defaults to 'default'.",
+              "type": "string"
+            },
+            "time": {
+              "description": "The time when the alarm should trigger in HH:MM:SS format (24-hour).",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the alarm.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "time",
+            "days"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_notification": {
+      "function": {
+        "description": "Create a new notification for a user. This allows environments to send messages to users about events or updates.",
+        "error_cases": [
+          "No user target: No user is currently logged in and no user_id was specified.",
+          "User not found: The specified user ID does not exist.",
+          "Invalid priority: Priority must be one of: low, normal, high."
+        ],
+        "name": "create_notification",
+        "parameters": {
+          "properties": {
+            "message": {
+              "description": "The detailed notification message content.",
+              "type": "string"
+            },
+            "priority": {
+              "description": "Priority level of the notification. High priority notifications will show even during do-not-disturb periods.",
+              "enum": [
+                "low",
+                "normal",
+                "high"
+              ],
+              "type": "string"
+            },
+            "source": {
+              "description": "Source of the notification (typically environment name). Defaults to 'TimeNotificationEnv'.",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title of the notification.",
+              "type": "string"
+            },
+            "type": {
+              "description": "Type of notification (e.g., system, reminder, alert). Defaults to 'system'.",
+              "type": "string"
+            },
+            "user_id": {
+              "description": "Optional user ID to target with the notification. If not provided, uses current user.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "message"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "create_reminder": {
+      "function": {
+        "description": "Create a new reminder with specified date, time, and optional description. Reminders are one-time events that happen at a specific date and time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to create a reminder.",
+          "Invalid date format: The date must be in YYYY-MM-DD format.",
+          "Invalid time format: The time must be in HH:MM:SS format.",
+          "Past date/time: Cannot set a reminder in the past.",
+          "Invalid notify_before_minutes: Must be a non-negative number."
+        ],
+        "name": "create_reminder",
+        "parameters": {
+          "properties": {
+            "date": {
+              "description": "The date of the reminder in YYYY-MM-DD format.",
+              "type": "string"
+            },
+            "description": {
+              "description": "Optional detailed description or additional information about the reminder.",
+              "type": "string"
+            },
+            "notify_before_minutes": {
+              "description": "How many minutes before the reminder time to send a notification. Defaults to 30 minutes.",
+              "type": "integer"
+            },
+            "time": {
+              "description": "The time of the reminder in HH:MM:SS format (24-hour).",
+              "type": "string"
+            },
+            "title": {
+              "description": "The title or name of the reminder.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "title",
+            "date",
+            "time"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "delete_alarm": {
+      "function": {
+        "description": "Delete or deactivate an existing alarm.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to delete an alarm.",
+          "Alarm not found: The specified alarm ID does not exist or does not belong to the current user."
+        ],
+        "name": "delete_alarm",
+        "parameters": {
+          "properties": {
+            "alarm_id": {
+              "description": "The ID of the alarm to delete.",
+              "type": "string"
+            },
+            "deactivate_only": {
+              "description": "If true, just deactivate the alarm rather than deleting it completely.",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "alarm_id"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_alarms": {
+      "function": {
+        "description": "Get all alarms for the current user. Returns a list of alarm objects sorted by time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve alarms."
+        ],
+        "name": "get_alarms",
+        "parameters": {
+          "properties": {
+            "active_only": {
+              "description": "If true, return only active alarms. If false, return all alarms.",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_notifications": {
+      "function": {
+        "description": "Get notifications for the current user with optional filters. Returns a list of notification objects sorted from newest to oldest.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve notifications."
+        ],
+        "name": "get_notifications",
+        "parameters": {
+          "properties": {
+            "include_read": {
+              "description": "Whether to include notifications that have already been read. Defaults to false.",
+              "type": "boolean"
+            },
+            "limit": {
+              "description": "Maximum number of notifications to return. Defaults to 20.",
+              "type": "integer"
+            },
+            "priority": {
+              "description": "Optional filter to show notifications of a specific priority level.",
+              "enum": [
+                "low",
+                "normal",
+                "high"
+              ],
+              "type": "string"
+            },
+            "source": {
+              "description": "Optional filter to show notifications only from a specific source/environment.",
+              "type": "string"
+            },
+            "type": {
+              "description": "Optional filter to show notifications of a specific type (e.g., system, reminder, alert).",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "get_reminders": {
+      "function": {
+        "description": "Get reminders for the current user with optional filters. Returns a list of reminder objects sorted by date and time.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to retrieve reminders."
+        ],
+        "name": "get_reminders",
+        "parameters": {
+          "properties": {
+            "date_from": {
+              "description": "Optional filter for earliest reminder date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "date_to": {
+              "description": "Optional filter for latest reminder date (YYYY-MM-DD).",
+              "type": "string"
+            },
+            "status": {
+              "description": "Optional filter for reminder status.",
+              "enum": [
+                "pending",
+                "completed",
+                "cancelled"
+              ],
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    "set_notification_preferences": {
+      "function": {
+        "description": "Set notification preferences for the current user, including do-not-disturb mode and device preferences.",
+        "error_cases": [
+          "No user logged in: No user is currently logged in to update preferences.",
+          "User not found: The specified user ID does not exist.",
+          "Device not found: The specified device endpoint does not exist."
+        ],
+        "name": "set_notification_preferences",
+        "parameters": {
+          "properties": {
+            "do_not_disturb": {
+              "description": "Whether do-not-disturb mode should be enabled. When enabled, only high priority notifications will be shown immediately.",
+              "type": "boolean"
+            },
+            "notification_sounds": {
+              "description": "Whether notification sounds should be played.",
+              "type": "boolean"
+            },
+            "preferred_device_endpoint": {
+              "description": "Optional device endpoint ID to use as the preferred device for notifications. Use 'None' to clear the preferred device.",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  }
+}

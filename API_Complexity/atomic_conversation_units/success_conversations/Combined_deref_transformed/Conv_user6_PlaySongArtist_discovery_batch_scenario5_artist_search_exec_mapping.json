@@ -1,0 +1,57 @@
+{
+  "source_file": "atomic_conversation_units/success_conversations/Combined_deref/Conv_user6_PlaySongArtist_discovery_batch_scenario5_artist_search_exec.py",
+  "target_file": "atomic_conversation_units/success_conversations/Combined_deref_transformed/Conv_user6_PlaySongArtist_discovery_batch_scenario5_artist_search_exec.py",
+  "total_transforms": 7,
+  "successful_transforms": 7,
+  "mappings": [
+    {
+      "index": 1,
+      "before": "invoke_tool(\"search_media\", query='River Journey', media_type='song', limit=3)",
+      "after": "invoke_tool(\"search_media\", query='River Journey', media_type='song', limit=3)",
+      "execution_result": "{\"success\": true, \"count\": 2, \"results\": [{\"id\": \"song18\", \"title\": \"River Journey\", \"type\": \"song\", \"year\": 2016, \"genre\": [\"indie\"], \"services\": [\"spotify\", \"deezer\", \"youtube_music\", \"apple_music\", \"amazon_music\", \"tidal\"], \"artist\": \"Johnny Cash\", \"album\": \"River Sessions\"}, {\"id\": \"song149\", \"title\": \"River Journey (Dream Album)\", \"type\": \"song\", \"year\": 1962, \"genre\": [\"electronic\"], \"services\": [\"deezer\", \"apple_music\", \"youtube_music\", \"tidal\", \"pandora\"], \"artist\": \"Bruno Mars\", \"album\": \"Dream Album\"}], \"message\": \"Found 2 media items matching 'River Journey'\", \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 2,
+      "before": "invoke_tool(\"get_user_inventory\", )",
+      "after": "invoke_tool(\"get_user_inventory\", )",
+      "execution_result": "{\"success\": true, \"user_id\": \"user6\", \"name\": \"James Lopez\", \"home_id\": \"home3\", \"current_space\": null, \"devices\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"alternate_names\": [\"Television\", \"Smart TV\"]}, {\"endpoint\": \"32\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"33\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"34\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"35\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"36\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"39\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"40\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"41\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"42\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}, {\"endpoint\": \"43\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}, {\"endpoint\": \"44\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 3,
+      "before": "invoke_tool(\"get_device_details\", endpoint='31')",
+      "after": "invoke_tool(\"get_device_details\", endpoint='31')",
+      "execution_result": "{\"success\": true, \"device\": {\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"alternate_names\": [\"Television\", \"Smart TV\"], \"endpoint_categories\": [\"TV\", \"MEDIA_PLAYER\"], \"supported_apis\": [\"power_on\", \"power_off\", \"channel_change\", \"volume_adjust\", \"play\", \"pause\", \"resume\", \"stop\", \"next\", \"previous\", \"shuffle\", \"set_playback_speed\", \"fast_forward\", \"rewind\"], \"groups\": [\"living_room\", \"downstairs\", \"entertainment\"], \"home_id\": \"home3\", \"state\": {\"power\": \"on\", \"volume\": 99, \"channel\": 139}}, \"_environment\": \"SmartHomeEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 4,
+      "before": "invoke_tool(\"play\", endpoints=['31'], media_id='song18')",
+      "after": "invoke_tool(\"play\", endpoints=['31'], media_id='song:song18')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"success\": true, \"message\": \"Now playing 'River Journey' on Living Room TV\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 5,
+      "before": "invoke_tool(\"search_by_artist\", artist='Johnny Cash', media_type='song', limit=8)",
+      "after": "invoke_tool(\"search_by_artist\", artist='Johnny Cash', media_type='song', limit=8)",
+      "execution_result": "Found 8 media items for artist 'Johnny Cash':\n1. [SONG] Love Peace\n   Artist: Johnny Cash\n   Year: 2021 | Duration: 2:43 | Genre: rock\n   ID: song2\n2. [SONG] Broken Moon\n   Artist: Johnny Cash\n   Year: 1975 | Duration: 4:50 | Genre: blues\n   ID: song8\n3. [SONG] River Journey\n   Artist: Johnny Cash\n   Year: 2016 | Duration: 5:00 | Genre: indie\n   ID: song18\n4. [SONG] Rain Mystery\n   Artist: Johnny Cash\n   Year: 1991 | Duration: 5:13 | Genre: classical\n   ID: song21\n5. [SONG] Golden Lightning\n   Artist: Johnny Cash\n   Year: 1974 | Duration: 3:24 | Genre: country\n   ID: song57\n6. [SONG] Flying Rain\n   Artist: Johnny Cash\n   Year: 2009 | Duration: 4:55 | Genre: r&b\n   ID: song58\n7. [SONG] Memory Dreams\n   Artist: Johnny Cash\n   Year: 1994 | Duration: 5:55 | Genre: reggae\n   ID: song80\n8. [SONG] Dancing Love\n   Artist: Johnny Cash\n   Year: 1982 | Duration: 5:11 | Genre: folk\n   ID: song113\n",
+      "execution_success": true
+    },
+    {
+      "index": 6,
+      "before": "invoke_tool(\"get_playback_status\", endpoints=['31'])",
+      "after": "invoke_tool(\"get_playback_status\", endpoints=['31'])",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"success\": true, \"status\": \"playing\", \"media_id\": \"song:song18\", \"title\": \"River Journey\", \"type\": \"song\", \"position\": 0, \"duration\": 300, \"position_formatted\": \"0:00\", \"duration_formatted\": \"5:00\", \"playback_speed\": 1.0, \"shuffle\": false, \"loop\": \"off\", \"artist\": \"Johnny Cash\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    },
+    {
+      "index": 7,
+      "before": "invoke_tool(\"play\", endpoints=['31'], media_id='song21')",
+      "after": "invoke_tool(\"play\", endpoints=['31'], media_id='song:song21')",
+      "execution_result": "{\"success\": true, \"results\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"success\": true, \"message\": \"Now playing 'Rain Mystery' on Living Room TV\"}], \"_environment\": \"MediaControlEnv\"}",
+      "execution_success": true
+    }
+  ]
+}

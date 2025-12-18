@@ -1,0 +1,58 @@
+{
+  "user_id": "user456",
+  "query_results": [
+    {
+      "query": "Turn on the living room lights and set them to blue",
+      "expected_api_sequence": [
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": ["living_room_light"]
+          }
+        },
+        {
+          "api": "color_set",
+          "params": {
+            "color": "blue",
+            "endpoints": ["living_room_light"]
+          }
+        }
+      ],
+      "steps": [
+        {
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": ["living_room_light"]
+            }
+          },
+          "api_success": true
+        },
+        {
+          "api_call": {
+            "api": "color_set",
+            "params": {
+              "color": "green",
+              "endpoints": ["living_room_light"]
+            }
+          },
+          "api_success": true
+        }
+      ],
+      "success": false
+    },
+    {
+      "query": "What's the weather like today?",
+      "expected_api_sequence": [
+        {
+          "api": "weather_current",
+          "params": {
+            "location": "current"
+          }
+        }
+      ],
+      "steps": [],
+      "success": false
+    }
+  ]
+}

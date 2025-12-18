@@ -1,0 +1,12 @@
+# Target Functions Configuration for Turn-Level Teacher Forcing
+# This file specifies which API functions to use as target points for evaluation
+
+target_functions:
+  - "get_call_history"
+  - "make_call"
+  - "play"
+  - "color_set"
+  - "lock_lock"
+  - "lock_unlock"
+  - "stock_price"
+  - "track_order"

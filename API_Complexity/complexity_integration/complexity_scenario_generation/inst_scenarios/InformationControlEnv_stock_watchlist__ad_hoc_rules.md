@@ -1,0 +1,185 @@
+# Realistic Uncertainty Scenario: Ad Hoc Rules in InformationControlEnv.stock_watchlist
+
+## Task
+
+Specify a concrete, realistic scenario where the uncertainty type 'Ad Hoc Rules' 
+would manifest in the API function 'InformationControlEnv.stock_watchlist' 
+in production environments. Focus on converting the abstract uncertainty type into specific, 
+practical manifestations that API users might encounter.
+
+For each manifestation, modify the API Description and Implementation to realistically demonstrate
+this uncertainty, making only the minimum necessary changes and clearly marking your modifications.
+
+## API Function Information
+
+### Description
+{'name': 'stock_watchlist', 'description': "Get stock prices for user's watchlist. Returns current prices and changes for all stocks in the user's personalized watchlist.", 'parameters': {'type': 'object', 'properties': {}}, 'error_cases': ['No user preferences: If no user is logged in, defaults to AAPL, GOOGL, and MSFT.', 'Empty watchlist: Returns empty list if user has no stocks in watchlist.', 'Invalid symbols: Symbols not found in the system are silently skipped.']}
+
+### Implementation
+```python
+    @staticmethod
+    def invoke(data: Dict[str, Any]) -> str:
+        """
+        Get stock prices for user's watchlist.
+        
+        Args:
+            data: The data dictionary containing all information
+            
+        Returns:
+            A JSON string with watchlist stock information
+        """
+        # Get user preferences
+        preferences = get_user_preferences(data)
+        watchlist = preferences.get("stock_watchlist", ["AAPL", "GOOGL", "MSFT"])
+        
+        # Get stock data for each symbol in watchlist
+        watchlist_data = []
+        stocks_data = data.get("mock_data", {}).get("stocks", {})
+        
+        for symbol in watchlist:
+            if symbol in stocks_data:
+                stock_data = stocks_data[symbol]
+                watchlist_data.append({
+                    "symbol": symbol,
+                    "data": stock_data,
+                    "formatted": format_stock_response(stock_data)
+                })
+        
+        # Calculate portfolio summary
+        total_value = sum(stock["data"]["price"] for stock in watchlist_data)
+        total_change = sum(stock["data"]["change"] for stock in watchlist_data)
+        
+        # Add query to history
+        user = get_current_user(data)
+        if user:
+            query = {
+                "user_id": user["user_id"],
+                "timestamp": datetime.utcnow().isoformat(),
+                "tool": "stock_watchlist",
+                "parameters": {},
+                "result": "success"
+            }
+            add_query_to_history(data, query)
+        
+        return json.dumps({
+            "success": True,
+            "watchlist": watchlist,
+            "stocks": watchlist_data,
+            "summary": {
+                "total_symbols": len(watchlist_data),
+                "total_value": round(total_value, 2),
+                "total_change": round(total_change, 2)
+            }
+        })
+
+```
+
+## Uncertainty Type Information
+
+### Type: Ad Hoc Rules
+Special requirements or constraints that, while technically documented, deviate from intuitive expectations.
+
+### Criteria
+1. Special Value Semantics Likelihood: The likelihood that the function uses specific numeric or string values that carry special meanings beyond their literal value
+2. Non-Standard Format Requirements Likelihood: The likelihood that the function requires data in specific formats that deviate from common industry standards
+3. Counter-Intuitive Parameter Behavior Likelihood: The likelihood that parameters behave in ways that contradict what most developers would reasonably expect
+4. Hidden Constraints Likelihood: The likelihood that the function has undocumented or obscurely documented restrictions on how it can be used
+5. Legacy Compatibility Issues Likelihood: The likelihood that the function contains unusual behaviors primarily to maintain compatibility with older systems
+
+## Plausibility Assessment
+
+### Summary
+[From api_assessment_results_0]: Stock watchlist functions naturally develop ad hoc rules due to the complex nature of financial markets with their special indicators, exchange-specific behaviors, and market timing constraints. These functions must accommodate various market conditions, data availability limitations, and financial reporting conventions that aren't immediately obvious to users, creating a moderate likelihood of developing implicit rules and special cases that users must learn through experience rather than documentation.
+
+[From api_assessment_results_1]: Stock watchlist functions naturally develop ad hoc rules due to the complex nature of financial markets, which have evolved specific conventions for representing various market conditions and events. The function must handle special data values that indicate market status, accommodate exchange-specific formatting requirements, and operate within constraints imposed by data providers. These characteristics create a moderate likelihood of developing ad hoc rules that wouldn't be immediately obvious to developers without financial domain expertise.
+
+[From api_assessment_results_2]: Stock watchlist functions naturally develop ad hoc rules due to the complex nature of financial markets, which involve special value semantics for market conditions and hidden constraints related to data availability and timeliness. The function must accommodate various exchange rules, market hours, and financial data conventions that have evolved over decades, creating a moderate likelihood of developing non-obvious behaviors and requirements that aren't immediately apparent from its simple description.
+
+### Score
+Normalized Score: 0.600 (Moderate)
+
+## Instructions
+
+1. Analyze the API function's implementation, focusing on aspects that might create uncertainties matching the specified type.
+
+2. Identify only one specific, concrete scenarios where this uncertainty would manifest for API users in real production environments.
+   - Focus on common usage patterns where developers would naturally encounter this uncertainty
+   - Consider the perspectives of developers who use this API function
+
+3. For each scenario:
+   - Provide a descriptive title that captures the essence of the uncertainty
+   - Explain how this uncertainty would manifest in practical terms
+   - Explain the root cause in the API design
+   - Describe the impact on API users and their applications
+
+4. IMPORTANT: Focus ONLY on uncertainties intrinsic to the function's conceptual functionalities. 
+   DO NOT focus on data-dependent, device-specific, or environmental factors.
+   Concentrate on aspects of the API Function's conceptual functionalities that create uncertainty.
+
+5. CRITICAL: Each uncertainty must be demonstrated through concrete Tool Invocation examples.
+   Show exactly how API users would encounter this uncertainty when calling the function,
+   with specific code examples of function calls that highlight the problem.
+
+6. ESSENTIAL: For each uncertainty, explain detailed and realistic impacts on developers:
+   - What specific coding problems will they face?
+   - What unexpected behaviors will they need to work around?
+   - What additional error handling will they need to implement?
+   - How will this affect their development time or code quality?
+
+7. Suggest concrete mitigation approaches:
+   - Documentation improvements that would make the uncertainty more manageable
+
+## Special Instructions for Ad Hoc Rules Scenarios
+
+For this uncertainty type, you should focus on special requirements that deviate from intuitive expectations. You may:
+
+1. ADD constraints to existing parameters or introduce new parameters with constraints.
+2. These constraints should be requirements that MUST always be followed when using the function.
+3. Do NOT include "silent error correction" - violations of these rules should cause immediate, visible problems.
+4. Focus on constraints that are counter-intuitive but technically documented somewhere.
+5. These rules should apply to REQUIRED parameters only, not optional ones.
+6. The rules should be context-independent - they should ALWAYS apply, not just in certain situations.
+
+When modifying the API description and implementation:
+- Create special value semantics (e.g., -1 means "last item" and "PT15M" format represents 15 minutes)
+- Introduce non-standard format requirements
+- Implement counter-intuitive parameter behaviors
+- Focus on rules that are always enforced, not situational
+
+## Output Format for Ad Hoc Rules Scenarios
+
+### Uncertainty Manifestation 1: [Title - Focus on counter-intuitive special rules]
+
+**Description**:
+[Detailed description of how ad hoc rules manifest in practice]
+
+**Modified API Description**:
+```
+[Your modified version of the API function description that mentions special rules]
+```
+
+**Modified Implementation**:
+```python
+# Your modified version of the API implementation that enforces ad hoc rules
+```
+
+**Example Tool Invocation**:
+```python
+# Example code showing API calls that violate ad hoc rules
+api_function(param1, param2)  # Specific example that breaks special rules
+# Error or unexpected behavior due to rule violation
+```
+
+**Root Cause in API Design**:
+[Explain which specific aspects of your modified function's rules create counter-intuitive behavior]
+
+**Concrete Developer Impact**:
+[Describe specific, practical problems developers will face when encountering ad hoc rules,
+including debugging difficulties, learning curve, and code maintenance issues]
+
+### Mitigation Recommendations
+
+#### Documentation Improvements
+1. [First documentation recommendation - clearly highlight special rules]
+2. [Second documentation recommendation]
+3. [Third documentation recommendation]
