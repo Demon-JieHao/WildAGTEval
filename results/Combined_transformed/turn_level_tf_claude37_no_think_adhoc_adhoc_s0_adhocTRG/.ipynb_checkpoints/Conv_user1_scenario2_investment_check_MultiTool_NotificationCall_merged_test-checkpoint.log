@@ -1,6 +1,0 @@
-Traceback (most recent call last):
-  File "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/step_by_step_llm_evaluator_teacher_forcing.py", line 169, in <module>
-    class StepByStepLLMEvaluator:
-  File "/home/dykim2/Rag/camel_synthetic_api/API_Complexity/step_by_step_llm_evaluator_teacher_forcing.py", line 486, in StepByStepLLMEvaluator
-    @freeze_time("2025-06-18 12:00:00", tz_offset=0, ignore=SAFE_IGNORE_LIST)
-NameError: name 'SAFE_IGNORE_LIST' is not defined
