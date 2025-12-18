@@ -1,0 +1,25 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user6_scenario1_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user6_scenario1_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+   User: user6
+   Domain: smarthome
+   Status: ✅ PASS
+   Total Turns: 1
+   Successful Turns: 1
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Dial the most recent calling contact
+   Expected:
+     🔍 find_call_device({})
+     🔄 power_on({"endpoints":["30A"]})
+     🔄 make_call({"phone_number":"D:4146523213","call_type":"audio","device_endpoint":"30A"})
+   Actual:
+     🔍 find_call_device({})
+     🔍 find_contact({"query":"Steven Gomez","search_type":"name"})
+     🔄 power_on({"endpoints":["30A"]})
+     🔄 make_call({"phone_number":"D:4146523213","device_endpoint":"30A"})

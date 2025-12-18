@@ -1,0 +1,31 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user3_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user3_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+   User: user3
+   Domain: culinary
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: What does the restaurant have on their menu?
+   Expected:
+     🔍 get_restaurant_menu({"restaurant_id":"rest24"})
+   Actual:
+     🔍 get_restaurant_menu({"restaurant_id":"rest24"})
+     🔍 get_meal_suggestions({"meal_type":"lunch","count":4})
+     🔄 schedule_meal({"plan_id":"plan24","recipe_id":"recipe27","day":"2025-07-21","meal_type":"lunch"})
+     🔍 get_meal_suggestions({"meal_type":"snack","count":4})
+     🔄 schedule_meal({"plan_id":"plan24","recipe_id":"recipe37","day":"2025-07-19","meal_type":"snack"})
+
+   Turn 2: ✅
+   Query: I'd like to order Spaghetti Carbonara from Roma Restaurant and deliver it to 1753 Market St, Dallas, TX 75263
+   Expected:
+     🔄 place_delivery_order({"restaurant_id":"rest24","items":[{"item_id":"item6","quantity":1}],"delivery_address":{"street":"1753 Market St","city":"Dallas","state":"TX","zip":"75263"}})
+   Actual:
+     🔄 place_delivery_order({"restaurant_id":"rest24","items":[{"item_id":"item6","quantity":1}],"delivery_address":{"street":"1753 Market St","city":"Dallas","state":"TX","zip":"75263"}})

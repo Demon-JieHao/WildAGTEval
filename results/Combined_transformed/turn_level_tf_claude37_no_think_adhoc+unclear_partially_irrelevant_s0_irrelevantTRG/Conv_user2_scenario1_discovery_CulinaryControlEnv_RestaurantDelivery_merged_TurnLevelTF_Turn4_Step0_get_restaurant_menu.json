@@ -1,0 +1,303 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user2_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user2",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What food options does it have?",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest24"
+          },
+          "description": "Get menu for Roma Restaurant"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest24"
+              },
+              "description": "Get menu for Roma Restaurant"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest24"
+            },
+            "description": "Get menu for Roma Restaurant"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for Roma Restaurant\", \"sponsored_restaurants\": [{\"restaurant_id\": \"rest3\", \"name\": \"Petit France\", \"rating\": 4.6, \"cuisine_types\": [\"French\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"price\": 8.97}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 6.53}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"price\": 11.2}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Pan-Seared Salmon\", \"price\": 23.83}, {\"item_id\": \"item5\", \"name\": \"Grilled Chicken\", \"price\": 17.07}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"price\": 33.91}]}}, {\"restaurant_id\": \"rest19\", \"name\": \"Casa Miguel\", \"rating\": 4.6, \"cuisine_types\": [\"Mexican\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Nachos Supreme\", \"price\": 13.23, \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item2\", \"name\": \"Jalape\\u00f1o Poppers\", \"price\": 9.94, \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item3\", \"name\": \"Guacamole & Chips\", \"price\": 11.93}, {\"item_id\": \"item4\", \"name\": \"Quesadillas\", \"price\": 11.91, \"dietary_info\": [\"gluten-free\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Carnitas Burrito\", \"price\": 13.85}, {\"item_id\": \"item6\", \"name\": \"Chicken Tacos\", \"price\": 13.38, \"dietary_info\": [\"dairy-free\"]}]}}], \"restaurant_id\": \"rest24\", \"restaurant_name\": \"Roma Restaurant\", \"description\": \"Elegant italian cuisine in an upscale atmosphere\", \"price_range\": \"$$$$\", \"rating\": 4.6, \"cuisine_types\": [\"Italian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Calamari Fritti\", \"description\": \"Crispy fried squid with marinara sauce\", \"price\": 13.69, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Bruschetta\", \"description\": \"Toasted bread with tomatoes and basil\", \"price\": 9.58, \"category\": \"Appetizers\", \"dietary_info\": [\"vegan\"], \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Caprese Salad\", \"description\": \"Fresh mozzarella, tomatoes, and basil\", \"price\": 10.74, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"description\": \"Selection of cured meats and cheeses\", \"price\": 15.16, \"category\": \"Appetizers\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"price\": 8.97, \"source_restaurant_id\": \"rest3\", \"source_restaurant_name\": \"Petit France\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 6.53, \"source_restaurant_id\": \"rest3\", \"source_restaurant_name\": \"Petit France\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"price\": 11.2, \"source_restaurant_id\": \"rest3\", \"source_restaurant_name\": \"Petit France\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item1\", \"name\": \"Nachos Supreme\", \"price\": 13.23, \"dietary_info\": [\"gluten-free\"], \"source_restaurant_id\": \"rest19\", \"source_restaurant_name\": \"Casa Miguel\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item2\", \"name\": \"Jalape\\u00f1o Poppers\", \"price\": 9.94, \"dietary_info\": [\"gluten-free\"], \"source_restaurant_id\": \"rest19\", \"source_restaurant_name\": \"Casa Miguel\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item3\", \"name\": \"Guacamole & Chips\", \"price\": 11.93, \"source_restaurant_id\": \"rest19\", \"source_restaurant_name\": \"Casa Miguel\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item4\", \"name\": \"Quesadillas\", \"price\": 11.91, \"dietary_info\": [\"gluten-free\"], \"source_restaurant_id\": \"rest19\", \"source_restaurant_name\": \"Casa Miguel\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"price\": 12.84, \"source_restaurant_id\": \"rest20\", \"source_restaurant_name\": \"Route 66 Diner\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item2\", \"name\": \"Buffalo Wings\", \"price\": 11.47, \"source_restaurant_id\": \"rest20\", \"source_restaurant_name\": \"Route 66 Diner\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item3\", \"name\": \"Mozzarella Sticks\", \"price\": 12.07, \"source_restaurant_id\": \"rest20\", \"source_restaurant_name\": \"Route 66 Diner\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"price\": 6.69, \"dietary_info\": [\"dairy-free\"], \"source_restaurant_id\": \"rest7\", \"source_restaurant_name\": \"Delhi Garden\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 7.97, \"source_restaurant_id\": \"rest7\", \"source_restaurant_name\": \"Delhi Garden\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"price\": 8.39, \"source_restaurant_id\": \"rest7\", \"source_restaurant_name\": \"Delhi Garden\", \"source_type\": \"ai_recommended\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Chicken Parmigiana\", \"description\": \"Breaded chicken breast with marinara\", \"price\": 20.52, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"Spaghetti Carbonara\", \"description\": \"Classic pasta with pancetta and egg\", \"price\": 19.93, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Margherita Pizza\", \"description\": \"Classic pizza with tomato and mozzarella\", \"price\": 15.49, \"category\": \"Main Course\"}, {\"item_id\": \"item8\", \"name\": \"Osso Buco\", \"description\": \"Braised veal shanks with risotto\", \"price\": 30.82, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Lasagna\", \"description\": \"Layered pasta with meat sauce and cheese\", \"price\": 19.34, \"category\": \"Main Course\"}, {\"item_id\": \"item4\", \"name\": \"Pan-Seared Salmon\", \"price\": 23.83, \"source_restaurant_id\": \"rest3\", \"source_restaurant_name\": \"Petit France\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item4\", \"name\": \"Classic Burger\", \"price\": 12.53, \"source_restaurant_id\": \"rest20\", \"source_restaurant_name\": \"Route 66 Diner\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item4\", \"name\": \"Ribeye Steak\", \"price\": 34.61, \"source_restaurant_id\": \"rest7\", \"source_restaurant_name\": \"Delhi Garden\", \"source_type\": \"ai_recommended\"}]}, \"is_favorite\": false, \"ai_recommendations\": [{\"restaurant_id\": \"rest20\", \"name\": \"Route 66 Diner\", \"rating\": 4.0, \"cuisine_types\": [\"American\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"price\": 12.84}, {\"item_id\": \"item2\", \"name\": \"Buffalo Wings\", \"price\": 11.47}, {\"item_id\": \"item3\", \"name\": \"Mozzarella Sticks\", \"price\": 12.07}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Classic Burger\", \"price\": 12.53}, {\"item_id\": \"item5\", \"name\": \"Philly Cheesesteak\", \"price\": 14.3}, {\"item_id\": \"item6\", \"name\": \"Fried Chicken\", \"price\": 18.7, \"dietary_info\": [\"dairy-free\"]}]}}], \"similar_restaurants\": [{\"restaurant_id\": \"rest13\", \"name\": \"Blue Water\", \"rating\": 4.6, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"price\": 8.88}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 5.04}, {\"item_id\": \"item3\", \"name\": \"Soup of the Day\", \"price\": 8.77, \"dietary_info\": [\"dairy-free\"]}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Ribeye Steak\", \"price\": 31.71, \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item5\", \"name\": \"Grilled Chicken\", \"price\": 19.59}, {\"item_id\": \"item6\", \"name\": \"Pan-Seared Salmon\", \"price\": 25.15}]}}], \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:02:09.963086",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found the menu for Roma Restaurant, which is the top-rated Italian restaurant with a 4.6 rating. Here are their food options:\n\nAppetizers:\n- Calamari Fritti: Crispy fried squid with marinara sauce ($13.69)\n- Bruschetta: Toasted bread with tomatoes and basil ($9.58) - Popular, Vegan\n- Caprese Salad: Fresh mozzarella, tomatoes, and basil ($10.74)\n- Antipasto Platter: Selection of cured meats and cheeses ($15.16) - Gluten-free\n\nMain Course:\n- Chicken Parmigiana: Breaded chicken breast with marinara ($20.52)\n- Spaghetti Carbonara: Classic pasta with pancetta and egg ($19.93)\n- Margherita Pizza: Classic pizza with tomato and mozzarella ($15.49)\n- Osso Buco: Braised veal shanks with risotto ($30.82)\n- Lasagna: Layered pasta with meat sauce and cheese ($19.34)\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found the menu for Roma Restaurant, which is the top-rated Italian restaurant with a 4.6 rating. Here are their food options:\n\nAppetizers:\n- Calamari Fritti: Crispy fried squid with marinara sauce ($13.69)\n- Bruschetta: Toasted bread with tomatoes and basil ($9.58) - Popular, Vegan\n- Caprese Salad: Fresh mozzarella, tomatoes, and basil ($10.74)\n- Antipasto Platter: Selection of cured meats and cheeses ($15.16) - Gluten-free\n\nMain Course:\n- Chicken Parmigiana: Breaded chicken breast with marinara ($20.52)\n- Spaghetti Carbonara: Classic pasta with pancetta and egg ($19.93)\n- Margherita Pizza: Classic pizza with tomato and mozzarella ($15.49)\n- Osso Buco: Braised veal shanks with risotto ($30.82)\n- Lasagna: Layered pasta with meat sauce and cheese ($19.34)\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:06:18.113526",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:25:50.681298",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 4, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Can I place an order for Chicken Parmigiana from Roma Restaurant for delivery to 2091 Broadway, Miami, FL 33124?",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest24",
+            "items": [
+              {
+                "item_id": "item5",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "2091 Broadway",
+              "city": "Miami",
+              "state": "FL",
+              "zip": "33124"
+            }
+          },
+          "description": "Place delivery order from Roma Restaurant"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for Chicken Parmigiana from Roma Restaurant for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest24\",\n    \"items\": [\n      {\n        \"item_id\": \"item5\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2091 Broadway\",\n      \"city\": \"Miami\",\n      \"state\": \"FL\",\n      \"zip\": \"33124\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for Chicken Parmigiana from Roma Restaurant for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest24\",\n    \"items\": [\n      {\n        \"item_id\": \"item5\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2091 Broadway\",\n      \"city\": \"Miami\",\n      \"state\": \"FL\",\n      \"zip\": \"33124\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest24",
+                "items": [
+                  {
+                    "item_id": "item5",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "2091 Broadway",
+                  "city": "Miami",
+                  "state": "FL",
+                  "zip": "33124"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest24",
+              "items": [
+                {
+                  "item_id": "item5",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2091 Broadway",
+                "city": "Miami",
+                "state": "FL",
+                "zip": "33124"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Roma Restaurant\", \"order_time\": \"2025-08-21T19:12:03Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 20.52, \"tax\": 1.8, \"delivery_fee\": 5.99, \"tip\": 3.08, \"total\": 31.39, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 345.58811259269714,
+          "timestamp": "2025-08-21T19:12:03.701688",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest24",
+              "items": [
+                {
+                  "item_id": "item5",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2091 Broadway",
+                "city": "Miami",
+                "state": "FL",
+                "zip": "33124"
+              }
+            },
+            "description": "Place delivery order from Roma Restaurant"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Great! I've placed your delivery order for Chicken Parmigiana from Roma Restaurant. \n\nYour order details:\n- Order ID: dorder1\n- Restaurant: Roma Restaurant\n- Status: Order placed\n- Subtotal: $20.52\n- Tax: $1.80\n- Delivery Fee: $5.99\n- Tip: $3.08\n- Total: $31.39\n\nYour food will be delivered to 2091 Broadway, Miami, FL 33124. You can track your order status if needed.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Great! I've placed your delivery order for Chicken Parmigiana from Roma Restaurant. \n\nYour order details:\n- Order ID: dorder1\n- Restaurant: Roma Restaurant\n- Status: Order placed\n- Subtotal: $20.52\n- Tax: $1.80\n- Delivery Fee: $5.99\n- Tip: $3.08\n- Total: $31.39\n\nYour food will be delivered to 2091 Broadway, Miami, FL 33124. You can track your order status if needed.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 826.9790184497833,
+          "timestamp": "2025-08-21T19:25:50.680928",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 5,
+      "related_to_target": "Turn 4, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:25:50.683213"
+}

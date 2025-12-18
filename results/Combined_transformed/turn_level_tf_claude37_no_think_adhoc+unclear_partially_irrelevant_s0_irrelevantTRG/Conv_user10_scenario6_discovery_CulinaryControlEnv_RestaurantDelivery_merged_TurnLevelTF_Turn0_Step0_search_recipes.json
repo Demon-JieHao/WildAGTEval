@@ -1,0 +1,399 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user10",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 0.6666666666666666,
+  "step_by_step_metrics": {
+    "total_steps": 8,
+    "total_api_steps": 6,
+    "avg_steps_per_query": 4.0,
+    "avg_api_steps_per_query": 3.0,
+    "avg_step_efficiency": 1.5714285714285714
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 8,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I'm in the mood for top 10 Indian food",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "rating",
+            "cuisine": "Indian",
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "rating",
+                "cuisine": "Indian",
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "rating",
+              "cuisine": "Indian",
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"Indian\"], \"results\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}], \"query_performance_metrics\": {\"response_time_ms\": 45, \"cache_hit_rate\": 0.96, \"query_complexity_score\": 4.5}, \"content_freshness_indicators\": {\"data_staleness_hours\": 23, \"next_refresh_scheduled\": \"2024-12-15T03:00:00Z\", \"content_accuracy_confidence\": 0.94}, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:38.775335",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found several Indian recipes for you. Let me get more details about the top Indian recipes:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found several Indian recipes for you. Let me get more details about the top Indian recipes:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe10"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe10"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"description\": \"A delicious indian dish that's perfect for easy cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 31, \"servings\": 4, \"ingredients\": [{\"name\": \"turmeric\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"yogurt\", \"quantity\": \"1 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\"}, {\"name\": \"canola oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 312, \"protein\": 11, \"carbs\": 32, \"fat\": 7}, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"reviews_count\": 270, \"image_url\": \"https://example.com/images/chole.jpg\", \"tags\": [\"vegetarian\", \"breakfast\", \"indian\", \"gluten-free\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chole - A delicious indian dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:46.743286",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Let me get details about another top Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe2\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Let me get details about another top Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe2\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe2"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe2"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"cooking_time\": 48, \"servings\": 8, \"ingredients\": [{\"name\": \"rice\", \"quantity\": \"1 cup\"}, {\"name\": \"garam masala\", \"quantity\": \"1 tsp\"}, {\"name\": \"ginger\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\", \"notes\": \"minced\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 small\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"butter\", \"quantity\": \"4 oz\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 453, \"protein\": 21, \"carbs\": 67, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.4, \"reviews_count\": 407, \"image_url\": \"https://example.com/images/tandoori_chicken.jpg\", \"tags\": [\"vegetarian\", \"snack\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Tandoori Chicken - A delicious indian dish that's perfect for medium cooks.... (15 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:49:57.172298",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Let me get details about another Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe34\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Let me get details about another Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe34\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe34"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe34"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"cooking_time\": 55, \"servings\": 6, \"ingredients\": [{\"name\": \"cumin\", \"quantity\": \"1 tbsp\"}, {\"name\": \"tomatoes\", \"quantity\": \"4\"}, {\"name\": \"turmeric\", \"quantity\": \"2 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"4 cloves\"}, {\"name\": \"wine\", \"quantity\": \"1/2 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"butter\", \"quantity\": \"4 oz\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Add seasonings and adjust to taste.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Cook until golden brown and cooked through.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 397, \"protein\": 21, \"carbs\": 53, \"fat\": 10}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"reviews_count\": 286, \"image_url\": \"https://example.com/images/lamb_biryani.jpg\", \"tags\": [\"vegetarian\", \"snack\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Lamb Biryani - A delicious indian dish that's perfect for medium cooks.... (14 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:56:04.767743",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 5,
+          "llm_response": "Let me get details about another Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe26\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Let me get details about another Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe26\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe26"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe26"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe26\", \"name\": \"Vegetable Biryani\", \"description\": \"A delicious indian dish that's perfect for hard cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"hard\", \"preparation_time\": 47, \"cooking_time\": 69, \"servings\": 8, \"ingredients\": [{\"name\": \"garlic\", \"quantity\": \"5 cloves\"}, {\"name\": \"tomatoes\", \"quantity\": \"2\"}, {\"name\": \"yogurt\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"2 large\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\", \"notes\": \"fresh\"}, {\"name\": \"lemon\", \"quantity\": \"1 tsp\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cook until golden brown and cooked through.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 465, \"protein\": 22, \"carbs\": 59, \"fat\": 14}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.1, \"reviews_count\": 415, \"image_url\": \"https://example.com/images/vegetable_biryani.jpg\", \"tags\": [\"vegetarian\", \"family-friendly\", \"gourmet\", \"indian\", \"dessert\", \"advanced\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Vegetable Biryani - A delicious indian dish that's perfect for hard cooks.... (47 min, hard difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:13:25.570722",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "Let me get details about the last Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe18\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Let me get details about the last Indian recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe18\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe18"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe18"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"cooking_time\": 59, \"servings\": 3, \"ingredients\": [{\"name\": \"ginger\", \"quantity\": \"1 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\", \"notes\": \"crushed\"}, {\"name\": \"yogurt\", \"quantity\": \"1/4 cup\"}, {\"name\": \"butter\", \"quantity\": \"1 cup\"}, {\"name\": \"herbs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"3/4 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 458, \"protein\": 17, \"carbs\": 65, \"fat\": 16}, \"dietary_info\": [\"vegetarian\"], \"rating\": 3.9, \"reviews_count\": 305, \"image_url\": \"https://example.com/images/samosas.jpg\", \"tags\": [\"vegetarian\", \"lunch\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Samosas - A delicious indian dish that's perfect for medium cooks.... (35 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:16:35.460303",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 7,
+          "llm_response": "Based on my search, here are the top 5 Indian recipes I found for you:\n\n1. Chole (4.7/5 stars) - A vegetarian, gluten-free dish that takes 21 minutes to prepare. It's an easy recipe with ingredients like turmeric, onions, yogurt, and garlic.\n\n2. Tandoori Chicken (4.4/5 stars) - Takes just 15 minutes to prepare but has a medium difficulty level. Despite its name, it's listed as vegetarian and includes ingredients like rice, garam masala, and various spices.\n\n3. Lamb Biryani (4.2/5 stars) - A medium difficulty recipe with 14 minutes of preparation time. Contains cumin, turmeric, and other traditional Indian spices.\n\n4. Vegetable Biryani (4.1/5 stars) - A more challenging recipe with 47 minutes of preparation time. It's vegetarian and serves 8 people.\n\n5. Samosas (3.9/5 stars) - A medium difficulty appetizer that takes 35 minutes to prepare. These are vegetarian and perfect as a snack or starter.\n\nWould you like me to get the full recipe for any of these dishes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on my search, here are the top 5 Indian recipes I found for you:\n\n1. Chole (4.7/5 stars) - A vegetarian, gluten-free dish that takes 21 minutes to prepare. It's an easy recipe with ingredients like turmeric, onions, yogurt, and garlic.\n\n2. Tandoori Chicken (4.4/5 stars) - Takes just 15 minutes to prepare but has a medium difficulty level. Despite its name, it's listed as vegetarian and includes ingredients like rice, garam masala, and various spices.\n\n3. Lamb Biryani (4.2/5 stars) - A medium difficulty recipe with 14 minutes of preparation time. Contains cumin, turmeric, and other traditional Indian spices.\n\n4. Vegetable Biryani (4.1/5 stars) - A more challenging recipe with 47 minutes of preparation time. It's vegetarian and serves 8 people.\n\n5. Samosas (3.9/5 stars) - A medium difficulty appetizer that takes 35 minutes to prepare. These are vegetarian and perfect as a snack or starter.\n\nWould you like me to get the full recipe for any of these dishes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:21:50.244720",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.8333333333333334,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 7,
+        "api_steps": 6,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.14285714285714285,
+        "api_efficiency": 0.16666666666666666,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 7,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:34:20.234235",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Can you show me the complete information for the 2nd, 3rd, and 5th ones?",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe2"
+          },
+          "description": "Get details for recipe: Tandoori Chicken"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe34"
+          },
+          "description": "Get details for recipe: Lamb Biryani"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe18"
+          },
+          "description": "Get details for recipe: Samosas"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll show you the complete information for the 2nd, 3rd, and 5th Indian recipes from our list. I already have the details from my previous searches, so here they are:\n\n2nd Recipe: Tandoori Chicken\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 15 minutes\n- Cooking time: 48 minutes\n- Servings: 8\n- Ingredients:\n  * 1 cup rice\n  * 1 tsp garam masala\n  * 1/2 cup ginger\n  * 3 cloves garlic (minced)\n  * 1/3 cup canola oil\n  * 1 small onion\n  * Pepper to taste\n  * 1 tbsp herbs\n  * 1 cup lemon\n  * 4 oz butter\n  * Salt to taste\n- Instructions:\n  1. Heat oil in a large pan over medium heat\n  2. Add seasonings and adjust to taste\n  3. Cook until golden brown and cooked through\n  4. Adjust seasoning if needed and serve immediately\n- Nutrition: 453 calories, 21g protein, 67g carbs, 13g fat\n- Rating: 4.4/5 (407 reviews)\n\n3rd Recipe: Lamb Biryani\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 14 minutes\n- Cooking time: 55 minutes\n- Servings: 6\n- Ingredients:\n  * 1 tbsp cumin\n  * 4 tomatoes\n  * 2 tsp turmeric\n  * 2 small onions\n  * Pepper to taste\n  * 4 cloves garlic\n  * 1/2 cup wine\n  * 1 tbsp herbs\n  * 1/2 cup vinegar\n  * 4 oz butter\n- Instructions:\n  1. Heat oil in a large pan over medium heat\n  2. Add seasonings and adjust to taste\n  3. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  4. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  5. Cook until golden brown and cooked through\n  6. Garnish with fresh herbs before serving\n- Nutrition: 397 calories, 21g protein, 53g carbs, 10g fat\n- Rating: 4.2/5 (286 reviews)\n\n5th Recipe: Samosas\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 35 minutes\n- Cooking time: 59 minutes\n- Servings: 3\n- Ingredients:\n  * 1 cup ginger\n  * 1 medium onion\n  * 6 cloves garlic (crushed)\n  * 1/4 cup yogurt\n  * 1 cup butter\n  * 2 tbsp herbs\n  * Pepper to taste\n  * Salt to taste\n  * 3/4 cup wine\n  * 1/4 cup canola oil\n- Instructions:\n  1. Season meat with salt and pepper\n  2. Cover and cook for 20-30 minutes until tender\n  3. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  4. Garnish with fresh herbs before serving\n- Nutrition: 458 calories, 17g protein, 65g carbs, 16g fat\n- Rating: 3.9/5 (305 reviews)\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I'll show you the complete information for the 2nd, 3rd, and 5th Indian recipes from our list. I already have the details from my previous searches, so here they are:\n\n2nd Recipe: Tandoori Chicken\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 15 minutes\n- Cooking time: 48 minutes\n- Servings: 8\n- Ingredients:\n  * 1 cup rice\n  * 1 tsp garam masala\n  * 1/2 cup ginger\n  * 3 cloves garlic (minced)\n  * 1/3 cup canola oil\n  * 1 small onion\n  * Pepper to taste\n  * 1 tbsp herbs\n  * 1 cup lemon\n  * 4 oz butter\n  * Salt to taste\n- Instructions:\n  1. Heat oil in a large pan over medium heat\n  2. Add seasonings and adjust to taste\n  3. Cook until golden brown and cooked through\n  4. Adjust seasoning if needed and serve immediately\n- Nutrition: 453 calories, 21g protein, 67g carbs, 13g fat\n- Rating: 4.4/5 (407 reviews)\n\n3rd Recipe: Lamb Biryani\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 14 minutes\n- Cooking time: 55 minutes\n- Servings: 6\n- Ingredients:\n  * 1 tbsp cumin\n  * 4 tomatoes\n  * 2 tsp turmeric\n  * 2 small onions\n  * Pepper to taste\n  * 4 cloves garlic\n  * 1/2 cup wine\n  * 1 tbsp herbs\n  * 1/2 cup vinegar\n  * 4 oz butter\n- Instructions:\n  1. Heat oil in a large pan over medium heat\n  2. Add seasonings and adjust to taste\n  3. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  4. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  5. Cook until golden brown and cooked through\n  6. Garnish with fresh herbs before serving\n- Nutrition: 397 calories, 21g protein, 53g carbs, 10g fat\n- Rating: 4.2/5 (286 reviews)\n\n5th Recipe: Samosas\n- Description: A delicious Indian dish that's perfect for medium cooks\n- Difficulty: Medium\n- Preparation time: 35 minutes\n- Cooking time: 59 minutes\n- Servings: 3\n- Ingredients:\n  * 1 cup ginger\n  * 1 medium onion\n  * 6 cloves garlic (crushed)\n  * 1/4 cup yogurt\n  * 1 cup butter\n  * 2 tbsp herbs\n  * Pepper to taste\n  * Salt to taste\n  * 3/4 cup wine\n  * 1/4 cup canola oil\n- Instructions:\n  1. Season meat with salt and pepper\n  2. Cover and cook for 20-30 minutes until tender\n  3. Add ingredients to the pan and cook for 5-10 minutes until fragrant\n  4. Garnish with fresh herbs before serving\n- Nutrition: 458 calories, 17g protein, 65g carbs, 16g fat\n- Rating: 3.9/5 (305 reviews)\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 749.9889345169067,
+          "timestamp": "2025-08-21T19:34:20.233714",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe2"
+            },
+            "description": "Get details for recipe: Tandoori Chicken"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 1,
+        "api_steps": 0,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 3.0,
+        "api_efficiency": 0,
+        "api_success_rate": 0,
+        "task_completed": true,
+        "inference_path": [
+          "completion"
+        ],
+        "total_prediction_steps": 1,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:06:25.969233"
+}

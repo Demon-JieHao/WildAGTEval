@@ -1,0 +1,393 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario3_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user1_scenario3_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 7,
+    "total_api_steps": 5,
+    "avg_steps_per_query": 3.5,
+    "avg_api_steps_per_query": 2.5,
+    "avg_step_efficiency": 0.65
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 7,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I need 10 quick recipes under 30 minutes",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "time",
+            "max_time": 30,
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "time",
+                "max_time": 30,
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "time",
+              "max_time": 30,
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 10, \"cuisines\": [\"Asian\", \"Indian\", \"Italian\", \"Mexican\", \"Other\"], \"results\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe14\", \"name\": \"Tikka Masala Pizza\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 11, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}], \"query_performance_metrics\": {\"response_time_ms\": 45, \"cache_hit_rate\": 0.75, \"query_complexity_score\": 4.5}, \"content_freshness_indicators\": {\"data_staleness_hours\": 23, \"next_refresh_scheduled\": \"2024-12-15T03:00:00Z\", \"content_accuracy_confidence\": 0.94}, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:39.794465",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found several quick recipes that can be prepared in under 30 minutes. Here are 10 options:\n\n1. Kung Pao Chicken (13 min) - Asian cuisine, easy difficulty\n2. Schnitzel (13 min) - Medium difficulty\n3. Tikka Masala Pizza (11 min) - Medium difficulty\n4. Spaghetti Carbonara (14 min) - Italian cuisine, medium difficulty\n5. Lamb Biryani (14 min) - Indian cuisine, medium difficulty\n6. Tandoori Chicken (15 min) - Indian cuisine, medium difficulty\n7. Sweet and Sour Pork (18 min) - Asian cuisine, medium difficulty\n8. Fettuccine Bolognese (19 min) - Italian cuisine, medium difficulty\n9. Chole (21 min) - Indian cuisine, easy difficulty, vegetarian and gluten-free\n10. Salsa Verde (21 min) - Mexican cuisine, easy difficulty, vegetarian\n\nWould you like to see the details for any of these recipes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found several quick recipes that can be prepared in under 30 minutes. Here are 10 options:\n\n1. Kung Pao Chicken (13 min) - Asian cuisine, easy difficulty\n2. Schnitzel (13 min) - Medium difficulty\n3. Tikka Masala Pizza (11 min) - Medium difficulty\n4. Spaghetti Carbonara (14 min) - Italian cuisine, medium difficulty\n5. Lamb Biryani (14 min) - Indian cuisine, medium difficulty\n6. Tandoori Chicken (15 min) - Indian cuisine, medium difficulty\n7. Sweet and Sour Pork (18 min) - Asian cuisine, medium difficulty\n8. Fettuccine Bolognese (19 min) - Italian cuisine, medium difficulty\n9. Chole (21 min) - Indian cuisine, easy difficulty, vegetarian and gluten-free\n10. Salsa Verde (21 min) - Mexican cuisine, easy difficulty, vegetarian\n\nWould you like to see the details for any of these recipes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:47:04.282431",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:26:33.829972",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Show me details for recipes #1, #6, #7, and #10",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe14"
+          },
+          "description": "Get details for recipe: Tikka Masala Pizza"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe2"
+          },
+          "description": "Get details for recipe: Tandoori Chicken"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe4"
+          },
+          "description": "Get details for recipe: Sweet and Sour Pork"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe37"
+          },
+          "description": "Get details for recipe: Salsa Verde"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll get the details for those recipes for you. Let me start with the first one.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe1\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get the details for those recipes for you. Let me start with the first one.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe1\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe1"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe1"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"description\": \"A delicious other dish that's perfect for medium cooks.\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"cooking_time\": 26, \"servings\": 4, \"ingredients\": [{\"name\": \"wine\", \"quantity\": \"1 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"In a large bowl, combine dry ingredients.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 301, \"protein\": 17, \"carbs\": 42, \"fat\": 9}, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.5, \"reviews_count\": 421, \"image_url\": \"https://example.com/images/schnitzel.jpg\", \"tags\": [\"other\", \"vegetarian\", \"vegan\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Schnitzel - A delicious other dish that's perfect for medium cooks.... (13 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 19.851839780807495,
+          "timestamp": "2025-08-21T18:47:24.134320",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe14"
+            },
+            "description": "Get details for recipe: Tikka Masala Pizza"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found the details for Schnitzel. Now let me get the details for recipe #6.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I've found the details for Schnitzel. Now let me get the details for recipe #6.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe6"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 412.47452425956726,
+          "timestamp": "2025-08-21T18:54:16.609052",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe2"
+            },
+            "description": "Get details for recipe: Tandoori Chicken"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Now I'll get the details for recipe #7.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe7\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll get the details for recipe #7.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe7\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe7"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe7"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"description\": \"A delicious asian dish that's perfect for easy cooks.\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"cooking_time\": 45, \"servings\": 8, \"ingredients\": [{\"name\": \"lime\", \"quantity\": \"1/2 cup\"}, {\"name\": \"ginger\", \"quantity\": \"1 tbsp\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}, {\"name\": \"cilantro\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 307, \"protein\": 12, \"carbs\": 35, \"fat\": 10}, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"rating\": 3.9, \"reviews_count\": 288, \"image_url\": \"https://example.com/images/mango_sticky_rice.jpg\", \"tags\": [\"vegetarian\", \"vegan\", \"breakfast\", \"asian\", \"gluten-free\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Mango Sticky Rice - A delicious asian dish that's perfect for easy cooks.... (45 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 1206.3968722820282,
+          "timestamp": "2025-08-21T19:14:23.006162",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe4"
+            },
+            "description": "Get details for recipe: Sweet and Sour Pork"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Finally, let me get the details for recipe #10.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Finally, let me get the details for recipe #10.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe10\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe10"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe10"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe10\", \"name\": \"Chole\", \"description\": \"A delicious indian dish that's perfect for easy cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 31, \"servings\": 4, \"ingredients\": [{\"name\": \"turmeric\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"yogurt\", \"quantity\": \"1 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\"}, {\"name\": \"canola oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 312, \"protein\": 11, \"carbs\": 32, \"fat\": 7}, \"dietary_info\": [\"vegetarian\", \"gluten-free\"], \"rating\": 4.7, \"reviews_count\": 270, \"image_url\": \"https://example.com/images/chole.jpg\", \"tags\": [\"vegetarian\", \"breakfast\", \"indian\", \"gluten-free\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Chole - A delicious indian dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 508.30192470550537,
+          "timestamp": "2025-08-21T19:22:51.308304",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe37"
+            },
+            "description": "Get details for recipe: Salsa Verde"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 5,
+          "llm_response": "Here are the details for the four recipes you requested:\n\n1. **Schnitzel** (Recipe #1)\n   - Cuisine: Other\n   - Difficulty: Medium\n   - Preparation time: 13 minutes\n   - Cooking time: 26 minutes\n   - Dietary info: Vegetarian, Vegan\n   - Rating: 4.5/5 (421 reviews)\n   - Key ingredients: Wine, salt, pepper, canola oil, vinegar\n\n2. **Smoked Chicken** (Recipe #6)\n   - Cuisine: American\n   - Difficulty: Easy\n   - Preparation time: 43 minutes\n   - Cooking time: 39 minutes\n   - Rating: 4.8/5 (322 reviews)\n   - Key ingredients: Butter, bacon, onions, potatoes, garlic, lemon\n\n3. **Mango Sticky Rice** (Recipe #7)\n   - Cuisine: Asian\n   - Difficulty: Easy\n   - Preparation time: 45 minutes\n   - Cooking time: 45 minutes\n   - Dietary info: Vegetarian, Vegan, Gluten-free\n   - Rating: 3.9/5 (288 reviews)\n   - Key ingredients: Lime, ginger, garlic, cilantro, lemon\n\n4. **Chole** (Recipe #10)\n   - Cuisine: Indian\n   - Difficulty: Easy\n   - Preparation time: 21 minutes\n   - Cooking time: 31 minutes\n   - Dietary info: Vegetarian, Gluten-free\n   - Rating: 4.7/5 (270 reviews)\n   - Key ingredients: Turmeric, onions, yogurt, garlic, canola oil\n\nWould you like me to help you with any of these recipes specifically?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here are the details for the four recipes you requested:\n\n1. **Schnitzel** (Recipe #1)\n   - Cuisine: Other\n   - Difficulty: Medium\n   - Preparation time: 13 minutes\n   - Cooking time: 26 minutes\n   - Dietary info: Vegetarian, Vegan\n   - Rating: 4.5/5 (421 reviews)\n   - Key ingredients: Wine, salt, pepper, canola oil, vinegar\n\n2. **Smoked Chicken** (Recipe #6)\n   - Cuisine: American\n   - Difficulty: Easy\n   - Preparation time: 43 minutes\n   - Cooking time: 39 minutes\n   - Rating: 4.8/5 (322 reviews)\n   - Key ingredients: Butter, bacon, onions, potatoes, garlic, lemon\n\n3. **Mango Sticky Rice** (Recipe #7)\n   - Cuisine: Asian\n   - Difficulty: Easy\n   - Preparation time: 45 minutes\n   - Cooking time: 45 minutes\n   - Dietary info: Vegetarian, Vegan, Gluten-free\n   - Rating: 3.9/5 (288 reviews)\n   - Key ingredients: Lime, ginger, garlic, cilantro, lemon\n\n4. **Chole** (Recipe #10)\n   - Cuisine: Indian\n   - Difficulty: Easy\n   - Preparation time: 21 minutes\n   - Cooking time: 31 minutes\n   - Dietary info: Vegetarian, Gluten-free\n   - Rating: 4.7/5 (270 reviews)\n   - Key ingredients: Turmeric, onions, yogurt, garlic, canola oil\n\nWould you like me to help you with any of these recipes specifically?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 222.5209505558014,
+          "timestamp": "2025-08-21T19:26:33.829465",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 5,
+        "api_steps": 4,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.8,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 5,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false,
+          false,
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:47:54.271051"
+}

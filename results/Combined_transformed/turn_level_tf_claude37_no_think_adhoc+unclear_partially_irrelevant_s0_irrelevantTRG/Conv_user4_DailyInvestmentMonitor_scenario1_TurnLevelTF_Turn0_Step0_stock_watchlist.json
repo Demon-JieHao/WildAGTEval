@@ -1,0 +1,308 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user4_DailyInvestmentMonitor_scenario1.jsonl",
+  "filename": "Conv_user4_DailyInvestmentMonitor_scenario1.jsonl",
+  "user_id": "user4",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.75,
+  "avg_api_name_accuracy": 0.625,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.625,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.9166666666666666
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.2
+  },
+  "query_results": [
+    {
+      "query": "I should carefully examine Show me my stock watchlist",
+      "expected_api_sequence": [
+        {
+          "api": "stock_watchlist",
+          "params": {}
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "stock_watchlist",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "stock_watchlist",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"watchlist\": [\"AAPL\", \"TSLA\", \"NVDA\"], \"stocks\": [{\"symbol\": \"AAPL\", \"data\": {\"symbol\": \"AAPL\", \"name\": \"Apple Inc.\", \"price\": 167.88, \"change\": -0.4, \"change_percent\": -0.24, \"business_description\": \"Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company operates through iPhone, Mac, iPad, Wearables, Home and Accessories, and Services segments.\", \"stock_market_recent_news\": \"Apple reported strong quarterly earnings driven by iPhone 15 sales and services growth, though China sales showed weakness amid increased competition.\"}, \"formatted\": \"AAPL: $167.88 (-0.4 / -0.24%)\"}, {\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56, \"business_description\": \"Tesla Inc. designs, develops, manufactures, and sells electric vehicles, energy generation and storage systems. The company also provides vehicle service, charging infrastructure, and autonomous driving software.\", \"stock_market_recent_news\": \"Tesla's Cybertruck production ramp continues while Full Self-Driving beta expands to more users, though regulatory approval remains pending.\"}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69, \"business_description\": \"NVIDIA Corporation provides graphics processing units and related software for gaming, professional visualization, data centers, and automotive markets. Leading provider of AI computing infrastructure.\", \"stock_market_recent_news\": \"NVIDIA's data center revenue reaches record highs driven by AI demand, while gaming segment recovers from previous downturn.\"}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1946.39, \"total_change\": 5.47}, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:16:00.604224",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Here's your stock watchlist:\n\n1. Apple Inc. (AAPL): $167.88 (-0.4 / -0.24%)\n   - Recent news: Strong quarterly earnings driven by iPhone 15 sales and services growth, though China sales showed weakness amid increased competition.\n\n2. Tesla Inc. (TSLA): $927.83 (-24.42 / -2.56%)\n   - Recent news: Cybertruck production ramp continues while Full Self-Driving beta expands to more users, though regulatory approval remains pending.\n\n3. NVIDIA Corp. (NVDA): $850.68 (+30.29 / +3.69%)\n   - Recent news: Data center revenue reaches record highs driven by AI demand, while gaming segment recovers from previous downturn.\n\nTotal portfolio value: $1,946.39\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here's your stock watchlist:\n\n1. Apple Inc. (AAPL): $167.88 (-0.4 / -0.24%)\n   - Recent news: Strong quarterly earnings driven by iPhone 15 sales and services growth, though China sales showed weakness amid increased competition.\n\n2. Tesla Inc. (TSLA): $927.83 (-24.42 / -2.56%)\n   - Recent news: Cybertruck production ramp continues while Full Self-Driving beta expands to more users, though regulatory approval remains pending.\n\n3. NVIDIA Corp. (NVDA): $850.68 (+30.29 / +3.69%)\n   - Recent news: Data center revenue reaches record highs driven by AI demand, while gaming segment recovers from previous downturn.\n\nTotal portfolio value: $1,946.39\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:29:54.360956",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:50:22.321665",
+      "target_function": "stock_watchlist",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Time to thoroughly check These fluctuations are concerning, so I need to set the lights to focus mode with blue tones Set the Dining Room Light to blue",
+      "expected_api_sequence": [
+        {
+          "api": "get_user_inventory",
+          "params": {}
+        },
+        {
+          "api": "get_device_details",
+          "params": {
+            "endpoint": "37"
+          }
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "37"
+            ]
+          }
+        },
+        {
+          "api": "color_set",
+          "params": {
+            "endpoints": [
+              "37"
+            ],
+            "color": "#0000FF"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll help you set the Dining Room Light to blue. First, I need to check your device inventory to find the correct endpoint ID for the Dining Room Light.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you set the Dining Room Light to blue. First, I need to check your device inventory to find the correct endpoint ID for the Dining Room Light.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_user_inventory",
+              "params": {}
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"user_id\": \"user4\", \"name\": \"Helen Anderson\", \"home_id\": \"home3\", \"current_space\": null, \"devices\": [{\"endpoint\": \"31\", \"name\": \"Living Room TV\", \"alternate_names\": [\"Television\", \"Smart TV\"]}, {\"endpoint\": \"32\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"33\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"34\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"35\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"36\", \"name\": \"Kitchen Blinds\", \"alternate_names\": [\"Kitchen Shades\", \"Window Blinds\"]}, {\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"38\", \"name\": \"Dining Room Blinds\", \"alternate_names\": [\"Dining Room Shades\"]}, {\"endpoint\": \"39\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"40\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"41\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"42\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}, {\"endpoint\": \"43\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}, {\"endpoint\": \"44\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 603.6830725669861,
+          "timestamp": "2025-08-21T19:39:58.044079",
+          "ground_truth_api": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found your Dining Room Light with endpoint ID \"37\". Now I'll set it to blue color.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"37\"],\n    \"color\": \"#0000FF\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found your Dining Room Light with endpoint ID \"37\". Now I'll set it to blue color.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"37\"],\n    \"color\": \"#0000FF\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "color_set",
+              "params": {
+                "endpoints": [
+                  "37"
+                ],
+                "color": "#0000FF"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "37"
+              ],
+              "color": "#0000FF"
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"37\", \"name\": \"Dining Room Light\", \"success\": true, \"message\": \"Set Dining Room Light color to #0000FF\", \"color\": \"#0000FF\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 248.0991005897522,
+          "timestamp": "2025-08-21T19:44:06.143560",
+          "ground_truth_api": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "37"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've set the Dining Room Light to blue color. The light has been successfully changed to help create a focus environment.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've set the Dining Room Light to blue color. The light has been successfully changed to help create a focus environment.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 376.17745900154114,
+          "timestamp": "2025-08-21T19:50:22.321306",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "37"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.5,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.25,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 1.3333333333333333,
+        "api_efficiency": 2.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.3333333333333333,
+        "step_by_step_accuracy": [
+          true,
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:50:22.322775"
+}

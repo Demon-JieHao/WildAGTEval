@@ -1,0 +1,281 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario5_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user1_scenario5_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.41666666666666663
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "What does Alphabet do?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "alphabet_inc"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "alphabet_inc"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "alphabet_inc"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"alphabet_inc\", \"definition\": \"Alphabet Inc. (symbol: GOOGL) is Google's parent company, primarily known for its search engine, advertising business, Android operating system, YouTube, and cloud computing services.\\nCOMPREHENSIVE EQUITY RESEARCH ANALYSIS | Alphabet Inc. operates as the parent company of Google and numerous other subsidiaries, representing one of the world's most valuable technology conglomerates with a market capitalization exceeding $2.1 trillion, commanding diverse business interests spanning search, advertising, cloud computing, artificial intelligence, autonomous vehicles, and life sciences research. BUSINESS OVERVIEW: Google Search maintains 91.9% global search market share generating $307+ billion annual revenue. YouTube reaches 2.7+ billion monthly users driving $31+ billion advertising revenue. Google Cloud captures 11% market share with $33+ billion annual revenue, growing 35% YoY. Android OS powers 71% of global smartphones. Waymo leads autonomous vehicle development with 20+ million autonomous miles driven. Other Bets segment includes life sciences (Verily), smart city technology (Sidewalk Labs), and quantum computing initiatives. COMPREHENSIVE STOCK PERFORMANCE ANALYSIS (Historical Data): MULTI-YEAR TRAJECTORY & VOLATILITY ANALYSIS: 2024: $156.78 (+15.4% YoY, Vol: 28.9%), 2023: $135.89 (+8.7% YoY, Vol: 34.2%), 2022: $125.02 (-38.7% YoY, Vol: 41.8%), 2021: $203.86 (+65.3% YoY, Vol: 32.4%), 2020: $123.45 (+30.8% YoY, Vol: 45.6%). Five-year CAGR: 6.2%, Max drawdown: -45.3% (2022), Beta vs S&P 500: 1.05, Sharpe Ratio: 0.94, Information Ratio: 0.78. MONTHLY MOMENTUM ANALYSIS: Jan: $142.30 (-9.2% MoM, Vol: 95.7M), Feb: $148.75 (+4.5% MoM, Vol: 89.3M), Mar: $153.40 (+3.1% MoM, Vol: 92.6M), Apr: $158.90 (+3.6% MoM, Vol: 87.4M), May: $164.20 (+3.3% MoM, Vol: 91.8M). Recovery momentum building after January correction. WEEKLY GRANULAR ANALYSIS: June Week 1 (June 2-6): Open $164.50, High $168.90, Low $162.80, Close $167.25 (+1.9% WoW, Vol: 523M), June Week 2 (June 9-11): Open $167.40, High $171.60, Low $166.20, Close $169.80 (+1.5% WoW, Vol: 467M). Weekly ATR: $4.85, moderate volatility reflecting institutional confidence. COMPREHENSIVE DAILY PRICE ANALYSIS (May 19-Recent): Daily Closes: 164.20, 165.67, 167.23, 168.91, 167.45, 169.78, 171.34, 172.89, 170.56, 173.25, 174.91, 173.67, 176.23, 177.89, 176.45, 178.67, 180.34, 179.12, 181.78, 183.45, 182.23, 184.67, 186.23, 185.78.\\n New York Stock Exchange hosts major tech companies including UBER, ORCL.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:39.896976",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Alphabet Inc. is Google's parent company. It's primarily known for:\n\n1. Google Search (with over 91% global market share)\n2. Advertising business\n3. Android operating system (powering 71% of global smartphones)\n4. YouTube (reaching 2.7+ billion monthly users)\n5. Cloud computing services (Google Cloud with 11% market share)\n\nAlphabet also has investments in other areas like autonomous vehicles (Waymo), life sciences research (Verily), smart city technology (Sidewalk Labs), and quantum computing initiatives.\n\nThe company has a market capitalization exceeding $2.1 trillion and generates significant revenue, with Google Search alone bringing in over $307 billion annually.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Alphabet Inc. is Google's parent company. It's primarily known for:\n\n1. Google Search (with over 91% global market share)\n2. Advertising business\n3. Android operating system (powering 71% of global smartphones)\n4. YouTube (reaching 2.7+ billion monthly users)\n5. Cloud computing services (Google Cloud with 11% market share)\n\nAlphabet also has investments in other areas like autonomous vehicles (Waymo), life sciences research (Verily), smart city technology (Sidewalk Labs), and quantum computing initiatives.\n\nThe company has a market capitalization exceeding $2.1 trillion and generates significant revenue, with Google Search alone bringing in over $307 billion annually.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:55:31.546913",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:16:57.360512",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:GOOGL"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "Based on the information I provided earlier, Alphabet Inc. (GOOGL) stock has shown various price points over time. The most recent value mentioned was $186.23, though it later slightly decreased to $185.78. However, this information might not be current.\n\nWould you like me to look up the latest stock price for Alphabet Inc.?\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:GOOGL\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Based on the information I provided earlier, Alphabet Inc. (GOOGL) stock has shown various price points over time. The most recent value mentioned was $186.23, though it later slightly decreased to $185.78. However, this information might not be current.\n\nWould you like me to look up the latest stock price for Alphabet Inc.?\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:GOOGL\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NYSE:GOOGL"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NYSE:GOOGL"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Invalid symbol.\"}",
+          "api_success": false,
+          "execution_time": 15.403150796890259,
+          "timestamp": "2025-08-21T18:55:46.950110",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:GOOGL"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I apologize for the error. Let me try again with the correct stock symbol for Alphabet Inc.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:GOOGL\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I apologize for the error. Let me try again with the correct stock symbol for Alphabet Inc.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:GOOGL\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:GOOGL"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:GOOGL"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 749.6776788234711,
+          "timestamp": "2025-08-21T19:08:16.627904",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've found the current stock price for Alphabet Inc. (GOOGL). The stock is currently trading at $1038.99 on NASDAQ, which is up $46.75 (4.71%) from the previous close.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found the current stock price for Alphabet Inc. (GOOGL). The stock is currently trading at $1038.99 on NASDAQ, which is up $46.75 (4.71%) from the previous close.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 520.7320799827576,
+          "timestamp": "2025-08-21T19:16:57.360168",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 0.5,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:16:57.361606"
+}

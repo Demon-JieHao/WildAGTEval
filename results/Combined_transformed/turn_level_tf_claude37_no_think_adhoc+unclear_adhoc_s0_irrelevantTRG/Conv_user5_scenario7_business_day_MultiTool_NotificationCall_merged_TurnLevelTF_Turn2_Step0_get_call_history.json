@@ -1,0 +1,263 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario7_business_day_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user5_scenario7_business_day_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user5",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.6666666666666666,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 0.7222222222222222,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 1.0
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Check my recent calling record in about 10 weeks",
+      "expected_api_sequence": [
+        {
+          "api": "get_call_history",
+          "params": {
+            "time_range": "P10W",
+            "limit": 2
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P10W",
+                "limit": 2
+              }
+            }
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 2
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 2 call records\", \"calls\": [{\"call_id\": \"call62\", \"user_id\": \"user5\", \"contact_id\": \"contact6\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-16T22:13:22Z\", \"duration\": 0, \"status\": \"completed\", \"call_type\": \"audio\", \"device_endpoint\": \"1\", \"contact_name\": \"Lisa Morales\", \"duration_formatted\": \"0 sec\"}, {\"call_id\": \"call64\", \"user_id\": \"user5\", \"contact_id\": \"contact21\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-16T12:03:50Z\", \"duration\": 109, \"status\": \"completed\", \"call_type\": \"video\", \"device_endpoint\": \"3\", \"contact_name\": \"Sarah Jackson\", \"duration_formatted\": \"1 min 49 sec\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:53:16.448972",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've checked your call history for the past 10 weeks. You have 2 recent calls:\n\n1. An outgoing audio call to Lisa Morales on June 16, 2025 at 10:13 PM (completed, 0 seconds duration)\n2. An incoming video call from Sarah Jackson on June 16, 2025 at 12:03 PM (completed, 1 minute 49 seconds duration)\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've checked your call history for the past 10 weeks. You have 2 recent calls:\n\n1. An outgoing audio call to Lisa Morales on June 16, 2025 at 10:13 PM (completed, 0 seconds duration)\n2. An incoming video call from Sarah Jackson on June 16, 2025 at 12:03 PM (completed, 1 minute 49 seconds duration)\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:01:55.649867",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:25:57.210382",
+      "target_function": "get_call_history",
+      "target_location": "Turn 2, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Phone the last calling contact again",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "17"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:6152381741",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll help you call the last contact from your call history, which was Sarah Jackson who called you on June 16th.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550121\",\n    \"call_type\": \"video\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you call the last contact from your call history, which was Sarah Jackson who called you on June 16th.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:2025550121\",\n    \"call_type\": \"video\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:2025550121",
+                "call_type": "video"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:2025550121",
+              "call_type": "video"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Device Smart Phone is not powered on\"}",
+          "api_success": false,
+          "execution_time": 827.1610143184662,
+          "timestamp": "2025-08-21T20:15:42.810923",
+          "ground_truth_api": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'm sorry, but I can't make the call because your Smart Phone device is not powered on. Would you like me to help you turn it on first?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I'm sorry, but I can't make the call because your Smart Phone device is not powered on. Would you like me to help you turn it on first?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 614.3989961147308,
+          "timestamp": "2025-08-21T20:25:57.210069",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.3333333333333333,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 1.5,
+        "api_efficiency": 3.0,
+        "api_success_rate": 0.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 3,
+      "related_to_target": "Turn 2, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:01:34.017360"
+}

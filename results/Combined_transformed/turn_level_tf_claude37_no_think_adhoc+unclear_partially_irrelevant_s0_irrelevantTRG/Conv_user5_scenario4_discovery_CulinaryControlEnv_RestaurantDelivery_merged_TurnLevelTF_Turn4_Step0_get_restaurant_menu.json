@@ -1,0 +1,303 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user5",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "Show me the menu for the restaurant",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest4"
+          },
+          "description": "Get menu for The Burger Joint"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest4"
+              },
+              "description": "Get menu for The Burger Joint"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest4"
+            },
+            "description": "Get menu for The Burger Joint"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for The Burger Joint\", \"sponsored_restaurants\": [{\"restaurant_id\": \"rest18\", \"name\": \"Mykonos\", \"rating\": 3.6, \"cuisine_types\": [\"Mediterranean\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"House Salad\", \"price\": 11.07}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 5.96}, {\"item_id\": \"item3\", \"name\": \"Soup of the Day\", \"price\": 7.17}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"price\": 17.62}, {\"item_id\": \"item5\", \"name\": \"Pan-Seared Salmon\", \"price\": 25.69, \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"price\": 29.05, \"dietary_info\": [\"dairy-free\"]}]}}, {\"restaurant_id\": \"rest9\", \"name\": \"Casa Italiana\", \"rating\": 4.5, \"cuisine_types\": [\"Italian\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Bruschetta\", \"price\": 10.1}, {\"item_id\": \"item2\", \"name\": \"Caprese Salad\", \"price\": 12.63, \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Calamari Fritti\", \"price\": 13.67}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"price\": 16.31}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Margherita Pizza\", \"price\": 17.29}, {\"item_id\": \"item6\", \"name\": \"Spaghetti Carbonara\", \"price\": 20.2}]}}], \"restaurant_id\": \"rest4\", \"restaurant_name\": \"The Burger Joint\", \"description\": \"Family-friendly american restaurant with a welcoming atmosphere\", \"price_range\": \"$$$\", \"rating\": 4.6, \"cuisine_types\": [\"American\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"description\": \"Tortilla chips with cheese and jalape\\u00f1os\", \"price\": 12.3, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Onion Rings\", \"description\": \"Beer-battered onion rings with ranch\", \"price\": 11.1, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Buffalo Wings\", \"description\": \"Spicy chicken wings with blue cheese\", \"price\": 11.82, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item4\", \"name\": \"Mozzarella Sticks\", \"description\": \"Fried cheese sticks with marinara\", \"price\": 11.73, \"category\": \"Appetizers\"}, {\"item_id\": \"item1\", \"name\": \"House Salad\", \"price\": 11.07, \"source_restaurant_id\": \"rest18\", \"source_restaurant_name\": \"Mykonos\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 5.96, \"source_restaurant_id\": \"rest18\", \"source_restaurant_name\": \"Mykonos\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item3\", \"name\": \"Soup of the Day\", \"price\": 7.17, \"source_restaurant_id\": \"rest18\", \"source_restaurant_name\": \"Mykonos\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item1\", \"name\": \"Bruschetta\", \"price\": 10.1, \"source_restaurant_id\": \"rest9\", \"source_restaurant_name\": \"Casa Italiana\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item2\", \"name\": \"Caprese Salad\", \"price\": 12.63, \"dietary_info\": [\"dairy-free\"], \"source_restaurant_id\": \"rest9\", \"source_restaurant_name\": \"Casa Italiana\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item3\", \"name\": \"Calamari Fritti\", \"price\": 13.67, \"source_restaurant_id\": \"rest9\", \"source_restaurant_name\": \"Casa Italiana\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item4\", \"name\": \"Antipasto Platter\", \"price\": 16.31, \"source_restaurant_id\": \"rest9\", \"source_restaurant_name\": \"Casa Italiana\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item1\", \"name\": \"Antipasto Platter\", \"price\": 15.05, \"source_restaurant_id\": \"rest25\", \"source_restaurant_name\": \"La Trattoria\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item2\", \"name\": \"Caprese Salad\", \"price\": 11.85, \"dietary_info\": [\"dairy-free\"], \"source_restaurant_id\": \"rest25\", \"source_restaurant_name\": \"La Trattoria\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item3\", \"name\": \"Calamari Fritti\", \"price\": 12.08, \"dietary_info\": [\"vegetarian\"], \"source_restaurant_id\": \"rest25\", \"source_restaurant_name\": \"La Trattoria\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item4\", \"name\": \"Bruschetta\", \"price\": 11.27, \"dietary_info\": [\"vegan\"], \"source_restaurant_id\": \"rest25\", \"source_restaurant_name\": \"La Trattoria\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item1\", \"name\": \"Pot Stickers\", \"price\": 11.02, \"source_restaurant_id\": \"rest12\", \"source_restaurant_name\": \"Seoul Kitchen\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item2\", \"name\": \"Satay Skewers\", \"price\": 9.83, \"source_restaurant_id\": \"rest12\", \"source_restaurant_name\": \"Seoul Kitchen\", \"source_type\": \"ai_recommended\"}, {\"item_id\": \"item3\", \"name\": \"Tempura\", \"price\": 12.29, \"source_restaurant_id\": \"rest12\", \"source_restaurant_name\": \"Seoul Kitchen\", \"source_type\": \"ai_recommended\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Fried Chicken\", \"description\": \"Crispy fried chicken with mashed potatoes\", \"price\": 18.77, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"BBQ Ribs\", \"description\": \"Slow-cooked ribs with BBQ sauce\", \"price\": 23.89, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Classic Burger\", \"description\": \"Beef patty with lettuce, tomato, onion\", \"price\": 15.21, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item8\", \"name\": \"Fish and Chips\", \"description\": \"Beer-battered fish with french fries\", \"price\": 18.44, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Philly Cheesesteak\", \"description\": \"Sliced steak with peppers and cheese\", \"price\": 14.88, \"category\": \"Main Course\"}, {\"item_id\": \"item4\", \"name\": \"Grilled Chicken\", \"price\": 17.62, \"source_restaurant_id\": \"rest18\", \"source_restaurant_name\": \"Mykonos\", \"source_type\": \"sponsored\"}, {\"item_id\": \"item4\", \"name\": \"General Tso's Chicken\", \"price\": 17.86, \"source_restaurant_id\": \"rest12\", \"source_restaurant_name\": \"Seoul Kitchen\", \"source_type\": \"ai_recommended\"}]}, \"is_favorite\": false, \"ai_recommendations\": [{\"restaurant_id\": \"rest25\", \"name\": \"La Trattoria\", \"rating\": 4.5, \"cuisine_types\": [\"Italian\"], \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Antipasto Platter\", \"price\": 15.05}, {\"item_id\": \"item2\", \"name\": \"Caprese Salad\", \"price\": 11.85, \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item3\", \"name\": \"Calamari Fritti\", \"price\": 12.08, \"dietary_info\": [\"vegetarian\"]}, {\"item_id\": \"item4\", \"name\": \"Bruschetta\", \"price\": 11.27, \"dietary_info\": [\"vegan\"]}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Osso Buco\", \"price\": 31.7}, {\"item_id\": \"item6\", \"name\": \"Lasagna\", \"price\": 16.65}]}}], \"similar_restaurants\": [{\"restaurant_id\": \"rest3\", \"name\": \"Petit France\", \"rating\": 4.6, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Soup of the Day\", \"price\": 8.97}, {\"item_id\": \"item2\", \"name\": \"Bread Basket\", \"price\": 6.53}, {\"item_id\": \"item3\", \"name\": \"House Salad\", \"price\": 11.2}], \"Main Course\": [{\"item_id\": \"item4\", \"name\": \"Pan-Seared Salmon\", \"price\": 23.83}, {\"item_id\": \"item5\", \"name\": \"Grilled Chicken\", \"price\": 17.07}, {\"item_id\": \"item6\", \"name\": \"Ribeye Steak\", \"price\": 33.91}]}}], \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:36:04.302689",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'll show you the menu for The Burger Joint, which is one of the highest-rated American restaurants.\n\nLooking at their menu, they offer:\n\nAppetizers:\n- Loaded Nachos ($12.30) - Tortilla chips with cheese and jalape\u00f1os\n- Onion Rings ($11.10) - Beer-battered onion rings with ranch (Popular)\n- Buffalo Wings ($11.82) - Spicy chicken wings with blue cheese (Popular)\n- Mozzarella Sticks ($11.73) - Fried cheese sticks with marinara\n\nMain Course:\n- Fried Chicken ($18.77) - Crispy fried chicken with mashed potatoes\n- BBQ Ribs ($23.89) - Slow-cooked ribs with BBQ sauce\n- Classic Burger ($15.21) - Beef patty with lettuce, tomato, onion (Dairy-free)\n- Fish and Chips ($18.44) - Beer-battered fish with french fries\n- Philly Cheesesteak ($14.88) - Sliced steak with peppers and cheese\n\nThe Burger Joint has a 4.6 rating and is described as a \"Family-friendly American restaurant with a welcoming atmosphere.\" Their price range is \"$$$\" and they do offer delivery.\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I'll show you the menu for The Burger Joint, which is one of the highest-rated American restaurants.\n\nLooking at their menu, they offer:\n\nAppetizers:\n- Loaded Nachos ($12.30) - Tortilla chips with cheese and jalape\u00f1os\n- Onion Rings ($11.10) - Beer-battered onion rings with ranch (Popular)\n- Buffalo Wings ($11.82) - Spicy chicken wings with blue cheese (Popular)\n- Mozzarella Sticks ($11.73) - Fried cheese sticks with marinara\n\nMain Course:\n- Fried Chicken ($18.77) - Crispy fried chicken with mashed potatoes\n- BBQ Ribs ($23.89) - Slow-cooked ribs with BBQ sauce\n- Classic Burger ($15.21) - Beef patty with lettuce, tomato, onion (Dairy-free)\n- Fish and Chips ($18.44) - Beer-battered fish with french fries\n- Philly Cheesesteak ($14.88) - Sliced steak with peppers and cheese\n\nThe Burger Joint has a 4.6 rating and is described as a \"Family-friendly American restaurant with a welcoming atmosphere.\" Their price range is \"$$$\" and they do offer delivery.\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:38:45.511948",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:55:02.684177",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 4, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'd like to order Philly Cheesesteak from The Burger Joint and deliver it to 2152 First Ave, Houston, TX 77052",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest4",
+            "items": [
+              {
+                "item_id": "item9",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "2152 First Ave",
+              "city": "Houston",
+              "state": "TX",
+              "zip": "77052"
+            }
+          },
+          "description": "Place delivery order from The Burger Joint"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for you. Let me set that up.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest4\",\n    \"items\": [\n      {\n        \"item_id\": \"item9\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2152 First Ave\",\n      \"city\": \"Houston\",\n      \"state\": \"TX\",\n      \"zip\": \"77052\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for you. Let me set that up.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest4\",\n    \"items\": [\n      {\n        \"item_id\": \"item9\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"2152 First Ave\",\n      \"city\": \"Houston\",\n      \"state\": \"TX\",\n      \"zip\": \"77052\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest4",
+                "items": [
+                  {
+                    "item_id": "item9",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "2152 First Ave",
+                  "city": "Houston",
+                  "state": "TX",
+                  "zip": "77052"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest4",
+              "items": [
+                {
+                  "item_id": "item9",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2152 First Ave",
+                "city": "Houston",
+                "state": "TX",
+                "zip": "77052"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"order_time\": \"2025-08-21T20:47:13Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 14.88, \"tax\": 1.3, \"delivery_fee\": 5.99, \"tip\": 2.23, \"total\": 24.4, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 507.5372815132141,
+          "timestamp": "2025-08-21T20:47:13.049285",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest4",
+              "items": [
+                {
+                  "item_id": "item9",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "2152 First Ave",
+                "city": "Houston",
+                "state": "TX",
+                "zip": "77052"
+              }
+            },
+            "description": "Place delivery order from The Burger Joint"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Great! I've placed your delivery order for a Philly Cheesesteak from The Burger Joint. \n\nOrder details:\n- Order ID: dorder1\n- Status: Order placed\n- Subtotal: $14.88\n- Tax: $1.30\n- Delivery fee: $5.99\n- Tip: $2.23\n- Total: $24.40\n\nYour food will be delivered to 2152 First Ave, Houston, TX 77052. You can track your order status using the order ID if needed.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Great! I've placed your delivery order for a Philly Cheesesteak from The Burger Joint. \n\nOrder details:\n- Order ID: dorder1\n- Status: Order placed\n- Subtotal: $14.88\n- Tax: $1.30\n- Delivery fee: $5.99\n- Tip: $2.23\n- Total: $24.40\n\nYour food will be delivered to 2152 First Ave, Houston, TX 77052. You can track your order status using the order ID if needed.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 469.6343080997467,
+          "timestamp": "2025-08-21T20:55:02.683815",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 5,
+      "related_to_target": "Turn 4, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:55:02.686353"
+}

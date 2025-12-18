@@ -1,0 +1,27 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn2_Step0_weather_forecast.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn2_Step0_weather_forecast.json
+   User: user3
+   Domain: transaction
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I will travel to paris. Can you show me the 7-day forecast for Paris?
+   Expected:
+     🔍 weather_forecast({"location":"paris","days":7})
+   Actual:
+     🔍 weather_forecast({"location":"paris","days":7})
+
+   Turn 2: ✅
+   Query: Ah I just found out I have to my travel today. Tell me the current weather there.
+   Expected:
+     🔍 weather_current({"location":"paris"})
+   Actual:
+     🔍 weather_current({"location":"paris"})

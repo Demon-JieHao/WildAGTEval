@@ -1,0 +1,301 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user8_scenario10_NotificationCall_only.jsonl",
+  "filename": "Conv_user8_scenario10_NotificationCall_only.jsonl",
+  "user_id": "user8",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 0.0,
+  "avg_parameter_accuracy": 0.0,
+  "overall_score": 0.3333333333333333,
+  "step_by_step_metrics": {
+    "total_steps": 6,
+    "total_api_steps": 5,
+    "avg_steps_per_query": 6.0,
+    "avg_api_steps_per_query": 5.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 6,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.16666666666666666
+  },
+  "query_results": [
+    {
+      "query": "Oh I nearly forgot about it. Call the person.",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "61"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:9043225267",
+            "call_type": "audio",
+            "device_endpoint": "61"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_contact",
+              "params": {
+                "query": "Lisa Baker",
+                "search_type": "name",
+                "limit": 1
+              }
+            }
+          },
+          "api_call": {
+            "api": "find_contact",
+            "params": {
+              "query": "Lisa Baker",
+              "search_type": "name",
+              "limit": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 contact(s)\", \"contacts\": [{\"contact_id\": \"contact35\", \"user_id\": \"user8\", \"name\": \"Lisa Baker\", \"phone_numbers\": [{\"type\": \"mobile\", \"number\": \"904-322-5267\"}], \"email\": \"lisa58@email.com\", \"is_favorite\": false, \"devices\": [\"device45\", \"device2\"]}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:46:08.370832",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "find_call_device",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"message\": \"Found 1 call device(s)\", \"devices\": [{\"endpoint\": \"61\", \"name\": \"Smart Phone\", \"alternate_names\": [\"Mobile Phone\", \"Phone\"], \"endpoint_categories\": [\"PHONE\", \"COMMUNICATION_DEVICE\"], \"supported_apis\": [\"power_on\", \"power_off\", \"make_call\", \"send_message\"], \"groups\": [\"mobile_devices\", \"personal_devices\"], \"home_id\": \"home4\", \"state\": {\"power\": \"off\"}, \"capabilities\": [\"microphone\", \"speaker\", \"video\"]}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:46:08.370944",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I'll need to turn on your phone first before making the call to Lisa Baker.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"61\"]\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll need to turn on your phone first before making the call to Lisa Baker.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"61\"]\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "power_on",
+              "params": {
+                "endpoints": [
+                  "61"
+                ]
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "61"
+              ]
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"61\", \"name\": \"Smart Phone\", \"success\": true, \"message\": \"Turned on Smart Phone\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:54:46.629628",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "61"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Now I'll make the call to Lisa Baker.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"904-322-5267\",\n    \"device_endpoint\": \"61\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll make the call to Lisa Baker.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"904-322-5267\",\n    \"device_endpoint\": \"61\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "904-322-5267",
+                "device_endpoint": "61"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "904-322-5267",
+              "device_endpoint": "61"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Invalid phone number format.\"}",
+          "api_success": false,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:05:02.071883",
+          "ground_truth_api": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:9043225267",
+              "call_type": "audio",
+              "device_endpoint": "61"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 5,
+          "llm_response": "I need to format the phone number correctly for the call system.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:9043225267\",\n    \"device_endpoint\": \"61\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I need to format the phone number correctly for the call system.\n\n<API_CALL>\n{\n  \"api\": \"make_call\",\n  \"params\": {\n    \"phone_number\": \"D:9043225267\",\n    \"device_endpoint\": \"61\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "make_call",
+              "params": {
+                "phone_number": "D:9043225267",
+                "device_endpoint": "61"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "make_call",
+            "params": {
+              "phone_number": "D:9043225267",
+              "device_endpoint": "61"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Call initiated to D:9043225267 using Smart Phone\", \"call_id\": \"call138\", \"call_type\": \"audio\", \"status\": \"connecting\", \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:12:42.731929",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "I've initiated a call to Lisa Baker on your Smart Phone. The call is now connecting.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've initiated a call to Lisa Baker on your Smart Phone. The call is now connecting.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:17:36.725144",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.4,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 6,
+        "api_steps": 5,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 0.6,
+        "api_success_rate": 0.8,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 6,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.16666666666666666,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          true,
+          false,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T21:17:36.725550",
+      "target_function": "find_call_device",
+      "target_location": "Turn 1, Step 1",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:17:36.726743"
+}

@@ -1,0 +1,54 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+   User: user3
+   Domain: transaction
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Find top 10 Italian food recipes
+   Expected:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"Italian","limit":10})
+   Actual:
+     🔍 search_recipes({"sort_by":"rating","cuisine":"Italian","limit":10})
+
+   Turn 2: ✅
+   Query: I want to buy all the ingredients for the best recipe we found
+   Expected:
+     🔍 search_product({"query":"tomatoes","limit":1})
+     🔍 search_product({"query":"basil","limit":1})
+     🔍 search_product({"query":"oregano","limit":1})
+     🔍 search_product({"query":"mozzarella","limit":1})
+     🔍 search_product({"query":"vinegar","limit":1})
+     🔍 search_product({"query":"garlic","limit":1})
+     🔍 search_product({"query":"onions","limit":1})
+     🔄 add_to_cart({"product_id":"prod135","quantity":1})
+     🔄 add_to_cart({"product_id":"prod148","quantity":1})
+     🔄 add_to_cart({"product_id":"prod145","quantity":1})
+     🔄 add_to_cart({"product_id":"prod144","quantity":1})
+     🔄 add_to_cart({"product_id":"prod131","quantity":1})
+     🔄 add_to_cart({"product_id":"prod125","quantity":1})
+     🔄 add_to_cart({"product_id":"prod126","quantity":1})
+   Actual:
+     🔍 get_recipe_details({"recipe_id":"recipe40"})
+     🔍 search_product({"query":"tomatoes"})
+     🔄 add_to_cart({"product_id":"prod135","quantity":1})
+     🔍 search_product({"query":"basil"})
+     🔄 add_to_cart({"product_id":"prod148","quantity":1})
+     🔍 search_product({"query":"oregano"})
+     🔄 add_to_cart({"product_id":"prod145","quantity":1})
+     🔍 search_product({"query":"mozzarella"})
+     🔄 add_to_cart({"product_id":"prod144","quantity":1})
+     🔍 search_product({"query":"vinegar"})
+     🔄 add_to_cart({"product_id":"prod131","quantity":1})
+     🔍 search_product({"query":"garlic"})
+     🔄 add_to_cart({"product_id":"prod125","quantity":1})
+     🔍 search_product({"query":"onions"})
+     🔄 add_to_cart({"product_id":"prod126","quantity":1})

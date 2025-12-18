@@ -1,0 +1,36 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user2_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user2_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+   User: user2
+   Domain: investment
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 0
+   Query Warnings: 1
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: I need to What stocks are in my watchlist?
+   Expected:
+     🔍 stock_watchlist({})
+   Actual:
+     🔍 stock_watchlist({})
+
+   Turn 2: ✅
+   Query: These fluctuations are concerning, so I need to I need sharp focus lighting in blue Make the Master Bedroom Light blue
+   Expected:
+     🔍 get_user_inventory({})
+     🔍 get_device_details({"endpoint":"10"})
+     🔄 power_on({"endpoints":["10"]})
+     🔄 color_set({"endpoints":["10"],"color":"#0000FF"})
+   Actual:
+     🔍 get_user_inventory({})
+     🔄 power_on({"endpoints":["10"]})
+     🔄 color_set({"endpoints":["10"],"color":"#0000FF"})

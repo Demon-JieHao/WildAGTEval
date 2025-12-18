@@ -1,0 +1,292 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user10",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What food options does it have?",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest4"
+          },
+          "description": "Get menu for The Burger Joint"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest4"
+              },
+              "description": "Get menu for The Burger Joint"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest4"
+            },
+            "description": "Get menu for The Burger Joint"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for The Burger Joint\", \"restaurant_id\": \"rest4\", \"restaurant_name\": \"The Burger Joint\", \"description\": \"Family-friendly american restaurant with a welcoming atmosphere\", \"price_range\": \"$$$\", \"rating\": 4.6, \"cuisine_types\": [\"American\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Loaded Nachos\", \"description\": \"Tortilla chips with cheese and jalape\\u00f1os\", \"price\": 12.3, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Onion Rings\", \"description\": \"Beer-battered onion rings with ranch\", \"price\": 11.1, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item3\", \"name\": \"Buffalo Wings\", \"description\": \"Spicy chicken wings with blue cheese\", \"price\": 11.82, \"category\": \"Appetizers\", \"popular\": true}, {\"item_id\": \"item4\", \"name\": \"Mozzarella Sticks\", \"description\": \"Fried cheese sticks with marinara\", \"price\": 11.73, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Fried Chicken\", \"description\": \"Crispy fried chicken with mashed potatoes\", \"price\": 18.77, \"category\": \"Main Course\"}, {\"item_id\": \"item6\", \"name\": \"BBQ Ribs\", \"description\": \"Slow-cooked ribs with BBQ sauce\", \"price\": 23.89, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Classic Burger\", \"description\": \"Beef patty with lettuce, tomato, onion\", \"price\": 15.21, \"category\": \"Main Course\", \"dietary_info\": [\"dairy-free\"]}, {\"item_id\": \"item8\", \"name\": \"Fish and Chips\", \"description\": \"Beer-battered fish with french fries\", \"price\": 18.44, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Philly Cheesesteak\", \"description\": \"Sliced steak with peppers and cheese\", \"price\": 14.88, \"category\": \"Main Course\"}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:22:32.104747",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I can see that The Burger Joint offers a variety of American food options. They have two menu categories:\n\nAppetizers:\n- Loaded Nachos ($12.30)\n- Onion Rings ($11.10) - Popular item\n- Buffalo Wings ($11.82) - Popular item\n- Mozzarella Sticks ($11.73)\n\nMain Course:\n- Fried Chicken with mashed potatoes ($18.77)\n- BBQ Ribs with BBQ sauce ($23.89)\n- Classic Burger with lettuce, tomato, onion ($15.21) - Dairy-free\n- Fish and Chips ($18.44)\n- Philly Cheesesteak ($14.88)\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I can see that The Burger Joint offers a variety of American food options. They have two menu categories:\n\nAppetizers:\n- Loaded Nachos ($12.30)\n- Onion Rings ($11.10) - Popular item\n- Buffalo Wings ($11.82) - Popular item\n- Mozzarella Sticks ($11.73)\n\nMain Course:\n- Fried Chicken with mashed potatoes ($18.77)\n- BBQ Ribs with BBQ sauce ($23.89)\n- Classic Burger with lettuce, tomato, onion ($15.21) - Dairy-free\n- Fish and Chips ($18.44)\n- Philly Cheesesteak ($14.88)\n\nWould you like to place an order from this restaurant?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:29:26.354748",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:32:45.982471",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 4, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Please place an order for Classic Burger from The Burger Joint and send it to 3497 Broadway, Dallas, TX 75246",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest4",
+            "items": [
+              {
+                "item_id": "item7",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "3497 Broadway",
+              "city": "Dallas",
+              "state": "TX",
+              "zip": "75246"
+            }
+          },
+          "description": "Place delivery order from The Burger Joint"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for a Classic Burger from The Burger Joint for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest4\",\n    \"items\": [\n      {\n        \"item_id\": \"item7\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"3497 Broadway\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75246\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for a Classic Burger from The Burger Joint for you.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest4\",\n    \"items\": [\n      {\n        \"item_id\": \"item7\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"3497 Broadway\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75246\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest4",
+                "items": [
+                  {
+                    "item_id": "item7",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "3497 Broadway",
+                  "city": "Dallas",
+                  "state": "TX",
+                  "zip": "75246"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest4",
+              "items": [
+                {
+                  "item_id": "item7",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "3497 Broadway",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75246"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"The Burger Joint\", \"order_time\": \"2025-08-21T19:30:18Z\", \"status\": \"placed\", \"items_count\": 1, \"subtotal\": 15.21, \"tax\": 1.33, \"delivery_fee\": 5.99, \"tip\": 2.28, \"total\": 24.81, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 52.04153323173523,
+          "timestamp": "2025-08-21T19:30:18.396328",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest4",
+              "items": [
+                {
+                  "item_id": "item7",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "3497 Broadway",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75246"
+              }
+            },
+            "description": "Place delivery order from The Burger Joint"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Great! I've placed your delivery order for a Classic Burger from The Burger Joint. Your order has been confirmed with order ID: dorder1. The total cost is $24.81, which includes the burger ($15.21), tax ($1.33), delivery fee ($5.99), and tip ($2.28). Your food will be delivered to 3497 Broadway, Dallas, TX 75246. You can track the status of your order if needed.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Great! I've placed your delivery order for a Classic Burger from The Burger Joint. Your order has been confirmed with order ID: dorder1. The total cost is $24.81, which includes the burger ($15.21), tax ($1.33), delivery fee ($5.99), and tip ($2.28). Your food will be delivered to 3497 Broadway, Dallas, TX 75246. You can track the status of your order if needed.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 147.58555626869202,
+          "timestamp": "2025-08-21T19:32:45.982102",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 5,
+      "related_to_target": "Turn 4, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:32:45.984552"
+}

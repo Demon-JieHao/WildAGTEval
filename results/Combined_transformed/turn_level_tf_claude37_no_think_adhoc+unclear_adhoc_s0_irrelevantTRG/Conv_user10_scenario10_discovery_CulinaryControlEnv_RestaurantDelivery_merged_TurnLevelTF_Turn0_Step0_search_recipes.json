@@ -1,0 +1,382 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user10_scenario10_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user10_scenario10_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user10",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 1,
+  "success_rate": 0.5,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 7,
+    "total_api_steps": 5,
+    "avg_steps_per_query": 3.5,
+    "avg_api_steps_per_query": 2.5,
+    "avg_step_efficiency": 0.65
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 7,
+    "correct_predictions": 4,
+    "avg_prediction_accuracy": 0.5714285714285714
+  },
+  "query_results": [
+    {
+      "query": "I need 10 quick recipes under 15 minutes",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "time",
+            "max_time": 15,
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "time",
+                "max_time": 15,
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "time",
+              "max_time": 15,
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 6, \"cuisines\": [\"Asian\", \"Indian\", \"Italian\", \"Other\"], \"results\": [{\"recipe_id\": \"recipe14\", \"name\": \"Tikka Masala Pizza\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 11, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"]}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": []}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 6 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:45:42.718792",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found 6 quick recipes that can be prepared in 15 minutes or less:\n\n1. Tikka Masala Pizza (11 min) - Vegetarian\n2. Schnitzel (13 min) - Vegetarian, Vegan\n3. Kung Pao Chicken (13 min)\n4. Spaghetti Carbonara (14 min) - Vegetarian\n5. Lamb Biryani (14 min) - Vegetarian\n6. Tandoori Chicken (15 min) - Vegetarian\n\nWould you like to see the details for any of these recipes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I found 6 quick recipes that can be prepared in 15 minutes or less:\n\n1. Tikka Masala Pizza (11 min) - Vegetarian\n2. Schnitzel (13 min) - Vegetarian, Vegan\n3. Kung Pao Chicken (13 min)\n4. Spaghetti Carbonara (14 min) - Vegetarian\n5. Lamb Biryani (14 min) - Vegetarian\n6. Tandoori Chicken (15 min) - Vegetarian\n\nWould you like to see the details for any of these recipes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:59:06.981493",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:40:01.342823",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Give me the full details of recipes #1, #2, #4, and #6",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe14"
+          },
+          "description": "Get details for recipe: Tikka Masala Pizza"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe1"
+          },
+          "description": "Get details for recipe: Schnitzel"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe5"
+          },
+          "description": "Get details for recipe: Spaghetti Carbonara"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe2"
+          },
+          "description": "Get details for recipe: Tandoori Chicken"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll get the details for those recipes. Let me start with the first one:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe14\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get the details for those recipes. Let me start with the first one:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe14\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe14"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe14"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe14\", \"name\": \"Tikka Masala Pizza\", \"description\": \"A delicious other dish that's perfect for medium cooks.\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 11, \"cooking_time\": 36, \"servings\": 2, \"ingredients\": [{\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"butter\", \"quantity\": \"1 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\", \"notes\": \"dried\"}], \"instructions\": [\"In a large bowl, combine dry ingredients.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Remove from heat and let rest for 5 minutes.\"], \"nutrition_info\": {\"calories\": 350, \"protein\": 15, \"carbs\": 41, \"fat\": 11}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.5, \"reviews_count\": 371, \"image_url\": \"https://example.com/images/tikka_masala_pizza.jpg\", \"tags\": [\"other\", \"spicy\", \"vegetarian\", \"snack\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Tikka Masala Pizza - A delicious other dish that's perfect for medium cooks.... (11 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 667.0231289863586,
+          "timestamp": "2025-08-21T19:10:14.004665",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe14"
+            },
+            "description": "Get details for recipe: Tikka Masala Pizza"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Here are the details for the first recipe:\n\nRecipe: Tikka Masala Pizza\n- Preparation time: 11 minutes\n- Cooking time: 36 minutes\n- Difficulty: Medium\n- Cuisine: Other\n- Servings: 2\n- Dietary info: Vegetarian\n\nIngredients:\n- 1/3 cup canola oil\n- 1 cup butter\n- Salt to taste\n- 2 cloves garlic\n- Pepper to taste\n- 2 tbsp vinegar\n- 1 cup lemon\n- 1 tbsp dried herbs\n\nInstructions:\n1. In a large bowl, combine dry ingredients.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add seasonings and adjust to taste.\n4. Remove from heat and let rest for 5 minutes.\n\nNow let me get the second recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe1\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Here are the details for the first recipe:\n\nRecipe: Tikka Masala Pizza\n- Preparation time: 11 minutes\n- Cooking time: 36 minutes\n- Difficulty: Medium\n- Cuisine: Other\n- Servings: 2\n- Dietary info: Vegetarian\n\nIngredients:\n- 1/3 cup canola oil\n- 1 cup butter\n- Salt to taste\n- 2 cloves garlic\n- Pepper to taste\n- 2 tbsp vinegar\n- 1 cup lemon\n- 1 tbsp dried herbs\n\nInstructions:\n1. In a large bowl, combine dry ingredients.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add seasonings and adjust to taste.\n4. Remove from heat and let rest for 5 minutes.\n\nNow let me get the second recipe:\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe1\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe1"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe1"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"description\": \"A delicious other dish that's perfect for medium cooks.\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"cooking_time\": 26, \"servings\": 4, \"ingredients\": [{\"name\": \"wine\", \"quantity\": \"1 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"In a large bowl, combine dry ingredients.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 301, \"protein\": 17, \"carbs\": 42, \"fat\": 9}, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"rating\": 4.5, \"reviews_count\": 421, \"image_url\": \"https://example.com/images/schnitzel.jpg\", \"tags\": [\"other\", \"vegetarian\", \"vegan\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Schnitzel - A delicious other dish that's perfect for medium cooks.... (13 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 422.83589482307434,
+          "timestamp": "2025-08-21T19:17:16.840787",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe1"
+            },
+            "description": "Get details for recipe: Schnitzel"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Here are the details for the second recipe:\n\nRecipe: Schnitzel\n- Preparation time: 13 minutes\n- Cooking time: 26 minutes\n- Difficulty: Medium\n- Cuisine: Other\n- Servings: 4\n- Dietary info: Vegetarian, Vegan\n\nIngredients:\n- 1 cup wine\n- Salt to taste\n- Pepper to taste\n- 1 tbsp canola oil\n- 1/2 cup vinegar\n\nInstructions:\n1. In a large bowl, combine dry ingredients.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n4. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n5. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n6. Cover and cook for 20-30 minutes until tender.\n7. Add seasonings and adjust to taste.\n8. Serve hot with your favorite sides.\n\nNow let me get the third recipe (#4 from your list):\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe5\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Here are the details for the second recipe:\n\nRecipe: Schnitzel\n- Preparation time: 13 minutes\n- Cooking time: 26 minutes\n- Difficulty: Medium\n- Cuisine: Other\n- Servings: 4\n- Dietary info: Vegetarian, Vegan\n\nIngredients:\n- 1 cup wine\n- Salt to taste\n- Pepper to taste\n- 1 tbsp canola oil\n- 1/2 cup vinegar\n\nInstructions:\n1. In a large bowl, combine dry ingredients.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n4. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n5. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n6. Cover and cook for 20-30 minutes until tender.\n7. Add seasonings and adjust to taste.\n8. Serve hot with your favorite sides.\n\nNow let me get the third recipe (#4 from your list):\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe5\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe5"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe5"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"description\": \"A delicious italian dish that's perfect for medium cooks.\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"cooking_time\": 51, \"servings\": 4, \"ingredients\": [{\"name\": \"olive oil\", \"quantity\": \"2 tbsp\"}, {\"name\": \"tomatoes\", \"quantity\": \"3\"}, {\"name\": \"pasta\", \"quantity\": \"1 cup\"}, {\"name\": \"onions\", \"quantity\": \"2 small\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\", \"notes\": \"minced\"}, {\"name\": \"lemon\", \"quantity\": \"1 tbsp\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"herbs\", \"quantity\": \"1 tsp\"}], \"instructions\": [\"Heat olive oil in a large pan over medium heat.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Add seasonings and adjust to taste.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add seasonings and adjust to taste.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 457, \"protein\": 23, \"carbs\": 54, \"fat\": 16}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.3, \"reviews_count\": 285, \"image_url\": \"https://example.com/images/spaghetti_carbonara.jpg\", \"tags\": [\"vegetarian\", \"italian\", \"dinner\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Spaghetti Carbonara - A delicious italian dish that's perfect for medium cooks.... (14 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 62.308069944381714,
+          "timestamp": "2025-08-21T19:18:19.149057",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe5"
+            },
+            "description": "Get details for recipe: Spaghetti Carbonara"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Here are the details for the third recipe:\n\nRecipe: Spaghetti Carbonara\n- Preparation time: 14 minutes\n- Cooking time: 51 minutes\n- Difficulty: Medium\n- Cuisine: Italian\n- Servings: 4\n- Dietary info: Vegetarian\n\nIngredients:\n- 2 tbsp olive oil\n- 3 tomatoes\n- 1 cup pasta\n- 2 small onions\n- 2 cloves garlic (minced)\n- 1 tbsp lemon\n- 1 cup wine\n- 8 oz butter\n- Pepper to taste\n- 1 tsp herbs\n\nInstructions:\n1. Heat olive oil in a large pan over medium heat.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add seasonings and adjust to taste.\n4. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n5. Add seasonings and adjust to taste.\n6. Add seasonings and adjust to taste.\n7. Cook until golden brown and cooked through.\n8. Adjust seasoning if needed and serve immediately.\n\nNow let me get the fourth recipe (#6 from your list):\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe2\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Here are the details for the third recipe:\n\nRecipe: Spaghetti Carbonara\n- Preparation time: 14 minutes\n- Cooking time: 51 minutes\n- Difficulty: Medium\n- Cuisine: Italian\n- Servings: 4\n- Dietary info: Vegetarian\n\nIngredients:\n- 2 tbsp olive oil\n- 3 tomatoes\n- 1 cup pasta\n- 2 small onions\n- 2 cloves garlic (minced)\n- 1 tbsp lemon\n- 1 cup wine\n- 8 oz butter\n- Pepper to taste\n- 1 tsp herbs\n\nInstructions:\n1. Heat olive oil in a large pan over medium heat.\n2. Stir in remaining ingredients and bring to a simmer.\n3. Add seasonings and adjust to taste.\n4. Add ingredients to the pan and cook for 5-10 minutes until fragrant.\n5. Add seasonings and adjust to taste.\n6. Add seasonings and adjust to taste.\n7. Cook until golden brown and cooked through.\n8. Adjust seasoning if needed and serve immediately.\n\nNow let me get the fourth recipe (#6 from your list):\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe2\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe2"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe2"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"description\": \"A delicious indian dish that's perfect for medium cooks.\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"cooking_time\": 48, \"servings\": 8, \"ingredients\": [{\"name\": \"rice\", \"quantity\": \"1 cup\"}, {\"name\": \"garam masala\", \"quantity\": \"1 tsp\"}, {\"name\": \"ginger\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"3 cloves\", \"notes\": \"minced\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 small\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lemon\", \"quantity\": \"1 cup\"}, {\"name\": \"butter\", \"quantity\": \"4 oz\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Add seasonings and adjust to taste.\", \"Cook until golden brown and cooked through.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 453, \"protein\": 21, \"carbs\": 67, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.4, \"reviews_count\": 407, \"image_url\": \"https://example.com/images/tandoori_chicken.jpg\", \"tags\": [\"vegetarian\", \"snack\", \"indian\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Tandoori Chicken - A delicious indian dish that's perfect for medium cooks.... (15 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 982.7328252792358,
+          "timestamp": "2025-08-21T19:34:41.882101",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe2"
+            },
+            "description": "Get details for recipe: Tandoori Chicken"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 5,
+          "llm_response": "Here are the details for the fourth recipe:\n\nRecipe: Tandoori Chicken\n- Preparation time: 15 minutes\n- Cooking time: 48 minutes\n- Difficulty: Medium\n- Cuisine: Indian\n- Servings: 8\n- Dietary info: Vegetarian\n\nIngredients:\n- 1 cup rice\n- 1 tsp garam masala\n- 1/2 cup ginger\n- 3 cloves garlic (minced)\n- 1/3 cup canola oil\n- 1 small onion\n- Pepper to taste\n- 1 tbsp herbs\n- 1 cup lemon\n- 4 oz butter\n- Salt to taste\n\nInstructions:\n1. Heat oil in a large pan over medium heat.\n2. Add seasonings and adjust to taste.\n3. Cook until golden brown and cooked through.\n4. Adjust seasoning if needed and serve immediately.\n\nI've now provided the full details for all four recipes you requested (#1 Tikka Masala Pizza, #2 Schnitzel, #4 Spaghetti Carbonara, and #6 Tandoori Chicken).\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here are the details for the fourth recipe:\n\nRecipe: Tandoori Chicken\n- Preparation time: 15 minutes\n- Cooking time: 48 minutes\n- Difficulty: Medium\n- Cuisine: Indian\n- Servings: 8\n- Dietary info: Vegetarian\n\nIngredients:\n- 1 cup rice\n- 1 tsp garam masala\n- 1/2 cup ginger\n- 3 cloves garlic (minced)\n- 1/3 cup canola oil\n- 1 small onion\n- Pepper to taste\n- 1 tbsp herbs\n- 1 cup lemon\n- 4 oz butter\n- Salt to taste\n\nInstructions:\n1. Heat oil in a large pan over medium heat.\n2. Add seasonings and adjust to taste.\n3. Cook until golden brown and cooked through.\n4. Adjust seasoning if needed and serve immediately.\n\nI've now provided the full details for all four recipes you requested (#1 Tikka Masala Pizza, #2 Schnitzel, #4 Spaghetti Carbonara, and #6 Tandoori Chicken).\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 319.4599778652191,
+          "timestamp": "2025-08-21T19:40:01.342300",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 5,
+        "api_steps": 4,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.8,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 5,
+        "correct_predictions": 4,
+        "per_step_accuracy_rate": 0.8,
+        "step_by_step_accuracy": [
+          true,
+          true,
+          true,
+          true,
+          null
+        ]
+      },
+      "success": true,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:10:05.049955"
+}

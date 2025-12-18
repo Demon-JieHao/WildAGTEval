@@ -1,0 +1,371 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user10_DailyInvestmentMonitor_scenario2.jsonl",
+  "filename": "Conv_user10_DailyInvestmentMonitor_scenario2.jsonl",
+  "user_id": "user10",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 1,
+  "success_rate": 0.5,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 7,
+    "total_api_steps": 5,
+    "avg_steps_per_query": 3.5,
+    "avg_api_steps_per_query": 2.5,
+    "avg_step_efficiency": 0.65
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 7,
+    "correct_predictions": 4,
+    "avg_prediction_accuracy": 0.5714285714285714
+  },
+  "query_results": [
+    {
+      "query": "I'm ready to review Show me my stock watchlist",
+      "expected_api_sequence": [
+        {
+          "api": "stock_watchlist",
+          "params": {}
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "stock_watchlist",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "stock_watchlist",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"watchlist\": [\"AMZN\", \"NVDA\", \"TSLA\"], \"stocks\": [{\"symbol\": \"AMZN\", \"data\": {\"symbol\": \"AMZN\", \"name\": \"Amazon.com Inc.\", \"price\": 60.6, \"change\": -3.15, \"change_percent\": -4.94}, \"formatted\": \"AMZN: $60.6 (-3.15 / -4.94%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}, {\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1839.11, \"total_change\": 2.72}, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:45:42.681772",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Here's your stock watchlist:\n\n- Amazon (AMZN): $60.60 (-$3.15, -4.94%)\n- NVIDIA (NVDA): $850.68 (+$30.29, +3.69%)\n- Tesla (TSLA): $927.83 (-$24.42, -2.56%)\n\nNVIDIA is performing well today with a 3.69% gain, while Amazon and Tesla are down 4.94% and 2.56% respectively.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here's your stock watchlist:\n\n- Amazon (AMZN): $60.60 (-$3.15, -4.94%)\n- NVIDIA (NVDA): $850.68 (+$30.29, +3.69%)\n- Tesla (TSLA): $927.83 (-$24.42, -2.56%)\n\nNVIDIA is performing well today with a 3.69% gain, while Amazon and Tesla are down 4.94% and 2.56% respectively.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:11:36.972619",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:14:10.921091",
+      "target_function": "stock_watchlist",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I want to see Given today's significant changes, I should I need sharp focus lighting in blue Set the Bedroom Lamp to blue",
+      "expected_api_sequence": [
+        {
+          "api": "get_user_inventory",
+          "params": {}
+        },
+        {
+          "api": "get_device_details",
+          "params": {
+            "endpoint": "22"
+          }
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "22"
+            ]
+          }
+        },
+        {
+          "api": "color_set",
+          "params": {
+            "endpoints": [
+              "22"
+            ],
+            "color": "#0000FF"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll help you set the Bedroom Lamp to blue for better focus. First, I need to check your device inventory to find the Bedroom Lamp.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you set the Bedroom Lamp to blue for better focus. First, I need to check your device inventory to find the Bedroom Lamp.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_user_inventory",
+              "params": {}
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"user_id\": \"user10\", \"name\": \"Jennifer Gonzalez\", \"home_id\": \"home2\", \"current_space\": null, \"devices\": [{\"endpoint\": \"18\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"19\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"20\", \"name\": \"Kitchen Speaker\", \"alternate_names\": [\"Kitchen Audio\", \"Smart Speaker\"]}, {\"endpoint\": \"21\", \"name\": \"Dining Room Light\", \"alternate_names\": [\"Dining Light\", \"Chandelier\"]}, {\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"23\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"24\", \"name\": \"Master Bedroom TV\", \"alternate_names\": [\"Bedroom TV\", \"Master TV\"]}, {\"endpoint\": \"25\", \"name\": \"Master Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"26\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"27\", \"name\": \"Office Light\", \"alternate_names\": [\"Office Light\", \"Desk Light\"]}, {\"endpoint\": \"28\", \"name\": \"Office Speaker\", \"alternate_names\": [\"Office Audio\"]}, {\"endpoint\": \"29\", \"name\": \"Garage Door Opener\", \"alternate_names\": [\"Garage Door\"]}, {\"endpoint\": \"30\", \"name\": \"Front Door Lock\", \"alternate_names\": [\"Door Lock\", \"Front Lock\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"dining_room\", \"name\": \"Dining Room\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"master_bedroom\", \"name\": \"Master Bedroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"office\", \"name\": \"Office\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"garage\", \"name\": \"Garage\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"downstairs\", \"name\": \"Downstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"upstairs\", \"name\": \"Upstairs\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"security\", \"name\": \"Security\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"climate\", \"name\": \"Climate\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"whole_home\", \"name\": \"Whole Home\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 720.1927201747894,
+          "timestamp": "2025-08-21T19:23:37.165388",
+          "ground_truth_api": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Now I'll get the details of the Bedroom Lamp to make sure it supports color settings.\n\n<API_CALL>\n{\n  \"api\": \"get_device_details\",\n  \"params\": {\n    \"endpoint\": \"22\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll get the details of the Bedroom Lamp to make sure it supports color settings.\n\n<API_CALL>\n{\n  \"api\": \"get_device_details\",\n  \"params\": {\n    \"endpoint\": \"22\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_device_details",
+              "params": {
+                "endpoint": "22"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "22"
+            }
+          },
+          "api_result": "{\"success\": true, \"device\": {\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"], \"endpoint_categories\": [\"LIGHT\"], \"supported_apis\": [\"power_on\", \"power_off\", \"brightness_adjust\", \"color_set\"], \"groups\": [\"bedroom\", \"upstairs\", \"all_lights\"], \"home_id\": \"home2\", \"state\": {\"power\": \"off\", \"brightness\": 59, \"color\": \"#FFFF00\"}}, \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 1203.2867424488068,
+          "timestamp": "2025-08-21T19:43:40.452500",
+          "ground_truth_api": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "22"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I'll turn on the Bedroom Lamp first since it's currently off.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"22\"]\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll turn on the Bedroom Lamp first since it's currently off.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"22\"]\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "power_on",
+              "params": {
+                "endpoints": [
+                  "22"
+                ]
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "22"
+              ]
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"success\": true, \"message\": \"Turned on Bedroom Lamp\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 512.3354678153992,
+          "timestamp": "2025-08-21T19:52:12.788117",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "22"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Now I'll set the Bedroom Lamp to blue color for better focus.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"22\"],\n    \"color\": \"#0000FF\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll set the Bedroom Lamp to blue color for better focus.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"22\"],\n    \"color\": \"#0000FF\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "color_set",
+              "params": {
+                "endpoints": [
+                  "22"
+                ],
+                "color": "#0000FF"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "22"
+              ],
+              "color": "#0000FF"
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"22\", \"name\": \"Bedroom Lamp\", \"success\": true, \"message\": \"Set Bedroom Lamp color to #0000FF\", \"color\": \"#0000FF\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 714.5183396339417,
+          "timestamp": "2025-08-21T20:04:07.306593",
+          "ground_truth_api": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "22"
+              ],
+              "color": "#0000FF"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 5,
+          "llm_response": "I've set your Bedroom Lamp to blue for better focus. The lamp is now on with a blue color that should help you concentrate while reviewing your stock information.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've set your Bedroom Lamp to blue for better focus. The lamp is now on with a blue color that should help you concentrate while reviewing your stock information.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 603.6137280464172,
+          "timestamp": "2025-08-21T20:14:10.920612",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 5,
+        "api_steps": 4,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.8,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 5,
+        "correct_predictions": 4,
+        "per_step_accuracy_rate": 0.8,
+        "step_by_step_accuracy": [
+          true,
+          true,
+          true,
+          true,
+          null
+        ]
+      },
+      "success": true,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:14:10.922242"
+}

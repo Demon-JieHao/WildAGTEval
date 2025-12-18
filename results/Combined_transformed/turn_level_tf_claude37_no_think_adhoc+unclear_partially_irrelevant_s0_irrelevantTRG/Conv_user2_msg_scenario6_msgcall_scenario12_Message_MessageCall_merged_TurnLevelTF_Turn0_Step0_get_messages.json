@@ -1,0 +1,205 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_msg_scenario6_msgcall_scenario12_Message_MessageCall_merged.jsonl",
+  "filename": "Conv_user2_msg_scenario6_msgcall_scenario12_Message_MessageCall_merged.jsonl",
+  "user_id": "user2",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 3,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 3.0,
+    "avg_api_steps_per_query": 2.0,
+    "avg_step_efficiency": 0.6666666666666666
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 3,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.3333333333333333
+  },
+  "query_results": [
+    {
+      "query": "Text the person who last messaged me: 'Hi there! Hope you're having a great day!'",
+      "expected_api_sequence": [
+        {
+          "api": "get_messages",
+          "params": {
+            "limit": 10
+          },
+          "description": "Get recent messages to find most recent contact"
+        },
+        {
+          "api": "send_message",
+          "params": {
+            "contact_id": "contact22",
+            "content": "Hi there! Hope you're having a great day!"
+          },
+          "description": "Send message to recent contact Helen Gomez"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_messages",
+              "params": {
+                "limit": 10
+              },
+              "description": "Get recent messages to find most recent contact"
+            }
+          },
+          "api_call": {
+            "api": "get_messages",
+            "params": {
+              "limit": 10
+            },
+            "description": "Get recent messages to find most recent contact"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 6 messages across all contacts\", \"messages\": [{\"message_id\": \"msg15\", \"user_id\": \"user2\", \"contact_id\": \"contact22\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-14T05:44:10Z\", \"content\": \"Great job!\", \"read\": true, \"contact_name\": \"Helen Gomez\", \"engagement_score\": 63, \"response_time_percentile\": 65, \"conversation_health_index\": 0.95, \"upsell_opportunity_score\": 72, \"retention_risk_indicator\": \"low\", \"cross_sell_product_suggestions\": [\"file_sharing\", \"group_chat\"], \"delivery_latency_ms\": 83, \"encryption_overhead_factor\": 1.0, \"storage_optimization_tier\": \"priority\", \"predicted_next_contact_hours\": 112, \"sentiment_trend_vector\": [0.45, 0.85, 0.95], \"communication_pattern_cluster\": \"sporadic_long\", \"rendering_priority_score\": 73, \"cache_efficiency_rating\": 0.85, \"network_path_optimization\": \"edge_cached\", \"data_retention_policy_days\": 30, \"gdpr_classification\": \"business_correspondence\", \"audit_trail_reference\": \"msg_audit_2024_2245\"}, {\"message_id\": \"msg14\", \"user_id\": \"user2\", \"contact_id\": \"contact22\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-14T05:37:10Z\", \"content\": \"You're welcome!\", \"read\": true, \"contact_name\": \"Helen Gomez\", \"engagement_score\": 56, \"response_time_percentile\": 94, \"conversation_health_index\": 0.82, \"upsell_opportunity_score\": 55, \"retention_risk_indicator\": \"high\", \"cross_sell_product_suggestions\": [\"voice_notes\", \"read_receipts\"], \"delivery_latency_ms\": 54, \"encryption_overhead_factor\": 1.14, \"storage_optimization_tier\": \"archived\", \"predicted_next_contact_hours\": 71, \"sentiment_trend_vector\": [0.72, 0.98, 0.42], \"communication_pattern_cluster\": \"burst_messaging\", \"rendering_priority_score\": 94, \"cache_efficiency_rating\": 0.78, \"network_path_optimization\": \"cdn_routed\", \"data_retention_policy_days\": 180, \"gdpr_classification\": \"promotional_content\", \"audit_trail_reference\": \"msg_audit_2024_2162\"}, {\"message_id\": \"msg11\", \"user_id\": \"user2\", \"contact_id\": \"contact30\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-12T05:57:38Z\", \"content\": \"How about dinner plans?\", \"read\": true, \"contact_name\": \"Stephen Morales\", \"engagement_score\": 76, \"response_time_percentile\": 61, \"conversation_health_index\": 0.93, \"upsell_opportunity_score\": 75, \"retention_risk_indicator\": \"high\", \"cross_sell_product_suggestions\": [\"file_sharing\", \"group_chat\"], \"delivery_latency_ms\": 168, \"encryption_overhead_factor\": 1.11, \"storage_optimization_tier\": \"priority\", \"predicted_next_contact_hours\": 116, \"sentiment_trend_vector\": [0.83, 0.77, 0.43], \"communication_pattern_cluster\": \"sporadic_long\", \"rendering_priority_score\": 75, \"cache_efficiency_rating\": 0.87, \"network_path_optimization\": \"edge_cached\", \"data_retention_policy_days\": 365, \"gdpr_classification\": \"business_correspondence\", \"audit_trail_reference\": \"msg_audit_2024_1913\"}, {\"message_id\": \"msg13\", \"user_id\": \"user2\", \"contact_id\": \"contact24\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-11T19:20:28Z\", \"content\": \"Thank you!\", \"read\": true, \"contact_name\": \"Amanda Wright\", \"engagement_score\": 49, \"response_time_percentile\": 83, \"conversation_health_index\": 0.69, \"upsell_opportunity_score\": 38, \"retention_risk_indicator\": \"medium\", \"cross_sell_product_suggestions\": [\"message_encryption\", \"backup_service\"], \"delivery_latency_ms\": 226, \"encryption_overhead_factor\": 1.13, \"storage_optimization_tier\": \"compressed\", \"predicted_next_contact_hours\": 30, \"sentiment_trend_vector\": [0.99, 0.51, 0.69], \"communication_pattern_cluster\": \"scheduled_regular\", \"rendering_priority_score\": 74, \"cache_efficiency_rating\": 0.71, \"network_path_optimization\": \"peer_relay\", \"data_retention_policy_days\": 730, \"gdpr_classification\": \"system_notification\", \"audit_trail_reference\": \"msg_audit_2024_2079\"}, {\"message_id\": \"msg12\", \"user_id\": \"user2\", \"contact_id\": \"contact24\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-11T19:00:28Z\", \"content\": \"Thank you!\", \"read\": true, \"contact_name\": \"Amanda Wright\", \"engagement_score\": 42, \"response_time_percentile\": 72, \"conversation_health_index\": 0.56, \"upsell_opportunity_score\": 92, \"retention_risk_indicator\": \"low\", \"cross_sell_product_suggestions\": [\"premium_messaging\", \"video_calls\"], \"delivery_latency_ms\": 197, \"encryption_overhead_factor\": 1.12, \"storage_optimization_tier\": \"standard\", \"predicted_next_contact_hours\": 157, \"sentiment_trend_vector\": [0.56, 0.64, 0.96], \"communication_pattern_cluster\": \"frequent_short\", \"rendering_priority_score\": 95, \"cache_efficiency_rating\": 0.94, \"network_path_optimization\": \"direct\", \"data_retention_policy_days\": 90, \"gdpr_classification\": \"personal_communication\", \"audit_trail_reference\": \"msg_audit_2024_1996\"}, {\"message_id\": \"msg10\", \"user_id\": \"user2\", \"contact_id\": \"contact3\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-09T11:46:19Z\", \"content\": \"Hi! I'm doing well.\", \"read\": true, \"contact_name\": \"Frank Diaz\", \"engagement_score\": 69, \"response_time_percentile\": 90, \"conversation_health_index\": 0.8, \"upsell_opportunity_score\": 58, \"retention_risk_indicator\": \"medium\", \"cross_sell_product_suggestions\": [\"voice_notes\", \"read_receipts\"], \"delivery_latency_ms\": 139, \"encryption_overhead_factor\": 1.1, \"storage_optimization_tier\": \"archived\", \"predicted_next_contact_hours\": 75, \"sentiment_trend_vector\": [0.4, 0.9, 0.7], \"communication_pattern_cluster\": \"burst_messaging\", \"rendering_priority_score\": 96, \"cache_efficiency_rating\": 0.8, \"network_path_optimization\": \"cdn_routed\", \"data_retention_policy_days\": 30, \"gdpr_classification\": \"promotional_content\", \"audit_trail_reference\": \"msg_audit_2024_1830\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:40.751313",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'll send a message to Helen Gomez, who was the last person to message you.\n\n<API_CALL>\n{\n  \"api\": \"send_message\",\n  \"params\": {\n    \"contact_id\": \"contact22\",\n    \"content\": \"Hi there! Hope you're having a great day!\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll send a message to Helen Gomez, who was the last person to message you.\n\n<API_CALL>\n{\n  \"api\": \"send_message\",\n  \"params\": {\n    \"contact_id\": \"contact22\",\n    \"content\": \"Hi there! Hope you're having a great day!\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "send_message",
+              "params": {
+                "contact_id": "contact22",
+                "content": "Hi there! Hope you're having a great day!"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "send_message",
+            "params": {
+              "contact_id": "contact22",
+              "content": "Hi there! Hope you're having a great day!"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Message sent to Helen Gomez\", \"message_id\": \"msg59\", \"contact_name\": \"Helen Gomez\", \"timestamp\": \"2025-08-21T18:44:48.608067Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:48.607962",
+          "ground_truth_api": {
+            "api": "send_message",
+            "params": {
+              "contact_id": "contact22",
+              "content": "Hi there! Hope you're having a great day!"
+            },
+            "description": "Send message to recent contact Helen Gomez"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've sent your message \"Hi there! Hope you're having a great day!\" to Helen Gomez.\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've sent your message \"Hi there! Hope you're having a great day!\" to Helen Gomez.\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:55:30.521319",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.6666666666666666,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.3333333333333333,
+        "step_by_step_accuracy": [
+          null,
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T18:55:30.521570",
+      "target_function": "get_messages",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-08-21T18:55:30.522899"
+}

@@ -1,0 +1,338 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user3",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 1,
+  "success_rate": 0.5,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 6,
+    "total_api_steps": 4,
+    "avg_steps_per_query": 3.0,
+    "avg_api_steps_per_query": 2.0,
+    "avg_step_efficiency": 0.625
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 6,
+    "correct_predictions": 3,
+    "avg_prediction_accuracy": 0.5
+  },
+  "query_results": [
+    {
+      "query": "I'm looking for top 10 Mexican cuisine",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "rating",
+            "cuisine": "Mexican",
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "rating",
+                "cuisine": "Mexican",
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "rating",
+              "cuisine": "Mexican",
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"Mexican\"], \"results\": [{\"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"]}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:14:01.891199",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found 3 Mexican cuisine recipes for you:\n\n1. Mexican Rice (recipe16)\n   - Difficulty: Easy\n   - Preparation time: 32 minutes\n   - Rating: 4.6/5\n   - Dietary info: Vegetarian\n\n2. Chicken Tacos (recipe31)\n   - Difficulty: Medium\n   - Preparation time: 35 minutes\n   - Rating: 4.3/5\n   - Dietary info: Vegetarian\n\n3. Salsa Verde (recipe37)\n   - Difficulty: Easy\n   - Preparation time: 21 minutes\n   - Rating: 3.8/5\n   - Dietary info: Vegetarian\n\nWould you like to see more details about any of these recipes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I found 3 Mexican cuisine recipes for you:\n\n1. Mexican Rice (recipe16)\n   - Difficulty: Easy\n   - Preparation time: 32 minutes\n   - Rating: 4.6/5\n   - Dietary info: Vegetarian\n\n2. Chicken Tacos (recipe31)\n   - Difficulty: Medium\n   - Preparation time: 35 minutes\n   - Rating: 4.3/5\n   - Dietary info: Vegetarian\n\n3. Salsa Verde (recipe37)\n   - Difficulty: Easy\n   - Preparation time: 21 minutes\n   - Rating: 3.8/5\n   - Dietary info: Vegetarian\n\nWould you like to see more details about any of these recipes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:21:42.177602",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:54:54.799571",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Tell me more about the 1st, 2nd, and 3rd ones",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe16"
+          },
+          "description": "Get details for recipe: Mexican Rice"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe31"
+          },
+          "description": "Get details for recipe: Chicken Tacos"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe37"
+          },
+          "description": "Get details for recipe: Salsa Verde"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll get detailed information about each of these Mexican recipes for you. Let me start with the first one - Mexican Rice.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe16\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get detailed information about each of these Mexican recipes for you. Let me start with the first one - Mexican Rice.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe16\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe16"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe16"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe16\", \"name\": \"Mexican Rice\", \"description\": \"A delicious mexican dish that's perfect for easy cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 32, \"cooking_time\": 51, \"servings\": 8, \"ingredients\": [{\"name\": \"onions\", \"quantity\": \"3 large\"}, {\"name\": \"avocado\", \"quantity\": \"1 tbsp\"}, {\"name\": \"cilantro\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lime\", \"quantity\": \"2 tbsp\"}, {\"name\": \"butter\", \"quantity\": \"100g\"}, {\"name\": \"garlic\", \"quantity\": \"5 cloves\", \"notes\": \"crushed\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 445, \"protein\": 22, \"carbs\": 55, \"fat\": 13}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.6, \"reviews_count\": 392, \"image_url\": \"https://example.com/images/mexican_rice.jpg\", \"tags\": [\"vegetarian\", \"beginner-friendly\", \"snack\", \"quick\", \"mexican\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Mexican Rice - A delicious mexican dish that's perfect for easy cooks.... (32 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 1444.1927967071533,
+          "timestamp": "2025-08-21T19:45:46.370441",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe16"
+            },
+            "description": "Get details for recipe: Mexican Rice"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Now I'll get the details for the second recipe - Chicken Tacos.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe31\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll get the details for the second recipe - Chicken Tacos.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe31\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe31"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe31"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"description\": \"A delicious mexican dish that's perfect for medium cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"cooking_time\": 45, \"servings\": 8, \"ingredients\": [{\"name\": \"chili powder\", \"quantity\": \"1 tbsp\"}, {\"name\": \"lime\", \"quantity\": \"1/2 cup\"}, {\"name\": \"cumin\", \"quantity\": \"1 tbsp\"}, {\"name\": \"cheddar cheese\", \"quantity\": \"1/2 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"vinegar\", \"quantity\": \"1 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1/2 cup\"}, {\"name\": \"lemon\", \"quantity\": \"2 tbsp\"}, {\"name\": \"onions\", \"quantity\": \"2 medium\"}, {\"name\": \"wine\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}, {\"name\": \"butter\", \"quantity\": \"1/2 cup\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Remove from heat and let rest for 5 minutes.\"], \"nutrition_info\": {\"calories\": 402, \"protein\": 16, \"carbs\": 48, \"fat\": 9}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.3, \"reviews_count\": 353, \"image_url\": \"https://example.com/images/chicken_tacos.jpg\", \"tags\": [\"vegetarian\", \"mexican\", \"dessert\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chicken Tacos - A delicious mexican dish that's perfect for medium cooks.... (35 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 110.38059592247009,
+          "timestamp": "2025-08-21T19:47:36.751248",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe31"
+            },
+            "description": "Get details for recipe: Chicken Tacos"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Finally, let me get the details for the third recipe - Salsa Verde.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe37\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Finally, let me get the details for the third recipe - Salsa Verde.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe37\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe37"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe37"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"description\": \"A delicious mexican dish that's perfect for easy cooks.\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"cooking_time\": 58, \"servings\": 3, \"ingredients\": [{\"name\": \"lime\", \"quantity\": \"2 tbsp\"}, {\"name\": \"beans\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 small\"}, {\"name\": \"tomatoes\", \"quantity\": \"4\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"wine\", \"quantity\": \"3/4 cup\"}], \"instructions\": [\"Heat oil in a large pan over medium heat.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 474, \"protein\": 19, \"carbs\": 55, \"fat\": 14}, \"dietary_info\": [\"vegetarian\"], \"rating\": 3.8, \"reviews_count\": 447, \"image_url\": \"https://example.com/images/salsa_verde.jpg\", \"tags\": [\"vegetarian\", \"beginner-friendly\", \"snack\", \"quick\", \"mexican\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Salsa Verde - A delicious mexican dish that's perfect for easy cooks.... (21 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 230.13405323028564,
+          "timestamp": "2025-08-21T19:51:26.885533",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe37"
+            },
+            "description": "Get details for recipe: Salsa Verde"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 4,
+          "llm_response": "Here are the details for all three Mexican recipes:\n\n1. **Mexican Rice**\n   - Description: A delicious Mexican dish perfect for easy cooks\n   - Difficulty: Easy (32 min prep, 51 min cooking)\n   - Serves: 8 people\n   - Key ingredients: Onions, avocado, cilantro, lime, butter, garlic\n   - Dietary info: Vegetarian\n   - Rating: 4.6/5 (392 reviews)\n   - Tags: Vegetarian, beginner-friendly, snack, quick\n\n2. **Chicken Tacos**\n   - Description: A delicious Mexican dish perfect for medium cooks\n   - Difficulty: Medium (35 min prep, 45 min cooking)\n   - Serves: 8 people\n   - Key ingredients: Chili powder, lime, cumin, cheddar cheese, onions, garlic\n   - Dietary info: Vegetarian (despite the name)\n   - Rating: 4.3/5 (353 reviews)\n   - Tags: Vegetarian, Mexican, dessert\n\n3. **Salsa Verde**\n   - Description: A delicious Mexican dish perfect for easy cooks\n   - Difficulty: Easy (21 min prep, 58 min cooking)\n   - Serves: 3 people\n   - Key ingredients: Lime, beans, onions, tomatoes, butter, wine\n   - Dietary info: Vegetarian\n   - Rating: 3.8/5 (447 reviews)\n   - Tags: Vegetarian, beginner-friendly, snack, quick\n\nWould you like me to save any of these recipes to your favorites or help you with something else?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here are the details for all three Mexican recipes:\n\n1. **Mexican Rice**\n   - Description: A delicious Mexican dish perfect for easy cooks\n   - Difficulty: Easy (32 min prep, 51 min cooking)\n   - Serves: 8 people\n   - Key ingredients: Onions, avocado, cilantro, lime, butter, garlic\n   - Dietary info: Vegetarian\n   - Rating: 4.6/5 (392 reviews)\n   - Tags: Vegetarian, beginner-friendly, snack, quick\n\n2. **Chicken Tacos**\n   - Description: A delicious Mexican dish perfect for medium cooks\n   - Difficulty: Medium (35 min prep, 45 min cooking)\n   - Serves: 8 people\n   - Key ingredients: Chili powder, lime, cumin, cheddar cheese, onions, garlic\n   - Dietary info: Vegetarian (despite the name)\n   - Rating: 4.3/5 (353 reviews)\n   - Tags: Vegetarian, Mexican, dessert\n\n3. **Salsa Verde**\n   - Description: A delicious Mexican dish perfect for easy cooks\n   - Difficulty: Easy (21 min prep, 58 min cooking)\n   - Serves: 3 people\n   - Key ingredients: Lime, beans, onions, tomatoes, butter, wine\n   - Dietary info: Vegetarian\n   - Rating: 3.8/5 (447 reviews)\n   - Tags: Vegetarian, beginner-friendly, snack, quick\n\nWould you like me to save any of these recipes to your favorites or help you with something else?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 207.91338658332825,
+          "timestamp": "2025-08-21T19:54:54.799135",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 4,
+        "api_steps": 3,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.75,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 4,
+        "correct_predictions": 3,
+        "per_step_accuracy_rate": 0.75,
+        "step_by_step_accuracy": [
+          true,
+          true,
+          true,
+          null
+        ]
+      },
+      "success": true,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:31:11.155160"
+}

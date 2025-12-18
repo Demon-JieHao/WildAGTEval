@@ -91,7 +91,7 @@ This section demonstrates a representative workflow using the **Partially Irrele
    # Disable irrelevant data complexity (clean baseline)
     ./unified_conversation_tester.sh \
         --model-id "us.anthropic.claude-3-7-sonnet-20250219-v1:0" \
-        --uncertainty-config "uncertainty_configs/none.yaml" \
+        --uncertainty-config "uncertainty_configs/adhoc.yaml" \
         --turn-level-tf --target-functions-config "uncertainty_configs/target_functions_params.yaml" \
         ...
       ```

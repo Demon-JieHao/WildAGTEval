@@ -1,0 +1,35 @@
+================================================================================
+UNIFIED ANALYSIS: Conv_user3_DailyInvestmentMonitor_scenario5_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+================================================================================
+
+📊 SUMMARY
+   File: Conv_user3_DailyInvestmentMonitor_scenario5_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+   User: user3
+   Domain: investment
+   Status: ✅ PASS
+   Total Turns: 2
+   Successful Turns: 2
+   Turn Success Rate: 100.0%
+
+⚠️ ERROR SUMMARY
+   Side-Effect Errors: 0
+   Query Warnings: 1
+
+📋 TURN-BY-TURN ANALYSIS
+   Turn 1: ✅
+   Query: Let me Show me the current prices of my tracked stocks
+   Expected:
+     🔍 stock_watchlist({})
+   Actual:
+     🔍 stock_watchlist({})
+
+   Turn 2: ✅
+   Query: As usual I need sharp focus lighting in blue Make the Kitchen Light blue
+   Expected:
+     🔍 get_user_inventory({})
+     🔍 get_device_details({"endpoint":"64"})
+     🔄 power_on({"endpoints":["64"]})
+   Actual:
+     🔍 get_user_inventory({})
+     🔄 power_on({"endpoints":["64"]})
+     🔄 color_set({"endpoints":["64"],"color":"#0000FF"})

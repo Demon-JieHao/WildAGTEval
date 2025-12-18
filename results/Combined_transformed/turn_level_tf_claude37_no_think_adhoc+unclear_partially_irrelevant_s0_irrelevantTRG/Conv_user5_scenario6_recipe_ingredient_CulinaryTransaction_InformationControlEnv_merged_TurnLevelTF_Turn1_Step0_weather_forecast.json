@@ -1,0 +1,253 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "filename": "Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "user_id": "user5",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I will travel to berlin. What will the weather be like in Berlin for the next 5 days?",
+      "expected_api_sequence": [
+        {
+          "api": "weather_forecast",
+          "params": {
+            "location": "berlin",
+            "days": 5
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "weather_forecast",
+              "params": {
+                "location": "berlin",
+                "days": 5
+              }
+            }
+          },
+          "api_call": {
+            "api": "weather_forecast",
+            "params": {
+              "location": "berlin",
+              "days": 5
+            }
+          },
+          "api_result": "{\"success\": true, \"location\": \"berlin\", \"days\": 5, \"forecast\": [{\"day\": \"Monday\", \"high\": -4, \"low\": -11, \"condition\": \"Light Snow\", \"uv_index\": 1, \"dew_point\": -15, \"visibility_km\": 6, \"cloud_coverage_percent\": 88, \"feels_like_temp\": -8, \"pollen_count\": 18}, {\"day\": \"Tuesday\", \"high\": 2, \"low\": -8, \"condition\": \"Light Snow\", \"uv_index\": 2, \"dew_point\": -12, \"visibility_km\": 8, \"cloud_coverage_percent\": 75, \"feels_like_temp\": -4, \"pollen_count\": 25}, {\"day\": \"Wednesday\", \"high\": 0, \"low\": -10, \"condition\": \"Sunny\", \"uv_index\": 4, \"dew_point\": -8, \"visibility_km\": 18, \"cloud_coverage_percent\": 25, \"feels_like_temp\": 2, \"pollen_count\": 48}, {\"day\": \"Thursday\", \"high\": 1, \"low\": -8, \"condition\": \"Windy\", \"uv_index\": 3, \"dew_point\": -6, \"visibility_km\": 15, \"cloud_coverage_percent\": 45, \"feels_like_temp\": -2, \"pollen_count\": 32}, {\"day\": \"Friday\", \"high\": -2, \"low\": -13, \"condition\": \"Heavy Rain\", \"uv_index\": 1, \"dew_point\": -18, \"visibility_km\": 4, \"cloud_coverage_percent\": 95, \"feels_like_temp\": -8, \"pollen_count\": 12}], \"location_popularity_index\": 7.8, \"weather_service_tier\": \"standard\", \"tourism_impact_coefficient\": 0.67, \"social_media_trending_score\": 156, \"aviation_impact_score\": 89, \"health_impact_index\": \"high_risk\", \"photography_conditions_score\": 45, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:01:55.011995",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Here's the 5-day weather forecast for Berlin:\n\nMonday: Light Snow with highs of -4\u00b0C and lows of -11\u00b0C\nTuesday: Light Snow with highs of 2\u00b0C and lows of -8\u00b0C\nWednesday: Sunny with highs of 0\u00b0C and lows of -10\u00b0C\nThursday: Windy with highs of 1\u00b0C and lows of -8\u00b0C\nFriday: Heavy Rain with highs of -2\u00b0C and lows of -13\u00b0C\n\nIt will be quite cold throughout your trip, with temperatures mostly below freezing. Pack warm clothes, especially for Friday when there will be heavy rain. Wednesday looks to be the nicest day with sunny conditions.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here's the 5-day weather forecast for Berlin:\n\nMonday: Light Snow with highs of -4\u00b0C and lows of -11\u00b0C\nTuesday: Light Snow with highs of 2\u00b0C and lows of -8\u00b0C\nWednesday: Sunny with highs of 0\u00b0C and lows of -10\u00b0C\nThursday: Windy with highs of 1\u00b0C and lows of -8\u00b0C\nFriday: Heavy Rain with highs of -2\u00b0C and lows of -13\u00b0C\n\nIt will be quite cold throughout your trip, with temperatures mostly below freezing. Pack warm clothes, especially for Friday when there will be heavy rain. Wednesday looks to be the nicest day with sunny conditions.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T21:03:21.748438",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T21:16:12.335334",
+      "target_function": "weather_forecast",
+      "target_location": "Turn 1, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Ah I just found out I have to my travel today. Tell me the current weather there.",
+      "expected_api_sequence": [
+        {
+          "api": "weather_current",
+          "params": {
+            "location": "berlin"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll check the current weather in Berlin for you right away.\n\n<API_CALL>\n{\n  \"api\": \"weather_current\",\n  \"params\": {\n    \"location\": \"Berlin\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll check the current weather in Berlin for you right away.\n\n<API_CALL>\n{\n  \"api\": \"weather_current\",\n  \"params\": {\n    \"location\": \"Berlin\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "weather_current",
+              "params": {
+                "location": "Berlin"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "weather_current",
+            "params": {
+              "location": "Berlin"
+            }
+          },
+          "api_result": "{\"success\": true, \"location\": \"Berlin\", \"current_weather\": {\"temperature\": -6, \"condition\": \"Thunderstorm\", \"humidity\": 83, \"wind_speed\": 36, \"pressure\": 1000}, \"formatted\": \"Temperature: -6\\u00b0C, Condition: Thunderstorm, Humidity: 83%, Wind: 36 km/h\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 208.78382325172424,
+          "timestamp": "2025-08-21T21:06:50.532315",
+          "ground_truth_api": {
+            "api": "weather_current",
+            "params": {
+              "location": "berlin"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "The current weather in Berlin is quite severe. It's -6\u00b0C (21\u00b0F) with thunderstorms. The humidity is high at 83%, and there are strong winds at 36 km/h (22 mph). The atmospheric pressure is 1000 hPa. Make sure to pack warm, waterproof clothing and be prepared for potentially difficult travel conditions.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "The current weather in Berlin is quite severe. It's -6\u00b0C (21\u00b0F) with thunderstorms. The humidity is high at 83%, and there are strong winds at 36 km/h (22 mph). The atmospheric pressure is 1000 hPa. Make sure to pack warm, waterproof clothing and be prepared for potentially difficult travel conditions.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 561.8025805950165,
+          "timestamp": "2025-08-21T21:16:12.335038",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 2,
+      "related_to_target": "Turn 1, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:16:12.337578"
+}

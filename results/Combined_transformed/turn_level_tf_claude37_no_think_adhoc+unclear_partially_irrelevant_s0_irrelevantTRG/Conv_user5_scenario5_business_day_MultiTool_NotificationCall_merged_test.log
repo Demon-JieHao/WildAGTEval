@@ -1,0 +1,189 @@
+Namespace(jsonl_file='/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged.jsonl', model='arn:aws:bedrock:us-east-1:587473322671:provisioned-model/claude37', output='../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_partially_irrelevant_s0_irrelevantTRG/Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_test_result.json', max_steps=15, timeout=130.0, model_id='us.anthropic.claude-3-7-sonnet-20250219-v1:0', enable_thinking=False, prompt_path='extracted_api/centralized_prompt_unclear.md', uncertainty_config='uncertainty_configs/partially_irrelevant.yaml', teacher_forcing=False, turn_level_tf=True, target_functions_config='uncertainty_configs/target_functions_partially_irrelevant.yaml', verbose=True, force=False)
+================================================================================
+===================== Step-by-Step LLM API Evaluation Tool =====================
+================================================================================
+
+Initializing step-by-step evaluator...
+📝 Loading custom prompt from: extracted_api/centralized_prompt_unclear.md
+  ✓ SmartHomeEnv loaded and registered
+  ✓ InformationControlEnv loaded and registered
+  ✓ MediaControlEnv loaded and registered
+  ✓ TransactionEnv loaded and registered
+  ✓ CulinaryControlEnv loaded and registered
+  ✓ CommunicationController loaded and registered
+  ✓ TimeNotificationEnv loaded and registered
+Successfully loaded and registered 7 API environments
+✅ Loaded uncertainty config: uncertainty_configs/partially_irrelevant.yaml
+🎯 Uncertainty Configuration: Partially Irrelevant Information Only
+📝 Description: Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering
+📁 Config Path: uncertainty_configs/partially_irrelevant.yaml
+
+📊 Statistics:
+   Total APIs with uncertainties: 8
+   Total active environment variables: 8
+
+🔧 Enabled Uncertainty Types:
+   PARTIALLY_IRRELEVANT_INFORMATION: 8 APIs
+      APIs: find_call_device, get_call_history, get_messages, get_restaurant_menu, knowledge_lookup, search_recipes, stock_watchlist, weather_forecast
+🤖 Using custom model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+📝 Custom prompt: extracted_api/centralized_prompt_unclear.md
+Model: us.anthropic.claude-3-7-sonnet-20250219-v1:0
+Max steps per query: 15
+Step timeout: 130.0s
+✅ Found 3 target points:
+   1. Turn 2, Step 0: get_call_history (cross_turn)
+   2. Turn 3, Step 0: find_call_device (single_turn)
+   3. Turn 6, Step 1: find_call_device (single_turn)
+🎯 Using Turn-Level Teacher Forcing evaluation mode
+Target config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+
+Evaluating JSONL file with Turn-Level Teacher Forcing: /home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged.jsonl
+Target functions config: uncertainty_configs/target_functions_partially_irrelevant.yaml
+Target functions: ['find_call_device', 'get_call_history', 'get_messages', 'get_restaurant_menu', 'knowledge_lookup', 'search_recipes', 'stock_watchlist', 'weather_forecast']
+Extracted user ID: user5
+  ✓ Set user user5 for SmartHomeEnv
+  ✓ Set user user5 for InformationControlEnv
+  ✓ Set user user5 for MediaControlEnv
+  ✓ Set user user5 for TransactionEnv
+  ✓ Set user user5 for CulinaryControlEnv
+  ✓ Set user user5 for CommunicationController
+  ✓ Set user user5 for TimeNotificationEnv
+✅ Found 3 target points:
+   1. Turn 2, Step 0: get_call_history (cross_turn)
+   2. Turn 3, Step 0: find_call_device (single_turn)
+   3. Turn 6, Step 1: find_call_device (single_turn)
+Found 3 target points
+    📸 Full state snapshot created (27 keys)
+📸 Created initial state snapshot for independence
+
+🎯 Evaluating Target Point 1/3
+   Function: get_call_history
+   Turn 2, Step 0
+   Scope: cross_turn
+    🔄 Full state restored (27 keys)
+   🔄 State restored to initial snapshot for independence
+🎯 Phase 1: GT execution until Turn 2, Step 0
+    🎯 Target function get_call_history found in partially_irrelevant context
+    🎲 Uncertainty mode: GT execution includes target step (until step 0) - Reason: uncertainty config, target context
+current time inside get_call_history:  2025-08-21 19:50:21.367465
+current time inside get_call_history:  2025-08-21T19:50:21.367472
+current time inside get_call_history:  2025-08-21T19:50:21Z
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+🤖 Phase 2: Complete auto-regressive inference from Step 1 until LLM completion
+    Step 2: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.2s... (attempt 2/50)
+⚠️  Rate limit hit. Retrying in 2.3s... (attempt 3/50)
+    ✅ LLM completed naturally: End of Turn detected
+🔄 Phase 3: Cross-turn evaluation for Turn 3
+    Step 1: Reasoning...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.2s... (attempt 2/50)
+    🔄 Executing API: make_call
+    ❌ API result: {"success": false, "message": "Device Smart Phone is not powered on"}...
+    Step 2: Reasoning...
+    ✅ Task completed: End of Turn detected
+   🔄 Including cross-turn evaluation as additional field
+   ✅ Completed - Accuracy: 0.00%
+
+🎯 Evaluating Target Point 2/3
+   Function: find_call_device
+   Turn 3, Step 0
+   Scope: single_turn
+    🔄 Full state restored (27 keys)
+   🔄 State restored to initial snapshot for independence
+🎯 Phase 1: GT execution until Turn 3, Step 0
+current time inside get_call_history:  2025-08-21 20:15:19.353563
+current time inside get_call_history:  2025-08-21T20:15:19.353569
+current time inside get_call_history:  2025-08-21T20:15:19Z
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+    🎯 Target function find_call_device found in partially_irrelevant context
+    🎲 Uncertainty mode: GT execution includes target step (until step 0) - Reason: uncertainty config, target context
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+🤖 Phase 2: Complete auto-regressive inference from Step 1 until LLM completion
+    Step 2: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    🔄 LLM predicted API: make_call
+    ❌ GT comparison: power_on
+    Step 3: LLM inference...
+    🔄 LLM predicted API: power_on
+    ❌ GT comparison: make_call
+    Step 4: LLM inference...
+    🔄 LLM predicted API: make_call
+    ➖ GT comparison: None
+    Step 5: LLM inference...
+    ✅ LLM completed naturally: End of Turn detected
+   ✅ Completed - Accuracy: 0.00%
+
+🎯 Evaluating Target Point 3/3
+   Function: find_call_device
+   Turn 6, Step 1
+   Scope: single_turn
+    🔄 Full state restored (27 keys)
+   🔄 State restored to initial snapshot for independence
+🎯 Phase 1: GT execution until Turn 6, Step 1
+current time inside get_call_history:  2025-08-21 20:28:39.303817
+current time inside get_call_history:  2025-08-21T20:28:39.303825
+current time inside get_call_history:  2025-08-21T20:28:39Z
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+    🎯 Target function find_call_device found in partially_irrelevant context
+    🎲 Uncertainty mode: GT execution includes target step (until step 1) - Reason: uncertainty config, target context
+    🎲 Applied uncertainties: PARTIALLY_IRRELEVANT_INFORMATION
+🤖 Phase 2: Complete auto-regressive inference from Step 2 until LLM completion
+    Step 3: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+⚠️  Rate limit hit. Retrying in 1.2s... (attempt 2/50)
+⚠️  Rate limit hit. Retrying in 2.4s... (attempt 3/50)
+    🔄 LLM predicted API: make_call
+    ❌ GT comparison: power_on
+    Step 4: LLM inference...
+⚠️  Rate limit hit. Retrying in 0.6s... (attempt 1/50)
+    ✅ LLM completed naturally: End of Turn detected
+   ✅ Completed - Accuracy: 0.00%
+   🔄 Expanding cross-turn to independent query_results level
+✅ Saved: Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json (queries: 2)
+✅ Saved: Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json (queries: 1)
+✅ Saved: Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json (queries: 1)
+
+💾 Turn-Level TF results saved to: ../results/Combined_transformed/turn_level_tf_claude37_no_think_adhoc+unclear_partially_irrelevant_s0_irrelevantTRG
+
+============================================================
+============= STEP-BY-STEP EVALUATION SUMMARY ==============
+============================================================
+File: Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged.jsonl
+User ID: user5
+Total Queries: 3
+Successful Queries: 0
+Success Rate: 0.00%
+Overall Score: 64.81%
+
+Uncertainty Configuration: None (Clean evaluation)
+
+Turn-Level Teacher Forcing Metrics:
+  Total Prediction Steps: 0
+  Correct Predictions: 0
+  Prediction Accuracy: 0.00%
+
+============================================================
+===================== DETAILED RESULTS =====================
+============================================================
+
+Query ?: Check my recent calling record in about 10 weeks...
+  ✗ Failed
+  Steps: 2
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query ?: Call the last person I talked to...
+  ✗ Failed
+  Steps: 5
+  API Coverage: 100.00%
+  Task Completed: True
+
+Query ?: Oh I nearly forgot about it. Call the person....
+  ✗ Failed
+  Steps: 4
+  API Coverage: 66.67%
+  Task Completed: True
+================================================================================

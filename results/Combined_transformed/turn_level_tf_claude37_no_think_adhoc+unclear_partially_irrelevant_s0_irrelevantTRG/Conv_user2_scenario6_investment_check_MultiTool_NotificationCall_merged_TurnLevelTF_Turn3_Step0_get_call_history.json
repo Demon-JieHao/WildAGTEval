@@ -1,0 +1,274 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "filename": "Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged.jsonl",
+  "user_id": "user2",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 0.6666666666666666,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 1.0
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Check my recent calling record in about 10 weeks",
+      "expected_api_sequence": [
+        {
+          "api": "get_call_history",
+          "params": {
+            "time_range": "P10W",
+            "limit": 2
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P10W",
+                "limit": 2
+              }
+            }
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 2
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 0 call records\", \"calls\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:41.736064",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I don't see any call records from the past 10 weeks. Would you like me to check a different time period or help you with something else?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I don't see any call records from the past 10 weeks. Would you like me to check a different time period or help you with something else?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:48.151256",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T18:55:43.587217",
+      "target_function": "get_call_history",
+      "target_location": "Turn 3, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Dial the most recent calling contact",
+      "expected_api_sequence": [
+        {
+          "api": "find_call_device",
+          "params": {}
+        },
+        {
+          "api": "power_on",
+          "params": {
+            "endpoints": [
+              "17"
+            ]
+          }
+        },
+        {
+          "api": "make_call",
+          "params": {
+            "phone_number": "D:4122641818",
+            "call_type": "audio",
+            "device_endpoint": "17"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll need to check your call history first to find the most recent contact you've called.\n\n<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P10W\",\n    \"limit\": 1\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll need to check your call history first to find the most recent contact you've called.\n\n<API_CALL>\n{\n  \"api\": \"get_call_history\",\n  \"params\": {\n    \"time_range\": \"P10W\",\n    \"limit\": 1\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_call_history",
+              "params": {
+                "time_range": "P10W",
+                "limit": 1
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_call_history",
+            "params": {
+              "time_range": "P10W",
+              "limit": 1
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 0 call records\", \"calls\": [], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 415.4143671989441,
+          "timestamp": "2025-08-21T18:51:43.565670",
+          "ground_truth_api": {
+            "api": "find_call_device",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I don't see any recent calls in your call history from the past 10 weeks. Would you like me to help you find a contact to call instead?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I don't see any recent calls in your call history from the past 10 weeks. Would you like me to help you find a contact to call instead?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 240.0208728313446,
+          "timestamp": "2025-08-21T18:55:43.586896",
+          "ground_truth_api": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "17"
+              ]
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 1.5,
+        "api_efficiency": 3.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 4,
+      "related_to_target": "Turn 3, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:26:59.515609"
+}

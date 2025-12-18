@@ -1,0 +1,239 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user6_scenario9_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user6_scenario9_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user6",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What does NVIDIA do?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "nvidia_corp"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "nvidia_corp"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "nvidia_corp"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"nvidia_corp\", \"definition\": \"NVIDIA Corporation (symbol: NVDA) is a leading designer of graphics processing units (GPUs) and AI computing hardware. Originally focused on gaming graphics, NVIDIA has become crucial for AI training, data centers, and autonomous vehicles.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:20:35.899496",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "NVIDIA Corporation (symbol: NVDA) is a leading designer of graphics processing units (GPUs) and AI computing hardware. The company started with a focus on gaming graphics but has expanded significantly. Today, NVIDIA's technology is crucial for:\n\n1. Artificial intelligence training and inference\n2. Data center acceleration\n3. Autonomous vehicle development\n4. Professional visualization\n5. Gaming and consumer graphics\n\nTheir GPUs have become essential components for deep learning and other AI applications, making them a key player in the current AI revolution.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "NVIDIA Corporation (symbol: NVDA) is a leading designer of graphics processing units (GPUs) and AI computing hardware. The company started with a focus on gaming graphics but has expanded significantly. Today, NVIDIA's technology is crucial for:\n\n1. Artificial intelligence training and inference\n2. Data center acceleration\n3. Autonomous vehicle development\n4. Professional visualization\n5. Gaming and consumer graphics\n\nTheir GPUs have become essential components for deep learning and other AI applications, making them a key player in the current AI revolution.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:21:39.553993",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:39:35.442697",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:NVDA"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll check the current stock price for NVIDIA for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:NVDA\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll check the current stock price for NVIDIA for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:NVDA\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:NVDA"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:NVDA"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 627.5891814231873,
+          "timestamp": "2025-08-21T20:32:07.143215",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:NVDA"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found the current stock price for NVIDIA (NVDA). It's currently trading at $850.68, up $30.29 (3.69%) today.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found the current stock price for NVIDIA (NVDA). It's currently trading at $850.68, up $30.29 (3.69%) today.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 448.2990388870239,
+          "timestamp": "2025-08-21T20:39:35.442415",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:39:35.443858"
+}

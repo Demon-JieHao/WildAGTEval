@@ -1,0 +1,281 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario7_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user1_scenario7_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.41666666666666663
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "What's Adobe known for?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "adobe_inc"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "adobe_inc"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "adobe_inc"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"adobe_inc\", \"definition\": \"Adobe Inc. (symbol: ADBE) is a multinational computer software company known for creative and multimedia software products including Photoshop, Illustrator, Premiere Pro, and Acrobat PDF. It has transitioned to a subscription-based model with Creative Cloud.\\nCOMPREHENSIVE STOCK PERFORMANCE ANALYSIS (Historical Data): MULTI-YEAR TRAJECTORY & VOLATILITY ANALYSIS: 2024: $567.89 (+31.2% YoY, Vol: 39.8%), 2023: $433.12 (-43.1% YoY, Vol: 51.4%), 2022: $760.78 (+2.1% YoY, Vol: 44.7%), 2021: $745.12 (+26.4% YoY, Vol: 37.9%), 2020: $589.34 (+24.1% YoY, Vol: 45.6%). Moderate to high volatility reflecting SaaS transition and competition. Five-year CAGR: -0.8%, Max drawdown: -72.1% (2022), Beta vs S&P 500: 1.14, Sharpe Ratio: 0.67, Information Ratio: 0.54. MONTHLY MOMENTUM ANALYSIS: Jan: $546.30 (-3.8% MoM, Vol: 78.9M), Feb: $565.80 (+3.6% MoM, Vol: 72.4M), Mar: $585.40 (+3.5% MoM, Vol: 81.3M), Apr: $605.70 (+3.5% MoM, Vol: 89.7M), May: $624.90 (+3.2% MoM, Vol: 85.6M). Steady recovery momentum building throughout 2025. WEEKLY GRANULAR ANALYSIS: June Week 1 (June 2-6): Open $625.40, High $634.80, Low $622.30, Close $631.25 (+1.0% WoW, Vol: 445M), June Week 2 (June 9-11): Open $631.50, High $641.90, Low $628.40, Close $638.75 (+1.2% WoW, Vol: 398M). Weekly ATR: $9.45, moderate volatility for creative software leader. COMPREHENSIVE DAILY PRICE ANALYSIS (May 19-Recent): Daily Closes: 624.90, 627.34, 629.78, 632.45, 630.12, 634.67, 637.23, 639.89, 636.45, 641.23, 643.78, 642.34, 645.89, 648.45, 646.12, 650.78, 653.34, 651.89, 656.45, 659.12, 657.78, 662.34, 664.89, 663.45. \\n New York Stock Exchange hosts major tech companies including UBER, ORCL.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:39.859357",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Adobe Inc. is a multinational computer software company known for its creative and multimedia software products. Their most notable products include:\n\n1. Photoshop - Image editing and design\n2. Illustrator - Vector graphics editing\n3. Premiere Pro - Video editing\n4. Acrobat PDF - PDF creation and management\n\nAdobe has transitioned to a subscription-based business model with their Creative Cloud service. The company has shown varying performance in recent years, with significant volatility in their stock price.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Adobe Inc. is a multinational computer software company known for its creative and multimedia software products. Their most notable products include:\n\n1. Photoshop - Image editing and design\n2. Illustrator - Vector graphics editing\n3. Premiere Pro - Video editing\n4. Acrobat PDF - PDF creation and management\n\nAdobe has transitioned to a subscription-based business model with their Creative Cloud service. The company has shown varying performance in recent years, with significant volatility in their stock price.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:05:36.263130",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:51:31.520337",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:ADBE"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "Based on the information I provided earlier, Adobe Inc. (symbol: ADBE) stock has shown various price points over time. The most recent value mentioned was $664.89, with a subsequent close at $663.45. However, this information may not be current as of today.\n\nWould you like me to look up the current stock price for Adobe?\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:ADBE\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Based on the information I provided earlier, Adobe Inc. (symbol: ADBE) stock has shown various price points over time. The most recent value mentioned was $664.89, with a subsequent close at $663.45. However, this information may not be current as of today.\n\nWould you like me to look up the current stock price for Adobe?\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:ADBE\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NYSE:ADBE"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NYSE:ADBE"
+            }
+          },
+          "api_result": "{\"success\": false, \"message\": \"Invalid symbol.\"}",
+          "api_success": false,
+          "execution_time": 905.3277328014374,
+          "timestamp": "2025-08-21T19:20:41.590919",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:ADBE"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I apologize for the error. Let me try again with the correct stock exchange symbol for Adobe.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:ADBE\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I apologize for the error. Let me try again with the correct stock exchange symbol for Adobe.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NASDAQ:ADBE\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NASDAQ:ADBE"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:ADBE"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"ADBE\", \"name\": \"Adobe Inc.\", \"price\": 466.04, \"change\": 5.87, \"change_percent\": 1.28}, \"formatted\": \"ADBE: $466.04 (5.87 / 1.28%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 395.3643138408661,
+          "timestamp": "2025-08-21T19:27:16.955350",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've found the current stock price for Adobe Inc. (ADBE). The stock is currently trading at $466.04 on NASDAQ, up $5.87 (1.28%) from the previous close.\n\nThis is different from the historical data I mentioned earlier, which shows how stock prices change over time.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've found the current stock price for Adobe Inc. (ADBE). The stock is currently trading at $466.04 on NASDAQ, up $5.87 (1.28%) from the previous close.\n\nThis is different from the historical data I mentioned earlier, which shows how stock prices change over time.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 1454.5644612312317,
+          "timestamp": "2025-08-21T19:51:31.519987",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 0.5,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:51:31.521587"
+}

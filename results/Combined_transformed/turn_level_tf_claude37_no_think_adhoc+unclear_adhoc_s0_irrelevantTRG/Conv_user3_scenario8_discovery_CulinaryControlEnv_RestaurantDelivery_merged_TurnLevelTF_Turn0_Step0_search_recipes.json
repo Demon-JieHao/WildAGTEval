@@ -1,0 +1,334 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user3_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user3",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 6,
+    "total_api_steps": 4,
+    "avg_steps_per_query": 3.0,
+    "avg_api_steps_per_query": 2.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 6,
+    "correct_predictions": 2,
+    "avg_prediction_accuracy": 0.3333333333333333
+  },
+  "query_results": [
+    {
+      "query": "I want 10 easy American recipes with highest ratings",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "difficulty": "easy",
+            "sort_by": "rating",
+            "limit": 10,
+            "cuisine": "American"
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "difficulty": "easy",
+                "sort_by": "rating",
+                "limit": 10,
+                "cuisine": "American"
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "difficulty": "easy",
+              "sort_by": "rating",
+              "limit": 10,
+              "cuisine": "American"
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:13:45.111591",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found 3 highly-rated easy American recipes, but let me search for more to get you a full list of 10 recipes.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"American\",\n    \"difficulty\": \"easy\",\n    \"sort_by\": \"rating\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found 3 highly-rated easy American recipes, but let me search for more to get you a full list of 10 recipes.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"American\",\n    \"difficulty\": \"easy\",\n    \"sort_by\": \"rating\",\n    \"limit\": 10\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "cuisine": "American",
+                "difficulty": "easy",
+                "sort_by": "rating",
+                "limit": 10
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "cuisine": "American",
+              "difficulty": "easy",
+              "sort_by": "rating",
+              "limit": 10
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 3, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": []}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"]}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"]}], \"message\": \"Found 3 recipe(s)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:20:23.700049",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've searched for easy American recipes sorted by highest ratings, but I could only find 3 recipes that match your criteria:\n\n1. Smoked Chicken (Rating: 4.8)\n2. Philly Cheesesteak (Rating: 4.5, Gluten-free)\n3. Meatloaf (Rating: 4.2, Vegetarian)\n\nWould you like me to expand the search by including recipes with other difficulty levels or cuisines to find more options?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've searched for easy American recipes sorted by highest ratings, but I could only find 3 recipes that match your criteria:\n\n1. Smoked Chicken (Rating: 4.8)\n2. Philly Cheesesteak (Rating: 4.5, Gluten-free)\n3. Meatloaf (Rating: 4.2, Vegetarian)\n\nWould you like me to expand the search by including recipes with other difficulty levels or cuisines to find more options?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:30:57.656154",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:56:07.838066",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Show me how to make the 1st and 2nd ones",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe6"
+          },
+          "description": "Get details for recipe: Smoked Chicken"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe20"
+          },
+          "description": "Get details for recipe: Philly Cheesesteak"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll get the details for the first recipe, Smoked Chicken, which has the highest rating (4.8/5).\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get the details for the first recipe, Smoked Chicken, which has the highest rating (4.8/5).\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe6"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 1099.1047706604004,
+          "timestamp": "2025-08-21T19:49:16.760967",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            },
+            "description": "Get details for recipe: Smoked Chicken"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Here's how to make Smoked Chicken (4.8/5 rating):\n\nIngredients:\n- 1/2 cup butter\n- 1/2 cup bacon\n- 1 medium onion\n- 1/2 cup potatoes\n- 6 cloves garlic\n- 1/2 cup lemon\n- 2 tbsp vinegar\n- Pepper to taste\n- 1/4 cup canola oil\n- Salt to taste\n- 1 cup wine\n\nInstructions:\n1. Preheat oven to 375\u00b0F (190\u00b0C)\n2. Cover and cook for 20-30 minutes until tender\n3. Add seasonings and adjust to taste\n4. Cover and cook for 20-30 minutes until tender\n5. Let cool slightly before serving\n\nNow let me get the details for the second recipe, Philly Cheesesteak.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe20\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Here's how to make Smoked Chicken (4.8/5 rating):\n\nIngredients:\n- 1/2 cup butter\n- 1/2 cup bacon\n- 1 medium onion\n- 1/2 cup potatoes\n- 6 cloves garlic\n- 1/2 cup lemon\n- 2 tbsp vinegar\n- Pepper to taste\n- 1/4 cup canola oil\n- Salt to taste\n- 1 cup wine\n\nInstructions:\n1. Preheat oven to 375\u00b0F (190\u00b0C)\n2. Cover and cook for 20-30 minutes until tender\n3. Add seasonings and adjust to taste\n4. Cover and cook for 20-30 minutes until tender\n5. Let cool slightly before serving\n\nNow let me get the details for the second recipe, Philly Cheesesteak.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe20\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe20"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe20"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 22, \"servings\": 8, \"ingredients\": [{\"name\": \"chicken\", \"quantity\": \"1 kg\", \"notes\": \"bone-in\"}, {\"name\": \"cheddar cheese\", \"quantity\": \"100g\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"flour\", \"quantity\": \"1 1/2 cups\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tsp\", \"notes\": \"dried\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 629, \"protein\": 27, \"carbs\": 78, \"fat\": 17}, \"dietary_info\": [\"gluten-free\"], \"rating\": 4.5, \"reviews_count\": 341, \"image_url\": \"https://example.com/images/philly_cheesesteak.jpg\", \"tags\": [\"gluten-free\", \"snack\", \"american\", \"comfort-food\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Philly Cheesesteak - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 157.42016696929932,
+          "timestamp": "2025-08-21T19:51:54.181341",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe20"
+            },
+            "description": "Get details for recipe: Philly Cheesesteak"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Here's how to make Philly Cheesesteak (4.5/5 rating):\n\nIngredients:\n- 1 kg chicken (bone-in)\n- 100g cheddar cheese\n- 1/2 cup potatoes\n- 1 1/2 cups flour\n- 1/3 cup canola oil\n- 1 tsp dried herbs\n- 1/2 cup lemon\n- 1/4 cup wine\n- 2 tbsp vinegar\n- Salt to taste\n- Pepper to taste\n- 2 cloves garlic\n\nInstructions:\n1. Preheat oven to 375\u00b0F (190\u00b0C)\n2. Add seasonings and adjust to taste\n3. Cover and cook for 20-30 minutes until tender\n4. Stir in remaining ingredients and bring to a simmer\n5. Serve hot with your favorite sides\n\nNote: This recipe is gluten-free.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here's how to make Philly Cheesesteak (4.5/5 rating):\n\nIngredients:\n- 1 kg chicken (bone-in)\n- 100g cheddar cheese\n- 1/2 cup potatoes\n- 1 1/2 cups flour\n- 1/3 cup canola oil\n- 1 tsp dried herbs\n- 1/2 cup lemon\n- 1/4 cup wine\n- 2 tbsp vinegar\n- Salt to taste\n- Pepper to taste\n- 2 cloves garlic\n\nInstructions:\n1. Preheat oven to 375\u00b0F (190\u00b0C)\n2. Add seasonings and adjust to taste\n3. Cover and cook for 20-30 minutes until tender\n4. Stir in remaining ingredients and bring to a simmer\n5. Serve hot with your favorite sides\n\nNote: This recipe is gluten-free.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 253.65606951713562,
+          "timestamp": "2025-08-21T19:56:07.837636",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.6666666666666666,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 2,
+        "per_step_accuracy_rate": 0.6666666666666666,
+        "step_by_step_accuracy": [
+          true,
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:04:06.524378"
+}

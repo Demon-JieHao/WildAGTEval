@@ -1,0 +1,242 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario4_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "filename": "Conv_user1_scenario4_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "I will travel to london. Can you show me the 7-day forecast for London?",
+      "expected_api_sequence": [
+        {
+          "api": "weather_forecast",
+          "params": {
+            "location": "london",
+            "days": 7
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "weather_forecast",
+              "params": {
+                "location": "london",
+                "days": 7
+              }
+            }
+          },
+          "api_call": {
+            "api": "weather_forecast",
+            "params": {
+              "location": "london",
+              "days": 7
+            }
+          },
+          "api_result": "{\"success\": true, \"location\": \"london\", \"days\": 7, \"forecast\": [{\"day\": \"Monday\", \"high\": 30, \"low\": 22, \"condition\": \"Clear\"}, {\"day\": \"Tuesday\", \"high\": 30, \"low\": 18, \"condition\": \"Cloudy\"}, {\"day\": \"Wednesday\", \"high\": 32, \"low\": 23, \"condition\": \"Clear\"}, {\"day\": \"Thursday\", \"high\": 32, \"low\": 18, \"condition\": \"Partly Cloudy\"}, {\"day\": \"Friday\", \"high\": 30, \"low\": 18, \"condition\": \"Fog\"}, {\"day\": \"Saturday\", \"high\": 30, \"low\": 17, \"condition\": \"Sunny\"}, {\"day\": \"Sunday\", \"high\": 32, \"low\": 23, \"condition\": \"Clear\"}], \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:21:50.444324",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've checked the 7-day weather forecast for London. Here's what to expect:\n\n- Monday: Clear, high of 30\u00b0C, low of 22\u00b0C\n- Tuesday: Cloudy, high of 30\u00b0C, low of 18\u00b0C\n- Wednesday: Clear, high of 32\u00b0C, low of 23\u00b0C\n- Thursday: Partly Cloudy, high of 32\u00b0C, low of 18\u00b0C\n- Friday: Fog, high of 30\u00b0C, low of 18\u00b0C\n- Saturday: Sunny, high of 30\u00b0C, low of 17\u00b0C\n- Sunday: Clear, high of 32\u00b0C, low of 23\u00b0C\n\nIt looks like it will be quite warm during your trip to London, with temperatures consistently reaching 30-32\u00b0C. Pack light clothing and be prepared for some cloudy and foggy days mid-week.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've checked the 7-day weather forecast for London. Here's what to expect:\n\n- Monday: Clear, high of 30\u00b0C, low of 22\u00b0C\n- Tuesday: Cloudy, high of 30\u00b0C, low of 18\u00b0C\n- Wednesday: Clear, high of 32\u00b0C, low of 23\u00b0C\n- Thursday: Partly Cloudy, high of 32\u00b0C, low of 18\u00b0C\n- Friday: Fog, high of 30\u00b0C, low of 18\u00b0C\n- Saturday: Sunny, high of 30\u00b0C, low of 17\u00b0C\n- Sunday: Clear, high of 32\u00b0C, low of 23\u00b0C\n\nIt looks like it will be quite warm during your trip to London, with temperatures consistently reaching 30-32\u00b0C. Pack light clothing and be prepared for some cloudy and foggy days mid-week.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:37:03.714129",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:50:02.530108",
+      "target_function": "weather_forecast",
+      "target_location": "Turn 2, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Ah I just found out I have to my travel today. Tell me the current weather there.",
+      "expected_api_sequence": [
+        {
+          "api": "weather_current",
+          "params": {
+            "location": "london"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll check the current weather in London for you right away.\n\n<API_CALL>\n{\n  \"api\": \"weather_current\",\n  \"params\": {\n    \"location\": \"London\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll check the current weather in London for you right away.\n\n<API_CALL>\n{\n  \"api\": \"weather_current\",\n  \"params\": {\n    \"location\": \"London\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "weather_current",
+              "params": {
+                "location": "London"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "weather_current",
+            "params": {
+              "location": "London"
+            }
+          },
+          "api_result": "{\"success\": true, \"location\": \"London\", \"current_weather\": {\"temperature\": 25, \"condition\": \"Cloudy\", \"humidity\": 44, \"wind_speed\": 33, \"pressure\": 1008}, \"formatted\": \"Temperature: 25\\u00b0C, Condition: Cloudy, Humidity: 44%, Wind: 33 km/h\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 757.4160192012787,
+          "timestamp": "2025-08-21T19:49:41.130194",
+          "ground_truth_api": {
+            "api": "weather_current",
+            "params": {
+              "location": "london"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "The current weather in London is cloudy with a temperature of 25\u00b0C. Humidity is at 44% with wind speeds of 33 km/h and atmospheric pressure of 1008 hPa. It's a bit cloudy but still quite warm for your travel today.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "The current weather in London is cloudy with a temperature of 25\u00b0C. Humidity is at 44% with wind speeds of 33 km/h and atmospheric pressure of 1008 hPa. It's a bit cloudy but still quite warm for your travel today.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 21.399478435516357,
+          "timestamp": "2025-08-21T19:50:02.529815",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 3,
+      "related_to_target": "Turn 2, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:50:02.532325"
+}

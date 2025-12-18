@@ -1,0 +1,194 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user6_msg_scenario2_msgcall_scenario53_Message_MessageCall_merged.jsonl",
+  "filename": "Conv_user6_msg_scenario2_msgcall_scenario53_Message_MessageCall_merged.jsonl",
+  "user_id": "user6",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 1,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 3,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 3.0,
+    "avg_api_steps_per_query": 2.0,
+    "avg_step_efficiency": 0.6666666666666666
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 3,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.3333333333333333
+  },
+  "query_results": [
+    {
+      "query": "Text the last person who messaged me: 'Hello! How are you doing?'",
+      "expected_api_sequence": [
+        {
+          "api": "get_messages",
+          "params": {
+            "limit": 10
+          },
+          "description": "Get recent messages to find most recent contact"
+        },
+        {
+          "api": "send_message",
+          "params": {
+            "contact_id": "contact17",
+            "content": "Hello! How are you doing?"
+          },
+          "description": "Send message to recent contact Steven Gomez"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_messages",
+              "params": {
+                "limit": 10
+              },
+              "description": "Get recent messages to find most recent contact"
+            }
+          },
+          "api_call": {
+            "api": "get_messages",
+            "params": {
+              "limit": 10
+            },
+            "description": "Get recent messages to find most recent contact"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved 4 messages across all contacts\", \"messages\": [{\"message_id\": \"msg35\", \"user_id\": \"user6\", \"contact_id\": \"contact17\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-16T14:51:12Z\", \"content\": \"Great job!\", \"read\": true, \"contact_name\": \"Steven Gomez\"}, {\"message_id\": \"msg38\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-15T16:57:53Z\", \"content\": \"Thanks! You too.\", \"read\": true, \"contact_name\": \"John Hill\"}, {\"message_id\": \"msg37\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"outgoing\", \"timestamp\": \"2025-06-15T16:49:53Z\", \"content\": \"Thank you!\", \"read\": false, \"contact_name\": \"John Hill\"}, {\"message_id\": \"msg36\", \"user_id\": \"user6\", \"contact_id\": \"contact8\", \"direction\": \"incoming\", \"timestamp\": \"2025-06-15T16:23:53Z\", \"content\": \"Thank you!\", \"read\": true, \"contact_name\": \"John Hill\"}], \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:02:33.458900",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'll send a message to Steven Gomez, as they were the last person who messaged you.\n\n<API_CALL>\n{\n  \"api\": \"send_message\",\n  \"params\": {\n    \"contact_id\": \"contact17\",\n    \"content\": \"Hello! How are you doing?\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll send a message to Steven Gomez, as they were the last person who messaged you.\n\n<API_CALL>\n{\n  \"api\": \"send_message\",\n  \"params\": {\n    \"contact_id\": \"contact17\",\n    \"content\": \"Hello! How are you doing?\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "send_message",
+              "params": {
+                "contact_id": "contact17",
+                "content": "Hello! How are you doing?"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "send_message",
+            "params": {
+              "contact_id": "contact17",
+              "content": "Hello! How are you doing?"
+            }
+          },
+          "api_result": "{\"success\": true, \"message\": \"Message sent to Steven Gomez\", \"message_id\": \"msg59\", \"contact_name\": \"Steven Gomez\", \"timestamp\": \"2025-08-21T20:16:02.079429Z\", \"has_response\": false, \"_environment\": \"CommunicationController\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:16:02.079319",
+          "ground_truth_api": {
+            "api": "send_message",
+            "params": {
+              "contact_id": "contact17",
+              "content": "Hello! How are you doing?"
+            },
+            "description": "Send message to recent contact Steven Gomez"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I've sent your message \"Hello! How are you doing?\" to Steven Gomez, who was the last person to message you.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've sent your message \"Hello! How are you doing?\" to Steven Gomez, who was the last person to message you.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:25:18.140269",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.6666666666666666,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.3333333333333333,
+        "step_by_step_accuracy": [
+          null,
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:25:18.140524",
+      "target_function": "get_messages",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "single_turn",
+      "evaluation_type": "turn_level_teacher_forcing",
+      "cross_turn_evaluation": null
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:25:18.141632"
+}

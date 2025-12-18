@@ -1,0 +1,895 @@
+================================================================================
+UNIFIED BATCH ANALYSIS SUMMARY
+================================================================================
+
+📊 OVERALL STATISTICS
+   Total Files: 139
+   Successful: 73
+   Success Rate: 52.5%
+   Turn-Level Success Rate: 71.2% (163/229)
+
+🌐 DOMAIN BREAKDOWN
+   brand_reference: 15/16 (93.8%)
+   communication: 8/23 (34.8%)
+   culinary: 22/29 (75.9%)
+   investment: 15/18 (83.3%)
+   smarthome: 2/34 (5.9%)
+   transaction: 9/17 (52.9%)
+   unknown: 2/2 (100.0%)
+
+📁 FILE SUMMARY
+   ✅ Conv_user10_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user10_DailyInvestmentMonitor_scenario5_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user10_scenario1_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user10_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Can you show me the complete information for the 5th and 7th ones?
+        Expected: get_recipe_details({"recipe_id":"recipe34"}) → get_recipe_details({"recipe_id":"recipe4"})
+        Actual: get_recipe_details({"recipe_id":"recipe34"}) → get_recipe_details({"recipe_id":"recipe24"})
+        └── Missing core queries: get_recipe_details
+
+   ✅ Conv_user10_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user10_scenario2_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I need the best-rated American recipe with shopping for all ingredients
+        Expected: search_recipes({"cuisine":"American","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe6"}) → search_product({"query":"butter","limit":1}) → search_product({"query":"bacon","limit":1}) → search_product({"query":"onions","limit":1}) → search_product({"query":"potatoes","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"lemon","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"pepper","limit":1}) → search_product({"query":"canola oil","limit":1}) → search_product({"query":"salt","limit":1}) → search_product({"query":"wine","limit":1}) → add_to_cart({"product_id":"prod127","quantity":1}) → add_to_cart({"product_id":"prod147","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1}) → add_to_cart({"product_id":"prod146","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod130","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod129","quantity":1}) → add_to_cart({"product_id":"prod168","quantity":1}) → add_to_cart({"product_id":"prod133","quantity":1}) → add_to_cart({"product_id":"prod132","quantity":1})
+        Actual: search_recipes({"cuisine":"American","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe6"}) → search_product({"query":"butter"}) → add_to_cart({"product_id":"prod127","quantity":1}) → search_product({"query":"bacon"}) → add_to_cart({"product_id":"prod147","quantity":1}) → search_product({"query":"onions"}) → add_to_cart({"product_id":"prod126","quantity":1}) → search_product({"query":"potatoes"}) → add_to_cart({"product_id":"prod146","quantity":1}) → search_product({"query":"garlic"}) → add_to_cart({"product_id":"prod125","quantity":1}) → search_product({"query":"lemon"}) → add_to_cart({"product_id":"prod130","quantity":1}) → search_product({"query":"vinegar"}) → add_to_cart({"product_id":"prod131","quantity":1})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod129), add_to_cart(product_id:prod168), add_to_cart(product_id:prod133), add_to_cart(product_id:prod132)
+
+   ✅ Conv_user10_scenario2_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn1_Step0_weather_forecast.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user10_scenario4_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user10_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Phone the last calling contact again
+        Expected: find_call_device({}) → power_on({"endpoints":["18A"]}) → make_call({"phone_number":"D:4142714778","call_type":"audio","device_endpoint":"18A"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user10_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Phone the last calling contact again
+        Expected: find_call_device({}) → power_on({"endpoints":["18A"]}) → make_call({"phone_number":"D:4142714778","call_type":"audio","device_endpoint":"18A"})
+        Actual: find_call_device({}) → power_on({"endpoints":["18A"]}) → make_call({"phone_number":"+12025550123","device_endpoint":"18A","call_type":"audio"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user10_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["18A"]}) → make_call({"phone_number":"D:9012933282","call_type":"audio","device_endpoint":"18A"})
+        Actual: find_contact({"query":"Sarah Evans","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:9012933282","device_endpoint":"18A"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Can you show me the complete information for the 2nd, 3rd, and 5th ones?
+        Expected: get_recipe_details({"recipe_id":"recipe2"}) → get_recipe_details({"recipe_id":"recipe34"}) → get_recipe_details({"recipe_id":"recipe18"})
+        └── Missing core queries: get_recipe_details, get_recipe_details, get_recipe_details
+
+   ✅ Conv_user10_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user10_scenario7_RestaurantDelivery_only_TurnLevelTF_Turn1_Step0_get_restaurant_menu.json
+      Domain: unknown
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user10_scenario9_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user11_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user12_DailyInvestmentMonitor_scenario1_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user12_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user12_DailyInvestmentMonitor_scenario3_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user12_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user12_DailyInvestmentMonitor_scenario5_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Let me explore I want some soothing color therapy lights Set the Kitchen Light to green
+        Expected: get_user_inventory({}) → get_device_details({"endpoint":"64"}) → power_on({"endpoints":["64"]}) → color_set({"endpoints":["64"],"color":"#00FF00"})
+        Actual: get_user_inventory({}) → color_set({"endpoints":["64"],"color":"#00FF00"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user1_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario1_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I'm interested in the 1st, 3rd, and 4th ones, show me the details
+        Expected: get_recipe_details({"recipe_id":"recipe6"}) → get_recipe_details({"recipe_id":"recipe33"}) → get_recipe_details({"recipe_id":"recipe36"})
+        └── Missing core queries: get_recipe_details, get_recipe_details, get_recipe_details
+
+   ✅ Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Ashley Scott","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:8164618624","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user1_scenario3_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Show me details for recipes #1, #6, #7, and #10
+        Expected: get_recipe_details({"recipe_id":"recipe14"}) → get_recipe_details({"recipe_id":"recipe2"}) → get_recipe_details({"recipe_id":"recipe4"}) → get_recipe_details({"recipe_id":"recipe37"})
+        Actual: get_recipe_details({"recipe_id":"recipe1"}) → get_recipe_details({"recipe_id":"recipe6"}) → get_recipe_details({"recipe_id":"recipe7"}) → get_recipe_details({"recipe_id":"recipe10"})
+        └── Missing core queries: get_recipe_details, get_recipe_details, get_recipe_details, get_recipe_details
+
+   ✅ Conv_user1_scenario3_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user1_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn1_Step0_weather_forecast.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario4_RestaurantDelivery_only_TurnLevelTF_Turn1_Step0_get_restaurant_menu.json
+      Domain: unknown
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario4_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I want to buy all the ingredients for the best recipe we found
+        Expected: search_product({"query":"fish sauce","limit":1}) → search_product({"query":"rice","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"chili sauce","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"lemon","limit":1}) → search_product({"query":"wine","limit":1}) → search_product({"query":"onions","limit":1}) → search_product({"query":"canola oil","limit":1}) → search_product({"query":"herbs","limit":1}) → search_product({"query":"pepper","limit":1}) → add_to_cart({"product_id":"prod138","quantity":1}) → add_to_cart({"product_id":"prod151","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod141","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod130","quantity":1}) → add_to_cart({"product_id":"prod132","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1}) → add_to_cart({"product_id":"prod168","quantity":1}) → add_to_cart({"product_id":"prod128","quantity":1}) → add_to_cart({"product_id":"prod129","quantity":1})
+        Actual: get_recipe_details({"recipe_id":"recipe38"}) → search_product({"query":"fish sauce","category":"grocery","limit":1}) → search_product({"category":"grocery","limit":5})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod138), add_to_cart(product_id:prod151), add_to_cart(product_id:prod125), add_to_cart(product_id:prod141), add_to_cart(product_id:prod131), add_to_cart(product_id:prod130), add_to_cart(product_id:prod132), add_to_cart(product_id:prod126), add_to_cart(product_id:prod168), add_to_cart(product_id:prod128), add_to_cart(product_id:prod129)
+
+   ✅ Conv_user1_scenario4_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn2_Step0_weather_forecast.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario5_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario5_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Phone my last caller again
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user1_scenario5_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Phone my last caller again
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario5_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Ashley Scott","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:8164618624","device_endpoint":"17","call_type":"audio"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user1_scenario6_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario6_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Dial the most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario6_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Dial the most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:5551234","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario6_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Ashley Scott","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user1_scenario7_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user1_scenario7_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user1_scenario8_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call the person I last spoke with
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","call_type":"audio","device_endpoint":"17"})
+        └── Invalid API calls (non-existent): find_communication_device; Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario8_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call the person I last spoke with
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → find_contact({"query":"Ashley Scott","search_type":"name"}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"+18164618624","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call; Incorrect side-effect APIs: make_call (ad-hoc: 2 consecutive failures); Extra side-effect APIs: make_call
+
+   ❌ Conv_user1_scenario8_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:8164618624","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Ashley Scott","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:8164618624","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user2_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user2_DailyInvestmentMonitor_scenario4_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user2_msg_scenario6_msgcall_scenario12_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user2_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I like the 2nd and 10th ones, give me their detailed information
+        Expected: get_recipe_details({"recipe_id":"recipe1"}) → get_recipe_details({"recipe_id":"recipe37"})
+        Actual: get_recipe_details({"recipe_id":"recipe24"}) → get_recipe_details({"recipe_id":"recipe14"})
+        └── Missing core queries: get_recipe_details, get_recipe_details
+
+   ✅ Conv_user2_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user2_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call back my most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call back my most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4146014432","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jeffrey Hall","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4146014432","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user2_scenario3_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Make a call to my recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario3_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Make a call to my recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → find_contact({"query":"","limit":5})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario3_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4146014432","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jeffrey Hall","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4146014432","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user2_scenario3_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user2_scenario4_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user2_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: get_call_history({"time_range":"P30D","limit":1}) → get_call_history({"time_range":"P365D","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4146014432","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jeffrey Hall","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4146014432","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user2_scenario4_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Find me the top-rated American recipe and help me shop for the ingredients
+        Expected: search_recipes({"cuisine":"American","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe6"}) → search_product({"query":"butter","limit":1}) → search_product({"query":"bacon","limit":1}) → search_product({"query":"onions","limit":1}) → search_product({"query":"potatoes","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"lemon","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"pepper","limit":1}) → search_product({"query":"canola oil","limit":1}) → search_product({"query":"salt","limit":1}) → search_product({"query":"wine","limit":1}) → add_to_cart({"product_id":"prod127","quantity":1}) → add_to_cart({"product_id":"prod147","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1}) → add_to_cart({"product_id":"prod146","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod130","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod129","quantity":1}) → add_to_cart({"product_id":"prod168","quantity":1}) → add_to_cart({"product_id":"prod133","quantity":1}) → add_to_cart({"product_id":"prod132","quantity":1})
+        Actual: search_recipes({"cuisine":"American","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe6"}) → search_product({"query":"butter","limit":3}) → add_to_cart({"product_id":"prod127","quantity":1}) → search_product({"query":"bacon","limit":3}) → add_to_cart({"product_id":"prod147","quantity":1}) → search_product({"query":"onions","limit":3}) → add_to_cart({"product_id":"prod126","quantity":1}) → search_product({"query":"potatoes","limit":3}) → add_to_cart({"product_id":"prod146","quantity":1}) → search_product({"query":"garlic","limit":3}) → add_to_cart({"product_id":"prod125","quantity":1}) → search_product({"query":"lemon","limit":3}) → add_to_cart({"product_id":"prod130","quantity":1}) → search_product({"query":"vinegar","limit":3}) → add_to_cart({"product_id":"prod131","quantity":1})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod129), add_to_cart(product_id:prod168), add_to_cart(product_id:prod133), add_to_cart(product_id:prod132)
+
+   ❌ Conv_user2_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call the person I last spoke with
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: get_call_history({"time_range":"P30D","limit":1}) → find_contact({"query":"","limit":1}) → find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2069883504","device_endpoint":"17","call_type":"audio"})
+        └── Missing side-effect APIs: make_call; Incorrect side-effect APIs: make_call (ad-hoc: 2 consecutive failures); Extra side-effect APIs: make_call
+
+   ❌ Conv_user2_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call the person I last spoke with
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4146014432","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jeffrey Hall","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4146014432","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user2_scenario5_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user2_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Tell me more about recipes #1, #2, #4, and #5
+        Expected: get_recipe_details({"recipe_id":"recipe6"}) → get_recipe_details({"recipe_id":"recipe20"}) → get_recipe_details({"recipe_id":"recipe36"}) → get_recipe_details({"recipe_id":"recipe23"})
+        └── Missing core queries: get_recipe_details, get_recipe_details, get_recipe_details, get_recipe_details
+
+   ✅ Conv_user2_scenario6_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Dial the most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Dial the most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4122641818","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → get_call_history({"time_range":"P10W","limit":1})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user2_scenario6_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4146014432","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jeffrey Hall","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4146014432","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I like the 2nd, 7th, and 10th ones, give me their detailed information
+        Expected: get_recipe_details({"recipe_id":"recipe1"}) → get_recipe_details({"recipe_id":"recipe4"}) → get_recipe_details({"recipe_id":"recipe37"})
+        Actual: get_recipe_details({"recipe_id":"recipe24"}) → get_recipe_details({"recipe_id":"recipe8"}) → get_recipe_details({"recipe_id":"recipe13"})
+        └── Missing core queries: get_recipe_details, get_recipe_details, get_recipe_details
+
+   ✅ Conv_user2_scenario8_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_DailyInvestmentMonitor_scenario5_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario10_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario1_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user3_scenario4_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user3_scenario4_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","call_type":"audio","device_endpoint":"61A"})
+        Actual: find_contact({"query":"Nancy Collins","search_type":"name","limit":1}) → find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","device_endpoint":"61A"})
+        └── Incorrect side-effect APIs: make_call (ad-hoc: 3 consecutive failures)
+
+   ✅ Conv_user3_scenario5_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user3_scenario6_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","call_type":"audio","device_endpoint":"61A"})
+        Actual: find_contact({"query":"Nancy Collins","search_type":"name","limit":1}) → find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","device_endpoint":"61A"})
+        └── Incorrect side-effect APIs: make_call (ad-hoc: 2 consecutive failures)
+
+   ✅ Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario6_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn2_Step0_weather_forecast.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user3_scenario7_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","call_type":"audio","device_endpoint":"61A"})
+        Actual: find_contact({"query":"Nancy Collins","search_type":"name","limit":1}) → find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","device_endpoint":"61A"})
+        └── Incorrect side-effect APIs: make_call (ad-hoc: 3 consecutive failures)
+
+   ❌ Conv_user3_scenario8_NotificationCall_only_TurnLevelTF_Turn1_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","call_type":"audio","device_endpoint":"61A"})
+        Actual: find_contact({"query":"Nancy Collins","search_type":"name","limit":1}) → find_call_device({}) → power_on({"endpoints":["61A"]}) → make_call({"phone_number":"D:3148631141","device_endpoint":"61A"})
+        └── Incorrect side-effect APIs: make_call (ad-hoc: 3 consecutive failures)
+
+   ✅ Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user4_DailyInvestmentMonitor_scenario1_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Time to thoroughly check These fluctuations are concerning, so I need to set the lights to focus mode with blue tones Set the Dining Room Light to blue
+        Expected: get_user_inventory({}) → get_device_details({"endpoint":"37"}) → power_on({"endpoints":["37"]}) → color_set({"endpoints":["37"],"color":"#0000FF"})
+        Actual: get_user_inventory({}) → color_set({"endpoints":["37"],"color":"#0000FF"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user4_DailyInvestmentMonitor_scenario3_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user4_scenario1_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user4_scenario2_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user4_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Make a call to my recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2167149168","call_type":"audio","device_endpoint":"30A"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ✅ Conv_user4_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user4_scenario2_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:5550123","call_type":"audio","device_endpoint":"30A"})
+        Actual: find_contact({"query":"Amanda Dean","search_type":"name","limit":1}) → find_call_device({}) → find_contact({"query":"Amanda Dean","search_type":"name"})
+        └── Invalid API calls (non-existent): search_contact_directory; Missing side-effect APIs: power_on, make_call, make_call
+
+   ✅ Conv_user4_scenario2_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user4_scenario3_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I like the stock info you provided. So what's the value of the stock?
+        Expected: stock_price({"symbol":"NASDAQ:NFLX"})
+        └── Missing core queries: stock_price, stock_price
+
+   ❌ Conv_user4_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Phone my last caller again
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2167149168","call_type":"audio","device_endpoint":"30A"})
+        Actual: get_call_history({"time_range":"P10W","limit":1}) → find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2025550123","device_endpoint":"30A","call_type":"audio"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user4_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Phone my last caller again
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2167149168","call_type":"audio","device_endpoint":"30A"})
+        Actual: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2025550123","device_endpoint":"30A"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user4_scenario4_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:5550123","call_type":"audio","device_endpoint":"30A"})
+        Actual: find_contact({"query":"Amanda Dean","search_type":"name","limit":1}) → find_call_device({}) → find_contact({"query":"Amanda Dean","search_type":"name"})
+        └── Invalid API calls (non-existent): search_contact_directory; Missing side-effect APIs: power_on, make_call, make_call
+
+   ✅ Conv_user4_scenario5_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user4_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user5_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I need to review Strategically speaking, Given today's significant changes, I should switch to my analytical lighting setup Change the Bathroom Light color to blue
+        Expected: get_user_inventory({}) → get_device_details({"endpoint":"12"}) → power_on({"endpoints":["12"]}) → color_set({"endpoints":["12"],"color":"#0000FF"})
+        Actual: get_user_inventory({}) → color_set({"endpoints":["12"],"color":"#0000FF"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user5_msg_scenario8_msgcall_scenario49_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I want to buy these cooking ingredients from the highest-rated recipe
+        Expected: search_product({"query":"tomatoes","limit":1}) → search_product({"query":"basil","limit":1}) → search_product({"query":"oregano","limit":1}) → search_product({"query":"mozzarella","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"onions","limit":1}) → add_to_cart({"product_id":"prod135","quantity":1}) → add_to_cart({"product_id":"prod148","quantity":1}) → add_to_cart({"product_id":"prod145","quantity":1}) → add_to_cart({"product_id":"prod144","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1})
+        Actual: get_recipe_details({"recipe_id":"recipe40"}) → search_product({"query":"tomatoes basil oregano mozzarella vinegar garlic onions","category":"groceries","limit":10}) → search_product({"query":"tomatoes","category":"groceries","limit":3})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod135), add_to_cart(product_id:prod148), add_to_cart(product_id:prod145), add_to_cart(product_id:prod144), add_to_cart(product_id:prod131), add_to_cart(product_id:prod125), add_to_cart(product_id:prod126)
+
+   ❌ Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn2_Step0_stock_watchlist.json
+      Domain: transaction
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: I want to confirm the price of the 3rd stock once more
+        Expected: stock_price({"symbol":"NASDAQ:NVDA"})
+        Actual: stock_watchlist({})
+        └── Missing core queries: stock_price, stock_price
+
+   ❌ Conv_user5_scenario2_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Help me purchase all the ingredients for this top-rated recipe
+        Expected: search_product({"query":"fish sauce","limit":1}) → search_product({"query":"rice","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"chili sauce","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"lemon","limit":1}) → search_product({"query":"wine","limit":1}) → search_product({"query":"onions","limit":1}) → search_product({"query":"canola oil","limit":1}) → search_product({"query":"herbs","limit":1}) → search_product({"query":"pepper","limit":1}) → add_to_cart({"product_id":"prod138","quantity":1}) → add_to_cart({"product_id":"prod151","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod141","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod130","quantity":1}) → add_to_cart({"product_id":"prod132","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1}) → add_to_cart({"product_id":"prod168","quantity":1}) → add_to_cart({"product_id":"prod128","quantity":1}) → add_to_cart({"product_id":"prod129","quantity":1})
+        Actual: search_product({"query":"fish sauce","category":"groceries","limit":3}) → search_product({"query":"cooking","limit":5}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1}) → add_to_cart({"product_id":"prod127","quantity":1}) → add_to_cart({"product_id":"prod130","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod138), add_to_cart(product_id:prod151), add_to_cart(product_id:prod141), add_to_cart(product_id:prod132), add_to_cart(product_id:prod168), add_to_cart(product_id:prod128), add_to_cart(product_id:prod129); Extra side-effect APIs: add_to_cart(product_id:prod127)
+
+   ✅ Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user5_scenario4_discovery_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn4_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:6152381741","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Call the last person I talked to
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:6152381741","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user5_scenario5_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4157863264","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jessica Carter","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4157863264","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ❌ Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I need the Italian recipe with highest rating and buy all the ingredients
+        Expected: search_recipes({"cuisine":"Italian","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe40"}) → search_product({"query":"tomatoes","limit":1}) → search_product({"query":"basil","limit":1}) → search_product({"query":"oregano","limit":1}) → search_product({"query":"mozzarella","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"onions","limit":1}) → add_to_cart({"product_id":"prod135","quantity":1}) → add_to_cart({"product_id":"prod148","quantity":1}) → add_to_cart({"product_id":"prod145","quantity":1}) → add_to_cart({"product_id":"prod144","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1})
+        Actual: search_recipes({"cuisine":"Italian","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe40"}) → search_product({"query":"tomatoes","category":"groceries","limit":5}) → search_product({"category":"groceries","limit":10}) → search_product({"limit":5})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod135), add_to_cart(product_id:prod148), add_to_cart(product_id:prod145), add_to_cart(product_id:prod144), add_to_cart(product_id:prod131), add_to_cart(product_id:prod125), add_to_cart(product_id:prod126)
+
+   ✅ Conv_user5_scenario6_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn1_Step0_weather_forecast.json
+      Domain: transaction
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user5_scenario7_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ❌ Conv_user5_scenario7_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn2_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Phone the last calling contact again
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:6152381741","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on, make_call, make_call
+
+   ❌ Conv_user5_scenario7_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Phone the last calling contact again
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:6152381741","call_type":"audio","device_endpoint":"17"})
+        Actual: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:2025550123","call_type":"audio","device_endpoint":"17"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ❌ Conv_user5_scenario7_business_day_MultiTool_NotificationCall_merged_TurnLevelTF_Turn6_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: Oh I nearly forgot about it. Call the person.
+        Expected: find_call_device({}) → power_on({"endpoints":["17"]}) → make_call({"phone_number":"D:4157863264","call_type":"audio","device_endpoint":"17"})
+        Actual: find_contact({"query":"Jessica Carter","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:4157863264","device_endpoint":"17"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user6_DailyInvestmentMonitor_scenario1_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user6_msg_scenario10_msgcall_scenario54_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user6_msg_scenario2_msgcall_scenario53_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user6_msg_scenario8_msgcall_scenario59_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user6_scenario1_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn3_Step0_get_call_history.json
+      Domain: communication
+      Turn Success Rate: 50.0% (1/2)
+      Failed Turns (1):
+        Turn 2: Dial the most recent calling contact
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:4146523213","call_type":"audio","device_endpoint":"30A"})
+        Actual: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:2025550123","call_type":"audio","device_endpoint":"30A"})
+        └── Missing side-effect APIs: make_call, make_call; Extra side-effect APIs: make_call
+
+   ✅ Conv_user6_scenario1_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn4_Step0_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user6_scenario1_investment_check_MultiTool_NotificationCall_merged_TurnLevelTF_Turn7_Step1_find_call_device.json
+      Domain: smarthome
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I should call that person now
+        Expected: find_call_device({}) → power_on({"endpoints":["30A"]}) → make_call({"phone_number":"D:6018058234","call_type":"audio","device_endpoint":"30A"})
+        Actual: find_contact({"query":"John Hill","search_type":"name","limit":1}) → find_call_device({}) → make_call({"phone_number":"D:6018058234","device_endpoint":"30A"})
+        └── Missing side-effect APIs: power_on
+
+   ✅ Conv_user6_scenario6_planning_CulinaryControlEnv_RestaurantDelivery_merged_TurnLevelTF_Turn6_Step0_get_restaurant_menu.json
+      Domain: culinary
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user6_scenario9_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user7_DailyInvestmentMonitor_scenario1_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user7_DailyInvestmentMonitor_scenario2_TurnLevelTF_Turn0_Step0_stock_watchlist.json
+      Domain: investment
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user7_msg_scenario4_msgcall_scenario61_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user7_msg_scenario6_msgcall_scenario63_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ❌ Conv_user7_scenario3_recipe_ingredient_CulinaryTransaction_InformationControlEnv_merged_TurnLevelTF_Turn0_Step0_search_recipes.json
+      Domain: transaction
+      Turn Success Rate: 0.0% (0/1)
+      Failed Turns (1):
+        Turn 1: I need the best-rated Italian recipe with shopping for all ingredients
+        Expected: search_recipes({"cuisine":"Italian","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe40"}) → search_product({"query":"tomatoes","limit":1}) → search_product({"query":"basil","limit":1}) → search_product({"query":"oregano","limit":1}) → search_product({"query":"mozzarella","limit":1}) → search_product({"query":"vinegar","limit":1}) → search_product({"query":"garlic","limit":1}) → search_product({"query":"onions","limit":1}) → add_to_cart({"product_id":"prod135","quantity":1}) → add_to_cart({"product_id":"prod148","quantity":1}) → add_to_cart({"product_id":"prod145","quantity":1}) → add_to_cart({"product_id":"prod144","quantity":1}) → add_to_cart({"product_id":"prod131","quantity":1}) → add_to_cart({"product_id":"prod125","quantity":1}) → add_to_cart({"product_id":"prod126","quantity":1})
+        Actual: search_recipes({"cuisine":"Italian","limit":5,"sort_by":"rating"}) → get_recipe_details({"recipe_id":"recipe40"}) → search_product({"query":"tomatoes","category":"groceries","limit":3}) → search_product({"category":"groceries","limit":10})
+        └── Missing side-effect APIs: add_to_cart(product_id:prod135), add_to_cart(product_id:prod148), add_to_cart(product_id:prod145), add_to_cart(product_id:prod144), add_to_cart(product_id:prod131), add_to_cart(product_id:prod125), add_to_cart(product_id:prod126)
+
+   ✅ Conv_user8_msg_scenario10_msgcall_scenario74_Message_MessageCall_merged_TurnLevelTF_Turn0_Step0_get_messages.json
+      Domain: communication
+      Turn Success Rate: 100.0% (1/1)
+
+   ✅ Conv_user8_scenario10_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)
+
+   ✅ Conv_user8_scenario6_CompanyResearch_BrandReferences_merged_TurnLevelTF_Turn0_Step0_knowledge_lookup.json
+      Domain: brand_reference
+      Turn Success Rate: 100.0% (2/2)

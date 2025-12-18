@@ -1,0 +1,308 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user3_scenario9_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user3",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "No Uncertainties",
+    "config_description": "Clean evaluation without any uncertainties - baseline configuration",
+    "config_path": "uncertainty_configs/none.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 0,
+      "total_active_env_vars": 0,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 0,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": []
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "I'd like to see the menu from the resturant",
+      "expected_api_sequence": [
+        {
+          "api": "get_restaurant_menu",
+          "params": {
+            "restaurant_id": "rest2"
+          },
+          "description": "Get menu for Bamboo Grove"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "get_restaurant_menu",
+              "params": {
+                "restaurant_id": "rest2"
+              },
+              "description": "Get menu for Bamboo Grove"
+            }
+          },
+          "api_call": {
+            "api": "get_restaurant_menu",
+            "params": {
+              "restaurant_id": "rest2"
+            },
+            "description": "Get menu for Bamboo Grove"
+          },
+          "api_result": "{\"success\": true, \"message\": \"Retrieved menu for Bamboo Grove\", \"restaurant_id\": \"rest2\", \"restaurant_name\": \"Bamboo Grove\", \"description\": \"Family-friendly asian restaurant with a welcoming atmosphere\", \"price_range\": \"$$\", \"rating\": 4.6, \"cuisine_types\": [\"Asian\"], \"delivery_available\": true, \"menu_categories\": [\"Appetizers\", \"Main Course\"], \"menu\": {\"Appetizers\": [{\"item_id\": \"item1\", \"name\": \"Pot Stickers\", \"description\": \"Pan-fried pork dumplings\", \"price\": 9.86, \"category\": \"Appetizers\"}, {\"item_id\": \"item2\", \"name\": \"Tempura\", \"description\": \"Lightly battered and fried vegetables\", \"price\": 11.23, \"category\": \"Appetizers\"}, {\"item_id\": \"item3\", \"name\": \"Satay Skewers\", \"description\": \"Grilled chicken with peanut sauce\", \"price\": 11.44, \"category\": \"Appetizers\"}, {\"item_id\": \"item4\", \"name\": \"Spring Rolls\", \"description\": \"Fresh vegetables wrapped in rice paper\", \"price\": 9.05, \"category\": \"Appetizers\"}], \"Main Course\": [{\"item_id\": \"item5\", \"name\": \"Green Curry\", \"description\": \"Thai curry with coconut milk and vegetables\", \"price\": 17.77, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item6\", \"name\": \"General Tso's Chicken\", \"description\": \"Sweet and spicy fried chicken\", \"price\": 16.23, \"category\": \"Main Course\"}, {\"item_id\": \"item7\", \"name\": \"Pad Thai\", \"description\": \"Thai stir-fried noodles with shrimp\", \"price\": 14.69, \"category\": \"Main Course\", \"dietary_info\": [\"gluten-free\"]}, {\"item_id\": \"item8\", \"name\": \"Beef Teriyaki\", \"description\": \"Grilled beef with teriyaki glaze\", \"price\": 18.06, \"category\": \"Main Course\"}, {\"item_id\": \"item9\", \"name\": \"Sushi Combo\", \"description\": \"Assorted nigiri and maki rolls\", \"price\": 24.97, \"category\": \"Main Course\", \"popular\": true}]}, \"is_favorite\": false, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:54:54.839564",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I can see the menu from Bamboo Grove, which is the top-rated Asian restaurant with 4.6 stars. Would you like to place an order for delivery or pickup from this restaurant?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I can see the menu from Bamboo Grove, which is the top-rated Asian restaurant with 4.6 stars. Would you like to place an order for delivery or pickup from this restaurant?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:57:14.072630",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T20:31:11.153757",
+      "target_function": "get_restaurant_menu",
+      "target_location": "Turn 4, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "Can I place an order for Satay Skewers and Pad Thai from Bamboo Grove for delivery to 1753 Market St, Dallas, TX 75263?",
+      "expected_api_sequence": [
+        {
+          "api": "place_delivery_order",
+          "params": {
+            "restaurant_id": "rest2",
+            "items": [
+              {
+                "item_id": "item3",
+                "quantity": 1
+              },
+              {
+                "item_id": "item7",
+                "quantity": 1
+              }
+            ],
+            "delivery_address": {
+              "street": "1753 Market St",
+              "city": "Dallas",
+              "state": "TX",
+              "zip": "75263"
+            }
+          },
+          "description": "Place delivery order from Bamboo Grove"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll place a delivery order for you from Bamboo Grove with those items.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest2\",\n    \"items\": [\n      {\n        \"item_id\": \"item3\",\n        \"quantity\": 1\n      },\n      {\n        \"item_id\": \"item7\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"1753 Market St\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75263\"\n    }\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll place a delivery order for you from Bamboo Grove with those items.\n\n<API_CALL>\n{\n  \"api\": \"place_delivery_order\",\n  \"params\": {\n    \"restaurant_id\": \"rest2\",\n    \"items\": [\n      {\n        \"item_id\": \"item3\",\n        \"quantity\": 1\n      },\n      {\n        \"item_id\": \"item7\",\n        \"quantity\": 1\n      }\n    ],\n    \"delivery_address\": {\n      \"street\": \"1753 Market St\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"zip\": \"75263\"\n    }\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "place_delivery_order",
+              "params": {
+                "restaurant_id": "rest2",
+                "items": [
+                  {
+                    "item_id": "item3",
+                    "quantity": 1
+                  },
+                  {
+                    "item_id": "item7",
+                    "quantity": 1
+                  }
+                ],
+                "delivery_address": {
+                  "street": "1753 Market St",
+                  "city": "Dallas",
+                  "state": "TX",
+                  "zip": "75263"
+                }
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest2",
+              "items": [
+                {
+                  "item_id": "item3",
+                  "quantity": 1
+                },
+                {
+                  "item_id": "item7",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "1753 Market St",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75263"
+              }
+            }
+          },
+          "api_result": "{\"success\": true, \"order_id\": \"dorder1\", \"restaurant_name\": \"Bamboo Grove\", \"order_time\": \"2025-08-21T20:14:25Z\", \"status\": \"placed\", \"items_count\": 2, \"subtotal\": 26.13, \"tax\": 2.29, \"delivery_fee\": 5.99, \"tip\": 3.92, \"total\": 38.33, \"message\": \"Your order has been placed successfully\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 1031.103482723236,
+          "timestamp": "2025-08-21T20:14:25.176156",
+          "ground_truth_api": {
+            "api": "place_delivery_order",
+            "params": {
+              "restaurant_id": "rest2",
+              "items": [
+                {
+                  "item_id": "item3",
+                  "quantity": 1
+                },
+                {
+                  "item_id": "item7",
+                  "quantity": 1
+                }
+              ],
+              "delivery_address": {
+                "street": "1753 Market St",
+                "city": "Dallas",
+                "state": "TX",
+                "zip": "75263"
+              }
+            },
+            "description": "Place delivery order from Bamboo Grove"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Your delivery order has been placed successfully! Here's a summary:\n\n- Restaurant: Bamboo Grove\n- Items: Satay Skewers and Pad Thai\n- Order ID: dorder1\n- Status: Placed\n- Subtotal: $26.13\n- Tax: $2.29\n- Delivery Fee: $5.99\n- Tip: $3.92\n- Total: $38.33\n\nYour food will be delivered to 1753 Market St, Dallas, TX 75263.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Your delivery order has been placed successfully! Here's a summary:\n\n- Restaurant: Bamboo Grove\n- Items: Satay Skewers and Pad Thai\n- Order ID: dorder1\n- Status: Placed\n- Subtotal: $26.13\n- Tax: $2.29\n- Delivery Fee: $5.99\n- Tip: $3.92\n- Total: $38.33\n\nYour food will be delivered to 1753 Market St, Dallas, TX 75263.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 1005.9769248962402,
+          "timestamp": "2025-08-21T20:31:11.153299",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 5,
+      "related_to_target": "Turn 4, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:31:11.156078"
+}

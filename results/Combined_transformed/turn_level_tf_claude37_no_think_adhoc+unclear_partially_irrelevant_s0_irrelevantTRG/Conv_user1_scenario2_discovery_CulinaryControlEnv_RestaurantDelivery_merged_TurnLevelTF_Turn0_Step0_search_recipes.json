@@ -1,0 +1,399 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "filename": "Conv_user1_scenario2_discovery_CulinaryControlEnv_RestaurantDelivery_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 0.6666666666666666,
+  "step_by_step_metrics": {
+    "total_steps": 8,
+    "total_api_steps": 6,
+    "avg_steps_per_query": 4.0,
+    "avg_api_steps_per_query": 3.0,
+    "avg_step_efficiency": 1.5714285714285714
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 8,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "Find top 10 American food recipes",
+      "expected_api_sequence": [
+        {
+          "api": "search_recipes",
+          "params": {
+            "sort_by": "rating",
+            "cuisine": "American",
+            "limit": 10
+          },
+          "description": "Search for recipes with specified filters"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "sort_by": "rating",
+                "cuisine": "American",
+                "limit": 10
+              },
+              "description": "Search for recipes with specified filters"
+            }
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "sort_by": "rating",
+              "cuisine": "American",
+              "limit": 10
+            },
+            "description": "Search for recipes with specified filters"
+          },
+          "api_result": "{\"success\": true, \"count\": 5, \"cuisines\": [\"American\"], \"results\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": [], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}], \"query_performance_metrics\": {\"response_time_ms\": 45, \"cache_hit_rate\": 0.91, \"query_complexity_score\": 4.5}, \"content_freshness_indicators\": {\"data_staleness_hours\": 5, \"next_refresh_scheduled\": \"2024-12-15T03:00:00Z\", \"content_accuracy_confidence\": 0.94}, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:39.738371",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've found several American recipes for you. Let me get more details about the top American recipes from the search results.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I've found several American recipes for you. Let me get more details about the top American recipes from the search results.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe6\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe6"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 39, \"servings\": 7, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"1/2 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"canola oil\", \"quantity\": \"1/4 cup\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 477, \"protein\": 18, \"carbs\": 63, \"fat\": 11}, \"dietary_info\": [], \"rating\": 4.8, \"reviews_count\": 322, \"image_url\": \"https://example.com/images/smoked_chicken.jpg\", \"tags\": [\"quick\", \"american\", \"beginner-friendly\", \"lunch\"], \"author\": \"\", \"is_favorite\": true, \"formatted\": \"Smoked Chicken - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:47.541066",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "I'll get details for another top American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe20\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get details for another top American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe20\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe20"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe20"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"cooking_time\": 22, \"servings\": 8, \"ingredients\": [{\"name\": \"chicken\", \"quantity\": \"1 kg\", \"notes\": \"bone-in\"}, {\"name\": \"cheddar cheese\", \"quantity\": \"100g\"}, {\"name\": \"potatoes\", \"quantity\": \"1/2 cup\"}, {\"name\": \"flour\", \"quantity\": \"1 1/2 cups\"}, {\"name\": \"canola oil\", \"quantity\": \"1/3 cup\"}, {\"name\": \"herbs\", \"quantity\": \"1 tsp\", \"notes\": \"dried\"}, {\"name\": \"lemon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"vinegar\", \"quantity\": \"2 tbsp\"}, {\"name\": \"salt\", \"quantity\": \"to taste\"}, {\"name\": \"pepper\", \"quantity\": \"to taste\"}, {\"name\": \"garlic\", \"quantity\": \"2 cloves\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Add seasonings and adjust to taste.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Serve hot with your favorite sides.\"], \"nutrition_info\": {\"calories\": 629, \"protein\": 27, \"carbs\": 78, \"fat\": 17}, \"dietary_info\": [\"gluten-free\"], \"rating\": 4.5, \"reviews_count\": 341, \"image_url\": \"https://example.com/images/philly_cheesesteak.jpg\", \"tags\": [\"gluten-free\", \"snack\", \"american\", \"comfort-food\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Philly Cheesesteak - A delicious american dish that's perfect for easy cooks.... (43 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:07:54.729588",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 4,
+          "llm_response": "I'll get details for another American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe33\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get details for another American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe33\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe33"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe33"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"description\": \"A delicious american dish that's perfect for easy cooks.\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"cooking_time\": 55, \"servings\": 2, \"ingredients\": [{\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"eggs\", \"quantity\": \"2 tbsp\"}, {\"name\": \"potatoes\", \"quantity\": \"1 tsp\"}, {\"name\": \"onions\", \"quantity\": \"1 large\"}, {\"name\": \"vinegar\", \"quantity\": \"1/2 cup\"}, {\"name\": \"wine\", \"quantity\": \"1/4 cup\"}, {\"name\": \"canola oil\", \"quantity\": \"1 tbsp\"}], \"instructions\": [\"Prepare all ingredients by washing, chopping, and measuring them.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Let cool slightly before serving.\"], \"nutrition_info\": {\"calories\": 540, \"protein\": 24, \"carbs\": 54, \"fat\": 20}, \"dietary_info\": [\"vegetarian\"], \"rating\": 4.2, \"reviews_count\": 447, \"image_url\": \"https://example.com/images/meatloaf.jpg\", \"tags\": [\"vegetarian\", \"american\", \"dessert\", \"healthy\", \"quick\", \"beginner-friendly\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Meatloaf - A delicious american dish that's perfect for easy cooks.... (26 min, easy difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:23:38.521466",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 5,
+          "llm_response": "I'll get details for another American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe36\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get details for another American recipe.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe36\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe36"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe36"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"description\": \"A delicious american dish that's perfect for medium cooks.\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"cooking_time\": 19, \"servings\": 2, \"ingredients\": [{\"name\": \"milk\", \"quantity\": \"1/4 cup\"}, {\"name\": \"bacon\", \"quantity\": \"1 tbsp\"}, {\"name\": \"chicken\", \"quantity\": \"1.5 lbs\", \"notes\": \"thighs\"}, {\"name\": \"onions\", \"quantity\": \"2 large\"}, {\"name\": \"butter\", \"quantity\": \"8 oz\"}, {\"name\": \"herbs\", \"quantity\": \"1 tbsp\", \"notes\": \"dried\"}], \"instructions\": [\"Season meat with salt and pepper.\", \"Add ingredients to the pan and cook for 5-10 minutes until fragrant.\", \"Add seasonings and adjust to taste.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Garnish with fresh herbs before serving.\"], \"nutrition_info\": {\"calories\": 496, \"protein\": 19, \"carbs\": 69, \"fat\": 14}, \"dietary_info\": [], \"rating\": 4.0, \"reviews_count\": 475, \"image_url\": \"https://example.com/images/chocolate_chip_cookies.jpg\", \"tags\": [\"party-food\", \"american\", \"lunch\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Chocolate Chip Cookies - A delicious american dish that's perfect for medium cooks.... (27 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:28:37.102246",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 6,
+          "llm_response": "I'll get details for the last American recipe from our search.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe23\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll get details for the last American recipe from our search.\n\n<API_CALL>\n{\n  \"api\": \"get_recipe_details\",\n  \"params\": {\n    \"recipe_id\": \"recipe23\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_recipe_details",
+              "params": {
+                "recipe_id": "recipe23"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe23"
+            }
+          },
+          "api_result": "{\"success\": true, \"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"description\": \"A delicious american dish that's perfect for medium cooks.\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"cooking_time\": 16, \"servings\": 6, \"ingredients\": [{\"name\": \"milk\", \"quantity\": \"1/2 cup\"}, {\"name\": \"onions\", \"quantity\": \"1 medium\"}, {\"name\": \"bacon\", \"quantity\": \"1/2 cup\"}, {\"name\": \"potatoes\", \"quantity\": \"2 tbsp\"}, {\"name\": \"herbs\", \"quantity\": \"1 cup\"}, {\"name\": \"wine\", \"quantity\": \"1 cup\"}, {\"name\": \"garlic\", \"quantity\": \"6 cloves\"}], \"instructions\": [\"Preheat oven to 375\\u00b0F (190\\u00b0C).\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Cover and cook for 20-30 minutes until tender.\", \"Stir in remaining ingredients and bring to a simmer.\", \"Cover and cook for 20-30 minutes until tender.\", \"Cover and cook for 20-30 minutes until tender.\", \"Adjust seasoning if needed and serve immediately.\"], \"nutrition_info\": {\"calories\": 614, \"protein\": 23, \"carbs\": 89, \"fat\": 19}, \"dietary_info\": [], \"rating\": 3.9, \"reviews_count\": 245, \"image_url\": \"https://example.com/images/pulled_pork.jpg\", \"tags\": [\"family-friendly\", \"american\", \"dinner\"], \"author\": \"\", \"is_favorite\": false, \"formatted\": \"Pulled Pork - A delicious american dish that's perfect for medium cooks.... (44 min, medium difficulty)\", \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:30:14.207888",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 7,
+          "llm_response": "Here are the top 5 American recipes I found for you:\n\n1. Smoked Chicken (4.8/5 stars)\n   - Easy difficulty, 43 min prep time\n   - Key ingredients: chicken, butter, bacon, onions, garlic\n   - Perfect for lunch, beginner-friendly\n\n2. Philly Cheesesteak (4.5/5 stars)\n   - Easy difficulty, 43 min prep time\n   - Key ingredients: chicken, cheddar cheese, potatoes\n   - Gluten-free, comfort food\n\n3. Meatloaf (4.2/5 stars)\n   - Easy difficulty, 26 min prep time\n   - Key ingredients: butter, milk, eggs, onions\n   - Vegetarian-friendly option available\n\n4. Chocolate Chip Cookies (4.0/5 stars)\n   - Medium difficulty, 27 min prep time\n   - Key ingredients: milk, butter, bacon (unusual ingredient!)\n   - Great for parties\n\n5. Pulled Pork (3.9/5 stars)\n   - Medium difficulty, 44 min prep time\n   - Key ingredients: milk, onions, bacon, herbs\n   - Perfect for family dinners\n\nWould you like me to get the full recipe details for any of these dishes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Here are the top 5 American recipes I found for you:\n\n1. Smoked Chicken (4.8/5 stars)\n   - Easy difficulty, 43 min prep time\n   - Key ingredients: chicken, butter, bacon, onions, garlic\n   - Perfect for lunch, beginner-friendly\n\n2. Philly Cheesesteak (4.5/5 stars)\n   - Easy difficulty, 43 min prep time\n   - Key ingredients: chicken, cheddar cheese, potatoes\n   - Gluten-free, comfort food\n\n3. Meatloaf (4.2/5 stars)\n   - Easy difficulty, 26 min prep time\n   - Key ingredients: butter, milk, eggs, onions\n   - Vegetarian-friendly option available\n\n4. Chocolate Chip Cookies (4.0/5 stars)\n   - Medium difficulty, 27 min prep time\n   - Key ingredients: milk, butter, bacon (unusual ingredient!)\n   - Great for parties\n\n5. Pulled Pork (3.9/5 stars)\n   - Medium difficulty, 44 min prep time\n   - Key ingredients: milk, onions, bacon, herbs\n   - Perfect for family dinners\n\nWould you like me to get the full recipe details for any of these dishes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T19:43:43.796171",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.8333333333333334,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 7,
+        "api_steps": 6,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.14285714285714285,
+        "api_efficiency": 0.16666666666666666,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 7,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:48:44.204484",
+      "target_function": "search_recipes",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'm interested in the 1st, 3rd, and 4th ones, show me the details",
+      "expected_api_sequence": [
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe6"
+          },
+          "description": "Get details for recipe: Smoked Chicken"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe33"
+          },
+          "description": "Get details for recipe: Meatloaf"
+        },
+        {
+          "api": "get_recipe_details",
+          "params": {
+            "recipe_id": "recipe36"
+          },
+          "description": "Get details for recipe: Chocolate Chip Cookies"
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "Based on your interest, here are the details for the 1st, 3rd, and 4th recipes:\n\n1. Smoked Chicken:\n   - Cuisine: American\n   - Difficulty: Easy\n   - Prep time: 43 minutes, Cooking time: 39 minutes\n   - Serves: 7\n   - Rating: 4.8/5 (322 reviews)\n   - Key ingredients: butter, bacon, onions, potatoes, garlic, lemon\n   - Instructions include preheating oven to 375\u00b0F and cooking for 20-30 minutes until tender\n   - Dietary info: None specified\n\n3. Meatloaf:\n   - Cuisine: American\n   - Difficulty: Easy\n   - Prep time: 26 minutes, Cooking time: 55 minutes\n   - Serves: 2\n   - Rating: 4.2/5 (447 reviews)\n   - Key ingredients: butter, milk, eggs, potatoes, onions\n   - Instructions include preparing ingredients and cooking for 20-30 minutes\n   - Dietary info: Vegetarian\n\n4. Chocolate Chip Cookies:\n   - Cuisine: American\n   - Difficulty: Medium\n   - Prep time: 27 minutes, Cooking time: 19 minutes\n   - Serves: 2\n   - Rating: 4.0/5 (475 reviews)\n   - Key ingredients: milk, bacon, chicken, onions, butter, herbs\n   - Instructions include seasoning meat and cooking ingredients for 5-10 minutes\n   - Dietary info: None specified\n\nWould you like me to help you with any of these recipes specifically?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on your interest, here are the details for the 1st, 3rd, and 4th recipes:\n\n1. Smoked Chicken:\n   - Cuisine: American\n   - Difficulty: Easy\n   - Prep time: 43 minutes, Cooking time: 39 minutes\n   - Serves: 7\n   - Rating: 4.8/5 (322 reviews)\n   - Key ingredients: butter, bacon, onions, potatoes, garlic, lemon\n   - Instructions include preheating oven to 375\u00b0F and cooking for 20-30 minutes until tender\n   - Dietary info: None specified\n\n3. Meatloaf:\n   - Cuisine: American\n   - Difficulty: Easy\n   - Prep time: 26 minutes, Cooking time: 55 minutes\n   - Serves: 2\n   - Rating: 4.2/5 (447 reviews)\n   - Key ingredients: butter, milk, eggs, potatoes, onions\n   - Instructions include preparing ingredients and cooking for 20-30 minutes\n   - Dietary info: Vegetarian\n\n4. Chocolate Chip Cookies:\n   - Cuisine: American\n   - Difficulty: Medium\n   - Prep time: 27 minutes, Cooking time: 19 minutes\n   - Serves: 2\n   - Rating: 4.0/5 (475 reviews)\n   - Key ingredients: milk, bacon, chicken, onions, butter, herbs\n   - Instructions include seasoning meat and cooking ingredients for 5-10 minutes\n   - Dietary info: None specified\n\nWould you like me to help you with any of these recipes specifically?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 300.40737676620483,
+          "timestamp": "2025-08-21T19:48:44.203605",
+          "ground_truth_api": {
+            "api": "get_recipe_details",
+            "params": {
+              "recipe_id": "recipe6"
+            },
+            "description": "Get details for recipe: Smoked Chicken"
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 1,
+        "api_steps": 0,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 3.0,
+        "api_efficiency": 0,
+        "api_success_rate": 0,
+        "task_completed": true,
+        "inference_path": [
+          "completion"
+        ],
+        "total_prediction_steps": 1,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T20:12:42.431659"
+}

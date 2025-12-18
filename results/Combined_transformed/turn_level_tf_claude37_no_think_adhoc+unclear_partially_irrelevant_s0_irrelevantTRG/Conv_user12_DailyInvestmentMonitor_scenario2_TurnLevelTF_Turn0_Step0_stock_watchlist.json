@@ -1,0 +1,336 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user12_DailyInvestmentMonitor_scenario2.jsonl",
+  "filename": "Conv_user12_DailyInvestmentMonitor_scenario2.jsonl",
+  "user_id": "user12",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.8333333333333333,
+  "avg_api_name_accuracy": 0.8333333333333333,
+  "avg_parameter_accuracy": 0.8333333333333333,
+  "overall_score": 0.8333333333333334,
+  "step_by_step_metrics": {
+    "total_steps": 6,
+    "total_api_steps": 4,
+    "avg_steps_per_query": 3.0,
+    "avg_api_steps_per_query": 2.0,
+    "avg_step_efficiency": 0.625
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 6,
+    "correct_predictions": 2,
+    "avg_prediction_accuracy": 0.3333333333333333
+  },
+  "query_results": [
+    {
+      "query": "Urgent review of Like every day What's the status of my stock portfolio?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_watchlist",
+          "params": {}
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "stock_watchlist",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "stock_watchlist",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"watchlist\": [\"GOOGL\", \"MSFT\", \"META\"], \"stocks\": [{\"symbol\": \"GOOGL\", \"data\": {\"symbol\": \"GOOGL\", \"name\": \"Alphabet Inc.\", \"price\": 1038.99, \"change\": 46.75, \"change_percent\": 4.71, \"business_description\": \"Alphabet Inc. provides online advertising services and cloud computing platforms through Google Search, YouTube, Chrome, Android, and Google Cloud infrastructure.\", \"stock_market_recent_news\": \"Google announced breakthrough in quantum computing with new Willow chip, while facing ongoing antitrust challenges in multiple jurisdictions.\"}, \"formatted\": \"GOOGL: $1038.99 (46.75 / 4.71%)\"}, {\"symbol\": \"MSFT\", \"data\": {\"symbol\": \"MSFT\", \"name\": \"Microsoft Corp.\", \"price\": 858.1, \"change\": 36.75, \"change_percent\": 4.47, \"business_description\": \"Microsoft Corporation develops and licenses software, services, devices and solutions worldwide. Major segments include Azure cloud services, Office productivity suite, and gaming through Xbox.\", \"stock_market_recent_news\": \"Microsoft's AI integration across Office suite and Azure cloud services drives strong revenue growth, with Copilot adoption exceeding expectations.\"}, \"formatted\": \"MSFT: $858.1 (36.75 / 4.47%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86, \"business_description\": \"Meta Platforms Inc. builds technologies that help people connect through mobile devices and personal computers. Main products include Facebook, Instagram, WhatsApp, and Reality Labs VR/AR division.\", \"stock_market_recent_news\": \"Meta's Reality Labs division shows progress in VR/AR development while core advertising business benefits from improved AI targeting capabilities.\"}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1943.65, \"total_change\": 82.62}, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:38.845688",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've checked your stock portfolio. Here's the current status:\n\nYour watchlist includes GOOGL, MSFT, and META:\n\n- GOOGL (Alphabet Inc.): $1,038.99, up $46.75 (4.71%)\n- MSFT (Microsoft Corp.): $858.10, up $36.75 (4.47%)\n- META (Meta Platforms Inc.): $46.56, down $0.88 (1.86%)\n\nOverall, your portfolio is performing well with GOOGL and MSFT showing strong gains, while META is slightly down. The total value of your portfolio is $1,943.65 with a total gain of $82.62.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've checked your stock portfolio. Here's the current status:\n\nYour watchlist includes GOOGL, MSFT, and META:\n\n- GOOGL (Alphabet Inc.): $1,038.99, up $46.75 (4.71%)\n- MSFT (Microsoft Corp.): $858.10, up $36.75 (4.47%)\n- META (Meta Platforms Inc.): $46.56, down $0.88 (1.86%)\n\nOverall, your portfolio is performing well with GOOGL and MSFT showing strong gains, while META is slightly down. The total value of your portfolio is $1,943.65 with a total gain of $82.62.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:47.724589",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T18:55:23.153913",
+      "target_function": "stock_watchlist",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I'm ready to review switch to relaxing colored lights Turn the Bathroom Light purple",
+      "expected_api_sequence": [
+        {
+          "api": "get_user_inventory",
+          "params": {}
+        },
+        {
+          "api": "get_device_details",
+          "params": {
+            "endpoint": "67"
+          }
+        },
+        {
+          "api": "color_set",
+          "params": {
+            "endpoints": [
+              "67"
+            ],
+            "color": "#800080"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll help you turn the bathroom light purple. First, I need to check your available devices.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you turn the bathroom light purple. First, I need to check your available devices.\n\n<API_CALL>\n{\n  \"api\": \"get_user_inventory\",\n  \"params\": {}\n}\n</API_CALL>",
+            "api_call": {
+              "api": "get_user_inventory",
+              "params": {}
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"user_id\": \"user12\", \"name\": \"Mark Moore\", \"home_id\": \"home5\", \"current_space\": null, \"devices\": [{\"endpoint\": \"62\", \"name\": \"Living Room Speaker\", \"alternate_names\": [\"Sound System\", \"Audio\"]}, {\"endpoint\": \"63\", \"name\": \"Living Room Light\", \"alternate_names\": [\"Main Light\", \"Ceiling Light\"]}, {\"endpoint\": \"64\", \"name\": \"Kitchen Light\", \"alternate_names\": [\"Kitchen Ceiling Light\", \"Main Light\"]}, {\"endpoint\": \"65\", \"name\": \"Bedroom Lamp\", \"alternate_names\": [\"Bedside Lamp\", \"Reading Light\"]}, {\"endpoint\": \"66\", \"name\": \"Bedroom Speaker\", \"alternate_names\": [\"Bedroom Audio\", \"Bedside Speaker\"]}, {\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"alternate_names\": [\"Bathroom Light\", \"Vanity Light\"]}, {\"endpoint\": \"68\", \"name\": \"Security Camera\", \"alternate_names\": [\"Front Camera\", \"Outdoor Camera\"]}, {\"endpoint\": \"69\", \"name\": \"Motion Sensor\", \"alternate_names\": [\"Security Sensor\"]}, {\"endpoint\": \"70\", \"name\": \"Thermostat\", \"alternate_names\": [\"Temperature Control\", \"Climate Control\"]}], \"groups\": [{\"id\": \"living_room\", \"name\": \"Living Room\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"kitchen\", \"name\": \"Kitchen\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bedroom\", \"name\": \"Bedroom\", \"type\": \"space\", \"has_echo_device\": false}, {\"id\": \"bathroom\", \"name\": \"Bathroom\", \"type\": \"space\", \"has_echo_device\": true}, {\"id\": \"all_lights\", \"name\": \"All Lights\", \"type\": \"device_group\", \"has_echo_device\": false}, {\"id\": \"entertainment\", \"name\": \"Entertainment\", \"type\": \"device_group\", \"has_echo_device\": false}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 183.7652678489685,
+          "timestamp": "2025-08-21T18:47:51.489906",
+          "ground_truth_api": {
+            "api": "get_user_inventory",
+            "params": {}
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I found your bathroom light. Now I'll turn it on and set it to purple.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"67\"]\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I found your bathroom light. Now I'll turn it on and set it to purple.\n\n<API_CALL>\n{\n  \"api\": \"power_on\",\n  \"params\": {\n    \"endpoints\": [\"67\"]\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "power_on",
+              "params": {
+                "endpoints": [
+                  "67"
+                ]
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "power_on",
+            "params": {
+              "endpoints": [
+                "67"
+              ]
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"success\": true, \"message\": \"Turned on Bathroom Light\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 171.62582182884216,
+          "timestamp": "2025-08-21T18:50:43.116016",
+          "ground_truth_api": {
+            "api": "get_device_details",
+            "params": {
+              "endpoint": "67"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Now I'll set the bathroom light to purple color.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"67\"],\n    \"color\": \"#800080\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Now I'll set the bathroom light to purple color.\n\n<API_CALL>\n{\n  \"api\": \"color_set\",\n  \"params\": {\n    \"endpoints\": [\"67\"],\n    \"color\": \"#800080\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "color_set",
+              "params": {
+                "endpoints": [
+                  "67"
+                ],
+                "color": "#800080"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "67"
+              ],
+              "color": "#800080"
+            }
+          },
+          "api_result": "{\"success\": true, \"results\": [{\"endpoint\": \"67\", \"name\": \"Bathroom Light\", \"success\": true, \"message\": \"Set Bathroom Light color to #800080\", \"color\": \"#800080\"}], \"_environment\": \"SmartHomeEnv\"}",
+          "api_success": true,
+          "execution_time": 81.61514377593994,
+          "timestamp": "2025-08-21T18:52:04.731327",
+          "ground_truth_api": {
+            "api": "color_set",
+            "params": {
+              "endpoints": [
+                "67"
+              ],
+              "color": "#800080"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 4,
+          "llm_response": "The bathroom light is now on and set to a purple color. Enjoy your relaxing atmosphere!\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "The bathroom light is now on and set to a purple color. Enjoy your relaxing atmosphere!\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 198.42182111740112,
+          "timestamp": "2025-08-21T18:55:23.153491",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 0.6666666666666666,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.6666666666666666,
+        "parameter_accuracy": 0.6666666666666666,
+        "order_accuracy": 0.0,
+        "total_steps": 4,
+        "api_steps": 3,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.75,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "api_call",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 4,
+        "correct_predictions": 2,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          false,
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T18:55:23.155137"
+}

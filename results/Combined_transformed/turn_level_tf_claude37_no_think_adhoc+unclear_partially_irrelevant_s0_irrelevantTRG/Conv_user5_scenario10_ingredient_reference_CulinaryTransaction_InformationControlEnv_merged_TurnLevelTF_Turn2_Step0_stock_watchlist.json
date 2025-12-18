@@ -1,0 +1,275 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "filename": "Conv_user5_scenario10_ingredient_reference_CulinaryTransaction_InformationControlEnv_merged.jsonl",
+  "user_id": "user5",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 0.5,
+  "avg_api_name_accuracy": 0.5,
+  "avg_parameter_accuracy": 0.5,
+  "overall_score": 0.5,
+  "step_by_step_metrics": {
+    "total_steps": 5,
+    "total_api_steps": 3,
+    "avg_steps_per_query": 2.5,
+    "avg_api_steps_per_query": 1.5,
+    "avg_step_efficiency": 0.41666666666666663
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 5,
+    "correct_predictions": 0,
+    "avg_prediction_accuracy": 0.0
+  },
+  "query_results": [
+    {
+      "query": "What stocks are in my watchlist?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_watchlist",
+          "params": {}
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "stock_watchlist",
+              "params": {}
+            }
+          },
+          "api_call": {
+            "api": "stock_watchlist",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"watchlist\": [\"TSLA\", \"META\", \"NVDA\"], \"stocks\": [{\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56, \"business_description\": \"Tesla Inc. designs, develops, manufactures, and sells electric vehicles, energy generation and storage systems. The company also provides vehicle service, charging infrastructure, and autonomous driving software.\", \"stock_market_recent_news\": \"Tesla's Cybertruck production ramp continues while Full Self-Driving beta expands to more users, though regulatory approval remains pending.\"}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86, \"business_description\": \"Meta Platforms Inc. builds technologies that help people connect through mobile devices and personal computers. Main products include Facebook, Instagram, WhatsApp, and Reality Labs VR/AR division.\", \"stock_market_recent_news\": \"Meta's Reality Labs division shows progress in VR/AR development while core advertising business benefits from improved AI targeting capabilities.\"}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69, \"business_description\": \"NVIDIA Corporation provides graphics processing units and related software for gaming, professional visualization, data centers, and automotive markets. Leading provider of AI computing infrastructure.\", \"stock_market_recent_news\": \"NVIDIA's data center revenue reaches record highs driven by AI demand, while gaming segment recovers from previous downturn.\"}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1825.07, \"total_change\": 4.99}, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:28:03.014604",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I'll help you find the top 10 Italian dishes from our recipe database.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"Italian\",\n    \"limit\": 10,\n    \"sort_by\": \"rating\"\n  }\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll help you find the top 10 Italian dishes from our recipe database.\n\n<API_CALL>\n{\n  \"api\": \"search_recipes\",\n  \"params\": {\n    \"cuisine\": \"Italian\",\n    \"limit\": 10,\n    \"sort_by\": \"rating\"\n  }\n}\n</API_CALL>",
+            "api_call": {
+              "api": "search_recipes",
+              "params": {
+                "cuisine": "Italian",
+                "limit": 10,
+                "sort_by": "rating"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "search_recipes",
+            "params": {
+              "cuisine": "Italian",
+              "limit": 10,
+              "sort_by": "rating"
+            }
+          },
+          "api_result": "{\"success\": true, \"count\": 6, \"cuisines\": [\"Italian\"], \"results\": [{\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe18\", \"name\": \"Samosas\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe8\", \"name\": \"Tom Yum Soup\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe25\", \"name\": \"Kung Pao Chicken\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 13, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"sponsored_content\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe24\", \"name\": \"Fettuccine Bolognese\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 19, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"search_result\"}, {\"recipe_id\": \"recipe20\", \"name\": \"Philly Cheesesteak\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.5, \"dietary_info\": [\"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe12\", \"name\": \"Chicken Parmigiana\", \"cuisine\": \"Italian\", \"difficulty\": \"easy\", \"preparation_time\": 24, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe31\", \"name\": \"Chicken Tacos\", \"cuisine\": \"Mexican\", \"difficulty\": \"medium\", \"preparation_time\": 35, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe21\", \"name\": \"Rigatoni Aglio e Olio\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 25, \"rating\": 4.1, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe13\", \"name\": \"Prosciutto Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 43, \"rating\": 4.0, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe32\", \"name\": \"Greek Salad\", \"cuisine\": \"Mediterranean\", \"difficulty\": \"hard\", \"preparation_time\": 46, \"rating\": 4.6, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe7\", \"name\": \"Mango Sticky Rice\", \"cuisine\": \"Asian\", \"difficulty\": \"easy\", \"preparation_time\": 45, \"rating\": 3.9, \"dietary_info\": [\"vegetarian\", \"vegan\", \"gluten-free\"], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe23\", \"name\": \"Pulled Pork\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 3.9, \"dietary_info\": [], \"source_type\": \"similar_recipes\"}, {\"recipe_id\": \"recipe6\", \"name\": \"Smoked Chicken\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 43, \"rating\": 4.8, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe5\", \"name\": \"Spaghetti Carbonara\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.3, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe4\", \"name\": \"Sweet and Sour Pork\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 18, \"rating\": 4.6, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe3\", \"name\": \"Bouillabaisse\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 34, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe2\", \"name\": \"Tandoori Chicken\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 15, \"rating\": 4.4, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe1\", \"name\": \"Schnitzel\", \"cuisine\": \"Other\", \"difficulty\": \"medium\", \"preparation_time\": 13, \"rating\": 4.5, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe40\", \"name\": \"Margherita Pizza\", \"cuisine\": \"Italian\", \"difficulty\": \"medium\", \"preparation_time\": 44, \"rating\": 4.7, \"dietary_info\": [\"vegetarian\", \"vegan\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe38\", \"name\": \"Beef Ramen\", \"cuisine\": \"Asian\", \"difficulty\": \"medium\", \"preparation_time\": 30, \"rating\": 4.9, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe37\", \"name\": \"Salsa Verde\", \"cuisine\": \"Mexican\", \"difficulty\": \"easy\", \"preparation_time\": 21, \"rating\": 3.8, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe36\", \"name\": \"Chocolate Chip Cookies\", \"cuisine\": \"American\", \"difficulty\": \"medium\", \"preparation_time\": 27, \"rating\": 4.0, \"dietary_info\": [], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe34\", \"name\": \"Lamb Biryani\", \"cuisine\": \"Indian\", \"difficulty\": \"medium\", \"preparation_time\": 14, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}, {\"recipe_id\": \"recipe33\", \"name\": \"Meatloaf\", \"cuisine\": \"American\", \"difficulty\": \"easy\", \"preparation_time\": 26, \"rating\": 4.2, \"dietary_info\": [\"vegetarian\"], \"source_type\": \"ai_recommendations\"}], \"query_performance_metrics\": {\"response_time_ms\": 45, \"cache_hit_rate\": 0.98, \"query_complexity_score\": 4.5}, \"content_freshness_indicators\": {\"data_staleness_hours\": 8, \"next_refresh_scheduled\": \"2024-12-15T03:00:00Z\", \"content_accuracy_confidence\": 0.94}, \"_environment\": \"CulinaryControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:35:41.881302",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 3,
+          "llm_response": "Based on the search results, here are the top Italian dishes sorted by rating:\n\n1. Margherita Pizza (4.7 rating)\n2. Fettuccine Bolognese (4.6 rating)\n3. Spaghetti Carbonara (4.3 rating)\n4. Chicken Parmigiana (4.3 rating)\n5. Rigatoni Aglio e Olio (4.1 rating)\n6. Prosciutto Pizza (4.0 rating)\n\nThese are the Italian dishes available in our database, sorted by their rating. Would you like to get more details about any of these recipes?\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on the search results, here are the top Italian dishes sorted by rating:\n\n1. Margherita Pizza (4.7 rating)\n2. Fettuccine Bolognese (4.6 rating)\n3. Spaghetti Carbonara (4.3 rating)\n4. Chicken Parmigiana (4.3 rating)\n5. Rigatoni Aglio e Olio (4.1 rating)\n6. Prosciutto Pizza (4.0 rating)\n\nThese are the Italian dishes available in our database, sorted by their rating. Would you like to get more details about any of these recipes?\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T20:53:35.145179",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": false,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.5,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 3,
+        "api_steps": 2,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.3333333333333333,
+        "api_efficiency": 0.5,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 3,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T21:18:16.548206",
+      "target_function": "stock_watchlist",
+      "target_location": "Turn 2, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I want to confirm the price of the 3rd stock once more",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NASDAQ:NVDA"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "I'll check the price of the 3rd stock in your watchlist for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_watchlist\",\n  \"params\": {}\n}\n</API_CALL>",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "I'll check the price of the 3rd stock in your watchlist for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_watchlist\",\n  \"params\": {}\n}\n</API_CALL>",
+            "api_call": {
+              "api": "stock_watchlist",
+              "params": {}
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_watchlist",
+            "params": {}
+          },
+          "api_result": "{\"success\": true, \"watchlist\": [\"TSLA\", \"META\", \"NVDA\"], \"stocks\": [{\"symbol\": \"TSLA\", \"data\": {\"symbol\": \"TSLA\", \"name\": \"Tesla Inc.\", \"price\": 927.83, \"change\": -24.42, \"change_percent\": -2.56, \"business_description\": \"Tesla Inc. designs, develops, manufactures, and sells electric vehicles, energy generation and storage systems. The company also provides vehicle service, charging infrastructure, and autonomous driving software.\", \"stock_market_recent_news\": \"Tesla's Cybertruck production ramp continues while Full Self-Driving beta expands to more users, though regulatory approval remains pending.\"}, \"formatted\": \"TSLA: $927.83 (-24.42 / -2.56%)\"}, {\"symbol\": \"META\", \"data\": {\"symbol\": \"META\", \"name\": \"Meta Platforms Inc.\", \"price\": 46.56, \"change\": -0.88, \"change_percent\": -1.86, \"business_description\": \"Meta Platforms Inc. builds technologies that help people connect through mobile devices and personal computers. Main products include Facebook, Instagram, WhatsApp, and Reality Labs VR/AR division.\", \"stock_market_recent_news\": \"Meta's Reality Labs division shows progress in VR/AR development while core advertising business benefits from improved AI targeting capabilities.\"}, \"formatted\": \"META: $46.56 (-0.88 / -1.86%)\"}, {\"symbol\": \"NVDA\", \"data\": {\"symbol\": \"NVDA\", \"name\": \"NVIDIA Corp.\", \"price\": 850.68, \"change\": 30.29, \"change_percent\": 3.69, \"business_description\": \"NVIDIA Corporation provides graphics processing units and related software for gaming, professional visualization, data centers, and automotive markets. Leading provider of AI computing infrastructure.\", \"stock_market_recent_news\": \"NVIDIA's data center revenue reaches record highs driven by AI demand, while gaming segment recovers from previous downturn.\"}, \"formatted\": \"NVDA: $850.68 (30.29 / 3.69%)\"}], \"summary\": {\"total_symbols\": 3, \"total_value\": 1825.07, \"total_change\": 4.99}, \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 1286.502593755722,
+          "timestamp": "2025-08-21T21:15:01.647821",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NASDAQ:NVDA"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": false
+        },
+        {
+          "step_number": 2,
+          "llm_response": "The 3rd stock in your watchlist is NVIDIA Corp. (NVDA) with a current price of $850.68. It's up $30.29 today, which is a 3.69% increase.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "The 3rd stock in your watchlist is NVIDIA Corp. (NVDA) with a current price of $850.68. It's up $30.29 today, which is a 3.69% increase.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 194.89735531806946,
+          "timestamp": "2025-08-21T21:18:16.547857",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": false,
+        "api_count_match": true,
+        "api_coverage_rate": 0.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 0.0,
+        "parameter_accuracy": 0.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          false,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 3,
+      "related_to_target": "Turn 2, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T21:18:16.550611"
+}

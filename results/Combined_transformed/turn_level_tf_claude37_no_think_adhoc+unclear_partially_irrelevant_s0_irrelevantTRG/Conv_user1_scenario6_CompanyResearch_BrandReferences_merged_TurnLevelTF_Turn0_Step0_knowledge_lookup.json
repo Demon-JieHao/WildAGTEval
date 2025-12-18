@@ -1,0 +1,250 @@
+{
+  "evaluation_type": "turn_level_teacher_forcing",
+  "file_path": "/home//API/API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_scenario6_CompanyResearch_BrandReferences_merged.jsonl",
+  "filename": "Conv_user1_scenario6_CompanyResearch_BrandReferences_merged.jsonl",
+  "user_id": "user1",
+  "model": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+  "uncertainty_config": {
+    "config_name": "Partially Irrelevant Information Only",
+    "config_description": "Enable only PARTIALLY_IRRELEVANT_INFORMATION uncertainties - tests LLM information filtering",
+    "config_path": "uncertainty_configs/partially_irrelevant.yaml",
+    "statistics": {
+      "total_apis_with_uncertainties": 8,
+      "total_active_env_vars": 8,
+      "uncertainty_type_counts": {
+        "FEATURE_LIMITATION_ERROR": 0,
+        "PARTIALLY_IRRELEVANT_INFORMATION": 8,
+        "INFORMATIONAL_NOTICE": 0
+      },
+      "apis_by_uncertainty_type": {
+        "FEATURE_LIMITATION_ERROR": [],
+        "PARTIALLY_IRRELEVANT_INFORMATION": [
+          "find_call_device",
+          "get_call_history",
+          "get_messages",
+          "get_restaurant_menu",
+          "knowledge_lookup",
+          "search_recipes",
+          "stock_watchlist",
+          "weather_forecast"
+        ],
+        "INFORMATIONAL_NOTICE": []
+      }
+    },
+    "enabled_uncertainty_types": [
+      "PARTIALLY_IRRELEVANT_INFORMATION"
+    ]
+  },
+  "total_queries": 2,
+  "successful_queries": 0,
+  "success_rate": 0.0,
+  "avg_api_coverage_rate": 1.0,
+  "avg_api_name_accuracy": 1.0,
+  "avg_parameter_accuracy": 1.0,
+  "overall_score": 1.0,
+  "step_by_step_metrics": {
+    "total_steps": 4,
+    "total_api_steps": 2,
+    "avg_steps_per_query": 2.0,
+    "avg_api_steps_per_query": 1.0,
+    "avg_step_efficiency": 0.5
+  },
+  "teacher_forcing_metrics": {
+    "total_prediction_steps": 4,
+    "correct_predictions": 1,
+    "avg_prediction_accuracy": 0.25
+  },
+  "query_results": [
+    {
+      "query": "What is Salesforce's main focus?",
+      "expected_api_sequence": [
+        {
+          "api": "knowledge_lookup",
+          "params": {
+            "keyword": "salesforce_inc"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "[GT_EXECUTION]",
+          "parsed_action": {
+            "type": "gt_execution",
+            "api_call": {
+              "api": "knowledge_lookup",
+              "params": {
+                "keyword": "salesforce_inc"
+              }
+            }
+          },
+          "api_call": {
+            "api": "knowledge_lookup",
+            "params": {
+              "keyword": "salesforce_inc"
+            }
+          },
+          "api_result": "{\"success\": true, \"keyword\": \"salesforce_inc\", \"definition\": \"Salesforce Inc. (symbol: CRM) is a cloud-based software company that provides customer relationship management (CRM) services and enterprise applications. It's a leader in cloud-based business solutions and software-as-a-service (SaaS).\\nCOMPREHENSIVE STOCK PERFORMANCE ANALYSIS (Historical Data): MULTI-YEAR TRAJECTORY & VOLATILITY ANALYSIS: 2024: $258.49 (+22.1% YoY, Vol: 47.8%), 2023: $211.76 (-44.7% YoY, Vol: 62.4%), 2022: $383.18 (+4.3% YoY, Vol: 54.9%), 2021: $367.44 (+25.1% YoY, Vol: 48.7%), 2020: $293.77 (+41.9% YoY, Vol: 55.3%). High volatility reflecting SaaS market dynamics and growth concerns. Five-year CAGR: -2.5%, Max drawdown: -76.1% (2022), Beta vs S&P 500: 1.09, Sharpe Ratio: 0.56, Information Ratio: 0.71. MONTHLY MOMENTUM ANALYSIS: Jan: $248.90 (-3.7% MoM, Vol: 123.8M), Feb: $257.40 (+3.4% MoM, Vol: 118.7M), Mar: $266.50 (+3.5% MoM, Vol: 134.2M), Apr: $276.20 (+3.6% MoM, Vol: 145.6M), May: $285.70 (+3.4% MoM, Vol: 139.8M). Consistent recovery momentum throughout 2025. WEEKLY GRANULAR ANALYSIS: June Week 1 (June 2-6): Open $286.20, High $291.80, Low $283.60, Close $289.45 (+1.3% WoW, Vol: 734M), June Week 2 (June 9-11): Open $289.70, High $294.90, Low $287.40, Close $292.80 (+1.2% WoW, Vol: 689M). Weekly ATR: $6.78, moderate volatility for enterprise software stock. COMPREHENSIVE DAILY PRICE ANALYSIS (May 19-Recent): Daily Closes: 285.70, 287.23, 288.89, 290.56, 289.12, 291.78, 293.45, 295.12, 293.67, 296.34, 298.12, 297.56, 300.23, 301.89, 300.45, 303.12, 304.78, 303.34, 306.23, 307.89, 306.45, 309.12, 310.78, 309.34. \\n National Association of Securities Dealers Automated Quotations hosts major companies including SBUX, PEP.\", \"source\": \"General Knowledge Base\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:40.113210",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        },
+        {
+          "step_number": 2,
+          "llm_response": "Based on the information I found, Salesforce Inc. (symbol: CRM) is a cloud-based software company that primarily focuses on providing customer relationship management (CRM) services and enterprise applications. They're considered a leader in cloud-based business solutions and software-as-a-service (SaaS).\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "Based on the information I found, Salesforce Inc. (symbol: CRM) is a cloud-based software company that primarily focuses on providing customer relationship management (CRM) services and enterprise applications. They're considered a leader in cloud-based business solutions and software-as-a-service (SaaS).\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 0.0,
+          "timestamp": "2025-08-21T18:44:50.537169",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "gt_execution",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 0,
+        "per_step_accuracy_rate": 0.0,
+        "step_by_step_accuracy": [
+          null,
+          null
+        ]
+      },
+      "success": false,
+      "timestamp": "2025-08-21T19:11:14.633157",
+      "target_function": "knowledge_lookup",
+      "target_location": "Turn 0, Step 0",
+      "evaluation_scope": "cross_turn",
+      "evaluation_type": "turn_level_teacher_forcing"
+    },
+    {
+      "query": "I like the stock info you provided. So what's the value of the stock?",
+      "expected_api_sequence": [
+        {
+          "api": "stock_price",
+          "params": {
+            "symbol": "NYSE:CRM"
+          }
+        }
+      ],
+      "steps": [
+        {
+          "step_number": 1,
+          "llm_response": "Based on the information I provided earlier, the most recent value of Salesforce (CRM) stock mentioned was $309.34 from the daily price analysis. However, this appears to be historical data and may not represent the current stock price.\n\nIf you'd like the most up-to-date stock price for Salesforce, I can look that up for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:CRM\"\n  }\n}\n</API_CALL>\n\n",
+          "parsed_action": {
+            "type": "api_call",
+            "content": "Based on the information I provided earlier, the most recent value of Salesforce (CRM) stock mentioned was $309.34 from the daily price analysis. However, this appears to be historical data and may not represent the current stock price.\n\nIf you'd like the most up-to-date stock price for Salesforce, I can look that up for you.\n\n<API_CALL>\n{\n  \"api\": \"stock_price\",\n  \"params\": {\n    \"symbol\": \"NYSE:CRM\"\n  }\n}\n</API_CALL>\n\n",
+            "api_call": {
+              "api": "stock_price",
+              "params": {
+                "symbol": "NYSE:CRM"
+              }
+            },
+            "completion_message": null
+          },
+          "api_call": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NYSE:CRM"
+            }
+          },
+          "api_result": "{\"success\": true, \"stock\": {\"symbol\": \"CRM\", \"name\": \"Salesforce Inc.\", \"price\": 231.62, \"change\": 4.14, \"change_percent\": 1.82}, \"formatted\": \"CRM: $231.62 (4.14 / 1.82%)\", \"_environment\": \"InformationControlEnv\"}",
+          "api_success": true,
+          "execution_time": 771.1005685329437,
+          "timestamp": "2025-08-21T18:57:41.637787",
+          "ground_truth_api": {
+            "api": "stock_price",
+            "params": {
+              "symbol": "NYSE:CRM"
+            }
+          },
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": true
+        },
+        {
+          "step_number": 2,
+          "llm_response": "I've got the current stock price for Salesforce Inc. (CRM). As of the latest update, Salesforce is trading at $231.62 per share, which is up $4.14 (1.82%) from the previous close.\n\nThis is the actual current market value, which differs from the historical data I mentioned earlier.\n\n<End of Turn>",
+          "parsed_action": {
+            "type": "completion",
+            "content": "I've got the current stock price for Salesforce Inc. (CRM). As of the latest update, Salesforce is trading at $231.62 per share, which is up $4.14 (1.82%) from the previous close.\n\nThis is the actual current market value, which differs from the historical data I mentioned earlier.\n\n<End of Turn>",
+            "api_call": null,
+            "completion_message": "End of Turn detected"
+          },
+          "api_call": null,
+          "api_result": null,
+          "api_success": null,
+          "execution_time": 812.994925737381,
+          "timestamp": "2025-08-21T19:11:14.632874",
+          "ground_truth_api": null,
+          "ground_truth_result": null,
+          "ground_truth_success": null,
+          "prediction_correct": null
+        }
+      ],
+      "metrics": {
+        "exact_sequence_match": true,
+        "api_count_match": true,
+        "api_coverage_rate": 1.0,
+        "redundancy_rate": 0.0,
+        "api_name_accuracy": 1.0,
+        "parameter_accuracy": 1.0,
+        "order_accuracy": 0.0,
+        "total_steps": 2,
+        "api_steps": 1,
+        "completion_steps": 1,
+        "error_steps": 0,
+        "step_efficiency": 0.5,
+        "api_efficiency": 1.0,
+        "api_success_rate": 1.0,
+        "task_completed": true,
+        "inference_path": [
+          "api_call",
+          "completion"
+        ],
+        "total_prediction_steps": 2,
+        "correct_predictions": 1,
+        "per_step_accuracy_rate": 0.5,
+        "step_by_step_accuracy": [
+          true,
+          null
+        ]
+      },
+      "success": false,
+      "turn_id": 1,
+      "related_to_target": "Turn 0, Step 0"
+    }
+  ],
+  "evaluated_at": "2025-08-21T19:11:14.634257"
+}
