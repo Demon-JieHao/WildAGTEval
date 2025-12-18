@@ -28,10 +28,10 @@ envs=("Combined_transformed") # "Combined_deref_transformed" ) # "Combined50_tra
 # Ablation experiment configurations
 # Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"
 declare -a ABLATION_CONFIGS=(
-    # "unclear:OFF:adhoc:adhoc:target_functions_unclear.yaml:_unclearTRG"
-    # "unclear:ON:adhoc+unclear:adhoc:target_functions_unclear.yaml:_unclearTRG"
-    # "info_notice:OFF:adhoc+unclear:adhoc:target_functions_informational_notice.yaml:_infonoticeTRG"
-    # "info_notice:ON:adhoc+unclear:informational_notice:target_functions_informational_notice.yaml:_infonoticeTRG"
+    "unclear:OFF:adhoc:adhoc:target_functions_unclear.yaml:_unclearTRG"
+    "unclear:ON:adhoc+unclear:adhoc:target_functions_unclear.yaml:_unclearTRG"
+    "info_notice:OFF:adhoc+unclear:adhoc:target_functions_informational_notice.yaml:_infonoticeTRG"
+    "info_notice:ON:adhoc+unclear:informational_notice:target_functions_informational_notice.yaml:_infonoticeTRG"
     "irrelevant_data:OFF:adhoc+unclear:adhoc:target_functions_partially_irrelevant.yaml:_irrelevantTRG"
     "irrelevant_data:ON:adhoc+unclear:partially_irrelevant:target_functions_partially_irrelevant.yaml:_irrelevantTRG"
     "adhoc:ON:adhoc:adhoc:target_functions_adhoc.yaml:_adhocTRG"
@@ -154,7 +154,7 @@ for config in "${ABLATION_CONFIGS[@]}"; do
                 CMD="./unified_conversation_tester.sh \
                     --env ${env} \
                     --output \"${OUTPUT_PATH}\" \
-                    --jobs 60 --max-steps 2 --timeout 130 \
+                    --jobs 60 --max-steps 15 --timeout 130 \
                     --model-id \"${MODEL_ID}\" \
                     ${THINKING_FLAG} \
                     --use-litellm \

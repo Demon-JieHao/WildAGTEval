@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Unified Teacher Forcing Batch Ablation Runner
-# Tests complexity ON/OFF ablation experiments with turn_level_tf mode
-# Based on run_error_based_complexity_batch.sh structure
+# OpenAI API Teacher Forcing Batch Ablation Runner
+# Uses vLLM server for OpenAI-compatible API testing with Teacher Forcing
+# Based on run_unified_teacher_forcing_batch_ablation.sh structure
 
 set -e  # Exit on any error
 
@@ -13,57 +13,58 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 RESULTS_BASE="${RESULTS_BASE:-$(dirname "$PROJECT_ROOT")/results}"
 
-echo "🚀 Starting Teacher Forcing Ablation batch testing..."
-echo "📋 Testing complexity ON/OFF ablation experiments"
+echo "🚀 Starting OpenAI API Teacher Forcing Ablation batch testing..."
+echo "📋 Testing complexity ON/OFF ablation experiments with Turn-Level TF mode"
 echo "📂 Results will be saved to: ${RESULTS_BASE}"
+
+# OpenAI API Configuration
+BASE_URL="http://127.0.0.1:8000/v1"
+API_KEY=""  # Not used for vLLM
 
 # Fixed parameter
 mode="turn_level_tf"
 
-# Variable arrays
-# model_configs=("claude35" "claude37_no_think" "claude40_think" "claude40_no_think")  # "claude35"
-model_configs=("claude37_no_think") 
-seeds=("s0") # "s1" "s2" "s3" "s4")
-envs=("Combined_transformed") # "Combined_deref_transformed" ) # "Combined50_transformed" "Combined_deref50_transformed"
+# Variable arrays (based on modified run_openai_batch.sh)
+model_configs=("oss_120b") # "oss_120b" "oss_120b_noThink" "oss_120b_noThink" "oss_120b" ("deepseekr1_qwen" "mistral_24b" "qwen3_32b" "oss_120b") 
+seeds=("s0" "s1" "s2") # "s0" "s1" "s2" "s3" "s9" ("s0" "s1" "s2")
+envs=("Combined") # "Combined_deref" "Combined50" "Combined_deref50"
 
 # Ablation experiment configurations
-# ! Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"
+# Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"
+# ! with clean API version
 declare -a ABLATION_CONFIGS=(
-    "unclear:OFF:adhoc:adhoc:target_functions_unclear.yaml:_unclearTRG"
-    "unclear:ON:adhoc+unclear:adhoc:target_functions_unclear.yaml:_unclearTRG"
-    "info_notice:OFF:adhoc+unclear:adhoc:target_functions_informational_notice.yaml:_infonoticeTRG"
-    "info_notice:ON:adhoc+unclear:informational_notice:target_functions_informational_notice.yaml:_infonoticeTRG"
-    "irrelevant_data:OFF:adhoc+unclear:adhoc:target_functions_partially_irrelevant.yaml:_irrelevantTRG"
-    "irrelevant_data:ON:adhoc+unclear:partially_irrelevant:target_functions_partially_irrelevant.yaml:_irrelevantTRG"
-    "adhoc:ON:adhoc:adhoc:target_functions_adhoc.yaml:_adhocTRG"
+    "adhoc:OFF:none:none:target_functions_adhoc.yaml:_adhocTRG"
 )
 
-# Helper function to set model-specific configurations
+# Helper function to set model-specific configurations (OpenAI version)
 set_model_config() {
     local model_config=$1
-    MODEL_ID=""
+    MODEL_NAME=""
     THINKING_FLAG=""
     
     case "$model_config" in
-        "claude37_think")
-            MODEL_ID="anthropic.claude-3-7-sonnet-20250219-v1:0"
+        "qwen3_32b_think")
+            MODEL_NAME="Qwen/Qwen3-32B"
             THINKING_FLAG="--enable-thinking"
             ;;
-        "claude37_no_think")
-            MODEL_ID="anthropic.claude-3-7-sonnet-20250219-v1:0"
-            # anthropic.claude-3-7-sonnet-20250219-v1:0
+        "qwen3_32b")
+            MODEL_NAME="Qwen/Qwen3-32B"
             THINKING_FLAG=""
             ;;
-        "claude40_think")
-            MODEL_ID="anthropic.claude-sonnet-4-20250514-v1:0"
-            THINKING_FLAG="--enable-thinking"
-            ;;
-        "claude40_no_think")
-            MODEL_ID="anthropic.claude-sonnet-4-20250514-v1:0"
+        "oss_120b")
+            MODEL_NAME="/checkpoint/gpt-oss-120b"
             THINKING_FLAG=""
             ;;
-        "claude35")
-            MODEL_ID="anthropic.claude-3-5-sonnet-20241022-v1:0"
+        "oss_120b_noThink")
+            MODEL_NAME="/checkpoint/gpt-oss-120b"
+            THINKING_FLAG=""
+            ;;
+        "deepseekr1_qwen")
+            MODEL_NAME="deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+            THINKING_FLAG=""
+            ;;
+        "mistral_24b")
+            MODEL_NAME="mistralai/Mistral-Small-3.2-24B-Instruct-2506"
             THINKING_FLAG=""
             ;;
     esac
@@ -73,9 +74,6 @@ set_model_config() {
 set_env_dir() {
     local env=$1
     case "$env" in
-        "TransactionEnv_transformed")
-            ENV_DIR="TransactionEnv_transformed"
-            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;
@@ -88,12 +86,20 @@ set_env_dir() {
         "Combined_deref_transformed")
             ENV_DIR="Combined_deref_transformed"
             ;;
-        "Complex_natural_new_transformed")
-            ENV_DIR="ComplexScenarios_transformed"
+        "Combined50")
+            ENV_DIR="Combined50"
+            ;;
+        "Combined_deref50")
+            ENV_DIR="Combined_deref50"
+            ;;
+        "Combined")
+            ENV_DIR="Combined"
+            ;;
+        "Combined_deref")
+            ENV_DIR="Combined_deref"
             ;;
     esac
 }
-
 
 # Helper function to parse ablation config
 parse_ablation_config() {
@@ -119,7 +125,9 @@ env_count=${#envs[@]}
 total_combinations=$((config_count * model_count * seed_count * env_count))
 
 echo "📊 Total combinations to process: ${total_combinations}"
+echo "🌐 OpenAI API Base URL: ${BASE_URL}"
 echo ""
+
 
 # Execute all combinations
 for config in "${ABLATION_CONFIGS[@]}"; do
@@ -145,7 +153,7 @@ for config in "${ABLATION_CONFIGS[@]}"; do
                 TARGET_FUNCTIONS_PATH="uncertainty_configs/${TARGET_FUNCTIONS_CONFIG}"
                 
                 # Build output path with complexity and suffix (portable)
-                OUTPUT_PATH="${RESULTS_BASE}/${ENV_DIR}/${mode}_${model_config}_${PROMPT}_${UNCERTAINTY}_${seed}${OUTPUT_SUFFIX}"
+                OUTPUT_PATH="${RESULTS_BASE}/${ENV_DIR}_openai/${mode}_${model_config}_${PROMPT}_${UNCERTAINTY}_${seed}${OUTPUT_SUFFIX}"
                 
                 # Check if config files exist
                 if [[ ! -f "$UNCERTAINTY_CONFIG" ]]; then
@@ -160,19 +168,22 @@ for config in "${ABLATION_CONFIGS[@]}"; do
                     continue
                 fi
                 
-                # Set prompt path based on prompt type
+                # Set prompt path based on prompt type and model
                 PROMPT_PATH="extracted_api/centralized_prompt"
                 if [[ "$PROMPT" == "adhoc+unclear" ]]; then
                     PROMPT_PATH="${PROMPT_PATH}_unclear"
                 fi
+                # Add model-specific suffixes
                 PROMPT_PATH="${PROMPT_PATH}.md"
                 
-                # Build command
-                CMD="./unified_conversation_tester.sh \
+                # Build command with OpenAI API options
+                CMD="./unified_conversation_tester_openai.sh \
                     --env ${env} \
+                    --model-type openai \
+                    --base-url \"${BASE_URL}\" \
+                    --model \"${MODEL_NAME}\" \
                     --output \"${OUTPUT_PATH}\" \
-                    --jobs 60 --max-steps 15 --timeout 130 \
-                    --model-id \"${MODEL_ID}\" \
+                    --jobs 50 --max-steps 15 --timeout 130 \
                     ${THINKING_FLAG} \
                     --prompt-path \"${PROMPT_PATH}\" \
                     --uncertainty-config \"${UNCERTAINTY_CONFIG}\" \
@@ -196,23 +207,26 @@ for config in "${ABLATION_CONFIGS[@]}"; do
 done
 
 echo ""
-echo "🎉 Teacher Forcing Ablation batch testing completed!"
+echo "🎉 OpenAI API Teacher Forcing Ablation batch testing completed!"
 echo "📊 Processed ${completed_combinations} combinations"
 echo "📂 Results saved in:"
 echo "   - ${RESULTS_BASE}/"
 echo ""
 echo "🔍 Ablation experiments conducted:"
-echo "   - unclear OFF: prompt=adhoc, unc=none, target=unclear (suffix: _uncOFF)"
-echo "   - unclear ON: prompt=adhoc+unclear, unc=none, target=unclear"
-echo "   - info_notice OFF: prompt=adhoc+unclear, unc=none, target=informational_notice (suffix: _uncOFF)"
-echo "   - info_notice ON: prompt=adhoc+unclear, unc=informational_notice, target=informational_notice"
-echo "   - irrelevant_data OFF: prompt=adhoc+unclear, unc=none, target=partially_irrelevant (suffix: _uncOFF)"
-echo "   - irrelevant_data ON: prompt=adhoc+unclear, unc=partially_irrelevant, target=partially_irrelevant"
-echo "   - adhoc ON: prompt=adhoc, unc=none, target=adhoc"
+echo "   - adhoc OFF: prompt=adhoc, unc=none, target=adhoc (suffix: _adhocTRG)"
 echo ""
 echo "⚙️  Configuration:"
+echo "   - Model Type: OpenAI API"
+echo "   - Base URL: ${BASE_URL}"
 echo "   - Mode: ${mode} (fixed)"
 echo "   - Models: ${model_configs[*]}"
 echo "   - Seeds: ${seeds[*]}"
 echo "   - Environments: ${envs[*]}"
 echo "   - Total ablation configs: ${#ABLATION_CONFIGS[@]}"
+echo ""
+echo "🔧 To modify configuration:"
+echo "   - Edit ABLATION_CONFIGS array for different ablation experiments"
+echo "   - Edit model_configs array for different models"
+echo "   - Edit BASE_URL for different vLLM server endpoints"
+echo "   - Edit seeds array for multiple random seeds"
+echo "   - Edit envs array for different environments"

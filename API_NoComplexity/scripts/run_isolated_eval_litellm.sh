@@ -150,7 +150,7 @@ for config in "${ABLATION_CONFIGS[@]}"; do
                 CMD="./unified_conversation_tester.sh \
                     --env ${env} \
                     --output \"${OUTPUT_PATH}\" \
-                    --jobs 60 --max-steps 2 --timeout 130 \
+                    --jobs 60 --max-steps 15 --timeout 130 \
                     --model-id \"${MODEL_ID}\" \
                     ${THINKING_FLAG} \
                     --use-litellm \

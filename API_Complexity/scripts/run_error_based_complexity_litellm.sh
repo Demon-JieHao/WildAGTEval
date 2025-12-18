@@ -77,8 +77,8 @@ total_combinations=0
 completed_combinations=0
 
 # Calculate total combinations for progress tracking
-# for error_type in feature_limitation system_failure; do
-for error_type in system_failure; do
+# for error_type in system_failure; do
+for error_type in feature_limitation system_failure; do
     func_array=(${ERROR_FUNCTIONS[$error_type]})
     func_count=${#func_array[@]}
     model_count=${#model_configs[@]}
