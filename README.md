@@ -3,12 +3,19 @@
 ## Overview
 We introduce **WildAGTEval**, a benchmark designed to evaluate the function-calling capabilities of LLM agents under realistic API complexities. In contrast to prior works that assume idealized environments, WildAGTEval rigorously accounts for two critical dimensions of real-world complexity as illustrated in the **Figure** below: **API Specification**, which encompasses detailed documentation and usage constraints (Figure (a) green region; Figure (b) left), and **API Execution**, which captures runtime challenges and noisy outputs (Figure (a) blue region; Figure (b) right). Consequently, the framework provides an API system featuring **60 distinct complexity scenarios** (refer to `API_Complexity/UNCERTAINTY_ENVIRONMENT_VARIABLES.md`) that can be composed into over **32K test configurations**, alongside a comprehensive set of user-agent interactions for evaluation.
 
-<div align="center">
+<!-- <div align="center">
   <img src="./imgs/motivation_new_dgn_a.png" width="600">
-</div>`
+</div>
 <div align="center">
   <img src="./imgs/motivation_new_dgn_b.png" width="600">
-</div>`
+</div> -->
+
+<div align="center">
+  <img src="motivation_new_dgn_a.png" width="600">
+</div>
+<div align="center">
+  <img src="motivation_new_dgn_b.png" width="600">
+</div>
 
 ## Navigation
 
