@@ -12,9 +12,18 @@ We introduce **WildAGTEval**, a benchmark designed to evaluate the function-call
 
 <div align="center">
   <img src="motivation_new_dgn_a.png" width="600">
-</div>
-<div align="center">
+  <br>
+  <em>(a) Challenges in real-world agent deployment.</em>
+  <br><br>
+  
   <img src="motivation_new_dgn_b.png" width="600">
+  <br>
+  <em>(b) Unassessable agent failures by current benchmarks.</em>
+  <br><br>
+
+  <p width="600">
+    <b>Key motivation for WildAGTEval:</b> (a) highlights the challenges in real-world agent deployment; and (b) provides conversations of WildAGTEval that reveal LLM agents’ failure modes often overlooked by current benchmarks.
+  </p>
 </div>
 
 ## Navigation
