@@ -537,7 +537,7 @@ When task is completed, reply: TASK_COMPLETED: [completion description]
         # Otherwise leave as unknown/other kinds of thoughts
         return action
 
-    @freeze_time("2025-06-18 12:00:00", tz_offset=0, ignore=SAFE_IGNORE_LIST)
+    @freeze_time("2025-07-17 12:00:00", tz_offset=0, ignore=SAFE_IGNORE_LIST)
     def execute_api_call(self, api_call: Dict[str, Any]) -> Tuple[str, bool, Dict[str, Any]]:
         """Execute an API call with uncertainty management.
 
