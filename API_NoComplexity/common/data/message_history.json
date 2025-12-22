@@ -309,7 +309,7 @@
     "message_id": "msg35",
     "user_id": "user6",
     "contact_id": "contact17",
-    "direction": "incoming",
+    "direction": "outgoing",
     "timestamp": "2025-06-16T14:51:12Z",
     "content": "Great job!",
     "read": false
@@ -317,7 +317,7 @@
   {
     "message_id": "msg38",
     "user_id": "user6",
-    "contact_id": "contact8",
+    "contact_id": "contact17",
     "direction": "incoming",
     "timestamp": "2025-06-15T16:57:53Z",
     "content": "Thanks! You too.",
@@ -444,7 +444,7 @@
     "message_id": "msg50",
     "user_id": "user9",
     "contact_id": "contact1",
-    "direction": "incoming",
+    "direction": "outgoing",
     "timestamp": "2025-06-08T09:58:17Z",
     "content": "Hi! I'm doing well.",
     "read": false
