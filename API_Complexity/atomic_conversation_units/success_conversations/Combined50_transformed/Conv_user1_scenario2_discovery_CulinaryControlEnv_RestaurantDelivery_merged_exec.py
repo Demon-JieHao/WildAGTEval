@@ -170,7 +170,7 @@ def main():
         print(f"ERROR in search_restaurants: {e}")
         return False
     # Turn 5: User query
-    print("\nUser: " + 'Show me the menu for the restaurant')
+    print("\nUser: " + 'Show me the menu for the first restaurant')
     print("Agent: I'll handle that for you.")
 
     # API calls for turn 5
