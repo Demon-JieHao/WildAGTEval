@@ -56,7 +56,7 @@
   },
   "query_results": [
     {
-      "query": "Show me the menu for the first restaurant",
+      "query": "Show me the menu for the restaurant",
       "expected_api_sequence": [
         {
           "api": "get_restaurant_menu",
