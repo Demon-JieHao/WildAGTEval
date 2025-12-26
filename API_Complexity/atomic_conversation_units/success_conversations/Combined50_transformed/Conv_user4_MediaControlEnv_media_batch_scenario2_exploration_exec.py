@@ -12,7 +12,8 @@ import time
 
 # Calculate camel_synthetic_api directory - go up 2 levels from combined_conversations
 script_dir = os.path.dirname(os.path.abspath(__file__))
-camel_synthetic_api_dir = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
+camel_synthetic_api_dir = os.path.dirname(os.path.dirname(script_dir))
+
 # Debug: Print paths for troubleshooting
 print(f'DEBUG: Script location: {script_dir}')
 print(f'DEBUG: camel_synthetic_api directory: {camel_synthetic_api_dir}')
