@@ -23,7 +23,7 @@ echo "📂 Results will be saved to: ${RESULTS_BASE}"
 # Variable arrays for easy expansion
 model_configs=("gpt4omini")
 seeds=("s0") #  "s1" "s2" "s3" "s4")
-envs=("Combined_transformed") # "Combined50_transformed" "Combined_deref_transformed" "Combined_deref50_transformed") # ("TransactionEnv_transformed") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined50_transformed" "Combined_deref_transformed" "Combined_deref50_transformed") # ("TransactionEnv_transformed") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
 uncertainties=("adhoc" "partially_irrelevant" "informational_notice") # 
 
 # Uncertainty-Prompt mapping based on requirements
@@ -63,6 +63,9 @@ get_prompts_for_uncertainty() {
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

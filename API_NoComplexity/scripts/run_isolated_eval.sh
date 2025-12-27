@@ -22,9 +22,9 @@ mode="turn_level_tf"
 
 # Variable arrays
 # model_configs=("claude35" "claude37_no_think" "claude40_think" "claude40_no_think")  
-model_configs=("claude37_no_think")  
+model_configs=("claude37_no_think" "claude40_think")  
 seeds=("s0") # "s1" "s2" "s3" "s4")
-envs=("Combined") # "Combined_deref") # "Combined50" "Combined_deref50"
+envs=("Combined") # Use "Combined_toy" to test # "Combined_deref") # "Combined50" "Combined_deref50"
 
 # Ablation experiment configurations
 # Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"

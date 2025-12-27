@@ -126,23 +126,6 @@ class SendMessage(Tool):
             data["message_history"] = []
         data["message_history"].append(message)
         
-        # # Simulate a response message if this is a demo
-        # if data.get("demo_mode", False):
-        #     # 자동 응답 메시지도 순차적 ID 사용
-        #     response_id = SendMessage.generate_sequential_message_id(data)
-        #     response_timestamp = datetime.utcnow().isoformat() + "Z"
-        #     response = {
-        #         "message_id": response_id,
-        #         "user_id": user_id,
-        #         "contact_id": contact_id,
-        #         "direction": "incoming",
-        #         "timestamp": response_timestamp,
-        #         "content": f"Auto-reply: I received your message: '{content}'",
-        #         "read": False
-        #     }
-        #     data["message_history"].append(response)
-        #     has_response = True
-        # else:
         has_response = False
         
         # Return success

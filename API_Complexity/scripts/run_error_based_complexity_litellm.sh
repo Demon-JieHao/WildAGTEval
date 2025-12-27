@@ -24,7 +24,7 @@ prompt="adhoc+unclear"
 # Variable arrays
 model_configs=("gpt4omini")
 seeds=("s0") #("s0" "s1" "s2") # "s3"
-envs=("Combined_transformed") # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
 
 # Function mappings per error type
 declare -A ERROR_FUNCTIONS
@@ -57,17 +57,14 @@ fi
 set_env_dir() {
     local env=$1
     case "$env" in
-        "TransactionEnv_transformed")
-            ENV_DIR="TransactionEnv_transformed"
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
             ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;
         "Combined50_transformed")
             ENV_DIR="Combined50_transformed"
-            ;;
-        "Complex_natural_new_transformed")
-            ENV_DIR="ComplexScenarios_transformed"
             ;;
     esac
 }

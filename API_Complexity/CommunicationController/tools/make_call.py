@@ -13,38 +13,24 @@ from CommunicationController.helpers import (
 class MakeCall(Tool):
     @staticmethod
     def generate_sequential_call_id(data):
-        """
-        순차적으로 증가하는 call ID를 생성합니다.
         
-        Args:
-            data: 전체 데이터 컨테이너
-            
-        Returns:
-            call1, call2와 같은 형식의 순차적 ID
-        """
-        # call_history가 없으면 초기화
         if "call_history" not in data:
             data["call_history"] = []
         
-        # 현재 call_id 값들에서 숫자만 추출
         existing_ids = []
         for call in data["call_history"]:
             if "call_id" in call and call["call_id"].startswith("call"):
                 try:
-                    # call1, call2 형식에서 숫자만 추출
                     num = int(call["call_id"].replace("call", ""))
                     existing_ids.append(num)
                 except ValueError:
-                    # 파싱 실패 시 무시
                     continue
         
-        # 번호가 없으면 1부터 시작, 있으면 최대값 + 1
         next_num = 1
         if existing_ids:
             next_num = max(existing_ids) + 1
         
-        # 새 ID 반환 (패딩 없이 단순 숫자)
-        return f"call{next_num}"  # call1, call2 등의 형태
+        return f"call{next_num}"  
     
     @staticmethod
     def validate_phone_number(phone_number: str) -> bool:

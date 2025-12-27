@@ -10,38 +10,24 @@ from CommunicationController.helpers import find_contact_by_id
 class SendMessage(Tool):
     @staticmethod
     def generate_sequential_message_id(data):
-        """
-        순차적으로 증가하는 message ID를 생성합니다.
-        
-        Args:
-            data: 전체 데이터 컨테이너
-            
-        Returns:
-            msg1, msg2와 같은 형식의 순차적 ID
-        """
-        # message_history가 없으면 초기화
+
         if "message_history" not in data:
             data["message_history"] = []
         
-        # 현재 message_id 값들에서 숫자만 추출
         existing_ids = []
         for message in data["message_history"]:
             if "message_id" in message and message["message_id"].startswith("msg"):
                 try:
-                    # msg1, msg2 형식에서 숫자만 추출
                     num = int(message["message_id"].replace("msg", ""))
                     existing_ids.append(num)
                 except ValueError:
-                    # 파싱 실패 시 무시
                     continue
         
-        # 번호가 없으면 1부터 시작, 있으면 최대값 + 1
         next_num = 1
         if existing_ids:
             next_num = max(existing_ids) + 1
         
-        # 새 ID 반환 (패딩 없이 단순 숫자)
-        return f"msg{next_num}"  # msg1, msg2 등의 형태
+        return f"msg{next_num}" 
     
     @staticmethod
     def invoke(data: Dict[str, Any], contact_id: str, content: str) -> str:

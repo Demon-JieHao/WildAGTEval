@@ -23,7 +23,7 @@ mode="turn_level_tf"
 # Variable arrays
 model_configs=("gpt4omini")  # 
 seeds=("s0") # "s1" "s2" "s3" "s4")
-envs=("Combined_transformed") # "Combined_deref_transformed" ) # "Combined50_transformed" "Combined_deref50_transformed"
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined_deref_transformed" ) # "Combined50_transformed" "Combined_deref50_transformed"
 
 # Ablation experiment configurations
 # Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"
@@ -62,6 +62,9 @@ fi
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

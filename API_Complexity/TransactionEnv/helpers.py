@@ -259,16 +259,13 @@ def generate_order_id(data: Dict[str, Any]) -> str:
     """Generate a sequential order ID"""
     import re
     
-    # orders가 없으면 초기화
     if "orders" not in data:
         data["orders"] = []
     
-    # 현재 order_id 값들에서 숫자만 추출
     existing_ids = []
     for order in data["orders"]:
         if "order_id" in order and order["order_id"].startswith("order"):
             try:
-                # order123 형식에서 숫자만 추출
                 match = re.search(r'^order(\d+)$', order["order_id"])
                 if match:
                     num = int(match.group(1))
@@ -276,12 +273,10 @@ def generate_order_id(data: Dict[str, Any]) -> str:
             except (ValueError, AttributeError):
                 continue
     
-    # 번호가 없으면 1부터 시작, 있으면 최대값 + 1
     next_num = 1
     if existing_ids:
         next_num = max(existing_ids) + 1
     
-    # 새 ID 반환
     return f"order{next_num}"
 
 def get_current_timestamp() -> str:

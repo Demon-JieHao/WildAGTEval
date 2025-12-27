@@ -106,10 +106,10 @@ def safe_parse_duration(time_range: str) -> timedelta:
     Try parsing ISO 8601 duration first, then fallback to simple formats like '7d', '2w', '24h', '60min', '7'.
     """
     try:
-        # 1️⃣ ISO 8601 형식 시도
+        # 1️⃣ ISO 8601 
         return parse_iso8601_duration(time_range)
     except Exception:
-        # 2️⃣ 비ISO 포맷 fallback
+        # 2️⃣ non-ISO format fallback
         time_range = time_range.strip().lower()
         if time_range.endswith("d"):
             return timedelta(days=int(time_range[:-1]))

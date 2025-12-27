@@ -161,22 +161,22 @@ class TrackOrder(Tool):
     @staticmethod
     def transform(input_value: str, data: Dict[str, Any] = None) -> str:
         """
-        order ID를 필요한 형식(carrier-order_id_part)으로 변환
+        Convert an order ID to the required format (carrier-order_id_part).
         
-        다음 규칙 적용:
-        1. invoke_tool 문 내에서 order_id 파라미터 값 변환
-        2. 데이터베이스에서 해당 주문의 실제 배송사 확인하고 형식 수정
+        The following rules are applied:
+        1. Transform the order_id parameter value inside an invoke_tool string.
+        2. Look up the actual shipping carrier for the order in the data and adjust the format.
         
         Args:
-            input_value: 변환할 값 (order ID 또는 invoke_tool 문)
-            data: TransactionEnv 데이터 (배송사 정보 접근용)
+            input_value: order ID or invoke_tool statement
+            data: Database object 
                 
         Returns:
-            변환된 order ID 또는 invoke_tool 문
+            The transformed order ID or invoke_tool string
         """
-        # 1. invoke_tool 문 처리
+        # 1. Handle invoke_tool strings
         if isinstance(input_value, str) and "invoke_tool" in input_value and "order_id=" in input_value:
-            # order_id 파라미터 추출 (큰따옴표, 작은따옴표 모두 지원)
+            # Extract order_id parameter (supports both single and double quotes)
             order_id_pattern = r'order_id=["\']([^"\']+)["\']'
             match = re.search(order_id_pattern, input_value)
             
@@ -184,7 +184,7 @@ class TrackOrder(Tool):
                 original_order_id = match.group(1)
                 transformed_order_id = TrackOrder.transform(original_order_id, data)
                 
-                # 원본 문자열에서 변환된 order_id로 교체
+                # replace with the transformed order_id
                 if original_order_id != transformed_order_id:
                     if 'order_id="' in input_value:
                         return input_value.replace(f'order_id="{original_order_id}"', 
@@ -193,52 +193,52 @@ class TrackOrder(Tool):
                         return input_value.replace(f"order_id='{original_order_id}'", 
                                                 f"order_id='{transformed_order_id}'")
         
-        # 2. 일반 order ID 처리
+        # 2. Handle a plain order ID
         if isinstance(input_value, str):
             original_order_id = input_value
             order_suffix = ""
             raw_order_id = ""
             
-            # 2.1 이미 하이픈이 포함된 ID인지 확인
+            # 2.1 Check whether the ID already contains a hyphen
             if "-" in original_order_id:
-                # 이미 carrier-xxx 형식인 경우 분리
+                # If it's already in carrier-xxx format, split it
                 parts = original_order_id.split("-", 1)
                 if len(parts) == 2:
-                    input_carrier = parts[0]  # 입력된 배송사 코드
-                    order_suffix = parts[1]   # 주문 ID 접미사
+                    input_carrier = parts[0]  # Carrier code from input
+                    order_suffix = parts[1]   # Order ID suffix
             else:
-                # 일반 주문 ID인 경우
+                # If this is a regular order ID
                 raw_order_id = original_order_id
-                # order_id[2:]로 접미사 생성
+                # Use order_id[2:] to generate the suffix
                 if len(original_order_id) > 2:
                     order_suffix = original_order_id[2:]
                 else:
                     order_suffix = original_order_id
             
-            # 2.2 주문 데이터에서 실제 배송사 확인
+            # 2.2 Determine the actual shipping carrier from the order data
             if data and "orders" in data:
-                # 주문 데이터가 있는 경우
+                # If order data is available
                 
-                # 원본 주문 ID로 검색
+                # Search by original order ID
                 for order in data["orders"]:
-                    # 주문 ID가 일치하는 항목 찾기
+                    # Find the entry whose order_id matches
                     if order.get("order_id") == raw_order_id or order.get("order_id") == original_order_id:
-                        # 배송 정보 확인
+                        # Check shipping information
                         shipping = order.get("shipping", {})
-                        actual_carrier = shipping.get("carrier", "UPS")  # 실제 배송사
+                        actual_carrier = shipping.get("carrier", "UPS")  # Actual shipping carrier
                         
-                        # carrier-suffix 형태로 변환
+                        # Convert to carrier-suffix format
                         return f"{actual_carrier}-{order_suffix}"
                 
-                # 주문을 찾지 못했지만 하이픈이 있는 형식이면 원래 형식 유지
+                # If no order is found but the ID already contains a hyphen, keep the original format
                 if "-" in original_order_id:
                     return original_order_id
             else:
-                # 주문 데이터가 없는 경우, 하이픈이 있는 형식이면 원래 형식 유지
+                # If there is no order data, keep the original if it already contains a hyphen
                 if "-" in original_order_id:
                     return original_order_id
         
-        # 변환할 수 없으면 원본 반환
+        # If no transformation is possible, return the original value
         return input_value
 
     @staticmethod

@@ -37,7 +37,7 @@ def find_unclear_test_directories(base_path):
 
 def check_function_usage_in_directory(directory_path):
     """Check function usage in a single directory"""
-    # 확인할 함수 리스트
+    # List of target functions to check
     target_functions = [
         'broadcast_alert', 'color_scene_set', 'color_temperature_set',
         'create_calendar_event', 'create_timer', 'device_deactivate',
@@ -48,18 +48,18 @@ def check_function_usage_in_directory(directory_path):
         'send_chat_message', 'sync_messages', 'temperature_schedule'
     ]
     
-    # 결과 저장용 (full path 포함)
-    function_usage = defaultdict(list)  # 함수별 사용된 파일들
-    file_results = {}  # 파일별 결과
+    # Containers for results (including full paths)
+    function_usage = defaultdict(list)  # Files where each function is used
+    file_results = {}  # Results per file
     
-    # JSON 파일들 찾기
+    # Find JSON files in the directory
     json_pattern = os.path.join(directory_path, "*.json")
     json_files = glob.glob(json_pattern)
     
     if len(json_files) == 0:
         return function_usage, file_results, 0
     
-    # 각 파일 처리
+    # Process each file
     processed_files = 0
     error_files = 0
     
@@ -71,7 +71,7 @@ def check_function_usage_in_directory(directory_path):
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
-            # query_results에서 모든 llm_response 수집
+            # collect all llm_response from query_results
             all_responses = []
             if 'query_results' in data:
                 for query_result in data['query_results']:
@@ -80,7 +80,7 @@ def check_function_usage_in_directory(directory_path):
                             if 'llm_response' in step:
                                 all_responses.append(step['llm_response'])
             
-            # 각 함수가 사용되었는지 확인
+            # check if each function has been invoked
             found_functions = []
             for func in target_functions:
                 found = any(func in response for response in all_responses)
@@ -101,11 +101,11 @@ def check_function_usage_in_directory(directory_path):
 def generate_detailed_report(function_usage, file_results, total_files, directory_path):
     """Generate detailed report file with unique naming"""
     
-    # function_usage_reports 디렉토리 생성 (이미 있으면 무시)
+    # Create the function_usage_reports directory (ignore if it already exists)
     reports_dir = "function_usage_reports"
     os.makedirs(reports_dir, exist_ok=True)
     
-    # 고유한 리포트 파일명 생성 (전체 경로를 언더스코어로 변환)
+    # Generate a unique report filename (convert full path into underscores)
     dir_path_clean = str(directory_path).replace('/', '_').replace('\\', '_')
     if dir_path_clean.startswith('test_with_uncertainties_'):
         dir_path_clean = dir_path_clean[len('test_with_uncertainties_'):]

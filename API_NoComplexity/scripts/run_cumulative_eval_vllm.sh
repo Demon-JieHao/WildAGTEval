@@ -22,9 +22,8 @@ API_KEY=""  # Not used for vLLM
 
 # Variable arrays for easy expansion
 model_configs=("qwen235b_inst") # "qwen235b_think" "qwen235b_think" "oss_120b" ("deepseekr1_qwen" "mistral_24b" "qwen3_32b" "oss_120b") 
-# models=("Qwen/Qwen3-32B")  # Add more models here as needed
 seeds=("s0" "s1" "s2") # ("s0" "s1" "s2" "s3")
-envs=("Combined" "Combined_deref") # "Combined50" "Combined_deref50"
+envs=("Combined") # Use "Combined_toy" to test # "Combined50" "Combined_deref50"
 uncertainties=("none") # "partially_irrelevant" "informational_notice" ("informational_notice")
 
 # Uncertainty-Prompt mapping based on requirements

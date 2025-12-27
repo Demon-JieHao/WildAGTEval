@@ -25,7 +25,7 @@ prompt="adhoc+unclear"
 # model_configs=("claude40_no_think" "claude40_think") 
 model_configs=("claude40_think" "claude40_no_think" "claude37_no_think" "claude35")  
 seeds=("s0") #("s0" "s1" "s2") # "s3"
-envs=("Combined_transformed") # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
 
 # Function mappings per error type
 declare -A ERROR_FUNCTIONS
@@ -68,6 +68,9 @@ set_model_config() {
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

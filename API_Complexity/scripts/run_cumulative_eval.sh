@@ -20,7 +20,7 @@ echo "📂 Results will be saved to: ${RESULTS_BASE}"
 # model_configs=("claude40_no_think" "claude40_think") 
 model_configs=("claude35" "claude37_no_think" "claude40_think" "claude40_no_think")  # "claude35"
 seeds=("s0" "s1" "s2" "s3" "s4")
-envs=("Combined_transformed") #  "Combined50_transformed" "Combined_deref_transformed" "Combined_deref50_transformed") # ("TransactionEnv_transformed") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test #  "Combined50_transformed" "Combined_deref_transformed" "Combined_deref50_transformed") # ("TransactionEnv_transformed") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
 uncertainties=("adhoc" "partially_irrelevant" "informational_notice") # "informational_notice" # "none" "partially_irrelevant" 
 
 # Uncertainty-Prompt mapping based on requirements

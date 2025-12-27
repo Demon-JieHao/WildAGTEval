@@ -29,7 +29,7 @@ prompt="adhoc+unclear"
 # # ! run openai
 # model_configs=("gpt4omini") # add more if you want
 seeds=("s0") #("s0" "s1" "s2")
-envs=("Combined_transformed") # "Combined_transformed_openai" "Combined50_transformed" "Combined_transformed" 
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined_transformed_openai" "Combined50_transformed" "Combined_transformed" 
 
 # Judge seeds for evaluation runs
 judge_seeds=(0) # (0 1 2)
@@ -39,16 +39,13 @@ declare -A ERROR_FUNCTIONS
 ERROR_FUNCTIONS[feature_limitation]="get_messages get_notifications weather_forecast track_order stock_watchlist news_personalized get_user_inventory get_call_history"
 ERROR_FUNCTIONS[system_failure]="make_call place_delivery_order send_message color_set get_user_inventory play track_delivery_order stock_price"
 
-# ERROR_FUNCTIONS[feature_limitation]="get_user_inventory"
-# ERROR_FUNCTIONS[system_failure]="get_user_inventory"
-
 
 # Helper function to set environment-specific output directory
 set_env_dir() {
     local env=$1
     case "$env" in
-        "TransactionEnv_transformed")
-            ENV_DIR="TransactionEnv_transformed"
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
             ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
@@ -58,9 +55,6 @@ set_env_dir() {
             ;;
         "Combined50_transformed_openai")
             ENV_DIR="Combined50_transformed_openai"
-            ;;
-        "Complex_natural_new_transformed")
-            ENV_DIR="ComplexScenarios_transformed"
             ;;
     esac
 }

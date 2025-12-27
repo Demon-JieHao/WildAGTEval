@@ -29,7 +29,7 @@ prompt="adhoc+unclear"
 # Variable arrays (OpenAI version)
 model_configs=("oss_120b") # "oss_120b" "qwen235b_inst" "qwen235b_think" "oss_120b" ("deepseekr1_qwen" "mistral_24b" "qwen3_32b" "oss_120b") 
 seeds=("s0") #("s0" "s1" "s2") # "s3"
-envs=("Combined_transformed") # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined50_transformed") # ("Combined_transformed_full") # ("TransactionEnv_transformed" "Complex_natural_new_transformed")
 
 # Function mappings per error type
 declare -A ERROR_FUNCTIONS
@@ -83,6 +83,9 @@ set_model_config() {
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

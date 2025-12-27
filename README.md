@@ -224,7 +224,9 @@ Since the injection of **Ad-hoc Rule** complexity necessitates **ground truth la
 * **Combined\*_transformed**: Datasets with **modified labels** (with ad-hoc complexity enabled).
 * **Combined_deref\***: Datasets with **coreferences removed** for ablation studies.
 
-Reference Directory: `API_Complexity/atomic_conversation_units/success_conversations/Combined*`
+Reference Directory: `API_Complexity/atomic_conversation_units/success_conversations/`
+
+⚠️ **Caution regarding Resource Usage:** Use `API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed_toy` to test your code.
 
 ---
 

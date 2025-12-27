@@ -23,7 +23,7 @@ API_KEY=""  # Not used for vLLM
 # Variable arrays for easy expansion
 model_configs=("qwen235b_inst") # "qwen235b_think" "qwen235b_think" "oss_120b" ("deepseekr1_qwen" "mistral_24b" "qwen3_32b" "oss_120b") 
 seeds=("s0" "s1" "s2") # ("s0" "s1" "s2" "s3")
-envs=("Combined_transformed" "Combined_deref_transformed" ) # "Combined50_transformed" "Combined_deref50_transformed"
+envs=("Combined_transformed") # Use "Combined_transformed_toy" to test # "Combined50_transformed" "Combined_deref50_transformed"
 uncertainties=("adhoc" "partially_irrelevant" "informational_notice") # "partially_irrelevant" "informational_notice" ("informational_notice")
 
 # Uncertainty-Prompt mapping based on requirements
@@ -75,6 +75,9 @@ get_prompts_for_uncertainty() {
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

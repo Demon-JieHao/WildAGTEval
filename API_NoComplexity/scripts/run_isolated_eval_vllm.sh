@@ -27,7 +27,7 @@ mode="turn_level_tf"
 # Variable arrays (based on modified run_openai_batch.sh)
 model_configs=("oss_120b") # "oss_120b" "oss_120b_noThink" "oss_120b_noThink" "oss_120b" ("deepseekr1_qwen" "mistral_24b" "qwen3_32b" "oss_120b") 
 seeds=("s0" "s1" "s2") # "s0" "s1" "s2" "s3" "s9" ("s0" "s1" "s2")
-envs=("Combined") # "Combined_deref" "Combined50" "Combined_deref50"
+envs=("Combined") # Use "Combined_toy" to test # "Combined_deref" "Combined50" "Combined_deref50"
 
 # Ablation experiment configurations
 # Format: "complexity_name:on_off:prompt:uncertainty:target_functions_config:output_suffix"
