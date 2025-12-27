@@ -85,6 +85,9 @@ set_model_config() {
 set_env_dir() {
     local env=$1
     case "$env" in
+        "Combined_transformed_toy")
+            ENV_DIR="Combined_transformed_toy"
+            ;;
         "Combined_transformed")
             ENV_DIR="Combined_transformed"
             ;;

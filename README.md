@@ -191,6 +191,8 @@ cd API_Complexity && ./scripts/run_isolated_eval.sh
 **For vLLM-Hosted or LiteLLM Models**
 The execution procedure remains identical to the standard setup described above, requiring only the substitution of the execution script. Utilize `run_isolated_eval_vllm.sh` or `run_isolated_eval_litellm.sh` depending on the hosting method.
 
+**Pre-computed LLM Agents Results**
+Given the computationally intensive nature of executing **WildAGTEval**, We have provided a subset of historical trajectories for both *With* Irrelevant Data Complexity and *Without* Irrelevant Data Complexity settings.
 
 ### 2. Isolated Setup for Error-Based Complexity
 
