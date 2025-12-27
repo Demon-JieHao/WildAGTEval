@@ -78,7 +78,7 @@ def main():
         return False
 
     # Turn 1: User query
-    print("\nUser: " + 'Find me slow cooker with advanced features and directly add it to my cart')
+    print("\nUser: " + 'Find me a compact slow cooker with the best customer ratings and directly add it to my cart')
     print("Agent: I'll handle that for you.")
 
     # API calls for turn 1

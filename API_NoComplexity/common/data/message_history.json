@@ -444,7 +444,7 @@
     "message_id": "msg50",
     "user_id": "user9",
     "contact_id": "contact1",
-    "direction": "incoming",
+    "direction": "outgoing",
     "timestamp": "2025-06-08T09:58:17Z",
     "content": "Hi! I'm doing well.",
     "read": false
