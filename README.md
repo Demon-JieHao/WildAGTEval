@@ -347,7 +347,12 @@ For the complete implementation, refer to:
 `API_Complexity/atomic_conversation_units/success_conversations/Combined_transformed/Conv_user1_DailyInvestmentMonitor_scenario4_exec.py`
 
 
-## Contact
-
-
 ## Citation
+
+@article{xxx,
+  title={Beyond Perfect APIs: A Comprehensive Evaluation of LLM Agents
+Under Real-World API Complexity},
+  author={Doyoung Kim, Zhiwei Ren, Jie Hao, Zhongkai Sun, Lichao Wang, Xiyao Ma, Zack Ye, Xu Han, Jun Yin, Heng Ji, Wei Shen, Xing Fan, Benjamin Yao, Chenlei Guo},
+  journal={arXiv preprint arXiv:xxx},
+  year={2025}
+}
