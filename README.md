@@ -271,7 +271,7 @@ The experimental scope is defined by two primary parameters:
 ```
 
 ### 2. Setting Complexity Type Config - "What Complexity to Inject"
-Configuration files located in `API_Complexity/uncertainty_configs/`` govern the specific nature of complexity injection. Standard configurations include:
+Configuration files located in `API_Complexity/uncertainty_configs/` govern the specific nature of complexity injection. Standard configurations include:
 - `adhoc.yaml`: Enables ad-hoc rule complexities.
 - `partially_irrelevant.yaml`: Enables extraneous irrelevant information into responses.
 - `informational_notice.yaml`: Appends system notices or disclaimers.
