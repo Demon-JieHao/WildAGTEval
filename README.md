@@ -11,12 +11,12 @@ We introduce **WildAGTEval**, a benchmark designed to evaluate the function-call
 </div> -->
 
 <div align="center">
-  <img src="motivation_new_dgn_a.png" width="600">
+  <img src="motivation_new_a.png" width="600">
   <br>
   <em>(a) Challenges in real-world agent deployment.</em>
   <br><br>
   
-  <img src="motivation_new_dgn_b.png" width="600">
+  <img src="motivation_new_b.png" width="600">
   <br>
   <em>(b) Unassessable agent failures by current benchmarks.</em>
   <br><br>
