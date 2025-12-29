@@ -351,7 +351,7 @@ For the complete implementation, refer to:
 ```bibtex
 @article{xxx,
   title={Beyond Perfect APIs: A Comprehensive Evaluation of LLM Agents Under Real-World API Complexity},
-  author={Doyoung Kim, Zhiwei Ren, Jie Hao, Zhongkai Sun, Lichao Wang, Xiyao Ma, Zack Ye, Xu Han, Jun Yin, Heng Ji, Wei Shen, Xing Fan, Benjamin Yao, Chenlei Guo},
+  author={Anonymous Authors},
   journal={arXiv preprint arXiv:xxx},
   year={2025}
 }
